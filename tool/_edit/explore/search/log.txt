@@ -1,0 +1,714 @@
+
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=1
+ in:/var/www/lamp/wroot/publish/030_analysis/010_TBI-Analysis-Process/020_Analysis-Flow-Chart.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=1
+ in:/var/www/lamp/wroot/publish/030_analysis/010_TBI-Analysis-Process/svg-char2.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=60
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/0200_VariationOfCross.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=4
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/0300_TripleCross.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=44
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/0300_WhoIsOnCross.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=8
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/0500_HouseAndCross.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=12
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/0600_FootHandAndCross.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=11
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/0700_LambAndCross.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=10
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/1000_SonAndCross.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=59
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/1100_VariantionOfSon.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=67
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/1200_FriendsOfSon.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=9
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/1300_SonAndGood.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=132
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/Tbl-FriendsOfCross_all.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=26
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/Tbl-FriendsOfCross_typical.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=40
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/Tbl-FriendsOfHand-Etymology.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=71
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/Tbl-FriendsOfSon.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=10
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/Tbl-InterchangableHandBtwCrossAndAnimal.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=60
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/Tbl-Paintings-Good.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=29
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/Tbl-Paintings-MatchTBIWords.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=4
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/xxxxTbl-FriendsOfHandAndAnimal.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=10
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/xxxxTbl-FriendsOfHandOfAnimal.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=10
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/0100_drawing-methods.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=10
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/0200_about-human-beings.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=33
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/0210_human-and-animals.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=12
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/0220_book-and-gospel.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=37
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/0230_another-foot.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=6
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/0240_perfect-mistakes.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=14
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/Tbl-Pronounes.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=51
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/Tbl-Words-For-human.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=39
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/Tbl-body-parts.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=40
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/Tbl-book-and-gospel.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=25
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/Tbl-weapon-in-tbi.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=16
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/Tbl-weapons.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=5
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/zzzNew.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=2
+ in:/var/www/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/zzzz-body-part.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=92
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-old/Tbl-TBI-vs-hierography.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=20
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-old/Tbl-Words-Statistic-Analysis.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=126
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-old/Tbl_____system-StemBranchOnTBI.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=12
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-old/Tbl_system-12-Branches.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=126
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-old/Tbl_system-60-years-Gregorian.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=10
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-old/Tbl_system-Numeric-Words-Comperison.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=32
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-old/Tbl_system_branches_stems.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=32
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-old/Tbl_system_branches_stems_biblical_meanings.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=3
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-old/Tbl_tomb-Ya-etymology.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=92
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/Tbl-TBI-vs-hierography.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=20
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/Tbl-Words-Statistic-Analysis.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=12
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/Tbl_system-12-Branches.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=126
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/Tbl_system-60-years-Gregorian.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=10
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/Tbl_system-Numeric-Words-Comperison.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=32
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/Tbl_system_branches_stems.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=32
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/Tbl_system_branches_stems_biblical_meanings.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=3
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/Tbl_tomb-Ya-etymology.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=6
+ in:/var/www/lamp/wroot/publish/060_references/images/zzzPaintingAndGood.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=60
+ in:/var/www/lamp/wroot/publish/060_references/tables/Tbl-CrossMapChritianSymbols.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=8
+ in:/var/www/lamp/wroot/publish/060_references/tables/Tbl-Scriptures-Used-Until-Today.htm
+Replace://plastron777.dyndns-free.com/
+ To://24.96.158.103/
+ count=17
+ in:/var/www/lamp/wroot/publish/060_references/tables/Tbl-Word-Deviation-Exchange.htm
+ rename:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/1010_Turtle_Bone_Burn_Marks_Reproduction.htm
+    to:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/1000___Turtle_Bone_Burn_Marks_Reproduction.htm
+    ret=1
+Replace:1010_Turtle_Bone_Burn_Marks_Reproduction.htm
+ To:1000___Turtle_Bone_Burn_Marks_Reproduction.htm
+ count=2
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/1000_Turtle_Bone_Cracks_Analysis.htm
+Replace:Tbl-Bu-In-Classic-Books.htm
+ To:1000___Tbl-Bu-In-Classic-Books.htm
+ count=1
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/1000_Turtle_Bone_Cracks_Analysis.htm
+Replace:Tbl-Bu-In-Classic-Books.htm
+ To:1000___Tbl-Bu-In-Classic-Books.htm
+ count=1
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/1000_Turtle_Bone_Cracks_Analysis.htm
+ rename:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/Tbl-Bu-In-Classic-Books.htm
+    to:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/1000___Tbl-Bu-In-Classic-Books.htm
+    ret=1
+Replace:./1000___1000___Tbl-Bu-In-Classic-Books.htm
+ To:./1000___Tbl-Bu-In-Classic-Books.htm
+ count=1
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/1000_Turtle_Bone_Cracks_Analysis.htm
+Replace:Tbl-TBI-CDB.htm
+ To:./1000___Tbl-Bu-In-Tbl-TBI-CDB.htm
+ count=2
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/1000_Turtle_Bone_Cracks_Analysis.htm
+Replace:Tbl-TBI-CDB.htm
+ To:./1000___Tbl-Bu-In-Tbl-TBI-CDB.htm
+ count=2
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/1000_Turtle_Bone_Cracks_Analysis.htm
+ rename:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/Tbl-TBI-CDB.htm
+    to:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/./1000___Tbl-Bu-In-Tbl-TBI-CDB.htm
+    ret=1
+Replace:././1000___Tbl-Bu-In-./1000___Tbl-Bu-In-Tbl-TBI-CDB.htm
+ To:./1000___Tbl-Bu-In-Tbl-TBI-CDB.htm
+ count=2
+ in:/var/www/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/1000_Turtle_Bone_Cracks_Analysis.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=1
+ in:/var/www/html/lamp/wroot/publish/020_methodology/004a-methodolgy_OOA.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=3
+ in:/var/www/html/lamp/wroot/publish/020_methodology/Tbl_visual_thinking_drawings.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=1
+ in:/var/www/html/lamp/wroot/publish/030_analysis/010_TBI-Analysis-Process/020_Analysis-Flow-Chart.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=88
+ in:/var/www/html/lamp/wroot/publish/030_analysis/010_TBI-Analysis-Process/070_Logograph_LinearAnalysis.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=93
+ in:/var/www/html/lamp/wroot/publish/030_analysis/010_TBI-Analysis-Process/100_Unknown.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=1
+ in:/var/www/html/lamp/wroot/publish/030_analysis/010_TBI-Analysis-Process/svg-char2.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=8
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/9000_Conclusion.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=32
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/0110_FriendsOfCross.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=60
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/0200_VariationOfCross.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=4
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/0300_TripleCross.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=44
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/0300_WhoIsOnCross.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=8
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/0500_HouseAndCross.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=12
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/0600_FootHandAndCross.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=11
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/0700_LambAndCross.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=108
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/1000_SonAndCross.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=61
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/1001_Sons_Of_Man.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=59
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/1100_VariantionOfSon.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=67
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/1200_FriendsOfSon.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=38
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/1200_The_Son_And_Gospel.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=9
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/1300_SonAndGood.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=132
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/Tbl-FriendsOfCross_all.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=26
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/Tbl-FriendsOfCross_typical.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=40
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/Tbl-FriendsOfHand-Etymology.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=71
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/Tbl-FriendsOfSon.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=10
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/Tbl-InterchangableHandBtwCrossAndAnimal.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=60
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/Tbl-Paintings-Good.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=29
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/Tbl-Paintings-MatchTBIWords.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=4
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/xxxxTbl-FriendsOfHandAndAnimal.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=10
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/logograph/xxxxTbl-FriendsOfHandOfAnimal.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=10
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/0100_drawing-methods.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=10
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/0200_about-human-beings.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=33
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/0210_human-and-animals.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=12
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/0220_book-and-gospel.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=37
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/0230_another-foot.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=6
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/0240_perfect-mistakes.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=14
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/Tbl-Pronounes.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=51
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/Tbl-Words-For-human.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=39
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/Tbl-body-parts.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=40
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/Tbl-book-and-gospel.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=25
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/Tbl-weapon-in-tbi.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=16
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/Tbl-weapons.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=5
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/zzzNew.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=2
+ in:/var/www/html/lamp/wroot/publish/030_analysis/020_Evidence-Inside_TBI/pictograph/zzzz-body-part.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=7
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~1000_Cross_and_Asia_Tombs/Cross_And_Asia_Tombs.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=8
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~1000_Cross_and_Asia_Tombs/Cross_And_Asia_Tombs2.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=3
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~1000_Cross_and_Asia_Tombs/Tbl_tomb-Ya-etymology.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=3
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~1000_Cross_and_Asia_Tombs/Tbl_tomb-pattern-ya.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=2
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~1000_Cross_and_Asia_Tombs/__Cross_in_Buildings.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=6
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~1000_Cross_and_Asia_Tombs/__SampleOfTombsWithYaShape.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=1
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~1000_Cross_and_Asia_Tombs/__Tomb_In_Beijing_for_Han_and_Qin.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=2
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~1000_Cross_and_Asia_Tombs/__Tombs_In_Iran.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=2
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~1000_Cross_and_Asia_Tombs/___Cross_Shaped_Coffin.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=1
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~1000_Cross_and_Asia_Tombs/___Cross_on_bronze_sample.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=4
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~1000_Cross_and_Asia_Tombs/___western_tomb-with-symbols-cross.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=12
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~4000_Calendar_In_TBI--00/Tbl_system-12-Branches.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=126
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~4000_Calendar_In_TBI--00/Tbl_system-60-years-Gregorian.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=10
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~4000_Calendar_In_TBI--00/Tbl_system-Numeric-Words-Comperison.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=32
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~4000_Calendar_In_TBI--00/Tbl_system_branches_stems.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=32
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~4000_Calendar_In_TBI--00/Tbl_system_branches_stems_biblical_meanings.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=12
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~4000_Calendar_In_TBI/Tbl_system-12-Branches.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=126
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~4000_Calendar_In_TBI/Tbl_system-60-years-Gregorian.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=10
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~4000_Calendar_In_TBI/Tbl_system-Numeric-Words-Comperison.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=32
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~4000_Calendar_In_TBI/Tbl_system_branches_stems.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=32
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~4000_Calendar_In_TBI/Tbl_system_branches_stems_biblical_meanings.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=8
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~5000_Turtle_Bones_And_Bronzes/4120_Bones_and_Bronzes.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=20
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~5000_Turtle_Bones_And_Bronzes/Tbl-Words-Statistic-Analysis.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=2
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~6000_Turtle_Bones_And_Cracks/_Tbl-Bu-In-Tbl-TBI-CDB.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=24
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~6000_Turtle_Bones_And_Cracks/_Turtle_Bone_Burn_Marks_Reproduction.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=1
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~7000_Origin_Of_TBI/Origin_Of_Chinese_Characters.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=96
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~7000_Origin_Of_TBI/_1100___Constellation_and_Character.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=77
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~7000_Origin_Of_TBI/_1100___Hieroglyphics_and_TBI.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=24
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~7000_Origin_Of_TBI/_1100___Turtle_and_Totem.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=10
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~7000_Origin_Of_TBI/_1100___Turtle_in_China.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=49
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI-1/~7000_Origin_Of_TBI/_1100___Turtle_schism_and_character.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=8
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/0000_Introduction.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=8
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/9000_Conclusion.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=7
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~1000_Cross_and_Asia_Tombs/Cross_And_Asia_Tombs.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=8
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~1000_Cross_and_Asia_Tombs/Cross_And_Asia_Tombs2.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=3
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~1000_Cross_and_Asia_Tombs/Tbl_tomb-Ya-etymology.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=3
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~1000_Cross_and_Asia_Tombs/Tbl_tomb-pattern-ya.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=2
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~1000_Cross_and_Asia_Tombs/__Cross_in_Buildings.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=7
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~1000_Cross_and_Asia_Tombs/__SampleOfTombsWithYaShape.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=1
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~1000_Cross_and_Asia_Tombs/__Tomb_In_Beijing_for_Han_and_Qin.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=2
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~1000_Cross_and_Asia_Tombs/__Tombs_In_Iran.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=2
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~1000_Cross_and_Asia_Tombs/___Cross_Shaped_Coffin.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=1
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~1000_Cross_and_Asia_Tombs/___Cross_on_bronze_sample.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=4
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~1000_Cross_and_Asia_Tombs/___western_tomb-with-symbols-cross.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=12
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~4000_Calendar_In_TBI--00/Tbl_system-12-Branches.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=126
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~4000_Calendar_In_TBI--00/Tbl_system-60-years-Gregorian.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=10
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~4000_Calendar_In_TBI--00/Tbl_system-Numeric-Words-Comperison.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=32
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~4000_Calendar_In_TBI--00/Tbl_system_branches_stems.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=32
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~4000_Calendar_In_TBI--00/Tbl_system_branches_stems_biblical_meanings.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=12
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~4000_Calendar_In_TBI/Tbl_system-12-Branches.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=126
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~4000_Calendar_In_TBI/Tbl_system-60-years-Gregorian.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=10
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~4000_Calendar_In_TBI/Tbl_system-Numeric-Words-Comperison.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=32
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~4000_Calendar_In_TBI/Tbl_system_branches_stems.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=32
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~4000_Calendar_In_TBI/Tbl_system_branches_stems_biblical_meanings.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=8
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~5000_Turtle_Bones_And_Bronzes/4120_Bones_and_Bronzes.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=20
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~5000_Turtle_Bones_And_Bronzes/Tbl-Words-Statistic-Analysis.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=27
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~5010_Fu_Hao_And_Si_Mu_Brones/0000_FuHao_and_SiMuWu.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=2
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~6000_Turtle_Bones_And_Cracks/_Tbl-Bu-In-Tbl-TBI-CDB.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=24
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~6000_Turtle_Bones_And_Cracks/_Turtle_Bone_Burn_Marks_Reproduction.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=1
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~7000_Origin_Of_TBI/Origin_Of_Chinese_Characters.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=96
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~7000_Origin_Of_TBI/_1100___Constellation_and_Character.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=77
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~7000_Origin_Of_TBI/_1100___Hieroglyphics_and_TBI.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=24
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~7000_Origin_Of_TBI/_1100___Turtle_and_Totem.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=13
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~7000_Origin_Of_TBI/_1100___Turtle_in_China.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=49
+ in:/var/www/html/lamp/wroot/publish/030_analysis/030_Evidence-Outside-TBI/~7000_Origin_Of_TBI/_1100___Turtle_schism_and_character.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=6
+ in:/var/www/html/lamp/wroot/publish/060_references/images/zzzPaintingAndGood.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=60
+ in:/var/www/html/lamp/wroot/publish/060_references/tables/Tbl-CrossMapChritianSymbols.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=8
+ in:/var/www/html/lamp/wroot/publish/060_references/tables/Tbl-Scriptures-Used-Until-Today.htm
+Replace:24.96.250.146:7780
+ To:24.96.232.130:7780
+ count=17
+ in:/var/www/html/lamp/wroot/publish/060_references/tables/Tbl-Word-Deviation-Exchange.htm
+Replace:24.96.158.103:8077
+ To:24.96.232.130:7780
+ count=2
+ in:/var/www/html/lamp/wroot/publish/030_analysis/010_TBI-Analysis-Process/070_Logograph_LinearAnalysis.htm

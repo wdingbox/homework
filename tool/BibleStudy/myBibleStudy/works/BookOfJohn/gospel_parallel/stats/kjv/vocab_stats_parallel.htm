@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="en-us" http-equiv="Content-Language" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="../../../../../../../tablesorter_master/js/jquery.tablesorter.js"></script>
+        
+       
+        <!---script language="javascript" src="../../../../../../../../jq/Table_Indexer.js"  type="text/javascript">
+    </script -->
+
+     <script src="./vocab_stats_Matt.js"></script>
+     <script src="./vocab_stats_Mark.js"></script>
+     <script src="./vocab_stats_Luke.js"></script>
+     <script src="./vocab_stats_John.js"></script>
+     <script src="./vocab_stats_all.js"></script>
+        
+        
+        
+
+
+        
+<style type="text/css">
+.mysel{background-color: yellow}
+body {
+
+    width:100%;
+    font-size: 100%;
+    
+    padding:0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;    
+
+    font-family: 'Times New Roman';
+}
+#inptxt{
+    background-color: #ffcccc;
+    width:100%;
+    rows:50;
+}
+.ioput{
+    background-color: #bbbbbb;
+    float: left;
+}
+#Tbframe{
+    float:top;
+}
+.iodat{
+    background-color: #eeee00;
+}
+#out1cc, #out2cc{
+    background-color: lightblue;
+
+    height: 910px;
+    overflow: scroll;
+}
+.hili{
+  border: 3px solid red;
+}
+.c1111{
+   background-color: #00cc00;
+}
+.c0001{
+   background-color: #aa0b0b;
+}
+</style>
+      
+            
+<script>
+    var comp={};
+function init_table(){
+  var kmat=Object.keys(vocab_stats_Matt);
+  var kmak=Object.keys(vocab_stats_Mark);
+  var kluk=Object.keys(vocab_stats_Luke);
+  var kjhn=Object.keys(vocab_stats_John);
+  var kall=Object.keys(vocab_stats_all);
+
+  $.each(kall,function(i,v){
+    var bmat="0";
+    if( kmat.indexOf(v)>0) bmat="1";
+    var bmak="0";
+    if( kmak.indexOf(v)>0) bmak="1";
+    var bluk="0";
+    if( kluk.indexOf(v)>0) bluk="1";
+    var bjhn="0";
+    if( kjhn.indexOf(v)>0) bjhn="1";
+    var cname="c"+bmat+bmak+bluk+bjhn;
+    comp[v]=cname;
+  });
+
+
+
+    var stb=genTable(vocab_stats_Matt,"vocab_stats_Matt");
+    $("#out1").html(stb);
+    stb=genTable(vocab_stats_Mark,"vocab_stats_Mark");
+    $("#out2").html(stb);
+    stb=genTable(vocab_stats_Luke,"vocab_stats_Luke");
+    $("#out3").html(stb);
+    stb=genTable(vocab_stats_John,"vocab_stats_John");
+    $("#out4").html(stb);  
+    stb=genTable(vocab_stats_all,"vocab_stats_all");
+    $("#out5").html(stb);  
+}
+function genTable(wordsFrq,name){
+    var ss="<table border='1'><caption>"+name+"</caption>";
+    ss+="<thead><tr><th>#</th><th>key</th><th>frq</th></tr>";
+    ss+="<tbody>";
+    var idx=0;
+    $.each(wordsFrq, function(key,frq){
+        ss+="<tr><td>"+idx+"</td><td class='"+comp[key]+" "+key+"' >"+key+"</td><td>"+frq+"</td></tr>";
+    });
+    ss+="</tbody><table>";
+    return ss;
+}
+function table_sorter(){
+    $("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+
+        widgets: ['columns','output', ],//'zebra', 'editable'
+
+    });    
+}
+
+$(document).ready(function(){
+
+
+    init_table();
+    table_sorter();
+
+    $("caption").click(function(){
+      $(this).parent().find("tbody").find("tr").each(function(){
+          var txt=$(this).find("td:eq(1)").text();
+          //console.log(txt);
+      });
+    });
+
+
+    $("td").click(function(){
+      var tx=$(this).text().trim();
+      console.log($("."+tx).length);
+      $("."+tx).toggleClass('hili');
+    });
+
+
+});//////////////////////////
+
+
+</script>
+
+<style>
+button:disabled{
+ color:#cccccc;
+}
+#menu{
+    position: fixed;
+    top:10px;
+    right:10px;
+}
+
+</style>
+
+    </head>
+    <body>
+    <!------Menu-->
+    <div id='menu'>
+    <select id='DoFreq' size='7'>
+        <option value=''></option>
+        <option value='English_Words'>English Words</option>
+        <option value='English_Words_NIV_dictionary_generating'>English_Words_NIV_dictionary_generating</option>
+        <option value='Chinese_Chars'>Chinese Chars</option>
+        <option value='Chinese_Phrase1'>Chinese_CharGrpLen( n )</option>
+        <option value='Chinese_Phrase2'>Chinese_Phrase2</option>
+        <option value='Chinese_Phrase3'>Chinese_Phrase3</option>
+        <option value='Chinese_Phrase4'>Chinese_Phrase4</option>
+        <option value='Chinese_Phrase5'>Chinese_Phrase5</option>
+        <option value='Chinese_Phrase6'>Chinese_Phrase6</option>
+        <option value='Chinese_Phrase7'>Chinese_Phrase7</option>
+        
+        
+        <option value='Hebrew_Chars'>Hebrew_Letters</option>
+        <option value='Hebrew_Individual_Words'>Hebrew_Vocabulary</option>
+        <option value='Hebrew_Individual_Words_withMarks'>Hebrew_Individual_Words_withMarks</option>
+        <option value="Hebrew_Individual_Words_withMarks_js">Hebrew_Individual_Words_withMarks_js</option>
+        
+        <option value='Greek_Letters'>Greek_Letters</option>
+        <option value='Greek_Vocabulary'>Greek_Vocabulary</option>
+        <option value='Hebrew_Chars'>Hebrew</option>
+        <option value='Hebrew_Chars'>Hebrew</option>
+    </select><br/>
+    <input type="text" name="n" id="CharGrpLen" value='1' title="CharGrpLen"></div>
+    </div>
+    <!-------->
+
+
+      <a>Please paste your text into following area and select method to calculate words Freqs.</a>
+      <textarea id='inptxt' rows="20" ></textarea>
+      
+      <hr/>
+
+      <div class="ioput">
+      <a>Output word-freq:</a><br/>
+      <textarea  class='iodat' id='outjs' rows="15" ></textarea>
+      </div>
+      <div class="ioput">
+            <button id="BtnFilterSetting">FilterSetting:</button><br/>
+            <textarea  class='iodat' id='FilterSetting' rows="15" ></textarea>
+      </div>
+      <div class="ioput">
+            <button id="BtnMergeNode">MergerNode:</button><br/>
+            <select id="SelMergeNode" size="14"><option>aaaa</option></select>
+            
+      </div>
+      <div  class="ioput">
+            <button id="BtnMergeChild">MergeChild</button><br/>
+            <textarea class='iodat' id='MergerSetting' rows="15" ></textarea>
+      </div>
+      <div >
+            <button id="x">tab2json</button><br/>
+            <textarea class='iodat' id='tab2json' rows="15" ></textarea>
+      </div>
+
+      <br/>
+       <hr/>
+<!----------------->
+
+<table border='1' id="Tbframe">
+<tr><th>1</th><th>2</th><th id='sel'>3</th><th>4</th><th>5</th></tr>
+<tr><td valign="top">
+    <div id="out1">.</div>
+ </td><td valign="top">
+     <div id="out2">.</div>
+ </td><td valign="top">
+     <div id="out3">.</div>
+ </td><td valign="top">
+     <div id="out4">.</div>
+</td><td valign="top">
+     <div id="out5">.</div>
+</tr></table>
+
+<div id="base"></div>
+        <p>
+            &nbsp;</p>
+        
+        <p>
+            &nbsp;</p>
+  
+    </body>
+</html>

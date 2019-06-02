@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <title>FullPage5</title>
+
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+
+    <script type="text/javascript" src="../ckeditor.js">
+
+    </script>
+
+
+
+    <script src="sample.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="../adapters/jquery.js">
+
+    </script>    
+
+    <script type="text/javascript">
+	$(document).ready(function(){
+		var url=" " + document.URL;
+		var ary = url.split("=");			
+		if (ary.length == 2){
+			document.m_fname = ary[1];
+			//alert(fname);	 
+			$.post("WorkLoadFile.php", {   
+									 filename:document.m_fname                          
+									 },
+									 function(data, status){
+											  //alert("["+data+"]");										
+											  CKEDITOR.instances.editor1.setData(data);
+											  $("#ajx_load_status").html(document.m_fname+":"+status);
+									},
+									"html"
+									);/////post 
+		}//////if (ary.length == 2){	
+		else{
+			alert("no file. pleaase attach it in url ?fname=xyz.htm");
+		}
+
+		$("#fname").val(document.m_fname).hide();//used for same file.
+    });///////////////////////////////$(document).ready(function(){
+    </script>
+
+
+
+    <link href="sample.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+
+
+<form action="fullpage5.php" method="post">
+
+    <input id="fname"  name="fname"  value="./z/test.htm"/><br>
+
+    <textarea cols="80" id="editor1" name="editor1" rows="180">   
+
+    </textarea>
+
+    
+
+    <script type="text/javascript">
+
+    //<![CDATA[
+
+
+
+    CKEDITOR.replace( 'editor1',{
+
+                      fullPage : true,
+
+                      extraPlugins : 'docprops'
+
+                      });
+
+
+
+    //]]>
+
+    </script>
+
+
+</form>
+<div id="ajx_load_status"/>
+</body>
+
+</html>
+

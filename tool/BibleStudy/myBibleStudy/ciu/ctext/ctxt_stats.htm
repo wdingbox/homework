@@ -1,0 +1,200 @@
+<html>
+	<head>
+		<title onclick="alert();">ctxt</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!-------><script src="./ctxt_stats_uti.js"></script><script src="./ctxt_stats_dat00.js"></script><script src="./ctxt_stats_dat02.js"></script>
+		<base target="_blank" />
+		<script src="../../../../tablesorter_master/js/jquery.tablesorter.js"></script><script src="../../../../Hebrew2/nodjs/noduti/js/table_Indexer.js"></script><script src="../../myjs/goto_editor.js"></script>
+		<style type="text/css">
+body {font-family: 'Times New Roman';
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+    }		
+#_MenuPanel{
+position: fixed;
+left: 10px;
+top: 0px;
+}
+
+.fixedcol{
+	position: absolute;
+	background-color: #999999;
+}
+.fixedcol2, thead{
+	background-color: #999999;
+}
+.fixedcol2{
+	background-color: #eeeeee;
+}
+.catlog{
+	background-color: #cccccc;
+}
+.strongs{
+	background-color: #ffffff;
+}
+.Top_Horz{
+	color: blue;
+}
+.All_Top_Horz{
+	background-color: red;
+}
+.leftbox{
+  background-color: #ff0000;
+}
+.highlight{
+	background-color: #ffff00;
+}
+.tablefloatheb {float: right; margin: 2px;border-collapse: false;background-color: #eeeeee }
+.hebrew
+{
+    FONT-SIZE: 23px;
+    COLOR: #001320;
+    LINE-HEIGHT: 33px;
+    font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+    TEXT-DECORATION: none;
+}		</style>
+	</head>
+	<script>
+$(function(){
+    var stb00= new ctxt_stats_uti(ctxt_stats_dat00);
+    stb00.show_totFrq_table("lst00");
+    stb00.show_table_matrix("dat00");
+
+    var stb02= new ctxt_stats_uti(ctxt_stats_dat02);
+    stb02.show_totFrq_table("lst02");
+    stb02.show_table_matrix("dat02");
+
+
+	
+    $(".narration").toggle();
+    $(".TheTitle").click(function(){
+        $(".narration").toggle();
+    } );
+    $("#strongsCodes").click(function(){
+    	$(".strongs, .translit").slideToggle();
+    });
+
+    $("body").click(function(){
+    	$("#_edit").slideToggle();
+    });
+
+    $("#relativeFrqRate").click(function(){
+    	cal_relativeFrqRate();
+    });
+
+
+    $(".fixedcol2").click(function(){
+    	alert();
+    });
+
+    $("td").click(function(){
+    	$(this).toggleClass("highlight");
+    })
+
+ 
+
+
+
+});/////////
+
+$(document).ready(function(){ 
+	goto_editor("_edit_url");
+	sort_table();
+});//
+function sort_table(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+
+
+function cal_relativeFrqRate(){
+	$("#MatrixBody").find("tr").each(function(){
+		var len = $(this).find("td:eq(2)").text();
+		var ilen=parseInt(len);
+		$(this).find("td").each(function(i){
+			if(i>=3){
+				var frq=$(this).text();
+				var ifrq=parseInt(frq);
+				var rate=(10*ifrq / ilen).toFixed(3);
+				$(this).text(rate);
+			}
+		})
+	});
+
+	cal_relativeFrqRate_Top_Horz();
+	sort_table();
+};
+function cal_relativeFrqRate_Top_Horz(){
+	var fTopMax=-9999.0;
+	var TopMaxObj=null;
+	$("#MatrixBody").find("tr").each(function(){
+		var fMax = -9999;
+		var clsObj=null;
+		$(this).find("td").each(function(i){
+			if(i>=3){
+				var rate=$(this).text();
+				var frate=parseFloat(rate);
+				if(frate>fMax) {
+					fMax=frate; 
+					clsObj=this;
+				}
+				if(frate>fTopMax) {
+					fTopMax=frate; 
+					TopMaxObj=this;
+				}
+			}
+		});
+		if(   clsObj){
+			$(clsObj).addClass("Top_Horz");
+		}
+	});
+
+		if(   TopMaxObj){
+			$(TopMaxObj).addClass("All_Top_Horz");
+		}	
+};
+
+</script>
+	<body>
+		<p id="_MenuPanel">
+			<a href="http://localhost/~weiding/weidroot/weidroot_2017-01-06/app/btool/tool/_edit/explore/Work_txt.htm?fname=/Users/weiding/Sites/weidroot/weidroot_2017-01-06/app/btool/tool/BibleStudy/myBibleStudy/ciu/ctext/ctxt_stats_dat00.js" target="_blank">ctxt_stats_dat00.js</a><br />
+			<a href="http://localhost/~weiding/weidroot/weidroot_2017-01-06/app/btool/tool/_edit/explore/Work_txt.htm?fname=/Users/weiding/Sites/weidroot/weidroot_2017-01-06/app/btool/tool/BibleStudy/myBibleStudy/ciu/ctext/ctxt_stats_dat02.js" target="_blank">ctxt_stats_dat02.js</a><br />
+			<a id="_edit_url">...</a><br />
+			<a href="https://ctext.org" target="_blank">ctext</a><br />
+			<a id="indxer">indxer</a><br />
+			<a id="relativeFrqRate">relativeFrqRate</a></p>
+		<div>
+			<p>
+				<a id="lst00">list</a></p>
+			<p>
+				<a id="dat00">dat00</a></p>
+			<p>
+				<a id="lst02">list</a></p>
+			<p>
+				<a id="dat02">dat00</a></p>
+		</div>
+		<p>
+			<strong>2. Buddhism</strong>:</p>
+		<p>
+			&nbsp;</p>
+		<p>
+			&nbsp;</p>
+		<pre id="pret">
+			一二三四五六七八九十
+			百千萬 兩千三百四十五點六七八九
+</pre>
+	</body>
+</html>

@@ -1,0 +1,544 @@
+<html>
+	<head>
+		<title onclick="alert();">ctxt</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!------->
+		<base target="_blank" />
+		<script src="../../../../../tablesorter_master/js/jquery.tablesorter.js"></script><script src="../../../myjs/table_Indexer.js"></script>
+		<script src="../../../myjs/goto_editor.js"></script>
+		<style type="text/css">
+body {font-family: 'Times New Roman';
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+    }		
+#_MenuPanel{
+position: fixed;
+left: 10px;
+top: 0px;
+}
+
+.fixedcol{
+	position: absolute;
+	background-color: #999999;
+}
+.fixedcol2, thead{
+	background-color: #999999;
+}
+.fixedcol2{
+	background-color: #eeeeee;
+}
+.catlog, .hili{
+	background-color: #cccccc;
+}
+.logos, .JesusSaying{
+	color: #ff0000;
+}
+.logosv{
+	background-color: #eeaa66;
+}
+.logosw{
+	background-color: #aaaaee;
+}
+.logoswv{
+	background-color: #77aaaa;
+}
+.logosvc{
+	background-color: #aa77aa;
+}
+.logov{
+	background-color: #aa77aa;
+}
+.dao{
+	color: #0000ff;
+}
+.All_Top_Horz{
+	background-color: red;
+}
+.leftbox{
+  background-color: #ff0000;
+}
+.tablefloatheb {float: right; margin: 2px;border-collapse: false;background-color: #eeeeee }
+.hebrew
+{
+    FONT-SIZE: 23px;
+    COLOR: #001320;
+    LINE-HEIGHT: 33px;
+    font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+    TEXT-DECORATION: none;
+}		</style>
+	</head>
+	<script>
+$(function(){
+    $(".narration").toggle();
+    $(".TheTitle").click(function(){
+        $(".narration").toggle();
+    } );
+    $("#strongsCodes").click(function(){
+    	$(".strongs, .translit").slideToggle();
+    });
+
+    $("body").click(function(){
+    	$("#_edit").slideToggle();
+    });
+
+    $("#relativeFrqRate").click(function(){
+    	cal_relativeFrqRate();
+    });
+
+
+    $(".fixedcol2").click(function(){
+    	alert();
+    });
+
+    $("td").click(function(){
+    	var out=$("#out").val();
+    	out+=$(this).text().trim()+";";
+    	$("#out").val(out);
+    	$(this).toggleClass("hili");
+    });
+
+});/////////
+
+$(document).ready(function(){ 
+	goto_editor("_edit_url");
+	sort_table();
+});//
+function sort_table(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+
+
+</script>
+	<body>
+		<p id="_MenuPanel">
+			<br />
+			<a id="_edit_url">...</a><br />
+			<a id="indxer">indxer</a><br />
+			<textarea id="out"></textarea></p>
+		<!-------------------------->
+		<div>
+			&nbsp;</div>
+		<!-------------------------->
+		<div>
+			&nbsp;</div>
+		<!-------------------------->
+		<p style="text-align: center;">
+			<font size="3"><b>The Testimony (aGospel)</b></font></p>
+		<!-------------------------->
+		<table border="1">
+			<caption>
+				Scientific Three Critical Elements In Argumentative Essay (议论文三要素)</caption>
+			<thead>
+				<tr>
+					<th>
+						#</th>
+					<th>
+						Name</th>
+					<th>
+						Desc</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						1</td>
+					<td>
+						claim<br />
+						论点</td>
+					<td>
+						A claim is the main argument. A counterclaim反驳 is the opposite of the argument, or the opposing argument.</td>
+				</tr>
+				<tr>
+					<td>
+						2</td>
+					<td>
+						principle<br />
+						论据/根据</td>
+					<td>
+						a fundamental truth or proposition that serves as the base for a logical reasoning which tells why the claim is made and is supported by the evidence.</td>
+				</tr>
+				<tr>
+					<td>
+						3</td>
+					<td>
+						evidence<br />
+						论证/证据</td>
+					<td>
+						the available body of facts or information indicating whether a claim, belief or proposition is true or valid..</td>
+				</tr>
+			</tbody>
+		</table>
+		<table border="1">
+			<caption>
+				Claims in Gospel of John</caption>
+			<thead>
+				<tr>
+					<td>
+						#</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<p>
+							20:31 But these are written that you may believe[a] that Jesus is the Messiah, the Son of God, and that by believing you may have life in his name.但記這些事要叫你們信耶穌是基督,是神的兒子,並且叫你們信了他,就可以因他的名得生命.</p>
+						<p>
+							21:24 This is the disciple who testifies to these things and who wrote them down. We know that his testimony is true. 為這些事作見證，並且記載這些事的就是這門徒；我們也知道他的見證是真的。</p>
+					</td>
+					<td>
+						Main Claim</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						1:46 &ldquo;Nazareth! Can anything good come from there?&rdquo; Nathanael asked. &ldquo;Come and see,&rdquo; said Philip.拿但業對他說：「拿撒勒還能出甚麼好的嗎？」腓力說：「你來看！」</td>
+					<td>
+						counterclaim</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						6:42 They said, &ldquo;Is this not Jesus, the son of Joseph, whose father and mother we know? How can he now say, &lsquo;I came down from heaven&rsquo;?&rdquo; 說：這不是約瑟的兒子耶穌麼？他的父母我們豈不認得麼？他如今怎麼說我是從天上降下來的呢？</td>
+					<td>
+						counterclaim</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						8:48 The Jews answered him, &ldquo;Aren&rsquo;t we right in saying that you are a Samaritan and demon-possessed?&rdquo; 猶太人回答說：我們說你是撒瑪利亞人，並且是鬼附著的，這話豈不正對麼？</td>
+					<td>
+						counterclaim</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						8:52 52 At this they exclaimed, &ldquo;Now we know that you are demon-possessed! Abraham died and so did the prophets, yet you say that whoever obeys your word will never taste death. 猶太人對他說：現在我們知道你是鬼附著的。亞伯拉罕死了，眾先知也死了，你還說：人若遵守我的道，就永遠不嘗死味。</td>
+					<td>
+						counterclaim</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						10:20 Many of them said, &ldquo;He is demon-possessed and raving mad. Why listen to him?&rdquo; 內中有好些人說：他是被鬼附著，而且瘋了，為甚麼聽他呢？</td>
+					<td>
+						counterclaim</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						10:33 &ldquo;We are not stoning you for any good work,&rdquo; they replied, &ldquo;but for blasphemy, because you, a mere man, claim to be God.&rdquo; 猶 太 人 回 答 說 ： 我 們 不 是 為 善 事 拿 石 頭 打 你 ， 是 為 你 說 僭 妄 的 話 ； 又 為 你 是 個 人 ， 反 將 自 己 當 作 神 。</td>
+					<td>
+						counterclaim</td>
+				</tr>
+			</tbody>
+		</table>
+		<table border="1">
+			<caption>
+				Theological Argumentation(论证) Golden Principles</caption>
+			<thead>
+				<tr>
+					<td>
+						#</td>
+					<td>
+						Principles</td>
+					<td>
+						Notes</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						P1</td>
+					<td>
+						Exod 20:16 You shall not give false testimony against your neighbor.<br />
+						不可作假見證陷害人</td>
+					<td>
+						9th Decalogue</td>
+				</tr>
+				<tr>
+					<td>
+						P2</td>
+					<td>
+						<p>
+							Deut&nbsp;19:15&nbsp;One witness is not enough to convict anyone accused of any crime or offense they may have committed. A matter must be established by the testimony of two or three witnesses.<br />
+							人無論犯甚麼罪,作甚麼惡,不可憑一個人的口作見證,總要憑兩三個人的口作見證才可定案.</p>
+						<p>
+							John 8:17 你们的律法上也记着说、两个人的见证是真的。</p>
+					</td>
+					<td>
+						for crime</td>
+				</tr>
+				<tr>
+					<td>
+						P3</td>
+					<td>
+						Matt 4:7 Jesus answered him, &ldquo;It is also written: &lsquo;Do not put the Lord your God to the test.<br />
+						耶穌對他說:經上又記著說:不可試探主─你的神
+						<p>
+							John 8:46 Can any of you prove me guilty of sin? If I am telling the truth, why don&rsquo;t you believe me?你们中间谁能指证我有罪呢。我既然将真理告诉你们、为甚么不信我呢。</p>
+					</td>
+					<td>
+						for Truth</td>
+				</tr>
+			</tbody>
+		</table>
+		<div style="page-break-after: always;">
+			<span style="display: none;">&nbsp;</span>--page--</div>
+		<table border="1">
+			<caption>
+				The Dual Seven Evidence in John</caption>
+			<thead>
+				<tr>
+					<td>
+						#</td>
+					<td>
+						Sayings</td>
+					<td>
+						type</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						1</td>
+					<td>
+						<p>
+							1:34 John B.&nbsp;&quot;I have seen and I testify that this is God&rsquo;s Chosen One.&quot;我看見了,就證明這是神的兒子</p>
+						<p>
+							1:6 There came a man who was sent from God; his name was John.有一個人,是從神那裡差來的,名叫約翰</p>
+						<p class="JesusSaying">
+							5:36</p>
+					</td>
+					<td>
+						Prophets</td>
+				</tr>
+				<tr>
+					<td>
+						2</td>
+					<td>
+						<p class="JesusSaying">
+							5:39 You study[a] the Scriptures diligently because you think that in them you have eternal life. These are the very Scriptures that testify about me,你們查考聖經,因你們以為內中有永生;給我作見證的就是這經</p>
+						<p>
+							quotes from OT</p>
+					</td>
+					<td>
+						Scripture</td>
+				</tr>
+				<tr>
+					<td>
+						3</td>
+					<td>
+						<p class="JesusSaying">
+							8:18 I am one who testifies for myself; my other witness is the Father, who sent me. 我是為自己作見證，還有差我來的父也是為我作見證</p>
+						<p class="JesusSaying">
+							5:37 And the Father who sent me has himself testified concerning me. You have never heard his voice nor seen his form,差我來的父也為我作過見證.你們從來沒有聽見他的聲音,也沒有看見他的形像</p>
+						<p class="JesusSaying">
+							6:27 不要为那必坏的食物劳力、要为那存到永生的食物劳力、就是人子要赐给你们的．因为人子是父　神所印证的。</p>
+						<p>
+							Jhn 12:28 父阿、愿你荣耀你的名．当时就有声音从天上来说、我已经荣耀了我的名、还要再荣耀。</p>
+					</td>
+					<td>
+						Father</td>
+				</tr>
+				<tr>
+					<td>
+						4</td>
+					<td>
+						<p class="JesusSaying">
+							8:14 Jesus answered, &ldquo;Even if I testify on my own behalf, my testimony is valid, for I know where I came from and where I am going. But you have no idea where I come from or where I am going.耶穌說:我雖然為自己作見證,我的見證還是真的;因我知道我從那裡來往那裡去;你們卻不知道我從那裡來,往那裡去</p>
+						<p>
+							John as author</p>
+						<p>
+							1:14 道成了肉身、住在我们中间、充充满满的有恩典有真理。我们也见过他的荣光、正是父独生子的荣光。</p>
+					</td>
+					<td>
+						Self</td>
+				</tr>
+				<tr>
+					<td>
+						5</td>
+					<td>
+						<p class="JesusSaying">
+							10:25 Jesus answered, &ldquo;I did tell you, but you do not believe. The works I do in my Father&rsquo;s name testify about me,耶穌回答說:我已經告訴你們,你們不信.我奉我父之名所行的事可以為我作見證;</p>
+						<p class="JesusSaying">
+							5:36 I have testimony weightier than that of John.For the every work that the Father has given me to finish, and which I am doing, testifies that the Father has sent me. 但我有比約翰更大的見證;因為父交給我要我成就的事,就是我所做的事,這便見證我是父所差來的.</p>
+						<p class="JesusSaying">
+							Jhn 10:25 耶稣回答说、我已经告诉你们、你们不信．我奉我父之名所行的事、可以为我作见证。</p>
+						<p>
+							7 miracles and marvels</p>
+					</td>
+					<td>
+						Work</td>
+				</tr>
+				<tr>
+					<td>
+						6</td>
+					<td>
+						<p class="JesusSaying">
+							15:26&nbsp;&ldquo;When the Advocate comes, whom I will send to you from the Father&mdash;the Spirit of truth who goes out from the Father&mdash;he will testify about me.但我要從父那裡差保惠師來,就是從父出來真理的聖靈;他來了,就要為我作見證.</p>
+						<p>
+							1:32 约翰又作见证说、我曾看见圣灵彷彿鸽子、从天降下、住在他的身上。1:33 我先前不认识他．只是那差我来用水施洗的、对我说、你看见圣灵降下来、住在谁的身上、谁就是用圣灵施洗的。 1:34 我看见了、就证明这是　神的儿子。</p>
+						<p>
+							3:34 神所差来的、就说　神的话．因为　神赐圣灵给他、是没有限量的。</p>
+						<p>
+							7:39 耶稣这话是指着信他之人、要受圣灵说的、那时还没有赐下圣灵来．因为耶稣尚未得着荣耀。</p>
+					</td>
+					<td>
+						Spirit</td>
+				</tr>
+				<tr>
+					<td>
+						7</td>
+					<td>
+						<ol>
+							<li>
+								<p class="JesusSaying">
+									15:27 And you also must testify, for you have been with me from the beginning.你們也要作見證,因為你們從起頭就與我同在.</p>
+							</li>
+							<li>
+								1:49 Then Nathanael declared, &quot;Rabbi, you are the Son of God; you are the King of Israel&quot;. 拿但業說:拉比,你是神的兒子,你是以色列的王. 1:47 When Jesus saw Nathanael approaching, He said of him, &quot;Here is a true Israelite, in whom there is nothing false.&quot;耶穌看見拿但業來,就指著他說:看哪,這是個真以色列人,他心裡是沒有詭詐的.</li>
+							<li>
+								Heb 12:1 Therefore, since we are surrounded by such a great cloud of witnesses, let us throw off everything that hinders and the sin that so easily entangles. And let us run with perseverance the race marked out for us, 我們既有這許多的見證人，如同雲彩圍著我們，就當放下各樣的重擔，脫去容易纏累我們的罪，存心忍耐，奔那擺在我們前頭的路程，</li>
+							<li>
+								...</li>
+						</ol>
+					</td>
+					<td>
+						man from earth</td>
+				</tr>
+			</tbody>
+		</table>
+		<table border="1">
+			<caption>
+				Logical Reasoning</caption>
+			<thead>
+				<tr>
+					<td>
+						#</td>
+					<td>
+						Logical Statements</td>
+					<td>
+						Principle</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						5:31 我若為自己作見證，我的見證就不真.32另有一位給我作見證,我也知道他給我作的見證是真的. (NIV) If I testify about myself, my testimony is not true. There is another that beareth witness of me; and I know that the witness which he witnesseth of me is true.</td>
+					<td>
+						P2</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						8:14 耶穌說：我雖然為自己作見證，我的見證還是真的；因我知道我從那裡來，往那裡去；你們卻不知道我從那裡來，往那裡去。 (NIV) 14 Jesus answered, &ldquo;Even if I testify on my own behalf, my testimony is valid, for I know where I came from and where I am going. But you have no idea where I come from or where I am going.</td>
+					<td>
+						P3</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						8:15你們是以外貌（原文是憑肉身）判斷人，我卻不判斷人。 16就是判斷人，我的判斷也是真的；因為不是我獨自在這裡，還有差我來的父與我同在。</td>
+					<td>
+						P1,2</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						8:17你們的律法上也記著說：兩個人的見證是真的。 18我是為自己作見證，還有差我來的父也是為我作見證</td>
+					<td>
+						P2</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						5:34 其實，我所受的見證不是從人來的；然而，我說這些話，為要叫你們得救。 (NIV) 34 Not that I accept human testimony; but I mention it that you may be saved.</td>
+					<td>
+						P3</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						John 8:46 你們中間誰能指證我有罪呢？我既然將真理告訴你們，為甚麼不信我呢？Can any of you prove me guilty of sin? If I am telling the truth, why don&rsquo;t you believe me?</td>
+					<td>
+						P2,3</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						8:55 你們未曾認識他；我卻認識他。我若說不認識他，我就是說謊的，像你們一樣；但我認識他，也遵守他的道 Though you do not know him, I know him. If I said I did not, I would be a liar like you, but I do know him and obey his word.</td>
+					<td>
+						P1</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						7:7 世人不能恨你們，卻是恨我，因為我指證他們所做的事是惡的。 7 The world cannot hate you, but it hates me because I testify that its works are evil.</td>
+					<td>
+						P1</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						7:18 人憑著自己說，是求自己的榮耀；惟有求那差他來者的榮耀，這人是真的，在他心裡沒有不義。Whoever speaks on their own does so to gain personal glory, but he who seeks the glory of the one who sent him is a man of truth; there is nothing false about him.</td>
+					<td>
+						P1</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			<b>Conclusion</b></p>
+		<ol>
+			<li>
+				From perspective of scientific argumentation, Gospel of John can be considered as a strict argumentative essay (议论文), that can be called argumentative Gospel. The seven claims and dual seven types of evidence discovered in Gospel of John are another features that can distinguish itself from synoptics.</li>
+			<li>
+				John 20:29 耶穌對他說：你因看見了我才信；那沒有看見就信的有福了。Then Jesus told him, &ldquo;Because you have seen me, you have believed; blessed are those who have not seen and yet have believed.&rdquo; Likewise, today, blessed are those believe in Jesus without knowing the proof through scientific argumentation process.</li>
+			<li>
+				Jesus is not about the truth that can be proved. The discovery of the strict argumentation process in Gosple of John is just another miraclious signs of Jesus. He is supernatual over any argumentation process. He do not need to be proved by anything. Scientific study is a tool for human beings not for Jesus. He is the truth himself. More than that, He is also the life and way. Most importantly He is the agape--the source of grace.</li>
+		</ol>
+		<p>
+			&nbsp;</p>
+		<div style="page-break-after: always;">
+			<span style="display: none;">&nbsp;</span>--page--</div>
+		<pre>
+	
+
+</pre>
+	</body>
+</html>

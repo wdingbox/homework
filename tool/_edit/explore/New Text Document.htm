@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <title>Work</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <link type="text/css" rel="stylesheet" href="sample.css" /> 
+
+    <script type="text/javascript" src="edit/adapters/jquery.js">    </script>    
+
+    <script type="text/javascript" src="index.js">    </script>     
+
+    <script type="text/javascript"> 
+
+    $(document).ready(function(){               
+
+    $("#file").click(function(){        
+	});/////$("#file").click(function(){   
+	
+    $(".refresh").click(function(){   
+        var fname = $(this).attr("fname");
+        //alert(fname);
+        window.open("./au2refresh.htm?fname="+fname, "_blank");
+    });////
+
+
+
+
+    $("#createDir").click(function(){   
+    	var cwd=$("#getcwd").html();  
+    	var ret=prompt("Create Dir in \n"+cwd , "");
+    	if (null==ret) return;
+        //alert(fname);WorkCreateDirFtp.php?dir=$dir
+        cwd = cwd + ret;  
+        if( true==confirm("Are you sure to create dir: \n\n"+cwd) ){
+        	window.location.href="WorkCreateDir.php?dir="+cwd;
+    	}
+        
+    });////
+    $("#CreateFile").click(function(){   
+    	var cwd=$("#getcwd").html();  
+    	var ret=prompt("Create Dir in \n"+cwd , "");
+    	if (null==ret) return;
+        //alert(fname);WorkCreateDirFtp.php?dir=$dir
+        cwd = cwd + ret;  
+        if( true==confirm("Are you sure to create File: \n\n"+cwd) ){
+        	window.location.href="WorkCreateFile.php?dir="+cwd;
+    	}
+        
+    });////
+
+    
+    
+    });///////////////////////////////$(document).ready(function(){    
+
+    </script>
+ <style type="text/css">
+        html, body
+        {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+            padding: 0px 0px 0px 3px;
+            overflow: hidden;
+        }
+       
+
+        span.op{
+        	position:absolute;
+        	top:0px;
+        	right:0%;
+        	margin-left: -250px;
+        }
+        
+        a.path{
+            background-color:grey;
+            margin: 0px;
+            padding: 0px 10px 0px 10px;
+        }
+    </style>
+    
+</head>
+
+<body>
+
+
+
+<a id='getcwd'>/usr/share/apache2/htdocs/dev/</a>      <span class="op"> <a class='create' id='createDir' >[CreateDir]</a>   ||   <a class='createFile' id='CreateFile'>*CreateFile</a></span>  <br/>
+[  <a class='path' href='index.php?dir=/usr/share/apache2/htdocs'> .    .</a>  ]
+<br>[ <a class='path' href='index.php?dir=/usr/share/apache2/htdocs/dev/div-tut'>div-tut</a>  ]
+<br>[ <a class='path' href='index.php?dir=/usr/share/apache2/htdocs/dev/edit'>edit</a>  ]
+<br>[ <a class='path' href='index.php?dir=/usr/share/apache2/htdocs/dev/enc'>enc</a>  ]
+<br>[ <a class='path' href='index.php?dir=/usr/share/apache2/htdocs/dev/j'>j</a>  ]
+<br>[ <a class='path' href='index.php?dir=/usr/share/apache2/htdocs/dev/login'>login</a>  ]
+<br>[ <a class='path' href='index.php?dir=/usr/share/apache2/htdocs/dev/test'>test</a>  ]
+<br><a class='refresh' fname='/dev/_000.htm'>*</a><a>  </a><a class='viewfile' href='Work.htm?filename=/usr/share/apache2/htdocs/dev/_000.htm'> 1 </a><a id='del'> . </a><a class='view' href='/dev/_000.htm'>_000.htm</a> 
+<br><a class='refresh' fname='/dev/index.php'>*</a><a>  </a><a class='viewfile' href='Work.htm?filename=/usr/share/apache2/htdocs/dev/index.php'> 2 </a><a id='del'> . </a><a class='view' href='/dev/index.php'>index.php</a> 
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

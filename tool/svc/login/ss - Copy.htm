@@ -1,0 +1,181 @@
+
+
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Login</title>
+		<script language="javascript" src="../ham12/jq/jquery.js">
+    </script>
+<style>	
+body {
+    background-color:white  ;
+    color: black;
+    width:100%;
+	font-size: 200%;
+}
+table{
+	width:100%;
+	font-size: 200%;
+	}
+#SalePriceTb  tr td:first-child { width: 25em; }	
+#previewTable tr td:first-child { width: 100em; }
+
+
+input, button, textarea{
+    font-size:60px;
+    height:92px;
+	
+}
+input{
+	background-color:yellow;
+}
+textarea{
+width:99%;
+height:200px;
+}
+</style>
+<script language="javascript">
+
+$(document).ready(function(){
+  $("table tr td:eq(2)").click(function(){
+	//alert();
+  });
+  
+  $("td").click(function(){
+	var idx_td=$(this).index();
+	var idx_tr=$(this).parent().index();
+	console.log(idx_td+","+idx_tr);
+	if(0===idx_td){
+		//window.open("ad/index.htm","_blank");
+	}
+  });
+  $("#TxtAd").val("<a href='../'>s Israel 3D Map for sale</a>");
+
+  
+  $("#saveform").submit(function(){
+	  PreviewAd();
+	  console.log("saveform:"+$("#saveform").serialize());
+	  var surl="account_settings.svc.php";
+	  $.ajax({
+		  url:surl,
+		  dataType :"text",
+		  data:$("#saveform").serialize(),	  
+		  success:function(data){
+			  console.log(data);
+			  $("#previewAd").html($("#TxtAd").val());			  
+		  },
+	  });
+	  return false;
+  });
+  
+  
+  $("#Logout").click(function(){
+	  var surl="account_settings.svc.php";
+	  console.log("Logout:");
+	  $.ajax({
+	  url:surl,
+	  dataType :"text",
+	  data:"Logout",	  
+	  success:function(data){
+		  console.log(data);
+		  //window.close();
+	  },
+	  });
+	  return false;
+  });
+  
+  $("#adPreview").click(function(){
+	  PreviewAd();
+  });
+  
+  $("#paypalform").submit(function(){	  
+	  return PaypalSet();
+  });
+  PreviewAd();
+});
+function PreviewAd(){
+	  var surl=$("#TxtAd").val();
+	  var unitPrice=$("#UnitPrice").text().trim();
+	  unitPrice=unitPrice.substr(1);
+	  unitPrice=parseFloat(unitPrice);	  
+	  
+	  var TotpricePerDay=surl.length*unitPrice;
+	  TotpricePerDay=TotpricePerDay.toFixed(2);
+	  $("#TotChars").text(surl.length);
+	  $("#TotPricePerDay").text(TotpricePerDay);
+	  
+	  var TotPay=($("#TotDays").val() * TotpricePerDay).toFixed(2);
+	  $("#TotPay").text(TotPay);	
+}
+function PaypalSet(){
+	  var TotPay=$("#TotPay").text();
+	  console.log("amount:"+TotPay);
+	  if(TotPay.length<=0){
+		  alert("please preview your ad first.");
+		  return false;
+	  }
+	  $("#amount").val( $("#TotPay").text() );
+	  
+	  $("#item_name").val("Total price of ad for "+$("#TotDays").val() +" days:" );
+	  $("#quantity").val( 1 );
+	  $("#item_number").val( $("#FolderId").text() );
+	  return true;	
+}
+</script>
+
+
+	</head>
+<body>	
+<center>
+<a>account email:</a><br/>
+<a>ff</a>
+
+
+	<hr/>
+
+	<a>Edit My Ad</a><br>
+	<form id="saveform">
+	<textarea name='TxtAd' id='TxtAd' col='20' size='10'>
+	</textarea><br>
+	
+	<button type='submit' id="save_my_ad">Save and Preview My Ad</button>
+	
+	<table id='SalePriceTb' border='1'><caption></caption>
+	<tr><td id='FolderId'>1</td><td id='previewAd'><a href='../'>s Israel 3D Map for sale</a></td></tr>	
+	</table>	
+
+	<table id='previewTable' border='1'><caption><a>Prices</a></caption>
+	<tr><td>Unit price<br>($USD/char/day)</td><td id='UnitPrice'><a href='../'>$0.01</a> </td></tr>
+	<tr><td>Total chars</td><td id='TotChars'></td></tr>
+	<tr><td>The price per day</td><td id='TotPricePerDay'></td></tr>
+	<tr><td>TotDays</td><td><input type='text' name='TotDays' id='TotDays' value='10'></input></td></tr>
+	<tr><td>Total Price($USD)</td><td id='TotPay' ></td></tr>	
+	</table>
+	
+	</form>
+	</center>
+
+
+	
+	<center>
+		<form id='paypalform' action="https://www.paypal.com/cgi-bin/webscr" method="post">
+			<input name="cmd" type="hidden" value="_xclick" /> 
+			<input name="business" type="hidden" value="wdingsoft@gmail.com" /> 
+			<input name="undefined_quantity" type="hidden" value="3" /> 
+			<input name="quantity" id="quantity" type="hidden" value="1" /> 
+			<input name="item_name"  id='item_name' type="hidden" value="item_name weid test" /> 
+			<input name="item_number" id='item_number'  type="hidden" value="dd01" /> 
+			<input name="amount" id='amount' type="hidden" value="4.99" /> 
+			<input name="return" type="hidden" value="http://plastron777.altervista.org/f/_edit/explore/Work_htm.htm?fname=/membri/plastron777/f/paypal/test2.php" /> 
+			<input name="cancel_return" type="hidden" value="http://alanb.com/doodads/canceled.html" /> 
+			<input alt="Make payments with PayPal - it's fast, free and secure!" border="0" name="submit" src="http://images.paypal.com/images/x-click-but5.gif" type="image" />&nbsp;
+			</form>
+			
+			 <button id='Logout'>Logout</button>
+	</center>
+	<br><br><hr/>
+	
+	
+	</body>
+</html>
+

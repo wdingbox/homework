@@ -1,0 +1,335 @@
+<html>
+	<head>
+		<title></title>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<meta content="en-us" http-equiv="Content-Language" />
+
+		    <script language="javascript" src="../ham12/jq/jquery.js"></script>
+
+    <script src="../tablesorter_master/js/jquery.tablesorter.js"></script>
+
+
+<script language="javascript" src="../ham12/WordsFreq.js"></script>
+    
+<script src="./js/DaoDeJing_cleaned.js"></script>
+
+
+
+
+<script language="javascript" src="./js/DaoDeJing_ChineseWangBi.js"></script>
+<script language="javascript" src="./js/DaoDeJing_ChineseWangBi_FrqPhrase2.js"></script>
+<script language="javascript" src="./js/DaoDeJing_ChineseWangBi_FrqPhrase111.js"></script>
+<script language="javascript" src="./js/DaoDeJing_ChineseWangBi_FrqZi.js"></script>
+<script language="javascript" src="./js/DaoDeJing_ChineseWangBiKeywords.js"></script>
+<script language="javascript" src="./js/DaoDeJing_KeywordsThemes_Chap.js"></script>
+<script language="javascript" src="./js/DaoDeJing_KeywordsThemes_EngBibDictionary.js"></script>
+
+<script language="javascript" src="./js/DaoDeJingUti.js"></script>
+
+<script language="javascript" src="./js/DaoDeJing_ChineseWangBi_Frq_CharGrpLen.js"></script>
+
+<script language="javascript" src="./js/distinct_characters_common.js"></script>
+
+
+<style type="text/css">
+
+table, td, th, tr,tbody {
+    border-collapse: collapse;
+
+}
+
+.hili{
+	background: #fafada;
+}
+
+.tgl, #selword{
+	background: #aaffff;
+}
+.sel{
+	background: #aaffaa; 
+}
+
+
+.故{
+	background: #ffff00;
+}
+.吾{
+	background: #ff00ff;
+}
+.我{
+	background: #00ffff;
+}
+
+
+
+#txot{
+	position: fixed;
+	top:0px;
+	width: 800px;
+	height: 90px;
+}
+
+#selen{
+	margin-top:210px;
+}
+</style>
+
+
+<script type="text/javascript">
+	
+$(document).ready(function(){ 
+	Load_DaoDeJing_ChineseWangBi_Frq_CharGrpLen();
+	Load_distinct_characters_common();
+	console.log(DaoDeJing_ChineseWangBi_Frq_CharGrpLen);
+	//gen_table();
+	//gen_table_DaoDeJing();
+
+	gen_selen_menu();
+
+    $("#selword").click(function(){
+    	$("#search").toggle(100);
+    	var txt=$(this).text();
+    	get_search(txt);
+    });
+
+});//
+function enable_sorter(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+function get_search(kewd){
+	var idx=0, srep="<a class='tgl'>"+kewd+"</a>";
+	var s="<table border='1'><caption></caption>";
+	s+="<thead><tr><td>#</td><td>chp</td><td>ddj</td></tr></thead></tbody>";
+	$.each(DaoDeJing,function(chp,stx){
+		stx=stx.replace(new RegExp(kewd,"gm"),srep);
+		if(stx.indexOf(kewd)>=0){
+			s+="<tr><td>"+(idx++)+"</td><td>"+chp+"</td><td>"+stx+"</td></tr>";
+		}
+		
+	});
+	s+="</tbody></table>";
+	$("#search").html(s).find("td").bind("click",function(){
+		$(this).toggleClass("hili");
+	});
+}
+function gen_selen_menu(){
+	var s="| ";
+	for(var i=0;i<18;i++){
+		s+="<a class='grpLen'> "+i+" </a> | ";
+	}
+	$("#selen").html(s);
+	$(".grpLen").bind("click",function(){
+		var ilen=$(this).text();
+		gen_table_keyword(parseInt(ilen));
+		$(".grpLen").removeClass("sel");
+		$(this).addClass("sel");
+	});
+}
+function gen_table_keyword(iGrpLen){
+	function gen_stab(iGrpLen, _wrdfrqArr, snotes){
+		if(!_wrdfrqArr){
+			return "";
+		}
+
+		var s="<table border='1'><caption>"+snotes+iGrpLen+"</caption>";
+		s+="<thead><tr><th>#</th>";
+		var idx=0, colMax=10;
+		for(var k=0;k<colMax;k++){
+			s+="<th>"+k+"</th>";
+		}
+		s+="</thead><tbody>";
+
+		var wary=Object.keys(_wrdfrqArr);
+		for(var irow=0;irow<wary.length; irow+=colMax){
+			s+="<tr><td>"+(idx++)+"</td>";
+			for(var iCol=0;iCol<colMax; iCol++){
+				var id=irow+iCol;
+				var str=wary[id];
+				if(!str){continue;}
+				var frq=_wrdfrqArr[str];
+				var obj=DaoDeJing_KeywordsThemes_EngBibDictionary[str];
+				var eng="<div contenteditable>-</div>";
+				if(obj){
+					eng="<div contenteditable class='hili'>"+obj["eng"]+"</div>";
+				}
+				var zici="<a class='zici'>"+str+"</a>";
+				zici+="("+frq+")";
+				s+="<td>"+zici+"<br/>"+eng+"</td>";
+			}
+			s+="</tr>";
+		}
+		s+="</tbody></table>";
+		return s;
+	}
+	///////////////////////
+	function append_table(s){
+		$("#kewword").html(s).find("td").bind("click",function(){
+			var ttt=$("#txot").val();
+	    	var arr=ttt.split(",");
+	    	var zzz=$(this).text();
+	    	if(arr.indexOf(zzz)<0){
+	    		arr.push(zzz);
+	    	}
+	    	$("#txot").val(arr.join(","));
+	    	$(this).toggleClass("tgl");
+
+	    	var zici=$(this).find(".zici").text();
+	    	$("#selword").text(zici);
+		});		
+	}	
+	function gen_splited_table(){
+		function get_splited(wdFrq,arr){
+			var remained={},matched={};
+			$.each(wdFrq,function(wd,frq){
+				if(arr.indexOf(wd)<0){
+					remained[wd]=frq;
+				}else{
+					matched[wd]=frq;
+				}
+			});	
+			return {"remained":remained,"matched":matched};
+		}
+		var virt={}, remain={}, core={}, OxyPair={};
+		var ret=get_splited(DaoDeJing_ChineseWangBi_Frq_CharGrpLen[1],distinct_ddj_all_virtue);
+		remain=ret.remained;
+		virt=ret.matched;
+
+		var tmpar=[];
+		$.each(remain,function(wd,frq){
+			if(Oxymoron_pair1[wd]){
+				var p2=Oxymoron_pair1[wd];
+				OxyPair[wd]=frq;
+				OxyPair[p2]=remain[p2];
+				tmpar.push(wd);
+				tmpar.push(p2);
+			};
+		});
+
+		ret=get_splited(remain,tmpar);
+
+		var ret=get_splited(ret.remained, ddj_NumericUnit);
+		var NumericUnit=ret.matched;
+		
+
+
+
+		ret=get_splited(ret.remained, ddj_humanity);
+		var humanity=ret.matched;
+
+		ret=get_splited(ret.remained, ddj_animals);
+		var animals=ret.matched;
+
+		ret=get_splited(ret.remained, ddj_theo);
+		var theo=ret.matched;
+
+
+
+
+
+		ret=get_splited(ret.remained, ddj_negative);
+		var negative=ret.matched;
+		
+		ret=get_splited(ret.remained, ddj_Positive);
+		var Positive=ret.matched;
+
+		ret=get_splited(ret.remained, ddj_Negative_Bu);
+		var Negative_Bu=ret.matched;
+		
+		ret=get_splited(ret.remained, ddj_Negative_Wu);
+		var Negative_Wu=ret.matched;
+
+		ret=get_splited(ret.remained, ddj_Positive_You);
+		var Positive_You=ret.matched;
+
+		
+
+		ret=get_splited(ret.remained, ddj_Verbs);
+		var Verbs=ret.matched;
+
+		
+		ret=get_splited(ret.remained, ddj_Nouns);
+		var Nouns=ret.matched;
+
+		ret=get_splited(ret.remained, ddj_Adj);
+		var Adj=ret.matched;
+
+		ret=get_splited(ret.remained, ddj_Pronouns);
+		var Pronouns=ret.matched;
+
+		ret=get_splited(ret.remained, ddj_SameKeys);
+		var SameKeys=ret.matched;
+
+
+		ret=get_splited(ret.remained, ddj_standalone);
+		var standalone=ret.matched;
+		
+
+		
+
+		
+
+
+
+
+
+
+	
+
+		core=ret.remained;
+
+		var s=gen_stab(1,core,"core");
+		s+=gen_stab(1,standalone,"standalone");
+		s+=gen_stab(1,SameKeys,"SameKeys");
+		s+=gen_stab(1,virt,"virt");
+		s+=gen_stab(1,NumericUnit,"NumericUnit");
+		s+=gen_stab(1,OxyPair,"OxyPair");
+		s+=gen_stab(1,negative,"negative");
+		s+=gen_stab(1,Positive,"Positive");
+		s+=gen_stab(1,Positive_You,"Positive_You");
+		s+=gen_stab(1,Negative_Bu,"Negative_Bu");
+		s+=gen_stab(1,Negative_Wu,"Negative_Wu");
+		s+=gen_stab(1,humanity,"humanity");
+		s+=gen_stab(1,animals,"animals");
+		s+=gen_stab(1,Verbs,"Verbs");
+		s+=gen_stab(1,Nouns,"Nouns");
+		s+=gen_stab(1,Adj,"Adj");
+		s+=gen_stab(1,theo,"theo");
+
+		
+		append_table(s);
+	};
+	if(0===iGrpLen){
+		gen_splited_table();
+		return;
+	};
+	var s=gen_stab(iGrpLen, DaoDeJing_ChineseWangBi_Frq_CharGrpLen[iGrpLen]);
+	append_table(s);
+}
+</script>
+
+
+	</head>
+	<body>
+		<textarea id="txot"></textarea>
+
+<div id="selen">..</div>
+<button id="split_virtue">split_virtue</button>
+<hr/>
+<div id="selword">selword</div>
+<div id="search">...</div>
+
+
+<div id="kewword"></div>
+		
+
+			&nbsp;</p>
+	</body>
+</html>

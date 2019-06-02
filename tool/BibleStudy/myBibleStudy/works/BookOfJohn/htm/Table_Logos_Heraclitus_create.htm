@@ -1,0 +1,152 @@
+<html>
+	<head>
+		<title onclick="alert();">ctxt</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!------->
+		<base target="_blank" />
+		<script src="../../../../../tablesorter_master/js/jquery.tablesorter.js"></script><script src="../../../myjs/table_Indexer.js"></script><script src="../../../myjs/goto_editor.js"></script>
+		<script type="text/javascript" src="Table_Logos_Heraclitus_dat.js"></script>
+		<style type="text/css">
+body {font-family: 'Times New Roman';
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+    }		
+#_MenuPanel{
+position: fixed;
+left: 10px;
+top: 0px;
+}
+
+.fixedcol{
+	position: absolute;
+	background-color: #999999;
+}
+.fixedcol2, thead{
+	background-color: #999999;
+}
+.fixedcol2{
+	background-color: #eeeeee;
+}
+.catlog, .hili{
+	background-color: #cccccc;
+}
+.logos{
+	background-color: #ff0000;
+}
+.logosv{
+	background-color: #eeaa66;
+}
+.logosw{
+	background-color: #aaaaee;
+}
+.logoswv{
+	background-color: #77aaaa;
+}
+.display_none{
+	display: none;
+}
+.logosvc{
+	background-color: #aa77aa;
+}
+.logov{
+	background-color: #aa77aa;
+}
+.dao{
+	color: #0000ff;
+}
+.All_Top_Horz{
+	background-color: red;
+}
+.leftbox{
+  background-color: #ff0000;
+}
+.tablefloatheb {float: right; margin: 2px;border-collapse: false;background-color: #eeeeee }
+.hebrew
+{
+    FONT-SIZE: 23px;
+    COLOR: #001320;
+    LINE-HEIGHT: 33px;
+    font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+    TEXT-DECORATION: none;
+}		</style>
+	</head>
+	<script>
+$(function(){
+    var tr="";
+    $.each(Heraclitus_Fragments_Eng,function(i,txt){
+		tr+="<tr><td>"+i+"</td><td>"+txt+"</td></tr>";
+    })
+    $("#tbdy").append(tr);    
+
+    $(".fixedcol2").click(function(){
+    	alert();
+    });
+
+    $("td").click(function(){
+    	var out=$("#out").val();
+    	out+=$(this).text().trim()+";";
+    	$("#out").val(out);
+		$(this).toggleClass("hili");
+		$("#_MenuPanel").fadeToggle();
+    });
+
+
+
+
+
+
+
+});/////////
+
+$(document).ready(function(){ 
+	goto_editor("_edit_url");
+	sort_table();
+});//
+function sort_table(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+
+
+</script>
+	<body>
+		<p id="_MenuPanel">
+			<br />
+			<a id="_edit_url">...</a><br />
+			<a id="indxer">indxer</a><br />
+			<textarea id="out"></textarea></p>
+		<!-------------------------->
+		<div>
+			&nbsp;</div>
+		<!-------------------------->
+		<div>
+			&nbsp;</div>
+		<p>
+			<!--------------------------></p>
+		<table border="1" id="view" cellpadding="1" cellspacing="1" style="width: 100%">
+			<caption>
+				Heraclitus</caption>
+			<thead>
+				<tr><td>#</td><td>txt</td></tr>
+			</thead>
+
+			<tbody id="tbdy"></tbody>
+			
+		</table>
+		<p>
+			end</p>
+	</body>
+</html>

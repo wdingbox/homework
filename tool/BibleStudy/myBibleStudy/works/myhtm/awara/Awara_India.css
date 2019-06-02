@@ -1,0 +1,83 @@
+
+body {
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+        
+        
+background-image: url("./img/A8.gif");
+    background-repeat: repeat;        
+    }   
+    
+    
+    
+.highlight {
+        background: black;
+    }
+    .timestarts .timestop{
+        position: float;
+        left:1000px;
+    }   
+    #speedrate, #currTime{
+    background-color:#cccccc;
+    }
+    #videotimexxx{
+        position:absolute;
+        top:10px;
+        left:10px;
+        background-color:#ffffff;
+    }
+    .tmspan{
+      display: inline-block;
+      width:80px;
+      border-style: solid;
+      border-width: 1px 1px 1px 1px;
+      background-color:#00ffff;
+
+    }
+    .idx{
+      display: inline-block;
+      width:30px;
+      background-color:#cccccc;
+      
+    }       
+    #clipNootes{
+     width : 100%;
+     background-color:#fffff;
+    } 
+    .clipNotesScroll{
+     height: 500px;
+     overflow: scroll;
+     background-color:#ffffff;
+    } 
+    
+    #clipsMenu{
+    height: 300px;
+    overflow: scroll;
+    background-color:#ffaaff;
+    z-indx:10000;
+    }
+    span{
+        display:block;
+    }		
+    
+    #videotimexxxxxxxxxx{
+        position:fixed;
+        top:100px;
+        left:100px;
+        z-index:10000;
+        color:#000ff;
+    }		
+    
+    
+    
+    
+    
+    

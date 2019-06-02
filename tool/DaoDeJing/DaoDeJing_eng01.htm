@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title></title>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<meta content="en-us" http-equiv="Content-Language" />
+
+		<script language="javascript" src="../ham12/jq/jquery.js"></script>
+
+		<script language="javascript" src="./js/DaoDeJing_Eng01a.js"></script>
+
+
+<script type="text/javascript">
+	
+$(document).ready(function(){ 
+	gen_table();
+	//gen_table_DaoDeJing();
+	gen_table_to_js();
+});//
+function gen_table_to_js(){
+	var jo={};
+	$("table").find("tbody tr").each(function(i){
+		var t=$(this).find("td:eq(0)").text();
+		jo[""+(i+1)]=$.trim(t);
+	});
+	var s="var DaoDeJing_Eng01=";
+	s+=JSON.stringify(jo,null,4);
+	$("#taot").val(s);
+}
+function gen_table(){
+	var s="<table border='1'>";
+	var sp="									";
+	$.each(DaoDeJing_Eng01,function(chp,ves){
+		s+="<tr><td><a name='"+chp+"'>"+chp+"</a></td><td><pre>"+sp+ves+"</pre></td></tr>";
+	});
+	s+="</table>";
+	$("#tout").html(s);
+}
+</script>
+
+
+
+	</head>
+	<body>
+		<textarea id="taot"></textarea>
+		<div id="tout">
+						<p>
+				&nbsp;</p>
+		</div>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

@@ -1,0 +1,113 @@
+<html>
+	<head>
+		<title onclick="alert();">ctxt</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!------->
+		<base target="_blank" />
+		<script src="../../../../tablesorter_master/js/jquery.tablesorter.js"></script><script src="../../../myjs/table_Indexer.js"></script><script src="../../myjs/goto_editor.js"></script>
+		<style type="text/css">
+body {font-family: 'Times New Roman';
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+    }		
+#_MenuPanel{
+position: fixed;
+left: 10px;
+top: 0px;
+}
+
+.fixedcol{
+	position: absolute;
+	background-color: #999999;
+}
+.fixedcol2, thead{
+	background-color: #999999;
+}
+.fixedcol2{
+	background-color: #eeeeee;
+}
+.catlog{
+	background-color: #cccccc;
+}
+.strongs{
+	background-color: #ffffff;
+}
+.Top_Horz{
+	color: blue;
+}
+.All_Top_Horz{
+	background-color: red;
+}
+.leftbox{
+  background-color: #ff0000;
+}
+.tablefloatheb {float: right; margin: 2px;border-collapse: false;background-color: #eeeeee }
+.hebrew
+{
+    FONT-SIZE: 23px;
+    COLOR: #001320;
+    LINE-HEIGHT: 33px;
+    font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+    TEXT-DECORATION: none;
+}		</style>
+	</head>
+	<script>
+$(function(){
+    $(".narration").toggle();
+    $(".TheTitle").click(function(){
+        $(".narration").toggle();
+    } );
+    $("#strongsCodes").click(function(){
+    	$(".strongs, .translit").slideToggle();
+    });
+
+    $("body").click(function(){
+    	$("#_MenuPanel").slideToggle();
+    });
+
+    $("#relativeFrqRate").click(function(){
+    	cal_relativeFrqRate();
+    });
+
+
+    $(".fixedcol2").click(function(){
+    	alert();
+    });
+
+});/////////
+
+$(document).ready(function(){ 
+	goto_editor("_edit_url");
+	sort_table();
+});//
+function sort_table(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+
+
+</script>
+	<body>
+		<p id="_MenuPanel">
+			<br />
+			<a id="_edit_url">...</a><br />
+			<a id="indxer">indxer</a></p>
+		<!----------------------------------->
+		<!----------------------------------->
+
+		<p></p>
+	</body>
+</html>

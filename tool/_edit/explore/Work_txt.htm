@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+
+        <title>TXT Edit</title>
+
+		<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+        <script type="text/javascript" src="../adapters/jquery.js"></script>
+		<script type="text/javascript" src="../ckeditor.js"></script>
+        <scripttype="text/javascript" src="sample.js" ></script>
+ 
+
+
+
+   <script type="text/javascript">
+
+	$(document).ready(function(){
+
+		var url=" " + document.URL;
+
+		var ary = url.split("=");			
+
+		if (ary.length == 2){
+
+			document.m_fname = ary[1];
+
+			//alert(fname);	 
+
+			$.post("WorkLoadFile.php", {   
+
+									 filename: document.m_fname                          
+
+									 },
+
+									 function(data, status){
+
+											  //alert("["+data+"]");										
+
+											  $("#editor1").val ($.trim(data) );
+
+											  $("#ajx_load_status").html(document.m_fname+":"+status);
+
+									},
+
+									"html"
+
+									);/////post 
+
+		}//////if (ary.length == 2){	
+
+		else{
+
+			alert("no file. pleaase attach it in url ?fname=xyz.htm");
+
+		}
+
+
+
+		$("#fname").val(document.m_fname).hide();//used for same file.
+
+
+       //// click anywhere outside textarea can save it.                      
+       $("body").click(function(e){
+           if(  $(e.target).attr("id") != "mainbody" ) return;
+           if( true == confirm("Do you want to save this?\n"+document.m_fname ) ){
+                 //$("#submitform").submit();///////
+                 SaveFile();
+           }
+       });
+		
+		
+
+ 
+    });///////////////////////////////$(document).ready(function(){
+    	
+	function SaveFile(){
+	       //alert("post a ajax_save" + savefile); 
+	       $.post("WorkSaveFile.php", {   
+	           fname:   document.m_fname  ,                          
+	           editor1: $("#editor1").val()  
+	            },
+	            function(data, status){
+	                     if(data.indexOf("Data is successfully saved in:")>0){     
+	                            alert("Data is successfully saved in:\n\n" + document.m_fname); 
+	                     }
+	                     else{
+	                         alert(  "Failed to save:\n" + document.m_fname + "\n\ndata:"+data);    
+	                     }
+	                     
+	                     $("#ajx_load_status").html(document.m_fname+":"+status +"<br/>"+data);
+	           },
+	           "html"
+	           );/////post 
+    }
+    </script>
+
+		<link href="sample.css" rel="stylesheet" type="text/css" />
+
+	</head>
+
+	<body id="mainbody">
+
+		<form action="WorkSaveFile.php" method="post" id="submitform">
+
+			<button type="submit" id="submitSaveFile">Save</button>
+			<input id="fname" name="fname" type="text" value="./z/test.htm" /><br />
+
+			<textarea cols="1800" id="editor1" name="editor1" rows="1800" />   
+        </form>
+
+		<div id="ajx_load_status">
+
+			&nbsp;</div>
+
+	</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta content="text/html; charset=utf8" http-equiv="Content-Type" />
+        <meta content="width=device-witdh, initial-scale=1, maximum-scale=1, user-scale=0" name="viewport" />
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+           
+
+      
+        
+
+        <script language="javascript" src="WordsFreq.js"></script>
+        
+<script>
+
+$(document).ready(function(){
+
+    $("#DoFreq").change(function(){
+        var wfq = new WordsFreq();
+        var t=$("#txt").val();
+        if(t.length===0) return alert("please paste your test in textarea");
+        var method=$(this).val();
+        switch(method){
+            case "English_Words":
+            wfq.uniqObjFreq.collect_English_Words(t);
+            break;
+            case "Chinese_Chars":
+            wfq.uniqObjFreq.collect_Chinese_Chars(t);
+            break;
+            case "Hebrew_Chars":
+            wfq.uniqObjFreq.collect_Hebrew_Chars(t);
+            break;
+            case "collect_Hebrew_Individual_Words":
+            wfq.uniqObjFreq.collect_Hebrew_Individual_Words(t);
+            break;
+            case "English_Words":
+            wfq.uniqObjFreq.collect_English_Words(t);
+            break;
+            case "English_Words":
+            wfq.uniqObjFreq.collect_English_Words(t);
+            break;
+
+        }
+        $("#out").html(wfq.getSortTable("Freq"));
+    });
+
+});
+
+
+
+
+</script>
+
+<style>
+button:disabled{
+ color:#cccccc;
+}
+#menu{
+    position: fixed;
+    top:10px;
+    right:10px;
+}
+textarea{
+    width:100%;
+    rows:50;
+    
+}
+</style>
+
+    </head>
+    <body>
+    <div id='menu'>
+    <select id='DoFreq' >
+        <option value=''></option>
+        <option value='English_Words'>English Words</option>
+        <option value='Chinese_Chars'>Chinese Chars</option>
+        <option value='Hebrew_Chars'>collect_Hebrew_Chars</option>
+        <option value='Hebrew_Individual_Words'>Hebrew_Individual_Words</option>
+        <option value='Hebrew_Chars'>Hebrew</option>
+        <option value='Hebrew_Chars'>Hebrew</option>
+        <option value='Hebrew_Chars'>Hebrew</option>
+        <option value='Hebrew_Chars'>Hebrew</option>
+    </select>
+    
+    </div>
+    
+    <a id="out">Please paste your text into following area and select method to calculate words Freqs.</a>
+        <p>
+            &nbsp;</p>
+        
+        <p>
+            &nbsp;</p>
+    <textarea id='txt' rows="20" ></textarea>
+    </body>
+</html>

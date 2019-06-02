@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<meta content="en-us" http-equiv="Content-Language" />
+		<title>12Apostles</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><script src="http://maps.googleapis.com/maps/api/js"></script>
+		<style type="text/css">
+.text_container{
+            height:600px;
+            width:100%;
+            background-color:#eeeeee;
+            border-style: solid;
+            border-width: 2px;
+            overflow:scroll;
+        }
+        
+        .tdclked{
+           background-color:#cccccc;
+        }
+        table:nth-child(1){
+            background-color:#ffeedd;
+        }
+        table:nth-child(2){
+            background-color:#eeeeff;
+        }
+        
+        .clickedcircle2td{
+            background-color:#00cccc;
+        }		
+        .JMentioned{
+            border: 2px solid #ff0000;
+        }	
+
+
+#psersonNames tbody tr td:nth-child(11){
+background: #7777ff;
+}	
+#psersonNames tbody tr td:nth-child(12){
+background: #ff7777;
+}		
+#zz{}		</style>
+		<script>
+
+  $(document).ready(function(){ 
+    runTable();
+    duplicateNamesCheck();
+    ColMaxMarker();
+  });//doc
+function runTable(){
+    $("#psersonNames tbody tr").each(function(i){
+        console.log(i);
+        if(i>1){
+            totalCalc(this,i);
+            personHighlite(this,i);
+        }
+    });
+}  
+function totalCalc(tr, i){
+            $(tr).find("td:eq(0)").text(i-1);
+            
+            var totB=totalCount($(tr),2,8, "#aaaaff");
+            $(tr).find("td:eq("+10+")").text(totB);
+            
+            var totJ=totalCount($(tr),3,9, "#ffbbbb");
+            $(tr).find("td:eq("+11+")").text(totJ);
+}
+function personHighlite(tr, i){
+            var totJ=$(tr).find("td:eq("+11+")").text();
+            var iJ=parseInt(totJ);
+            if(iJ>0){
+                $(tr).find("td:eq("+1+")").addClass('JMentioned');
+            }
+}
+function duplicateNamesCheck(){
+    var namesArr=[];
+    $("#psersonNames tbody tr").each(function(i){
+        if(i>1){
+            var name=$.trim($(this).find("td:eq("+1+")").text());
+            if(name.length>0){
+                if(namesArr.indexOf(name)>0){
+                    $(this).css("background-color","red").remove();
+                }
+                else{
+                    namesArr.push(name);
+                }            
+            }
+
+        }
+    });
+}
+function ColMaxMarker(){
+    for(var i=2;i<=11;i++){
+        ColMaxMark(i);
+    }
+}
+
+function ColMaxMark(iCol){
+    var Max=-1, cell=null;
+    $("#psersonNames tbody tr").each(function(i){
+        if(i>1){
+            var td=$(this).find("td:eq("+iCol+")");
+            var txt=$.trim($(td).text());
+            if(txt.length>0 && txt!='-'){
+                var val=parseInt(txt);
+                if( val > Max){
+                    Max = val;
+                    cell=td;                    
+                }         
+            }
+        }
+    });
+    $(cell).css("color","red");
+}
+function totalCount(tr, ciStart,ciEnd, colr){
+    var totB=0;
+    for(var ci=ciStart;ci<=ciEnd;ci+=2){
+        var sb=$(tr).find("td:eq("+ci+")").css("background-color",colr).text();
+        sb=$.trim(sb);
+        if(sb.length==0) continue;
+        if(sb==='-') continue;
+        if(true==isNaN(sb)) continue;
+        var nb=parseInt(sb);
+        if( false==isNaN(sb) ) {
+            totB +=nb ;
+        }
+    }
+    return totB;
+}
+
+        </script>
+	</head>
+	<body>
+		<table border="1" cellpadding="1" cellspacing="1" id="psersonNames" style="width: 500px">
+			<caption>
+				12 Apostles_NT</caption>
+			<tbody>
+				<tr>
+					<th colspan="1" rowspan="2">
+						#</th>
+					<th colspan="1" rowspan="2">
+						Names</th>
+					<th colspan="2" rowspan="1" style="text-align: center;">
+						Mathew</th>
+					<th colspan="2" rowspan="1" style="text-align: center;">
+						Mark</th>
+					<th colspan="2" rowspan="1" style="text-align: center;">
+						Luke</th>
+					<th colspan="2" rowspan="1" style="text-align: center;">
+						John</th>
+					<th colspan="2" rowspan="1" style="text-align: center;">
+						Total</th>
+					<th colspan="1" rowspan="2" style="text-align: center;">
+						&nbsp;</th>
+				</tr>
+				<tr>
+					<th style="text-align: center;">
+						B</th>
+					<th style="text-align: center;">
+						J</th>
+					<th style="text-align: center;">
+						B</th>
+					<th style="text-align: center;">
+						J</th>
+					<th style="text-align: center;">
+						B</th>
+					<th style="text-align: center;">
+						J</th>
+					<th style="text-align: center;">
+						B</th>
+					<th style="text-align: center;">
+						J</th>
+					<th style="text-align: center;">
+						B</th>
+					<th style="text-align: center;">
+						J</th>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						彼得<br />
+						Simon Peter</td>
+					<td>
+						28</td>
+					<td>
+						2</td>
+					<td>
+						23</td>
+					<td>
+						1</td>
+					<td>
+						21</td>
+					<td>
+						1</td>
+					<td>
+						34</td>
+					<td>
+						3</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						约翰的儿子西门彼得<br />
+						Bother of Andrew. author Of Peter 1,2</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						安德烈<br />
+						Andrew</td>
+					<td>
+						2</td>
+					<td>
+						0</td>
+					<td>
+						4</td>
+					<td>
+						0</td>
+					<td>
+						1</td>
+					<td>
+						0</td>
+					<td>
+						2</td>
+					<td>
+						0</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						彼得的兄弟&nbsp;安德烈. 伯賽大（Bethsaida）的漁夫，施洗約翰的門徒</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						雅各<br />
+						James<br />
+						the Great</td>
+					<td>
+						3</td>
+					<td>
+						0</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						西庇太的儿子雅各<br />
+						Son of Zebedee, older brother of John, James the Greate.</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						约翰<br />
+						John</td>
+					<td>
+						3</td>
+					<td>
+						0</td>
+					<td>
+						6</td>
+					<td>
+						0</td>
+					<td>
+						4</td>
+					<td>
+						0</td>
+					<td>
+						0</td>
+					<td>
+						0</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						西庇太的儿子. 雅各的兄弟 耶穌為他們起名為「半尼其」（Boanerges），意為「雷子」<br />
+						son of Zebedee, brother of James, author of John Gospel, John 1,2,3, Revealation</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						腓力<br />
+						Philip</td>
+					<td>
+						1</td>
+					<td>
+						0</td>
+					<td>
+						1</td>
+					<td>
+						0</td>
+					<td>
+						2</td>
+					<td>
+						0</td>
+					<td>
+						12</td>
+					<td>
+						2</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						來自伯賽大Bethsaida</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						巴多罗买<br />
+						Bartholomew</td>
+					<td>
+						1</td>
+					<td>
+						0</td>
+					<td>
+						1</td>
+					<td>
+						0</td>
+					<td>
+						1</td>
+					<td>
+						0</td>
+					<td>
+						0</td>
+					<td>
+						0</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						(拿但業)Nathaniel</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						马太<br />
+						Matthew</td>
+					<td>
+						2</td>
+					<td>
+						0</td>
+					<td>
+						3</td>
+					<td>
+						0</td>
+					<td>
+						1</td>
+					<td>
+						0</td>
+					<td>
+						0</td>
+					<td>
+						0</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						利未&nbsp;税吏马太<br />
+						author of Mat</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						多马<br />
+						Thomas</td>
+					<td>
+						1</td>
+					<td>
+						0</td>
+					<td>
+						1</td>
+					<td>
+						0</td>
+					<td>
+						1</td>
+					<td>
+						0</td>
+					<td>
+						8</td>
+					<td>
+						1</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						Didymus</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						奋锐党的西门<br />
+						Simon the Zealot</td>
+					<td>
+						1</td>
+					<td>
+						0</td>
+					<td>
+						1</td>
+					<td>
+						0</td>
+					<td>
+						1</td>
+					<td>
+						0</td>
+					<td>
+						0</td>
+					<td>
+						0</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						又稱迦南人西門</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						小雅各<br />
+						Jame the Lesser</td>
+					<td>
+						1</td>
+					<td>
+						0</td>
+					<td>
+						2</td>
+					<td>
+						0</td>
+					<td>
+						1</td>
+					<td>
+						0</td>
+					<td>
+						0</td>
+					<td>
+						0</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						亚勒腓的儿子雅各 =小雅各第一位耶路撒冷主教<br />
+						AD 62. James<br />
+						son of Alphaeus<br />
+						author of James</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						达太<br />
+						Thaddaeus-Judas</td>
+					<td>
+						1</td>
+					<td>
+						0</td>
+					<td>
+						1</td>
+					<td>
+						0</td>
+					<td>
+						0</td>
+					<td>
+						0</td>
+					<td>
+						0</td>
+					<td>
+						0</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						雅各的兒子（或兄弟）猶大<br />
+						brother of James the Lesser, brother of matthew(Levi) of Capernaum</td>
+				</tr>
+				
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						犹大<br />
+						Judas Iscariot</td>
+					<td>
+						7</td>
+					<td>
+						0</td>
+					<td>
+						4</td>
+					<td>
+						0</td>
+					<td>
+						2</td>
+					<td>
+						1</td>
+					<td>
+						10</td>
+					<td>
+						0</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						西门的儿子加略人犹大, betrayed Him.</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>B: appeared in book. <br/>J: mentioned by Jesus.</p>
+
+            
+<hr/>
+
+https://en.wikipedia.org/wiki/Jude_the_Apostle
+
+<p>Jude, also known as Judas Thaddaeus[4] (Greek: Θαδδαῖος; Coptic: ⲑⲁⲇⲇⲉⲟⲥ; Syriac/Aramaic: ܝܗܘܕܐ ܫܠܝܚܐ)[5], 
+<ol><li>
+	was one of the Twelve Apostles of Jesus. </li><li>
+	He is generally identified with Thaddeus, and </li><li>
+	is also variously called Jude of James, Jude Thaddaeus, Judas Thaddaeus or Lebbaeus. </li><li>
+	He is sometimes identified with Jude, the brother of Jesus, but 
+	is clearly distinguished from Judas Iscariot, the apostle who betrayed Jesus prior to his crucifixion. 
+	Judas Thaddaeus became known as Jude after early translators of the New Testament from Greek into English sought to distinguish him from Judas Iscariot and subsequently abbreviated his forename.[6] </li><li>
+	Most versions of the New Testament in languages other than English and French refer to Judas and Jude by the same name.[7]
+</li></ol>
+</p><p>
+The Armenian Apostolic Church honors Thaddeus along with Saint Bartholomew as its patron saints. In the Roman Catholic Church, he is the patron saint of desperate cases and lost causes.
+</p><p>
+Saint Jude's attribute is a club. He is also often shown in icons with a flame around his head. This represents his presence at Pentecost, when he received the Holy Spirit with the other apostles. Another common attribute is Jude holding an image of Jesus Christ, known as the Image of Edessa. In some instances, he may be shown with a scroll or a book (the Epistle of Jude) or holding a carpenter's rule.[8]
+</p><p>
+Identity
+New Testament
+Jude is clearly distinguished from Judas Iscariot, another apostle and later the betrayer of Jesus. Both Jude and Judas are translations of the name Ὶούδας in the Koine Greek language original text of the New Testament, which in turn is a Greek variant of Judah (Y'hudah), a name which was common among Jews at the time. In most Bibles in languages other than English and French, Jude and Judas are referred to by the same name.
+</p><p>
+Aside from Judas Iscariot, the New Testament mentions Jude or Judas six times, in four different contexts:
+</p><p>
+"Jude of James", one of the twelve apostles (Luke 6:16 and Acts 1:13);
+"Judas, (not Judas Iscariot)", apparently an apostle (John 14:22);
+the brother of Jesus (Matthew 13:55, Mark 6:3);
+the writer of the Epistle of Jude, who identifies himself as "the brother of James" (Jude 1:1).
+The first two are almost always thought to be the same person,[9] although theologian Raymond Brown saw the identification as uncertain.[10] The latter two are also usually thought to be the same person, though this too is not certain; see Epistle of Jude.
+</p><p>
+Catholic tradition generally holds all of these four to be the same person; while Protestants generally believe 1&2 to be one person, and 3&4 to be a one person, but different from 1&2.
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
+	<hr/>
+            <table border="1" width="95%"><caption><a href="http://godisforus.com/information/bible/ntdocs/authors.htm">Authors for NT</a></caption>
+              <tbody><tr> 
+                <td width="49%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Writer</b></font></td>
+                <td width="51%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Book</b></font></td>
+              </tr>
+              <tr> 
+                <td width="49%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Matthew (apostle)</font></td>
+                <td width="51%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Matthew</font></td>
+              </tr>
+              <tr> 
+                <td width="49%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Mark (coworker of Paul)
+                  </font></td>
+                <td width="51%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Mark</font></td>
+              </tr>
+              <tr> 
+                <td height="20" width="49%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Luke (coworker of Paul)</font></td>
+                <td height="20" width="51%"> 
+                  <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Luke<br>
+                    Acts </font></p>
+                </td>
+              </tr>
+              <tr> 
+                <td width="49%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">John (apostle)</font></td>
+                <td width="51%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">John<br>
+                  I John<br>
+                  II John<br>
+                  III John<br>
+                  Revelation </font></td>
+              </tr>
+              <tr> 
+                <td width="49%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Peter (apostle)</font></td>
+                <td width="51%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">I 
+                  Peter<br>
+                  II Peter</font></td>
+              </tr>
+              <tr> 
+                <td width="49%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">James (brother of Jesus)</font></td>
+                <td width="51%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">James</font></td>
+              </tr>
+              <tr> 
+                <td width="49%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Jude (brother of Jesus)</font></td>
+                <td width="51%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Jude</font></td>
+              </tr>
+              <tr> 
+                <td width="49%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Paul</font></td>
+                <td width="51%"> 
+                  <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Romans 
+                    <br>
+                    Phillipians <br>
+                    I Timothy<br>
+                    I Timothy <br>
+                    I Corinthians<br>
+                    II Corinthians <br>
+                    Colossians <br>
+                    Titus<br>
+                    I Thessalonians <br>
+                    II Thessalonians<br>
+                    Philemon<br>
+                    Galatians<br>
+                    Ephesians </font></p>
+                </td>
+              </tr>
+              <tr> 
+                <td width="49%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Undetermined</font></td>
+                <td width="51%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Hebrews</font></td>
+              </tr>
+            </tbody></table>
+            <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>BRIEF 
+              BIOGRAPHY OF EACH AUTHOR
+	</body>
+</html>

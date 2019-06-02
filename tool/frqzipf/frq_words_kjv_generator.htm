@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+    <TITLE>zipfCreateDat</TITLE>
+    <META http-equiv="Content-Type" content="text/html;" charset="UTF-8">
+    <META name="viewport" content="width=device-witdh, initial-scale=1, maximum-scale=1, user-scale=0">
+
+    <link rel="stylesheet" type="text/css" href="../ham12/css/Default_pad.css">
+    <link rel="stylesheet" type="text/css" href="../ham12/css/mark_colors.css">
+
+    <script language="javascript" src="../ham12/jq/jquery.js"></script>
+    
+    <script language="javascript" src="../ham12/jq/MyCookies.js"></script>
+    
+
+    
+
+
+     <script  language="javascript" src="../ham12/jsdk/bible/BookLoader.js"></script> 
+     <script>
+     
+     
+KJV.Set  ('../../../../___bigdata/unzipped/rel/ham12/jsdb/bible/kjv/','');
+//BBE.Set  ('../../../../___bigdata/unzipped/rel/ham12/jsdb/bible/bbe/','');
+    
+    </script>
+
+
+
+
+  
+
+
+    
+    <script  language="javascript" src="../ham12/jsdk/bible/_inc_bible_NamesOfPersons.js">
+    </script>
+    
+    <script  language="javascript" src="../ham12/jsdk/bible/_inc_bible_NamesOfPlaces.js">
+    </script>
+
+    <script  language="javascript" src="../../../../___bigdata/unzipped/rel/ham12/jsdb/cc/7kPy/Pinyin7kzi.js">
+    </script>
+    
+        
+    <script language="javascript" src="../../../../___bigdata/unzipped/rel/ham12/jsdb/cc/z2g/jianfan/Traditional2Simplified.js">
+    </script>
+
+
+    <script language="javascript" src="../ham12/jsdk/cc/z2g/_inc_z2g.js" _onload="Z2G.Set('./jsdb/', 'async')">
+    </script>
+    <script>inc_z2g_write('../../../../___bigdata/unzipped/rel/ham12/jsdb/');
+    //alert("6. last end inc_z2g_write.")
+    </script>
+
+
+    <script language="javascript" src="../ham12/BookChapterVerseMax.js"  type="text/javascript"></script>
+    <script language="javascript" src="../ham12/BookChapterVerseUti.js"  type="text/javascript"></script>
+    <script language="javascript" src="../ham12/BiblePad-2016.js"  type="text/javascript"></script>
+    <script language="javascript" src="../ham12/BiblePadUtils-2015.js"  type="text/javascript">
+    </script>
+    
+<!-- for frq stats-->
+<script language="javascript" src="../ham12/WordsFreq.js"></script>
+<script language="javascript" src="../ham12/WordsEngMeaningless.js"></script>
+<script language="javascript" src="../ham12/WordsClassified.js"></script>
+
+<script language="javascript" src="../ham12/jsdk/bible/NivEnglishSpeicalWordsCaseSensitve.js"></script>
+<script language="javascript" src="../ham12/WordsEngFormVariation.js"></script>
+        
+      
+<style>
+#btnHolder{
+    position: fixed;
+    top:0;
+    right:30px;
+}
+</style>    
+    
+
+</HEAD>
+    <BODY>
+<div id="btnHolder">
+<button id="hidshow">hidshow</button>
+<button id="showNiv">showNiv</button>
+</div>
+
+
+    <div id="vbibtxt">
+    </div>
+
+    </BODY>
+<script language="javascript">
+$(document).ready(function(){
+    $("#hidshow").click(function(){
+        $(".shower").toggle();
+        window.open("niv_frq_words_plus_table.htm");
+    });
+    $("#showNiv").click(function(){
+        $("#vbibtxt").html(GetBookFrCurBible());
+    });
+
+   //body_onload();
+   MasterBibleBookLoader.SetBibleVersion("KJV");
+   MasterBibleBookLoader.LoadBookChapVers("OTNT");
+
+   var txt=MasterBibleBookLoader.LoadBookChapVers("_Gen1_1");
+   txt+=MasterBibleBookLoader.LoadBookChapVers("_Gen1_2");
+
+
+
+   var bkidAr=Object.keys(BookChapterVerseMax);
+   var bkid="_Gen";
+   //var jstr=GetZipfrq_a_book(bkid);  
+   var jstr=GetZipfrq_whole(); 
+
+   $("#vbibtxt").html(jstr);
+
+});
+function GetZipfrq_whole(){
+   var jstr="var BiblePad_Zipf_KJV_dat={<br>";
+
+   var bkidAr=Object.keys(BookChapterVerseMax);
+   bkidAr.unshift("OTNT");
+   bkidAr.unshift("OT");
+   bkidAr.unshift("NT");
+   for(var i=0;i<bkidAr.length;i++){
+        var bkid=bkidAr[i];
+        jstr+=GetZipfrq_a_book(bkid);      
+   }
+   jstr+="};<br>";
+   return jstr;
+}
+
+function GetZipfrq_a_book(bkid){
+   //var bkid="_Gen";
+   var txt=GetBookFrCurBible(bkid);
+
+   var jstr="";   
+   var wfq1 = new WordsFreq();
+   wfq1.uniqObjFreq.collect_English_Words(txt);
+
+
+   jstr+="<hr/>"+wfq1.uniqObjFreq.get_sorted_text_frq_list_for_py("kjv"+bkid);
+   //jstr+="<hr><div class='shower'>"+wfq1.uniqObjFreq.Gen_Eng_dict2jstr();
+   jstr+="</div>";  
+   return jstr;  
+}
+function GetBookFrCurBible(BookAbrv) { // _Gen
+    //MasterBibleBookLoader.LoadBookChapVers(BookAbrv+"1_1");
+    var oBible=MasterBibleBookLoader.pVerses;//GetCurBible(); 
+
+    var KeysArr=[];
+    var ret=BookChapterVerseMaxUti.Push_BCV_KeyArr(KeysArr, BookAbrv);
+    
+    var s="";
+    console.log("GetBookFrCurBible:"+BookAbrv);
+    for (var k=0;k<KeysArr.length;k++) {
+        var key=KeysArr[k];
+        s+=" "+oBible[key];
+    }
+
+    return (s);
+}
+
+</script>
+
+</HTML>

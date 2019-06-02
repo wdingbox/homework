@@ -1,0 +1,6 @@
+https://github.com/ghedipunk/PHP-Websockets
+
+http://www.phpbuilder.com/articles/application-architecture/optimization/creating-real-time-applications-with-php-and-websockets.html
+
+usage at server site:
+php -q testwebsock.php

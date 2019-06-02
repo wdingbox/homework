@@ -1,0 +1,48 @@
+
+
+html,body {
+	//height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px 0px 0px 3px; //
+	//overflow: hidden;
+}
+
+span.op {
+	/*position: absolute;*/
+	top: 0px;
+	left: 0%;
+	/*margin-left: -250px;*/
+}
+
+a.path { /**/
+	
+	margin: 0px;
+	padding: 0px 10px 0px 10px;
+}
+
+a.create_Dir { //
+	background-color: #aaaaaa;
+	margin: 0px;
+	padding: 0px 10px 0px 10px;
+}
+
+a.create_File {
+	margin: 0px;
+	padding: 0px 10px 0px 10px;
+}
+a:hover { background: #aaaaff;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

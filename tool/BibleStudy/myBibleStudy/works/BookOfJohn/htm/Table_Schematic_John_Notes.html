@@ -1,0 +1,333 @@
+<html>
+	<head>
+		<title></title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<base target="_blank" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!-------><script src="../../../../../tablesorter_master/js/jquery.tablesorter.js"></script><script src="../../../../myjs/table_Indexer.js"></script><script src="../../../myjs/goto_editor.js"></script>
+		<style type="text/css">
+body {font-family: 'Times New Roman';
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+    }		
+#_MenuPanel{
+position: fixed;
+left: 10px;
+top: 0px;
+}
+
+.fixedcol{
+	position: absolute;
+	background-color: #999999;
+}
+.fixedcol2, thead{
+	background-color: #999999;
+}
+.fixedcol2{
+	background-color: #eeeeee;
+}
+.synoptic{
+	background-color: #dddddd;
+}
+.strongs{
+	background-color: #ffffff;
+}
+.Top_Horz{
+	color: blue;
+	font-size:7px;
+}
+.All_Top_Horz{
+	background-color: red;
+}
+.leftbox{
+  background-color: #ff0000;
+}
+.Jerusalem {
+	border: 4px solid blue;
+}
+.iam{
+	color:red;
+}
+.verse{
+	border: 1px solid gray;
+}
+sup{
+	alig: 
+}
+.MainList  {
+
+  left: -30px;
+}
+.hebrew
+{
+    FONT-SIZE: 23px;
+    COLOR: #001320;
+    LINE-HEIGHT: 33px;
+    font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+    TEXT-DECORATION: none;
+}		</style>
+		<script>
+$(function(){
+    $(".narration").toggle();
+    $(".TheTitle").click(function(){
+        $(".narration").toggle();
+    } );
+    $("#strongsCodes").click(function(){
+    	$(".strongs, .translit").slideToggle();
+    });
+
+    $("body").click(function(){
+    	$("#_edit").slideToggle();
+    });
+
+    $("#relativeFrqRate").click(function(){
+    	cal_relativeFrqRate();
+    });
+
+
+    $(".fixedcol2").click(function(){
+    	alert();
+    });
+
+    $("#struct tbody tr").each(function(){
+    	$(this).find("td:eq(1)").addClass("Top_Horz");
+    })
+
+    $("td").each(function(){
+    	var tit=$(this).attr("title");
+    	if(tit && tit.length>0){
+    		$(this).prepend("<a class='verse'>"+tit+"</a> ");
+    	}
+    });
+
+    $(".MainList").each(function(i){
+    	$(this).prepend("<b>"+(1+i)+". </b>")
+    })
+
+});/////////
+
+$(document).ready(function(){ 
+	goto_editor("_edit_url");
+	sort_table();
+});//
+function sort_table(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+
+
+</script>
+	</head>
+	<body>
+		<p id="_MenuPanel">
+			<br />
+			<a id="_edit_url">...</a><br />
+			<a id="indxer">indxer</a></p>
+		<!--------------------------><!--------------------------><!-------------------------->
+		
+<center>Notes for Schmatic Table</center>
+
+
+			<div class="MainList">
+				<strong>Miracle神迹 and Marvel奇事: </strong>
+				<ol type="1">
+					<li>
+						<p>
+							miracle (*): A wonderful event occurring in the physical world attributed to supernatural powers. Represents the power of God and to lead people to HIM. 
+						</p>
+						<p>
+							magic 魔术/魔法/魅/魔力, sorcery/witchcraft/wizardry/enchantment/spells/witching 巫术:   the power of apparently influencing the course of events by using mysterious or supernatural forces. But it does not glory God but something else. It represent the power of evil. 
+						</p>
+					</li>
+					<li>
+						<p>
+							marvel (~): the wonderful, amazed, astonished, abnormal speakings in conversation or abnormal behavior among people. Mat 7:28. (like demon possesed or raving mad (10:20). Represents the personality for God and lead people to HIM</p>
+						<p>
+							anecdote: a short and amusing or interesting story about a real incident or person. It does not glorify God. 軼事（英語：anecdote），也被稱作逸事、軼聞，指的是大多數人可能並不知道的有趣的故事，或者未經出版發行的一些奇異的事情。 ... 然而，隨着時間的推移，軼事經過互相傳播逐漸被修改成脫離了它原本的意思，但仍編得「足夠真實」使人相信。</p>
+					</li>
+					<li>
+						Characters:
+						<ol>
+							<li>
+								Undividable: M&amp;M depend on and testify each other for God; Discern the secret/demonic mystery詭秘 of evils.
+								<p>
+									The first miracle immediately was followed by the first marvel. Compared with the first miracle which is peaceful and joyful, the first marvel seems physically voilent. The irregular orders of miracles in the book John itself is a miracle and marvel which reflect a character of the Holy Spirit.</p>
+							</li>
+							<li>
+								Unreplicable: No patterns; Cann&#39;t be tested, predicted or mimic. Capriciousness. We need to be humbe and obedence.</li>
+							<li>
+								Unreachable: the envey and desires/admires to be like God comes from the Serpan; be alert for the liars/heresy; We need to be humbe and obedence.</li>
+							<li>
+								Universal 普遍 and special 特殊 revelation.
+							</li>
+						</ol>
+						Roles:
+						<ol>
+							<li>
+								Attraction: John 6:44, 12:32. 12:18</li>
+							<li>
+								Identification/Authenticity: for the Only Son of God, signs of God. Gen 1:14, John 4:48, 6:2,14,30, 9:16</li>
+							<li>
+								Glorification: miracle represents the supper power; marvel holy personality. Both represent God&#39;s sovereign over the world.</li>
+							<li>
+								Reminder: so that His people can remember. Jhn 2:17</li>
+							<li>
+								Preparation: to fulfillment of God&#39;s Salvation Plan on cross. Famous then Sacrifice. Teaching then Modeling; Help then leave; Love then Passion; Believe then Commission; (John 7:4)</li>
+							<li>
+								Love of God: joy not joke; amazing grace not mysterious curiosity; love not entertain; Song 1:4; Jer 31:3</li>
+							<li>
+								Purpose: Faith/Salvation (see ref)
+							</li>
+						</ol>
+						Ownership:
+						<ol>
+							<li>
+								His Will--totally free.</li>
+							<li>
+								His Deed--absolutely unlimited</li>
+							<li>
+								His Time--exactly accurate</li>
+						</ol>
+					</li>
+					<li>
+						Timing: (1) The sequence of miracles and marvels occured strictly according to His time and will without any human interferences. John recorded at least twice that the miracle or marvel would not happen if His time has not come (John 2:4;7:6). To further look into His time order, it can be found that there exists an increament in degree of abnormality for miracles and marvels. (2)Three times of passover day infer three years of missionary work of Jesus. The last feast is the Easter day which is new.</li>
+					<li>
+						Order Issues: 
+						<ol>
+							<li>
+								Inconsistency: The cleansing temple differs from synoptics--it is not contradition but the transcendence of God. 
+							</li>
+							<li>
+								Interleave: The irregular orders of miracles in the book John itself is a miracle and marvel which reflect a character of the Holy Spirit. The first miracle immediately was followed by the first marvel. Compared with the first miracle which is peaceful and joyful, the first marvel seems physically voilent.</li>
+							<li>
+								Increasing Intensity:
+								
+									The seven miracle started with the peaceful and joyful wedding ceremony, but ended with disturbing resurrection of Lazrus. The seven marvels started with physcial voilent clearing of the Temple, ended with His spiritual untolerable proclaimation &quot;I and the Father are one.&quot; under Solomon Colonnade which is considered as blaphamy and extreme offensive to Jewis. The increamental order for miracles and marvels refects the progressive revelation that Jesus used in His strategy that human beings can be acceptable and understandable. Such careful arrangement is a reflection of love of Jesus even in subtlety of His mission.
+							</li>
+						</ol>
+					</li>
+					<li>
+						Location: Most M&amp;M occured between Jeruslem and Galiliee.</li>
+					<li>
+						Counting: It is important to notice that the Book of John only count the number for the first two miracles (John 2:11 and John 4:54). The number of seven miracles are counted by careful readers and verified by scholars. The seven &quot;I AM&quot; were also discovered by readers. It further leads to find until 7x7. It is certain that more sevens can be found in future as Christians keep dig into it. More over, it&#39;s worth to further explore the relationship of 7x7 in John and 21x7 in the book of Revelation, as well as the link to 666 &quot;Its number is six hundred sixty-six&quot; (Revelation 13:18)
+						<p>
+							The expansion process through numbers is similar to what DaoDeJing stated: one bears two, two bears three, three bears four, and four bears all things in universe. The difference is that the expansion of DaoDeJing is unlimited. Whereas the John&#39;s expansion has explicit meaningful terminal which is the eternal life in the kingdom of Heaven. Daoism eventually will be lost to become mysterism.</p>
+					</li>
+				</ol>
+			</div>
+			<div class="MainList">
+				
+					<strong><a href="Table_7i.html">I AM:</a> </strong> (refer to 7i table)
+			</div>
+			<div class="MainList">
+				
+					<strong>Predictions: </strong>
+				<p>
+					Among seven predictions, death, betrayals, 3xDeny, persecusion, spirit, leave and come, the first three come true. Another three come true after death. Only the last one is going to come true but not yet.</p>
+			</div>
+			<div class="MainList">
+				
+					<strong>Disciples: </strong>
+				<p>
+					Philip, Nathanael, and Thomas are only mentioned in lists of names in the Synoptics, but John gives glimpses of their experiences and spiritual development. <a href="http://www.tidings.org/wp/?p=3683">[]</a></p>
+				<p>
+					The five missing one and the one not mentioned by name</p>
+			</div>
+			<div class="MainList">
+				
+					<strong>Structure and content</strong>
+				<p>
+					The structure of the book of John is highly schematic. The miracles and marvels that were enumerated were just the typical ones. Since &quot;Jesus did mnay other things as well. If every one of them were written down, I suppose that even the whole wolrd would not have room for the books that would be written.&quot; (Johne 21:25) They have to represents theological meaning beyond the event itself.</p>
+				<p>
+					For example, the seven &quot;signs&quot; culminating in the <a href="https://en.wikipedia.org/wiki/Raising_of_Lazarus">raising of Lazarus</a> (foreshadowing the <a href="https://en.wikipedia.org/wiki/Resurrection_of_Jesus">resurrection of Jesus</a>), and seven &quot;I am&quot; sayings and discourses, culminating in Thomas&#39;s proclamation of the risen Jesus as &quot;my Lord and my God&quot; (the same title, <i>dominus et deus</i>, claimed by the Emperor <a href="https://en.wikipedia.org/wiki/Domitian">Domitian</a>, an indication of the date of composition).<sup><a href="https://en.wikipedia.org/wiki/Gospel_of_John#cite_note-FOOTNOTEWitherington200483-44">[40]</a> </sup></p>
+				<p>
+					(1) The majority of scholars see four sections in this gospel:</p>
+				<ol>
+					<li>
+						a <a class="mw-redirect" href="https://en.wikipedia.org/wiki/Prologue_to_John" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;" title="Prologue to John">prologue</a> (1:1-18);</li>
+					<li>
+						an account of the ministry, often called the &quot;<a href="https://en.wikipedia.org/wiki/Book_of_Signs" style="background: none; text-decoration-line: none; color: rgb(11, 0, 128);" title="Book of Signs">Book of Signs</a>&quot; (1:19-12:50);</li>
+					<li>
+						the account of Jesus&#39; final night with his disciples and the passion and resurrection, sometimes called the &quot;book of glory&quot; (13:1-20:31); and</li>
+					<li>
+						an epilogue which did not form part of the original text (Chapter 21).</li>
+				</ol>
+				<br />
+				<ol>
+					Notes:
+					<li>
+						The prologue informs readers of the true identity of Jesus: he is the Word of God through whom the world was created and who took on human form. John 1:10-12 outlines the story to follow: Jesus came to the Jews and the Jews rejected him, but &quot;to all who received him (the circle of Christian believers), who believed in his name, he gave power to become children of God.&quot;</li>
+					<li>
+						Jesus is baptised, calls his disciples, and begins his earthly ministry.&nbsp;He travels from place to place informing his hearers about God the Father, offering eternal life to all who will believe, and performing miracles which are signs of the authenticity of his teachings.&nbsp;This creates tensions with the religious authorities (manifested as early as 5:17-18), who decide that he must be eliminated.</li>
+					<li>
+						Jesus prepares the disciples for their coming lives without his physical presence, and prays for them and for himself.[38] The scene is thus prepared for the narrative of his passion, death and resurrection. The section ends with a conclusion on the purpose of the gospel: &quot;that [the reader] may believe that Jesus is the Christ, the Son of God, and that believing you may have life in his name.&quot;</li>
+					<li>
+						Chapter 21 tells of Jesus&#39; post-resurrection appearance to his disciples in Galilee, the miraculous catch of fish, the prophecy of the crucifixion of Peter, the restoration of Peter, and the fate of the Beloved Disciple.</li>
+					<li>
+						From the perspective of missionary role of Jesus: Famous then Sacrified;&nbsp;attracting then glorifying;modeling then teaching, watching and leaving;</li>
+				</ol>
+				<p>
+					(2) <a href="about_Prologue.html">Three main themes in this gospel:</a></p>
+				<p>
+					<a>Three Themes in John (from viewpoint of man and dualism)</a></p>
+				<ol>
+					<li>
+						Jesus: both Man and God</li>
+					<li>
+						development of belief</li>
+					<li>
+						developmemt of disbelief.</li>
+				</ol>
+				<p>
+					Outline of John (The Tripartite Narrative Structure of John&#39;s Gospel<a href="https://www.jstor.org/stable/42611134?Search=yes&amp;resultItemClick=true&amp;searchText=John&amp;searchText=Gospel&amp;searchUri=%2Faction%2FdoBasicSearch%3FQuery%3DJohn%2BGospel&amp;refreqid=search%3Aa59a2deec61ccdc05b9a94ffef35f0d2&amp;seq=1#page_scan_tab_contents">[]</a> )</p>
+				<ol>
+					<li>
+						Prologue 1:1-1:18</li>
+					<li>
+						Proof through His Administry 1:19-12:20<br />
+						reaction of belief and disbelief.</li>
+					<li>
+						Proof of Death and Resurrection. 13:1-21:25<br />
+						reaction of belief and disbelief.</li>
+				</ol>
+			</div>
+
+
+		<p>
+			&nbsp;</p>
+		<p>
+			&nbsp;</p>
+		<p>
+			&nbsp;</p>
+		<div style="page-break-after: always;">
+			<span style="display: none;">&nbsp;</span></div>
+		<p>
+			--</p>
+		<pre>
+three themes in John
+	1) Jesus: Man and God
+	2) development of belief.
+	3) development of disbelief.
+
+	Three Parts in the Outline
+	1) Prologue 1:1-1:18
+	2) Proof through His Administry 1:19-12:20
+	   reaction of belief and disbelief.
+	3) Proof of Death and Resurrection. 
+	   13:1-21:25
+	   reaction of belief and disbelief.
+			 </pre>
+	</body>
+</html>

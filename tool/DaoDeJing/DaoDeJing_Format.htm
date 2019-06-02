@@ -1,0 +1,367 @@
+<html>
+	<head>
+		<title></title>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<meta content="en-us" http-equiv="Content-Language" />
+		<script language="javascript" src="../ham12/jq/jquery.js"></script><script src="../tablesorter_master/js/jquery.tablesorter.js"></script>
+		<style type="text/css">
+.bad {
+    background-color:#efefef;
+}
+.ok{
+	color:#00ff00;
+}
+.mix{
+	background-color:#ffff00;
+}		</style>
+		<script type="text/javascript">
+	
+$(document).ready(function(){ 
+	//gen_table();
+	gen_table_ahat();
+
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });
+
+    $("#ctr_menu").click(function(){
+    	$(".eng").toggleClass("txtcolr_white");
+    });
+});//
+function gen_table_ahat(){
+	var dtx={}, ss="";
+
+	$("table tr").each(function(i,t){
+		var txt=$(this).find("td:eq(1)").text();
+		txt=$.trim(txt);
+		ss+=i+"<br>"+txt+"<br/>";
+		dtx[""+(1+i)]=txt;
+	});
+	var s=JSON.stringify(dtx, null, 4);
+	//$("#txot").val(s);
+}
+</script>
+	</head>
+	<body>
+		<p>
+			<textarea id="txot"></textarea></p>
+		<div id="out">
+			out</div>
+		<table border="1">
+			<tbody>
+				<tr id="n11592">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11592">
+							<span class="ok">道可道，非常道。名可名，非常名。無名天地之始；有名萬物之母。</span><span class="bad">故常無欲，以觀其妙；常有欲，以觀其徼。此兩者，同出而異名，同謂之玄。玄之又玄，衆妙之門。&nbsp;&nbsp;</span></div>
+					</td>
+				</tr>
+				<tr id="n11593">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11593">
+							<span class="ok">天下皆知美之為美，斯惡已。皆知善之為善，斯不善已。</span><span class="bad">故有無相生，難易相成，長短相較，高下相傾，音聲相和，前後相隨。</span><span class="mix">是以聖人處無為之事，行不言之教；</span><span class="ok">萬物作焉而不辭，生而不有。為而不恃，功成而弗居。</span><span class="bad">夫唯弗居，是以不去。</span></div>
+					</td>
+				</tr>
+				<tr id="n11594">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11594">
+							不尚賢，使民不爭；不貴難得之貨，使民不為盜；不見可欲，使心不亂。<span class="ok">是以聖人之治，虛其心，實其腹，弱其志，強其骨</span>。常使民無知無欲。使夫<sup class="refindex">1</sup>知者不敢為也。為無為，則無不治。</div>
+					</td>
+				</tr>
+				<tr id="n11595">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11595">
+							<span class="ok">道沖而用之或不盈。淵兮似萬物之宗。挫其銳，解其紛，和其光，同其塵。湛兮似或存</span>。<span class='mix'>吾不知誰之子，象帝之先。</span></div>
+					</td>
+				</tr>
+				<tr id="n11596">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11596">
+							<span class="ok">天地不仁，以萬物為芻狗；聖人不仁，以百姓為芻狗。</span><span class="bad" span="">動而愈出。多言數窮，不如守中。</span></div>
+					</td>
+				</tr>
+				<tr id="n11597">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11597">
+							<span class="ok">谷神不死，是謂玄牝。玄牝之門，是謂天地根。綿綿若存，用之不勤</span>。</div>
+					</td>
+				</tr>
+				<tr id="n11598">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11598">
+							<span class="ok">天長地久。</span><span class="bad" span="">非以其無私耶？故能成其私。</span></div>
+					</td>
+				</tr>
+				<tr id="n11599">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11599">
+							<span class="ok">上善若水。</span><span class="bad">水善利萬物而不爭，處衆人之所惡，故幾於道。居善地，心善淵，與善仁，言善信，正善治，事善能，動善時。夫唯不爭，故無尤。</span></div>
+					</td>
+				</tr>
+				<tr id="n11600">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11600">
+							<span class="bad" div="" id="comm11602" span="" td="" tr="">當其無，有車之用。埏埴以為器，當其無，有器之用。鑿戶牖以為室，當其無，有室之用。故有之以為利，無之以為用。</span></div>
+					</td>
+				</tr>
+				<tr id="n11603">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11603">
+							<span class='ok'>微妙玄通，深不可識。</span><span class='mix'>夫唯不可識，故強為之容。豫兮若冬涉川；猶兮若畏四鄰；儼兮其若容；渙兮若冰之將釋；敦兮其若樸；曠兮其若谷；混兮其若濁；孰能濁以靜之徐清？孰能安以久動之徐生？保此道者，不欲盈。夫唯不盈，故能蔽不新成。</span></div>
+					</td>
+				</tr>
+				<tr id="n11607">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11607">
+							<span class="bad">焉有不信焉。悠兮，其貴言。</span><span class="ok">功成事遂，百姓皆謂我自然</span>。</div>
+					</td>
+				</tr>
+				<tr id="n11609">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11609">
+							<span class="bad" span="">，有孝慈；國家昏亂，有忠臣</span>。</div>
+					</td>
+				</tr>
+				<tr id="n11610">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11610">
+							<span class="bad" div="" id="comm11611" span="" td="" tr="">絕學無憂，唯之與阿，相去幾何？善之與惡，相去若何？人之所畏，不可不畏。荒兮其未央哉！衆人熙熙，如享太牢，如春登臺。</span><span class="ok">我獨怕兮其未兆；如嬰兒之未孩；儽儽兮若無所歸。衆人皆有餘，而我獨若遺。我愚人之心也哉！沌沌兮，俗人昭昭，我獨若昏。俗人察察，我獨悶悶。澹兮其若海，飂兮若無止，衆人皆有以，而我獨頑似鄙。我獨異於人，而貴食母。</span></div>
+					</td>
+				</tr>
+				<tr id="n11612">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11612">
+							<span class="ok">孔德之容，唯道是從。道之為物，唯恍唯惚。忽兮恍兮，其中有象；恍兮忽兮，其中有物。窈兮冥兮，其中有精；其精甚真，其中有信。自古及今，其名不去，以閱衆甫。</span><span class="bad" div="" id="comm11613" span="" td="" tr="">弊則新，少則得，多則惑。</span><span class='mix'>是以聖人抱一為天下式。</span><span class="ok">不自見</span>，<span class="bad" span="">故彰；</span><span class="ok">不自伐</span>，<span class="bad" span="">，故長。夫唯不爭，故天下莫能與之爭。古之所謂曲則全者，豈虛言哉！誠全而歸之。</span></div>
+					</td>
+				</tr>
+				<tr id="n11614">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11614">
+							<span class="bad" div="" id="comm11615" span="" td="" tr="">企者不立；跨者不行；自見者不明；自是者不彰；自伐者無功；自矜者不長。其在道也，曰：餘食贅行。物或惡之，故</span><span class="ok">有道者不處</span>。</div>
+					</td>
+				</tr>
+				<tr id="n11616">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11616">
+							<span class="ok">有物混成，先天地生。寂兮寥兮，獨立不改，周行而不殆，可以為天下母。</span><span class="bad" div="" id="comm11617" span="" td="" tr="">重為輕根，靜為躁君。是以</span><span class="ok">聖人終日行不離輜重。雖有榮觀，燕處超然。奈何萬乘之主，而以身輕天下</span><span class="bad" div="" id="comm11619" span="" class='mix' td="" tr="">知其白，守其黑，為天下式。為天下式，常德不忒，復歸於無極。知其榮，守其辱，為天下谷。為天下谷，常德乃足，</span><span class="ok">復歸於樸。樸散則為器，聖人用之</span>，<span class="bad" div="" id="comm11620" span="" td="" tr="">將欲取天下而為之，吾見其不得已。天下神器，不可為也，為者敗之，執者失之。故物或行或隨；或歔或吹；或強或羸；或挫或隳。</span><span class='mix'>是以聖人去甚，去奢，去泰。</span></div>
+					</td>
+				</tr>
+				<tr id="n11621">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11621">
+							<span class="ok">以道佐人主者，不以兵強天下</span>。<span class="bad" div="" id="comm11622" span="" td="" tr="">夫佳兵者，不祥之器，物或惡之，故有道者不處。君子居則貴左，用兵則貴右。兵者不祥之器，非君子之器，不得已而用之，恬淡為上。勝而不美，而美之者，是樂殺人。夫樂殺人者，則不可以得志於天下矣。吉事尚左，凶事尚右。偏將軍居左，上將軍居右，言以喪禮處之。</span><span class="ok">殺人之衆，以哀悲泣之，戰勝以喪禮處之。</span></div>
+					</td>
+				</tr>
+				<tr id="n11623">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11623">
+							<span class="bad" div="" id="comm11626" span="" class='mix' sup="" td="" tr="">用之不足既。</span></div>
+					</td>
+				</tr>
+				<tr id="n11627">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11627">
+							<span class="bad">將欲歙之，必固張之；將欲弱之，必固強之；將欲廢之，必固興之；將欲奪之，必固與之。是謂微明。</span><span class='mix'>柔弱勝剛強</span><span class="bad">。魚不可脫於淵，國之利器不可以示人。</span></div>
+					</td>
+				</tr>
+				<tr id="n11628">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11628">
+							<span class='mix'>道常無為而無不為</span><span class="bad">。侯王若能守之，萬物將自化。化而欲作，吾將鎮之以無名之樸。無名之樸，夫亦將無欲。不欲以靜，天下將自定。</span></div>
+					</td>
+				</tr>
+				<tr id="n11629">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11629">
+							<span class="bad">上德不德，是以有德；下德不失德，是以無德。上德無為而無以為；下德為之而有以為。上仁為之而無以為；上義為之而有以為。上禮為之而莫之應，則攘臂而扔之。故</span><span class="ok">失道而後德，失德而後仁，失仁而後義，失義而後禮</span>。<span class="bad" div="" id="comm11635" span="" class='mix' td="" tr="">名與身孰親？身與貨孰多？得與亡孰病？是故甚愛必大費；多藏必厚亡。知足不辱，知止不殆，可以長久。</span></div>
+					</td>
+				</tr>
+				<tr id="n11636">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11636">
+							<span class="bad" div="" id="comm11637" span="" td="" tr="">禍莫大於不知足；咎莫大於欲得。故知足之足，常足矣。</span></div>
+					</td>
+				</tr>
+				<tr id="n11638">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11638">
+							<span class="bad" div="" id="comm11639" span="" class='mix' td="" tr="">為學日益，</span><span class='mix'>為道日損。損之又損，以至於無為</span><span class="bad" div="" id="comm11640" span="" td="" tr="">善者，吾善之；不善者，吾亦善之；德善。信者，吾信之；不信者，吾亦信之；德信。聖人在天下，歙歙為天下渾其心，百姓皆注其耳目，</span><span class="ok">聖人皆孩之。</span></div>
+					</td>
+				</tr>
+				<tr id="n11641">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11641">
+							<span class="ok">出生入死</span>。<span class='mix'>生之徒，十有三；</span><span class="bad" div="" id="comm11642" span="" td="" tr="">物形之，勢成之。是以萬物莫不尊道而貴德。道之尊，德之貴，夫莫之命常自然。故道生之，德畜之；長之育之；亭之毒之；養之覆之。</span><span class="ok">生而不有</span><span class="bad" div="" id="comm11643" span="" sup="" td="" tr="">塞其兌，閉其門，終身不勤。開其兌，濟其事，終身不救。見小曰明，守柔曰強。用其光，復歸其明，無遺身殃；是為習常。</span></div>
+					</td>
+				</tr>
+				<tr id="n11644">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11644">
+							<span class="ok">使我介然有知，行於大道，</span><span class="bad" div="" id="comm11645" span="" td="" tr="">善建不拔，善抱者不脫，</span><span class="ok">子孫以祭祀不輟</span><span class="bad" div="" id="comm11649" span="" class='mix' td="" tr="">其政悶悶，其民淳淳；其政察察，其民缺缺。禍兮福之所倚，福兮禍之所伏。孰知其極？其無正。正復為奇，善復為妖。人之迷，其日固久。</span><span class="ok">是以聖人方而不割，廉而不劌，直而不肆，光而不燿。</span></div>
+					</td>
+				</tr>
+				<tr id="n11650">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11650">
+							<span class="bad">治人事天莫若嗇。夫唯嗇，是謂早服；早服謂之重積德；重積德則無不克；無不克則莫知其極；莫知其極，可以有國</span>；<span class="ok">有國之母，可以長久</span>；<span class='mix'>是謂深根固柢，長生久視之道。</span></div>
+					</td>
+				</tr>
+				<tr id="n11651">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11651">
+							<span class="bad">治大國若烹小鮮。以道蒞天下，其鬼不神；非其鬼不神，</span><span class="ok">其神不傷人</span>；<span class="bad">非其神不傷人，</span><span class="ok">聖人亦不傷人</span><span class="bad">。夫兩不相傷，故德交歸焉。</span></div>
+					</td>
+				</tr>
+				<tr id="n11652">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11652">
+							<span class="bad" div="" id="comm11653" span="" td="" tr="">美言可以市，尊行可以加人。人之不善，何棄之有？</span>故<span class="ok">立天子</span>，<span class="bad" span="">耶？故為天下貴</span>。</div>
+					</td>
+				</tr>
+				<tr id="n11654">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11654">
+							<span class="bad" span="">故能成其大。夫輕諾必寡信，多易必多難。是以聖人猶難之，故終無難矣</span>。</div>
+					</td>
+				</tr>
+				<tr id="n11655">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11655">
+							<span class="bad" span="">不貴難得之貨；學不學，復衆人之所過，以輔萬物之自然，而不敢為。</span></div>
+					</td>
+				</tr>
+				<tr id="n11656">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11656">
+							<span class="bad" div="" id="comm11659" span="" class='mix' td="" tr="">善為士者，不武；善戰者，不怒；善勝敵者，不與；</span><span class="ok">善用人者，為之下</span><span class="bad" div="" id="comm11660" span="" class='mix' td="" tr="">用兵有言：吾不敢為主，而為客；不敢進寸，而退尺。是謂行無行；攘無臂；扔無敵；執無兵。禍莫大於輕敵，輕敵幾喪吾寶。故抗兵相加，哀者勝矣。</span></div>
+					</td>
+				</tr>
+				<tr id="n11661">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11661">
+							<span class='mix'>吾言甚易知，甚易行。</span><span class="bad" div="" id="comm11662" span="" td="" tr="">知不知上；不知知病。夫唯病病，是以不病</span>。<span class="ok">聖人不病，以其病病，是以不病。</span></div>
+					</td>
+				</tr>
+				<tr id="n11663">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11663">
+							民不畏威，則大威至。無狎其所居，無厭其所生。夫唯不厭，是以不厭。是以聖人自知不自見；自愛不自貴。故去彼取此。</div>
+					</td>
+				</tr>
+				<tr id="n11664">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11664">
+							<span class="bad">勇於敢則殺，勇於不敢則活。此兩者，或利或害。天之所惡，孰知其故？</span><span class='mix'>是以聖人猶難之。天之道，不爭而善勝，不言而善應，不召而自來，繟然而善謀。天網恢恢，踈而不失。</span></div>
+					</td>
+				</tr>
+				<tr id="n11665">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11665">
+							<span class='mix'>民不畏死，奈何以死懼之？若使民常畏死，而為奇者，吾得執而殺之，孰敢？常有司殺者殺</span>。<span class='mix'>夫司殺者，是大匠斲；夫代大匠斲者，希有</span><span class="ok">不傷其手矣。</span></div>
+					</td>
+				</tr>
+				<tr id="n11666">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11666">
+							<span class="ok"><span class="bad" span="">稅之多，是以飢。民之難治，以其上之有為，是以難治。民之輕死</span>，<span class='mix'>以其求生之厚，是以輕死。</span><span class="bad" div="" id="comm11667" span="" td="" tr="">人之生也柔弱，其死也堅強</span>。<span class="ok">萬物草木之生也柔脆，其死也枯槁</span>。<span class='mix'>故堅強者死之徒，柔弱者生之徒。</span><span class="bad" div="" id="comm11668" span="" td="" tr="">其猶張弓與？</span><span class="ok">高者抑之，下者舉之</span>；<span class='mix'>有餘者損之，不足者補之</span>。<span class='mix'>天之道，損有餘而補不足</span>。<span class="ok">人之道，</span><span class="bad" div="" id="comm11669" span="" class='mix' td="" tr="">天下莫不知，莫能行。是以</span><span class="ok">聖人云</span>：<span class="ok">受國之垢，是謂社稷主；受國不祥，是謂天下王。</span><span class="bad" div="" id="comm11670" span="" td="" tr="">必有餘怨；安可以為善？是以</span><span class="ok">聖人執左契，而不責於人</span>。有德司契，無德司徹。天道無親，常與善人。</span></div>
+					</td>
+				</tr>
+				<tr id="n11671">
+					<td class="ctext">
+						<span class="ok">&nbsp;</span></td>
+					<td class="ctext">
+						<div id="comm11671">
+							<span class="ok"><span class="ok">小國寡民。使有什伯之器而不用</span>；<span class="ok">使民重死而不遠徙</span>。&lt;span class=&quot;bad&quot; &quot;=&quot;&quot;&gt;雖有舟輿，無所乘之，雖有甲兵，無所陳之。使民復結繩而用之，甘其食，美其服，安其居</span>，樂其俗。鄰國相望，雞犬之聲相聞，民至老死，不相往來。</div>
+					</td>
+				</tr>
+				<tr id="n11672">
+					<td class="ctext">
+						&nbsp;</td>
+					<td class="ctext">
+						<div id="comm11672">
+							<span class="ok">信言不美，美言不信。善者不辯，辯者不善。知者不博，博者不知。<span class='mix'>聖人不積</span>，<span class='mix'>既以為人己愈有，既以與人己愈多</span></span>。<span class='mix'>天之道，利而不害；聖人之道，為而不爭。</span></div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

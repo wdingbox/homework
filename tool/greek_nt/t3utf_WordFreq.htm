@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta content="text/html; charset=utf8" http-equiv="Content-Type" />
+        <meta content="width=device-witdh, initial-scale=1, maximum-scale=1, user-scale=0" name="viewport" />
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+           
+
+      
+        
+        <script language="javascript" src="t3utf.js"></script>
+        <script language="javascript" src="WordsFreq.js"></script>
+        
+<script>
+var wfq = new WordsFreq();
+$(document).ready(function(){
+    var t=H._Gen1_1;
+    t+=" " + H._Gen1_1;
+    //wfq.collect_Hebrew_Individual_Words(t);
+    //wfq.collect_Hebrew_Individual_Words(t);
+    t=H._Gen1_2;
+    //wfq.collect_Hebrew_Individual_Words(t);
+
+    $("#Edit_Undo").click(function(){
+        rrr();
+    });
+
+});
+
+
+
+function rrr(){
+
+    var iMax=1000000;
+    var idx=0;
+    $.each(H, function(k,t){   
+       //ss+=t+"<br>";
+       if(++idx<iMax){
+        wfq.uniqObjFreq.collect_Hebrew_Individual_Words(t);
+       }
+
+    });
+
+    $("#out").html(wfq.getSortTable("Freq"));
+}
+</script>
+
+<style>
+button:disabled{
+ color:#cccccc;
+}
+#menu{
+    position: fixed;
+    top:10px;
+    right:10px;
+}
+</style>
+
+    </head>
+    <body>
+    <div id='menu'>
+    <button id='Edit_Undo' EditID='' >Undo</button>
+    <button id='ShowKeys'  >ShowKeys</button>
+    </div>
+    
+    <a id="out"></a>
+        <p>
+            &nbsp;</p>
+        
+        <p>
+            &nbsp;</p>
+    </body>
+</html>

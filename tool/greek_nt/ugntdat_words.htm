@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta content="text/html; charset=utf8" http-equiv="Content-Type" />
+        <meta content="width=device-witdh, initial-scale=1, maximum-scale=1, user-scale=0" name="viewport" />
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+           
+
+      
+     
+        <script language="javascript" src="ugntdat.js"></script>
+        <script language="javascript" src="WordsFreq.js"></script>
+        
+<script>
+function calc_char_frq(){
+    var wfq = new WordsFreq();    
+    var iMax=10000000;
+    var idx=0;
+    $.each(H, function(k,t){   
+
+       if(++idx<iMax){
+         wfq.uniqObjFreq.collect_Hebrew_Chars(t);
+       }
+
+    });
+    //wfq.sort_key("code");
+   // wfq.show_table();
+    $("#out").html(wfq.getSortTable("code"));
+
+}
+$(document).ready(function(){
+
+
+    var t=H._Mat5_23;
+    var ss=t+"<br/>";
+    ss+="<table border='1'>";
+    var tr1="<tr>",tr2="<tr>";
+    for(var i=t.length;i>=0;--i){
+        var c=t.charAt(i);
+        if(c==' ') c='___';
+        tr1+="<td>"+i+"</td>";
+        tr2+="<td>"+c+"</td>";
+    }
+    tr1+="</tr>";
+    tr2+="</tr>";
+    ss+=tr1+tr2+"</table>";
+    $("#txt").html(ss+"<hr/>");
+
+    calc_char_frq();
+
+});
+</script>
+
+<style>
+button:disabled{
+ color:#cccccc;
+}
+#menu{
+    position: fixed;
+    top:10px;
+    right:10px;
+}
+</style>
+
+    </head>
+    <body>
+    <div id='menu'>
+    <button id='Edit_Undo' EditID='' >Undo</button>
+    <button id='ShowKeys'  >ShowKeys</button>
+    </div>
+     <a id="txt"></a>
+    <a id="out"></a>
+        <p>
+            &nbsp;</p>
+        
+        <p>
+            &nbsp;</p>
+    </body>
+</html>

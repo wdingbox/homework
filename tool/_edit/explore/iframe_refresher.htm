@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Refresher</title>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+        <script type="text/javascript" src="../adapters/jquery.js">    </script>
+    
+        <script type="text/javascript"> 
+
+    $(document).ready(function(){   
+
+    function refresher(){
+        var d = new Date();
+        var t = d.toLocaleTimeString();    
+        $("#timeshow").text(t);
+
+        var surl=$("#inp").val() + "?tt=" + t;
+        $("#iFrameName1").attr("src",surl);
+
+
+    }
+
+    $("#btn1").click(function(){
+        var val = $("#timeinterval").val();
+        window.setInterval(refresher,val);
+        return;
+    });/////$("#file").click(function(){})  
+
+    });///////////////////////////////$(document).ready(function(){})    
+
+    </script>
+
+    </head>
+
+    <body>
+
+            <input id="inp" size="121" style="width: 100%; height: 23px;" type="text" value="http://finance.yahoo.com/q?s=AAPL&amp;ql=0" /><br />
+
+            <button id="btn1">Start</button><input id="timeinterval" size="58" style="width: 406px; height: 20px;" type="text" value="3000" /><a id="timeshow"></a>
+            <iframe height="1500px" id="iFrameName1" width="100%">&lt;p&gt;Your browser does not support iframes.&lt;/p&gt;</iframe><br />
+
+            
+
+    </body>
+
+</html>
+

@@ -1,0 +1,389 @@
+<html>
+  <head>
+    <title onclick="alert();">ctxt
+    </title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+    <!------->
+    <base target="_blank" />
+    <script src="../../../../../tablesorter_master/js/jquery.tablesorter.js">
+    </script>
+    <script src="../../../../myjs/table_Indexer.js">
+    </script>
+    <script src="../../../myjs/goto_editor.js">
+    </script>
+    <style type="text/css">
+      body {
+        font-family: 'Times New Roman';
+        height: 100%;
+        width: 695px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 100%;
+        border: 1px solid #eeeeff;
+      }
+      #_MenuPanel{
+        position: fixed;
+        left: 10px;
+        top: 0px;
+      }
+      table{
+        font-size: 80%;
+      }
+      .fixedcol{
+        position: absolute;
+        background-color: #999999;
+      }
+      .fixedcol2, thead{
+        background-color: #999999;
+      }
+      .fixedcol2{
+        background-color: #eeeeee;
+      }
+      .catlog, .hili{
+        background-color: #cccccc;
+      }
+      .logos{
+        background-color: #ff0000;
+      }
+      .logosv{
+        background-color: #eeaa66;
+      }
+      .logosw{
+        background-color: #aaaaee;
+      }
+      .logoswv{
+        background-color: #77aaaa;
+      }
+      .logosvc{
+        background-color: #aa77aa;
+      }
+      .logov{
+        background-color: #aa77aa;
+      }
+      .dao{
+        color: #0000ff;
+      }
+      .All_Top_Horz{
+        background-color: red;
+      }
+      .leftbox{
+        background-color: #ff0000;
+      }
+      .tablefloatheb {
+        float: right;
+        margin: 2px;
+        border-collapse: false;
+        background-color: #eeeeee }
+      .hebrew
+      {
+        FONT-SIZE: 23px;
+        COLOR: #001320;
+        LINE-HEIGHT: 33px;
+        font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+        TEXT-DECORATION: none;
+      }
+    </style>
+  </head>
+  <script>
+    $(function(){
+      $(".narration").toggle();
+      $(".TheTitle").click(function(){
+        $(".narration").toggle();
+      }
+                          );
+      $("#strongsCodes").click(function(){
+        $(".strongs, .translit").slideToggle();
+      }
+                              );
+
+      $("#relativeFrqRate").click(function(){
+        cal_relativeFrqRate();
+      }
+                                 );
+      $(".fixedcol2").click(function(){
+        alert();
+      }
+                           );
+      $("td").click(function(){
+        var out=$("#out").val();
+        out+=$(this).text().trim()+";";
+        $("#out").val(out);
+        $(this).toggleClass("hili");
+      }
+                   );
+    }
+     );
+    /////////
+    $(document).ready(function(){
+      goto_editor("_edit_url");
+      sort_table();
+    }
+                     );
+    //
+    function sort_table(){
+      $("table").tablesorter({
+        //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+      }
+                            );
+    }
+  </script>
+  <body>
+    <p id="_MenuPanel">
+      <br />
+      <a id="_edit_url">...
+      </a>
+      <br />
+      <a id="indxer">indxer
+      </a>
+      <br />
+      <textarea id="out">
+      </textarea>
+    </p>
+    <!-------------------------->
+    <!-------------------------->
+    <!-------------------------->
+    <!-------------------------->
+    <table border="1">
+      <caption>
+        The 7I'm (iGospel)
+      </caption>
+      <thead>
+        <tr>
+          <td>
+            #
+          </td>
+          <td>
+            Sayings
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            1
+          </td>
+          <td>
+            &quot;I Am the Bread of Life.&quot;
+            <div>
+              <p>
+                6:35 耶穌說：我就是生命的糧.到我這裡來的, 必定不餓; 信我的, 永遠不渴.
+                <br>Then Jesus declared, “I am the bread of life. Whoever comes to me will never go hungry, and whoever believes in me will never be thirsty.
+              </p>	
+              <p>
+                6:48 我就是生命的糧.
+                <br> I am the bread of life.
+              </p>
+              <p>
+                6:51我是從天上降下來生命的糧; 人若吃這糧, 就必永遠活著.我所要賜的糧就是我的肉, 為世人之生命所賜的.
+                <br> I am the living bread that came down from heaven. Whoever eats this bread will live forever. This bread is my flesh, which I will give for the life of the world.”
+              </p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            2
+          </td>
+          <td>
+            &quot;I Am the Light of the World&quot;
+            <div>
+              <p>8:12 耶穌又對眾人說：我是世界的光.跟從我的, 就不在黑暗裡走, 必要得著生命的光.
+                <br> When Jesus spoke again to the people, he said, “I am the light of the world. Whoever follows me will never walk in darkness, but will have the light of life.”
+              </p>
+              <p>9:5 我在世上的時候, 是世上的光.
+                <br>While I am in the world, I am the light of the world.”
+              </p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            3
+          </td>
+          <td>
+            "I Am the Gate."
+            <div>
+              <p>10:7 所以, 耶穌又對他們說：我實實在在的告訴你們, 我就是羊的門.8 凡在我以先來的都是賊, 是強盜; 羊卻不聽他們
+                <br> Therefore Jesus said again, “Very truly I tell you, I am the gate for the sheep. 8 All who have come before me are thieves and robbers, but the sheep have not listened to them. 
+              </p>
+              <p>10:9 我就是門; 凡從我進來的, 必然得救, 並且出入得草吃.
+                <br>
+                I am the gate; whoever enters through me will be saved.[a] They will come in and go out, and find pasture.
+              </p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            4
+          </td>
+          <td>
+            I Am the Good Shepherd
+            <div>
+              <p>10:11 我是好牧人; 好牧人為羊捨命.14 我是好牧人; 我認識我的羊, 我的羊也認識我, 
+                <br>11 “I am the good shepherd. The good shepherd lays down his life for the sheep. 14 “I am the good shepherd; I know my sheep and my sheep know me— 
+              </p>
+              <p>Psalm 23:1 耶和華是我的牧者, 我必不致缺乏.
+                <br>The Lord is my shepherd, I lack nothing.
+              </p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            5
+          </td>
+          <td>
+            "I Am the Resurrection and the Life"
+            <div>
+              <p>11:25 耶穌對他說：復活在我, 生命也在我.信我的人雖然死了, 也必復活, 
+                <br>Jesus said to her, “I am the resurrection and the life. The one who believes in me will live, even though they die;
+              </p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            6
+          </td>
+          <td>
+            "I Am the Way, the Truth and the Life"
+            <p>
+              John 14:6 耶穌說我就是道路、真理、生命; 若不藉著我, 沒有人能到父那裡去.
+              <br>Jesus answered, “I am the way and the truth and the life. No one comes to the Father except through me.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            7
+          </td>
+          <td>
+            "I Am the True Vine."
+            <p>
+              15:1 我是真葡萄樹, 我父是栽培的人.
+              <br>I am the true vine, and my Father is the gardener.
+            </p>
+            <p>
+              15:5 我是葡萄樹, 你們是枝子.常在我裡面的, 我也常在他裡面, 這人就多結果子; 因為離了我, 你們就不能做甚麼.
+              <br> “I am the vine; you are the branches. If you remain in me and I in you, you will bear much fruit; apart from me you can do nothing.
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      -.-
+    </p>
+    <div style="page-break-after: always;">
+      <span style="display: none;">&nbsp;
+      </span>
+    </div>
+
+  <p>
+  It ended with "I'm true vine." which emphasize the truth which lead to beleive, and eternal life.
+</p>
+<p>The Gospel of John can also be called iGospel. In Jesus sayings, the most freqent word is "I" (我x662, 你505, 他204, total Jesus's verses 419 in John CUV) Synoptic gospels can be called uGospel. (你597, 我339, 他299, in total Jesus's saying verses 647 in John Matthew CUV)</p>
+<p>The love letter of Jesus. The first miracle in wedding to last asking of love. Jesus love us. Mary me.</p>
+    <p>
+      The 7I'm is not full description of HIM, but a special character in John from perspective of daily life, which can fully answer the first opening speech of Jesus through question in John. 
+    </p>
+    <p>
+      &quot;What do you want?&quot; (John 1:38)
+    </p>
+    <ol>
+      <li>
+        life (i6)
+        <ol>
+          <li>
+            light (i2)
+          </li>
+          <li>
+            air/wind -- (Spirit --John 3:1-21)
+          </li>
+          <li>
+            water -- (Believe --John 7:38) 
+          </li>
+          <li>
+            food (i1)
+            <ol>
+              <li>
+                sheep
+                <ol>
+                  <li>
+                    good Shepherd (i4)
+                  </li>
+                  <li>
+                    gate of sheep (i3)
+                  </li>
+                </ol>
+              </li>
+              <li>
+                vine (i7)
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li>
+        death (i5)
+        <ol>
+          <li>
+            blind
+          </li>
+          <li>
+            illness
+          </li>
+          <li>
+            disaster
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <p>
+      Conclusion: Jesus is all we need...
+    </p>
+
+
+
+
+
+    <div style="page-break-after: always;">
+      <span style="display: none;">&nbsp;
+      </span>
+    </div>
+    <p>Gate: the entry of the house. The entry of the kingdom. the entry/beginning of the knowledge. passport of a nation.
+    </p>
+    <p>Walking on the street, there thousands of gates, which one is your real home?</p>
+    <p>
+      师父 （词语） 编辑
+      “师父”的基本含义与“师傅”相同，泛指从事教学工作的老师。区分现代社会通用的“师父”与“师傅”，需要从古说起。“师傅”一词更早出现，本义即老师。但自秦汉时期起，“师傅”一词演变为专指帝王之师，即太师和太傅的统称，所谓“身为师傅，贵极人臣”，“师傅”用法具有一定排他性。南宋之后“师傅”一词开始回归百姓，平民也可使用。“师父”一词或自唐代起流传，基本含义即老师，也可用于对出家人的尊称。“师父”一词在感情色彩上要强烈得多，所谓“一日为师，终生为父”。在古代，师父往往自己收养徒弟，弟子住到师父家里，由师父贴钱教养，把徒弟当成家人。即便没有如此亲近，在传统观念中，父和师也具有同等重要意义，因此旧时也使用“父师”一词。注意，对女老师亦称师父。		
+    </p>
+    <p>
+      "師父領進門，修行在個人" comes from Buddha. Do not use this word in Christianity. 這一句耳熟能詳的諺語，雖已明白點出了佛法的修行上，師父或老師只能指點方法、門路，如果想要真正學到本領，還是要靠自己的體會和努力.
+    </p>
+
+    <p>
+<a href="https://baike.baidu.com/item/%E5%B8%88%E7%88%B6/4050588">师父与师傅</a>
+<br><br>对于“师父”与“师傅”的词源探究，2007年北京师范大学的徐梓在《中国教师》发文释疑。全文如下 [1]  ：
+<br><br>中国人的教育辞典里，“师傅”与“师父”是两个与教师密切相关的概念，但在日常生活中很多人不了解“师傅”与“师父”区别在哪里，往往混用这两个称呼。这提醒我们，有必要通过梳理“师傅”与“师父”这两个称呼所指的演变，辨析清楚它们之间的关系，看混用这两个称呼是否适宜。
+<br><br>“师傅”一词，早在战国时期就出现了，而且从一开始就是用来指老师的。《榖梁传》昭公十九年有这样的说法：“羁贯成童，不就师傅，父之罪也。”这句话的意思是说年已8岁的儿童，如果不进学从师，那是父亲的罪过。《三字经》所说的“子不教，父之过”，说的就是这一意思。战国时期称老师为师傅，还有另外一条材料可以佐证。根据《战国策》的记载，在吕不韦的操纵下，在赵国做人质的秦公子异人终于回到了秦国。秦王令异人试诵诗书，异人推辞说：“少弃捐在外，尝无师傅所教学，不习于诵。”这里师傅与教学关联，显然指的是老师。
+<br><br>秦汉以后，师傅由泛指从事教学工作的老师，演变为了专指帝王(包括帝和王)的老师。师傅的这一意义，来源于太师和太傅的合称。《史记·吴王濞传》：“吴太子师傅皆楚人。”由一个“皆”字，可见“师”和“傅”是并列关系。《史记》中9处11次出现的“师傅”，都是这一意思。这时的“师傅”，总是和“宫廷”、“东宫”、“储君”、“太子”、“皇子”等字眼联系在一起。从西汉到南宋，这是师傅最通常的所指，明清时期，依然保留了这一意义。
+<br><br>显然是因为“师傅”的地位太尊、声望太高，所谓的“身为师傅，贵极人臣”，这一称呼因此具有了一定的排他性。从西汉到南宋，“师傅”的涵义几乎为帝王之师这一特定的所指独占，很少例外。从南宋开始，“师傅”的所指逐渐下移，平民百姓的教师也可以蒙受此称。如朱熹既用师傅来称呼帝王之师，也用来称呼一般的授业者。至于用师傅来称呼工、商、戏剧等行业中传授技艺的人，则是清代中后期以后的事情。按工人们在工厂互称“师傅”的习惯，称任何一个成年人尤其是年长的人为师傅，则更是 20世纪60年代的事情。
+<br><br>“师父”之称，不仅出现得较晚，而且使用频率也非常有限。《四库全书》虽然有数百次的出现，但大都别有所指，与我们要讨论的“师父”不同。
+<br><br>“师父”的称呼，是在唐代出现的。姚思廉的《梁书》中，说高祖德皇后郗徽的祖父郗绍，曾任“宋国子祭酒，领东海王师父”。在《文苑英华》中，“师父”也一再出现。其中所指，和“师傅”完全相同，既有泛指从事教学工作的老师，如“臣虽驽劣不才，窃服师父之训”；也有特指帝王的老师，如“乘箕入相，就三命而作盐梅；投钓升朝，封四履而称师父”。
+<br><br>唐朝以后，“师父”开始用来指具有特殊技能的人。南唐尉迟偓的《中朝故事》记载唐咸通年间，有个幻术艺人在京城表演。在一次表演失败之后，他向观众赔礼致歉说：“某乍到京国，未获拜所有高手，在此致此。小术不行，且望纵之，某当拜为师父。”北宋费衮的《梁溪漫志》记载，高邮强盗尉九，疾足善走，日行数百里，气势猛壮，白天吃喝，夜则为盗。有一天早食时，被一个道人“呼为师父，且拜之”。这里一个善于幻术，一个疾足善走，都是具有特殊技能的人。
+<br><br>在元明时期，“师父”往往用作对和尚、道士的尊称。如耶律楚材的《湛然居士集·寄万松老人书》中，有“嗣法弟子从源顿首再拜师父丈室”之语；“锡号帝师”的著名僧人八思巴，当时士人大都称他为“师父”。《元史·刑法志》中，也有“诸僧道盗其亲师祖、师父及同师兄弟财者”之说。对于俗人依循僧寺礼仪，称僧人为“师父”，清初学者蓝鼎元曾予以指斥：“凡遇秃厮，皆呼师父。不思此何人也，而师之父之?”(《鹿洲初集》卷十四)这说明了当时称僧人为师父的普遍。
+<br><br>“师傅”作为尊称，当然含有尊敬的情感在内，而“师父”将“师”作“父”一般地敬重，感情显然更加深挚。由于受重教尊师观念的影响，在传统的观念中，父亲和老师具有同等重要的意义，旧时更为普遍使用的“父师”一词，就典型地体现了这点。“父生之，师教之”、“一日为师，终身为父”，在一个人的成长道路上，父亲有生养之恩，老师有教育之谊。“师父”的称呼，在保留了原有的传授知识或技艺的意思之外，还灌注了更多的情感色彩，表现了古人对老师犹如对父亲一样的感情。“且道士之称受业师，则曰师父：于师前自称，则曰弟子，此理之正也。”(《王端毅奏议》卷十三)无论是僧道还是俗人，称呼自己爱戴的老师为“师父”，于理为然，于情洽切。
+<br><br>“师傅”和“师父”最基本的意义是相通的，这就是指传授知识或技艺的人。相对于“师傅”而言，“师父”的所指更加宽泛一些，它包含了“师傅”的一切意义。在很多情况下，这两个词可以混用。如《榖梁传》中的“师傅”，在《白孔六帖》和《渊鉴类函》中就写作“师父”。一个人只要对自己的师傅深怀敬意，师傅的年龄和自己的父亲相当，他就完全可以称呼自己的“师傅”为“师父”。
+    </p>
+  </body>
+</html>

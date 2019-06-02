@@ -1,0 +1,667 @@
+<html>
+	<head>
+		<title></title>
+		<base target="_blank" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!-------><script src="../../../../../tablesorter_master/js/jquery.tablesorter.js"></script><script src="../../../../../Hebrew2/nodjs/noduti/js/table_Indexer.js"></script><script src="../../../myjs/goto_editor.js"></script>
+		<style type="text/css">
+body {font-family: 'Times New Roman';
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+    }		
+#_MenuPanel{
+position: fixed;
+left: 10px;
+top: 0px;
+}
+
+.fixedcol{
+	position: absolute;
+	background-color: #999999;
+}
+.fixedcol2, thead{
+	background-color: #999999;
+}
+.fixedcol2{
+	background-color: #eeeeee;
+}
+.synoptic{
+	background-color: #dddddd;
+}
+.strongs{
+	background-color: #ffffff;
+}
+.Top_Horz{
+	color: blue;
+	font-size:7px;
+}
+.All_Top_Horz{
+	background-color: red;
+}
+.leftbox{
+  background-color: #ff0000;
+}
+.Jerusalem {
+	border: 4px solid blue;
+}
+.iam{
+	color:red;
+}
+.verse{
+	border: 1px solid gray;
+}
+sup{
+	alig: 
+}
+.hebrew
+{
+    FONT-SIZE: 23px;
+    COLOR: #001320;
+    LINE-HEIGHT: 33px;
+    font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+    TEXT-DECORATION: none;
+}		</style>
+		<script>
+$(function(){
+    $(".narration").toggle();
+    $(".TheTitle").click(function(){
+        $(".narration").toggle();
+    } );
+    $("#strongsCodes").click(function(){
+    	$(".strongs, .translit").slideToggle();
+    });
+
+    $("body").click(function(){
+    	$("#_edit").slideToggle();
+    });
+
+    $("#relativeFrqRate").click(function(){
+    	cal_relativeFrqRate();
+    });
+
+
+    $(".fixedcol2").click(function(){
+    	alert();
+    });
+
+    $("#struct tbody tr").each(function(){
+    	$(this).find("td:eq(1)").addClass("Top_Horz");
+    })
+
+    $("td").each(function(){
+    	var tit=$(this).attr("title");
+    	if(tit && tit.length>0){
+    		$(this).prepend("<a class='verse'>"+tit+"</a> ");
+    	}
+    })
+
+});/////////
+
+$(document).ready(function(){ 
+	goto_editor("_edit_url");
+	sort_table();
+});//
+function sort_table(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+
+
+</script>
+	</head>
+	<body>
+		<p id="_MenuPanel">
+			<br />
+			<a id="_edit_url">...</a><br />
+			<a id="indxer">indxer</a></p>
+		<!--------------------------><!--------------------------><!-------------------------->
+		<p style="text-align: center;">
+			<font size="3"><b>Macro View of the Gospel of John</b></font></p>
+
+
+
+		<div style="page-break-after: always;">
+			<a>7x7:<br/>
+				1) I'm. 
+				2) Miracles. 
+				3) Marvels.
+				4) Jerusalem.
+				5) Feasts.
+				6) Predictions. 
+				7) Disciples.
+			</a>
+
+			
+
+			
+			
+			<!------------------><a href=""></a>
+			<!------------------><span style="display: none;"> </span>
+			<!------------------><a href=""></a>
+			<p></p>
+
+
+			<strong> Miracle神迹 and Marvel奇事: </strong>
+			<ul>
+				<li>
+					<p>miracle (*): A wonderful event occurring in the physical world attributed to supernatural powers.</p></li>
+				<li>
+					<p>marvel (~): the wonderful, amazed, astonished, abnormal speakings in conversation or abnormal behavior among people. Mat 7:28. (like demon possesed or raving mad (10:20)</p></li>
+				<li><p>
+					Both are special, abnormal, supernatural. Both are not dividable and testify each other for God. The irregular orders of miracles in the book John itself is a miracle and marvel which reflect a character of the Holy Spirit.</p><p>
+					The first miracle immediately was followed by the first marvel. Compared with the first miracle which is peaceful and joyful, the first marvel seems physically voilent.  
+						
+					</p></li>
+				
+				<li><p> 
+					The sequence of miracles and marvels occured strictly according to His time and will without any human interferences. John recorded at least twice that the miracle or marvel would not happen if His time has not come (John 2:4;7:6). To further look into His time order, it can be found that there exists an increament in degree of abnormality for miracles and marvels. </p>
+						
+					<p> The seven miracle started with the peaceful and joyful wedding ceremony, but ended with disturbing resurrection of Lazrus. The seven marvels started with physcial voilent clearing of the Temple, ended with His spiritual untolerable proclaimation "I and the Father are one." under Solomon Colonnade which is considered as blaphamy and extreme offensive to Jewis. The increamental order for miracles and marvels refects the progressive revelation that Jesus used in His strategy that human beings can be acceptable and understandable. Such careful arrangement is a reflection of love of Jesus even in subtlety of His mission.</p>
+					</li>
+				<li><p>
+					The structure of the book of John is highly schematic. The miracles and marvels that were enumerated were just the typical ones. Since "Jesus did mnay other things as well. If every one of them were written down, I suppose that even the whole wolrd would not have room for the books that would be written." (Johne 21:25) They have to represents theological meaning beyond the event itself.</p>
+				<p>
+					For example, the seven &quot;signs&quot; culminating in the <a href="https://en.wikipedia.org/wiki/Raising_of_Lazarus">raising of Lazarus</a> (foreshadowing the <a href="https://en.wikipedia.org/wiki/Resurrection_of_Jesus">resurrection of Jesus</a>), and seven &quot;I am&quot; sayings and discourses, culminating in Thomas&#39;s proclamation of the risen Jesus as &quot;my Lord and my God&quot; (the same title, <i>dominus et deus</i>, claimed by the Emperor <a href="https://en.wikipedia.org/wiki/Domitian">Domitian</a>, an indication of the date of composition).<sup><a href="https://en.wikipedia.org/wiki/Gospel_of_John#cite_note-FOOTNOTEWitherington200483-44">[40]</a> </sup></p>
+				</li>
+				<li>
+					<p>Most M&M occured in Jeruslem during the peirod of feasts. Three times of passover day infer three years of missionary work of Jesus. The last feast is the Easter day which is new.</p></li>
+				<li>
+					<p>It is important to notice that the Book of John only count the number for the first two miracles (John 2:11 and John 4:54). The number of seven miracles are counted by careful readers and verified by scholars. The seven "I AM" were also discovered by readers. It further leads to find until 7x7. It is certain that more sevens can be found in future as Christians keep dig into it. More over, it's worth to further explore the relationship of 7x7 in John and 21x7 in the book of Revelation, as well as the link to 666 "Its number is six hundred sixty-six" (Revelation 13:18) </p>
+					<p>The expansion process through numbers is similar to what DaoDeJing stated: one bears two, two bears three, three bears four, and four bears all things in universe. The difference is that the expansion of DaoDeJing is unlimited. Whereas the John's expansion has explicit meaningful terminal which is the eternal life in the kingdom of Heaven. Daoism eventually will be lost to become mysterism. </p>
+
+
+
+
+
+				 </li>
+			</ul>
+<p><strong> I AM: </strong></p>
+<p>
+	It ended with "I'm true vine." which emphasize the truth which lead to beleive, and eternal life.
+</p>
+<p>The Gospel of John can also be called iGospel. Synoptic gospels can be called uGospel. </p>
+<p><strong>Predictions: </strong></p>
+<p>
+	Among seven predictions, death, betrayals, 3xDeny, persecusion, spirit, leave and come,
+	the first three come true. Another three come true after death. Only the last one is going to come true but not yet.  
+</p>
+<p><strong>Disciples: </strong></p>
+<p>
+Philip, Nathanael, and Thomas are only mentioned in lists of names in the Synoptics, but John gives glimpses of their experiences and spiritual development. <a href="http://www.tidings.org/wp/?p=3683">[]</a>
+</p>
+<ul><li>
+	<strong>Philip: </strong>	
+	<ul>
+		<li>. "Eight month wages would not buy enough bread for each one to have a bite"(6:7)</li>
+		<li>"Lord, show us the Father and that will be enough for us. (14:8)</li>
+	</ul>	
+</li>
+
+</ul>
+
+
+			<p>
+				<strong>Structure and content</strong></p>
+			<p style="margin: 0.5em 0px; line-height: inherit; color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px;">
+				The majority of scholars see four sections in this gospel:</p>
+			<ol>
+				<li style="margin: 0.5em 0px; line-height: inherit; color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px;">
+					a <a class="mw-redirect" href="https://en.wikipedia.org/wiki/Prologue_to_John" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;" title="Prologue to John">prologue</a> (1:1-18);</li>
+				<li style="margin: 0.5em 0px; line-height: inherit; color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px;">
+					an account of the ministry, often called the &quot;<a href="https://en.wikipedia.org/wiki/Book_of_Signs" style="background: none; text-decoration-line: none; color: rgb(11, 0, 128);" title="Book of Signs">Book of Signs</a>&quot; (1:19-12:50);</li>
+				<li style="margin: 0.5em 0px; line-height: inherit; color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px;">
+					the account of Jesus&#39; final night with his disciples and the passion and resurrection, sometimes called the &quot;book of glory&quot; (13:1-20:31); and</li>
+				<li style="margin: 0.5em 0px; line-height: inherit; color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px;">
+					an epilogue which did not form part of the original text (Chapter 21).<sup class="reference" id="cite_ref-FOOTNOTEMoloney199823_37-0" style="line-height: 1; unicode-bidi: isolate; white-space: nowrap; font-size: 11.2px;"><a href="https://en.wikipedia.org/wiki/Gospel_of_John#cite_note-FOOTNOTEMoloney199823-37" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[33]</a></sup><sup class="reference" id="cite_ref-FOOTNOTEBauckham2007271_38-0" style="line-height: 1; unicode-bidi: isolate; white-space: nowrap; font-size: 11.2px;"><a href="https://en.wikipedia.org/wiki/Gospel_of_John#cite_note-FOOTNOTEBauckham2007271-38" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[34]</a></sup></li>
+			</ol>
+			<ul style="margin: 0.3em 0px 0px 1.6em; padding: 0px; list-style-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%225%22 height=%2213%22%3E %3Ccircle cx=%222.5%22 cy=%229.5%22 r=%222.5%22 fill=%22%2300528c%22/%3E %3C/svg%3E&quot;); color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px;">
+				<li style="margin-bottom: 0.1em;">
+					The prologue informs readers of the true identity of Jesus: he is the Word of God through whom the world was created and who took on human form.<sup class="reference" id="cite_ref-FOOTNOTEAune2003245_39-0" style="line-height: 1; unicode-bidi: isolate; white-space: nowrap; font-size: 11.2px;"><a href="https://en.wikipedia.org/wiki/Gospel_of_John#cite_note-FOOTNOTEAune2003245-39" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[35]</a></sup> John 1:10-12 outlines the story to follow: Jesus came to the Jews and the Jews rejected him, but &quot;to all who received him (the circle of Christian believers), who believed in his name, he gave power to become children of God.&quot;<sup class="reference" id="cite_ref-FOOTNOTEAune2003246_40-0" style="line-height: 1; unicode-bidi: isolate; white-space: nowrap; font-size: 11.2px;"><a href="https://en.wikipedia.org/wiki/Gospel_of_John#cite_note-FOOTNOTEAune2003246-40" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[36]</a></sup></li>
+				<li style="margin-bottom: 0.1em;">
+					Jesus is baptised, calls his disciples, and begins his earthly ministry.<sup class="reference" id="cite_ref-FOOTNOTEVan_der_Watt200810_41-0" style="line-height: 1; unicode-bidi: isolate; white-space: nowrap; font-size: 11.2px;"><a href="https://en.wikipedia.org/wiki/Gospel_of_John#cite_note-FOOTNOTEVan_der_Watt200810-41" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[37]</a></sup> He travels from place to place informing his hearers about God the Father, offering eternal life to all who will believe, and performing miracles which are signs of the authenticity of his teachings.<sup class="reference" id="cite_ref-FOOTNOTEVan_der_Watt200810_41-1" style="line-height: 1; unicode-bidi: isolate; white-space: nowrap; font-size: 11.2px;"><a href="https://en.wikipedia.org/wiki/Gospel_of_John#cite_note-FOOTNOTEVan_der_Watt200810-41" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[37]</a></sup><sup class="reference" id="cite_ref-FOOTNOTEKruse200417_42-0" style="line-height: 1; unicode-bidi: isolate; white-space: nowrap; font-size: 11.2px;"><a href="https://en.wikipedia.org/wiki/Gospel_of_John#cite_note-FOOTNOTEKruse200417-42" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[38]</a></sup> This creates tensions with the religious authorities (manifested as early as 5:17-18), who decide that he must be eliminated.<sup class="reference" id="cite_ref-FOOTNOTEVan_der_Watt200810_41-2" style="line-height: 1; unicode-bidi: isolate; white-space: nowrap; font-size: 11.2px;"><a href="https://en.wikipedia.org/wiki/Gospel_of_John#cite_note-FOOTNOTEVan_der_Watt200810-41" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[37]</a></sup></li>
+				<li style="margin-bottom: 0.1em;">
+					Jesus prepares the disciples for their coming lives without his physical presence, and prays for them and for himself.<sup class="reference" id="cite_ref-FOOTNOTEKruse200417_42-1" style="line-height: 1; unicode-bidi: isolate; white-space: nowrap; font-size: 11.2px;"><a href="https://en.wikipedia.org/wiki/Gospel_of_John#cite_note-FOOTNOTEKruse200417-42" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[38]</a></sup> The scene is thus prepared for the narrative of his passion, death and resurrection. The section ends with a conclusion on the purpose of the gospel: &quot;that [the reader] may believe that Jesus is the <a class="mw-redirect" href="https://en.wikipedia.org/wiki/Christ" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;" title="Christ">Christ</a>, the Son of God, and that believing you may have life in his name.&quot;<sup class="reference" id="cite_ref-FOOTNOTEEdwards2015171_43-0" style="line-height: 1; unicode-bidi: isolate; white-space: nowrap; font-size: 11.2px;"><a href="https://en.wikipedia.org/wiki/Gospel_of_John#cite_note-FOOTNOTEEdwards2015171-43" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[39]</a></sup></li>
+				<li style="margin-bottom: 0.1em;">
+					Chapter 21 tells of Jesus&#39; post-resurrection appearance to his disciples in Galilee, the <a href="https://en.wikipedia.org/wiki/Miraculous_catch_of_fish" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;" title="Miraculous catch of fish">miraculous catch of fish</a>, the prophecy of the <a href="https://en.wikipedia.org/wiki/Saint_Peter" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;" title="Saint Peter">crucifixion of Peter</a>, the <a href="https://en.wikipedia.org/wiki/Restoration_of_Peter" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;" title="Restoration of Peter">restoration of Peter</a>, and the fate of the <a class="mw-redirect" href="https://en.wikipedia.org/wiki/Beloved_Disciple" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;" title="Beloved Disciple">Beloved Disciple</a>.<sup class="reference" id="cite_ref-FOOTNOTEEdwards2015171_43-1" style="line-height: 1; unicode-bidi: isolate; white-space: nowrap; font-size: 11.2px;"><a href="https://en.wikipedia.org/wiki/Gospel_of_John#cite_note-FOOTNOTEEdwards2015171-43" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[39]</a></sup></li>
+			</ul>
+			
+		
+
+			<p>
+				Famous then Sacrifice. <br />
+				Teaching then Modeling<br />
+				Love then Passion.<br />
+				Believe then Commission.</p>
+			<p>
+				 </p>
+			<p>
+				<strong>Authorship</strong></p>
+			<ol>
+				<li>
+					Significance:<br />
+					1) Not important at Jesus times, but important at heresy/criticism times.<br />
+					2) Whom you hear is more important than what he says. For example, Islam about god, Chinese Buddhism about love. </li>
+				<li>
+					Anonymity(匿名).<br />
+					Why Are the Gospels Anonymous?(Bart Ehrman) <br />
+					1) 2Tim 3:16. God is the ultimate author. <br />
+					2) John Baptizer: &quot;He must become greater; I must become less&quot;(John3:30)<br />
+					3) collective work under one lead. </li>
+				<li>
+					Author<br />
+					1) Earliest Christians was not concerned about the authorship. (Harmany p260)<br />
+					2) Ancient church historians, theologian, an Alexandrian Christian scholar, Origen, 218 A.D believed that John is the main author.<br />
+					3) Modern scholars began to challenge tradition from mid eighteenth century. <br />
+					4) Inside evidence for the author: (John 21:20-24)<br />
+					5) The capricious events inhuman sequence testify the author is the Holy Spirit.<br />
+					Sum:it is the comination of the Holy Spirit and John and his coworkers. </li>
+				<li>
+					About name of John (means God is gracious from Hebrew rather than restroom). <br />
+					1) disciple that Jesus love, the son of Zebedee, brother of Jame. <br />
+					2) John Baptizer.<br />
+					3) John the father of disciple Peter, and Andrew. (John 21:15)</li>
+				<li>
+					About main writer of John<br />
+					1) Family: fishman, own a boat (Mat 4:21); brother James; father Zebedee; mother Marry Salome(1 of 3 Mary,by cross, Mak 15:40, talk w Jesus, Mak10:40)<br />
+					2) Date: born 6 AD at Bethsaida, Galilee, Roman Empire, died 100 ADD, aged 94, at ukn, traditionally assumed in Ephesus. The youngest &amp; longest  among apostles, witness of whole generation of Jesus.<br />
+					3) Personality. son of thunder (Mak 3:17), fire from heaven(Luke 9:54)<br />
+					4) Relationship: closet circile of Jesus, &quot;the disciple whom Jesus loved&quot; (John 13:23), close to Peter and Andrew (Mak 1:29), (Mak 5:37) transfiguration (Mat17:1;Mak9:2;Luk9:28), (Mak 5:37), Mary&#39;s carer (John 19:26)<br />
+					5) Works: writer of five books in NT.<br />
+					6) Titles:<br />
+					Sum:<br />
+					1)a fishman, son of thunder, disciple, apostle, high christology writer. =&gt;Grace<br />
+					2)family: inexplicit due to wkn, focus on Jesus. today once leading to Jesus, they are unimportant soon. Jesus said &quot;Who is my mother and brother? Those who believe in God and follow is my mother and brothers.&quot; Gospels have two parts one is explicit and inexplicit about people. The purpose is to contemplate Jesus rather than writer or any figures on earth. Order of explicity. Jesus, John batptism, disciples (Peter, John, Juda, Thomas, Phillip, Nathanial), pagans, politians, women,</li>
+			</ol>
+			<p>
+				 </p>
+			<p>
+				Figures in Gospel of John<br />
+				 </p>
+			<table border="1" cellpadding="1" cellspacing="1" style="width: 500px">
+				<caption>
+					Figures</caption>
+				<tbody>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							John Baptism</td>
+						<td>
+							1:15</td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							Elijah</td>
+						<td>
+							1:21</td>
+						<td>
+							OT</td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							the Prophet Isaiah</td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+					<tr>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+						<td>
+							 </td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				<br />
+				 </p>
+			<p>
+				 </p>
+		</div>
+		<p>
+			 </p>
+	</body>
+</html>

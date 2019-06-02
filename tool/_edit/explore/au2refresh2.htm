@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title></title>
+
+    </head>
+
+    <body>
+
+        <p>
+
+            &nbsp;
+<script>
+    var url=" " + document.URL;
+    var ary = url.split("=");           
+        if (ary.length == 2){
+        document.m_fname = ary[1];
+    }//////if (ary.length == 2){    
+    else{
+        alert("no filename. pleaase attach it in url, like ?filename=xyz.htm");
+    }
+
+
+ var int=self.setInterval(function(){clock()},1000);
+
+ function clock()
+
+   {
+
+   var d=new Date();
+
+   var t=d.toLocaleTimeString();
+
+   document.getElementById("clock").value=t;
+
+   document.getElementsByTagName("iframe")[0].setAttribute("src", document.m_fname+"?t="+t);
+
+   }
+
+ </script>
+
+    <button onclick="int=window.clearInterval(int)">Stop</button><input id="clock" size="109" style="width: 836px; height: 21px;" type="text" /><br />
+
+    <iframe frameborder="0" height="1000" id="fresherId" scrolling="no" src="." width="100%"></iframe></p>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+

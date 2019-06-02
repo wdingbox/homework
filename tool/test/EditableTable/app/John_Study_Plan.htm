@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta content="text/html; charset=gb2312" http-equiv="Content-Type" />
+		<meta content="width=device-witdh, initial-scale=1, maximum-scale=1, user-scale=0" name="viewport" />
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+           
+        <script language="javascript" src="js/RemoteCell.js"></script>
+        <script language="javascript" src="js/TableColRowMgr.js"></script>
+        <script language="javascript" src="js/WeekDateMgr.js"></script>
+
+<script>
+
+
+var remoteCell=new RemoteCell({dataDir:"../data/John_Study_Plan01/",svrDir:"../svr/"});
+var wdm = new WeekDateMgr(2015,0);
+
+$(document).ready(function(){
+TableColRowMgr.InsertColAfter($("table")[0],0);
+TableColRowMgr.InsertColAfter($("table")[0],0);
+var tdArr=[{irow:0,icol:1,txt:"Date",bgc:"#AABE3A"},{irow:0,icol:2,txt:"Name",bgc:"#AABE3A"},];
+TableColRowMgr.SetTD("table:eq(0)", tdArr);
+
+    Init_WeekDates(wdm);
+    Init_contenteditable(remoteCell);
+    //setInterval(Refresh_contenteditable, 3000);
+
+    RemoteCellEditSystem.init({EditUndoBtnId:"Edit_Undo",remoteCell:remoteCell});
+});
+
+
+function Init_WeekDates(wdm){
+
+ 
+    var SunArr = wdm.getArr_YYYY_MM_DD();
+    
+    $("table td").each(function(i){
+        var t=$(this).text();
+        if(t.length>0){
+            var ii=parseInt(t);
+            if(ii==t){
+                //$(this).addClass("orig");//css("background-color",'#eeefff');
+                var idx=38+ii;//start week of year
+                var dat=SunArr[idx];
+                $(this).next().text(dat);
+            }
+        }
+    });
+    
+    var cmg = wdm.FindComingWeekDate();
+    $("table td").each(function(i){
+        var txt=$(this).text();
+        txt=$.trim(txt);
+        if(txt==cmg.date){
+            var clr='yellow';
+            if(cmg.status=='now'){
+                clr='red';
+            }
+            $(this).css("background-color",clr);
+            
+            $(this)[0].scrollIntoView();
+        }
+    });        
+}
+function Init_contenteditable(remoteCell){
+    $("table tr").each(function(i){
+        if(i>0){
+            $(this).find("td:nth-child(3)").each(function(){
+                    var idx=$(this).prev().prev().text();
+                    idx=$.trim(idx);
+                    if(idx.length>0){
+                        var str=remoteCell.get(idx);
+                        str=$.trim(str);
+                        var id=$(this).attr("id");
+                        if(!id || id.length===0){
+                            var sipt="<div id='"+idx+"' value='"+str+"' contenteditable='true'></div>";
+                            $(this).html(sipt);
+                            $("#"+idx).text(str);
+                            //$(this).attr("contenteditable","true").css("background-color","#ddeeff").attr("id",idx).text(str);
+                            //console.log(sipt);
+                        }
+                    }
+ 
+            });
+        }
+    });
+}
+function Refresh_contenteditable(){
+    $("td[contenteditable='true']").each(function(i){
+        if($(this).is(':focus')==false){
+            var id=$(this).attr("id");
+            var str=remoteCell.get(id);
+            var old=$(this).text();
+            if( str ===old ){
+                //console.log("++++++++++++");
+                //$(this).css("background-color","#eeeeff");
+            }
+            else{
+                $(this).css("background-color","#ff0000");
+            }
+        }
+    });
+}
+
+
+
+
+</script>
+
+<style>
+button:disabled{
+ color:#cccccc;
+}
+#menu{
+    position: fixed;
+    top:10px;
+    right:10px;
+}
+div[contenteditable]{
+    background-color:#ffeedd;
+}
+div.dirt{
+    background-color:#ddffdd;
+}
+div.conflict{
+ background-color:#ff0000;
+}
+</style>
+
+	</head>
+	<body>
+    <div id='menu'>
+    <button id='Edit_Undo' EditID='' disabled='true'>Undo</button>
+    </div>
+    
+        <p>
+            &nbsp;</p>
+        <h1 class="entry-title">小组查经：约翰福音</h1>
+
+	    <div class="entry-content">
+		    <h1 align="center">约翰福音</h1>
+<table style="color: #333333;" border="1" cellpadding="4" cellspacing="4" width="0">
+<tbody>
+<tr>
+<td bgcolor="#AABE3A" width="8%"></td>
+<td align="center" bgcolor="#AABE3A" valign="top" width="75%">
+<h4><strong>查&nbsp; &nbsp; 经&nbsp; &nbsp; 内&nbsp; &nbsp; 容</strong></h4>
+</td>
+<td align="center" bgcolor="#AABE3A" width="15%">
+<h4>资料</h4>
+</td>
+</tr>
+<tr>
+<td align="center">
+<h4>1</h4>
+</td>
+<td valign="top" width="331">
+<h4><strong>全书综览 及 “道成肉身”&nbsp;</strong><strong>(1:1-18)</strong></h4>
+</td>
+<td align="center">
+<h4><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks/TheGospelofJohn/John01_Incarnation.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></h4>
+</td>
+</tr>
+<tr>
+<td align="center">
+<h4>2</h4>
+</td>
+<td valign="top" width="360">
+<h4><strong>迦拿婚宴 “变水为酒”&nbsp;</strong><strong>(2:1-12)</strong></h4>
+</td>
+<td align="center">
+<h4><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks/TheGospelofJohn/John02_Canna.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></h4>
+</td>
+</tr>
+<tr>
+<td align="center">
+<h4>3</h4>
+</td>
+<td valign="top" width="331">
+<h4><strong>与尼哥德慕 谈重生&nbsp;</strong><strong>(3:1-15)</strong></h4>
+</td>
+<td align="center">
+<h4><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks/TheGospelofJohn/John03_Reborn.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></h4>
+</td>
+</tr>
+<tr>
+<td align="center">
+<h4>4</h4>
+</td>
+<td valign="top" width="360">
+<h4><strong>撒玛利亚妇人&nbsp;</strong><strong>(4:1-42)</strong></h4>
+</td>
+<td align="center">
+<h4><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks/TheGospelofJohn/John04_Samaritan.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></h4>
+</td>
+</tr>
+<tr>
+<td align="center">
+<h4>5</h4>
+</td>
+<td valign="top" width="331">
+<h4><strong>医治大臣之子&nbsp;</strong><strong>(4:46-54)</strong></h4>
+</td>
+<td align="center">
+<h4><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks/TheGospelofJohn/John05_Son_of_Official.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></h4>
+</td>
+</tr>
+<tr>
+<td align="center">
+<h4>6</h4>
+</td>
+<td valign="top" width="360">
+<h4><strong>医好卅八年瘫子与安息日治病&nbsp;</strong><strong>(5:1-18)</strong></h4>
+</td>
+<td align="center">
+<h4><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks/TheGospelofJohn/John06_paralyzed.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></h4>
+</td>
+</tr>
+<tr>
+<td align="center">
+<h4>7</h4>
+</td>
+<td valign="top" width="331">
+<h4><strong>耶稣的见证者&nbsp;</strong><strong>(5:19-47)</strong></h4>
+</td>
+<td align="center">
+<h4><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks/TheGospelofJohn/John07_Witness.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></h4>
+</td>
+</tr>
+<tr>
+<td align="center">
+<h4>8</h4>
+</td>
+<td valign="top" width="360">
+<h4><strong>给五千人吃饱&nbsp;</strong><strong>(6:1-15)</strong></h4>
+</td>
+<td align="center">
+<h4><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks/TheGospelofJohn/John08_5bread2fish.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></h4>
+</td>
+</tr>
+<tr>
+<td align="center">
+<h4>9</h4>
+</td>
+<td valign="top" width="331">
+<h4><strong>耶稣履海&nbsp;</strong><strong>(6:16-21 )</strong></h4>
+</td>
+<td align="center">
+<h4><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks/TheGospelofJohn/John09_Walk_On_Water.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></h4>
+</td>
+</tr>
+<tr>
+<td align="center">
+<h4>10</h4>
+</td>
+<td valign="top" width="360">
+<h4><strong>生命的粮&nbsp;</strong><strong>(6:24-65)</strong></h4>
+</td>
+<td align="center">
+<h4><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks/TheGospelofJohn/John10_BreadOfLife.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></h4>
+</td>
+</tr>
+<tr>
+<td align="center">
+<h4>11</h4>
+</td>
+<td valign="top" width="331">
+<h4><strong>住棚节&nbsp;</strong><strong>(7:1-52)</strong></h4>
+</td>
+<td align="center">
+<h4><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks/TheGospelofJohn/John11_FeastOfBooths.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></h4>
+</td>
+</tr>
+<tr>
+<td align="center">
+<h4>12</h4>
+</td>
+<td valign="top" width="360">
+<h4><strong>世界的光&nbsp;</strong><strong>(8:12-20- 9:1-41)</strong></h4>
+</td>
+<td align="center">
+<h4><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks/TheGospelofJohn/John12_LightOfWorld.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></h4>
+</td>
+</tr>
+<tr>
+<td align="center">
+<h4>13</h4>
+</td>
+<td valign="top" width="331">
+<h4><strong>拉撒路复活&nbsp;</strong><strong>(11:1-46)</strong></h4>
+</td>
+<td align="center">
+<h4><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks/TheGospelofJohn/John13_LazaraAlived.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></h4>
+</td>
+</tr>
+<tr>
+<td align="center">
+<h4>14</h4>
+</td>
+<td valign="top" width="360">
+<h4><strong>七个我是&nbsp;</strong><strong>(6:35,8:12,11:25,10:7-15,14:6,15:1-5)</strong></h4>
+</td>
+<td align="center">
+<h4><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks/TheGospelofJohn/John14_I_am.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></h4>
+</td>
+</tr>
+<tr>
+<td align="center">
+<h4>15</h4>
+</td>
+<td valign="top" width="331">
+<h4><strong>耶稣为门徒洗脚&nbsp;</strong><strong>(13:1-17)</strong></h4>
+</td>
+<td align="center">
+<h4><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks/TheGospelofJohn/John15_FeetWashing.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></h4>
+</td>
+</tr>
+<tr>
+<td align="center">
+<h4>16</h4>
+</td>
+<td valign="top" width="360">
+<h4><strong>保惠师&nbsp;</strong><strong>(14:16-31)</strong></h4>
+</td>
+<td align="center">
+<h4><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks/TheGospelofJohn/John16_counselor.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></h4>
+</td>
+</tr>
+<tr>
+<td align="center">
+<h4>17</h4>
+</td>
+<td valign="top" width="331">
+<h4><strong>效法主的爱&nbsp;</strong><strong>(15:9-26)</strong></h4>
+</td>
+<td align="center">
+<h4><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks/TheGospelofJohn/John17_FollowLordsLove.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></h4>
+</td>
+</tr>
+<tr>
+<td align="center">
+<h4>18</h4>
+</td>
+<td valign="top" width="360">
+<h4><strong>分离的祷告&nbsp;</strong><strong>(17:1-26)</strong></h4>
+</td>
+<td align="center">
+<h4><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks/TheGospelofJohn/John18_PrayerBeforeDeparture.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></h4>
+</td>
+</tr>
+<tr>
+<td align="center">
+<h4>19</h4>
+</td>
+<td valign="top" width="331">
+<h4><strong>耶稣的受难&nbsp;</strong><strong>(18:1-11, 18:33-40, 19:1-16)</strong></h4>
+</td>
+<td align="center">
+<h4><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks/TheGospelofJohn/John19_PassionOfJesus.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></h4>
+</td>
+</tr>
+<tr>
+<td align="center">
+<h4>20</h4>
+</td>
+<td valign="top" width="360">
+<h4><strong>耶稣的复活&nbsp;</strong><strong>(20:1-29)</strong></h4>
+</td>
+<td align="center">
+<h4><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks/TheGospelofJohn/John20_ResurrectionOfJesus.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></h4>
+</td>
+</tr>
+<tr>
+<td align="center">
+<h4>21</h4>
+</td>
+<td valign="top" width="331">
+<h4><strong>喂养我的羊&nbsp;</strong><strong>(21:1&nbsp;</strong><strong>-&nbsp;</strong><strong>24)</strong></h4>
+</td>
+<td align="center">
+<h4><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks/TheGospelofJohn/John21_FeedMySheep.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></h4>
+</td>
+</tr>
+</tbody>
+</table>
+<h4 style="text-align: center;"><img class="aligncenter" style="color: #333333;" src="http://www.lwechurch.org/images/temp/BibleJohn.gif" alt="" align="middle" height="58" width="399"></h4>
+<h4 style="text-align: left; padding-left: 90px;"><img style="color: #333333;" src="http://www.lwechurch.org/images/pdf_sign1.gif" alt="" height="26" width="23"><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks_John_note.pdf">约翰福音注释 — 摩根</a><br style="color: #333333;"><img style="color: #333333;" src="http://www.lwechurch.org/images/pdf_sign1.gif" alt="" height="26" width="23"><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks_John_student.pdf">约翰福音系统查经 — 参考书之一</a><br style="color: #333333;"><img style="color: #333333;" src="http://www.lwechurch.org/images/pdf_sign1.gif" alt="" height="26" width="23"><a style="color: #006633;" href="http://www.lwechurch.org/files/BibleBooks_John_teacher.pdf">约翰福音系统查经 — 参考书之二</a>
+        <p> Notes: Refresh page to confirm your edit/changes.
+            &nbsp;</p>
+            
+    </body>
+</html>

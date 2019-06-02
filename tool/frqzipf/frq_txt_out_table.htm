@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+    <TITLE>zipfTable</TITLE>
+    <META http-equiv="Content-Type" content="text/html;" charset="UTF-8">
+    <META name="viewport" content="width=device-witdh, initial-scale=1, maximum-scale=1, user-scale=0">
+
+    <link rel="stylesheet" type="text/css" href="../ham12/css/Default_pad.css">
+    <link rel="stylesheet" type="text/css" href="../ham12/css/mark_colors.css">
+
+    <script language="javascript" src="../ham12/jq/jquery.js"></script>
+    
+<script language="javascript" src="out.js"></script>
+        
+      
+<style>
+body{
+  font-size: 60%;
+}
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px 1px 1px 1px solid black;
+}
+#btnsHolder{
+    position: fixed;
+    top:0;
+    right:30px;
+    width:95%;
+    text-align: right;
+}
+#txa{
+  width: 100%;
+  height: 50px;
+}
+.hilit{
+  border: 1px solid #ff0000;
+}
+.fontminsize{
+  font-size: 0px;
+}
+
+
+.hifi, .man{
+  background-color: yellow;
+}
+.hifi, .say{
+  background-color: #ffeeee;
+}
+.hifi, .come{
+  background-color: #eeffee;
+}
+.hifi, .lord{
+  background-color: #ffee99;
+}
+.hifi, .hand{
+  background-color: #ffeeff;
+}
+</style>    
+    
+
+</HEAD>
+<BODY>
+<div id="btnsHolder">
+<textarea id="txa"></textarea>
+<button id="hidshow"></button>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="vbibtxt">
+    </div>
+
+</BODY>
+<script language="javascript">
+function getStyle(className) {
+  var i=2;
+    var classes = document.styleSheets[i].rules || document.styleSheets[1].cssRules;
+    for (var x = 0; x < classes.length; x++) {
+        if (classes[x].selectorText == className) {
+            (classes[x].cssText) ? alert(classes[x].cssText) : alert(classes[x].style.cssText);
+        }
+    }
+}
+var FRQ_WORD_DICT=adjusted_frq_words_dict;
+
+function get_frq_stats(){
+  var frqdict=FRQ_WORD_DICT;
+  var irowmax=0, ret={};
+  var keys=Object.keys(frqdict);
+  for(var i=0;i<keys.length;i++){
+    var sColKey=keys[i];
+    var irowsize=frqdict[keys[i]].length;
+    var iquntity=0;
+    for(var k=0; k<irowsize; k++){
+      var ifrq=frqdict[keys[i]][k][0];
+      iquntity+=parseInt(ifrq);
+    }
+
+    ///////////////////////////////////
+    var iacc=0, 
+    idxfc50=0.5, 
+    idxc50=-1,
+    idxfc90=0.9,
+    idxc90=-1;
+    for(var k=0; k<irowsize; k++){
+      var ifrq=frqdict[keys[i]][k][0];
+      iacc+=parseInt(ifrq);
+      if(iacc>=iquntity*idxfc50){
+          if(-1==idxc50) idxc50=k;
+      }
+      if(iacc>=iquntity*idxfc90){
+        if(-1==idxc90) idxc90=k;
+      }
+    }
+    //////////////////////////////////////
+
+    if(irowsize>irowmax)irowmax=irowsize;
+    ret[keys[i]]={
+      "irowsize":irowsize,
+      "quantity":iquntity, 
+      "idxc50":idxc50, 
+      "idxc90":idxc90};
+  }
+  return {"irowmax":irowmax,"sta":ret};
+}
+
+
+var Frq_Word_Stats=get_frq_stats();
+
+
+$(document).ready(function(){
+  var s=gen_table();
+  $("#vbibtxt").html(s);
+
+  $("#hidshow").click(function(){
+    //$(".frq").toggleClass("fontminsize");
+    //getStyle("");
+    //get_hifq_word_identity(2);
+    var s=get_hifq_word_identity_max(10);
+    $("#txa").val(s);
+  });
+  
+
+  ///////////////////////
+  $("td").click(function(){
+    var tx=$(this).text();
+    console.log(tx);
+    $("td").filter(function(){
+      return $(this).text()===tx;
+    }).toggleClass(tx+" hilit");
+  });
+  ///////////////////////
+
+
+
+});
+function gen_table(){
+  var str="<table>";
+  var bkidary=Object.keys(FRQ_WORD_DICT);
+  str+=gen_hdr(bkidary);
+  str+=get_row_dat_all(bkidary);
+  str+="</table>";
+  return str;
+}
+function gen_hdr(bkidary){
+
+  var str1="<tr><th></th>",
+  str2="<tr><th>#</th>",
+  strA="<tr><td>#</td>",
+  strB="<tr><td>c50</td>",
+  strC="<tr><td>c90</td>";
+  $.each(bkidary,function(i,v){
+    var rowsize=Frq_Word_Stats.sta[v].irowsize;
+    var quantity=Frq_Word_Stats.sta[v].quantity;
+    var idxc50=Frq_Word_Stats.sta[v].idxc50;
+    var idxc90=Frq_Word_Stats.sta[v].idxc90;
+    var rate=100*rowsize/quantity;
+    strA+="<td>"+rowsize+"<br>"+quantity+"<br>"+rate.toFixed(1)+"%</td>";
+    strB+="<td>"+idxc50+"</td>";
+    strC+="<td>"+idxc90+"</td>";
+    str1+="<th colspan='1'>"+v+"</th>";
+    str2+="<th class='frq'>wrd</th>";//<th>word</th>";
+  });
+  strA+="</tr>";
+  strB+="</tr>";
+  strC+="</tr>";
+  str1+="</tr>";
+  str2+="</tr>";
+  return str1+strA+strB+strC+str2;
+}
+function get_row_dat(bkidary,rowIdx){
+  var str1="<tr><th>"+rowIdx+"</th>";
+  $.each(bkidary,function(i,v){
+    var coldat=FRQ_WORD_DICT[v];
+    var ar2=coldat[rowIdx];
+    if(ar2===undefined){ar2=["",""];};
+    str1+="<td class='frq' title='"+ar2[0]+"'>"+ar2[1]+"</td>";//<td class='wrd'>"+ar2[1]+"</td>";
+  });
+  str1+="</tr>";
+  return str1;
+}
+function get_row_dat_all(bkidary){
+  var str="";
+  var isize=Math.floor(Frq_Word_Stats.irowmax/10);
+  for(var i=0; i<isize; i++){
+    str+=get_row_dat(bkidary,i);
+  }
+  return str;
+}
+
+
+function get_hifq_word_identity(iNumOfWords){
+  var bkidary=Object.keys(FRQ_WORD_DICT);
+  var keywordDict={};
+  for(var iCol=0;iCol<bkidary.length;iCol++){
+    var keyname=bkidary[iCol];
+    var keywords="";
+    for(var iRow=0;iRow<iNumOfWords;iRow++){
+      keywords+=FRQ_WORD_DICT[keyname][iRow][1]+",";
+    }
+    if(!keywordDict[keywords]){
+      keywordDict[keywords]=[];
+    }
+    keywordDict[keywords].push(keyname);
+  }
+
+  ///////////////////////////
+  //printout
+  var sout="";
+  var sortedkeywords=Object.keys(keywordDict);
+  for(var i=0;i<sortedkeywords.length;i++){
+    var keyword=sortedkeywords[i];
+    sout+="\n"+keyword+"\n "+keywordDict[keyword].join(",");
+  }
+  //$("#txa").val(sout);
+  return sout;
+}
+function get_hifq_word_identity_max(iMaxNumOfWords){
+  var s="";
+  for(var i=1;i<iMaxNumOfWords;i++){
+    s+=get_hifq_word_identity(i);
+    s+="\n\n";
+  }
+  return s;
+}
+
+
+
+</script>
+
+</HTML>

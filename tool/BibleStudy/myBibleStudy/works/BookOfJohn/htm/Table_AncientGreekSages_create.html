@@ -1,0 +1,182 @@
+<html>
+	<head>
+		<title onclick="alert();">ctxt</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!------->
+		<base target="_blank" />
+		<script src="../../../../../tablesorter_master/js/jquery.tablesorter.js"></script><script src="../../../myjs/table_Indexer.js"></script><script src="../../../myjs/goto_editor.js"></script>
+		<script type="text/javascript", src="Table_AncientGreekSages_dat.js"></script>
+		<style type="text/css">
+body {font-family: 'Times New Roman';
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+    }		
+#_MenuPanel{
+position: fixed;
+left: 10px;
+top: 0px;
+}
+
+.fixedcol{
+	position: absolute;
+	background-color: #999999;
+}
+.fixedcol2, thead{
+	background-color: #999999;
+}
+.fixedcol2{
+	background-color: #eeeeee;
+}
+.catlog, .hili{
+	background-color: #cccccc;
+}
+.logos{
+	background-color: #ff0000;
+}
+.logosv{
+	background-color: #eeaa66;
+}
+.logosw{
+	background-color: #aaaaee;
+}
+.logoswv{
+	background-color: #77aaaa;
+}
+.display_none{
+	display: none;
+}
+.logosvc{
+	background-color: #aa77aa;
+}
+.logov{
+	background-color: #aa77aa;
+}
+.dao{
+	color: #0000ff;
+}
+.All_Top_Horz{
+	background-color: red;
+}
+.leftbox{
+  background-color: #ff0000;
+}
+.tablefloatheb {float: right; margin: 2px;border-collapse: false;background-color: #eeeeee }
+.hebrew
+{
+    FONT-SIZE: 23px;
+    COLOR: #001320;
+    LINE-HEIGHT: 33px;
+    font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+    TEXT-DECORATION: none;
+}		</style>
+	</head>
+	<script>
+$(function(){
+    $(".narration").toggle();
+    $(".TheTitle").click(function(){
+        $(".narration").toggle();
+    } );
+    $("#strongsCodes").click(function(){
+    	$(".strongs, .translit").slideToggle();
+    });
+tb2jsd();
+    $("body").click(function(){
+    	$(".disprint").slideToggle();
+    	
+    });
+
+    $("#relativeFrqRate").click(function(){
+    	cal_relativeFrqRate();
+    });
+
+
+    $(".fixedcol2").click(function(){
+    	alert();
+    });
+
+    $("td").click(function(){
+    	var out=$("#out").val();
+    	out+=$(this).text().trim()+";";
+    	$("#out").val(out);
+    	$(this).toggleClass("hili");
+    });
+
+
+
+});/////////
+function tb2jsd(){
+    var tbd="";
+    $.each((AncientGreekSages), function(k,ar){
+    	tbd+="<tr><td><td>"+k+"</td>";
+    	$.each(ar,function(i,v){
+    		tbd+="<td>"+v+"</td>";
+    	});
+    	tbd+="</tr>";
+    });
+    $("#tbd").html(tbd);	
+}
+$(document).ready(function(){ 
+	goto_editor("_edit_url");
+	sort_table();
+});//
+function sort_table(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+
+
+</script>
+	<body>
+		<p id="_MenuPanel">
+			<br />
+			<a id="_edit_url">...</a><br />
+			<a id="indxer">indxer</a><br />
+			<textarea id="out"></textarea></p>
+		<!-------------------------->
+		<div>
+			&nbsp;</div>
+		<!-------------------------->
+		<div>
+			&nbsp;</div>
+		<!-------------------------->
+		<center>
+			<font size="3"><b>Acient Greek Sages<a href="https://en.wikipedia.org/wiki/List_of_ancient_Greek_philosophers">[]</a></b></font></center>
+		<table border="1" class="wikitable sortable jquery-tablesorter">
+			<thead>
+				<tr>
+					<th class="headerSort" role="columnheader button" tabindex="0" title="Sort ascending">
+						#</th>
+					<th class="headerSort" role="columnheader button" tabindex="0" title="Sort ascending">
+						Name</th>
+					<th class="headerSort" role="columnheader button" tabindex="0" title="Sort ascending">
+						E.D</th>
+					<th class="headerSort" role="columnheader button" tabindex="0" title="Sort ascending">
+						Life</th>
+					<th class="headerSort" role="columnheader button" tabindex="0" title="Sort ascending">
+						School</th>
+					<th class="sortable headerSort" role="columnheader button" style="background:#e3e3e3" tabindex="0" title="Sort ascending">
+						Notes</th>
+				</tr>
+			</thead>
+			<tfoot>
+			</tfoot>
+
+			<tbody id="tbd"></tbody>
+		</table>
+		<p>
+			end</p>
+	</body>
+</html>

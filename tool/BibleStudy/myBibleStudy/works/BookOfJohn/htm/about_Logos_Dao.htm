@@ -1,0 +1,356 @@
+<html>
+	<head>
+		<title onclick="alert();">ctxt</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!------->
+		<base target="_blank" />
+		<script src="../../../../../tablesorter_master/js/jquery.tablesorter.js"></script><script src="../../../../../Hebrew2/nodjs/noduti/js/table_Indexer.js"></script><script src="../../../myjs/goto_editor.js"></script>
+		<style type="text/css">
+body {font-family: 'Times New Roman';
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+    }		
+#_MenuPanel{
+position: fixed;
+left: 10px;
+top: 0px;
+}
+
+.fixedcol{
+	position: absolute;
+	background-color: #999999;
+}
+.fixedcol2, thead{
+	background-color: #999999;
+}
+.fixedcol2{
+	background-color: #eeeeee;
+}
+.catlog, .hili{
+	background-color: #cccccc;
+}
+.strongs{
+	background-color: #ffffff;
+}
+.Top_Horz{
+	color: blue;
+}
+.All_Top_Horz{
+	background-color: red;
+}
+.leftbox{
+  background-color: #ff0000;
+}
+.tablefloatheb {float: right; margin: 2px;border-collapse: false;background-color: #eeeeee }
+.hebrew
+{
+    FONT-SIZE: 23px;
+    COLOR: #001320;
+    LINE-HEIGHT: 33px;
+    font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+    TEXT-DECORATION: none;
+}		</style>
+	</head>
+	<script>
+$(function(){
+    $(".narration").toggle();
+    $(".TheTitle").click(function(){
+        $(".narration").toggle();
+    } );
+    $("#strongsCodes").click(function(){
+    	$(".strongs, .translit").slideToggle();
+    });
+
+    $("body").click(function(){
+    	$("#_edit").slideToggle();
+    });
+
+    $("#relativeFrqRate").click(function(){
+    	cal_relativeFrqRate();
+    });
+
+
+    $(".fixedcol2").click(function(){
+    	alert();
+    });
+
+    $("td").click(function(){
+    	var out=$("#out").val();
+    	out+=$(this).text().trim()+";";
+    	$("#out").val(out);
+    	$(this).toggleClass("hili");
+    });
+
+});/////////
+
+$(document).ready(function(){ 
+	goto_editor("_edit_url");
+	sort_table();
+});//
+function sort_table(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+
+
+</script>
+	<body>
+		<p id="_MenuPanel">
+			<br />
+			<a id="_edit_url">...</a><br />
+			<a id="indxer">indxer</a><br />
+			<textarea id="out"></textarea></p>
+		<!-------------------------->
+		<div>
+			&nbsp;</div>
+		<!-------------------------->
+		<div>
+			&nbsp;</div>
+		<!-------------------------->
+		<p style="text-align: center;">
+			<font size="3"><b>The Word</b></font><br />
+			&nbsp;</p>
+		<!-------------------------->
+		<div>
+			&nbsp;</div>
+		<ol>
+			<li>
+				The first verse of the Gospel of John is almost always used as a starting point to prove the Trinity. However, is there another way to understand John 1.1? Was John, a first century Jew, articulating the completely non-Jewish idea that God became a human being or have we read that into John 1.1? Join Anthony Buzzard as he explains the meaning of John 1.1-14 in its original Hebrew, thought context. Jesus is a Jew, the son of carpenter. Jesus is the prediected Messiah. The first born. Many believe HIM will the second the third, and forth. --the mirror of Adam. --Noah. (they do not die for us.) --Ehiah. substution of word with Son. personified. my time.&nbsp;</li>
+			<li>
+				<div>
+					However, a study of the Greek word logos shows that it occurs more than 300 times in the New Testament, and in both the NIV and the KJV it is capitalized only 7 times (and even those versions disagree on exactly when to capitalize it). John 1:1 3x 1:4 1x; When a word that occurs more than 300 times is capitalized fewer than 10 times, it is obvious that when to capitalize and when not to capitalize is a translators&rsquo; decision based on their particular understanding of Scripture. (...) One is the mind and products of the mind like &ldquo;reason,&rdquo; (thus &ldquo;logic&rdquo; is related to logos)&nbsp;</div>
+				<div>
+					God in the begining is personified.(create, speak, walk, love, grave, etc)&nbsp; But none eve see God. It is prediction for fresh Jesus.&nbsp; It is important to note that it was &ldquo;Christian teachers&rdquo; who attached the idea of a &ldquo;divine person&rdquo; to the word logos. (...)&nbsp; Jesus is the &ldquo;image of the invisible God&rdquo; (Col. 1:15)&nbsp;</div>
+				<div>
+					&nbsp;</div>
+				<div>
+					&nbsp;</div>
+			</li>
+			<li>
+				<div class="article-header" style="-webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; box-sizing: border-box; margin: 0px 0px 25px; border-width: 0px 0px 1px; border-top-style: initial; border-right-style: initial; border-bottom-style: solid; border-left-style: initial; border-top-color: initial; border-right-color: initial; border-bottom-color: rgb(230, 226, 219); border-left-color: initial; border-image: initial; outline: 0px; font-size: 14px; vertical-align: baseline; background: transparent; padding: 0px 0px 20px; position: relative; color: rgb(57, 50, 42); font-family: Georgia, &quot;Times New Roman&quot;, Times, serif;">
+					<p style="-webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; box-sizing: border-box; margin: 0px; border: 0px; outline: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 44px; line-height: normal; vertical-align: baseline; background: transparent; padding: 0px;">
+						&nbsp;</p>
+				</div>
+				<div class="article" style="-webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; box-sizing: border-box; margin: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; background: transparent; padding: 0px; color: rgb(57, 50, 42); font-family: Georgia, &quot;Times New Roman&quot;, Times, serif;">
+					<p style="-webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; box-sizing: border-box; margin: 0px 0px 9px; border: 0px; outline: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; line-height: 23px; vertical-align: baseline; background: transparent; padding: 0px; color: rgb(60, 60, 60);">
+						&nbsp;</p>
+					<p style="-webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; box-sizing: border-box; margin: 0px 0px 9px; border: 0px; outline: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; line-height: 23px; vertical-align: baseline; background: transparent; padding: 0px; color: rgb(60, 60, 60);">
+						&nbsp;</p>
+				</div>
+			</li>
+		</ol>
+		<p>
+			--</p>
+		<div style="page-break-after: always;">
+			<span style="display: none;">&nbsp;</span></div>
+		<div style="page-break-after: always;">
+			&nbsp;</div>
+		<table border="1">
+			<caption>
+				The Seven Capital &quot;the Word&quot; in NIV</caption>
+			<thead>
+				<tr>
+					<td>
+						#</td>
+					<td>
+						Sayings</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						1</td>
+					<td>
+						Jhn 1:1 In the beginning was<span style="color:#ff0000;"> the Word</span>, and <span style="color:#ff0000;">the Word</span> was with God, and<span style="color:#ff0000;"> the Word</span> was God.<br />
+						John 1:1 太 初 有 <span style="color:#ff0000;">道</span> ， <span style="color:#ff0000;">道</span> 與 神 同 在 ， <span style="color:#ff0000;">道</span> 就 是 神 。</td>
+				</tr>
+				<tr>
+					<td>
+						2</td>
+					<td>
+						Jhn 1:14 <span style="color:#ff0000;">The Word</span> became flesh and made his dwelling among us. We have seen his glory, the glory of the One and Only, who came from the Father, full of grace and truth.<br />
+						John 1:14 <span style="color:#ff0000;">道</span> 成 了 肉 身 ， 住 在 我 們 中 間 ， 充 充 滿 滿 的 有 恩 典 有 真 理 。 我 們 也 見 過 他 的 榮 光 ， 正 是 父 獨 生 子 的 榮 光 。</td>
+				</tr>
+				<tr>
+					<td>
+						3</td>
+					<td>
+						2Ti 4:2 Preach <span style="color:#ff0000;">the Word</span>; be prepared in season and out of season; correct, rebuke and encourage -- with great patience and careful instruction.<br />
+						務 要 傳 <span style="color:#ff0000;">道</span> ， 無 論 得 時 不 得 時 ， 總 要 專 心 ； 並 用 百 般 的 忍 耐 ， 各 樣 的 教 訓 ， 責 備 人 、 警 戒 人 、 勸 勉 人 。</td>
+				</tr>
+				<tr>
+					<td>
+						4</td>
+					<td>
+						1Jn 1:1 That which was from the beginning, which we have heard, which we have seen with our eyes, which we have looked at and our hands have touched-- this we proclaim concerning <span style="color:#ff0000;">the Word</span> of life.<br />
+						1John 1:1 論 到 從 起 初 原 有 的 生 命 之 <span style="color:#ff0000;">道</span> ， 就 是 我 們 所 聽 見 、 所 看 見 、 親 眼 看 過 、 親 手 摸 過 的 。</td>
+				</tr>
+				<tr>
+					<td>
+						5</td>
+					<td>
+						Rev 19:13 He is dressed in a robe dipped in blood, and his name is <span style="color:#ff0000;">the Word</span> of God.<br />
+						Rev 19:13他 穿 著 濺 了 血 的 衣 服 ； 他 的 名 稱 為 神 之 <span style="color:#ff0000;">道</span></td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			-</p>
+		<div style="page-break-after: always;">
+			<span style="display: none;">&nbsp;</span></div>
+		<p>
+			<br />
+			&nbsp; &nbsp;https://www.youtube.com/watch?v=gO9mdZIJYbU</p>
+		<pre>
+			1. synpotics look at outside--what He say and did. John look inside-who He was.
+			2. God use different personality to write one union personality of God.
+			3. not mention Kingdom of Heaven.
+			4. 7 miracle 5 is new 2 are same. John did not call it as miracle but sign--where it point to. 
+			   look through miracle.
+			   one to one vs crowd. 
+			5. based on outline of Mark.  30 months of north in Galilee followed by 6 months in south. 
+			   John almost all in south. 
+			   conflicts John concentrated on south. 
+
+			6. John has not short parables. 
+
+			7. John wrote in Ephesus in Turkey the mixture of Greek and Hebrew.
+			   western is Greek style: vertical time. between key words: heaven and world. up and down. Up/down
+			   Hebrew horizontal in time. past present future. 
+
+			8. author. between Galilee and south.  
+
+			   12 disciple 5 or 7 of them are relatives of Jesus.  (North) 
+
+			   not believe until after ascesion. 
+			   James and Jude 
+
+			   three close Peter, James and John. among 3 has 1 favorite, last surving. 
+			   that&#39;s why Jesus ask John to care his mother. 
+			   Peter jelous to John. 
+
+			 9. purpose of the book. 
+			    go on believing. 
+			    faith go on believing. 
+
+			 10. 3 phases
+			    1. believing not faith which is noun. 
+			        - credence: to believe that is true  --accept 
+			        - confidence: believe in that. obey and do sth to show trust.--doing 
+			        - continuance: go on believing, holding the truth (faith==faithfullness), eternal. --holding. 
+
+			        trust on someone, you will trust him whatever happened whatever cost. 
+                    if you are full of faith, you are faithfull--go on believing in someone. 
+
+                2. Truth is someone. what is truth?
+                   Truth is not proposition. but a person. --great revelation of John gospel. 
+                   people always think truth is something not the person. 
+                   what do you think of Jesus.
+                   rumors and lengends began to creep in 
+                   speculation came in about Jesus. 
+                   speculation(推测): the forming of a theory or conjecture without firm evidence.
+
+
+
+            https://www.youtube.com/watch?v=G2R7ljD_I7k
+            low the John B. higher Jesus. 
+
+            Hull humanity full divinity. 
+
+            the magic number 7.  a perfect round number in Hebrew is always 7. 
+            it is not our figuring but it was in Hebrew thinking. The most important number in the Bible. 
+            anything that falls short of that is less than perfect six six six. but 777 is something. (13:41)
+
+
+            seven persons: witness (70 times) personal testimony for the truth. 
+               John the B
+               Nathaniel
+               Jesus
+               Peter
+               Martha
+               Thoma
+               John
+
+            severn works: single out only 7 signs. supernatural, 
+
+            seven I AM. talk about himself. 
+              Jesus has 250 names and titles. 
+              I AM is YAWH
+
+              Synoptis start from 
+              	Math start Abraham.
+              	Luke start Adam. 
+
+              	the unique name: Logos. the word. 
+              	what is the word. 
+              	In Ephesus 600 years before John was writing this in 568 bc. 
+              	  Hearaclitus.  (24:54)
+              	  was the founder of science. 
+              	  keep asking &quot;why&quot;  which is logos. Bio-logy 
+              	  every branch of science is looking for the logos the reason. why things are as they are. 
+              	  science is small part, and become less and less. 
+              	  John said you need ask the reason of whole.
+                   What is the reason why it&#39;s all here.   
+                   the answer is Jesus. All is made by jesus son of God. 
+                   that is the reason I was here. 
+                   He is the reason why, he is the logos. excepting concept. 
+
+                   LXX (70) professor Hebrew Greek.
+                    on of them is called Philo. He said the Logos we should not talk about it but HE. 
+                    He is not taling about a person but he was personifying it. 
+
+                    Wisdom is personified as woman. 
+
+                Logos: (4 vital things)
+                   1. his eternity: already there. 
+                   2. his personality (face to face, personal, son and God love each other. hence God is love. single person cannot love)
+                   3. his deity: was God. rather than a god. 
+                   4. his humanity. incarnation. became flesh. 
+
+                Life:
+                	life/death
+                	light/darkness
+                	truth/lies
+                	Slavery/freedom
+                	love /wrath/
+
+                	heaven / world. 
+
+                Holy Spirit. 
+                	ch1 Baptised with /in Holy Spirit
+                	ch3 reborn
+                	ch4 living water, true worship
+                	ch7 feast of tabernacles, spring of water. 
+                	ch14-16: paraclete-called beside.
+                	         encourager, standby
+                	         spirit of truth
+                	         another comforter.
+                	ch20.    sign: blew.
+                	         command:receive.  
+
+
+                
+
+
+
+
+=============
+
+
+
+			&nbsp;</pre>
+	</body>
+</html>

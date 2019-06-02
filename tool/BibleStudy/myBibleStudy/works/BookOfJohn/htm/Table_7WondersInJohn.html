@@ -1,0 +1,249 @@
+<html>
+	<head>
+		<title onclick="alert();">ctxt</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!------->
+		<base target="_blank" />
+		<script src="../../../../../tablesorter_master/js/jquery.tablesorter.js"></script><script src="../../../myjs/table_Indexer.js"></script><script src="../../../myjs/goto_editor.js"></script>
+		<style type="text/css">
+body {font-family: 'Times New Roman';
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+    }		
+#_MenuPanel{
+position: fixed;
+left: 10px;
+top: 0px;
+}
+
+.fixedcol{
+	position: absolute;
+	background-color: #999999;
+}
+.fixedcol2, thead{
+	background-color: #999999;
+}
+.fixedcol2{
+	background-color: #eeeeee;
+}
+.catlog, .hili{
+	background-color: #cccccc;
+}
+.logos{
+	background-color: #ff0000;
+}
+.logosv{
+	background-color: #eeaa66;
+}
+.logosw{
+	background-color: #aaaaee;
+}
+.logoswv{
+	background-color: #77aaaa;
+}
+.logosvc{
+	background-color: #aa77aa;
+}
+.logov{
+	background-color: #aa77aa;
+}
+.dao{
+	color: #0000ff;
+}
+.All_Top_Horz{
+	background-color: red;
+}
+.leftbox{
+  background-color: #ff0000;
+}
+.tablefloatheb {float: right; margin: 2px;border-collapse: false;background-color: #eeeeee }
+.hebrew
+{
+    FONT-SIZE: 23px;
+    COLOR: #001320;
+    LINE-HEIGHT: 33px;
+    font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+    TEXT-DECORATION: none;
+}		</style>
+	</head>
+	<script>
+$(function(){
+    $(".narration").toggle();
+    $(".TheTitle").click(function(){
+        $(".narration").toggle();
+    } );
+    $("#strongsCodes").click(function(){
+    	$(".strongs, .translit").slideToggle();
+    });
+
+
+
+    $("#relativeFrqRate").click(function(){
+    	cal_relativeFrqRate();
+    });
+
+
+    $(".fixedcol2").click(function(){
+    	alert();
+    });
+
+    $("td").click(function(){
+    	var out=$("#out").val();
+    	out+=$(this).text().trim()+";";
+    	$("#out").val(out);
+    	$(this).toggleClass("hili");
+    });
+
+});/////////
+
+$(document).ready(function(){ 
+	goto_editor("_edit_url");
+	sort_table();
+});//
+function sort_table(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+
+
+</script>
+	<body>
+		<p id="_MenuPanel">
+			<br />
+			<a id="_edit_url">...</a><br />
+			<a id="indxer">indxer</a><br />
+			<textarea id="out"></textarea></p>
+		<!-------------------------->
+		<div>
+			&nbsp;</div>
+		<!-------------------------->
+		<div>
+			&nbsp;</div>
+		<!-------------------------->
+
+		<!-------------------------->
+		<table border="1">
+			<caption>
+				About Marvels/Wonder/Surprise/Astonish/Amaze/Remark in John</caption>
+			<thead>
+				<tr>
+					<td>
+						#</td>
+					<td>
+						Sayings</td>
+					<td>
+						who</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						1</td>
+					<td>
+						3:7 我说、你们必须重生、你不要以为<span style="color:#ff0000;">希奇</span>。 NIV: You should not be <span style="color:#ff0000;">surprised</span> at my saying, &#39;You must be born again.&#39; KJV: <span style="color:#ff0000;">Marvel</span> not that I said unto thee, Ye must be born again.</td>
+					<td>
+						Jesus</td>
+				</tr>
+				<tr>
+					<td>
+						2</td>
+					<td>
+						4:27 当下门徒回来、就<span style="color:#ff0000;">希奇</span>耶稣和一个妇人说话．只是没有人说、你是要甚么．或说、你为甚么和他说话。 NIV: Just then his disciples returned and were <span style="color:#ff0000;">surprised</span> to find him talking with a woman. But no one asked, &quot;What do you want?&quot; or &quot;Why are you talking with her?&quot; KJV: And upon this came his disciples, and <span style="color:#ff0000;">marvelled</span> that he talked with the woman: yet no man said, What seekest thou? or, Why talkest thou with her?</td>
+					<td>
+						disciples</td>
+				</tr>
+				<tr>
+					<td>
+						3</td>
+					<td>
+						4:48 
+						耶稣就对他说、若不看见<span style="color:#ff0000;">神迹奇事</span>、你们总是不信。NIV: &quot;Unless you people see <span style="color:#ff0000;">miraculous signs and wonders</span>,&quot; Jesus told him, &quot;you will never believe.&quot; KJV: Then said Jesus unto him, Except ye see <span style="color:#ff0000;">signs and wonders</span>, ye will not believe. 
+
+						</td>
+					<td>
+						Jesus</td>
+				</tr>
+				<tr>
+					<td>
+						4</td>
+					<td>
+						5:20 父爱子、将自己所作的一切事指给他看．还要将比这更大的事指给他看、叫你们<span style="color:#ff0000;">希奇</span>。 NIV: For the Father loves the Son and shows him all he does. Yes, to your <span style="color:#ff0000;">amazement</span> he will show him even greater things than these. KJV: For the Father loveth the Son, and sheweth him all things that himself doeth: and he will shew him greater works than these, that ye may <span style="color:#ff0000;">marvel</span>.</td>
+					<td>
+						Jesus<br />
+						reason</td>
+				</tr>
+				<tr>
+					<td>
+						5</td>
+					<td>
+						5:28 你们不要把这事看作<span style="color:#ff0000;">希奇</span>．时候要到、凡在坟墓里的、都要听见他的声音、就出来．NIV: &quot;Do not be <span style="color:#ff0000;">amazed</span> at this, for a time is coming when all who are in their graves will hear his voice KJV: <span style="color:#ff0000;">Marvel</span> not at this: for the hour is coming, in the which all that are in the graves shall hear his voice,</td>
+					<td>
+						Jesus</td>
+				</tr>
+				<tr>
+					<td>
+						6</td>
+					<td>
+						7:15 犹太人就<span style="color:#ff0000;">希奇</span>说、这个人没有学过、怎么明白书呢。NIV: The Jews were <span style="color:#ff0000;">amazed</span> and asked, &quot;How did this man get such learning without having studied?&quot; KJV: And the Jews <span style="color:#ff0000;">marvelled</span>, saying, How knoweth this man letters, having never learned?</td>
+					<td>
+						Jews</td>
+				</tr>
+				<tr>
+					<td>
+						7</td>
+					<td>
+						7:21 耶稣说、我作了一件事、你们都以为<span style="color:#ff0000;">希奇</span>。NIV: Jesus said to them, &quot;I did one miracle, and you are all <span style="color:#ff0000;">astonished</span>. KJV: Jesus answered and said unto them, I have done one work, and ye all <span style="color:#ff0000;">marvel</span>.</td>
+					<td>
+						Jesus</td>
+				</tr>
+				<tr>
+					<td>
+						8</td>
+					<td>
+						7:46 差役回答说、从来没有像他这样说话的。NIV "No one ever spoke the way this man does," the guards declared. </td>
+					<td>
+						guards</td>
+				</tr>
+				<tr>
+					<td>
+						9</td>
+					<td>
+						9:30 那人回答说、他开了我的眼睛、你们竟不知道他从那里来、这真是<span style="color:#ff0000;">奇怪</span>。 NIV: The man answered, &quot;Now that is <span style="color:#ff0000;">remarkable</span>! You don&#39;t know where he comes from, yet he opened my eyes. KJV: The man answered and said unto them, Why herein is a <span style="color:#ff0000;">marvellous</span> thing, that ye know not from whence he is, and yet he hath opened mine eyes.</td>
+					<td>
+						blind</td>
+				</tr>
+			</tbody>
+		</table>
+		<ul>
+			
+			<li>
+				Jhn 10:37 我若不行我父的事、你们就不必信我。		
+					For Chinese, the miracles and marvels push people away from Him. Why?
+				
+			</li>
+			<li>
+				Who did not wonder in list from John?
+			</li>
+			<li>Jesus talked about the marvels more than people.</li>
+			
+		</ul>
+		
+		<p>
+			-</p>
+		<div style="page-break-after: always;">
+			<span style="display: none;">&nbsp;</span></div>
+	</body>
+</html>

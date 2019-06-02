@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>merge</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <META name="viewport" content="width=device-witdh, initial-scale=1, maximum-scale=1, user-scale=0"></META>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+    
+    
+    <script language="javascript">
+    
+function getURL(url){
+    return $.ajax({
+        type: "POST",
+        url: url,
+        dataType: 'html', 
+        cache: false,
+        async: false
+    }).responseText;
+}
+function add2main(url){
+        var ret=getURL(url);
+        $("#main").append(url); 
+        //console.log("merg:"+ret);
+        var htm=$.parseHTML(ret);
+        $.each(htm, function(i,t){
+            if(i==59){
+             console.log("merg"+i+$(t).text());
+             $("#main").append($(t).text());             
+            }
+          
+        });
+}
+$(function () {
+    jQuery.ajaxSetup({async:false});
+    $("#merge").click(function(){
+        for(var i=1;i<10;i++){
+            var id=""+i;
+            while(id.length<4)id="0"+id;
+            var filename="./dwn/"+id+".html";
+            add2main(filename);
+        }
+    });
+
+});////////////////////////////////
+     
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+
+
+         <button id="merge">merge</button>
+         <pre id="main"></pre>
+          
+</body>
+</html>

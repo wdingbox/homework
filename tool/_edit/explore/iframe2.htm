@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Work</title>
+		<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+		<link href="sample.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="../adapters/jquery.js">    </script><script type="text/javascript" src="index.js">    </script><script type="text/javascript">	
+	$(document).ready(function(){	
+	
+	$("#btn1").click(function(){
+		var surl=$("#inp").val();
+		alert(surl);
+		$("#iFrameName1").attr("src",surl);
+		var t = $("#iFrameName1").contents().find("html").html();
+		alert(t);	
+	});/////$("#file").click(function(){})	
+	$("#btn2").click(function(){
+                var snd = $("#nod").val();
+                alert(snd);
+		var t = $("#iFrameName1").contents().find(snd).html();
+		alert(t);	
+	});/////$("#file").click(function(){})
+	
+	});///////////////////////////////$(document).ready(function(){})    
+	</script><script type="text/javascript">
+function getContentFromIframe(iFrameName)
+{
+	
+	var myIFrame = document.getElementById(iFrameName);
+	
+	var content = $("#"+iFrameName).contents().find("html").html();
+	
+	//var content = myIFrame.contentWindow.document.body.innerHTML;
+	
+	alert('content: ' + content); 
+	
+	content = 'The inside of my frame has now changed';
+	myIFrame.contentWindow.document.body.innerHTML = content;
+	
+}
+	
+</script>
+	</head>
+	<body>
+		<p>
+			<input id="inp" size="121" style="width: 853px; height: 23px;" type="text" value="http://finance.yahoo.com/q?s=AAPL&amp;ql=0" /><br />
+			<button id="btn1">test1</button><button id="btn2">test2</button><input id="nod" size="58" style="width: 406px; height: 20px;" type="text" value="html" /><iframe height="455" id="iFrameName1" width="1001">&lt;p&gt;Your browser does not support iframes.&lt;/p&gt;</iframe><br />
+			&nbsp;</p>
+	</body>
+</html>

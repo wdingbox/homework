@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<title></title>
+		<title></title>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<meta content="en-us" http-equiv="Content-Language" />
+		<script language="javascript" src="../ham12/jq/jquery.js"></script><script src="../tablesorter_master/js/jquery.tablesorter.js"></script>
+
+
+		<script src="./js/distinct_characters_ary.js"></script>
+
+
+		<style type="text/css">
+		.hilit{
+			background-color: #ff0000;
+		}
+table {
+	width: 800px;
+}		</style>
+		<script type="text/javascript">
+	
+$(document).ready(function(){ 
+	Load_distinct_characters();
+	gen_persons_chapters();
+
+	$("#virtual").click(function(){
+		var sar=[];
+		$(".hilit").each(function(i,v){
+			var tt=$(this).text();
+			sar.push(tt);
+		});
+		$("#tout").val(JSON.stringify(sar));
+	});
+
+	$("#commonkeychars").click(function(){
+		var sar=[];
+		$(".kwd").each(function(){
+			sar.push($(this).text().trim());
+		});
+		$("#tout").val(JSON.stringify(sar));
+	});
+});//
+function gen_persons_chapters(){
+	var s={};
+	$("#cal").click(function(){
+		$("input:checked").each(function(){
+			var i=parseInt($(this).val());
+			find_common_sets(i);
+		});
+	});
+
+
+};
+</script>
+	</head>
+	<body>
+		<textarea id="tout"></textarea><br>
+		<button id="cal">cal</button>
+		<button id="virtual">virtual</button>
+		<button id="commonkeychars">commonkeychars</button>
+
+		<br>
+
+			<input type="checkbox" value="0" checked>0_DDJ</input>
+			<input type="checkbox" value="1" checked>1_Mat</input>
+			<input type="checkbox" value="2" checked>2_Mak</input>
+			<input type="checkbox" value="3" checked>3_Luk</input>
+			<input type="checkbox" value="4" checked>4_Jhn</input>
+	
+		<p>
+			&nbsp;</p>
+		<div id="hout"></div>
+	</body>
+</html>

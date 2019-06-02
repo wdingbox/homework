@@ -1,0 +1,1 @@
+/**/Tynt.sc({"ap":"Cited from: ","st":true,"d":true,"domain":"acmuller.net"})

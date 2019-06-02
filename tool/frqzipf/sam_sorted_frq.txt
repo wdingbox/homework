@@ -1,0 +1,28 @@
+"sam":[
+2694	the
+2104	of
+1590	and
+1000	to
+942	is
+873	a
+722	that
+636	in
+587	god
+577	it
+431	as
+1 text
+
+
+"sam2":[
+12694	then
+12104	of
+11590	sand
+11000	to
+1942	is
+1873	a
+1722	that
+1636	in
+1587	god
+1577	it
+1431	as
+11 text

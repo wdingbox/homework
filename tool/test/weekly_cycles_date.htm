@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+    <TITLE>weeks</TITLE>
+    <META http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+
+    <script language="javascript" src="../ham12/jq/jquery.js"></script>
+    
+    <script language="javascript" src="../ham12/jq/MyCookies.js"></script>
+    
+    <script language="javascript" src="WeekDateMgr.js"></script>
+    
+    <script language="javascript">
+    
+
+
+
+
+
+	$(document).ready(function(){
+	});
+	
+	
+	</script>
+<style>
+th, td {
+    white-space: nowrap;
+}
+</style>    
+</HEAD>
+    <BODY xxxonload="body_onload();">
+
+    <div id="vbibtxt">
+    </div>
+    <br><br>
+	
+<table id="schedule" style="height: 429px;" width="493" border='1'>
+<tbody>
+一二三四歌全年读经进度  组
+<tr>
+
+<th rowspan="2" style="width:100px;nowrap">日期</th>
+<th rowspan="2">领会<br/>司琴<br /><br /></th>
+<th rowspan="2">音<br />控<br />/<br />翻<br />译</th>
+<th rowspan="2">信息<br/>分享</th>
+<th colspan="4">儿童主日崇拜<br />周五<br/>10:30am-12:00pm<br/>7:30-9:00pm)</th>
+<th colspan="3">儿童中文主日学<br />Sunday<br/>(1:00-2:00pm)</th>
+<th rowspan="2">值日小组<br/>饭食</th>
+<th rowspan="2">读经<br/>进度</th>
+</tr>
+<tr>
+<th>1-3</th>
+<th>PreK-K</th>
+<th>Grad1-3</th>
+<th>>4grad</th>
+<th>幼儿班<br/>小班</th>
+<th>一班/二班<br/>青少年主日学</th>
+<th>儿童<br/>照顾</th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td></td>
+<td></td>
+<td rowspan="8"></td>
+<td></td>
+<td colspan="3"></td>
+<td></td>
+<td colspan="3"></td>
+<td rowspan="2"></td>
+<td rowspan="2"></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+
+
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td colspan="3"></td>
+<td></td>
+<td colspan="3"></td>
+<td rowspan="2"></td>
+<td rowspan="2"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+
+
+
+
+
+
+
+<tr>
+<td></td>
+<td></td>
+
+<td></td>
+<td colspan="3"></td>
+<td></td>
+<td colspan="3"></td>
+<td rowspan="2"></td>
+<td rowspan="2"></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+
+
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td colspan="3"></td>
+<td></td>
+<td colspan="3"></td>
+<td rowspan="2"></td>
+<td rowspan="2"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+<hr/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+    </BODY>
+<script language="javascript">
+
+function duplicate_base_cycle(){
+	var trs="";
+	$("tr").each(function(i){
+		if(i>1){
+			var ss= $(this).html();
+			ss="<tr>"+ss+"</tr>";
+			console.log(i+":"+ss);
+			trs += $(this).html();
+		}
+	});
+	
+	return trs;
+}
+function duplicate_base_cycle_trsArr(){
+	var trs=[];
+	$("tr").each(function(i){
+		if( i > 1 ){
+			//trs += $(this).html();
+			trs.push( $(this).clone(true) );
+		}
+	});	
+	return trs;
+}
+$(document).ready(function(){
+ 	$("#schedule tr").each(function(i){
+		console.log("tr :"+i);
+		if( (1+i)%4==0 ){
+			//$(this).css("background-color","#ff0000");
+		}
+		if( (2+i)%4==0 ){
+			//$(this).css("background-color","#ff0000");
+		}
+	});
+	$("table tr:odd td").each(function(i){
+		$(this).css("background-color","#ffeeee");
+	});
+	
+	
+	//var trs=duplicate_base_cycle();
+	//console.log(trs);
+	//$("tbody").append(trs);
+	
+	var trs=duplicate_base_cycle_trsArr();
+	for(var i=0;i<trs.length; i++) {
+		$("table tbody").append( trs[i] );
+	}
+	for(var i=0;i<trs.length; i++) {
+		//$("table tbody").append(trs[i]);
+	}
+	
+	var curday = new Date();
+	stoday=curday.toJSON().substr(0,10);
+	
+	
+	
+	
+	
+	var idxWeek=35;
+	$("table tr").each(function(i){
+		$(this).find("td:eq(0)").each(function(j){
+			if(i%2==0){
+				idxWeek+=1;
+				var wdm = new WeekDateMgr(idxWeek, 5, 2015);
+				$(this).text(wdm.getDateFormatI()).width(30);
+			}else{
+				var wdm = new WeekDateMgr(idxWeek, 7, 2015);
+				$(this).text(wdm.getDateFormatI());		
+			}
+		});
+	});
+
+});
+
+function getDateOfWeek(weekNumber,year){
+    //Create a date object starting january first of chosen year, plus the number of days in a week multiplied by the week number to get the right date.
+    var myDate = new Date(year, 0, 3+((weekNumber-1)*7));
+	
+	return myDate.getMonth()+"/" + (1+myDate.getDate());
+}
+
+
+var myDate = getDateOfWeek(20,2013);
+
+console.log(myDate.toString());
+
+myDate = getDateOfWeek(20,2015);
+
+for(var i=20; i<52;i++){
+	myDate = getDateOfWeek(i,2015);
+	console.log(''+i+":"+myDate.toString());
+}
+
+
+
+
+
+
+
+
+
+
+
+iWeek=31;
+$("table tr:even").each(function(i){
+	$(this).find("td:eq(0)").each(function(j){
+		//var wdm = new WeekDateMgr(iWeek, 6, 2015);
+		//$(this).text(wdm.getMMDD()+" " +wdm.Week());
+		iWeek+=2;
+	});
+});
+
+var wdm = new WeekDateMgr(iWeek, 7, 2015);
+var arr = wdm.getAllMMDDsInYear();
+$.each(arr,function(i,v){
+ console.log(i+"==========="+v);
+})
+</script>
+
+</HTML>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta content="text/html; charset=gb2312" http-equiv="Content-Type" />
+		<meta content="width=device-witdh, initial-scale=1, maximum-scale=1, user-scale=0" name="viewport" />
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+           
+        <script language="javascript" src="WeekDateMgr.js"></script>
+        <script language="javascript" src="Romans_Study_Plan.js"></script>
+        <script language="javascript" src="TableColRowMgr.js"></script>
+<script>
+$(document).ready(function(){
+
+});
+</script>
+
+<style>
+button:disabled{
+ color:#cccccc;
+}
+#menu{
+    position: fixed;
+    top:10px;
+    right:10px;
+}
+</style>
+
+	</head>
+	<body>
+    <div id='menu'>
+    <button id='Edit_Undo' EditID='' disabled='true'>Undo</button>
+    </div>
+    
+		<p>
+			&nbsp;</p>
+		<table border='1'>
+        <caption>Sunday Bible Study Schedule<br/>( Refresh page to confirm your edit/changes. )</caption>
+			<colgroup>
+				<col width="42" />
+				<col width="331" />
+				<col width="45" />
+			</colgroup>
+			<tbody>
+				<tr>
+					<td align="center" bgcolor="#AABE3A" width="10%">
+						进度</td>
+					<td align="center" bgcolor="#AABE3A" width="10%">
+						Date</td>
+					<td align="center" bgcolor="#AABE3A" width="10%">
+						Name_Of_Lead</td>
+					<td align="center" bgcolor="#AABE3A" width="76%">
+						内<span style="font-family: 'Times New Roman'; font-size: medium;">&nbsp;&nbsp;</span>容<span style="font-family: 'Times New Roman'; font-size: medium;">&nbsp;&nbsp;</span>与<span style="font-family: 'Times New Roman'; font-size: medium;">&nbsp;&nbsp;</span>概&nbsp;<span style="font-family: 'Times New Roman'; font-size: medium;">&nbsp;&nbsp;</span>要</td>
+					<td align="center" bgcolor="#AABE3A" width="14%">
+						辅导资料</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="center">
+						1</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="left">
+						罗马书简介 1:1&mdash;1:17</td>
+					<td align="center">
+						<a href="http://www.lwechurch.org/files/BibleBooks/Romans/L1.pdf" style="color: #006633;"><img alt="下载" border="0" height="16" src="http://www.lwechurch.org/images/pdficon.jpg" width="16" /></a></td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="center">
+						2</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="left">
+						因信称义的需要 1:18&mdash;3:20</td>
+					<td align="center">
+						<a href="http://www.lwechurch.org/files/BibleBooks/Romans/L2.pdf" style="color: #006633;"><img alt="下载" border="0" height="16" src="http://www.lwechurch.org/images/pdficon.jpg" width="16" /></a></td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="center">
+						3</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="left">
+						因信称义的实现 3:21&mdash;5:21</td>
+					<td align="center">
+						<a href="http://www.lwechurch.org/files/BibleBooks/Romans/L3.pdf" style="color: #006633;"><img alt="下载" border="0" height="16" src="http://www.lwechurch.org/images/pdficon.jpg" width="16" /></a></td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="center">
+						4</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="left">
+						从罪里得了释放 6:1&mdash;6:23</td>
+					<td align="center">
+						<a href="http://www.lwechurch.org/files/BibleBooks/Romans/L4.pdf" style="color: #006633;"><img alt="下载" border="0" height="16" src="http://www.lwechurch.org/images/pdficon.jpg" width="16" /></a></td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="center">
+						5</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="left">
+						遵行圣洁的律法 7:1&mdash;7:25</td>
+					<td align="center">
+						<a href="http://www.lwechurch.org/files/BibleBooks/Romans/L5.pdf" style="color: #006633;"><img alt="下载" border="0" height="16" src="http://www.lwechurch.org/images/pdficon.jpg" width="16" /></a></td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="center">
+						6</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="left">
+						随从圣灵，享受圣爱，与主同苦，与主同荣 8:1&mdash;8:39</td>
+					<td align="center">
+						<a href="http://www.lwechurch.org/files/BibleBooks/Romans/L6.pdf" style="color: #006633;"><img alt="下载" border="0" height="16" src="http://www.lwechurch.org/images/pdficon.jpg" width="16" /></a></td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="center">
+						7</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="left">
+						神的主权&mdash;&mdash;拣选 9:1&mdash;9:29</td>
+					<td align="center">
+						<a href="http://www.lwechurch.org/files/BibleBooks/Romans/L7.pdf" style="color: #006633;"><img alt="下载" border="0" height="16" src="http://www.lwechurch.org/images/pdficon.jpg" width="16" /></a></td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="center">
+						8</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="left">
+						人的责任&mdash;&mdash;相信 9:30&mdash;11:36</td>
+					<td align="center">
+						<a href="http://www.lwechurch.org/files/BibleBooks/Romans/L8.pdf" style="color: #006633;"><img alt="下载" border="0" height="16" src="http://www.lwechurch.org/images/pdficon.jpg" width="16" /></a></td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="center">
+						9</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="left">
+						圣徒与神，圣徒与教会，圣徒与人 12:1&mdash;12:21</td>
+					<td align="center">
+						<a href="http://www.lwechurch.org/files/BibleBooks/Romans/L9.pdf" style="color: #006633;"><img alt="下载" border="0" height="16" src="http://www.lwechurch.org/images/pdficon.jpg" width="16" /></a></td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="center">
+						10</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="left">
+						顺服权柄，爱人如己，儆醒等候，披戴基督 13:1&mdash;13:14</td>
+					<td align="center">
+						<a href="http://www.lwechurch.org/files/BibleBooks/Romans/L10.pdf" style="color: #006633;"><img alt="下载" border="0" height="16" src="http://www.lwechurch.org/images/pdficon.jpg" width="16" /></a></td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="center">
+						11</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="left">
+						圣徒相处的原则 14:1&mdash;15:13</td>
+					<td align="center">
+						<a href="http://www.lwechurch.org/files/BibleBooks/Romans/L11.pdf" style="color: #006633;"><img alt="下载" border="0" height="16" src="http://www.lwechurch.org/images/pdficon.jpg" width="16" /></a></td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="center">
+						12</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="center">
+						&nbsp;</td>
+					<td align="left">
+						总结 15:14&mdash;16:27</td>
+					<td align="center">
+						<a href="http://www.lwechurch.org/files/BibleBooks/Romans/L12.pdf" style="color: #006633;"><img alt="下载" border="0" height="16" src="http://www.lwechurch.org/images/pdficon.jpg" width="16" /></a></td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

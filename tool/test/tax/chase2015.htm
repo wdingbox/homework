@@ -1,0 +1,347 @@
+<html>
+	<head>
+		<title></title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script language="javascript">
+	$(document).ready(function(){
+        var totalMedCost=0;
+
+        var stabl="<table border='1'>";
+        $(".med").each(function(i){
+            var ttt=$(this).text();
+            
+            var val=$(this).find("span").text();
+            var fval=parseFloat(val.replace(",",""));
+            totalMedCost+=fval;
+            console.log(fval,totalMedCost);
+            
+            
+            stabl+="<tr><td>"+i+"</td><td>"+ttt+"</td><td>"+val+"</td></tr>";
+        });
+        stabl+="<tr><td></td><td></td><td>" + totalMedCost +"</td></tr>";
+        stabl+="</table>";
+        
+        
+        //alert("totalMedCost="+totalMedCost);
+        $("#totalMedCost").append(stabl);//("totalMedCost="+totalMedCost);
+	});
+	</script>
+	</head>
+	<body>
+		<div id="totalMedCost">
+			&nbsp;</div>
+		<h1>
+			chase 2015</h1>
+		<p>
+			01/03 SPRINT *WIRELESS 800-639-6111 KS 179.21<br />
+			01/03 AmazonPrime Membership amzn.com/prme NV 99.00<br />
+			01/04 CHEVRON 00358459 DULUTH GA 29.87<br />
+			01/04 NIHAO ATLANTA, LLC CHAMBLEE GA 29.95<br />
+			01/04 HONGREN HERB INC DORAVILLE GA 25.66<br />
+			01/04 KROGER #505 MADISON AL 58.72<br />
+			01/07 MADISON TAG 2562754042 RENEWYOURTAG. AL 140.85<br />
+			01/07 TAXHANDLINGFEE2562754042 IMSENTERPRISE AL 4.23<br />
+			01/10 KNOLOGY INC 877-KNOLOGY GA 48.95<br />
+			01/11 KROGER #505 MADISON AL 34.04<br />
+			<a class="med">01/09 JOHN M LANE DMD MADISON AL<span style="background-color:#ff0000;"> 110.00</span></a><br />
+			01/13 NEXBILLPAY, LLC 205-9451126 AL 3.95<br />
+			01/13 MADISON UTILITIES 256-7720253 AL 15.23<br />
+			01/17 WM SUPERCENTER #2690 MADISON AL 166.41<br />
+			01/17 CHINA BUFFET MADISON AL 74.90<br />
+			01/19 TARGET.COM * 800-591-3869 MN 39.27<br />
+			01/21 MARATHON PETRO170464P &amp; D HUNTSVILLE AL 39.14<br />
+			<br />
+			02/10 KNOLOGY INC 877-KNOLOGY GA 48.95<br />
+			02/10 ALIPAY(WWW.ALIPAY.COM) HANGZHOU 100.00<br />
+			02/13 BARRONSPREP 631-434-3311 NY 99.00<br />
+			<a class="med">02/13 EYE CARE ASSOCIATES IN MADISON AL <span style="background-color:#ff0000;">245.60</span></a><br />
+			02/15 PUBLIX #598 MADISON AL 26.99<br />
+			02/16 MARATHON PETRO170464P &amp; D HUNTSVILLE AL 43.20<br />
+			02/22 KROGER #505 MADISON AL 39.36<br />
+			<br />
+			<br />
+			<br />
+			02/27 LANDERS MCLARTY NISSAN HUNTSVILLE AL 44.32<br />
+			02/26 NEXBILLPAY, LLC 205-9451126 AL 3.95<br />
+			02/26 MADISON UTILITIES 256-7720253 AL 18.87<br />
+			03/01 QT 778 07007784 SUWANEE GA 35.69<br />
+			03/04 SPRINT *WIRELESS 800-639-6111 KS 211.01<br />
+			03/08 KROGER #505 MADISON AL 32.44<br />
+			03/10 THE HOME DEPOT 803 HUNTSVILLE AL 23.41<br />
+			<a class="med">03/14 THE EMORY CLINIC https://docsi GA <span style="background-color:#ff0000;">263.44</span></a><br />
+			03/13 KNOLOGY INC 877-KNOLOGY GA 48.95<br />
+			<a class="med">03/14 ALLCARE CLINICAL ASSOC AS 828-274-3477 NC <span style="background-color:#ff0000;">289.22</span></a><br />
+			<br />
+			03/14 TECH DENTISTRY ATLANTA GA <span style="background-color:#ff0000;">28.00</span><br />
+			<a class="med">03/14 EMORY JOHNS CRK PAT 404-686-7041 GA <span style="background-color:#ff0000;">345.92</span></a><br />
+			<a class="med">03/14 HAYWOOD REGIONAL MED CTR 828-4528368 NC <span style="background-color:#ff0000;">3,199.25</span></a><br />
+			03/15 KROGER #505 MADISON AL 87.13<br />
+			03/18 KROGER #505 MADISON AL 14.15<br />
+			<a class="med">03/20 HAYWOOD MEDICAL IMAGING P 828-4528346 NC <span style="background-color:#ff0000;">10.12</span></a><br />
+			03/19 MARATHON PETRO170464P &amp; D HUNTSVILLE AL 43.19<br />
+			03/22 KROGER #505 MADISON AL 47.31<br />
+			<br />
+			<br />
+			03/28 PP*SPRINGOFWISDOM RICHARDSON TX 37.50<br />
+			03/27 PP*SPRINGOFWISDOM RICHARDSON TX 52.50<br />
+			03/27 MARATHON PETRO170464P &amp; D HUNTSVILLE AL 6.27<br />
+			03/29 CHEVRON 00045660 LINCOLN AL 18.67<br />
+			03/29 CHEVRON 00045660 LINCOLN AL 8.27<br />
+			03/30 LAZ PARKING 580421 SANDY SPRINGS GA 4.75<br />
+			04/02 VIRTUALVOCATIONS COM 800-3795092 GA 6.99<br />
+			<br />
+			<a class="med">04/02 MRI &amp; IMAGING OF JOHNS CR JOHNS CREEK GA <span style="background-color:#ff0000;">26.81</span></a><br />
+			04/06 WM SUPERCENTER #332 HUNTSVILLE AL 7.50<br />
+			04/07 WAL-MART #0332 HUNTSVILLE AL 33.38<br />
+			04/08 WM SUPERCENTER #332 HUNTSVILLE AL 80.85<br />
+			04/10 SPRINT *WIRELESS 800-639-6111 KS 211.01<br />
+			04/09 MARATHON PETRO170464P &amp; D HUNTSVILLE AL 27.55<br />
+			04/09 THE HOME DEPOT 803 HUNTSVILLE AL 8.56<br />
+			04/09 VIRTUALVOCATIONS COM 800-3795092 GA 6.99<br />
+			04/10 KNOLOGY INC 877-KNOLOGY GA 48.95<br />
+			04/11 LOWES #00710* SUWANEE GA 22.61<br />
+			04/11 USPS 12844803328512523 SUWANEE GA 10.01<br />
+			04/12 QT 778 07007784 SUWANEE GA 36.04<br />
+			04/13 THE HOME DEPOT 803 HUNTSVILLE AL 17.12<br />
+			04/13 THE HOME DEPOT 803 HUNTSVILLE AL 3.20<br />
+			04/16 VIRTUALVOCATIONS COM 800-3795092 GA 6.99<br />
+			04/16 THE HOME DEPOT 803 HUNTSVILLE AL 25.20<br />
+			04/19 MARATHON PETRO170464P &amp; D HUNTSVILLE AL 21.80<br />
+			04/20 THE HOME DEPOT 803 HUNTSVILLE AL 11.92<br />
+			04/21 THE HOME DEPOT 803 HUNTSVILLE AL 24.76<br />
+			04/21 NEXBILLPAY, LLC 205-9451126 AL 3.95<br />
+			04/21 MADISON UTILITIES 256-7720253 AL 15.96<br />
+			04/22 THE HOME DEPOT 803 HUNTSVILLE AL 92.87<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			04/23 FFP 982 DULUTH GA 47.79<br />
+			04/26 SUPER H MART - JOH JOHNS CREEK GA 23.34<br />
+			04/26 KROGER #434 SUWANEE GA 11.13<br />
+			05/02 THE PIG &amp; THE PEARL ATLANTA GA 83.72<br />
+			05/04 SPRINT *WIRELESS 800-639-6111 KS 211.12<br />
+			05/03 SHELL OIL 10010916004 DORAVILLE GA 49.54<br />
+			05/04 DELTA AIR 0062309644918 DELTA.COM CA 579.20<br />
+			051215 1 U ATL SEA<br />
+			2 T SEA ATL<br />
+			<a class="med">05/06 EMORY UNIV HOSP MID 404-686-7041 GA <span style="background-color:#ff0000;">1,127.74</span></a><br />
+			<a class="med">05/06 ATLANTA GASTROENTEROLOGY 404-8887575 GA <span style="background-color:#ff0000;">80.29</span></a><br />
+			05/10 KROGER #505 MADISON AL 42.15<br />
+			<br />
+			Date of<br />
+			Transaction Merchant Name or Transaction Description $ Amount<br />
+			05/11 KNOLOGY INC 877-KNOLOGY GA 48.95<br />
+			<a class="med">05/12 HEALTH CARE FIN SVCS 800-2391220 TN<span style="background-color:#ff0000;"> 50.33</span></a><br />
+			05/11 DELTA AIR 0068267328956 ATLANTA GA 25.00<br />
+			051115 1 X ATL ATL<br />
+			05/12 SOUND TRANSIT - SO QPS SEATTLE WA 3.00<br />
+			05/11 SHELL OIL 57526820808 HUNTSVILLE AL 28.68<br />
+			05/12 TARGET 00027862 SEATTLE WA 238.34<br />
+			05/13 TARGET 00027862 SEATTLE WA 30.76<br />
+			05/13 GYROS PLACE SEATTLE WA 10.63<br />
+			05/14 GAP #1715/THE SEATTLE WA 105.12<br />
+			05/18 SOUND TRANSIT - SO QPS SEATTLE WA 2.75<br />
+			05/18 RUNWAY GRILL S SATELITQPS SEATTLE WA 9.52<br />
+			05/19 MARTA Atlanta 00000018 ATLANTA GA 3.50<br />
+			05/20 KROGER #505 MADISON AL 4.35<br />
+			05/21 GE APPLIANCE PARTS #115 800-477-6186 KY 142.84<br />
+			05/24 KROGER #505 MADISON AL 44.10<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<a class="med">05/23 GASTROENTEROLOGY ANESTHES 770-682-7220 GA <span style="background-color:#ff0000;">64.40</span></a><br />
+			05/30 KROGER #434 SUWANEE GA 4.51<br />
+			05/30 KROGER #434 SUWANEE GA 18.05<br />
+			05/28 THE HOME DEPOT 803 HUNTSVILLE AL 22.87<br />
+			05/29 MARATHON PETRO170464P &amp; D HUNTSVILLE AL 49.79<br />
+			05/31 QT 778 07007784 SUWANEE GA 26.25<br />
+			06/03 NEXBILLPAY, LLC 205-9451126 AL 3.95<br />
+			06/03 MADISON UTILITIES 256-7720253 AL 18.36<br />
+			<a class="med">06/05 AGA PROFESSIONAL SERVICES 678-2237860 GA <span style="background-color:#ff0000;">72.12</span></a><a><br />
+			<br />
+			<br />
+			Date of<br />
+			Transaction Merchant Name or Transaction Description $ Amount<br />
+			06/07 KROGER #505 MADISON AL 65.59<br />
+			06/07 THE HOME DEPOT 803 HUNTSVILLE AL 109.89<br />
+			06/07 THE HOME DEPOT 803 HUNTSVILLE AL 26.09<br />
+			06/09 TRUGREEN LP *5955 256-858-9507 AL 251.68<br />
+			06/10 SPRINT *WIRELESS 800-639-6111 KS 214.45<br />
+			06/10 KNOLOGY INC 877-KNOLOGY GA 48.95<br />
+			06/13 MARATHON PETRO170464P &amp; D HUNTSVILLE AL 53.49<br />
+			06/14 WM SUPERCENTER #2690 MADISON AL 45.00<br />
+			06/20 GREAT WALL SUPERMARKET DULUTH GA 47.93<br />
+			06/20 THE HOME DEPOT 131 DULUTH GA 4.25<br />
+			06/20 HUMBLE HOUSE DULUTH GA 21.04<br />
+			06/21 QT 778 07007784 SUWANEE GA 24.59<br />
+			<a class="med">06/24 LCA*LABCORP PHONE 800-845-6167 NC <span style="background-color:#ff0000;">5.44</span></a><br />
+			<br />
+			<br />
+			<br />
+			<br />
+			06/25 NEXBILLPAY, LLC 205-9451126 AL 3.95<br />
+			06/25 MADISON UTILITIES 256-7720253 AL 15.23<br />
+			06/28 MARATHON PETRO170464P &amp; D HUNTSVILLE AL 14.18<br />
+			06/27 PUBLIX #598 MADISON AL 96.44<br />
+			06/27 CHINA BUFFET MADISON AL 25.96<br />
+			07/04 PP*SPRINGOFWISDOM RICHARDSON TX 45.50<br />
+			07/03 TEXACO 00307549 TALLADEGA AL 47.20<br />
+			07/05 PUBLIX #598 MADISON AL 49.65<br />
+			07/11 SPRINT *WIRELESS 800-639-6111 KS 220.83<br />
+			07/11 KNOLOGY INC 877-KNOLOGY GA 33.95<br />
+			07/11 KROGER #434 SUWANEE GA 202.13<br />
+			<br />
+			Transaction Merchant Name or Transaction Description $ Amount<br />
+			07/11 GREAT WALL SUPERMARKET DULUTH GA 103.56<br />
+			07/12 LITTLE CAESARS 1526 0001 TUCKER GA 13.91<br />
+			07/12 QT 778 07007784 SUWANEE GA 38.08<br />
+			07/18 KROGER #505 MADISON AL 62.34<br />
+			07/18 WM SUPERCENTER #2690 MADISON AL 42.90<br />
+			07/18 ANIMAL TRAX MADISON AL 11.42<br />
+			<a class="med">07/21 GRADY HEALTH SYSTEMS 404-6161795 GA <span style="background-color:#ff0000;">1,799.75</span></a><br />
+			<br />
+			<br />
+			<br />
+			<br />
+			07/24 KROGER #505 MADISON AL 36.70<br />
+			08/01 PETSMART INC 1356 SUWANEE GA 7.41<br />
+			07/31 SHELL OIL 57526820808 HUNTSVILLE AL 42.88<br />
+			08/01 SPROUTS FARMERS MAR SUWANEE GA 32.21<br />
+			08/02 GREAT WALL SUPERMARKET DULUTH GA 227.11<br />
+			08/10 KNOLOGY INC 877-KNOLOGY GA 33.95<br />
+			08/12 KROGER #505 MADISON AL 52.94<br />
+			08/13 MARATHON PETRO170464P &amp; D HUNTSVILLE AL 45.78<br />
+			08/15 NEXBILLPAY, LLC 205-9451126 AL 3.95<br />
+			<br />
+			Transaction Merchant Name or Transaction Description $ Amount<br />
+			08/15 MADISON UTILITIES 256-7720253 AL 35.85<br />
+			08/14 CHINA HOUSE HUNTSVILLE AL 70.00<br />
+			08/16 SPRINT *WIRELESS 800-639-6111 KS 178.07<br />
+			08/16 KROGER #505 MADISON AL 39.16<br />
+			08/23 SUPER H MART - JOH JOHNS CREEK GA 119.41<br />
+			08/23 WAL-MART #4185 CUMMING GA 114.73<br />
+			08/23 KROGER FUEL #1434 SUWANEE GA 34.71<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			08/27 KROGER #505 MADISON AL 30.73<br />
+			08/30 KROGER #505 MADISON AL 16.15<br />
+			09/04 MARATHON PETRO170464P &amp; D HUNTSVILLE AL 34.93<br />
+			09/06 QT 778 07007784 SUWANEE GA 27.91<br />
+			09/07 HYMANS SEAFOOD REST CHARLESTON SC 45.19<br />
+			09/06 EXXONMOBIL 42274191 COLUMBIA SC .05<br />
+			09/06 SUNOCO 0101035402 MT PLEASANT SC 29.69<br />
+			09/06 SUVIDHA INDO-PAK GROCE SUWANEE GA 4.91<br />
+			09/07 PATRIOTS POINT TCKT MOUNT PLEASAN SC 110.00<br />
+			09/06 ACME LOWCOUNTRY KITCHE ISLE OF PALMS SC 49.97<br />
+			09/08 KROGER #434 SUWANEE GA 81.34<br />
+			09/07 PALMETTO PARKING CHARLESTON SC 6.00<br />
+			<br />
+			Transaction Merchant Name or Transaction Description $ Amount<br />
+			09/08 LOWES #00710* SUWANEE GA 4.26<br />
+			09/07 SEASIDE INN ISLE OF PALMS SC 174.50<br />
+			09/08 QT 778 07007784 SUWANEE GA 11.73<br />
+			09/08 SUVIDHA INDO-PAK GROCE SUWANEE GA 11.54<br />
+			09/10 KNOLOGY INC 877-KNOLOGY GA 33.95<br />
+			09/13 KROGER #505 MADISON AL 28.73<br />
+			09/17 GRAMMARLY.COM 888-318-6146 CA 139.95<br />
+			09/19 PUBLIX #598 MADISON AL 24.95<br />
+			09/18 PAYPAL *SACREDTEXTS 402-935-7733 CA 9.95<br />
+			09/19 KROGER #505 MADISON AL 15.61<br />
+			09/19 KROGER FUEL #9505 MADISON AL 29.39<br />
+			09/21 SPRINT *WIRELESS 800-639-6111 KS 213.99<br />
+			09/21 SPRINT *WIRELESS 800-639-6111 KS 179.46<br />
+			09/24 AMAZON MKTPLACE PMTS AMZN.COM/BILL WA 20.48<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			09/24 MARATHON PETRO170464P &amp; D HUNTSVILLE AL 42.93<br />
+			09/27 KROGER #505 MADISON AL 61.77<br />
+			10/04 GREAT WALL SUPERMARKET DULUTH GA 91.99<br />
+			10/04 QT 778 07007784 SUWANEE GA 23.60<br />
+			10/11 KROGER #505 MADISON AL 15.29<br />
+			10/11 KNOLOGY INC 877-KNOLOGY GA 36.95<br />
+			10/15 MARATHON PETRO170464P &amp; D HUNTSVILLE AL 33.07<br />
+			10/17 LIU FU JOHNS CREEK GA 46.66<br />
+			10/17 CHICK-FIL-A #00593 SUWANEE GA 7.42<br />
+			10/17 SPROUTS FARMERS MAR SUWANEE GA 89.95<br />
+			10/18 GREAT WALL SUPERMARKET DULUTH GA 146.19<br />
+			<br />
+			Date of<br />
+			Transaction Merchant Name or Transaction Description $ Amount<br />
+			10/18 YUMMY GARDEN DULUTH GA 10.87<br />
+			10/18 QT 778 07007784 SUWANEE GA 15.82<br />
+			09/17 REBILL GRAMMARLY.COM 888-318-6146 CA 139.95<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			10/25 KROGER #505 MADISON AL 10.87<br />
+			10/26 NEXBILLPAY, LLC 205-9451126 AL 3.95<br />
+			10/26 MADISON UTILITIES 256-7720253 AL 35.10<br />
+			10/27 ALI*www.taobao.com HANGZHOU 245.21<br />
+			10/29 YUAN RENMINBI<br />
+			1,558.39 X 0.157348288 (EXCHG RATE)<br />
+			11/01 KROGER #505 MADISON AL 46.56<br />
+			11/04 PAYPAL *CN-USA.COM 402-935-7733 MA 6.60<br />
+			11/06 MARATHON PETRO170464P &amp; D HUNTSVILLE AL 42.51<br />
+			11/07 First Watch Restaurants 1 JOHNS CREEK GA 28.70<br />
+			11/07 LOWES #00710* SUWANEE GA 4.21<br />
+			<br />
+			11/07 SPROUTS FARMERS MAR SUWANEE GA 60.47<br />
+			11/08 WAL-MART #4185 CUMMING GA 105.80<br />
+			11/08 GREAT WALL SUPERMARKET DULUTH GA 171.87<br />
+			11/10 KNOLOGY INC 877-KNOLOGY GA 36.95<br />
+			11/11 QT 778 07007784 SUWANEE GA 23.07<br />
+			11/15 KROGER #505 MADISON AL 4.99<br />
+			11/16 SPRINT *WIRELESS 800-639-6111 KS 320.99<br />
+			11/16 SPRINT *WIRELESS 800-639-6111 KS 391.80<br />
+			11/18 NEXBILLPAY, LLC 205-9451126 AL 3.95<br />
+			11/18 MADISON UTILITIES 256-7720253 AL 22.19<br />
+			11/21 SBARRO 863 BUFORD GA 16.50<br />
+			11/22 BEST BUY MHT 00005041 DULUTH GA 144.14<br />
+			11/22 GREAT WALL SUPERMARKET DULUTH GA 26.45<br />
+			11/22 GREAT WALL SUPERMARKET DULUTH GA 17.49<br />
+			11/21 ASSI PLAZA SUGARLOAF, INC SUWANEE GA 92.37<br />
+			11/23 QT 778 07007784 SUWANEE GA 40.67<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			12/05 KROGER #434 SUWANEE GA 8.01<br />
+			12/04 QT 778 07007784 SUWANEE GA 39.90<br />
+			12/06 GREAT WALL SUPERMARKET DULUTH GA 146.06<br />
+			12/11 KNOLOGY INC 877-KNOLOGY GA 36.95<br />
+			12/15 LAKE JUNALUSKA-LODGING LAKE JUNALUSK NC 99.00<br />
+			12/15 CHEVRON 00043021 ATLANTA GA 50.28<br />
+			12/16 HAYWOOD SMOKEHOUSE WAYNESVILLE NC 58.12<br />
+			12/17 KMART 7626 WAYNESVILLE NC 13.13<br />
+			12/20 KROGER #434 SUWANEE GA 123.13<br />
+			12/19 SHELL OIL 57543667109 FRANKLIN NC 31.25<br />
+			12/21 WALGREENS #7395 JOHNS CREEK GA 50.36<br />
+			<br />
+			12/19 LAKE JUNALUSKA-LODGING LAKE JUNALUSK NC 230.67<br />
+			12/21 KROGER #434 SUWANEE GA 37.59<br />
+			12/21 APPLE STORE #R080 ALPHARETTA GA 41.73<br />
+			12/21 MADISON UTILITIES 256-7720253 AL 15.18<br />
+			12/22 NEXBILLPAY, LLC 205-9451126 AL 3.95<br />
+			<a class="med">12/23 WALGREENS #7395 JOHNS CREEK GA <span  style="background-color:#ff0000;">35.28</span></a><br />
+			12/23 KROGER #434 SUWANEE GA 12.10<br />
+			<a class="med">12/23 CVS/PHARMACY #02279 SUWANEE GA <span style="background-color:#ff0000;">4.06</span></a><br />
+			12/24 COLUMBIA INTERNATIONAL UN 803-7544100 SC 45.00</a></p>
+		<p>
+			<a> </a></p>
+		<p>
+			<a> </a><a> </a></p>
+	</body>
+</html>

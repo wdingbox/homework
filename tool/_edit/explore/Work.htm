@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>FullPage5</title>
+		<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+		<script type="text/javascript" src="../ckeditor.js">
+
+
+
+    </script><scripttype="text/javascript" src="sample.js" ></script><script type="text/javascript" src="../adapters/jquery.js">
+
+
+
+    </script><script type="text/javascript">
+
+	$(document).ready(function(){
+
+		var url=" " + document.URL;
+
+		var ary = url.split("=");			
+
+		if (ary.length == 2){
+
+			document.m_fname = ary[1];
+
+		}//////if (ary.length == 2){	
+
+		else{
+
+			//alert("no file to work. pleaase attach it in url, like ?fname=xyz.htm");
+
+         document.m_fname = "Work.htm";//;
+
+
+		}
+
+      $("#fname").val(document.m_fname);
+      $("#newfname").val(document.m_fname);
+
+      //var sbase
+
+      //sbase = $("#htm").attr("href");
+
+      //$("#htm").attr("href","./Work_htm.htm?fname="+document.m_fname);
+
+      //$("#txt").attr("href","./Work_txt.htm?fname="+document.m_fname);
+
+      //$("#au2").attr("href","./au2refresh.htm?fname="+document.m_fname);
+
+
+
+		$("#htm").click(function(){
+
+         var url = "./Work_htm.htm?fname="+$("#fname").val();
+
+         //alert(url);
+
+         window.location.href = url;
+
+      });
+
+      $("#txt").click(function(){
+
+         var url = "./Work_txt.htm?fname="+$("#fname").val();
+
+         //alert(url);
+
+         window.location.href = url;
+
+      });
+
+      $("#au2").click(function(){
+
+         var url = "./au2refresh.htm?fname="+$("#fname").val();
+
+         //alert(url);
+
+         window.location.href = url;
+
+      });
+      
+      $("#move_filename").click(function(){
+
+          var url = "./WorkMoveFile.php?fname="+$("#fname").val();
+          url+="&newfname="+$("#newfname").val();
+
+          //alert(url);
+
+          window.location.href = url;
+
+       });
+      $("#movetovarTmp").click(function(){
+ 			var fname = $("#fname").val();   
+ 			var arr = fname.split("/");
+ 			if( arr.length>0){
+ 				fname = arr[arr.length-1];
+ 			}
+ 			var path = "/var/tmp/";
+ 			$("#newfname").val( path + fname);
+ 
+    	  });
+      
+
+    });///////////////////////////////$(document).ready(function(){
+
+    </script>
+		<link href="sample.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<p>
+			Open File With:<button hrefx="./Work_txt.htm" id="txt" style="width: 103px; height: 26px;">ASCII Text</button><button hrefx="./Work_htm.htm" id="htm" style="width: 104px; height: 26px;">HTML IDE</button><br />
+			<input id="fname" size="191" style="width: 1048px; height: 20px;" type="text" /><br />
+			
+			<button hrefx="./Work_txt.htm" id="move_filename" style="width: 103px; height: 26px;">Rename To:</button><br />
+			<input id="newfname" size="191" style="width: 1048px; height: 20px;" type="text" /><br />
+			<a id='movetovarTmp'>/var/tmp/</a><br/>
+			<br />
+			<br />
+			&nbsp;</p>
+		<br />
+	</body>
+</html>

@@ -1,0 +1,6 @@
+#
+/var/www/lamp/wroot/pubdata/
+/var/www/lamp/wroot/publish/
+/var/www/lamp/wroot/odb/tbi/img/jgif
+/var/www/lamp/wroot/_js
+

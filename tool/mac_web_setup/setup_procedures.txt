@@ -1,0 +1,33 @@
+
+/etc/apache2/users/weiding.conf
+
+
+/http://172.6.220.87/
+It works! /Library/WebServer/Documents/index.html.en -wei
+
+
+http://172.6.220.87/~weiding/weidroot/weidroot_2017-01-06/___bigdata/unzipped/rel/ham12/hgsbible/hgb/
+
+Forbidden
+You don't have permission to access /~weiding/weidroot/weidroot_2017-01-06/___bigdata/unzipped/rel/ham12/hgsbible/hgb/ on this server.
+
+
+
+/private/etc/apache2
+Weis-MBP:apache2 weiding$ ls -l
+total 192
+drwxr-xr-x  14 root  wheel    476 Dec 26 04:02 extra
+-rw-r--r--   1 root  wheel  20470 Jan  2 11:36 httpd.conf
+-rw-r--r--   1 root  wheel  20473 Feb 20  2016 httpd.conf.pre-update
+-rw-r--r--   1 root  wheel  20470 Jan  2 11:13 httpd.conf_change_user
+-rw-r--r--   1 root  wheel  20473 Jan 11  2017 httpd.conf_orig
+-rw-r--r--   1 root  wheel  13077 Feb 20  2016 magic
+-rw-r--r--   1 root  wheel  61126 Oct 29 22:28 mime.types
+drwxr-xr-x   4 root  wheel    136 Dec 26 04:02 original
+drwxr-xr-x   3 root  wheel    102 Feb 20  2016 other
+drwxr-xr-x   4 root  wheel    136 Jan 11  2017 users
+
+
+
+ln -s ~/Sites/weidroot weidroot
+sudo chown -R _www:_www weidroot

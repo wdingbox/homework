@@ -1,0 +1,103 @@
+
+
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Login</title>
+		<script language="javascript" src="../ham12/jq/jquery.js">
+    </script>
+<style>	
+body {
+    background-color:white  ;
+    color: black;
+    width:100%;
+	font-size: 200%;
+}
+table{
+	width:100%;
+	font-size: 200%;
+	}
+#SalePriceTb  tr td:first-child { width: 25em; }	
+#previewTable tr td:first-child { width: 25em; }
+
+
+input, button, textarea{
+    font-size:60px;
+    height:92px;
+	
+}
+input{
+	background-color:yellow;
+}
+#TotDays{
+width:3em;
+}
+textarea{
+width:99%;
+height:200px;
+}
+</style>
+<script language="javascript">
+
+$(document).ready(function(){
+
+});
+function PreviewAd(){
+	  var surl=$("#TxtAd").val();
+	  var unitPrice=$("#UnitPrice").text().trim();
+	  unitPrice=unitPrice.substr(1);
+	  unitPrice=parseFloat(unitPrice);	  
+	  
+	  var TotpricePerDay=surl.length*unitPrice;
+	  TotpricePerDay=TotpricePerDay.toFixed(2);
+	  $("#TotChars").text(surl.length);
+	  $("#TotPricePerDay").text(TotpricePerDay);
+	  
+	  var TotPay=($("#TotDays").val() * TotpricePerDay).toFixed(2);
+	  $("#TotPay").text(TotPay);	
+}
+function PaypalSet(){
+	  var TotPay=$("#TotPay").text();
+	  console.log("amount:"+TotPay);
+	  if(TotPay.length<=0){
+		  alert("please preview your ad first.");
+		  return false;
+	  }
+	  $("#amount").val( $("#TotPay").text() );
+	  
+	  $("#item_name").val("Total price of ad for "+$("#TotDays").val() +" days:" );
+	  $("#quantity").val( 1 );
+	  $("#item_number").val( $("#FolderId").text() );
+	  return true;	
+}
+</script>
+
+
+	</head>
+<body>	
+	<table id='previewTable' border='1'><caption></caption>
+	<tr><td>Unit price</td><td id='UnitPrice'><a href='../'>$0.01</a> </td></tr>
+	<tr><td>Total chars</td><td id='TotChars'></td></tr>
+	<tr><td>The p</td><td id='TotPricePerDay'></td></tr>
+	<tr><td>TotDays</td><td><input type='text' name='TotDays' id='TotDays' value='10'></input></td></tr>
+	<tr><td>Total </td><td id='TotPay' ></td></tr>	
+	</table>
+
+
+	<table id='SalePriceTb' border='1'><caption></caption>
+	<tr><td id='FolderId'>1 df sadf asdf sadf sdaf </td><td id='previewAd'><a href='../'>s Israel 3D Map for sale</a></td></tr>	
+	<tr><td id='FolderId'>1 df sadf asdf sadf sdaf </td><td id='previewAd'><a href='../'>s Israel 3D Map for sasssssle</a></td></tr>	
+		<tr><td>TotDays</td><td><input type='text' name='TotDays' id='TotDays' value='10'></input></td></tr>
+	</table>	
+
+
+	
+	</form>
+
+
+
+	
+	
+	</body>
+</html>
+

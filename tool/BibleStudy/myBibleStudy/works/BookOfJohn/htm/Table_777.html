@@ -1,0 +1,343 @@
+<html>
+	<head>
+		<title></title>
+		<base target="_blank" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!-------><script src="../../../../../tablesorter_master/js/jquery.tablesorter.js"></script><script src="../../../../../Hebrew2/nodjs/noduti/js/table_Indexer.js"></script><script src="../../../myjs/goto_editor.js"></script>
+		<style type="text/css">
+@media print {
+    tr {
+        background-color: #ffffff !important;
+        -webkit-print-color-adjust: exact; 
+    }
+}
+@media print {
+     td th {
+        
+    }
+}		</style>
+		<style type="text/css">
+body {font-family: 'Times New Roman';
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+    }	
+#_MenuPanel{
+position: fixed;
+left: 10px;
+top: 0px;
+}
+
+.fixedcol{
+	position: absolute;
+	background-color: #999999;
+}
+.fixedcol2, thead{
+	background-color: #999999;
+}
+.fixedcol2{
+	background-color: #eeeeee;
+}
+.synoptic{
+	background-color: #dddddd;
+}
+.strongs{
+	background-color: #ffffff;
+}
+.Top_Horz{
+	color: blue;
+	font-size:7px;
+}
+.All_Top_Horz{
+	background-color: red;
+}
+.leftbox{
+  background-color: #ff0000;
+}
+.Jerusalem {
+	border: 4px solid blue;
+}
+.iam{
+	color:red;
+	font-weight: bold;
+}
+.predict{
+	color:#ff00ff;
+	font-weight: bold;
+}
+.feast{
+	border: 1px solid gray;
+	background-color: #fff0f0;
+}
+.verse{
+	border: 1px solid gray;
+}
+sup{
+	float: right;
+	right: 1px; 
+	border: 1px solid black;
+}
+.hebrew
+{
+    FONT-SIZE: 23px;
+    COLOR: #001320;
+    LINE-HEIGHT: 33px;
+    font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+    TEXT-DECORATION: none;
+}		</style>
+		<script>
+$(function(){
+    $(".narration").toggle();
+    $(".TheTitle").click(function(){
+        $(".narration").toggle();
+    } );
+    $("#strongsCodes").click(function(){
+    	$(".strongs, .translit").slideToggle();
+    });
+
+    $("body").click(function(){
+    	$("#_edit").slideToggle();
+    });
+
+    $("#relativeFrqRate").click(function(){
+    	cal_relativeFrqRate();
+    });
+
+
+    $(".fixedcol2").click(function(){
+    	alert();
+    });
+
+    $("#struct tbody tr").each(function(){
+    	$(this).find("td:eq(1)").addClass("Top_Horz");
+    })
+
+    $("td").each(function(){
+    	var tit=$(this).attr("title");
+    	if(tit && tit.length>0){
+    		$(this).prepend("<a class='verse'>"+tit+"</a> ");
+    	}
+    });
+
+
+
+});/////////
+
+$(document).ready(function(){ 
+	goto_editor("_edit_url");
+	sort_table();
+});//
+function sort_table(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+
+
+</script>
+	</head>
+	<body>
+		<p id="_MenuPanel">
+			<br />
+			<a id="_edit_url">...</a><br />
+			<a id="indxer">indxer</a></p>
+		<table border="1" cellpadding="1" cellspacing="1" style="width: 500px">
+			<caption>
+				Sevens in Revelation</caption>
+			<thead>
+				<tr>
+					<td>
+						#</td>
+					<td>
+						Verse</td>
+					<td>
+						Object</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						1:4</td>
+					<td>
+						church</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						1:4</td>
+					<td>
+						spirit</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						1:12</td>
+					<td>
+						golden lampstand</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						1:16</td>
+					<td>
+						star</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						4:15</td>
+					<td>
+						lamp</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						4:15</td>
+					<td>
+						Spirit of God</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						5:1</td>
+					<td>
+						seal</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						5:6</td>
+					<td>
+						horn</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						5:6</td>
+					<td>
+						eye</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						8:2</td>
+					<td>
+						angel</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						8:2</td>
+					<td>
+						trumpet</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						10:3</td>
+					<td>
+						thunder</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						11:13</td>
+					<td>
+						thousand of people</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						12:13</td>
+					<td>
+						head</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						12:13</td>
+					<td>
+						crown</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						15:1</td>
+					<td>
+						plague (disaster)</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						15:7</td>
+					<td>
+						bowl</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						17:9</td>
+					<td>
+						mountain</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						17:10</td>
+					<td>
+						king</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						21:9</td>
+					<td>
+						golden bowl</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						21:20</td>
+					<td>
+						jacinth (chrysolite)</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			<!------------------><!------------------></p>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

@@ -1,0 +1,461 @@
+<html>
+	<head>
+		<title onclick="alert();">ctxt</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!------->
+		<base target="_blank" />
+		<script src="../../../../../tablesorter_master/js/jquery.tablesorter.js"></script><script src="../../../../myjs/table_Indexer.js"></script><script src="../../../myjs/goto_editor.js"></script>
+		<style type="text/css">
+body {font-family: 'Times New Roman';
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+    }		
+#_MenuPanel{
+position: fixed;
+left: 10px;
+top: 0px;
+}
+
+.fixedcol{
+	position: absolute;
+	background-color: #999999;
+}
+.fixedcol2, thead{
+	background-color: #999999;
+}
+.fixedcol2{
+	background-color: #eeeeee;
+}
+.catlog, .hili{
+	background-color: #cccccc;
+}
+.logos{
+	background-color: #ff0000;
+}
+.logosv{
+	background-color: #eeaa66;
+}
+.logosw{
+	background-color: #aaaaee;
+}
+.logoswv{
+	background-color: #77aaaa;
+}
+.logosvc{
+	background-color: #aa77aa;
+}
+.fulfill, .fulfillcuv{
+	background-color: #aa77aa;
+}
+.dao{
+	color: #0000ff;
+}
+.fulfillot{
+	background-color: grey;
+}
+.leftbox{
+  background-color: #ff0000;
+}
+.tablefloatheb {float: right; margin: 2px;border-collapse: false;background-color: #eeeeee }
+.hebrew
+{
+    FONT-SIZE: 23px;
+    COLOR: #001320;
+    LINE-HEIGHT: 33px;
+    font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+    TEXT-DECORATION: none;
+}		</style>
+	</head>
+	<script>
+$(function(){
+    $(".narration").toggle();
+    $(".TheTitle").click(function(){
+        $(".narration").toggle();
+    } );
+    $("#strongsCodes").click(function(){
+    	$(".strongs, .translit").slideToggle();
+    });
+
+    $("body").click(function(){
+    	$("#_edit").slideToggle();
+    });
+
+    $("#relativeFrqRate").click(function(){
+    	cal_relativeFrqRate();
+    });
+
+
+    $(".fixedcol2").click(function(){
+    	alert();
+    });
+
+    $("td, .tablet-8").click(function(){
+    	var out=$("#out").val();
+    	out+=$(this).text().trim()+";";
+    	$("#out").val(out);
+    	$(this).toggleClass("hili");
+    });
+
+});/////////
+
+$(document).ready(function(){ 
+	goto_editor("_edit_url");
+	sort_table();
+});//
+function sort_table(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+
+
+</script>
+	<body>
+		<p id="_MenuPanel">
+			<br />
+			<a id="_edit_url">...</a><br />
+			<a id="indxer">indxer</a><br />
+			<textarea id="out"></textarea></p>
+		<!-------------------------->
+		<div>
+			&nbsp;</div>
+		<!-------------------------->
+		<div>
+			&nbsp;</div>
+		<!-------------------------->
+		<p style="text-align: center;">
+			<br />
+			&nbsp;</p>
+		<!-------------------------->
+		<table border="1">
+			<caption>
+				The Seven Fulfillment of Scripture</caption>
+			<thead>
+				<tr>
+					<td>
+						#</td>
+					<td>
+						Sayings</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						1</td>
+					<td>
+						12:38 这是要<a class="fulfillcuv">应验</a>先知以赛亚的话、说、『主阿、我们所传的、有谁信呢．主的膀臂向谁显露呢。』 NIV: This was to <a class="fulfill">fulfill</a> the word of Isaiah the prophet: &quot;Lord, who has believed our message and to whom has the arm of the Lord been revealed?&quot; KJV: That the saying of Esaias the prophet might be <a class="fulfill">fulfilled</a>, which he spake, Lord, who hath believed our report? and to whom hath the arm of the Lord been revealed?
+						<hr />
+						<p class="fulfillot">
+							Isaiah 53:1 我們所傳的(或譯:所傳與我們的)有誰信呢? 耶和華的膀臂向誰顯露呢? Who has believed our message and to whom has the arm of the Lord been revealed?</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						2</td>
+					<td>
+						13:18 我这话不是指着你们众人说的．我知道我所拣选的是谁．现在要<a class="fulfillcuv">应验</a>经上的话、说、『同我吃饭的人、用脚踢我。』 NIV: &quot;I am not referring to all of you; I know those I have chosen. But this is to <a class="fulfill">fulfill</a> the scripture: &#39;He who shares my bread has lifted up his heel against me.&#39; KJV: I speak not of you all: I know whom I have chosen: but that the scripture may be <a class="fulfill">fulfilled</a>, He that eateth bread with me hath lifted up his heel against me.
+						<hr />
+						<p  class="fulfillot">
+						Psalms 41:9 連我知己的朋友,我所倚靠,吃過我飯的也用腳踢我. Even my close friend, someone I trusted, one who shared my bread, has turned[a] against me.</p></td>
+				</tr>
+				<tr>
+					<td>
+						3</td>
+					<td>
+						15:25 这要<a class="fulfillcuv">应验</a>他们律法上所写的话、说、『他们无故恨我。』 NIV: But this is to <a class="fulfill">fulfill</a> what is written in their Law: &#39;They hated me without reason.&#39; KJV: But this cometh to pass, that the word might be <a class="fulfill">fulfilled</a> that is written in their law, They hated me without a cause.
+						<hr />
+						<p  class="fulfillot">
+							Psalms 69:4 無故恨我的,比我頭髮還多;無理與我為仇,要把我剪除的,甚為強盛.我沒有搶奪的,要叫我償還. Those who hate me without reason outnumber the hairs of my head; many are my enemies without cause, those who seek to destroy me. I am forced to restore what I did not steal.</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						4</td>
+					<td>
+						19:24 他们就彼此说、我们不要撕开、只要拈阄、看谁得着．这要<a class="fulfillcuv">应验</a>经上的话说、『他们分了我的外衣、为我的里衣拈阄。』兵丁果然作了这事。 NIV: &quot;Let&#39;s not tear it,&quot; they said to one another. &quot;Let&#39;s decide by lot who will get it.&quot; This happened that the scripture might be <a class="fulfill">fulfilled</a> which said, &quot;They divided my garments among them and cast lots for my clothing.&quot; So this is what the soldiers did. KJV: They said therefore among themselves, Let us not rend it, but cast lots for it, whose it shall be: that the scripture might be <a class="fulfill">fulfilled</a>, which saith, They parted my raiment among them, and for my vesture they did cast lots. These things therefore the soldiers did.
+						<hr />
+						<p  class="fulfillot">
+							Psalm 22:18 他們分我的外衣,為我的裡衣拈鬮. They divide my clothes among them and cast lots for my garment.</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						5</td>
+					<td>
+						19:28 这事以后、耶稣知道各样的事已经成了、为要使经上的话<a class="fulfillcuv">应验</a>、就说、我渴了。 NIV: Later, knowing that all was now completed, and so that the Scripture would be <a class="fulfill">fulfilled</a>, Jesus said, &quot;I am thirsty.&quot; KJV: After this, Jesus knowing that all things were now accomplished, that the scripture might be <a class="fulfill">fulfilled</a>, saith, I thirst.
+						<hr /><p  class="fulfillot">
+						Psalm 69:21 他們拿苦膽給我當食物;我渴了,他們拿醋給我喝. They put gall in my food and gave me vinegar for my thirst.</p></td>
+				</tr>
+				<tr>
+					<td>
+						6</td>
+					<td>
+						19:36 这些事成了、为要<a class="fulfillcuv">应验</a>经上的话说、『他的骨头、一根也不可折断。』 NIV: These things happened so that the scripture would be <a class="fulfill">fulfilled</a>: &quot;Not one of his bones will be broken,&quot; KJV: For these things were done, that the scripture should be <a class="fulfill">fulfilled</a>, A bone of him shall not be broken.
+						<hr />
+						<p class="fulfillot">
+							Psalms 34:20 又保全他一身的骨頭,連一根也不折斷. he protects all his bones,
+    not one of them will be broken</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						7</td>
+					<td>
+						<br />
+						19:37 经上又有一句说、『他们要仰望自己所扎的人。』 NIV: and, as another scripture says, &quot;They will look on the one they have pierced.&quot; KJV: And again another scripture saith, They shall look on him whom they pierced.
+						<hr />
+						<p class="fulfillot">
+							Zechariah 12:10 我必將那施恩叫人懇求的靈,澆灌大衛家和耶路撒冷的居民.他們必仰望我(或譯:他;本節同)就是他們所扎的;必為我悲哀,如喪獨生子,又為我愁苦,如喪長子. And I will pour out on the house of David and the inhabitants of Jerusalem a spirit[a] of grace and supplication. They will look on[b] me, the one they have pierced, and they will mourn for him as one mourns for an only child, and grieve bitterly for him as one grieves for a firstborn son.</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div style="page-break-after: always;">
+			<span style="display: none;">&nbsp;</span></div>
+		The controversal verse:
+		<p>
+			17:12 我与他们同在的时候、因你所赐给我的名、保守了他们、我也护卫了他们、其中除了那灭亡之子、没有一个灭亡的．好叫经上的话得<a class="fulfillcuv">应验</a>。 NIV: While I was with them, I protected them and kept them safe by that name you gave me. None has been lost except the one doomed to destruction so that Scripture would be&nbsp;<a class="fulfill">fulfilled</a>. KJV: While I was with them in the world, I kept them in thy name: those that thou gavest me I have kept, and none of them is lost, but the son of perdition; that the scripture might be&nbsp;<a class="fulfill">fulfilled</a>.</p>
+		<hr />
+		<p>
+			Psalm 145:20 耶和華保護一切愛他的人,卻要滅絕一切的惡人.The Lord watches over all who love him, but all the wicked he will destroy.</p>
+		<p>
+			``As for the servants whom I have given thee, there shall not one of them perish; for I will require them from among thy number.&#39;&#39; (2 Esdras 2:26) -</p>
+		<p>
+			&nbsp;</p>
+	
+		Fulfillment of His own words:
+		<ol>
+			<li>
+				18:9 这要<a class="fulfillcuv">应验</a>耶稣从前的话、说、你所赐给我的人、我没有失落一个。 NIV: This happened so that the words he had spoken would be <a class="fulfill">fulfilled</a>: &quot;I have not lost one of those you gave me.&quot; KJV: That the saying might be <a class="fulfill">fulfilled</a>, which he spake, Of them which thou gavest me have I lost none.</li>
+			<li>
+				18:32 这要<a class="fulfillcuv">应验</a>耶稣所说、自己将要怎样死的话了。 NIV: &quot;But we have no right to execute anyone,&quot; the Jews objected. This happened so that the words Jesus had spoken indicating the kind of death he was going to die would be <a class="fulfill">fulfilled</a>. KJV: That the saying of Jesus might be <a class="fulfill">fulfilled</a>, which he spake, signifying what death he should die.</li>
+		</ol>
+		<hr />
+		<div class="bibleTable __hidden" id="bibleTable">
+			<div class="bVerse tools row align-middle" id="bVerse_1000029">
+				<div class="columns tablet-2 small-2 small-order-1 tablet-order-1 align-top bVerse__col-one">
+					<p>
+						<a data-bible-id="1000029" data-type="toolsHover">Tools</a></p>
+				</div>
+				<div class="columns tablet-2 show-for-tablet tablet-order-2 bVerse__col-two">
+					<p>
+						<img alt="Unchecked Copy Box" class="copyBox show-for-tablet" data-bible-id="1000029" src="/assets/images/copyChkboxOff.gif" /> <a href="/kjv/jhn/3/29/s_1000029">Jhn 3:29</a></p>
+				</div>
+				<div class="columns tablet-8 small-10 small-order-2 tablet-order-3 bVerse__col-three" id="yui-gen29">
+					<div id="yui-gen30">
+						<img alt="Unchecked Copy Box" class="copyBox hide-for-tablet" data-bible-id="1000029" src="/assets/images/copyChkboxOff.gif" /><a class="hide-for-tablet" href="/kjv/jhn/3/29/s_1000029">Jhn 3:29</a><span class="hide-for-tablet"> - </span>He that hath the bride is the bridegroom: but the friend of the bridegroom, which standeth and heareth him, rejoiceth greatly because of the bridegroom&#39;s voice: this my joy therefore is fulfilled.&nbsp;<sup><a class="criteria" href="/lang/Lexicon/Lexicon.cfm?strongs=G4137&amp;t=KJV" id="yui-gen31">G4137</a></sup></div>
+				</div>
+			</div>
+			<div class="bVerse tools row align-middle" id="bVerse_1004008">
+				<div class="columns tablet-2 small-2 small-order-1 tablet-order-1 align-top bVerse__col-one">
+					<p>
+						<a data-bible-id="1004008" data-type="toolsHover">Tools</a></p>
+				</div>
+				<div class="columns tablet-2 show-for-tablet tablet-order-2 bVerse__col-two">
+					<p>
+						<img alt="Unchecked Copy Box" class="copyBox show-for-tablet" data-bible-id="1004008" src="/assets/images/copyChkboxOff.gif" /> <a href="/kjv/jhn/7/8/s_1004008">Jhn 7:8</a></p>
+				</div>
+				<div class="columns tablet-8 small-10 small-order-2 tablet-order-3 bVerse__col-three" id="yui-gen27">
+					<div id="yui-gen28">
+						<img alt="Unchecked Copy Box" class="copyBox hide-for-tablet" data-bible-id="1004008" src="/assets/images/copyChkboxOff.gif" /><a class="hide-for-tablet" href="/kjv/jhn/7/8/s_1004008">Jhn 7:8</a><span class="hide-for-tablet"> - </span>Go ye up unto this feast: I go not up yet unto this feast; for my time is&nbsp;<sup><a class="criteria" href="/lang/Lexicon/Lexicon.cfm?strongs=G4137&amp;t=KJV">G4137</a>&nbsp;<a class="criteria" data-helps="helps.strongsZero">➔</a></sup> not yet full come.&nbsp;<sup><a class="criteria" href="/lang/Lexicon/Lexicon.cfm?strongs=G4137&amp;t=KJV">G4137</a></sup></div>
+				</div>
+			</div>
+			<div class="bVerse tools row align-middle" id="bVerse_1009003">
+				<div class="columns tablet-2 small-2 small-order-1 tablet-order-1 align-top bVerse__col-one">
+					<p>
+						<a data-bible-id="1009003" data-type="toolsHover">Tools</a></p>
+				</div>
+				<div class="columns tablet-2 show-for-tablet tablet-order-2 bVerse__col-two">
+					<p>
+						<img alt="Unchecked Copy Box" class="copyBox show-for-tablet" data-bible-id="1009003" src="/assets/images/copyChkboxOff.gif" /> <a href="/kjv/jhn/12/3/s_1009003">Jhn 12:3</a></p>
+				</div>
+				<div class="columns tablet-8 small-10 small-order-2 tablet-order-3 bVerse__col-three" id="yui-gen32">
+					<div id="yui-gen36">
+						<img alt="Unchecked Copy Box" class="copyBox hide-for-tablet" data-bible-id="1009003" src="/assets/images/copyChkboxOff.gif" /><a class="hide-for-tablet" href="/kjv/jhn/12/3/s_1009003">Jhn 12:3</a><span class="hide-for-tablet"> - </span>Then took Mary a pound of ointment of spikenard, very costly, and anointed the feet of Jesus, and wiped his feet with her hair: and the house was filled&nbsp;<sup><a class="criteria" href="/lang/Lexicon/Lexicon.cfm?strongs=G4137&amp;t=KJV" id="yui-gen37">G4137</a></sup> with the odour of the ointment.</div>
+				</div>
+			</div>
+			<div class="bVerse tools row align-middle" id="bVerse_1009038">
+				<div class="columns tablet-2 small-2 small-order-1 tablet-order-1 align-top bVerse__col-one">
+					<p>
+						<a data-bible-id="1009038" data-type="toolsHover">Tools</a></p>
+				</div>
+				<div class="columns tablet-2 show-for-tablet tablet-order-2 bVerse__col-two">
+					<p>
+						<img alt="Unchecked Copy Box" class="copyBox show-for-tablet" data-bible-id="1009038" src="/assets/images/copyChkboxOff.gif" /> <a href="/kjv/jhn/12/38/s_1009038">Jhn 12:38</a></p>
+				</div>
+				<div class="columns tablet-8 small-10 small-order-2 tablet-order-3 bVerse__col-three" id="yui-gen33">
+					<div id="yui-gen35">
+						<img alt="Unchecked Copy Box" class="copyBox hide-for-tablet" data-bible-id="1009038" src="/assets/images/copyChkboxOff.gif" /><a class="hide-for-tablet" href="/kjv/jhn/12/38/s_1009038">Jhn 12:38</a><span class="hide-for-tablet"> - </span>That the saying of Esaias the prophet might be fulfilled,&nbsp;<sup><a class="criteria" href="/lang/Lexicon/Lexicon.cfm?strongs=G4137&amp;t=KJV">G4137</a></sup> which he spake, Lord, who hath believed our report? and to whom hath the arm of the Lord been revealed?</div>
+				</div>
+			</div>
+			<div class="bVerse tools row align-middle" id="bVerse_1010018">
+				<div class="columns tablet-2 small-2 small-order-1 tablet-order-1 align-top bVerse__col-one">
+					<p>
+						<a data-bible-id="1010018" data-type="toolsHover">Tools</a></p>
+				</div>
+				<div class="columns tablet-2 show-for-tablet tablet-order-2 bVerse__col-two">
+					<p>
+						<img alt="Unchecked Copy Box" class="copyBox show-for-tablet" data-bible-id="1010018" src="/assets/images/copyChkboxOff.gif" /> <a href="/kjv/jhn/13/18/s_1010018">Jhn 13:18</a></p>
+				</div>
+				<div class="columns tablet-8 small-10 small-order-2 tablet-order-3 bVerse__col-three" id="yui-gen34">
+					<div id="yui-gen38">
+						<img alt="Unchecked Copy Box" class="copyBox hide-for-tablet" data-bible-id="1010018" src="/assets/images/copyChkboxOff.gif" /><a class="hide-for-tablet" href="/kjv/jhn/13/18/s_1010018">Jhn 13:18</a><span class="hide-for-tablet"> - </span>I speak not of you all: I know whom I have chosen: but that the scripture may be fulfilled,&nbsp;<sup><a class="criteria" href="/lang/Lexicon/Lexicon.cfm?strongs=G4137&amp;t=KJV" id="yui-gen39">G4137</a></sup> He that eateth bread with me hath lifted up his heel against me.</div>
+				</div>
+			</div>
+			<div class="bVerse tools row align-middle" id="bVerse_1012011">
+				<div class="columns tablet-2 small-2 small-order-1 tablet-order-1 align-top bVerse__col-one">
+					<p>
+						<a data-bible-id="1012011" data-type="toolsHover">Tools</a></p>
+				</div>
+				<div class="columns tablet-2 show-for-tablet tablet-order-2 bVerse__col-two">
+					<p>
+						<img alt="Unchecked Copy Box" class="copyBox show-for-tablet" data-bible-id="1012011" src="/assets/images/copyChkboxOff.gif" /> <a href="/kjv/jhn/15/11/s_1012011">Jhn 15:11</a></p>
+				</div>
+				<div class="columns tablet-8 small-10 small-order-2 tablet-order-3 bVerse__col-three">
+					<div id="yui-gen40">
+						<img alt="Unchecked Copy Box" class="copyBox hide-for-tablet" data-bible-id="1012011" src="/assets/images/copyChkboxOff.gif" /><a class="hide-for-tablet" href="/kjv/jhn/15/11/s_1012011">Jhn 15:11</a><span class="hide-for-tablet"> - </span>These things have I spoken unto you, that my joy might remain in you, and <em>that</em> your joy might be full.&nbsp;<sup><a class="criteria" href="/lang/Lexicon/Lexicon.cfm?strongs=G4137&amp;t=KJV">G4137</a></sup></div>
+				</div>
+			</div>
+			<div class="bVerse tools row align-middle" id="bVerse_1012025">
+				<div class="columns tablet-2 small-2 small-order-1 tablet-order-1 align-top bVerse__col-one">
+					<p>
+						<a data-bible-id="1012025" data-type="toolsHover">Tools</a></p>
+				</div>
+				<div class="columns tablet-2 show-for-tablet tablet-order-2 bVerse__col-two">
+					<p>
+						<img alt="Unchecked Copy Box" class="copyBox show-for-tablet" data-bible-id="1012025" src="/assets/images/copyChkboxOff.gif" /> <a href="/kjv/jhn/15/25/s_1012025">Jhn 15:25</a></p>
+				</div>
+				<div class="columns tablet-8 small-10 small-order-2 tablet-order-3 bVerse__col-three">
+					<div>
+						<img alt="Unchecked Copy Box" class="copyBox hide-for-tablet" data-bible-id="1012025" src="/assets/images/copyChkboxOff.gif" /><a class="hide-for-tablet" href="/kjv/jhn/15/25/s_1012025">Jhn 15:25</a><span class="hide-for-tablet"> - </span>But <em>this cometh to pass</em>, that the word might be fulfilled&nbsp;<sup><a class="criteria" href="/lang/Lexicon/Lexicon.cfm?strongs=G4137&amp;t=KJV">G4137</a></sup> that is written in their law, They hated me without a cause.</div>
+				</div>
+			</div>
+			<div class="bVerse tools row align-middle" id="bVerse_1013006">
+				<div class="columns tablet-2 small-2 small-order-1 tablet-order-1 align-top bVerse__col-one">
+					<p>
+						<a data-bible-id="1013006" data-type="toolsHover">Tools</a></p>
+				</div>
+				<div class="columns tablet-2 show-for-tablet tablet-order-2 bVerse__col-two">
+					<p>
+						<img alt="Unchecked Copy Box" class="copyBox show-for-tablet" data-bible-id="1013006" src="/assets/images/copyChkboxOff.gif" /> <a href="/kjv/jhn/16/6/s_1013006">Jhn 16:6</a></p>
+				</div>
+				<div class="columns tablet-8 small-10 small-order-2 tablet-order-3 bVerse__col-three">
+					<div>
+						<img alt="Unchecked Copy Box" class="copyBox hide-for-tablet" data-bible-id="1013006" src="/assets/images/copyChkboxOff.gif" /><a class="hide-for-tablet" href="/kjv/jhn/16/6/s_1013006">Jhn 16:6</a><span class="hide-for-tablet"> - </span>But because I have said these things unto you, sorrow hath filled&nbsp;<sup><a class="criteria" href="/lang/Lexicon/Lexicon.cfm?strongs=G4137&amp;t=KJV">G4137</a></sup> your heart.</div>
+				</div>
+			</div>
+			<div class="bVerse tools row align-middle" id="bVerse_1013024">
+				<div class="columns tablet-2 small-2 small-order-1 tablet-order-1 align-top bVerse__col-one">
+					<p>
+						<a data-bible-id="1013024" data-type="toolsHover">Tools</a></p>
+				</div>
+				<div class="columns tablet-2 show-for-tablet tablet-order-2 bVerse__col-two">
+					<p>
+						<img alt="Unchecked Copy Box" class="copyBox show-for-tablet" data-bible-id="1013024" src="/assets/images/copyChkboxOff.gif" /> <a href="/kjv/jhn/16/24/s_1013024">Jhn 16:24</a></p>
+				</div>
+				<div class="columns tablet-8 small-10 small-order-2 tablet-order-3 bVerse__col-three">
+					<div>
+						<img alt="Unchecked Copy Box" class="copyBox hide-for-tablet" data-bible-id="1013024" src="/assets/images/copyChkboxOff.gif" /><a class="hide-for-tablet" href="/kjv/jhn/16/24/s_1013024">Jhn 16:24</a><span class="hide-for-tablet"> - </span>Hitherto have ye asked nothing in my name: ask, and ye shall receive, that your joy may be full.&nbsp;<sup><a class="criteria" href="/lang/Lexicon/Lexicon.cfm?strongs=G4137&amp;t=KJV">G4137</a></sup></div>
+				</div>
+			</div>
+			<div class="bVerse tools row align-middle" id="bVerse_1014012">
+				<div class="columns tablet-2 small-2 small-order-1 tablet-order-1 align-top bVerse__col-one">
+					<p>
+						<a data-bible-id="1014012" data-type="toolsHover">Tools</a></p>
+				</div>
+				<div class="columns tablet-2 show-for-tablet tablet-order-2 bVerse__col-two">
+					<p>
+						<img alt="Unchecked Copy Box" class="copyBox show-for-tablet" data-bible-id="1014012" src="/assets/images/copyChkboxOff.gif" /> <a href="/kjv/jhn/17/12/s_1014012">Jhn 17:12</a></p>
+				</div>
+				<div class="columns tablet-8 small-10 small-order-2 tablet-order-3 bVerse__col-three">
+					<div>
+						<img alt="Unchecked Copy Box" class="copyBox hide-for-tablet" data-bible-id="1014012" src="/assets/images/copyChkboxOff.gif" /><a class="hide-for-tablet" href="/kjv/jhn/17/12/s_1014012">Jhn 17:12</a><span class="hide-for-tablet"> - </span>While I was with them in the world, I kept them in thy name: those that thou gavest me I have kept, and none of them is lost, but the son of perdition; that the scripture might be fulfilled.&nbsp;<sup><a class="criteria" href="/lang/Lexicon/Lexicon.cfm?strongs=G4137&amp;t=KJV">G4137</a></sup></div>
+				</div>
+			</div>
+			<div class="bVerse adj tools row align-middle" id="bVerse_1014013">
+				<div class="columns tablet-2 small-2 small-order-1 tablet-order-1 align-top bVerse__col-one">
+					<p>
+						<a data-bible-id="1014013" data-type="toolsHover">Tools</a></p>
+				</div>
+				<div class="columns tablet-2 show-for-tablet tablet-order-2 bVerse__col-two">
+					<p>
+						<img alt="Unchecked Copy Box" class="copyBox show-for-tablet" data-bible-id="1014013" src="/assets/images/copyChkboxOff.gif" /> <a href="/kjv/jhn/17/13/s_1014013">Jhn 17:13</a></p>
+				</div>
+				<div class="columns tablet-8 small-10 small-order-2 tablet-order-3 bVerse__col-three">
+					<div>
+						<img alt="Unchecked Copy Box" class="copyBox hide-for-tablet" data-bible-id="1014013" src="/assets/images/copyChkboxOff.gif" /><a class="hide-for-tablet" href="/kjv/jhn/17/13/s_1014013">Jhn 17:13</a><span class="hide-for-tablet"> - </span>And now come I to thee; and these things I speak in the world, that they might have my joy fulfilled&nbsp;<sup><a class="criteria" href="/lang/Lexicon/Lexicon.cfm?strongs=G4137&amp;t=KJV">G4137</a></sup> in themselves.</div>
+				</div>
+			</div>
+			<div class="bVerse tools row align-middle" id="bVerse_1015009">
+				<div class="columns tablet-2 small-2 small-order-1 tablet-order-1 align-top bVerse__col-one">
+					<p>
+						<a data-bible-id="1015009" data-type="toolsHover">Tools</a></p>
+				</div>
+				<div class="columns tablet-2 show-for-tablet tablet-order-2 bVerse__col-two">
+					<p>
+						<img alt="Unchecked Copy Box" class="copyBox show-for-tablet" data-bible-id="1015009" src="/assets/images/copyChkboxOff.gif" /> <a href="/kjv/jhn/18/9/s_1015009">Jhn 18:9</a></p>
+				</div>
+				<div class="columns tablet-8 small-10 small-order-2 tablet-order-3 bVerse__col-three">
+					<div>
+						<img alt="Unchecked Copy Box" class="copyBox hide-for-tablet" data-bible-id="1015009" src="/assets/images/copyChkboxOff.gif" /><a class="hide-for-tablet" href="/kjv/jhn/18/9/s_1015009">Jhn 18:9</a><span class="hide-for-tablet"> - </span>That the saying might be fulfilled,&nbsp;<sup><a class="criteria" href="/lang/Lexicon/Lexicon.cfm?strongs=G4137&amp;t=KJV">G4137</a></sup> which he spake, Of them which thou gavest me have I lost none.</div>
+				</div>
+			</div>
+			<div class="bVerse tools row align-middle" id="bVerse_1015032">
+				<div class="columns tablet-2 small-2 small-order-1 tablet-order-1 align-top bVerse__col-one">
+					<p>
+						<a data-bible-id="1015032" data-type="toolsHover">Tools</a></p>
+				</div>
+				<div class="columns tablet-2 show-for-tablet tablet-order-2 bVerse__col-two">
+					<p>
+						<img alt="Unchecked Copy Box" class="copyBox show-for-tablet" data-bible-id="1015032" src="/assets/images/copyChkboxOff.gif" /> <a href="/kjv/jhn/18/32/s_1015032">Jhn 18:32</a></p>
+				</div>
+				<div class="columns tablet-8 small-10 small-order-2 tablet-order-3 bVerse__col-three">
+					<div>
+						<img alt="Unchecked Copy Box" class="copyBox hide-for-tablet" data-bible-id="1015032" src="/assets/images/copyChkboxOff.gif" /><a class="hide-for-tablet" href="/kjv/jhn/18/32/s_1015032">Jhn 18:32</a><span class="hide-for-tablet"> - </span>That the saying of Jesus might be fulfilled,&nbsp;<sup><a class="criteria" href="/lang/Lexicon/Lexicon.cfm?strongs=G4137&amp;t=KJV">G4137</a></sup> which he spake, signifying what death he should die.</div>
+				</div>
+			</div>
+			<div class="bVerse tools row align-middle" id="bVerse_1016024">
+				<div class="columns tablet-2 small-2 small-order-1 tablet-order-1 align-top bVerse__col-one">
+					<p>
+						<a data-bible-id="1016024" data-type="toolsHover">Tools</a></p>
+				</div>
+				<div class="columns tablet-2 show-for-tablet tablet-order-2 bVerse__col-two">
+					<p>
+						<img alt="Unchecked Copy Box" class="copyBox show-for-tablet" data-bible-id="1016024" src="/assets/images/copyChkboxOff.gif" /> <a href="/kjv/jhn/19/24/s_1016024">Jhn 19:24</a></p>
+				</div>
+				<div class="columns tablet-8 small-10 small-order-2 tablet-order-3 bVerse__col-three">
+					<div>
+						<img alt="Unchecked Copy Box" class="copyBox hide-for-tablet" data-bible-id="1016024" src="/assets/images/copyChkboxOff.gif" /><a class="hide-for-tablet" href="/kjv/jhn/19/24/s_1016024">Jhn 19:24</a><span class="hide-for-tablet"> - </span>They said therefore among themselves, Let us not rend it, but cast lots for it, whose it shall be: that the scripture might be fulfilled,&nbsp;<sup><a class="criteria" href="/lang/Lexicon/Lexicon.cfm?strongs=G4137&amp;t=KJV">G4137</a></sup> which saith, They parted my raiment among them, and for my vesture they did cast lots. These things therefore the soldiers did.</div>
+				</div>
+			</div>
+			<div class="bVerse tools row align-middle" id="bVerse_1016036">
+				<div class="columns tablet-2 small-2 small-order-1 tablet-order-1 align-top bVerse__col-one">
+					<p>
+						<a data-bible-id="1016036" data-type="toolsHover">Tools</a></p>
+				</div>
+				<div class="columns tablet-2 show-for-tablet tablet-order-2 bVerse__col-two">
+					<p>
+						<img alt="Unchecked Copy Box" class="copyBox show-for-tablet" data-bible-id="1016036" src="/assets/images/copyChkboxOff.gif" /> <a href="/kjv/jhn/19/36/s_1016036">Jhn 19:36</a></p>
+				</div>
+				<div class="columns tablet-8 small-10 small-order-2 tablet-order-3 bVerse__col-three">
+					<div>
+						<img alt="Unchecked Copy Box" class="copyBox hide-for-tablet" data-bible-id="1016036" src="/assets/images/copyChkboxOff.gif" /><a class="hide-for-tablet" href="/kjv/jhn/19/36/s_1016036">Jhn 19:36</a><span class="hide-for-tablet"> - </span>For these things were done, that the scripture should be fulfilled,&nbsp;<sup><a class="criteria" href="/lang/Lexicon/Lexicon.cfm?strongs=G4137&amp;t=KJV">G4137</a></sup> A bone of him shall not be broken.</div>
+				</div>
+			</div>
+		</div>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

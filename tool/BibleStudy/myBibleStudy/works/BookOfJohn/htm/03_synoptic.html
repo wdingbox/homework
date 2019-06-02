@@ -1,0 +1,725 @@
+<html>
+	<head>
+		<title onclick="alert();">ctxt</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!------->
+		<base target="_blank" />
+		<script src="../../../../../tablesorter_master/js/jquery.tablesorter.js"></script><script src="../../../../../Hebrew2/nodjs/noduti/js/table_Indexer.js"></script><script src="../../../myjs/goto_editor.js"></script>
+		<style type="text/css">
+body {font-family: 'Times New Roman';
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+    }		
+#_MenuPanel{
+position: fixed;
+left: 10px;
+top: 0px;
+}
+
+.fixedcol{
+	position: absolute;
+	background-color: #999999;
+}
+.fixedcol2, thead{
+	background-color: #999999;
+}
+.fixedcol2{
+	background-color: #eeeeee;
+}
+.catlog{
+	background-color: #cccccc;
+}
+.strongs{
+	background-color: #ffffff;
+}
+.Top_Horz{
+	color: blue;
+}
+.All_Top_Horz{
+	background-color: red;
+}
+.leftbox{
+  background-color: #ff0000;
+}
+.tablefloatheb {float: right; margin: 2px;border-collapse: false;background-color: #eeeeee }
+.hebrew
+{
+    FONT-SIZE: 23px;
+    COLOR: #001320;
+    LINE-HEIGHT: 33px;
+    font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+    TEXT-DECORATION: none;
+}		</style>
+	</head>
+	<script>
+$(function(){
+    $(".narration").toggle();
+    $(".TheTitle").click(function(){
+        $(".narration").toggle();
+    } );
+    $("#strongsCodes").click(function(){
+    	$(".strongs, .translit").slideToggle();
+    });
+
+    $("body").click(function(){
+    	$("#_edit").slideToggle();
+    });
+
+    $("#relativeFrqRate").click(function(){
+    	cal_relativeFrqRate();
+    });
+
+
+    $(".fixedcol2").click(function(){
+    	alert();
+    });
+
+});/////////
+
+$(document).ready(function(){ 
+	goto_editor("_edit_url");
+	sort_table();
+});//
+function sort_table(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+
+
+</script>
+	<body>
+		<p id="_MenuPanel">
+			<br />
+			<a id="_edit_url">...</a><br />
+			<a id="indxer">indxer</a></p>
+		<!--------------------------><!--------------------------><!-------------------------->
+		<p style="text-align: center;">
+			<font size="3"><b>Book of John<br />
+			(Gospel according to John)</b></font></p>
+		<div style="page-break-after: always;">
+			<table border="1" class="style3" id="table_view_18640383">
+				<caption>
+					Gospels Parallel Comparison</caption>
+				<thead id="thead_view_18640383">
+					<tr>
+						<th class="centerCell unboldCell tableCell firstCell ">
+							#</th>
+						<th class="centerCell unboldCell tableCell firstCell ">
+							<div>
+								&nbsp;</div>
+						</th>
+						<th class="centerCell boldCell tableCell  ">
+							Matthew</th>
+						<th class="centerCell boldCell tableCell  ">
+							<div>
+								Mark</div>
+						</th>
+						<th class="centerCell boldCell tableCell  ">
+							<div>
+								Luke</div>
+						</th>
+						<th class="centerCell boldCell tableCell  lastCell">
+							<div>
+								John</div>
+						</th>
+					</tr>
+				</thead>
+				<tbody id="tbody_view_18640383">
+					<tr class="oddRow">
+						<td class="leftCell unboldCell tableCell firstCell ">
+							1</td>
+						<td class="leftCell unboldCell tableCell firstCell ">
+							<div>
+								Writer</div>
+						</td>
+						<td class="centerCell unboldCell tableCell  ">
+							An unknown Jewish Christian, traditionally the Apostle Matthew</td>
+						<td class="centerCell unboldCell tableCell  ">
+							<div>
+								A second generation Christian, possibly a follower of Peter</div>
+						</td>
+						<td class="centerCell unboldCell tableCell  ">
+							<div>
+								A Gentile Christian, traditionally Luke the physician and Paul&#39;s traveling companion</div>
+						</td>
+						<td class="centerCell unboldCell tableCell  lastCell">
+							<div>
+								The &quot;beloved disciple&quot; the Apostle John</div>
+						</td>
+					</tr>
+					<tr class="evenRow">
+						<td class="leftCell unboldCell tableCell firstCell ">
+							2</td>
+						<td class="leftCell unboldCell tableCell firstCell ">
+							<div>
+								Date Written</div>
+						</td>
+						<td class="centerCell unboldCell tableCell  ">
+							75-80 CE</td>
+						<td class="centerCell unboldCell tableCell  ">
+							<div>
+								65-70 CE</div>
+						</td>
+						<td class="centerCell unboldCell tableCell  ">
+							<div>
+								80-85 CE</div>
+						</td>
+						<td class="centerCell unboldCell tableCell  lastCell">
+							<div>
+								90-98&nbsp;CE</div>
+						</td>
+					</tr>
+					<tr class="evenRow">
+						<td class="leftCell unboldCell tableCell firstCell ">
+							3</td>
+						<td class="leftCell unboldCell tableCell firstCell ">
+							<div>
+								Where the books were written</div>
+						</td>
+						<td class="centerCell unboldCell tableCell  ">
+							Most likely Antioch of Syria</td>
+						<td class="centerCell unboldCell tableCell  ">
+							<div>
+								Rome</div>
+						</td>
+						<td class="centerCell unboldCell tableCell  ">
+							<div>
+								Possibly Rome or Caesarea</div>
+						</td>
+						<td class="centerCell unboldCell tableCell  lastCell">
+							<div>
+								Probably written in Ephesus</div>
+						</td>
+					</tr>
+					<tr class="oddRow">
+						<td class="leftCell unboldCell tableCell firstCell ">
+							4</td>
+						<td class="leftCell unboldCell tableCell firstCell ">
+							<div>
+								Hisotrical Situation</div>
+						</td>
+						<td class="centerCell unboldCell tableCell  ">
+							Written after Romans had destroyed all of Jerusalem</td>
+						<td class="centerCell unboldCell tableCell  ">
+							<div>
+								The Romans subdue armed Jewish rebellions. Christians experiencing persecution in Rome</div>
+						</td>
+						<td class="centerCell unboldCell tableCell  ">
+							<div>
+								Written when the persecution of Jews and Christians was intensifying</div>
+						</td>
+						<td class="centerCell unboldCell tableCell  lastCell">
+							<div>
+								Jewish leaders banned Christians from the synagogues</div>
+						</td>
+					</tr>
+					<tr class="evenRow">
+						<td class="leftCell unboldCell tableCell firstCell ">
+							5</td>
+						<td class="leftCell unboldCell tableCell firstCell ">
+							<div>
+								The Author&#39;s Community</div>
+						</td>
+						<td class="centerCell unboldCell tableCell  ">
+							A Jewish Christian community</td>
+						<td class="centerCell unboldCell tableCell  ">
+							<div>
+								A Gentile Christian community in Rome undergoing persecution</div>
+						</td>
+						<td class="centerCell unboldCell tableCell  ">
+							<div>
+								Written to &quot;Theophilus&quot;</div>
+						</td>
+						<td class="centerCell unboldCell tableCell  lastCell">
+							<div>
+								Jews, Gentiles, and Samaritans</div>
+						</td>
+					</tr>
+					<tr class="oddRow">
+						<td class="leftCell unboldCell tableCell firstCell ">
+							6</td>
+						<td class="leftCell unboldCell tableCell firstCell ">
+							<div>
+								Who is Jesus?</div>
+						</td>
+						<td class="centerCell unboldCell tableCell  ">
+							Promised Messiah of Jewish people, greatest prophet, teacher of the &quot;new law&quot; calling people to be faithful of the Old Testament covenant with God</td>
+						<td class="centerCell unboldCell tableCell  ">
+							<div>
+								Healer, Miracle Worker, Teacher, Misunderstood by those closest to Him</div>
+						</td>
+						<td class="centerCell unboldCell tableCell  ">
+							<div>
+								Merciful, Compassionate, Prayerful teacher with special concern for women, the poor, and non-Jews (Gentiles)</div>
+						</td>
+						<td class="centerCell unboldCell tableCell  lastCell">
+							<div>
+								Noble, Powerful divine--fully in control of His destiny</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="leftCell unboldCell tableCell firstCell ">
+							7</td>
+						<td class="leftCell unboldCell tableCell firstCell ">
+							perspectives</td>
+						<td class="centerCell unboldCell tableCell  ">
+							salvation historical fulfillment&mdash;the climax of prophetic hope</td>
+						<td class="centerCell unboldCell tableCell  ">
+							<p>
+								functional Christology&mdash;obedient to the mission of the Father</p>
+						</td>
+						<td class="centerCell unboldCell tableCell  ">
+							historical&mdash;the Man among men</td>
+						<td class="centerCell unboldCell tableCell  lastCell">
+							ontological Christology&mdash;the incarnate Son of God</td>
+					</tr>
+					<tr>
+						<td class="leftCell unboldCell tableCell firstCell ">
+							&nbsp;</td>
+						<td class="leftCell unboldCell tableCell firstCell ">
+							VersesJesusSayings</td>
+						<td class="centerCell unboldCell tableCell  ">
+							645</td>
+						<td class="centerCell unboldCell tableCell  ">
+							283</td>
+						<td class="centerCell unboldCell tableCell  ">
+							584</td>
+						<td class="centerCell unboldCell tableCell  lastCell">
+							418</td>
+					</tr>
+					<tr>
+						<td class="leftCell unboldCell tableCell firstCell ">
+							&nbsp;</td>
+						<td class="leftCell unboldCell tableCell firstCell ">
+							VersesTotal</td>
+						<td class="centerCell unboldCell tableCell  ">
+							1071</td>
+						<td class="centerCell unboldCell tableCell  ">
+							678</td>
+						<td class="centerCell unboldCell tableCell  ">
+							1150</td>
+						<td class="centerCell unboldCell tableCell  lastCell">
+							879</td>
+					</tr>
+					<tr>
+						<td class="leftCell unboldCell tableCell firstCell ">
+							&nbsp;</td>
+						<td class="leftCell unboldCell tableCell firstCell ">
+							VJS/VT=</td>
+						<td class="centerCell unboldCell tableCell  ">
+							60%</td>
+						<td class="centerCell unboldCell tableCell  ">
+							41%</td>
+						<td class="centerCell unboldCell tableCell  ">
+							50%</td>
+						<td class="centerCell unboldCell tableCell  lastCell">
+							47%</td>
+					</tr>
+					<tr>
+						<td class="leftCell unboldCell tableCell firstCell ">
+							&nbsp;</td>
+						<td class="leftCell unboldCell tableCell firstCell ">
+							<a href="http://catholic-resources.org/Bible/Quotations-NT-OT.htm">Quots from OT&nbsp;</a></td>
+						<td class="centerCell unboldCell tableCell  ">
+							<a href="http://catholic-resources.org/Bible/Matthew-OTQuotations.htm">66</a></td>
+						<td class="centerCell unboldCell tableCell  ">
+							31</td>
+						<td class="centerCell unboldCell tableCell  ">
+							27</td>
+						<td class="centerCell unboldCell tableCell  lastCell">
+							16</td>
+					</tr>
+					<tr>
+						<td class="leftCell unboldCell tableCell firstCell ">
+							&nbsp;</td>
+						<td class="leftCell unboldCell tableCell firstCell ">
+							witness+testify</td>
+						<td class="centerCell unboldCell tableCell  ">
+							4+8=12</td>
+						<td class="centerCell unboldCell tableCell  ">
+							2+7=9</td>
+						<td class="centerCell unboldCell tableCell  ">
+							4+5=9</td>
+						<td class="centerCell unboldCell tableCell  lastCell">
+							4+30=43</td>
+					</tr>
+					<tr>
+						<td class="leftCell unboldCell tableCell firstCell ">
+							&nbsp;</td>
+						<td class="leftCell unboldCell tableCell firstCell ">
+							<a href="http://catholic-resources.org/John/Themes-Believe.htm">Believe</a></td>
+						<td class="centerCell unboldCell tableCell  ">
+							11</td>
+						<td class="centerCell unboldCell tableCell  ">
+							14</td>
+						<td class="centerCell unboldCell tableCell  ">
+							9</td>
+						<td class="centerCell unboldCell tableCell  lastCell">
+							98</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				--</p>
+			<div style="page-break-after: always;">
+				<span style="display: none;">&nbsp;</span></div>
+		</div>
+		<table border="1">
+			<caption>
+				The Last Seven Sayings On Cross</caption>
+			<thead>
+				<tr>
+					<td>
+						#</td>
+					<td>
+						Sayings</td>
+					<td>
+						OT</td>
+					<td>
+						Matt</td>
+					<td>
+						Mark</td>
+					<td>
+						Luke</td>
+					<td>
+						John</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						1</td>
+					<td>
+						Father, forgive them, for they know not what they do.<br />
+						父啊！赦免他們， 因為他們所作的， 他們不曉得</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						23:34</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						2</td>
+					<td>
+						Turly, I say to you, today you will be with me in paradise.<br />
+						我實在告訴你， 今日你要同我在樂園了</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						23:43</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						3</td>
+					<td>
+						Woman, behold you son. Son, behold you mother.<br />
+						母親， 看你的兒子,,看你的母親</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						19:26-27</td>
+				</tr>
+				<tr>
+					<td>
+						4</td>
+					<td>
+						My God, My God, why have you forsaken me?<br />
+						我的神！我的神！為甚麼離棄我？</td>
+					<td>
+						Psalm 22:1</td>
+					<td>
+						27:46</td>
+					<td>
+						15:34</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						5</td>
+					<td>
+						I thirst.<br />
+						我渴了</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						19:28</td>
+				</tr>
+				<tr>
+					<td>
+						6</td>
+					<td>
+						It&#39;s finished<br />
+						成了！</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						19:30</td>
+				</tr>
+				<tr>
+					<td>
+						7</td>
+					<td>
+						Father, into thy hands I commend my spirit.<br />
+						父啊！我將我的靈魂交在你手裏</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						23:46</td>
+					<td>
+						19:30</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			-<img alt="Smiley face" height="42" src="../img/P52_recto.jpg" width="42" />&nbsp;<img src="../img/Relationship_between_synoptic_gospels-en.svg.png" width="500px" /></p>
+		<div style="page-break-after: always;">
+			<span style="display: none;">&nbsp;</span></div>
+		<p>
+			<br />
+			<br />
+			<strong>Synoptic Gospels Overlap Statistics</strong></p>
+		<p>
+			93 % Mark is found in Matt and Luke. (Harmony, p261)&nbsp;<br />
+			91 % Mark is found in Matthew,<br />
+			53 % Mark is found in Luke. (<a href="https://www.biblica.com/resources/scholar-notes/niv-study-bible/the-synoptic-gospels/">...</a>)<br />
+			<br />
+			1) common cx.<br />
+			93=91+53-cx<br />
+			cx=51<br />
+			<br />
+			2) Mark and Matt only<br />
+			91-51=40<br />
+			<br />
+			3) Mark and Luke only<br />
+			53-51=2&nbsp;<br />
+			&nbsp;</p>
+		<p>
+			It is near-unanimous consensus in the ancient church that the synoptic gospel writers drew upon personal memory and first hand reports, did not see each other&#39;s work before writing lasted until the mid-eighteenth century. (Harmony, p261)<br />
+			&nbsp;</p>
+		<div>
+			Modern time, got severe attack.</div>
+		<div>
+			1) writer not John 2) mulitple writer.</div>
+		<p>
+			&nbsp;</p>
+		<p>
+			<strong>Gospel of John and Synoptics</strong></p>
+		<p>
+			Compared with synoptic gospels, issues:<br />
+			1) changes in Greek style<br />
+			2) problems of sequence<br />
+			3) repetitions in discourse material&nbsp;<br />
+			<br />
+			John does not recored&nbsp;<br />
+			1) the virgin birth<br />
+			2) the baptism<br />
+			3) the temptation<br />
+			4) the transfiguration<br />
+			5) Eucharist/Greatest Commands/Great Commisson<br />
+			6) the agony in the garden of Gethsmane,<br />
+			7) the ascension.<br />
+			<br />
+			synoptic parables and cures of demoniacs and lepers, less significant materials.&nbsp;<br />
+			&nbsp;</p>
+		<p>
+			<strong>John and Synoptic Gospels Paralel Statistics</strong></p>
+		<p>
+			21% (=6/21) of John in synoptic gospels. (based on story in chapters)<br />
+			25% (=2/8)&nbsp; of John in synoptic gospels. (based on signs)<br />
+			22% (=8/35) of all signs in the Gospels in John (QiDao p975)&nbsp;&nbsp;</p>
+		<div>
+			&nbsp;</div>
+		<p>
+			<br />
+			&nbsp;</p>
+		<pre>
+			https://www.youtube.com/watch?v=gO9mdZIJYbU
+			1. synpotics look at outside--what He say and did. John look inside-who He was.
+			2. God use different personality to write one union personality of God.
+			3. not mention Kingdom of Heaven.
+			4. 7 miracle 5 is new 2 are same. John did not call it as miracle but sign--where it point to. 
+			   look through miracle.
+			   one to one vs crowd. 
+			5. based on outline of Mark.  30 months of north in Galilee followed by 6 months in south. 
+			   John almost all in south. 
+			   conflicts John concentrated on south. 
+
+			6. John has not short parables. 
+
+			7. John wrote in Ephesus in Turkey the mixture of Greek and Hebrew.
+			   western is Greek style: vertical time. between key words: heaven and world. up and down. Up/down
+			   Hebrew horizontal in time. past present future. 
+
+			8. author. between Galilee and south.  
+
+			   12 disciple 5 or 7 of them are relatives of Jesus.  (North) 
+
+			   not believe until after ascesion. 
+			   James and Jude 
+
+			   three close Peter, James and John. among 3 has 1 favorite, last surving. 
+			   that&#39;s why Jesus ask John to care his mother. 
+			   Peter jelous to John. 
+
+			 9. purpose of the book. 
+			    go on believing. 
+			    faith go on believing. 
+
+			 10. 3 phases
+			    1. believing not faith which is noun. 
+			        - credence: to believe that is true  --accept 
+			        - confidence: believe in that. obey and do sth to show trust.--doing 
+			        - continuance: go on believing, holding the truth (faith==faithfullness), eternal. --holding. 
+
+			        trust on someone, you will trust him whatever happened whatever cost. 
+                    if you are full of faith, you are faithfull--go on believing in someone. 
+
+                2. Truth is someone. what is truth?
+                   Truth is not proposition. but a person. --great revelation of John gospel. 
+                   people always think truth is something not the person. 
+                   what do you think of Jesus.
+                   rumors and lengends began to creep in 
+                   speculation came in about Jesus. 
+                   speculation(推测): the forming of a theory or conjecture without firm evidence.
+
+
+
+            https://www.youtube.com/watch?v=G2R7ljD_I7k
+            low the John B. higher Jesus. 
+
+            Hull humanity full divinity. 
+
+            the magic number 7.  a perfect round number in Hebrew is always 7. 
+            it is not our figuring but it was in Hebrew thinking. The most important number in the Bible. 
+            anything that falls short of that is less than perfect six six six. but 777 is something. (13:41)
+
+
+            seven persons: witness (70 times) personal testimony for the truth. 
+               John the B
+               Nathaniel
+               Jesus
+               Peter
+               Martha
+               Thoma
+               John
+
+            severn works: single out only 7 signs. supernatural, 
+
+            seven I AM. talk about himself. 
+              Jesus has 250 names and titles. 
+              I AM is YAWH
+
+              Synoptis start from 
+              	Math start Abraham.
+              	Luke start Adam. 
+
+              	the unique name: Logos. the word. 
+              	what is the word. 
+              	In Ephesus 600 years before John was writing this in 568 bc. 
+              	  Hearaclitus.  (24:54)
+              	  was the founder of science. 
+              	  keep asking &quot;why&quot;  which is logos. Bio-logy 
+              	  every branch of science is looking for the logos the reason. why things are as they are. 
+              	  science is small part, and become less and less. 
+              	  John said you need ask the reason of whole.
+                   What is the reason why it&#39;s all here.   
+                   the answer is Jesus. All is made by jesus son of God. 
+                   that is the reason I was here. 
+                   He is the reason why, he is the logos. excepting concept. 
+
+                   LXX (70) professor Hebrew Greek.
+                    on of them is called Philo. He said the Logos we should not talk about it but HE. 
+                    He is not taling about a person but he was personifying it. 
+
+                    Wisdom is personified as woman. 
+
+                Logos: (4 vital things)
+                   1. his eternity: already there. 
+                   2. his personality (face to face, personal, son and God love each other. hence God is love. single person cannot love)
+                   3. his deity: was God. rather than a god. 
+                   4. his humanity. incarnation. became flesh. 
+
+                Life:
+                	life/death
+                	light/darkness
+                	truth/lies
+                	Slavery/freedom
+                	love /wrath/
+
+                	heaven / world. 
+
+                Holy Spirit. 
+                	ch1 Baptised with /in Holy Spirit
+                	ch3 reborn
+                	ch4 living water, true worship
+                	ch7 feast of tabernacles, spring of water. 
+                	ch14-16: paraclete-called beside.
+                	         encourager, standby
+                	         spirit of truth
+                	         another comforter.
+                	ch20.    sign: blew.
+                	         command:receive.  
+
+
+                
+
+
+
+
+=============
+
+
+
+			&nbsp;</pre>
+	</body>
+</html>

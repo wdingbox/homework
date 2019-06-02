@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><script src="moment.js"></script><script language="javascript">
+     var v,vid=0;
+     
+     $(function () {
+     $(".timestarts").attr("size",4);
+     $(".timestop").attr("size",4);
+     
+     $(".idx").each(function(i){
+        $(this).text((1+i)+".");        
+     });
+     
+     var totalTimeSpan=0;//seconds
+     $(".tmspan").each(function(){
+        var start=$(this).next().val();
+        var stop=$(this).next().next().val();
+        var dlta=parseInt(stop) - parseInt(start);
+        totalTimeSpan+=dlta;
+        $(this).text(dlta);     
+     });
+     $("#totTimeSpan").text("TotTime: "+totalTimeSpan +"s = "+(totalTimeSpan/60).toFixed(1)+"min.");
+     
+     $("#videoArea1").hide();
+     
+     v = [$("#video_0").get(0), $("#video_1").get(0)];
+     
+        
+
+     v[vid].playbackRate = 1.0;
+     $("#speedup").click(function(){
+        v[vid].playbackRate+=0.25;
+        $("#speedrate").text(v[vid].playbackRate);
+     });
+     $("#speeddn").click(function(){
+        v[vid].playbackRate-=0.25;
+        $("#speedrate").text(v[vid].playbackRate);
+     });
+     
+         $('.vArea').click(function(){
+                //v.play();
+                var curTime = v[vid].currentTime;
+                console.log(curTime);
+                var hhmmss2=moment.duration(curTime,0); 
+                var hhmmss=momnent_millisecond_to_hhmmss(parseFloat(curTime)*1000.0);
+                
+                $("#currTime").text(curTime+"="+hhmmss);
+                
+                //$("body").toggleClass("highlight");
+         });
+
+        $('.s').click(function(){
+            alert("Clicked: "+$(this).html() +"- has time of -" + $(this).attr('s') );
+            v[vid].currentTime = $(this).attr('s'); v[vid].play();
+        });
+        
+        
+
+        
+        
+        $("#HindiFile").click(function(){   
+            if(0===vid){
+                vid=1;
+            }else{
+                vid=0;
+            }
+            set_video_stream(vid);
+            
+        });
+        
+        
+        $(".moredesc").each(function(){
+            $(this).next().toggle();
+        }).click(function(){
+            $(this).next().toggle();
+        });
+        
+        
+        
+        $(".idx").click(function(){
+            click_idx_to_start_video(this);
+        });
+        
+        $("#clipNotesToggle").click(function(){
+            $(".vArea").each(function(){
+               $(this).hide(true);
+            });
+            $("#myVideoCtrls").hide(true);
+            $("#clipsMenu").toggle(function(){
+                return true;
+            });
+            $(this).parent().removeClass("clipNotesScroll");
+        });
+     });////////////////////////////////
+     
+     function click_idx_to_start_video(_this){
+            v[vid].pause();
+            var txt="";
+            $(_this).parent().find(".desc").each(function(){
+                txt=$(this).text();
+            });
+            console.log(txt);
+            if(txt.indexOf("Hindi")>=0){
+                vid=1;
+            }
+            else{
+                vid=0;
+            }
+            set_video_stream(vid);
+            v[vid].pause();
+            
+            $(".idx").css("background-color","#cccccc");
+            $(_this).css("background-color","#00cc00").css("border","1px");
+            
+            clearInterval(intervalID);
+            intervalID=-1;
+            
+            
+            var start=$(_this).next().next().val();
+            v[vid].currentTime = start; 
+            console.log("start:",start);
+            v[vid].play();
+            var spantime=parseFloat($(_this).next().next().next().val());
+            auto_stop_at(v[vid], spantime);     
+     }
+     
+     var intervalID=-1;
+     function auto_stop_at(v, tms){
+        if(intervalID<0) clearInterval(intervalID);
+        
+        intervalID = setInterval(function(){
+            var vtime=v.currentTime;
+            var hhmmss=momnent_millisecond_to_hhmmss(parseFloat(vtime)*1000.0);
+            $("#videotime").text(vtime.toFixed(1)+" = "+hhmmss);
+            if(vtime>=tms){
+                v.pause();
+                clearInterval(intervalID);
+                intervalID=-1;
+                console.log("pause@", v.currentTime);
+            }
+        },300);
+     };
+     function set_video_stream(videoID){
+            console.log("switch_video_stream videoID:", videoID);
+            if(1===videoID){//1:hindi
+                $("#HindiFile").text("Hindi");
+                $("#videoArea0").hide();
+                $("#videoArea1").show();
+            }
+            else if(0===videoID){//0:chinese
+                $("#HindiFile").text("Chinese");
+                $("#videoArea0").show();
+                $("#videoArea1").hide();
+            }
+            else{
+                alert("err videoID");
+            }            
+     }
+     function momnent_millisecond_to_hhmmss(tms2){
+                    function paddingInt(val){
+                        val=""+val;
+                        while(val.length<2) val="0"+val;
+                        return val;
+                    }
+                    function paddingFloat(val){
+                        val=""+val;
+                        while(val.indexOf(".")<2) val="0"+val;
+                        return val;
+                    }     
+                    var hhmmss2=moment.duration(tms2,0);
+                    var ms=(""+(hhmmss2._data.milliseconds)*1000.0).substr(0,3);
+                    var ss=hhmmss2._data.seconds;
+                    var mm=hhmmss2._data.minutes;
+                    var hh=hhmmss2._data.hours; 
+                    return paddingInt(hh)+":"+paddingInt(mm)+":"+paddingInt(ss)+"."+ms;                    
+     }   
+    </script>
+		<style type="text/css">
+body {
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+    }   
+    
+    
+    
+.highlight {
+        background: black;
+    }
+    .timestarts .timestop{
+        position: float;
+        left:1000px;
+       size:4px;
+    }   
+    #speedrate, #currTime{
+    background-color:#cccccc;
+    }
+    #videotimexxx{
+        position:absolute;
+        top:10px;
+        left:10px;
+        background-color:#ffffff;
+    }
+    .tmspan{
+      display: inline-block;
+      width:30px;
+      border-style: solid;
+      border-width: 1px 1px 1px 1px;
+
+    }
+    .idx{
+      display: inline-block;
+      width:30px;
+      background-color:#cccccc;
+      
+    }       
+    #clipNootes{
+     width : 100%;
+     background-color:#00ffff;
+    } 
+    .clipNotesScroll{
+     height: 500px;
+     overflow: scroll;
+     background-color:#ffffff;
+    } 
+    
+    #clipsMenu{
+    height: 300px;
+    overflow: scroll;
+    background-color:#ffaaff;
+    z-indx:10000;
+    }
+    span{
+        display:block;
+    }		
+    
+    #videotimexxxxxxxxxx{
+        position:fixed;
+        top:100px;
+        left:100px;
+        z-index:10000;
+        color:#000ff;
+    }
+    </style>
+	</head>
+	<body>
+		<div class="vArea" id="videoArea0">
+			<video controls="" height="300px" id="video_0" noautoplay="" width="400px">
+				<source id="videoSrc" src="../../../../../../___bigdata/___compact/___incrementalRO/video/20160610/utube2016/1900_EightForeingerInvasionOfBeijing.mp4" type="video/mp4" /> 
+                <track kind="subtitles" label="Chinese" src="Awara_India_subtitle_zh.vtt" srclang="en"></track> 
+                <track kind="subtitles" label="English" src="Awara_India_subtitle_en.vtt" srclang="en"></track> 
+                Your browser does not support the video tag. </video>
+		</div>
+		<div class="vArea" id="videoArea1">
+			<video controls="" height="300px" id="video_1" noautoplay="" width="400px">
+				<source id="videoSrc" src="1900_EightForeingerInvasionOfBeijing.mp4" type="video/mp4" />
+       
+                <track kind="subtitles" label="Chinese" src="Awaara_1951_Hindi_Raj_kapoor_with_subtitle_zh.vtt" srclang="en"></track> <!--track src="Awaara_1951_Hindi_Raj_kapoor_with_subtitle_en.vtt" kind="subtitles" srclang="en" label="English"></track -->Your browser does not support the video tag. </video>
+		</div>
+
+        <!---controls-->
+        
+		<span id="myVideoCtrls"><a id="totTimeSpan">0</a><button id="speedup">+</button><button id="speeddn">-</button><a>speed:</a><a id="speedrate">1</a> CurrentTime:<a id="currTime">0.0</a> <a id="HindiFile">Chinese</a> <a id="videotime">00.0</a></span>
+            
+         <!---video clips-->
+         
+		<div id="clipsMenu">
+			<span class='videoItm'><a class="idx">0</a><a class="tmspan">0</a><input class="timestarts" value="283.0" /><input class="timestop" value="332.9" /><a class="desc">罗马天主教 among military invation...</a></span> 
+
+        </div>
+            
+            
+            
+            
+            <!-------NOTES------->
+            <!-------NOTES------->
+            <!-------NOTES------->
+            <!-------NOTES------->
+            <!-------NOTES------->
+            
+            
+            
+            
+            
+            
+            <div id="clipNootes" class="clipNotesScroll">
+<br>          樊国梁（Bishop Pierre-Marie-Alphonse Favier, C.M.，1837年9月22日－1905年4月4日），罗马天主教直隸北境宗座代牧主教[1]，遣使会会士。
+<br>
+<br>1837年9月22日，樊国梁生于法国科多尔省马尔萨奈拉科特。1861年10月18日晋升神父。1862年来到中国传教。1897年11月12日任直隸北境代牧区助理主教。1898年2月20日祝圣主教。1899年4月13日，出任直隸北境代牧区宗座代牧。
+<br>
+<br>1900年义和团事变时被围于北堂，组织了教堂的守卫，保护数千名中国天主教徒。事变结束后，樊国梁被指控下令抢劫。樊國梁在《紐約時報》發表聲明，否認下令搶劫，而是因為當時無店有人，無法購買生活必需品，才自行搬走，但他下令要登記拿走多少，事後依記錄付了款[2][3][4]。
+<br>
+<br>1905年4月4日，樊国梁主教在北京逝世，年67岁[5]。 
+<a href="https://zh.wikipedia.org/wiki/%E6%A8%8A%E5%9B%BD%E6%A2%81">wiki</a>
+
+		</div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+                
+            views:103,255
+		<p>
+			<a href="https://www.youtube.com/watch?v=cJKKep8s9NY">中国人都要记住1900年八国联军（英、法、德、美、日、俄、意、奧）二之一</a> </p>
+	</body>
+</html>

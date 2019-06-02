@@ -1,0 +1,204 @@
+<html>
+	<head>
+		<title></title>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<meta content="en-us" http-equiv="Content-Language" />
+
+		    <script language="javascript" src="../ham12/jq/jquery.js"></script>
+
+    <script src="../tablesorter_master/js/jquery.tablesorter.js"></script>
+
+
+<script language="javascript" src="../ham12/WordsFreq.js"></script>
+    
+<script src="./js/DaoDeJing.js"></script>
+
+
+
+
+<script language="javascript" src="./js/DaoDeJing_KeywordsThemes_Chap.js"></script>
+<script language="javascript" src="./js/DaoDeJing_KeywordsThemes_EngBibDictionary.js"></script>
+
+<script language="javascript" src="./js/DaoDeJing_ChineseWangBi.js"></script>
+<script language="javascript" src="./js/DaoDeJing_ChineseWangBi_FrqPhrase2.js"></script>
+<script language="javascript" src="./js/DaoDeJing_ChineseWangBi_FrqPhrase111.js"></script>
+<script language="javascript" src="./js/DaoDeJing_ChineseWangBi_FrqZi.js"></script>
+<script language="javascript" src="./js/DaoDeJing_ChineseWangBiKeywords.js"></script>
+<script language="javascript" src="./js/DaoDeJingUti.js"></script>
+
+<style type="text/css">
+
+table, td, th, tr,tbody {
+    border-collapse: collapse;
+
+}
+
+.hili{
+	background: #ff0000;
+}
+.故{
+	background: #ffff00;
+}
+.吾{
+	background: #ff00ff;
+}
+.我{
+	background: #00ffff;
+}
+
+
+
+#txot{
+	position: fixed;
+	top:0px;
+	width: 800px;
+	height: 90px;
+}
+
+#out{
+	margin-top:210px;
+}
+</style>
+
+
+<script type="text/javascript">
+	
+$(document).ready(function(){ 
+	//gen_table();
+	//gen_table_DaoDeJing();
+	gen_table_keyword();
+
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });
+
+    $("#ctr_menu").click(function(){
+    	$(".eng").toggleClass("txtcolr_white");
+    });
+
+    $("#txot").click(function(){
+    	get_json_chinese_keywords();
+    });
+});//
+
+
+function get_json_chinese_keywords(){
+	function getpurearr(txt){
+		var arr=txt.split(",");
+		var ar2=[];
+		$.each(arr,function(i,v){
+			var s=$.trim(v);
+			if(s){
+				ar2.push(s);
+			}
+		});
+		return ar2;
+	}
+	var jsd={};
+	$("table tbody").find("tr").each(function(i){
+		var kew=$(this).find("td:eq(2)").text();
+		var eng=$(this).find("td:eq(4)").text();
+		if(kew.length>2){
+			if(!jsd[""+kew]){
+				jsd[""+kew]={"frq":"1","eng":eng};
+			}
+			else{
+				jsd[""+kew]["eng"]=eng;
+			}
+		}
+	});
+	var s="var DaoDeJing_ChineseWangBi_FrqPhrase111=\n"
+	$("#txot").val(s+JSON.stringify(jsd,null,4));
+}
+function autocheck_keyword(){
+
+	function check_exist_in_keyword(kwdarr, kw){
+		var ret=false;
+		kw=$.trim(kw);
+		$.each(kwdarr,function(i,v){
+			if(v.indexOf(kw)>=0){
+				ret=true;
+			}
+		});
+		return ret;
+	}
+	$.each(DaoDeJing_ChineseWangBi_FrqPhrase2,function(kw,obj){
+		var ph2eng=obj["eng"];
+		$.each(DaoDeJing_ChineseWangBi,function(chp,ddj){
+			var kwdarr=DaoDeJing_ChineseWangBiKeywords[chp];
+			if(ddj.indexOf(kw)>=0 && kwdarr.indexOf(kw)<0){
+				if(false===check_exist_in_keyword(kwdarr, kw)){
+					kwdarr.push(kw);
+				};
+			};
+		});
+
+	});
+}
+function get_unique_keywords(){
+	var uniqobj={};
+	$.each(DaoDeJing_ChineseWangBiKeywords, function(chp,kar){
+		$.each(kar,function(i,v){
+			v=$.trim(v);
+			if(!!v&&v.length>0){
+				var eng=DaoDeJingUti.keyword2eng(v);	
+				uniqobj[v]={"chp":chp, "eng":eng}; 	
+			}
+
+		})
+		
+	});	
+	return uniqobj;
+}
+function gen_table_keyword(){
+
+	autocheck_keyword();
+	var uniqKey2eng=get_unique_keywords();
+	var s="<table border='1'><thead><tr><th>#</th><th>ch</th><th>keyword</th><th>len</th><th>eng</th></tr></thead>";
+	s+="<tbody>";
+	var indx=0;
+	$.each(uniqKey2eng, function(kw,obj){
+		var chp=obj["chp"];
+		var eng=obj["eng"];
+		//$.each(ar,function(i,v){
+		//	v=$.trim(v);
+		//	if(!!v&&v.length>0){
+		//		var eng=DaoDeJingUti.keyword2eng(v);
+				s+="<tr><td>"+(indx++)+"</td><td>"+chp+"</td>";
+				s+="<td><a>"+kw+"</a></td>";
+				s+="<td><a>"+kw.length+"</a></td>";
+				s+="<td contenteditable>"+eng+"</td></tr>";				
+		//	}
+
+		//})
+		
+	});
+	s+="</tbody></table>";
+	$("#kewword").html(s);
+}
+</script>
+
+
+
+
+	</head>
+	<body>
+		<textarea id="txot"></textarea>
+
+		
+<div id="out">..</div>
+
+<div id="table_DaoDeJing">out</div>
+
+<div id="kewword"></div>
+		
+
+			&nbsp;</p>
+	</body>
+</html>

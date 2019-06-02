@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+    <TITLE>weeks</TITLE>
+    <META http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+
+    <script language="javascript" src="../ham12/jq/jquery.js"></script>
+    
+    <script language="javascript" src="../ham12/jq/MyCookies.js"></script>
+    
+    <script language="javascript" src="WeekDateMgr.js"></script>
+    
+    <script language="javascript">
+    
+
+
+
+
+
+	$(document).ready(function(){
+	});
+	
+	
+	</script>
+<style>
+th, td {
+    white-space: nowrap;
+}
+</style>    
+</HEAD>
+    <BODY xxxonload="body_onload();">
+
+    <a>Now:</a><a id='curr'><a><br/>
+    
+    <select id='year'></select>
+    <select id='Week'>
+    <option value='0'>Sunday</option>
+    <option value='1'>Monday</option>
+    <option value='2'>Tuesday</option>
+    <option value='3'>Wednsday</option>
+    <option value='4'>Thursday</option>
+    <option value='5'>Friday</option>
+    <option value='6'>Saterday</option>
+    </select>
+    
+    <div id="vbibtxt">
+    </div>
+
+    <a>nextweek:</a><a id='nextweek'><a><br/>
+    </BODY>
+<script language="javascript">
+
+$(document).ready(function(){
+    var cur=new Date();
+    $("#curr").text(cur.toJSON());
+
+    
+    
+
+    genYears();
+    genTable();
+    
+    $("#year").change(function(){
+        genTable();
+    });
+    $("#Week").change(function(){
+        genTable();
+    });
+
+});
+function genYears(){
+    for(var y=2015; y<2035; y++){
+        $("#year").append("<option value='"+y+"'>"+y+"</option>");
+    }
+}
+
+function getTable(iyear,idayOfweek){
+    var wdm = new WeekDateMgr(iyear, idayOfweek ,  0);
+    var arr = wdm.getArr_YYYY_MM_DD();
+    var stb="<table id='WeekDateTable' border='1'><caption>The Dates Of The Week</caption><tr><th>Week#</th><th>Date</th></tr>";
+    $.each(arr,function(i,v){
+     console.log(i+"==========="+v);
+     stb+="<tr><td>"+i+"</td><td>"+v+"</td></tr>";
+    }); 	
+    stb+="</table>";
+    $("#vbibtxt").html(stb);
+    
+    var cm=wdm.FindComingWeekDate();
+    $("#nextweek").text(JSON.stringify(cm));
+    
+    $("#WeekDateTable td").each(function(){
+        var txt = $(this).text();
+        if(txt==cm.date){
+            if(cm.status=='now'){
+                $(this).css("background-color","red");
+            }
+            else{
+                $(this).css("background-color","yellow");
+            }
+        }
+    });
+    
+    
+}
+function genTable(){
+    var idayOfweek=$("#Week").val();
+    var iyear=$("#year").val();
+    getTable(iyear,idayOfweek);
+}
+
+
+
+
+
+</script>
+
+</HTML>

@@ -1,0 +1,1095 @@
+/* MAIN PAGE BACKGROUND COLOR & DEFAULT TEXT COLOR */
+
+BODY {background-color:beige; color:black; font-family:"Times New Roman",Georgia,Serif; margin-left:0; margin-right:0; margin-top:0; margin-bottom:0; behavior: url("/csshover3.htc")}
+
+
+
+/* DEFAULT PARAGRAPH ATTRIBUTES */
+
+P {text-align:justify}
+
+
+
+/* DEFAULT IMAGE ATTRIBUTES */
+
+IMG {border:none}
+
+
+
+/* DEFAULT HORIZONTAL ROW ATTRIBUTES */
+
+HR {background-color:#0099FF; color:#0099FF; height:1px}
+
+
+
+/* BULLET ATTRIBUTES */
+
+UL {list-style:inside url("bullet.gif"); margin-right:0pt; margin-left:10pt}
+LI {margin-top:0pt; margin-bottom:0pt}
+LI.check {list-style-image:url("check.gif")}
+LI.book {list-style-image:url("book.gif")}
+LI.glass {list-style-image:url("glass.gif")}
+
+
+
+/* HEADER & SEARCH TABLE ATTRIBUTES */
+
+/* border #1 */
+TABLE.q {background-color:87cefa}
+
+/* border #2 */
+TABLE.qqqqq {background-color:black}
+
+/* color #1 */
+TD.qq {background-color:e5ecf9}
+
+/* color #2 */
+TD.qqq {background-color:white}
+
+/* header */
+TD.qqqq {background-color:e5ecf9; background-image:url("comments-head.gif")}
+
+/* chapter-nav */
+TD.q0 {background-color:lightblue}
+
+
+
+/* BIBLE BOOK PAGES PARAGRAPH ATTRIBUTES */
+
+P.a {font-family:courier new, verdana, helvetica, sans-serif; font-weight:bold; background-color:#cde0eb; text-align:left}
+
+
+
+/* BIBLE CHAPTER PAGES PARAGRAPH ATTRIBUTES */
+
+P.b {background-color:white; text-align:justify}
+
+
+
+/* BIBLE CHAPTER PAGES PARAGRAPH ATTRIBUTES */
+P.c {background-color:white; direction:rtl; font-size:24px}
+
+
+
+/* BIBLE CHAPTER PAGES PARAGRAPH ATTRIBUTES */
+P.d {}
+
+
+
+/* BIBLE CHAPTER PAGES PARAGRAPH ATTRIBUTES */
+P.e {background-color:pink; font-size:12px}
+
+
+
+/* BIBLE CHAPTER PAGES PARAGRAPH ATTRIBUTES */
+P.f {background-color:white; margin-left:20%; margin-right:20%; padding-left:5px; padding-right:5px; font-style:italic; text-align:justify}
+
+
+
+/* BIBLE VERSE REFERENCE #1 */
+
+/* default */
+A.r {background-color:#E6E6FA; color:#000000; font-weight:bold; text-decoration:none}
+
+/* default */
+A.r:hover {background-color:#645932; color:#FFFFFF; font-weight:bold; text-decoration:none}
+
+/* visited */
+A.r:visited {font-weight:bold; text-decoration:none}
+
+
+
+/* BIBLE VERSE COMMENTS */
+
+/* default */
+A.rc {color:#FFFFFF; font-size:10; vertical-align:top; text-decoration:none}
+
+/* default */
+A.rc:hover {background-color:brown; color:#FFFFFF; text-decoration:none}
+
+/* visited */
+A.rc:visited {text-decoration:none}
+
+
+
+/* BIBLE VERSE CROSS REFERENCES */
+
+/* default */
+A.rr {color:#FFFFFF; font-size:10; vertical-align:top; text-decoration:none}
+
+/* default */
+A.rr:hover {background-color:#645932; color:#FFFFFF; text-decoration:none}
+
+/* visited */
+A.rr:visited {text-decoration:none}
+
+
+
+/* BIBLE VERSE REFERENCE #2 */
+
+/* default */
+A.a {background-color:#FFFFFF; color:#000000; font-size:10; font-weight:bold; vertical-align:top}
+
+
+
+/* BIBLE VERSE NOTE */
+
+/* default */
+A.b {background-color:pink; color:#000000; font-size:10; vertical-align:top}
+
+
+
+/* HOLY NAME & DIVINE TITLES LINK ATTRIBUTES */
+
+/* default */
+A.h {color:#000000; background-color:#FFFF66; text-decoration:none}
+
+/* hover */
+A.h:hover {color:#000000; text-decoration:underline}
+
+/* visited */
+A.h:visited {}
+
+
+
+/* "PRIME" NUMBER LINK ATTRIBUTES */
+
+/* default */
+A.p {color:#000000; background-color:#ede9cf; font-size:10; vertical-align:top; font-family:courier new, verdana, helvetica, sans-serif; font-weight:bold; text-decoration:none}
+
+/* hover */
+A.p:hover {color:#ffffff; background-color:#645932; font-family:courier new, verdana, helvetica, sans-serif; font-weight:bold; text-decoration:none}
+
+/* visited */
+A.p:visited {font-family:courier new, verdana, helvetica, sans-serif; font-weight:bold; text-decoration:none}
+
+/* default */
+A.p0 {color:#000000; background-color:#ede9cf; font-weight:bold; text-decoration:none}
+
+/* hover */
+A.p0:hover {color:#ffffff; background-color:#645932; font-weight:bold; text-decoration:none}
+
+/* visited */
+A.p0:visited {font-weight:bold; text-decoration:none}
+
+
+
+/* "STANDARD" NUMBER LINK ATTRIBUTES */
+
+/* default */
+A.s {color:#000000; background-color:pink; font-size:10; vertical-align:top; font-family:courier new, verdana, helvetica, sans-serif; font-weight:bold; text-decoration:none}
+
+/* hover */
+A.s:hover {color:#ffffff; background-color:#645932; font-family:courier new, verdana, helvetica, sans-serif; font-weight:bold; text-decoration:none}
+
+/* visited */
+A.s:visited {font-family:courier new, verdana, helvetica, sans-serif; font-weight:bold; text-decoration:none}
+
+/* default */
+A.s0 {color:#000000; background-color:pink; font-weight:bold; text-decoration:none}
+
+/* hover */
+A.s0:hover {color:#ffffff; background-color:#645932; font-weight:bold; text-decoration:none}
+
+/* visited */
+A.s0:visited {font-weight:bold; text-decoration:none}
+
+
+
+/* "COMPLEMENT" NUMBER LINK ATTRIBUTES */
+
+/* default */
+A.c {color:#000000; background-color:#cde0eb; font-size:10; vertical-align:top; font-family:courier new, verdana, helvetica, sans-serif; font-weight:bold; text-decoration:none}
+
+/* hover */
+A.c:hover {color:#ffffff; background-color:#645932; font-family:courier new, verdana, helvetica, sans-serif; font-weight:bold; text-decoration:none}
+
+/* visited */
+A.c:visited {font-family:courier new, verdana, helvetica, sans-serif; font-weight:bold; text-decoration:none}
+
+/* default */
+A.c0 {color:#000000; background-color:#cde0eb; font-weight:bold; text-decoration:none}
+
+/* hover */
+A.c0:hover {color:#ffffff; background-color:#645932; font-weight:bold; text-decoration:none}
+
+/* visited */
+A.c0:visited {font-weight:bold; text-decoration:none}
+
+
+
+/* "GRAMMAR" NUMBER LINK ATTRIBUTES */
+
+/* default */
+A.g {color:#000000; background-color:#d3ec9e; font-size:10; vertical-align:top; font-family:courier new, verdana, helvetica, sans-serif; font-weight:bold; text-decoration:none}
+
+/* hover */
+A.g:hover {color:#ffffff; background-color:#645932; font-family:courier new, verdana, helvetica, sans-serif; font-weight:bold; text-decoration:none}
+
+/* visited */
+A.g:visited {font-family:courier new, verdana, helvetica, sans-serif; font-weight:bold; text-decoration:none}
+
+/* default */
+A.g0 {color:#000000; background-color:#d3ec9e; font-weight:bold; text-decoration:none}
+
+/* hover */
+A.g0:hover {color:#ffffff; background-color:#645932; font-weight:bold; text-decoration:none}
+
+/* visited */
+A.g0:visited {font-weight:bold; text-decoration:none}
+
+
+
+
+/* NASB CROSS-REFERENCES & TRANSLATION-NOTES */
+
+/* default */
+A.nasr {color:red; font-size:12; vertical-align:top; text-decoration:none}
+
+/* hover */
+A.nasr:hover {color:#ffffff; background-color:#645932; text-decoration:none}
+
+/* visited */
+A.nasr:visited {text-decoration:none}
+
+/* default */
+A.nasn {color:purple; font-size:12; vertical-align:top; text-decoration:none}
+
+/* hover */
+A.nasn:hover {color:#ffffff; background-color:#645932; text-decoration:none}
+
+/* visited */
+A.nasn:visited {text-decoration:none}
+
+
+
+
+/* NOTES BOXES */
+
+DIV.nas {margin:0px 0px 0px 0px; padding:2px 2px 2px 2px; width:100%; border:1px dashed #CCCCCC; background-color:beige; text-align:justify}
+DIV.nas:hover {margin:0px 0px 0px 0px; padding:2px 2px 2px 2px; width:100%; border:1px solid #990099; background-color:#FFFFCC; text-align:justify}
+
+DIV.kjv {margin:0px 0px 0px 0px; padding:2px 2px 2px 2px; width:100%; border:1px dashed #CCCCCC; background-color:beige; text-align:justify}
+DIV.kjv:hover {margin:0px 0px 0px 0px; padding:2px 2px 2px 2px; width:100%; border:1px solid #0066FF; background-color:#FFFFCC; text-align:justify}
+
+
+TD.nas {background-color:white;}
+TD.kjv {background-color:white;}
+
+
+TABLE.nav-top {background-color:#0099FF;}
+
+
+
+/* CHAPTER OUTLINE LINK ATTRIBUTES */
+
+/* default */
+A.o {color:#000000; background-color:#E6E6FA; font-size:12; font-style:normal; font-weight:bold; text-decoration:none}
+
+/* hover */
+A.o:hover {color:#ffffff; background-color:#645932; font-style:normal; font-weight:bold; text-decoration:none}
+
+/* visited */
+A.o:visited {font-style:normal; font-weight:bold; text-decoration:none}
+
+
+
+/* TRANSLITERATION LINK ATTRIBUTES #0 */
+
+/* default */
+A.t {color:#000000; background-color:#ffffbf; text-decoration:none}
+
+/* hover */
+A.t:hover {color:#000000; text-decoration:underline}
+
+/* visited */
+A.t:visited {}
+
+
+
+/* HEBREW LINK ATTRIBUTES (LEXICON & EMPHATIC) */
+
+/* default */
+A.u {background-color:#FFD700; color:#000000; font-family:Ezra SIL, Ezra SIL SR, SBL Hebrew, David, David Transparent, FrankRuehl, Narkisim, Aharoni, Miriam, Miriam Fixed, Miriam Transparent, Fixed Miriam Transparent, Rod, Rod Transparent, Gisha, Levenim MT, Times New Roman; font-size:22px; text-decoration:none}
+
+
+
+/* GREEK LINK ATTRIBUTES (LEXICON) */
+
+/* default */
+A.uu {background-color:#FFD700; color:#000000; font-family:Tahoma, Times New Roman; font-size:18px; text-decoration:none}
+
+
+
+/* HEBREW LINK ATTRIBUTES #0 */
+
+/* default */
+A.v {background-color:orange; color:#000000; font-family:Ezra SIL, Ezra SIL SR, SBL Hebrew, David, David Transparent, FrankRuehl, Narkisim, Aharoni, Miriam, Miriam Fixed, Miriam Transparent, Fixed Miriam Transparent, Rod, Rod Transparent, Gisha, Levenim MT, Times New Roman; font-size:24px}
+
+
+
+/* HEBREW LINK ATTRIBUTES #1 */
+
+/* default */
+A.w {background-color:yellow; color:#000000; font-family:Ezra SIL, Ezra SIL SR, SBL Hebrew, David, David Transparent, FrankRuehl, Narkisim, Aharoni, Miriam, Miriam Fixed, Miriam Transparent, Fixed Miriam Transparent, Rod, Rod Transparent, Gisha, Levenim MT, Times New Roman; font-size:24px; text-decoration:none}
+
+/* hover */
+A.w:hover {color:#ffffff; background-color:#645932; text-decoration:none}
+
+/* default */
+A.ww {background-color:yellow; color:#000000; text-decoration:none}
+
+/* hover */
+A.ww:hover {color:#ffffff; background-color:#645932; text-decoration:none}
+
+
+
+/* HEBREW LINK ATTRIBUTES #2 */
+
+/* default */
+A.x {background-color:#cde0eb; color:#000000; font-family:Ezra SIL, Ezra SIL SR, SBL Hebrew, David, David Transparent, FrankRuehl, Narkisim, Aharoni, Miriam, Miriam Fixed, Miriam Transparent, Fixed Miriam Transparent, Rod, Rod Transparent, Gisha, Levenim MT, Times New Roman; font-size:24px; text-decoration:none}
+
+/* hover */
+A.x:hover {color:#ffffff; background-color:#645932; text-decoration:none}
+
+/* default */
+A.xx {background-color:#cde0eb; color:#000000; text-decoration:none}
+
+/* hover */
+A.xx:hover {color:#ffffff; background-color:#645932; text-decoration:none}
+
+
+
+/* HEBREW LINK ATTRIBUTES #3 */
+
+/* default */
+A.y {background-color:pink; color:#000000; font-family:Ezra SIL, Ezra SIL SR, SBL Hebrew, David, David Transparent, FrankRuehl, Narkisim, Aharoni, Miriam, Miriam Fixed, Miriam Transparent, Fixed Miriam Transparent, Rod, Rod Transparent, Gisha, Levenim MT, Times New Roman; font-size:24px; text-decoration:none}
+
+/* hover */
+A.y:hover {color:#ffffff; background-color:#645932; text-decoration:none}
+
+/* default */
+A.yy {background-color:#FFD700; color:#000000; text-decoration:none}
+
+/* hover */
+A.yy:hover {color:#ffffff; background-color:#645932; text-decoration:none}
+
+
+
+/* HEBREW LINK ATTRIBUTES #4 (SUFFIXES) */
+
+/* default */
+A.z {background-color:#d3ec9e; color:#000000; font-family:Ezra SIL, Ezra SIL SR, SBL Hebrew, David, David Transparent, FrankRuehl, Narkisim, Aharoni, Miriam, Miriam Fixed, Miriam Transparent, Fixed Miriam Transparent, Rod, Rod Transparent, Gisha, Levenim MT, Times New Roman; font-size:24px; text-decoration:none}
+
+/* hover */
+A.z:hover {color:#ffffff; background-color:#645932; text-decoration:none}
+
+/* default */
+A.zz {background-color:#d3ec9e; color:#000000; text-decoration:none}
+
+/* hover */
+A.zz:hover {color:#ffffff; background-color:#645932; text-decoration:none}
+
+
+
+
+
+
+
+
+/* GREEK LINK ATTRIBUTES #1 */
+
+/* default */
+A.gtt {background-color:#ffffff; color:#000000; font-family:Tahoma, Times New Roman; font-size:18px; text-decoration:none}
+
+/* hover */
+A.gtt:hover {color:#000000; background-color:#cccccc; text-decoration:none}
+
+/* default */
+A.gt {background-color:#ffffff; color:#000000; text-decoration:none}
+
+/* hover */
+A.gt:hover {color:#ffffff; background-color:#cccccc; text-decoration:none}
+
+
+
+/* GREEK LINK ATTRIBUTES #2 */
+
+/* default */
+A.gxx {background-color:#ffffff; color:#000000; font-family:Tahoma, Times New Roman; font-size:18px; text-decoration:none}
+
+/* hover */
+A.gxx:hover {color:#000000; background-color:#000099; text-decoration:none}
+
+/* default */
+A.gx {background-color:#ffffff; color:000099; text-decoration:none}
+
+/* hover */
+A.gx:hover {color:#ffffff; background-color:#000099; text-decoration:none}
+
+
+
+/* GREEK LINK ATTRIBUTES #3 */
+
+/* default */
+A.gvv {background-color:#ffffff; color:#000000; font-family:Tahoma, Times New Roman; font-size:18px; text-decoration:none}
+
+/* hover */
+A.gvv:hover {color:#000000; background-color:fuchsia; text-decoration:none}
+
+/* default */
+A.gv {background-color:#ffffff; color:fuchsia; text-decoration:none}
+
+/* hover */
+A.gv:hover {color:#ffffff; background-color:fuchsia; text-decoration:none}
+
+
+
+/* GREEK LINK ATTRIBUTES #4 */
+
+/* default */
+A.gww {background-color:#ffffff; color:#000000; font-family:Tahoma, Times New Roman; font-size:18px; text-decoration:none}
+
+/* hover */
+A.gww:hover {color:#000000; background-color:#009933; text-decoration:none}
+
+/* default */
+A.gw {background-color:#ffffff; color:009933; text-decoration:none}
+
+/* hover */
+A.gw:hover {color:#ffffff; background-color:#009933; text-decoration:none}
+
+
+
+/* GREEK LINK ATTRIBUTES #5 */
+
+/* default */
+A.guu {background-color:#ffffff; color:#000000; font-family:Tahoma, Times New Roman; font-size:18px; text-decoration:none}
+
+/* hover */
+A.guu:hover {color:#000000; background-color:#0099ff; text-decoration:none}
+
+/* default */
+A.gu {background-color:#ffffff; color:#0099ff; text-decoration:none}
+
+/* hover */
+A.gu:hover {color:#ffffff; background-color:#0099ff; text-decoration:none}
+
+
+
+/* GREEK LINK ATTRIBUTES #6 */
+
+/* default */
+A.gzz {background-color:#ffffff; color:#000000; font-family:Tahoma, Times New Roman; font-size:18px; text-decoration:none}
+
+/* hover */
+A.gzz:hover {color:#000000; background-color:#6600cc; text-decoration:none}
+
+/* default */
+A.gz {background-color:#ffffff; color:#6600cc; text-decoration:none}
+
+/* hover */
+A.gz:hover {color:#ffffff; background-color:#6600cc; text-decoration:none}
+
+
+
+/* GREEK LINK ATTRIBUTES #7 */
+
+/* default */
+A.gyy {background-color:#ffffff; color:#000000; font-family:Tahoma, Times New Roman; font-size:18px; text-decoration:none}
+
+/* hover */
+A.gyy:hover {color:#000000; background-color:#9966cc; text-decoration:none}
+
+/* default */
+A.gy {background-color:#ffffff; color:#9966cc; text-decoration:none}
+
+/* hover */
+A.gy:hover {color:#ffffff; background-color:#9966cc; text-decoration:none}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* LEXICON PAGES KJV REFERENCE LINK ATTRIBUTES */
+
+/* default */
+A.k {color:blue; font-family:times new roman, arial, courier new, verdana, helvetica, sans-serif; text-decoration:underline}
+
+/* hover */
+A.k:hover {color:brown; background-color:yellow; font-family:times new roman, arial, courier new, verdana, helvetica, sans-serif; text-decoration:none}
+
+/* visited */
+A.k:visited {font-family:times new roman, arial, courier new, verdana, helvetica, sans-serif; text-decoration:none}
+
+
+
+/* LEXICON PAGES NUMBER LINK ATTRIBUTES */
+
+/* default */
+A.l {color:#000000; background-color:pink; font-family:times new roman, arial, courier new, verdana, helvetica, sans-serif; font-weight:bold; text-decoration:none}
+
+/* hover */
+A.l:hover {color:#ffffff; background-color:#645932; font-family:times new roman, arial, courier new, verdana, helvetica, sans-serif; font-weight:bold; text-decoration:none}
+
+/* visited */
+A.l:visited {font-family:times new roman, arial, courier new, verdana, helvetica, sans-serif; font-weight:bold; text-decoration:none}
+
+
+
+/* MAIN PAGE LINK ATTRIBUTES */
+
+/* default */
+A.m {color:#483d8b; font-family:times new roman, arial, courier new, verdana, helvetica, sans-serif; text-decoration:none}
+
+/* hover */
+A.m:hover {background-color:#645932; color:#ffffff; text-decoration:none}
+
+
+
+/* BIBLE BOOK CHAPTER & HOME NAVIGATION LINK ATTRIBUTES */
+
+/* default */
+A.n {color:#000000; font-family:courier new, verdana, helvetica, sans-serif; font-weight:bold; text-decoration:none}
+
+/* hover */
+A.n:hover {color:#ffffff; background-color:#645932; font-family:courier new, verdana, helvetica, sans-serif; font-weight:bold; text-decoration:none}
+
+/* visited */
+A.n:visited {font-family:courier new, verdana, helvetica, sans-serif; font-weight:bold; text-decoration:none}
+
+
+
+/* MAIN BODY ARROW ATTRIBUTES */
+
+A.nb:hover {background-color:blue}
+
+
+
+/* PARALLEL VERSIONS ARROW ATTRIBUTES */
+
+A.np:hover {background-color:#990099}
+
+
+
+/* USER COMMENTS ARROW ATTRIBUTES */
+
+A.nc:hover {background-color:green}
+
+
+
+/* CROSS REFERENCE ARROW ATTRIBUTES */
+
+A.nr:hover {background-color:red}
+
+
+
+/* LEXICONCORDANCE ARROW ATTRIBUTES */
+
+A.nl:hover {background-color:orange}
+
+
+
+/* RED-LETTER ATTRIBUTES */
+
+SPAN.r {color:red; background-color:#FFFF66; font-weight:bold}
+
+
+
+/* HOMEPAGE TABLE ATTRIBUTES */
+
+DIV.a {width:100%; padding:5px 5px 5px 5px; border:1px solid black; background-color:white; text-align:left; font-size:16; background-image:url("*.jpg")}
+
+
+
+/* THE PEOPLE'S COMMENTARY TABLE ATTRIBUTES */
+
+DIV.c {width:650px; padding:0px 0px 0px 0px; border:1px solid black; background-color:white; text-align:left; overflow:hidden; word-wrap:break-word; font-size:14; background-image:url("helix.jpg")}
+
+
+
+/* "WORD & REFERENCE SEARCH" TABLE ATTRIBUTES */
+
+DIV.q {width:100%; padding:0px 0px 0px 0px; border:0px solid black; background-color:white; text-align:left; font-size:14; background-image:url("*.jpg")}
+
+
+
+/* HEADER-NAVIGATION BAR ATTRIBUTES */
+
+DIV.v {font-family:courier new, verdana, helvetica, sans-serif; font-weight:bold; background-color:#e5ecf9; text-align:left}
+
+
+
+/* MAIN-LARGE LEXICON TABLE ATTRIBUTES */
+
+DIV.w {width:650px; padding:10px 10px 10px 10px; border:1px solid black; background-color:white; text-align:center; font-size:14; background-image:url("helix.jpg")}
+
+
+
+/* "SEARCH.HTML" TABLE ATTRIBUTES */
+
+DIV.ww {width:728px; padding:10px 10px 10px 10px; border:1px solid black; background-color:white; text-align:center; font-size:14; background-image:url("helix.jpg")}
+
+
+
+/* EMBEDDED-SMALL LEXICON TABLE ATTRIBUTES*/
+
+/* table #1 */
+DIV.x {margin:15px 10px 15px 10px; font-family:courier new, verdana, helvetica, sans-serif; width:620px; border:1px solid black; background-color:#cde0eb; align:center; text-align:left; font-size:14}
+
+/* table #2 */
+DIV.y {margin:15px 10px 15px 10px; padding:10px 10px 10px 10px; width:620px; border:1px solid black; background-color:#ffffbf; align:center; text-align:left; font-size:14}
+
+/* table #3 */
+DIV.z {margin:15px 10px 15px 10px; font-family:courier new, verdana, helvetica, sans-serif; width:620px; border:1px solid black; background-color:#d3ec9e; align:center; text-align:left; font-size:14}
+
+/* table #4 */
+DIV.zz {margin:15px 10px 15px 10px; padding:10px 10px 10px 10px; width:620px; border:1px solid black; background-color:orange; align:center; text-align:left; font-size:14}
+
+/* table #5 */
+DIV.zzz {margin:15px 10px 15px 10px; padding:10px 10px 10px 10px; width:620px; border:1px solid black; background-color:#FFCCFF; align:center; text-align:left; font-size:14}
+
+
+
+/* qTip */
+
+DIV#qTip {BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; DISPLAY: none; PADDING-LEFT: 0px; Z-INDEX: 20; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: hidden; BORDER-LEFT: 0px; WIDTH: 190px; COLOR: transparent; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; POSITION: absolute; HEIGHT: auto}
+
+DIV#qTipData {BORDER-RIGHT: #003399 2px solid; PADDING-RIGHT: 10px; BORDER-TOP: #003399 1px solid; PADDING-LEFT: 10px; BACKGROUND: #e6ecff; PADDING-BOTTOM: 10px; MARGIN: 0px; FONT: 11px Verdana, Arial, Helvetica, sans-serif; OVERFLOW: hidden; BORDER-LEFT: #003399 1px solid; WIDTH: auto; COLOR: #000066; PADDING-TOP: 10px; BORDER-BOTTOM: #003399 2px solid; HEIGHT: auto; TEXT-ALIGN: left; moz-border-radius-bottomleft: 10px; moz-border-radius-bottomright: 10px; moz-border-radius-topleft: 10px; moz-border-radius-topright: 10px; moz-opacity: 1}
+
+
+
+/* qTip #2 */
+
+DIV#qTip2 {BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; DISPLAY: none; PADDING-LEFT: 0px; Z-INDEX: 20; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: hidden; BORDER-LEFT: 0px; WIDTH: 500px; COLOR: transparent; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; POSITION: absolute; HEIGHT: auto}
+
+DIV#qTip2Data {BORDER-RIGHT: #003399 2px solid; PADDING-RIGHT: 10px; BORDER-TOP: #003399 1px solid; PADDING-LEFT: 10px; BACKGROUND: #e6ecff; PADDING-BOTTOM: 10px; MARGIN: 0px; FONT: 11px Verdana, Arial, Helvetica, sans-serif; OVERFLOW: hidden; BORDER-LEFT: #003399 1px solid; WIDTH: auto; COLOR: #000066; PADDING-TOP: 10px; BORDER-BOTTOM: #003399 2px solid; HEIGHT: auto; TEXT-ALIGN: left; moz-border-radius-bottomleft: 10px; moz-border-radius-bottomright: 10px; moz-border-radius-topleft: 10px; moz-border-radius-topright: 10px; moz-opacity: 1}
+
+
+
+/* test test test test */
+
+/* first 2 so far unused */
+
+SPAN.cr1 {background-color:#CCFFFF}
+
+SPAN.cr2 {background-color:#CCCCCC}
+
+
+DIV.c0 {margin:0px 0px 0px 0px; padding:0px 0px 0px 0px; width:100%; border:0px solid black; background-color:green; align:center; text-align:justify; background-image:url("bar-green.png")}
+
+DIV.c1 {margin:0px 0px 0px 0px; padding:0px 0px 0px 0px; width:100%; border:0px solid black; background-color:#F5F5F5; align:center; text-align:justify}
+
+DIV.c {margin:0px 0px 0px 0px; padding:0px 0px 0px 0px; width:100%; border:0px solid black; background-color:#ffffbf; align:center; text-align:justify}
+
+
+
+DIV.r0 {margin:0px 0px 0px 0px; padding:0px 0px 0px 0px; width:100%; border:0px solid black; background-color:red; align:center; text-align:justify; background-image:url("bar-red.png")}
+
+DIV.r1 {margin:0px 0px 0px 0px; padding:0px 0px 0px 0px; width:100%; border:0px solid black; background-color:#FAF0E6; align:center; text-align:justify}
+
+DIV.r {margin:0px 0px 0px 0px; padding:0px 0px 0px 0px; width:100%; border:0px solid black; background-color:#ffffff; align:center; text-align:justify; overflow:hidden}
+
+
+
+SPAN.ra {background-color: #FFFFCC}
+SPAN.ra:hover {background-color: #FFFF66}
+
+SPAN.rb {background-color: #FFFFFF}
+SPAN.rb:hover {background-color: #FFFF66}
+
+
+
+TABLE.bxa {background-color: #0099FF}
+TD.bxb {background-color: #FFFFFF}
+TD.bxb:hover {background-color: #FFFF66}
+TD.bxc {background-color: #FFFFFF}
+
+
+
+DIV.p0 {margin:0px 0px 0px 0px; padding:0px 0px 0px 0px; width:100%; border:0px solid black; background-color:#990099; align:center; text-align:justify; background-image:url("bar-purple.png")}
+/* unused */
+DIV.p1 {margin:0px 0px 0px 0px; padding:0px 0px 0px 0px; width:100%; border:0px solid black; background-color:#CCCCCC; align:center; text-align:justify}
+
+DIV.p {margin:0px 0px 0px 0px; padding:0px 0px 0px 0px; width:100%; border:0px solid black; background-color:#ffffff; align:center; text-align:justify}
+
+
+
+DIV.b0 {margin:0px 0px 0px 0px; padding:0px 0px 0px 0px; width:100%; border:0px solid black; background-color:blue; align:center; text-align:justify; background-image:url("bar-blue.png")}
+/* unused */
+DIV.b1 {margin:0px 0px 0px 0px; padding:0px 0px 0px 0px; width:100%; border:0px solid black; background-color:#CCCCCC; align:center; text-align:justify}
+/* unused */
+DIV.b {margin:0px 0px 0px 0px; padding:10px 10px 10px 10px; width:100%; border:0px solid black; background-color:#ffffff; align:center; text-align:justify}
+
+
+
+DIV.l0 {margin:0px 0px 0px 0px; padding:0px 0px 0px 0px; width:100%; border:0px solid black; background-color:orange; align:center; text-align:justify; background-image:url("bar-orange.png")}
+/* unused */
+DIV.l1 {margin:0px 0px 0px 0px; padding:0px 0px 0px 0px; width:100%; border:0px solid black; background-color:#CCCCCC; align:center; text-align:justify}
+/* unused */
+DIV.l {margin:0px 0px 0px 0px; padding:10px 10px 10px 10px; width:100%; border:0px solid black; background-color:#ffffff; align:center; text-align:justify}
+
+
+
+/* translation table color #1 */
+TD.pa {background-color:#F5F5F5}
+
+/* translation table color #1 */
+TD.pb {background-color:#FAF0E6}
+
+
+
+DD {}
+DT {}
+
+SUP {color:red}
+
+H4 {margin-bottom:0}
+
+
+
+/* BIBLE VERSIONS BY CONTEXT ICONS */
+
+/* hover */
+A.read1:hover {background-color:green}
+
+/* hover */
+A.read2:hover {background-color:red}
+
+/* hover */
+A.read3:hover {background-color:blue}
+
+/* hover */
+A.read4:hover {background-color:orange}
+
+/* hover */
+A.read5:hover {background-color:purple}
+
+
+
+/* BIBLE VERSION INFO LINK */
+
+/* default */
+A.info {color:#0066FF; font-family:times new roman, arial, sans-serif; text-decoration:none}
+
+/* hover */
+A.info:hover {color:purple; font-family:times new roman, arial, sans-serif; text-decoration:underline}
+
+/* visited */
+A.info:visited {font-family:times new roman, arial, sans-serif}
+
+
+
+/* PARALLEL VERSIONS LINKS */
+
+/* default */
+A.ep {color:blue; font-family:times new roman, arial, sans-serif; font-weight:bold; text-decoration:none}
+
+/* hover */
+A.ep:hover {color:#0066FF; font-family:times new roman, arial, sans-serif; font-weight:bold; text-decoration:underline}
+
+/* visited */
+A.ep:visited {font-family:times new roman, arial, sans-serif; font-weight:bold}
+
+
+
+/* USER COMMENTS LINKS */
+
+/* default */
+A.ec {color:blue; font-family:times new roman, arial, sans-serif; text-decoration:none}
+
+/* hover */
+A.ec:hover {color:green; font-family:times new roman, arial, sans-serif; text-decoration:underline}
+
+/* visited */
+A.ec:visited {font-family:times new roman, arial, sans-serif}
+
+
+
+/* CROSS REFERENCE LINKS */
+
+/* default */
+A.er {color:blue; font-family:times new roman, arial, sans-serif; text-decoration:none}
+
+/* hover */
+A.er:hover {color:brown; font-family:times new roman, arial, sans-serif; text-decoration:underline}
+
+/* visited */
+A.er:visited {font-family:times new roman, arial, sans-serif}
+
+
+
+/* NAVIGATION BAR LINKS */
+
+/* default */
+A.eb {color:blue; font-family:times new roman, arial, sans-serif; font-weight:bold; text-decoration:none}
+
+/* hover */
+A.eb:hover {color:#0066FF; font-family:times new roman, arial, sans-serif; text-decoration:underline; font-weight:bold;}
+
+/* visited */
+A.eb:visited {font-family:times new roman, arial, sans-serif}
+
+
+
+/* NAVIGATION BAR LINKS #1 [STRONG'S CONCORDANCE] */
+
+/* default */
+A.nb1 {color:blue; font-family:times new roman, arial, sans-serif; text-decoration:none}
+
+/* hover */
+A.nb1:hover {color:#CC6600; font-family:times new roman, arial, sans-serif; text-decoration:underline}
+
+/* visited */
+A.nb1:visited {font-family:times new roman, arial, sans-serif}
+
+
+
+/* NAVIGATION BAR LINKS #2 [PARALLEL BIBLES] */
+
+/* default */
+A.nb2 {color:blue; font-family:times new roman, arial, sans-serif; text-decoration:none}
+
+/* hover */
+A.nb2:hover {color:purple; font-family:times new roman, arial, sans-serif; text-decoration:underline}
+
+/* visited */
+A.nb2:visited {font-family:times new roman, arial, sans-serif}
+
+
+
+/* NAVIGATION BAR LINKS #3 [CROSS REFERENCE SEARCH] */
+
+/* default */
+A.nb3 {color:blue; font-family:times new roman, arial, sans-serif; text-decoration:none}
+
+/* hover */
+A.nb3:hover {color:brown; font-family:times new roman, arial, sans-serif; text-decoration:underline}
+
+/* visited */
+A.nb3:visited {font-family:times new roman, arial, sans-serif}
+
+
+
+/* NAVIGATION BAR LINKS #4 [USER COMMENTARY] */
+
+/* default */
+A.nb4 {color:blue; font-family:times new roman, arial, sans-serif; text-decoration:none}
+
+/* hover */
+A.nb4:hover {color:green; font-family:times new roman, arial, sans-serif; text-decoration:underline}
+
+/* visited */
+A.nb4:visited {font-family:times new roman, arial, sans-serif}
+
+
+
+/* LEXICONCORDANCE BAR LINKS #1 [STRONG'S CONCORDANCE] */
+
+/* default */
+A.nl1 {color:blue; font-family:times new roman, arial, sans-serif; text-decoration:none}
+
+/* hover */
+A.nl1:hover {color:#CC6600; font-family:times new roman, arial, sans-serif; text-decoration:underline}
+
+/* visited */
+A.nl1:visited {font-family:times new roman, arial, sans-serif}
+
+
+
+/* LEXICONCORDANCE BAR LINKS #2 [PARALLEL BIBLES] */
+
+/* default */
+A.nl2 {color:blue; font-family:times new roman, arial, sans-serif; text-decoration:none}
+
+/* hover */
+A.nl2:hover {color:purple; font-family:times new roman, arial, sans-serif; text-decoration:underline}
+
+/* visited */
+A.nl2:visited {font-family:times new roman, arial, sans-serif}
+
+
+
+/* LEXICONCORDANCE BAR LINKS #3 [CROSS REFERENCE SEARCH] */
+
+/* default */
+A.nl3 {color:blue; font-family:times new roman, arial, sans-serif; text-decoration:none}
+
+/* hover */
+A.nl3:hover {color:brown; font-family:times new roman, arial, sans-serif; text-decoration:underline}
+
+/* visited */
+A.nl3:visited {font-family:times new roman, arial, sans-serif}
+
+
+
+/* LEXICONCORDANCE BAR LINKS #4 [USER COMMENTARY] */
+
+/* default */
+A.nl4 {color:blue; font-family:times new roman, arial, sans-serif; text-decoration:none}
+
+/* hover */
+A.nl4:hover {color:green; font-family:times new roman, arial, sans-serif; text-decoration:underline}
+
+/* visited */
+A.nl4:visited {font-family:times new roman, arial, sans-serif}
+
+
+
+/* TEST RTL */
+
+DIV.rtl {direction:rtl}
+
+
+
+/* DIRECTIONAL & JUSTIFICATION */
+
+DIV.i {text-align:justify}
+DIV.j {direction:rtl}
+
+
+
+#set {width:100%; position: absolute; top:100px; left: 0%; width:; margin-left: -0px; text-align: left}
+
+#nav {width:100%; position: absolute; top:0px; left: 0%; width:; margin-left: -0px; text-align: left}
+
+#cris {width:100%; position: absolute; top:150px; left: 0%; width:; margin-left: -0px; text-align: left}
+
+#cros {width:100%; position: absolute; top:0px; left: 0%; width:; margin-left: -0px; text-align: left}
+
+input:hover { background: aqua; color: black; }
+input:active { background: lime !important; color: black; }
+input:focus { background: yellow; color: black; }
+
+DIV.bx000 {margin:0px 0px 0px 0px; padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px; width:100%; border-width:0px; border-style:solid; border-color:blue; background-color:#0099FF; align:center; text-align:justify; overflow:hidden; word-wrap:break-word}
+
+DIV.bx00 {margin:0px 0px 0px 0px; padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px; width:100%; border-width:0px; border-style:solid; border-color:blue; background-color:lightblue; align:center; text-align:justify; overflow:hidden; word-wrap:break-word}
+
+DIV.bx0 {margin:0px 0px 0px 0px; padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px; width:100%; border-width:1px; border-style:solid; border-color:#0000FF; background-color:#ffffff; align:center; text-align:justify; overflow:hidden; word-wrap:break-word}
+
+A.bx0:hover {background-color:#0000FF}
+
+INPUT.bx0:hover {background-color:#0000FF}
+
+DIV.bx1 {margin:0px 0px 0px 0px; padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px; width:100%; border-width:1px; border-style:solid; border-color:#FF9900; background-color:#ffffff; align:center; text-align:justify; overflow:hidden; word-wrap:break-word}
+
+A.bx1:hover {background-color:#FF9900}
+
+INPUT.bx1:hover {background-color:#FF9900}
+
+DIV.bx2a {margin:0px 0px 0px 0px; padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px; width:100%; border-width:1px; border-style:solid; border-color:#FF0000; background-color:#ffffff; align:center; text-align:justify; overflow:hidden; word-wrap:break-word}
+
+A.bx2a:hover {background-color:#FF0000}
+
+INPUT.bx2a:hover {background-color:#FF0000}
+
+DIV.bx2b {margin:0px 0px 0px 0px; padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px; width:100%; border-width:1px; border-style:solid; border-color:#990099; background-color:#ffffff; align:center; text-align:justify; overflow:hidden; word-wrap:break-word}
+
+A.bx2b:hover {background-color:#990099}
+
+INPUT.bx2b:hover {background-color:#990099}
+
+DIV.bx2c {margin:0px 0px 0px 0px; padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px; width:100%; border-width:1px; border-style:solid; border-color:#FF0000; background-color:#ffffff; align:center; text-align:justify; overflow:hidden; word-wrap:break-word}
+
+A.bx2c:hover {background-color:#FF0000}
+
+INPUT.bx2c:hover {background-color:#FF0000}
+
+DIV.bx2d {margin:0px 0px 0px 0px; padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px; width:100%; border-width:1px; border-style:solid; border-color:#990099; background-color:#ffffff; align:center; text-align:justify; overflow:hidden; word-wrap:break-word}
+
+A.bx2d:hover {background-color:#990099}
+
+INPUT.bx2d:hover {background-color:#990099}
+
+DIV.bx3 {margin:0px 0px 0px 0px; padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px; width:100%; border-width:1px; border-style:solid; border-color:#0099FF; background-color:#ffffff; align:center; text-align:justify; overflow:hidden; word-wrap:break-word}
+
+A.bx3:hover {background-color:#0099FF}
+
+INPUT.bx3:hover {background-color:#0099FF}
+
+DIV.bx4 {margin:0px 0px 0px 0px; padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px; width:100%; border-width:1px; border-style:solid; border-color:#FF00FF; background-color:#ffffff; align:center; text-align:justify; overflow:hidden; word-wrap:break-word}
+
+A.bx4:hover {background-color:#FF00FF}
+
+DIV.bx5 {margin:0px 0px 0px 0px; padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px; width:100%; border-width:1px; border-style:solid; border-color:#FF00FF; background-color:#ffffff; align:center; text-align:justify; overflow:hidden; word-wrap:break-word}
+
+A.bx5:hover {background-color:#FF00FF}
+
+DIV.bx6 {margin:0px 0px 0px 0px; padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px; width:100%; border-width:1px; border-style:solid; border-color:#009900; background-color:#ffffff; align:center; text-align:justify; overflow:hidden; word-wrap:break-word}
+
+A.bx6:hover {background-color:#009900}
+
+DIV.bx7 {margin:0px 0px 0px 0px; padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px; width:100%; border-width:1px; border-style:solid; border-color:#0099FF; background-color:#ffffff; align:center; text-align:justify; overflow:hidden; word-wrap:break-word}
+
+A.bx7:hover {background-color:#0099FF}
+
+DIV.bx8 {margin:0px 0px 0px 0px; padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px; width:100%; border-width:1px; border-style:solid; border-color:#999999; background-color:#ffffff; align:center; text-align:justify; overflow:hidden; word-wrap:break-word}
+
+A.bx8:hover {background-color:#999999}
+
+
+
+/* HEBREW/GREEK/LATIN MARK-UP IN COMMENTARY */
+
+/* default */
+A.hg {color:blue; font-weight:bold}
+
+
+
+DIV.c36 {text-align:justify}
+DIV.c36:hover {background-color: #FFFF66; background: #FFFF66; text-align:justify}
+
+
+
+textarea.form {width: 375px; height: 116px; border: 1px solid #0099ff; padding: 4px; font-family: Tahoma, sans-serif; background-image: url(/_/form.gif)}
+
+
+
+/* default */
+A.ea {color:black; font-size:16px; font-weight:bold; text-decoration:none}
+
+/* hover */
+A.ea:hover {background-color:yellow; color:blue; text-decoration:none}
+
+/* visited */
+A.ea:visited {}
+
+
+
+A {color:blue; text-decoration:none}
+
+/* hover */
+A:hover {color:#0099FF; text-decoration:underline}
+
+/* visited */
+A:visited {}

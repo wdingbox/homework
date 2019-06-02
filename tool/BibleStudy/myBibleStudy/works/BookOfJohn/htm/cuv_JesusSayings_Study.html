@@ -1,0 +1,5184 @@
+<html>
+	<head>
+		<title onclick="alert();">ctxt</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!------->
+		<base target="_blank" />
+		<script src="../../../../../tablesorter_master/js/jquery.tablesorter.js"></script><script src="../../../../myjs/table_Indexer.js"></script><script src="../../../myjs/goto_editor.js"></script>
+		<style type="text/css">
+body {font-family: 'Times New Roman';
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+    }		
+#_MenuPanel{
+position: fixed;
+left: 10px;
+top: 0px;
+}
+
+.fixedcol{
+	position: absolute;
+	background-color: #999999;
+}
+.fixedcol2, thead{
+	background-color: #999999;
+}
+.fixedcol2{
+	background-color: #eeeeee;
+}
+.catlog{
+	background-color: #cccccc;
+}
+.strongs{
+	background-color: #ffffff;
+}
+.Jesay{
+	color: red;
+}
+.All_Top_Horz{
+	background-color: red;
+}
+.leftbox{
+  background-color: #ff0000;
+}
+.tablefloatheb {float: right; margin: 2px;border-collapse: false;background-color: #eeeeee }
+.hebrew
+{
+    FONT-SIZE: 23px;
+    COLOR: #001320;
+    LINE-HEIGHT: 33px;
+    font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+    TEXT-DECORATION: none;
+}		</style>
+		<script>
+$(function(){
+    $(".narration").toggle();
+    $(".TheTitle").click(function(){
+        $(".narration").toggle();
+    } );
+    $("#strongsCodes").click(function(){
+    	$(".strongs, .translit").slideToggle();
+    });
+
+    $("body").click(function(){
+    	$("#_edit").slideToggle();
+    });
+
+    $("#relativeFrqRate").click(function(){
+    	cal_relativeFrqRate();
+    });
+
+
+    $(".fixedcol2").click(function(){
+    	alert();
+    });
+
+
+    var jesa='';
+    $(".Jesay").each(function(){
+    	jesa+="\n"+$(this).text().trim();
+    });
+    $("#txout").val(jesa);
+
+});/////////
+
+$(document).ready(function(){ 
+	goto_editor("_edit_url");
+	sort_table();
+});//
+function sort_table(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+
+
+</script>
+	</head>
+	<body>
+		<p id="_MenuPanel">
+			<br />
+			<a id="_edit_url">...</a><br />
+			<a id="indxer">indxer</a>
+			<textarea id="txout"></textarea>
+		</p>
+		<!--------------------------><!--------------------------><!-------------------------->
+		<p style="text-align: center;">
+			<font size="3"><b>Jesus Word In John</b></font></p>
+		<p>
+			&nbsp;</p>
+		<table border="1" id="cuv">
+			<thead>
+				<tr>
+					<td>
+						#</td>
+					<td>
+						v</td>
+					<td>
+						s</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						study</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn1_38">Jhn 1:38</a></td>
+					<td>
+						<a id="_Jhn1_38_">耶稣转过身来、看见他们跟着、就问他们说、<span class='Jesay'>你们要甚么。</span>他们说、拉比、在那里住。（拉比翻出来、就是夫子。）</a><a id="_Jhn1_38_c"> </a></td>
+					<td>
+						what do you want?</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn1_39">Jhn 1:39</a></td>
+					<td>
+						<a id="_Jhn1_39_">耶稣说、<span class='Jesay'>你们来看。</span>他们就去看他在那里住、这一天便与他同住、那时约有申正了。</a><a id="_Jhn1_39_c"> </a></td>
+					<td>
+						come and see</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn1_42">Jhn 1:42</a></td>
+					<td>
+						<a id="_Jhn1_42_">于是领他去见耶稣。耶稣看着他说、<span class='Jesay'>你是约翰的儿子西门、</span>〔约翰马太十六章十七节称约拿〕<span class='Jesay'>你要称为矶法．</span>（矶法翻出来、就是彼得。）</a><a id="_Jhn1_42_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn1_43">Jhn 1:43</a></td>
+					<td>
+						<a id="_Jhn1_43_">又次日、耶稣想要往加利利去、遇见腓力、就对他说、<span class='Jesay'>来跟从我吧。</span></a><a id="_Jhn1_43_c"> </a></td>
+					<td>
+						come and follow me.</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn1_47">Jhn 1:47</a></td>
+					<td>
+						<a id="_Jhn1_47_">耶稣看见拿但业来、就指着他说、<span class='Jesay'>看哪、这是个真以色列人、他心里是没有诡诈的。</span></a><a id="_Jhn1_47_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn1_48">Jhn 1:48</a></td>
+					<td>
+						<a id="_Jhn1_48_">拿但业对耶稣说、你从那里知道我呢。耶稣回答说、<span class='Jesay'>腓力还没有招呼你、你在无花果树底下、我就看见你了。</span></a><a id="_Jhn1_48_c"> </a></td>
+					<td>
+						I already saw&nbsp;you.</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn1_50">Jhn 1:50</a></td>
+					<td>
+						<a id="_Jhn1_50_">耶稣对他说、<span class='Jesay'>因为我说在无花果树底下看见你、你就信么．你将要看见比这更大的事。</span></a><a id="_Jhn1_50_c"> </a></td>
+					<td>
+						I have greater things to suprise you.</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn1_51">Jhn 1:51</a></td>
+					<td>
+						<a id="_Jhn1_51_">又说、<span class='Jesay'>我实实在在的告诉你们、你们将要看见天开了、　神的使者上去下来在人子身上。</span></a><a id="_Jhn1_51_c"> </a></td>
+					<td>
+						truly x25<br />
+						SonOfMan</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn2_4">Jhn 2:4</a></td>
+					<td>
+						<a id="_Jhn2_4_">耶稣说、<span class='Jesay'>母亲、〔原文作妇人〕我与你有甚么相干．我的时候还没有到。</span></a><a id="_Jhn2_4_c"> </a></td>
+					<td>
+						do not conform to the world</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn2_7">Jhn 2:7</a></td>
+					<td>
+						<a id="_Jhn2_7_">耶稣对用人说、<span class='Jesay'>把缸倒满了水．</span>他们就倒满了、直到缸口。</a><a id="_Jhn2_7_c"> </a></td>
+					<td>
+						fill my water</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn2_8">Jhn 2:8</a></td>
+					<td>
+						<a id="_Jhn2_8_">耶稣又说、<span class='Jesay'>现在可以舀出来、送给管筵席的．</span>他们就送了去。</a><a id="_Jhn2_8_c"> </a></td>
+					<td>
+						now you can give</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn2_16">Jhn 2:16</a></td>
+					<td>
+						<a id="_Jhn2_16_">又对卖鸽子的说、<span class='Jesay'>把这些东西拿去．不要将我父的殿、当作买卖的地方。</span></a><a id="_Jhn2_16_c"> </a></td>
+					<td>
+						do not mess up my body</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn2_19">Jhn 2:19</a></td>
+					<td>
+						<a id="_Jhn2_19_">耶稣回答说、<span class='Jesay'>你们拆毁这殿、我三日内要再建立起来。</span></a><a id="_Jhn2_19_c"> </a></td>
+					<td>
+						I clean again</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn3_3">Jhn 3:3</a></td>
+					<td>
+						<a id="_Jhn3_3_">耶稣回答说、<span class='Jesay'>我实实在在的告诉你、人若不重生、就不能见　神的国。</span></a><a id="_Jhn3_3_c"> </a></td>
+					<td>
+						born again</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn3_5">Jhn 3:5</a></td>
+					<td>
+						<a id="_Jhn3_5_">耶稣说、<span class='Jesay'>我实实在在的告诉你、人若不是从水和圣灵生的、就不能进　神的国。</span></a><a id="_Jhn3_5_c"> </a></td>
+					<td>
+						water Spirit</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn3_6">Jhn 3:6</a></td>
+					<td>
+						<a id="_Jhn3_6_"><span class='Jesay'>从肉身生的、就是肉身．从灵生的、就是灵。</span></a><a id="_Jhn3_6_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn3_7">Jhn 3:7</a></td>
+					<td>
+						<a id="_Jhn3_7_"><span class='Jesay'>我说、你们必须重生、你不要以为希奇。</span></a><a id="_Jhn3_7_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn3_8">Jhn 3:8</a></td>
+					<td>
+						<a id="_Jhn3_8_"><span class='Jesay'>风随着意思吹、你听见风的响声、却不晓得从那里来、往那里去．凡从圣灵生的、也是如此。</span></a><a id="_Jhn3_8_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn3_10">Jhn 3:10</a></td>
+					<td>
+						<a id="_Jhn3_10_">耶稣回答说、<span class='Jesay'>你是以色列人的先生、还不明白这事么。</span></a><a id="_Jhn3_10_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn3_11">Jhn 3:11</a></td>
+					<td>
+						<a id="_Jhn3_11_"><span class='Jesay'>我实实在在的告诉你、我们所说的、是我们知道的、我们所见证的、是我们见过的．你们却不领受我们的见证。</span></a><a id="_Jhn3_11_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn3_12">Jhn 3:12</a></td>
+					<td>
+						<a id="_Jhn3_12_"><span class='Jesay'>我对你们说地上的事、你们尚且不信、若说天上的事、如何能信呢。</span></a><a id="_Jhn3_12_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn3_13">Jhn 3:13</a></td>
+					<td>
+						<a id="_Jhn3_13_"><span class='Jesay'>除了从天降下仍旧在天的人子、没有人升过天。</span></a><a id="_Jhn3_13_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn3_14">Jhn 3:14</a></td>
+					<td>
+						<a id="_Jhn3_14_"><span class='Jesay'>摩西在旷野怎样举蛇、人子也必照样被举起来．</span></a><a id="_Jhn3_14_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn3_15">Jhn 3:15</a></td>
+					<td>
+						<a id="_Jhn3_15_"><span class='Jesay'>叫一切信他的都得永生。</span>〔或作叫一切信的人在他里面得永生〕</a><a id="_Jhn3_15_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn3_16">Jhn 3:16</a></td>
+					<td>
+						<a id="_Jhn3_16_"><span class='Jesay'>神爱世人、甚至将他的独生子赐给他们、叫一切信他的、不至灭亡、反得永生。</span></a><a id="_Jhn3_16_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn3_17">Jhn 3:17</a></td>
+					<td>
+						<a id="_Jhn3_17_"><span class='Jesay'>因为　神差他的儿子降世、不是要定世人的罪、〔或作审判世人下同〕乃是要叫世人因他得救。</span></a><a id="_Jhn3_17_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn3_18">Jhn 3:18</a></td>
+					<td>
+						<a id="_Jhn3_18_"><span class='Jesay'>信他的人、不被定罪．不信的人、罪已经定了、因为他不信　神独生子的名。</span></a><a id="_Jhn3_18_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn3_19">Jhn 3:19</a></td>
+					<td>
+						<a id="_Jhn3_19_"><span class='Jesay'>光来到世间、世人因自己的行为是恶的、不爱光倒爱黑暗、定他们的罪就是在此。</span></a><a id="_Jhn3_19_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn3_20">Jhn 3:20</a></td>
+					<td>
+						<a id="_Jhn3_20_"><span class='Jesay'>凡作恶的便恨光、并不来就光、恐怕他的行为受责备。</span></a><a id="_Jhn3_20_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn3_21">Jhn 3:21</a></td>
+					<td>
+						<a id="_Jhn3_21_"><span class='Jesay'>但行真理的必来就光、要显明他所行的是靠　神而行。</span></a><a id="_Jhn3_21_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn4_7">Jhn 4:7</a></td>
+					<td>
+						<a id="_Jhn4_7_">有一个撒玛利亚的妇人来打水．耶稣对他说、<span class='Jesay'>请你给我水喝。</span></a><a id="_Jhn4_7_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn4_10">Jhn 4:10</a></td>
+					<td>
+						<a id="_Jhn4_10_">耶稣回答说、<span class='Jesay'>你若知道　神的恩赐、和对你说给我水喝的是谁、你必早求他、他也必早给了你活水。</span></a><a id="_Jhn4_10_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn4_13">Jhn 4:13</a></td>
+					<td>
+						<a id="_Jhn4_13_">耶稣回答说、<span class='Jesay'>凡喝这水的、还要再渴．</span></a><a id="_Jhn4_13_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn4_14">Jhn 4:14</a></td>
+					<td>
+						<a id="_Jhn4_14_"><span class='Jesay'>人若喝我所赐的水就永远不渴．我所赐的水、要在他里头成为泉源、直涌到永生。</span></a><a id="_Jhn4_14_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn4_16">Jhn 4:16</a></td>
+					<td>
+						<a id="_Jhn4_16_">耶稣说、<span class='Jesay'>你去叫你丈夫也到这里来。</span></a><a id="_Jhn4_16_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						-</td>
+					<td>
+						<a class="versKey" id="_Jhn4_17">Jhn 4:17</a></td>
+					<td>
+						<a id="_Jhn4_17_">妇人说、我没有丈夫。耶稣说、<span class='Jesay'>你说没有丈夫、是不错的．</span></a><a id="_Jhn4_17_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn4_18">Jhn 4:18</a></td>
+					<td>
+						<a id="_Jhn4_18_"><span class='Jesay'>你已经有五个丈夫．你现在有的、并不是你的丈夫．你这话是真的．</span></a><a id="_Jhn4_18_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn4_21">Jhn 4:21</a></td>
+					<td>
+						<a id="_Jhn4_21_">耶稣说、<span class='Jesay'>妇人、你当信我、时候将到、你们拜父、也不在这山上、也不在耶路撒冷。</span></a><a id="_Jhn4_21_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn4_22">Jhn 4:22</a></td>
+					<td>
+						<a id="_Jhn4_22_"><span class='Jesay'>你们所拜的、你们不知道．我们所拜的、我们知道．因为救恩是从犹太人出来的。</span></a><a id="_Jhn4_22_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn4_23">Jhn 4:23</a></td>
+					<td>
+						<a id="_Jhn4_23_"><span class='Jesay'>时候将到、如今就是了、那真正拜父的、要用心灵和诚实拜他、因为父要这样的人拜他。</span></a><a id="_Jhn4_23_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn4_24">Jhn 4:24</a></td>
+					<td>
+						<a id="_Jhn4_24_"><span class='Jesay'>神是个灵．〔或无个字〕所以拜他的、必须用心灵和诚实拜他。</span></a><a id="_Jhn4_24_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn4_26">Jhn 4:26</a></td>
+					<td>
+						<a id="_Jhn4_26_">耶稣说、<span class='Jesay'>这和你说话的就是他。</span></a><a id="_Jhn4_26_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn4_32">Jhn 4:32</a></td>
+					<td>
+						<a id="_Jhn4_32_">耶稣说、<span class='Jesay'>我有食物吃、是你们不知道的。</span></a><a id="_Jhn4_32_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn4_34">Jhn 4:34</a></td>
+					<td>
+						<a id="_Jhn4_34_">耶稣说、<span class='Jesay'>我的食物就是遵行差我来者的旨意、作成他的工。</span></a><a id="_Jhn4_34_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn4_35">Jhn 4:35</a></td>
+					<td>
+						<a id="_Jhn4_35_"><span class='Jesay'>你们岂不说、到收割的时候、还有四个月么．我告诉你们、举目向田观看、庄稼已经熟了、〔原文作发白〕可以收割了。</span></a><a id="_Jhn4_35_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn4_36">Jhn 4:36</a></td>
+					<td>
+						<a id="_Jhn4_36_"><span class='Jesay'>收割的人得工价、积蓄五谷到永生．叫撒种的和收割的一同快乐。</span></a><a id="_Jhn4_36_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn4_37">Jhn 4:37</a></td>
+					<td>
+						<a id="_Jhn4_37_"><span class='Jesay'>俗语说、那人撒种、这人收割、这话可见是真的。</span></a><a id="_Jhn4_37_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn4_38">Jhn 4:38</a></td>
+					<td>
+						<a id="_Jhn4_38_"><span class='Jesay'>我差你们去收你们所没有劳苦的．别人劳苦、你们享受他们所劳苦的。</span></a><a id="_Jhn4_38_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn4_48">Jhn 4:48</a></td>
+					<td>
+						<a id="_Jhn4_48_">耶稣就对他说、<span class='Jesay'>若不看见神迹奇事、你们总是不信。</span></a><a id="_Jhn4_48_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn4_50">Jhn 4:50</a></td>
+					<td>
+						<a id="_Jhn4_50_">耶稣对他说、<span class='Jesay'>回去吧．你的儿子活了。</span>那人信耶稣所说的话、就回去了。</a><a id="_Jhn4_50_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_6">Jhn 5:6</a></td>
+					<td>
+						<a id="_Jhn5_6_">耶稣看见他躺着、知道他病了许久、就问他说、<span class='Jesay'>你要痊癒么。</span></a><a id="_Jhn5_6_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_8">Jhn 5:8</a></td>
+					<td>
+						<a id="_Jhn5_8_">耶稣对他说、<span class='Jesay'>起来、拿你的褥子走吧。</span></a><a id="_Jhn5_8_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_14">Jhn 5:14</a></td>
+					<td>
+						<a id="_Jhn5_14_">后来耶稣在殿里遇见他、对他说、<span class='Jesay'>你已经痊癒了．不要再犯罪、恐怕你遭遇的更加利害。</span></a><a id="_Jhn5_14_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_17">Jhn 5:17</a></td>
+					<td>
+						<a id="_Jhn5_17_">耶稣就对他们说、<span class='Jesay'>我父作事直到如今、我也作事。</span></a><a id="_Jhn5_17_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_19">Jhn 5:19</a></td>
+					<td>
+						<a id="_Jhn5_19_">耶稣对他们说、<span class='Jesay'>我实实在在的告诉你们、子凭着自己不能作甚么、惟有看见父所作的、子才能作．父所作的事、子也照样作。</span></a><a id="_Jhn5_19_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_20">Jhn 5:20</a></td>
+					<td>
+						<a id="_Jhn5_20_"><span class='Jesay'>父爱子、将自己所作的一切事指给他看．还要将比这更大的事指给他看、叫你们希奇。</span></a><a id="_Jhn5_20_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_21">Jhn 5:21</a></td>
+					<td>
+						<a id="_Jhn5_21_"><span class='Jesay'>父怎样叫死人起来、使他们活着、子也照样随自己的意思使人活着。</span></a><a id="_Jhn5_21_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_22">Jhn 5:22</a></td>
+					<td>
+						<a id="_Jhn5_22_"><span class='Jesay'>父不审判甚么人、乃将审判的事全交与子。</span></a><a id="_Jhn5_22_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_23">Jhn 5:23</a></td>
+					<td>
+						<a id="_Jhn5_23_"><span class='Jesay'>叫人都尊敬子如同尊敬父一样。不尊敬子的、就是不尊敬差子来的父。</span></a><a id="_Jhn5_23_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_24">Jhn 5:24</a></td>
+					<td>
+						<a id="_Jhn5_24_"><span class='Jesay'>我实实在在的告诉你们、那听我话、又信差我来者的、就有永生、不至于定罪、是已经出死入生了。</span></a><a id="_Jhn5_24_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_25">Jhn 5:25</a></td>
+					<td>
+						<a id="_Jhn5_25_"><span class='Jesay'>我实实在在的告诉你们、时候将到、现在就是了、死人要听见　神儿子的声音．听见的人就要活了。</span></a><a id="_Jhn5_25_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_26">Jhn 5:26</a></td>
+					<td>
+						<a id="_Jhn5_26_"><span class='Jesay'>因为父怎样在自己有生命、就赐给他儿子也照样在自己有生命．</span></a><a id="_Jhn5_26_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_27">Jhn 5:27</a></td>
+					<td>
+						<a id="_Jhn5_27_"><span class='Jesay'>并且因为他是人子、就赐给他行审判的权柄。</span></a><a id="_Jhn5_27_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_28">Jhn 5:28</a></td>
+					<td>
+						<a id="_Jhn5_28_"><span class='Jesay'>你们不要把这事看作希奇．时候要到、凡在坟墓里的、都要听见他的声音、就出来．</span></a><a id="_Jhn5_28_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_29">Jhn 5:29</a></td>
+					<td>
+						<a id="_Jhn5_29_"><span class='Jesay'>行善的复活得生、作恶的复活定罪。</span></a><a id="_Jhn5_29_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_30">Jhn 5:30</a></td>
+					<td>
+						<a id="_Jhn5_30_"><span class='Jesay'>我凭着自己不能作甚么．我怎么听见、就怎么审判．我的审判也是公平的．因为我不求自己的意思、只求那差我来者的意思。</span></a><a id="_Jhn5_30_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_31">Jhn 5:31</a></td>
+					<td>
+						<a id="_Jhn5_31_"><span class='Jesay'>我若为自己作见证、我的见证就不真。</span></a><a id="_Jhn5_31_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_32">Jhn 5:32</a></td>
+					<td>
+						<a id="_Jhn5_32_"><span class='Jesay'>另有一位给我作见证．我也知道他给我作的见证是真的。</span></a><a id="_Jhn5_32_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_33">Jhn 5:33</a></td>
+					<td>
+						<a id="_Jhn5_33_"><span class='Jesay'>你们曾差人到约翰那里、他为真理作过见证。</span></a><a id="_Jhn5_33_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_34">Jhn 5:34</a></td>
+					<td>
+						<a id="_Jhn5_34_"><span class='Jesay'>其实我所受的见证、不是从人来的．然而我说这些话、为要叫你们得救。</span></a><a id="_Jhn5_34_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_35">Jhn 5:35</a></td>
+					<td>
+						<a id="_Jhn5_35_"><span class='Jesay'>约翰是点着的明灯．你们情愿暂时喜欢他的光。</span></a><a id="_Jhn5_35_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_36">Jhn 5:36</a></td>
+					<td>
+						<a id="_Jhn5_36_"><span class='Jesay'>但我有比约翰更大的见证．因为父交给我要我成就的事、就是我所作的事、这便见证我是父所差来的。</span></a><a id="_Jhn5_36_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_37">Jhn 5:37</a></td>
+					<td>
+						<a id="_Jhn5_37_"><span class='Jesay'>差我来的父也为我作过见证。你们从来没有听见他的声音、也没有看见他的形像。</span></a><a id="_Jhn5_37_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_38">Jhn 5:38</a></td>
+					<td>
+						<a id="_Jhn5_38_"><span class='Jesay'>你们并没有他的道存在心里．因为他所差来的、你们不信。</span></a><a id="_Jhn5_38_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_39">Jhn 5:39</a></td>
+					<td>
+						<a id="_Jhn5_39_"><span class='Jesay'>你们查考圣经．〔或作应当查考圣经〕因你们以为内中有永生．给我作见证的就是这经。</span></a><a id="_Jhn5_39_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_40">Jhn 5:40</a></td>
+					<td>
+						<a id="_Jhn5_40_"><span class='Jesay'>然而你们不肯到我这里来得生命。</span></a><a id="_Jhn5_40_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_41">Jhn 5:41</a></td>
+					<td>
+						<a id="_Jhn5_41_"><span class='Jesay'>我不受从人来的荣耀。</span></a><a id="_Jhn5_41_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_42">Jhn 5:42</a></td>
+					<td>
+						<a id="_Jhn5_42_"><span class='Jesay'>但我知道你们心里、没有　神的爱。</span></a><a id="_Jhn5_42_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_43">Jhn 5:43</a></td>
+					<td>
+						<a id="_Jhn5_43_"><span class='Jesay'>我奉我父的名来、你们并不接待我．若有别人奉自己的名来、你们倒要接待他。</span></a><a id="_Jhn5_43_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_44">Jhn 5:44</a></td>
+					<td>
+						<a id="_Jhn5_44_"><span class='Jesay'>你们互相受荣耀、却不求从独一之　神来的荣耀、怎能信我呢。</span></a><a id="_Jhn5_44_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_45">Jhn 5:45</a></td>
+					<td>
+						<a id="_Jhn5_45_"><span class='Jesay'>不要想我在父面前要告你们．有一位告你们的、就是你们所仰赖的摩西。</span></a><a id="_Jhn5_45_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_46">Jhn 5:46</a></td>
+					<td>
+						<a id="_Jhn5_46_"><span class='Jesay'>你们如果信摩西、也必信我．因为他书上有指着我写的话。</span></a><a id="_Jhn5_46_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn5_47">Jhn 5:47</a></td>
+					<td>
+						<a id="_Jhn5_47_"><span class='Jesay'>你们若不信他的书、怎能信我的话呢。</span></a><a id="_Jhn5_47_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_5">Jhn 6:5</a></td>
+					<td>
+						<a id="_Jhn6_5_">耶稣举目看见许多人来、就对腓力说、<span class='Jesay'>我们从那里买饼叫这些人吃呢。</span></a><a id="_Jhn6_5_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_10">Jhn 6:10</a></td>
+					<td>
+						<a id="_Jhn6_10_">耶稣说、<span class='Jesay'>你们叫众人坐下。</span>原来那地方的草多、众人就坐下、数目约有五千。</a><a id="_Jhn6_10_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_12">Jhn 6:12</a></td>
+					<td>
+						<a id="_Jhn6_12_">他们吃饱了、耶稣对门徒说、<span class='Jesay'>把剩下的零碎、收拾起来、免得有糟蹋的。</span></a><a id="_Jhn6_12_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_20">Jhn 6:20</a></td>
+					<td>
+						<a id="_Jhn6_20_">耶稣对他们说、<span class='Jesay'>是我．不要怕。</span></a><a id="_Jhn6_20_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_26">Jhn 6:26</a></td>
+					<td>
+						<a id="_Jhn6_26_">耶稣回答说、<span class='Jesay'>我实实在在的告诉你们、你们找我、并不是因见了神迹、乃是因吃饼得饱。</span></a><a id="_Jhn6_26_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_27">Jhn 6:27</a></td>
+					<td>
+						<a id="_Jhn6_27_"><span class='Jesay'>不要为那必坏的食物劳力、要为那存到永生的食物劳力、就是人子要赐给你们的．因为人子是父　神所印证的。</span></a><a id="_Jhn6_27_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_29">Jhn 6:29</a></td>
+					<td>
+						<a id="_Jhn6_29_">耶稣回答说、<span class='Jesay'>信　神所差来的、这就是作　神的工。</span></a><a id="_Jhn6_29_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_32">Jhn 6:32</a></td>
+					<td>
+						<a id="_Jhn6_32_">耶稣说、<span class='Jesay'>我实实在在的告诉你们、那从天上来的粮、不是摩西赐给你们的、乃是我父将天上来的真粮赐给你们。</span></a><a id="_Jhn6_32_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_33">Jhn 6:33</a></td>
+					<td>
+						<a id="_Jhn6_33_"><span class='Jesay'>因为　神的粮、就是那从天上降下来赐生命给世界的。</span></a><a id="_Jhn6_33_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_35">Jhn 6:35</a></td>
+					<td>
+						<a id="_Jhn6_35_">耶稣说、<span class='Jesay'>我就是生命的粮．到我这里来的、必定不饿．信我的、永远不渴。</span></a><a id="_Jhn6_35_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_36">Jhn 6:36</a></td>
+					<td>
+						<a id="_Jhn6_36_"><span class='Jesay'>只是我对你们说过、你们已经看见我、还是不信。</span></a><a id="_Jhn6_36_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_37">Jhn 6:37</a></td>
+					<td>
+						<a id="_Jhn6_37_"><span class='Jesay'>凡父所赐给我的人、必到我这里来．到我这里来的、我总不丢弃他。</span></a><a id="_Jhn6_37_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_38">Jhn 6:38</a></td>
+					<td>
+						<a id="_Jhn6_38_"><span class='Jesay'>因为我从天上降下来、不是要按自己的意思行、乃是要按那差我来者的意思行。</span></a><a id="_Jhn6_38_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_39">Jhn 6:39</a></td>
+					<td>
+						<a id="_Jhn6_39_"><span class='Jesay'>差我来者的意思、就是他所赐给我的、叫我一个也不失落、在末日却叫他复活。</span></a><a id="_Jhn6_39_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_40">Jhn 6:40</a></td>
+					<td>
+						<a id="_Jhn6_40_"><span class='Jesay'>因为我父的意思、是叫一切见子而信的人得永生．并且在末日我要叫他复活。</span></a><a id="_Jhn6_40_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_43">Jhn 6:43</a></td>
+					<td>
+						<a id="_Jhn6_43_">耶稣回答说、<span class='Jesay'>你们不要大家议论。</span></a><a id="_Jhn6_43_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_44">Jhn 6:44</a></td>
+					<td>
+						<a id="_Jhn6_44_"><span class='Jesay'>若不是差我来的父吸引人、就没有能到我这里来的．到我这里来的、在末日我要叫他复活。</span></a><a id="_Jhn6_44_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_45">Jhn 6:45</a></td>
+					<td>
+						<a id="_Jhn6_45_"><span class='Jesay'>在先知书上写着说、『他们都要蒙　神的教训。』凡听见父之教训又学习的、就到我这里来。</span></a><a id="_Jhn6_45_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_46">Jhn 6:46</a></td>
+					<td>
+						<a id="_Jhn6_46_"><span class='Jesay'>这不是说、有人看见过父、惟独从　神来的、他看见过父。</span></a><a id="_Jhn6_46_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_47">Jhn 6:47</a></td>
+					<td>
+						<a id="_Jhn6_47_"><span class='Jesay'>我实实在在的告诉你们、信的人有永生。</span></a><a id="_Jhn6_47_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_48">Jhn 6:48</a></td>
+					<td>
+						<a id="_Jhn6_48_"><span class='Jesay'>我就是生命的粮。</span></a><a id="_Jhn6_48_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_49">Jhn 6:49</a></td>
+					<td>
+						<a id="_Jhn6_49_"><span class='Jesay'>你们的祖宗在旷野吃过吗哪、还是死了。</span></a><a id="_Jhn6_49_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_50">Jhn 6:50</a></td>
+					<td>
+						<a id="_Jhn6_50_"><span class='Jesay'>这是从天上降下来的粮、叫人吃了就不死。</span></a><a id="_Jhn6_50_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_51">Jhn 6:51</a></td>
+					<td>
+						<a id="_Jhn6_51_"><span class='Jesay'>我是从天上降下来生命的粮．人若吃这粮、就必永远活着．我所要赐的粮、就是我的肉、为世人之生命所赐的。</span></a><a id="_Jhn6_51_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_53">Jhn 6:53</a></td>
+					<td>
+						<a id="_Jhn6_53_">耶稣说、<span class='Jesay'>我实实在在的告诉你们、你们若不吃人子的肉、不喝人子的血、就没有生命在你们里面。</span></a><a id="_Jhn6_53_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_54">Jhn 6:54</a></td>
+					<td>
+						<a id="_Jhn6_54_"><span class='Jesay'>吃我肉喝我血的人就有永生．在末日我要叫他复活。</span></a><a id="_Jhn6_54_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_55">Jhn 6:55</a></td>
+					<td>
+						<a id="_Jhn6_55_"><span class='Jesay'>我的肉真是可吃的、我的血真是可喝的。</span></a><a id="_Jhn6_55_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_56">Jhn 6:56</a></td>
+					<td>
+						<a id="_Jhn6_56_"><span class='Jesay'>吃我肉喝我血的人、常在我里面、我也常在他里面。</span></a><a id="_Jhn6_56_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_57">Jhn 6:57</a></td>
+					<td>
+						<a id="_Jhn6_57_"><span class='Jesay'>永活的父怎样差我来、我又因父活着、照样、吃我肉的人、也要因我活着。</span></a><a id="_Jhn6_57_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_58">Jhn 6:58</a></td>
+					<td>
+						<a id="_Jhn6_58_"><span class='Jesay'>这就是从天上降下来的粮．吃这粮的人、就永远活着、不像你们的祖宗吃过吗哪、还是死了。</span></a><a id="_Jhn6_58_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_61">Jhn 6:61</a></td>
+					<td>
+						<a id="_Jhn6_61_">耶稣心里知道门徒为这话议论、就对他们说、<span class='Jesay'>这话是叫你们厌弃么。</span>〔厌弃原文作跌倒〕</a><a id="_Jhn6_61_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_62">Jhn 6:62</a></td>
+					<td>
+						<a id="_Jhn6_62_"><span class='Jesay'>倘或你们看见人子升到他原来所在之处、怎么样呢</span>。</a><a id="_Jhn6_62_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_63">Jhn 6:63</a></td>
+					<td>
+						<a id="_Jhn6_63_"><span class='Jesay'>叫人活着的乃是灵、肉体是无益的．我对你们所说的话、就是灵、就是生命。</span></a><a id="_Jhn6_63_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_64">Jhn 6:64</a></td>
+					<td>
+						<a id="_Jhn6_64_"><span class='Jesay'>只是你们中间有不信的人。</span>耶稣从起头就知道、谁不信他、谁要卖他。</a><a id="_Jhn6_64_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_65">Jhn 6:65</a></td>
+					<td>
+						<a id="_Jhn6_65_">耶稣又说、<span class='Jesay'>所以我对你们说过、若不是蒙我父的恩赐、没有人能到我这里来。</span></a><a id="_Jhn6_65_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_67">Jhn 6:67</a></td>
+					<td>
+						<a id="_Jhn6_67_">耶稣就对那十二个门徒说、<span class='Jesay'>你们也要去么。</span></a><a id="_Jhn6_67_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn6_70">Jhn 6:70</a></td>
+					<td>
+						<a id="_Jhn6_70_">耶稣说、<span class='Jesay'>我不是拣选了你们十二个门徒么．但你们中间有一个是魔鬼。</span></a><a id="_Jhn6_70_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn7_6">Jhn 7:6</a></td>
+					<td>
+						<a id="_Jhn7_6_">耶稣就对他们说、<span class='Jesay'>我的时候还没有到．你们的时候常是方便的。</span></a><a id="_Jhn7_6_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn7_7">Jhn 7:7</a></td>
+					<td>
+						<a id="_Jhn7_7_"><span class='Jesay'>世人不能恨你们、却是恨我．因为我指证他们所作的事是恶的。</span></a><a id="_Jhn7_7_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn7_8">Jhn 7:8</a></td>
+					<td>
+						<a id="_Jhn7_8_"><span class='Jesay'>你们上去过节吧．我现在不上去过这节．因为我的时候还没有满。</span></a><a id="_Jhn7_8_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn7_16">Jhn 7:16</a></td>
+					<td>
+						<a id="_Jhn7_16_">耶稣说、<span class='Jesay'>我的教训不是我自己的、乃是那差我来者的。</span></a><a id="_Jhn7_16_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn7_17">Jhn 7:17</a></td>
+					<td>
+						<a id="_Jhn7_17_"><span class='Jesay'>人若立志遵着他的旨意行、就必晓得这教训或是出于　神、或是我凭着自己说的。</span></a><a id="_Jhn7_17_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn7_18">Jhn 7:18</a></td>
+					<td>
+						<a id="_Jhn7_18_"><span class='Jesay'>人凭着自己说、是求自己的荣耀．惟有求那差他来者的荣耀、这人是真的、在他心里没有不义。</span></a><a id="_Jhn7_18_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn7_19">Jhn 7:19</a></td>
+					<td>
+						<a id="_Jhn7_19_"><span class='Jesay'>摩西岂不是传律法给你们么．你们却没有一个人守律法。为甚么想要杀我呢。</span></a><a id="_Jhn7_19_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn7_21">Jhn 7:21</a></td>
+					<td>
+						<a id="_Jhn7_21_">耶稣说、<span class='Jesay'>我作了一件事、你们都以为希奇。</span></a><a id="_Jhn7_21_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn7_22">Jhn 7:22</a></td>
+					<td>
+						<a id="_Jhn7_22_"><span class='Jesay'>摩西传割礼给你们、（其实不是从摩西起的、乃是从祖先起的）因此你们也在安息日给人行割礼。</span></a><a id="_Jhn7_22_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn7_23">Jhn 7:23</a></td>
+					<td>
+						<a id="_Jhn7_23_"><span class='Jesay'>人若在安息日受割礼、免得违背摩西的律法、我在安息日叫一个人全然好了、你们就向我生气么。</span></a><a id="_Jhn7_23_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn7_24">Jhn 7:24</a></td>
+					<td>
+						<a id="_Jhn7_24_"><span class='Jesay'>不可按外貌断定是非、总要按公平断定是非。</span></a><a id="_Jhn7_24_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn7_28">Jhn 7:28</a></td>
+					<td>
+						<a id="_Jhn7_28_">那时耶稣在殿里教训人、大声说、<span class='Jesay'>你们也知道我、也知道我从那里来．我来并不是由于自己、但那差我来的是真的．你们不认识他。</span></a><a id="_Jhn7_28_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn7_29">Jhn 7:29</a></td>
+					<td>
+						<a id="_Jhn7_29_"><span class='Jesay'>我却认识他．因为我是从他来的、他也是差了我来。</span></a><a id="_Jhn7_29_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn7_33">Jhn 7:33</a></td>
+					<td>
+						<a id="_Jhn7_33_">于是耶稣说、<span class='Jesay'>我还有不多的时候和你们同在、以后就回到差我来的那里去。</span></a><a id="_Jhn7_33_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn7_34">Jhn 7:34</a></td>
+					<td>
+						<a id="_Jhn7_34_"><span class='Jesay'>你们要找我、却找不着．我所在的地方你们不能到。</span></a><a id="_Jhn7_34_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn7_37">Jhn 7:37</a></td>
+					<td>
+						<a id="_Jhn7_37_">节期的末日、就是最大之日、耶稣站着高声说、<span class='Jesay'>人若渴了、可以到我这里来喝。</span></a><a id="_Jhn7_37_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn7_38">Jhn 7:38</a></td>
+					<td>
+						<a id="_Jhn7_38_"><span class='Jesay'>信我的人、就如经上所说、从他腹中要流出活水的江河来。</span></a><a id="_Jhn7_38_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_7">Jhn 8:7</a></td>
+					<td>
+						<a id="_Jhn8_7_">他们还是不住的问他、耶稣就直起腰来、对他们说、<span class='Jesay'>你们中间谁是没有罪的、谁就可以先拿石头打他．</span></a><a id="_Jhn8_7_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_10">Jhn 8:10</a></td>
+					<td>
+						<a id="_Jhn8_10_">耶稣就直起腰来、对他说、<span class='Jesay'>妇人、那些人在哪里呢．没有人定你的罪么。</span></a><a id="_Jhn8_10_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_11">Jhn 8:11</a></td>
+					<td>
+						<a id="_Jhn8_11_">他说、主阿、没有。耶稣说、<span class='Jesay'>我也不定你的罪．去吧．从此不要再犯罪了。</span></a><a id="_Jhn8_11_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_12">Jhn 8:12</a></td>
+					<td>
+						<a id="_Jhn8_12_">耶稣又对众人说、<span class='Jesay'>我是世界的光．跟从我的、就不在黑暗里走、必要得着生命的光。</span></a><a id="_Jhn8_12_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_14">Jhn 8:14</a></td>
+					<td>
+						<a id="_Jhn8_14_">耶稣说、<span class='Jesay'>我虽然为自己作见证、我的见证还是真的．因我知道我从那里来、往那里去．你们却不知道我从那里来、往那里去。</span></a><a id="_Jhn8_14_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_15">Jhn 8:15</a></td>
+					<td>
+						<a id="_Jhn8_15_"><span class='Jesay'>你们是以外貌〔原文作凭肉身〕判断人．我却不判断人。</span></a><a id="_Jhn8_15_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_16">Jhn 8:16</a></td>
+					<td>
+						<a id="_Jhn8_16_"><span class='Jesay'>就是判断人、我的判断也是真的．因为不是我独自在这里、还有差我来的父与我同在。</span></a><a id="_Jhn8_16_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_17">Jhn 8:17</a></td>
+					<td>
+						<a id="_Jhn8_17_"><span class='Jesay'>你们的律法上也记着说、两个人的见证是真的。</span></a><a id="_Jhn8_17_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_18">Jhn 8:18</a></td>
+					<td>
+						<a id="_Jhn8_18_"><span class='Jesay'>我是为自己作见证、还有差我来的父、也是为我作见证。</span></a><a id="_Jhn8_18_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						-</td>
+					<td>
+						<a class="versKey" id="_Jhn8_19">Jhn 8:19</a></td>
+					<td>
+						<a id="_Jhn8_19_">他们就问他说、你的父在那里。耶稣回答说、<span class='Jesay'>你们不认识我、也不认识我的父．若是认识我、也就认识我的父。</span></a><a id="_Jhn8_19_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_21">Jhn 8:21</a></td>
+					<td>
+						<a id="_Jhn8_21_">耶稣又对他们说、<span class='Jesay'>我要去了、你们要找我、并且你们要死在罪中．我所去的地方、你们不能到。</span></a><a id="_Jhn8_21_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_23">Jhn 8:23</a></td>
+					<td>
+						<a id="_Jhn8_23_">耶稣对他们说、<span class='Jesay'>你们是从下头来的、我是从上头来的．你们是属这世界的、我不是属这世界的。</span></a><a id="_Jhn8_23_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_24">Jhn 8:24</a></td>
+					<td>
+						<a id="_Jhn8_24_"><span class='Jesay'>所以我对你们说、你们要死在罪中、你们若不信我是基督、必要死在罪中。</span></a><a id="_Jhn8_24_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						-</td>
+					<td>
+						<a class="versKey" id="_Jhn8_25">Jhn 8:25</a></td>
+					<td>
+						<a id="_Jhn8_25_">他们就问他说、你是谁。耶稣对他们说、<span class='Jesay'>就是我从起初所告诉你们的。</span></a><a id="_Jhn8_25_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_26">Jhn 8:26</a></td>
+					<td>
+						<a id="_Jhn8_26_"><span class='Jesay'>我有许多事讲论你们、判断你们、但那差我来的是真的．我在他那里所听见的、我就传给世人。</span></a><a id="_Jhn8_26_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_28">Jhn 8:28</a></td>
+					<td>
+						<a id="_Jhn8_28_">所以耶稣说、<span class='Jesay'>你们举起人子以后、必知道我是基督、并且知道我没有一件事、是凭着自己作的．我说这些话、乃是照着父所教训我的。</span></a><a id="_Jhn8_28_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_29">Jhn 8:29</a></td>
+					<td>
+						<a id="_Jhn8_29_"><span class='Jesay'>那差我来的、是与我同在．他没有撇下我独自在这里、因为我常作他所喜悦的事。</span></a><a id="_Jhn8_29_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_31">Jhn 8:31</a></td>
+					<td>
+						<a id="_Jhn8_31_">耶稣对信他的犹太人说、<span class='Jesay'>你们若常常遵守我的道、就真是我的门徒。</span></a><a id="_Jhn8_31_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_32">Jhn 8:32</a></td>
+					<td>
+						<a id="_Jhn8_32_"><span class='Jesay'>你们必晓得真理、真理必叫你们得以自由。</span></a><a id="_Jhn8_32_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_34">Jhn 8:34</a></td>
+					<td>
+						<a id="_Jhn8_34_">耶稣回答说、<span class='Jesay'>我实实在在的告诉你们．所有犯罪的、就是罪的奴仆。</span></a><a id="_Jhn8_34_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_35">Jhn 8:35</a></td>
+					<td>
+						<a id="_Jhn8_35_"><span class='Jesay'>奴仆不能永远住在家里、儿子是永远住在家里。</span></a><a id="_Jhn8_35_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_36">Jhn 8:36</a></td>
+					<td>
+						<a id="_Jhn8_36_"><span class='Jesay'>所以天父的儿子若叫你们自由、你们就真自由了。</span></a><a id="_Jhn8_36_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_37">Jhn 8:37</a></td>
+					<td>
+						<a id="_Jhn8_37_"><span class='Jesay'>我知道你们是亚伯拉罕的子孙、你们却想要杀我．因为你们心里容不下我的道。</span></a><a id="_Jhn8_37_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_38">Jhn 8:38</a></td>
+					<td>
+						<a id="_Jhn8_38_"><span class='Jesay'>我所说的、是在我父那里看见的．你们所行的、是在你们的父那里听见的。</span></a><a id="_Jhn8_38_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_39">Jhn 8:39</a></td>
+					<td>
+						<a id="_Jhn8_39_">他们说、我们的父就是亚伯拉罕。耶稣说、<span class='Jesay'>你们若是亚伯拉罕的儿子、就必行亚伯拉罕所行的事。</span></a><a id="_Jhn8_39_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_40">Jhn 8:40</a></td>
+					<td>
+						<a id="_Jhn8_40_"><span class='Jesay'>我将在　神那里所听见的真理、告诉了你们、现在你们却想要杀我．这不是亚伯拉罕所行的事</span>．</a><a id="_Jhn8_40_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_41">Jhn 8:41</a></td>
+					<td>
+						<a id="_Jhn8_41_"><span class='Jesay'>你们是行你们父所行的事。</span>他们说、我们不是从淫乱生的．我们只有一位父就是　神。</a><a id="_Jhn8_41_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_42">Jhn 8:42</a></td>
+					<td>
+						<a id="_Jhn8_42_">耶稣说、<span class='Jesay'>倘若　神是你们的父、你们就必爱我．因为我本是出于　神、也是从　神而来、并不是由着自己来、乃是他差我来。</span></a><a id="_Jhn8_42_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_43">Jhn 8:43</a></td>
+					<td>
+						<a id="_Jhn8_43_"><span class='Jesay'>你们为甚么不明白我的话呢、无非是因你们不能听我的道。</span></a><a id="_Jhn8_43_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_44">Jhn 8:44</a></td>
+					<td>
+						<a id="_Jhn8_44_"><span class='Jesay'>你们是出于你们的父魔鬼、你们父的私欲、你们偏要行、他从起初是杀人的、不守真理．因他心里没有真理、他说谎是出于自己、因他本来是说谎的、也是说谎之人的父。</span></a><a id="_Jhn8_44_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_45">Jhn 8:45</a></td>
+					<td>
+						<a id="_Jhn8_45_"><span class='Jesay'>我将真理告诉你们、你们就因此不信我。</span></a><a id="_Jhn8_45_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_46">Jhn 8:46</a></td>
+					<td>
+						<a id="_Jhn8_46_"><span class='Jesay'>你们中间谁能指证我有罪呢。我既然将真理告诉你们、为甚么不信我呢</span>。</a><a id="_Jhn8_46_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_47">Jhn 8:47</a></td>
+					<td>
+						<a id="_Jhn8_47_"><span class='Jesay'>出于　神的、必听　神的话．你们不听、因为你们不是出于　神。</span></a><a id="_Jhn8_47_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_49">Jhn 8:49</a></td>
+					<td>
+						<a id="_Jhn8_49_">耶稣说、<span class='Jesay'>我不是鬼附着的．我尊敬我的父、你们倒轻慢我。</span></a><a id="_Jhn8_49_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_50">Jhn 8:50</a></td>
+					<td>
+						<a id="_Jhn8_50_"><span class='Jesay'>我不求自己的荣耀．有一位为我求荣耀定是非的。</span></a><a id="_Jhn8_50_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_51">Jhn 8:51</a></td>
+					<td>
+						<a id="_Jhn8_51_"><span class='Jesay'>我实实在在的告诉你们、人若遵守我的道、就永远不见死。</span></a><a id="_Jhn8_51_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_54">Jhn 8:54</a></td>
+					<td>
+						<a id="_Jhn8_54_">耶稣回答说、<span class='Jesay'>我若荣耀自己、我的荣耀就算不得甚么．荣耀我的乃是我的父、就是你们所说是你们的　神。</span></a><a id="_Jhn8_54_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_55">Jhn 8:55</a></td>
+					<td>
+						<a id="_Jhn8_55_"><span class='Jesay'>你们未曾认识他．我却认识他．我若说不认识他、我就是说谎的、像你们一样、但我认识他、也遵守他的道。</span></a><a id="_Jhn8_55_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_56">Jhn 8:56</a></td>
+					<td>
+						<a id="_Jhn8_56_"><span class='Jesay'>你们的祖宗亚伯拉罕欢欢喜喜的仰望我的日子．既看见了、就快乐。</span></a><a id="_Jhn8_56_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn8_58">Jhn 8:58</a></td>
+					<td>
+						<a id="_Jhn8_58_">耶稣说、<span class='Jesay'>我实实在在的告诉你们、还没有亚伯拉罕、就有了我。</span></a><a id="_Jhn8_58_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn9_3">Jhn 9:3</a></td>
+					<td>
+						<a id="_Jhn9_3_">耶稣回答说、<span class='Jesay'>也不是这人犯了罪、也不是他父母犯了罪、是要在他身上显出　神的作为来。</span></a><a id="_Jhn9_3_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn9_4">Jhn 9:4</a></td>
+					<td>
+						<a id="_Jhn9_4_"><span class='Jesay'>趁着白日、我们必须作那差我来者的工．黑夜将到、就没有人能作工了。</span></a><a id="_Jhn9_4_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn9_5">Jhn 9:5</a></td>
+					<td>
+						<a id="_Jhn9_5_"><span class='Jesay'>我在世上的时候、是世上的光。</span></a><a id="_Jhn9_5_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn9_7">Jhn 9:7</a></td>
+					<td>
+						<a id="_Jhn9_7_">对他说、<span class='Jesay'>你往西罗亚池子里去洗、</span>（西罗亚翻出来、就是奉差遣）他去一洗、回头就看见了。</a><a id="_Jhn9_7_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn9_35">Jhn 9:35</a></td>
+					<td>
+						<a id="_Jhn9_35_">耶稣听说他们把他赶出去．后来遇见他、就说、<span class='Jesay'>你信　神的儿子么。</span></a><a id="_Jhn9_35_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn9_37">Jhn 9:37</a></td>
+					<td>
+						<a id="_Jhn9_37_">耶稣说、<span class='Jesay'>你已经看见他、现在和你说话的就是他。</span></a><a id="_Jhn9_37_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn9_39">Jhn 9:39</a></td>
+					<td>
+						<a id="_Jhn9_39_">耶稣说、<span class='Jesay'>我为审判到这世上来、叫不能看见的、可以看见．能看见的、反瞎了眼。</span></a><a id="_Jhn9_39_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn9_41">Jhn 9:41</a></td>
+					<td>
+						<a id="_Jhn9_41_">耶稣对他们说、<span class='Jesay'>你们若瞎了眼、就没有罪了．但如今你们说、我们能看见、所以你们的罪还在。</span></a><a id="_Jhn9_41_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_1">Jhn 10:1</a></td>
+					<td>
+						<a id="_Jhn10_1_"><span class='Jesay'>我实实在在的告诉你们、人进羊圈、不从门进去、倒从别处爬进去、那人就是贼、就是强盗。</span></a><a id="_Jhn10_1_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_2">Jhn 10:2</a></td>
+					<td>
+						<a id="_Jhn10_2_"><span class='Jesay'>从门进去的、才是羊的牧人。</span></a><a id="_Jhn10_2_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_3">Jhn 10:3</a></td>
+					<td>
+						<a id="_Jhn10_3_"><span class='Jesay'>看门的就给他开门．羊也听他的声音．他按著名叫自己的羊、把羊领出来。</span></a><a id="_Jhn10_3_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_4">Jhn 10:4</a></td>
+					<td>
+						<a id="_Jhn10_4_"><span class='Jesay'>既放出自己的羊来、就在前头走、羊也跟着他、因为认得他的声音。</span></a><a id="_Jhn10_4_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_5">Jhn 10:5</a></td>
+					<td>
+						<a id="_Jhn10_5_"><span class='Jesay'>羊不跟着生人、因为不认得他的声音．必要逃跑。</span></a><a id="_Jhn10_5_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_7">Jhn 10:7</a></td>
+					<td>
+						<a id="_Jhn10_7_">所以耶稣又对他们说、<span class='Jesay'>我实实在在的告诉你们、我就是羊的门</span></a><a id="_Jhn10_7_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_8">Jhn 10:8</a></td>
+					<td>
+						<a id="_Jhn10_8_"><span class='Jesay'>凡在我以先来的、都是贼、是强盗．羊却不听他们。</span></a><a id="_Jhn10_8_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_9">Jhn 10:9</a></td>
+					<td>
+						<a id="_Jhn10_9_"><span class='Jesay'>我就是门．凡从我进来的、必然得救、并且出入得草吃。</span></a><a id="_Jhn10_9_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_10">Jhn 10:10</a></td>
+					<td>
+						<a id="_Jhn10_10_"><span class='Jesay'>盗贼来、无非要偷窃、杀害、毁坏．我来了、是要叫羊〔或作人〕得生命、并且得的更丰盛。</span></a><a id="_Jhn10_10_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_11">Jhn 10:11</a></td>
+					<td>
+						<a id="_Jhn10_11_"><span class='Jesay'>我是好牧人、好牧人为羊舍命。</span></a><a id="_Jhn10_11_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_12">Jhn 10:12</a></td>
+					<td>
+						<a id="_Jhn10_12_"><span class='Jesay'>若是雇工、不是牧人、羊也不是他自己的、他看见狼来、就撇下羊逃走．狼抓住羊、赶散了羊群。</span></a><a id="_Jhn10_12_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_13">Jhn 10:13</a></td>
+					<td>
+						<a id="_Jhn10_13_"><span class='Jesay'>雇工逃走、因他是雇工、并不顾念羊。</span></a><a id="_Jhn10_13_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_14">Jhn 10:14</a></td>
+					<td>
+						<a id="_Jhn10_14_"><span class='Jesay'>我是好牧人．我认识我的羊、我的羊也认识我。</span></a><a id="_Jhn10_14_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_15">Jhn 10:15</a></td>
+					<td>
+						<a id="_Jhn10_15_"><span class='Jesay'>正如父认识我、我也认识父一样．并且我为羊舍命。</span></a><a id="_Jhn10_15_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_16">Jhn 10:16</a></td>
+					<td>
+						<a id="_Jhn10_16_"><span class='Jesay'>我另外有羊、不是这圈里的．我必须领他们来、他们也要听我的声音．并且要合成一群、归一个牧人了。</span></a><a id="_Jhn10_16_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_17">Jhn 10:17</a></td>
+					<td>
+						<a id="_Jhn10_17_"><span class='Jesay'>我父爱我、因我将命舍去、好再取回来。</span></a><a id="_Jhn10_17_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_18">Jhn 10:18</a></td>
+					<td>
+						<a id="_Jhn10_18_"><span class='Jesay'>没有人夺我的命去、是我自己舍的。我有权柄舍了、也有权柄取回来．这是我从我父所受的命令。</span></a><a id="_Jhn10_18_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_25">Jhn 10:25</a></td>
+					<td>
+						<a id="_Jhn10_25_">耶稣回答说、<span class='Jesay'>我已经告诉你们、你们不信．我奉我父之名所行的事、可以为我作见证。</span></a><a id="_Jhn10_25_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_26">Jhn 10:26</a></td>
+					<td>
+						<a id="_Jhn10_26_"><span class='Jesay'>只是你们不信、因为你们不是我的羊。</span></a><a id="_Jhn10_26_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_27">Jhn 10:27</a></td>
+					<td>
+						<a id="_Jhn10_27_"><span class='Jesay'>我的羊听我的声音、我也认识他们、他们也跟着我。</span></a><a id="_Jhn10_27_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_28">Jhn 10:28</a></td>
+					<td>
+						<a id="_Jhn10_28_"><span class='Jesay'>我又赐给他们永生．他们永不灭亡、谁也不能从我手里把他们夺去</span>。</a><a id="_Jhn10_28_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_29">Jhn 10:29</a></td>
+					<td>
+						<a id="_Jhn10_29_"><span class='Jesay'>我父把羊赐给我、他比万有都大．谁也不能从我父手里把他们夺去</span>。</a><a id="_Jhn10_29_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_30">Jhn 10:30</a></td>
+					<td>
+						<a id="_Jhn10_30_"><span class='Jesay'>我与父原为一。</span></a><a id="_Jhn10_30_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_32">Jhn 10:32</a></td>
+					<td>
+						<a id="_Jhn10_32_">耶稣对他们说、<span class='Jesay'>我从父显出许多善事给你们看、你们是为那一件拿石头打我呢。</span></a><a id="_Jhn10_32_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_34">Jhn 10:34</a></td>
+					<td>
+						<a id="_Jhn10_34_">耶稣说、<span class='Jesay'>你们的律法上岂不是写着、『我曾说你们是　神』么。</span></a><a id="_Jhn10_34_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_35">Jhn 10:35</a></td>
+					<td>
+						<a id="_Jhn10_35_"><span class='Jesay'>经上的话是不能废的．若那些承受　神道的人、尚且称为　神、</span></a><a id="_Jhn10_35_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_36">Jhn 10:36</a></td>
+					<td>
+						<a id="_Jhn10_36_"><span class='Jesay'>父所分别为圣、又差到世间来的、他自称是　神的儿子、你们还向他说、你说僭妄的话么。</span></a><a id="_Jhn10_36_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_37">Jhn 10:37</a></td>
+					<td>
+						<a id="_Jhn10_37_"><span class='Jesay'>我若不行我父的事、你们就不必信我。</span></a><a id="_Jhn10_37_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn10_38">Jhn 10:38</a></td>
+					<td>
+						<a id="_Jhn10_38_"><span class='Jesay'>我若行了、你们纵然不信我、也当信这些事．叫你们又知道、又明白、父在我里面、我也在父里面。</span></a><a id="_Jhn10_38_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn11_4">Jhn 11:4</a></td>
+					<td>
+						<a id="_Jhn11_4_">耶稣听见就说、<span class='Jesay'>这病不至于死、乃是为　神的荣耀、叫　神的儿子因此得荣耀。</span></a><a id="_Jhn11_4_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn11_7">Jhn 11:7</a></td>
+					<td>
+						<a id="_Jhn11_7_">然后对门徒说、<span class='Jesay'>我们再往犹太去吧。</span></a><a id="_Jhn11_7_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn11_9">Jhn 11:9</a></td>
+					<td>
+						<a id="_Jhn11_9_">耶稣回答说、<span class='Jesay'>白日不是有十二小时么。人在白日走路、就不至跌倒、因为看见这世上的光。</span></a><a id="_Jhn11_9_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn11_10">Jhn 11:10</a></td>
+					<td>
+						<a id="_Jhn11_10_"><span class='Jesay'>若在黑夜走路、就必跌倒、因为他没有光。</span></a><a id="_Jhn11_10_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn11_11">Jhn 11:11</a></td>
+					<td>
+						<a id="_Jhn11_11_">耶稣说了这话、随后对他们说、<span class='Jesay'>我们的朋友拉撒路睡了、我去叫醒他。</span></a><a id="_Jhn11_11_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn11_14">Jhn 11:14</a></td>
+					<td>
+						<a id="_Jhn11_14_">耶稣就明明的告诉他们说、<span class='Jesay'>拉撒路死了。</span></a><a id="_Jhn11_14_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn11_15">Jhn 11:15</a></td>
+					<td>
+						<a id="_Jhn11_15_"><span class='Jesay'>我没有在那里就欢喜、这是为你们的缘故、好叫你们相信．如今我们可以往他那里去吧。</span></a><a id="_Jhn11_15_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn11_23">Jhn 11:23</a></td>
+					<td>
+						<a id="_Jhn11_23_">耶稣说、<span class='Jesay'>你兄弟必然复活。</span></a><a id="_Jhn11_23_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn11_25">Jhn 11:25</a></td>
+					<td>
+						<a id="_Jhn11_25_">耶稣对他说、<span class='Jesay'>复活在我、生命也在我．信我的人、虽然死了、也必复活．</span></a><a id="_Jhn11_25_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn11_26">Jhn 11:26</a></td>
+					<td>
+						<a id="_Jhn11_26_"><span class='Jesay'>凡活着信我的人、必永远不死。你信这话么。</span></a><a id="_Jhn11_26_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn11_34">Jhn 11:34</a></td>
+					<td>
+						<a id="_Jhn11_34_">便说、<span class='Jesay'>你们把他安放在那里．</span>他们回答说、请主来看。</a><a id="_Jhn11_34_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn11_39">Jhn 11:39</a></td>
+					<td>
+						<a id="_Jhn11_39_">耶稣说、<span class='Jesay'>你们把石头挪开。</span>那死人的姐姐马大对他说、主阿、他现在必是臭了、因为他死了已经四天了。</a><a id="_Jhn11_39_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn11_40">Jhn 11:40</a></td>
+					<td>
+						<a id="_Jhn11_40_">耶稣说、<span class='Jesay'>我不是对你说过、你若信、就必看见　神的荣耀么。</span></a><a id="_Jhn11_40_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn11_41">Jhn 11:41</a></td>
+					<td>
+						<a id="_Jhn11_41_">他们就把石头挪开．耶稣举目望天说、<span class='Jesay'>父阿、我感谢你、因为你已经听我。</span></a><a id="_Jhn11_41_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn11_42">Jhn 11:42</a></td>
+					<td>
+						<a id="_Jhn11_42_"><span class='Jesay'>我也知道你常听我、但我说这话、是为周围站着的众人、叫他们信是你差了我来。</span></a><a id="_Jhn11_42_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn11_43">Jhn 11:43</a></td>
+					<td>
+						<a id="_Jhn11_43_">说了这话、就大声呼叫说、<span class='Jesay'>拉撒路出来。</span></a><a id="_Jhn11_43_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn11_44">Jhn 11:44</a></td>
+					<td>
+						<a id="_Jhn11_44_">那死人就出来了、手脚裹着布、脸上包着手巾。耶稣对他们说、<span class='Jesay'>解开、叫他走。</span></a><a id="_Jhn11_44_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn12_7">Jhn 12:7</a></td>
+					<td>
+						<a id="_Jhn12_7_">耶稣说、<span class='Jesay'>由他吧、他是为我安葬之日存留的。</span></a><a id="_Jhn12_7_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn12_8">Jhn 12:8</a></td>
+					<td>
+						<a id="_Jhn12_8_"><span class='Jesay'>因为常有穷人和你们同在．只是你们不常有我。</span></a><a id="_Jhn12_8_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn12_23">Jhn 12:23</a></td>
+					<td>
+						<a id="_Jhn12_23_">耶稣说、<span class='Jesay'>人子得荣耀的时候到了。</span></a><a id="_Jhn12_23_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn12_24">Jhn 12:24</a></td>
+					<td>
+						<a id="_Jhn12_24_"><span class='Jesay'>我实实在在的告诉你们、一粒麦子不落在地里死了、仍旧是一粒．若是死了、就结出许多子粒来。</span></a><a id="_Jhn12_24_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn12_25">Jhn 12:25</a></td>
+					<td>
+						<a id="_Jhn12_25_"><span class='Jesay'>爱惜自己生命的、就失丧生命．在这世上恨恶自己生命的、就要保守生命到永生。</span></a><a id="_Jhn12_25_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn12_26">Jhn 12:26</a></td>
+					<td>
+						<a id="_Jhn12_26_"><span class='Jesay'>若有人服事我、就当跟从我．我在那里、服事我的人、也要在那里．若有人服事我、我父必尊重他。</span></a><a id="_Jhn12_26_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn12_27">Jhn 12:27</a></td>
+					<td>
+						<a id="_Jhn12_27_"><span class='Jesay'>我现在心里忧愁、我说甚么才好呢．父阿、救我脱离这时候．但我原是为这时候来的。</span></a><a id="_Jhn12_27_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn12_28">Jhn 12:28</a></td>
+					<td>
+						<a id="_Jhn12_28_"><span class='Jesay'>父阿、愿你荣耀你的名．</span>当时就有声音从天上来说、我已经荣耀了我的名、还要再荣耀。</a><a id="_Jhn12_28_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn12_30">Jhn 12:30</a></td>
+					<td>
+						<a id="_Jhn12_30_">耶稣说、<span class='Jesay'>这声音不是为我、是为你们来的。</span></a><a id="_Jhn12_30_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn12_31">Jhn 12:31</a></td>
+					<td>
+						<a id="_Jhn12_31_"><span class='Jesay'>现在这世界受审判．这世界的王要被赶出去。</span></a><a id="_Jhn12_31_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn12_32">Jhn 12:32</a></td>
+					<td>
+						<a id="_Jhn12_32_"><span class='Jesay'>我若从地上被举起来、就要吸引万人来归我。</span></a><a id="_Jhn12_32_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn12_35">Jhn 12:35</a></td>
+					<td>
+						<a id="_Jhn12_35_">耶稣对他们说、<span class='Jesay'>光在你们中间、还有不多的时候、应当趁着有光行走、免得黑暗临到你们．那在黑暗里行走的、不知道往何处去。</span></a><a id="_Jhn12_35_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn12_36">Jhn 12:36</a></td>
+					<td>
+						<a id="_Jhn12_36_"><span class='Jesay'>你们应当趁着有光、信从这光、使你们成为光明之子。</span>耶稣说了这话、就离开他们、隐藏了。</a><a id="_Jhn12_36_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn12_44">Jhn 12:44</a></td>
+					<td>
+						<a id="_Jhn12_44_">耶稣大声说、<span class='Jesay'>信我的、不是信我、乃是信那差我来的。</span></a><a id="_Jhn12_44_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn12_45">Jhn 12:45</a></td>
+					<td>
+						<a id="_Jhn12_45_"><span class='Jesay'>人看见我、就是看见那差我来的。</span></a><a id="_Jhn12_45_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn12_46">Jhn 12:46</a></td>
+					<td>
+						<a id="_Jhn12_46_"><span class='Jesay'>我到世上来、乃是光、叫凡信我的不住在黑暗里。</span></a><a id="_Jhn12_46_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn12_47">Jhn 12:47</a></td>
+					<td>
+						<a id="_Jhn12_47_"><span class='Jesay'>若有人听见我的话不遵守、我不审判他．我来本不是要审判世界、乃是要拯救世界。</span></a><a id="_Jhn12_47_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn12_48">Jhn 12:48</a></td>
+					<td>
+						<a id="_Jhn12_48_"><span class='Jesay'>弃绝我不领受我话的人、有审判他的．就是我所讲的道、在末日要审判他。</span></a><a id="_Jhn12_48_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn12_49">Jhn 12:49</a></td>
+					<td>
+						<a id="_Jhn12_49_"><span class='Jesay'>因为我没有凭着自己讲．惟有差我来的父、已经给我命令、叫我说甚么、讲甚么。</span></a><a id="_Jhn12_49_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn12_50">Jhn 12:50</a></td>
+					<td>
+						<a id="_Jhn12_50_"><span class='Jesay'>我也知道他的命令就是永生．故此我所讲的话、正是照着父对我所说的。</span></a><a id="_Jhn12_50_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn13_7">Jhn 13:7</a></td>
+					<td>
+						<a id="_Jhn13_7_">耶稣回答说、<span class='Jesay'>我所作的、你如今不知道、后来必明白。</span></a><a id="_Jhn13_7_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn13_8">Jhn 13:8</a></td>
+					<td>
+						<a id="_Jhn13_8_">彼得说、你永不可洗我的脚。耶稣说、<span class='Jesay'>我若不洗你、你就与我无分了。</span></a><a id="_Jhn13_8_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn13_10">Jhn 13:10</a></td>
+					<td>
+						<a id="_Jhn13_10_">耶稣说、<span class='Jesay'>凡洗过澡的人、只要把脚一洗、全身就干净了．你们是干净的、然而不都是干净的。</span></a><a id="_Jhn13_10_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn13_11">Jhn 13:11</a></td>
+					<td>
+						<a id="_Jhn13_11_">耶稣原知道要卖他的是谁、所以说、<span class='Jesay'>你们不都是干净的。</span></a><a id="_Jhn13_11_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn13_12">Jhn 13:12</a></td>
+					<td>
+						<a id="_Jhn13_12_">耶稣洗完了他们的脚、就穿上衣服、又坐下、对他们说、<span class='Jesay'>我向你们所作的、你们明白么。</span></a><a id="_Jhn13_12_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn13_13">Jhn 13:13</a></td>
+					<td>
+						<a id="_Jhn13_13_"><span class='Jesay'>你们称呼我夫子、称呼我主、你们说的不错．我本来是。</span></a><a id="_Jhn13_13_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn13_14">Jhn 13:14</a></td>
+					<td>
+						<a id="_Jhn13_14_"><span class='Jesay'>我是你们的主、你们的夫子、尚且洗你们的脚、你们也当彼此洗脚。</span></a><a id="_Jhn13_14_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn13_15">Jhn 13:15</a></td>
+					<td>
+						<a id="_Jhn13_15_"><span class='Jesay'>我给你们作了榜样、叫你们照着我向你们所作的去作。</span></a><a id="_Jhn13_15_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn13_16">Jhn 13:16</a></td>
+					<td>
+						<a id="_Jhn13_16_"><span class='Jesay'>我实实在在的告诉你们、仆人不能大于主人、差人也不能大于差他的人。</span></a><a id="_Jhn13_16_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn13_17">Jhn 13:17</a></td>
+					<td>
+						<a id="_Jhn13_17_"><span class='Jesay'>你们既知道这事、若是去行就有福了</span>。</a><a id="_Jhn13_17_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn13_18">Jhn 13:18</a></td>
+					<td>
+						<a id="_Jhn13_18_"><span class='Jesay'>我这话不是指着你们众人说的．我知道我所拣选的是谁．现在要应验经上的话、说、『同我吃饭的人、用脚踢我。』</span></a><a id="_Jhn13_18_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn13_19">Jhn 13:19</a></td>
+					<td>
+						<a id="_Jhn13_19_"><span class='Jesay'>如今事情还没有成就、我要先告诉你们、叫你们到事情成就的时候、可以信我是基督。</span></a><a id="_Jhn13_19_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn13_20">Jhn 13:20</a></td>
+					<td>
+						<a id="_Jhn13_20_"><span class='Jesay'>我实实在在的告诉你们、有人接待我所差遣的、就是接待我．接待我、就是接待那差遣我的。</span></a><a id="_Jhn13_20_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn13_21">Jhn 13:21</a></td>
+					<td>
+						<a id="_Jhn13_21_">耶稣说了这话、心里忧愁、就明说、<span class='Jesay'>我实实在在的告诉你们、你们中间有一个人要卖我了。</span></a><a id="_Jhn13_21_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn13_26">Jhn 13:26</a></td>
+					<td>
+						<a id="_Jhn13_26_">耶稣回答说、<span class='Jesay'>我蘸一点饼给谁、就是谁。</span>耶稣就蘸了一点饼、递给加略人西门的儿子犹大。</a><a id="_Jhn13_26_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						-</td>
+					<td>
+						<a class="versKey" id="_Jhn13_27">Jhn 13:27</a></td>
+					<td>
+						<a id="_Jhn13_27_">他吃了以后、撒但就入了他的心。耶稣便对他说、<span class='Jesay'>你所作的快作吧。</span></a><a id="_Jhn13_27_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn13_31">Jhn 13:31</a></td>
+					<td>
+						<a id="_Jhn13_31_">他既出去、耶稣就说、<span class='Jesay'>如今人子得了荣耀、　神在人子身上也得了荣耀。</span></a><a id="_Jhn13_31_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn13_32">Jhn 13:32</a></td>
+					<td>
+						<a id="_Jhn13_32_"><span class='Jesay'>神要因自己荣耀人子、并且要快快的荣耀他。</span></a><a id="_Jhn13_32_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn13_33">Jhn 13:33</a></td>
+					<td>
+						<a id="_Jhn13_33_"><span class='Jesay'>小子们、我还有不多的时候、与你们同在．后来你们要找我、但我所去的地方、你们不能到．这话我曾对犹太人说过、如今也照样对你们说。</span></a><a id="_Jhn13_33_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn13_34">Jhn 13:34</a></td>
+					<td>
+						<a id="_Jhn13_34_"><span class='Jesay'>我赐给你们一条新命令、乃是叫你们彼此相爱．我怎样爱你们、你们也要怎样相爱。</span></a><a id="_Jhn13_34_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn13_35">Jhn 13:35</a></td>
+					<td>
+						<a id="_Jhn13_35_"><span class='Jesay'>你们若有彼此相爱的心、众人因此就认出你们是我的门徒了。</span></a><a id="_Jhn13_35_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn13_36">Jhn 13:36</a></td>
+					<td>
+						<a id="_Jhn13_36_">西门彼得问耶稣说、主往那里去。耶稣回答说、<span class='Jesay'>我所去的地方、你现在不能跟我去．后来却要跟我去．</span></a><a id="_Jhn13_36_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn13_38">Jhn 13:38</a></td>
+					<td>
+						<a id="_Jhn13_38_">耶稣说、<span class='Jesay'>你愿意为我舍命么．我实实在在的告诉你、鸡叫以先、你要三次不认我。</span></a><a id="_Jhn13_38_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_1">Jhn 14:1</a></td>
+					<td>
+						<a id="_Jhn14_1_"><span class='Jesay'>你们心里不要忧愁．你们信　神、也当信我。</span></a><a id="_Jhn14_1_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_2">Jhn 14:2</a></td>
+					<td>
+						<a id="_Jhn14_2_"><span class='Jesay'>在我父的家里、有许多住处．若是没有、我就早已告诉你们了．我去原是为你们预备地方去。</span></a><a id="_Jhn14_2_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_3">Jhn 14:3</a></td>
+					<td>
+						<a id="_Jhn14_3_"><span class='Jesay'>我若去为你们预备了地方、就必再来接你们到我那里去．我在那里、叫你们也在那里。</span></a><a id="_Jhn14_3_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_4">Jhn 14:4</a></td>
+					<td>
+						<a id="_Jhn14_4_"><span class='Jesay'>我往那里去、你们知道．那条路、你们也知道。〔有古卷作我往那里去你们知道那条路〕</span></a><a id="_Jhn14_4_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_6">Jhn 14:6</a></td>
+					<td>
+						<a id="_Jhn14_6_">耶稣说、<span class='Jesay'>我就是道路、真理、生命．若不借着我、没有人能到父那里去。</span></a><a id="_Jhn14_6_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_7">Jhn 14:7</a></td>
+					<td>
+						<a id="_Jhn14_7_"><span class='Jesay'>你们若认识我、也就认识我的父．从今以后、你们认识他、并且已经看见他。</span></a><a id="_Jhn14_7_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_9">Jhn 14:9</a></td>
+					<td>
+						<a id="_Jhn14_9_">耶稣对他说、<span class='Jesay'>腓力、我与你们同在这样长久、你还不认识我么。人看见了我、就是看见了父．你怎么说、将父显给我们看呢。</span></a><a id="_Jhn14_9_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_10">Jhn 14:10</a></td>
+					<td>
+						<a id="_Jhn14_10_"><span class='Jesay'>我在父里面、父在我里面、你不信么。我对你们所说的话、不是凭着自己说的、乃是住在我里面的父作他自己的事。</span></a><a id="_Jhn14_10_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_11">Jhn 14:11</a></td>
+					<td>
+						<a id="_Jhn14_11_"><span class='Jesay'>你们当信我、我在父里面、父在我里面．即或不信、也当因我所作的事信我。</span></a><a id="_Jhn14_11_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_12">Jhn 14:12</a></td>
+					<td>
+						<a id="_Jhn14_12_"><span class='Jesay'>我实实在在的告诉你们、我所作的事、信我的人也要作．并且要作比这更大的事．因为我往父那里去。</span></a><a id="_Jhn14_12_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_13">Jhn 14:13</a></td>
+					<td>
+						<a id="_Jhn14_13_"><span class='Jesay'>你们奉我的名、无论求甚么、我必成就、叫父因儿子得荣耀。</span></a><a id="_Jhn14_13_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_14">Jhn 14:14</a></td>
+					<td>
+						<a id="_Jhn14_14_"><span class='Jesay'>你们若奉我的名求甚么、我必成就。</span></a><a id="_Jhn14_14_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_15">Jhn 14:15</a></td>
+					<td>
+						<a id="_Jhn14_15_"><span class='Jesay'>你们若爱我、就必遵守我的命令。</span></a><a id="_Jhn14_15_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_16">Jhn 14:16</a></td>
+					<td>
+						<a id="_Jhn14_16_"><span class='Jesay'>我要求父、父就另外赐给你们一位保惠师、〔或作训慰师下同〕叫他永远与你们同在、</span></a><a id="_Jhn14_16_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_17">Jhn 14:17</a></td>
+					<td>
+						<a id="_Jhn14_17_"><span class='Jesay'>就是真理的圣灵、乃世人不能接受的．因为不见他、也不认识他．你们却认识他．因他常与你们同在、也要在你们里面。</span></a><a id="_Jhn14_17_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_18">Jhn 14:18</a></td>
+					<td>
+						<a id="_Jhn14_18_"><span class='Jesay'>我不撇下你们为孤儿、我必到你们这里来。</span></a><a id="_Jhn14_18_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_19">Jhn 14:19</a></td>
+					<td>
+						<a id="_Jhn14_19_"><span class='Jesay'>还有不多的时候、世人不再看见我．你们却看见我．因为我活着、你们也要活着。</span></a><a id="_Jhn14_19_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_20">Jhn 14:20</a></td>
+					<td>
+						<a id="_Jhn14_20_"><span class='Jesay'>到那日你们就知道我在父里面、你们在我里面、我也在你们里面。</span></a><a id="_Jhn14_20_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_21">Jhn 14:21</a></td>
+					<td>
+						<a id="_Jhn14_21_"><span class='Jesay'>有了我的命令又遵守的、这人就是爱我的．爱我的必蒙我父爱他、我也要爱他、并且要向他显现。</span></a><a id="_Jhn14_21_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_23">Jhn 14:23</a></td>
+					<td>
+						<a id="_Jhn14_23_">耶稣回答说、<span class='Jesay'>人若爱我、就必遵守我的道．我父也必爱他、并且我们要到他那里去、与他同住。</span></a><a id="_Jhn14_23_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_24">Jhn 14:24</a></td>
+					<td>
+						<a id="_Jhn14_24_"><span class='Jesay'>不爱我的人就不遵守我的道．你们所听见的道不是我的、乃是差我来之父的道。</span></a><a id="_Jhn14_24_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_25">Jhn 14:25</a></td>
+					<td>
+						<a id="_Jhn14_25_"><span class='Jesay'>我还与你们同住的时候、已将这些话对你们说了。</span></a><a id="_Jhn14_25_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_26">Jhn 14:26</a></td>
+					<td>
+						<a id="_Jhn14_26_"><span class='Jesay'>但保惠师、就是父因我的名所要差来的圣灵、他要将一切的事、指教你们、并且要叫你们想起我对你们所说的一切话。</span></a><a id="_Jhn14_26_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_27">Jhn 14:27</a></td>
+					<td>
+						<a id="_Jhn14_27_"><span class='Jesay'>我留下平安给你们、我将我的平安赐给你们．我所赐的、不像世人所赐的．你们心里不要忧愁、也不要胆怯。</span></a><a id="_Jhn14_27_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_28">Jhn 14:28</a></td>
+					<td>
+						<a id="_Jhn14_28_"><span class='Jesay'>你们听见我对你们说了、我去还要到你们这里来。你们若爱我、因我到父那里去、就必喜乐、因为父是比我大的。</span></a><a id="_Jhn14_28_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_29">Jhn 14:29</a></td>
+					<td>
+						<a id="_Jhn14_29_"><span class='Jesay'>现在事情还没有成就、我预先告诉你们、叫你们到事情成就的时候、就可以信。</span></a><a id="_Jhn14_29_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_30">Jhn 14:30</a></td>
+					<td>
+						<a id="_Jhn14_30_"><span class='Jesay'>以后我不再和你们多说话、因为这世界的王将到．他在我里面是毫无所有．</span></a><a id="_Jhn14_30_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn14_31">Jhn 14:31</a></td>
+					<td>
+						<a id="_Jhn14_31_"><span class='Jesay'>但要叫世人知道我爱父、并且父怎样吩咐我、我就怎样行。起来、我们走吧。</span></a><a id="_Jhn14_31_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_1">Jhn 15:1</a></td>
+					<td>
+						<a id="_Jhn15_1_"><span class='Jesay'>我是真葡萄树、我父是栽培的人。</span></a><a id="_Jhn15_1_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_2">Jhn 15:2</a></td>
+					<td>
+						<a id="_Jhn15_2_"><span class='Jesay'>凡属我不结果子的枝子、他就剪去．凡结果子的、他就修理干净、使枝子结果子更多。</span></a><a id="_Jhn15_2_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_3">Jhn 15:3</a></td>
+					<td>
+						<a id="_Jhn15_3_"><span class='Jesay'>现在你们因我讲给你们的道、已经干净了。</span></a><a id="_Jhn15_3_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_4">Jhn 15:4</a></td>
+					<td>
+						<a id="_Jhn15_4_"><span class='Jesay'>你们要常在我里面、我也常在你们里面。枝子若不常在葡萄树上、自己就不能结果子．你们若不常在我里面、也是这样。</span></a><a id="_Jhn15_4_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_5">Jhn 15:5</a></td>
+					<td>
+						<a id="_Jhn15_5_"><span class='Jesay'>我是葡萄树、你们是枝子．常在我里面的、我也常在他里面、这人就多结果子．因为离了我、你们就不能作甚么。</span></a><a id="_Jhn15_5_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_6">Jhn 15:6</a></td>
+					<td>
+						<a id="_Jhn15_6_"><span class='Jesay'>人若不常在我里面、就像枝子丢在外面枯干、人拾起来、扔在火里烧了。</span></a><a id="_Jhn15_6_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_7">Jhn 15:7</a></td>
+					<td>
+						<a id="_Jhn15_7_"><span class='Jesay'>你们若常在我里面、我的话也常在你们里面、凡你们所愿意的、祈求就给你们成就。</span></a><a id="_Jhn15_7_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_8">Jhn 15:8</a></td>
+					<td>
+						<a id="_Jhn15_8_"><span class='Jesay'>你们多结果子、我父就因此得荣耀、你们也就是我的门徒了。</span></a><a id="_Jhn15_8_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_9">Jhn 15:9</a></td>
+					<td>
+						<a id="_Jhn15_9_"><span class='Jesay'>我爱你们、正如父爱我一样．你们要常在我的爱里。</span></a><a id="_Jhn15_9_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_10">Jhn 15:10</a></td>
+					<td>
+						<a id="_Jhn15_10_"><span class='Jesay'>你们若遵守我的命令、就常在我的爱里．正如我遵守了我父的命令、常在他的爱里。</span></a><a id="_Jhn15_10_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_11">Jhn 15:11</a></td>
+					<td>
+						<a id="_Jhn15_11_"><span class='Jesay'>这些事我已经对你们说了、是要叫我的喜乐、存在你们心里、并叫你们的喜乐可以满足。</span></a><a id="_Jhn15_11_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_12">Jhn 15:12</a></td>
+					<td>
+						<a id="_Jhn15_12_"><span class='Jesay'>你们要彼此相爱、像我爱你们一样、这就是我的命令。</span></a><a id="_Jhn15_12_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_13">Jhn 15:13</a></td>
+					<td>
+						<a id="_Jhn15_13_"><span class='Jesay'>人为朋友舍命、人的爱心没有比这个大的。</span></a><a id="_Jhn15_13_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_14">Jhn 15:14</a></td>
+					<td>
+						<a id="_Jhn15_14_"><span class='Jesay'>你们若遵行我所吩咐的、就是我的朋友了。</span></a><a id="_Jhn15_14_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_15">Jhn 15:15</a></td>
+					<td>
+						<a id="_Jhn15_15_"><span class='Jesay'>以后我不再称你们为仆人．因仆人不知道主人所作的事．我乃称你们为朋友．因我从我父所听见的、已经都告诉你们了。</span></a><a id="_Jhn15_15_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_16">Jhn 15:16</a></td>
+					<td>
+						<a id="_Jhn15_16_"><span class='Jesay'>不是你们拣选了我、是我拣选了你们、并且分派你们去结果子、叫你们的果子常存．使你们奉我的名、无论向父求甚么、他就赐给你们。</span></a><a id="_Jhn15_16_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_17">Jhn 15:17</a></td>
+					<td>
+						<a id="_Jhn15_17_"><span class='Jesay'>我这样吩咐你们、是要叫你们彼此相爱。</span></a><a id="_Jhn15_17_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_18">Jhn 15:18</a></td>
+					<td>
+						<a id="_Jhn15_18_"><span class='Jesay'>世人若恨你们、你们知道〔或作该知道〕恨你们以先、已经恨我了。</span></a><a id="_Jhn15_18_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_19">Jhn 15:19</a></td>
+					<td>
+						<a id="_Jhn15_19_"><span class='Jesay'>你们若属世界、世界必爱属自己的．只因你们不属世界．乃是我从世界中拣选了你们、所以世界就恨你们。</span></a><a id="_Jhn15_19_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_20">Jhn 15:20</a></td>
+					<td>
+						<a id="_Jhn15_20_"><span class='Jesay'>你们要记念我从前对你们所说的话、仆人不能大于主人。他们若逼迫了我、也要逼迫你们．若遵守了我的话、也要遵守你们的话。</span></a><a id="_Jhn15_20_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_21">Jhn 15:21</a></td>
+					<td>
+						<a id="_Jhn15_21_"><span class='Jesay'>但他们因我的名、要向你们行这一切的事、因为他们不认识那差我来的。</span></a><a id="_Jhn15_21_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_22">Jhn 15:22</a></td>
+					<td>
+						<a id="_Jhn15_22_"><span class='Jesay'>我若没有来教训他们、他们就没有罪．但如今他们的罪无可推诿了。</span></a><a id="_Jhn15_22_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_23">Jhn 15:23</a></td>
+					<td>
+						<a id="_Jhn15_23_"><span class='Jesay'>恨我的、也恨我的父。</span></a><a id="_Jhn15_23_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_24">Jhn 15:24</a></td>
+					<td>
+						<a id="_Jhn15_24_"><span class='Jesay'>我若没有在他们中间行过别人未曾行的事、他们就没有罪．但如今连我与我的父、他们也看见也恨恶了。</span></a><a id="_Jhn15_24_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_25">Jhn 15:25</a></td>
+					<td>
+						<a id="_Jhn15_25_"><span class='Jesay'>这要应验他们律法上所写的话、说、『他们无故恨我。』</span></a><a id="_Jhn15_25_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_26">Jhn 15:26</a></td>
+					<td>
+						<a id="_Jhn15_26_"><span class='Jesay'>但我要从父那里差保惠师来、就是从父出来真理的圣灵．他来了、就要为我作见证。</span></a><a id="_Jhn15_26_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn15_27">Jhn 15:27</a></td>
+					<td>
+						<a id="_Jhn15_27_"><span class='Jesay'>你们也要作见证、因为你们从起头就与我同在。</span></a><a id="_Jhn15_27_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_1">Jhn 16:1</a></td>
+					<td>
+						<a id="_Jhn16_1_"><span class='Jesay'>我已将这些事告诉你们、使你们不至于跌倒。</span></a><a id="_Jhn16_1_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_2">Jhn 16:2</a></td>
+					<td>
+						<a id="_Jhn16_2_"><span class='Jesay'>人要把你们赶出会堂．并且时候将到、凡杀你们的、就以为是事奉　神。</span></a><a id="_Jhn16_2_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_3">Jhn 16:3</a></td>
+					<td>
+						<a id="_Jhn16_3_"><span class='Jesay'>他们这样行、是因未曾认识父、也未曾认识我。</span></a><a id="_Jhn16_3_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_4">Jhn 16:4</a></td>
+					<td>
+						<a id="_Jhn16_4_"><span class='Jesay'>我将这事告诉你们、是叫你们到了时候、可以想起我对你们说过了。我起先没有将这事告诉你们、因为我与你们同在。</span></a><a id="_Jhn16_4_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_5">Jhn 16:5</a></td>
+					<td>
+						<a id="_Jhn16_5_"><span class='Jesay'>现今我往差我来的父那里去．你们中间并没有人问我、你往哪里去。</span></a><a id="_Jhn16_5_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_6">Jhn 16:6</a></td>
+					<td>
+						<a id="_Jhn16_6_"><span class='Jesay'>只因我将这事告诉你们、你们就满心忧愁。</span></a><a id="_Jhn16_6_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_7">Jhn 16:7</a></td>
+					<td>
+						<a id="_Jhn16_7_"><span class='Jesay'>然而我将真情告诉你们．我去是与你们有益的．我若不去、保惠师就不到你们这里来．我若去、就差他来。</span></a><a id="_Jhn16_7_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_8">Jhn 16:8</a></td>
+					<td>
+						<a id="_Jhn16_8_"><span class='Jesay'>他既来了、就要叫世人为罪、为义、为审判、自己责备自己．</span></a><a id="_Jhn16_8_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_9">Jhn 16:9</a></td>
+					<td>
+						<a id="_Jhn16_9_"><span class='Jesay'>为罪、是因他们不信我．</span></a><a id="_Jhn16_9_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_10">Jhn 16:10</a></td>
+					<td>
+						<a id="_Jhn16_10_"><span class='Jesay'>为义、是因我往父那里去、你们就不再见我．</span></a><a id="_Jhn16_10_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_11">Jhn 16:11</a></td>
+					<td>
+						<a id="_Jhn16_11_"><span class='Jesay'>为审判、是因这世界的王受了审判。</span></a><a id="_Jhn16_11_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_12">Jhn 16:12</a></td>
+					<td>
+						<a id="_Jhn16_12_"><span class='Jesay'>我还有好些事要告诉你们、但你们现在担当不了。〔或作不能领会〕</span></a><a id="_Jhn16_12_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_13">Jhn 16:13</a></td>
+					<td>
+						<a id="_Jhn16_13_"><span class='Jesay'>只等真理的圣灵来了、他要引导你们明白〔原文作进入〕一切的真理．因为他不是凭自己说的、乃是把他所听见的都说出来．并要把将来的事告诉你们。</span></a><a id="_Jhn16_13_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_14">Jhn 16:14</a></td>
+					<td>
+						<a id="_Jhn16_14_"><span class='Jesay'>他要荣耀我．因为他要将受于我的、告诉你们。</span></a><a id="_Jhn16_14_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_15">Jhn 16:15</a></td>
+					<td>
+						<a id="_Jhn16_15_"><span class='Jesay'>凡父所有的、都是我的、所以我说、他要将受于我的、告诉你们。</span></a><a id="_Jhn16_15_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_16">Jhn 16:16</a></td>
+					<td>
+						<a id="_Jhn16_16_"><span class='Jesay'>等不多时、你们就不得见我．再等不多时、你们还要见我。</span></a><a id="_Jhn16_16_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_19">Jhn 16:19</a></td>
+					<td>
+						<a id="_Jhn16_19_">耶稣看出他们要问他、就说、<span class='Jesay'>我说等不多时、你们就不得见我、再等不多时、你们还要见我．你们为这话彼此相问么。</span></a><a id="_Jhn16_19_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_20">Jhn 16:20</a></td>
+					<td>
+						<a id="_Jhn16_20_"><span class='Jesay'>我实实在在的告诉你们、你们将要痛哭、哀号、世人倒要喜乐．你们将要忧愁、然而你们的忧愁、要变为喜乐。</span></a><a id="_Jhn16_20_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_21">Jhn 16:21</a></td>
+					<td>
+						<a id="_Jhn16_21_"><span class='Jesay'>妇人生产的时候、就忧愁、因为他的时候到了．既生了孩子、就不再记念那苦楚、因为欢喜世上生了一个人。</span></a><a id="_Jhn16_21_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_22">Jhn 16:22</a></td>
+					<td>
+						<a id="_Jhn16_22_"><span class='Jesay'>你们现在也是忧愁．但我要再见你们、你们的心就喜乐了．这喜乐、也没有人能夺去。</span></a><a id="_Jhn16_22_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_23">Jhn 16:23</a></td>
+					<td>
+						<a id="_Jhn16_23_"><span class='Jesay'>到那日、你们甚么也就不问我了．我实实在在的告诉你们、你们若向父求甚么、他必因我的名、赐给你们。</span></a><a id="_Jhn16_23_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_24">Jhn 16:24</a></td>
+					<td>
+						<a id="_Jhn16_24_"><span class='Jesay'>向来你们没有奉我的名求甚么、如今你们求就必得着、叫你们的喜乐可以满足。</span></a><a id="_Jhn16_24_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_25">Jhn 16:25</a></td>
+					<td>
+						<a id="_Jhn16_25_"><span class='Jesay'>这些事、我是用比喻对你们说的．时候将到、我不再用比喻对你们说、乃要将父明明的告诉你们．</span></a><a id="_Jhn16_25_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_26">Jhn 16:26</a></td>
+					<td>
+						<a id="_Jhn16_26_"><span class='Jesay'>到那日、你们要奉我的名祈求．我并不对你们说、我要为你们求父．</span></a><a id="_Jhn16_26_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_27">Jhn 16:27</a></td>
+					<td>
+						<a id="_Jhn16_27_"><span class='Jesay'>父自己爱你们、因为你们已经爱我、又信我是从父出来的。</span></a><a id="_Jhn16_27_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_28">Jhn 16:28</a></td>
+					<td>
+						<a id="_Jhn16_28_"><span class='Jesay'>我从父出来、到了世界．我又离开世界、往父那里去</span>。</a><a id="_Jhn16_28_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_31">Jhn 16:31</a></td>
+					<td>
+						<a id="_Jhn16_31_">耶稣说、<span class='Jesay'>现在你们信么。</span></a><a id="_Jhn16_31_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_32">Jhn 16:32</a></td>
+					<td>
+						<a id="_Jhn16_32_"><span class='Jesay'>看哪、时候将到、且是已经到了、你们要分散、各归自己的地方去、留下我独自一人．其实我不是独自一人、因为有父与我同在。</span></a><a id="_Jhn16_32_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn16_33">Jhn 16:33</a></td>
+					<td>
+						<a id="_Jhn16_33_"><span class='Jesay'>我将这些事告诉你们、是要叫你们在我里面有平安。在世上你们有苦难．但你们可以放心、我已经胜了世界。</span></a><a id="_Jhn16_33_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						-</td>
+					<td>
+						<a class="versKey" id="_Jhn17_1">Jhn 17:1</a></td>
+					<td>
+						<a id="_Jhn17_1_">耶稣说了这话、就举目望天说、<span class='Jesay'>父阿、时候到了．愿你荣耀你的儿子、使儿子也荣耀你．</span></a><a id="_Jhn17_1_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_2">Jhn 17:2</a></td>
+					<td>
+						<a id="_Jhn17_2_"><span class='Jesay'>正如你曾赐给他权柄、管理凡有血气的、叫他将永生赐给你所赐给他的人。</span></a><a id="_Jhn17_2_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_3">Jhn 17:3</a></td>
+					<td>
+						<a id="_Jhn17_3_"><span class='Jesay'>认识你独一的真　神、并且认识你所差来的耶稣基督、这就是永生。</span></a><a id="_Jhn17_3_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_4">Jhn 17:4</a></td>
+					<td>
+						<a id="_Jhn17_4_"><span class='Jesay'>我在地上已经荣耀你、你所托付我的事、我已成全了。</span></a><a id="_Jhn17_4_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_5">Jhn 17:5</a></td>
+					<td>
+						<a id="_Jhn17_5_"><span class='Jesay'>父阿、现在求你使我同你享荣耀、就是未有世界以先、我同你所有的荣耀。</span></a><a id="_Jhn17_5_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_6">Jhn 17:6</a></td>
+					<td>
+						<a id="_Jhn17_6_"><span class='Jesay'>你从世上赐给我的人、我已将你的名显明与他们．他们本是你的、你将他们赐给我、他们也遵守了你的道。</span></a><a id="_Jhn17_6_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_7">Jhn 17:7</a></td>
+					<td>
+						<a id="_Jhn17_7_"><span class='Jesay'>如今他们知道、凡你所赐给我的、都是从你那里来的．</span></a><a id="_Jhn17_7_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_8">Jhn 17:8</a></td>
+					<td>
+						<a id="_Jhn17_8_"><span class='Jesay'>因为你所赐给我的道、我已经赐给他们．他们也领受了、又确实知道、我是从你出来的、并且信你差了我来。</span></a><a id="_Jhn17_8_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_9">Jhn 17:9</a></td>
+					<td>
+						<a id="_Jhn17_9_"><span class='Jesay'>我为他们祈求．不为世人祈求、却为你所赐给我的人祈求、因他们本是你的。</span></a><a id="_Jhn17_9_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_10">Jhn 17:10</a></td>
+					<td>
+						<a id="_Jhn17_10_"><span class='Jesay'>凡是我的都是你的、你的也是我的．并且我因他们得了荣耀。</span></a><a id="_Jhn17_10_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_11">Jhn 17:11</a></td>
+					<td>
+						<a id="_Jhn17_11_"><span class='Jesay'>从今以后、我不在世上、他们却在世上、我往你那里去。圣父阿、求你因你所赐给我的名保守他们、叫他们合而为一像我们一样。</span></a><a id="_Jhn17_11_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_12">Jhn 17:12</a></td>
+					<td>
+						<a id="_Jhn17_12_"><span class='Jesay'>我与他们同在的时候、因你所赐给我的名、保守了他们、我也护卫了他们、其中除了那灭亡之子、没有一个灭亡的．好叫经上的话得应验。</span></a><a id="_Jhn17_12_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_13">Jhn 17:13</a></td>
+					<td>
+						<a id="_Jhn17_13_"><span class='Jesay'>现在我往你那里去．我还在世上说这话、是叫他们心里充满我的喜乐。</span></a><a id="_Jhn17_13_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_14">Jhn 17:14</a></td>
+					<td>
+						<a id="_Jhn17_14_"><span class='Jesay'>我已将你的道赐给他们．世界又恨他们、因为他们不属世界、正如我不属世界一样。</span></a><a id="_Jhn17_14_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_15">Jhn 17:15</a></td>
+					<td>
+						<a id="_Jhn17_15_"><span class='Jesay'>我不求你叫他们离开世界、只求你保守他们脱离那恶者。〔或作脱离罪恶〕</span></a><a id="_Jhn17_15_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_16">Jhn 17:16</a></td>
+					<td>
+						<a id="_Jhn17_16_"><span class='Jesay'>他们不属世界、正如我不属世界一样。</span></a><a id="_Jhn17_16_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_17">Jhn 17:17</a></td>
+					<td>
+						<a id="_Jhn17_17_"><span class='Jesay'>求你用真理使他们成圣．你的道就是真理。</span></a><a id="_Jhn17_17_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_18">Jhn 17:18</a></td>
+					<td>
+						<a id="_Jhn17_18_"><span class='Jesay'>你怎样差我到世上、我也照样差他们到世上。</span></a><a id="_Jhn17_18_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_19">Jhn 17:19</a></td>
+					<td>
+						<a id="_Jhn17_19_"><span class='Jesay'>我为他们的缘故、自己分别为圣、叫他们也因真理成圣。</span></a><a id="_Jhn17_19_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_20">Jhn 17:20</a></td>
+					<td>
+						<a id="_Jhn17_20_"><span class='Jesay'>我不但为这些人祈求、也为那些因他们的话信我的人祈求．</span></a><a id="_Jhn17_20_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_21">Jhn 17:21</a></td>
+					<td>
+						<a id="_Jhn17_21_"><span class='Jesay'>使他们都合而为一．正如你父在我里面、我在你里面．使他们也在我们里面、叫世人可以信你差了我来。</span></a><a id="_Jhn17_21_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_22">Jhn 17:22</a></td>
+					<td>
+						<a id="_Jhn17_22_"><span class='Jesay'>你所赐给我的荣耀、我已赐给他们、使他们合而为一、像我们合而为一。</span></a><a id="_Jhn17_22_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_23">Jhn 17:23</a></td>
+					<td>
+						<a id="_Jhn17_23_"><span class='Jesay'>我在他们里面、你在我里面、使他们完完全全的合而为一．叫世人知道你差了我来、也知道你爱他们如同爱我一样。</span></a><a id="_Jhn17_23_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_24">Jhn 17:24</a></td>
+					<td>
+						<a id="_Jhn17_24_"><span class='Jesay'>父阿、我在那里、愿你所赐给我的人、也同我在那里、叫他们看见你所赐给我的荣耀．因为创立世界以前、你已经爱我了。</span></a><a id="_Jhn17_24_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_25">Jhn 17:25</a></td>
+					<td>
+						<a id="_Jhn17_25_"><span class='Jesay'>公义的父阿、世人未曾认识你、我却认识你．这些人也知道你差了我来。</span></a><a id="_Jhn17_25_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn17_26">Jhn 17:26</a></td>
+					<td>
+						<a id="_Jhn17_26_"><span class='Jesay'>我已将你的名指示他们、还要指示他们、使你所爱我的爱在他们里面、我也在他们里面。</span></a><a id="_Jhn17_26_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn18_4">Jhn 18:4</a></td>
+					<td>
+						<a id="_Jhn18_4_">耶稣知道将要临到自己的一切事、就出来、对他们说、<span class='Jesay'>你们找谁。</span></a><a id="_Jhn18_4_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						-</td>
+					<td>
+						<a class="versKey" id="_Jhn18_5">Jhn 18:5</a></td>
+					<td>
+						<a id="_Jhn18_5_">他们回答说、找拿撒勒人耶稣。耶稣说、<span class='Jesay'>我就是。</span>卖他的犹大也同他们站在那里。</a><a id="_Jhn18_5_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn18_6">Jhn 18:6</a></td>
+					<td>
+						<a id="_Jhn18_6_">耶稣一说<span class='Jesay'>我就是、</span>他们就退后倒在地上。</a><a id="_Jhn18_6_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn18_7">Jhn 18:7</a></td>
+					<td>
+						<a id="_Jhn18_7_">他又问他们说、<span class='Jesay'>你们找谁。</span>他们说、找拿撒勒人耶稣。</a><a id="_Jhn18_7_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn18_8">Jhn 18:8</a></td>
+					<td>
+						<a id="_Jhn18_8_">耶稣说、<span class='Jesay'>我已经告诉你们、我就是．你们若找我、就让这些人去吧。</span></a><a id="_Jhn18_8_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn18_11">Jhn 18:11</a></td>
+					<td>
+						<a id="_Jhn18_11_">耶稣就对彼得说、<span class='Jesay'>收刀入鞘吧。我父所给我的那杯、我岂可不喝呢。</span></a><a id="_Jhn18_11_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn18_20">Jhn 18:20</a></td>
+					<td>
+						<a id="_Jhn18_20_">耶稣回答说、<span class='Jesay'>我从来是明明的对世人说话．我常在会堂和殿里、就是犹太人聚集的地方、教训人．我在暗地里、并没有说甚么。</span></a><a id="_Jhn18_20_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn18_21">Jhn 18:21</a></td>
+					<td>
+						<a id="_Jhn18_21_"><span class='Jesay'>你为甚么问我呢．可以问那听见的人、我对他们说的是甚么．我所说的、他们都知道。</span></a><a id="_Jhn18_21_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn18_23">Jhn 18:23</a></td>
+					<td>
+						<a id="_Jhn18_23_">耶稣说、<span class='Jesay'>我若说的不是、你可以指证那不是．我若说的是、你为甚么打我呢。</span></a><a id="_Jhn18_23_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn18_34">Jhn 18:34</a></td>
+					<td>
+						<a id="_Jhn18_34_">耶稣回答说、<span class='Jesay'>这话是你自己说的、还是别人论我对你说的呢。</span></a><a id="_Jhn18_34_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn18_36">Jhn 18:36</a></td>
+					<td>
+						<a id="_Jhn18_36_">耶稣回答说、<span class='Jesay'>我的国不属这世界．我的国若属这世界、我的臣仆必要争战、使我不至于被交给犹太人．只是我的国不属这世界。</span></a><a id="_Jhn18_36_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn18_37">Jhn 18:37</a></td>
+					<td>
+						<a id="_Jhn18_37_">彼拉多就对他说、这样、你是王么。耶稣回答说、<span class='Jesay'>你说我是王．我为此而生、也为此来到世间、特为给真理作见证．凡属真理的人、就听我的话。</span></a><a id="_Jhn18_37_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn19_11">Jhn 19:11</a></td>
+					<td>
+						<a id="_Jhn19_11_">耶稣回答说、<span class='Jesay'>若不是从上头赐给你的、你就毫无权柄办我．所以把我交给你的那人、罪更重了。</span></a><a id="_Jhn19_11_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn19_26">Jhn 19:26</a></td>
+					<td>
+						<a id="_Jhn19_26_">耶稣见母亲和他所爱的那门徒站在旁边、就对他母亲说、<span class='Jesay'>母亲、〔原文作妇人〕看你的儿子。</span></a><a id="_Jhn19_26_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn19_27">Jhn 19:27</a></td>
+					<td>
+						<a id="_Jhn19_27_">又对那门徒说、<span class='Jesay'>看你的母亲。</span>从此那门徒就接他到自己家里去了。</a><a id="_Jhn19_27_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn19_28">Jhn 19:28</a></td>
+					<td>
+						<a id="_Jhn19_28_">这事以后、耶稣知道各样的事已经成了、为要使经上的话应验、就说、<span class='Jesay'>我渴了。</span></a><a id="_Jhn19_28_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn20_15">Jhn 20:15</a></td>
+					<td>
+						<a id="_Jhn20_15_">耶稣问他说、<span class='Jesay'>妇人、为甚么哭、你找谁呢。</span>马利亚以为是看园的、就对他说、先生、若是你把他移了去、请告诉我、你把他放在那里、我便去取他。</a><a id="_Jhn20_15_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn20_16">Jhn 20:16</a></td>
+					<td>
+						<a id="_Jhn20_16_">耶稣说、<span class='Jesay'>马利亚。</span>马利亚就转过来、用希伯来话对他说、拉波尼．（拉波尼就是夫子的意思。）</a><a id="_Jhn20_16_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn20_17">Jhn 20:17</a></td>
+					<td>
+						<a id="_Jhn20_17_">耶稣说、<span class='Jesay'>不要摸我．因我还没有升上去见我的父．你往我弟兄那里去、告诉他们说、我要升上去、见我的父、也是你们的父．见我的　神、也是你们的　神。</span></a><a id="_Jhn20_17_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn20_19">Jhn 20:19</a></td>
+					<td>
+						<a id="_Jhn20_19_">那日（就是七日的第一日）晚上、门徒所在的地方、因怕犹太人、门都关了．耶稣来站在当中、对他们说、<span class='Jesay'>愿你们平安。</span></a><a id="_Jhn20_19_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn20_21">Jhn 20:21</a></td>
+					<td>
+						<a id="_Jhn20_21_">耶稣又对他们说、<span class='Jesay'>愿你们平安．父怎样差遣了我、我也照样差遣你们。</span></a><a id="_Jhn20_21_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn20_22">Jhn 20:22</a></td>
+					<td>
+						<a id="_Jhn20_22_">说了这话、就向他们吹一口气、说、<span class='Jesay'>你们受圣灵。</span></a><a id="_Jhn20_22_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn20_23">Jhn 20:23</a></td>
+					<td>
+						<a id="_Jhn20_23_"><span class='Jesay'>你们赦免谁的罪、谁的罪就赦免了．你们留下谁的罪、谁的罪就留下了。</span></a><a id="_Jhn20_23_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn20_26">Jhn 20:26</a></td>
+					<td>
+						<a id="_Jhn20_26_">过了八日、门徒又在屋里、多马也和他们同在、门都关了．耶稣来站在当中说、<span class='Jesay'>愿你们平安。</span></a><a id="_Jhn20_26_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn20_27">Jhn 20:27</a></td>
+					<td>
+						<a id="_Jhn20_27_">就对多马说、<span class='Jesay'>伸过你的指头来、摸（摸原文作看）我的手．伸出你的手来、探入我的肋旁．不要疑惑、总要信。</span></a><a id="_Jhn20_27_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn20_29">Jhn 20:29</a></td>
+					<td>
+						<a id="_Jhn20_29_">耶稣对他说、<span class='Jesay'>你因看见了我才信．那没有看见就信的、有福了。</span></a><a id="_Jhn20_29_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn21_5">Jhn 21:5</a></td>
+					<td>
+						<a id="_Jhn21_5_">耶稣就对他们说、<span class='Jesay'>小子、你们有吃的没有。</span>他们回答说、没有。</a><a id="_Jhn21_5_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn21_6">Jhn 21:6</a></td>
+					<td>
+						<a id="_Jhn21_6_">耶稣说、<span class='Jesay'>你们把网撒在船的右边、就必得着。</span>他们便撒下网去、竟拉不上来了、因为鱼甚多。</a><a id="_Jhn21_6_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn21_10">Jhn 21:10</a></td>
+					<td>
+						<a id="_Jhn21_10_">耶稣对他们说、<span class='Jesay'>把刚才打的鱼拿几条来。</span></a><a id="_Jhn21_10_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn21_12">Jhn 21:12</a></td>
+					<td>
+						<a id="_Jhn21_12_">耶稣说、<span class='Jesay'>你们来吃早饭．</span>门徒中没有一个敢问他、你是谁、因为知道是主。</a><a id="_Jhn21_12_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn21_15">Jhn 21:15</a></td>
+					<td>
+						<a id="_Jhn21_15_">他们吃完了早饭、耶稣对西门彼得说、<span class='Jesay'>约翰的儿子西门、〔约翰马太十六章十七节称约拿〕你爱我比这些更深么。</span>彼得说、主阿、是的．你知道我爱你。耶稣对他说、<span class='Jesay'>你喂养我的小羊。</span></a><a id="_Jhn21_15_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn21_16">Jhn 21:16</a></td>
+					<td>
+						<a id="_Jhn21_16_">耶稣第二次又对他说、<span class='Jesay'>约翰的儿子西门、你爱我么。</span>彼得说、主阿、是的．你知道我爱你．耶稣说、<span class='Jesay'>你牧养我的羊。</span></a><a id="_Jhn21_16_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn21_17">Jhn 21:17</a></td>
+					<td>
+						<a id="_Jhn21_17_">第三次对他说、<span class='Jesay'>约翰的儿子西门、你爱我么。</span>彼得因为耶稣第三次对他说、你爱我么、就忧愁、对耶稣说、主阿、你是无所不知的、你知道我爱你。耶稣说、<span class='Jesay'>你喂养我的羊。</span></a><a id="_Jhn21_17_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn21_18">Jhn 21:18</a></td>
+					<td>
+						<a id="_Jhn21_18_"><span class='Jesay'>我实实在在的告诉你、你年少的时候、自己束上带子、随意往来、但年老的时候、你要伸出手来、别人要把你束上、带你到不愿意去的地方。</span></a><a id="_Jhn21_18_c"><span class='Jesay'> </span></a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn21_19">Jhn 21:19</a></td>
+					<td>
+						<a id="_Jhn21_19_">耶稣说这话、是指着彼得要怎样死荣耀　神。说了这话、就对他说、<span class='Jesay'>你跟从我吧。</span></a><a id="_Jhn21_19_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						<a class="versKey" id="_Jhn21_22">Jhn 21:22</a></td>
+					<td>
+						<a id="_Jhn21_22_">耶稣对他说、<span class='Jesay'>我若要他等到我来的时候、与你何干．你跟从我吧。</span></a><a id="_Jhn21_22_c"> </a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

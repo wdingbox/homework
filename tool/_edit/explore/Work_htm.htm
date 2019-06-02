@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>HTM_IDE</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+        
+        <script type="text/javascript" src="../adapters/jquery.js"></script>
+        <script type="text/javascript" src="../ckeditor.js"></script>
+        <script type="text/javascript" src="sample.js" ></script>
+
+        
+        <script type="text/javascript">
+
+    $(document).ready(function(){
+    	jQuery(window).bind('beforeunload', function(e) {
+		    e.returnValue = false;//false
+		    return "It's going to exit without save.";
+        });  
+
+        var url=" " + document.URL;
+
+        var ary = url.split("=");           
+
+        if (ary.length == 2){
+
+            document.m_fname = ary[1];
+
+            //alert(fname);  
+
+            $.post("WorkLoadFile.php", {   
+
+                                     filename:document.m_fname                          
+
+                                     },
+
+                                     function(data, status){
+
+                                              //alert("["+data+"]");                                        
+
+                                              CKEDITOR.instances.editor1.setData(data);
+
+                                              $("#ajx_load_status").html(document.m_fname+":"+status);
+
+                                    },
+
+                                    "html"
+
+                                    );/////post 
+
+        }//////if (ary.length == 2){    
+
+        else{
+
+            alert("no file. pleaase attach it in url ?fname=xyz.htm");
+
+        }
+
+
+
+        $("#fname").val(document.m_fname).hide();//used for same file.
+    });///////////////////////////////$(document).ready(function(){
+
+        function intercept_beforeCommandExec(evt){
+               //alert(evt.data.name);
+               if ( 'save' === evt.data.name ) {
+                   evt.cancel();
+                   // alert("use my ajax_save"); 
+                   ajax_save(1);
+                }
+                if ( 'about' === evt.data.name ) {
+                   evt.cancel();
+                   clearInterval( document.m_autoSaveIntervalID ); 
+				   var txt1 = " Automatic Save File";
+				   var txt2 = "2. Popup PingyinInput" ;
+				   var txt3 = "3. svg-edit.googlecode.com" ;
+				   var HelpMenu=txt1;//+"\n"+txt2 + "\n"+txt3 + "\n+ + + . + + +  . + + +\n\n";
+                   if( confirm( HelpMenu + txt1 + "?") ){
+                        document.m_autoSaveIntervalID = self.setInterval(function(){ajax_save(0);}, 10*1000);//every 10 seconds.
+                   }
+                   window.open("help/");
+
+				   //if( confirm( HelpMenu + txt2 +"?") ){
+                        //window.open("../../_pingyinInput/7kPy_Xl_Textarea3b.htm", "","width=777,height=600,scrollbars=yes, resizable=yes,");
+                   //}
+				   //if( confirm( HelpMenu + txt3 +"?") ){
+					 //  var url="http://svg-edit.googlecode.com/svn/branches/2.6/editor/svg-editor.html";
+                      // window.open(url, "","width=777,height=600,scrollbars=yes, resizable=yes,");
+                  //}
+				   
+                }
+                if ( 'preview' === evt.data.name ) {
+                   evt.cancel();
+                   //alert("use my ajax_save"); 
+                   var url = ""+window.location.href;
+
+                   var ip = url.match(/(http:\/\/[^\/]+)/)[1];
+                   //alert(ip);
+                   
+                   var fname = url.match(/fname=([^&]+)/)[1];
+
+                   var fname2=fname.replace("/var/www/html", ip);
+
+                   //alert(fname2+"\n"+url);
+   
+                   window.open(fname2);
+                   
+                }
+                //alert(evt.data.name);
+        }
+        function ajax_save( bAlertOnSaveOK ){
+            if(!$("#cke_top_editor1").find("#alerty").length){
+              $("#cke_top_editor1").append("<a id='alerty'>xxx</a>");
+            }
+            else{
+              $("#alerty").text("x_x");
+            }
+
+            if( false == CKEDITOR.instances.editor1.checkDirty() ){
+                $("#alerty").text("No changes is found.").slideToggle(3000);
+                if( 0 == bAlertOnSaveOK ){ return; }
+                if( false==confirm("No changes is found. Force to save?") ){
+                    return;
+                };
+            }
+            CKEDITOR.instances.editor1.resetDirty();
+            
+            var savefile = $("#fname").val();
+
+            //alert("post a ajax_save" + savefile); 
+            $.post("WorkSaveFile.php", {   
+                fname: savefile,                          
+                editor1: CKEDITOR.instances.editor1.getData()
+                 },
+                 function(data, status){
+                    var msg="Data is successfully saved";
+                          if(data.indexOf("Data is successfully saved in:")>0){
+                              if( 1==bAlertOnSaveOK ){//|| typeof( document.m_autoSaveIntervalID )=="undefined" || document.m_autoSaveIntervalID){
+                                
+                                //alert("Data is successfully saved in:\n\n" + savefile + "\n\n"+data); 
+                              }
+                          }
+                          else{
+                            msg="Failed :(";
+                              alert("Failed to save:\n" + savefile +  "\nAjx status: "+ status  +"\n" + data);    
+                          }
+                          
+                          $("#ajx_load_status").html(savefile+":"+status +"<br/>"+data);
+                  $("#alerty").text(msg).slideToggle(3000);
+                },
+                "html"
+                );/////post 
+        }////
+
+        
+    </script>
+        <link href="sample.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+
+        <form action="WorkSaveFile.php" method="post">
+            <input id="fname" name="fname" type="text" value="./z/test.htm" /><br />
+            <textarea cols="80" id="editor1" name="editor1" rows="1800">   
+    </textarea><script type="text/javascript">
+
+
+
+    //<![CDATA[
+
+
+
+
+
+
+
+    CKEDITOR.replace( 'editor1',{
+                      fullPage : true,
+                      extraPlugins : 'docprops',
+                      on: {'instanceReady': function (evt) { evt.editor.execCommand('maximize'); },   
+                           'beforeCommandExec': function (evt) { intercept_beforeCommandExec(evt); } 
+                      }
+                      });
+
+
+
+
+
+
+
+    //]]>
+
+
+
+    </script></form>
+        <div id="ajx_load_status">
+            
+		</div>
+		<hr/>
+		<a href="http://svg-edit.googlecode.com/svn/branches/2.6/editor/svg-editor.html">svg online editor</a><br/>
+			
+    </body>
+
+</html>
+

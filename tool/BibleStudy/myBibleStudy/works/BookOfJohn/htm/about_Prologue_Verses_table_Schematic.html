@@ -1,0 +1,993 @@
+<html>
+	<head>
+		<title></title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!------->
+		<base target="_blank" />
+		<script src="../../../../../tablesorter_master/js/jquery.tablesorter.js"></script><script src="../../../myjs/table_Indexer.js"></script><script src="../../../myjs/goto_editor.js"></script>
+		<style type="text/css">
+body {font-family: 'Times New Roman';
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+    }		
+#_MenuPanel{
+position: fixed;
+left: 10px;
+top: 0px;
+}
+
+.fixedcol{
+	position: absolute;
+	background-color: #999999;
+}
+.fixedcol2, thead{
+	background-color: #999999;
+}
+.fixedcol2{
+	background-color: #eeeeee;
+}
+.john{
+	background-color: #cccccc;
+}
+.Top_Horz{
+	color: blue;
+}
+.All_Top_Horz{
+	background-color: red;
+}
+.leftbox{
+  background-color: #ff0000;
+}
+ tr td:nth-child(3), td{
+	text-align: center;
+}
+
+table, tr, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+.tbview tbody tr:nth-child(6),
+.tbview tbody tr:nth-child(7),
+.tbview tbody tr:nth-child(8),
+.tbview tbody tr:nth-child(12),
+.tbview tbody tr:nth-child(13),
+.tbview tbody tr:nth-child(15){
+	background-color: #dddddd;
+}
+.divnote{
+
+}
+.inln{
+	display: inline;
+}
+div{
+	white-space: wrap;
+}
+.left{
+			float: left;
+			width: 20px;
+			border:0px solid red;
+		}
+		.rite{
+			float: left;
+			width: 95%;
+			border:0px solid red;
+		}
+		.divenote{
+			display: inline-block;;
+		}
+.hebrew
+{
+    FONT-SIZE: 23px;
+    COLOR: #001320;
+    LINE-HEIGHT: 33px;
+    font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+    TEXT-DECORATION: none;
+}		</style>
+		<script>
+$(function(){
+    $(".narration").toggle();
+    $(".TheTitle").click(function(){
+        $(".narration").toggle();
+    } );
+    $("#strongsCodes").click(function(){
+    	$(".strongs, .translit").slideToggle();
+    });
+
+    $("body").click(function(){
+    	$("#_edit").slideToggle();
+    });
+
+    $("#relativeFrqRate").click(function(){
+    	cal_relativeFrqRate();
+    });
+
+
+    $(".fixedcol2").click(function(){
+    	alert();
+    });
+
+});/////////
+
+$(document).ready(function(){ 
+	goto_editor("_edit_url");
+	sort_table();
+});//
+function sort_table(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+
+
+</script>
+	</head>
+	<body>
+		<p id="_MenuPanel">
+			<br />
+			<a id="_edit_url">...</a><br />
+			<a id="indxer">indxer</a></p>
+		<!--------------------------><!--------------------------><!-------------------------->
+		<table class="tbview">
+			<caption>
+				John Prologue Schematic Table</caption>
+			<thead>
+				<tr>
+					<td width="1%">
+						VS</td>
+					<td>
+						Spiritusl Family Tree</td>
+					<td title="fr D.C.Carson.">
+						John</td>
+					<td>
+						Context</td>
+					<td>
+						G1096<br />
+						&gamma;ί&nu;&omicron;&mu;&alpha;&iota;<br />
+						ginomai</td>
+					<td>
+						Names Of Jesus</td>
+					<td>
+						S1</td>
+					<td>
+						S2</td>
+					<td title="witess to testify">
+						W</td>
+					<td title="Dualism">
+						D<br />
+						u<br />
+						a</td>
+					<td title="Direction for people">
+						O<br />
+						B<br />
+						J</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr role="row">
+					<td title="In the beginning was the Word, and the Word was with God, and the Word was God.">
+						1:1</td>
+					<td>
+						<div>
+							Logos ~ beginning ~ God</div>
+					</td>
+					<td>
+						17:5</td>
+					<td>
+						Gen1:1</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						The Word</td>
+					<td>
+						A<sub>1</sub></td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr role="row">
+					<td title="The same was in the beginning with God.">
+						1:2</td>
+					<td>
+						<div>
+							HE ~ beginning ~ God</div>
+					</td>
+					<td>
+						17:5</td>
+					<td>
+						Gen1:1</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						A<sub>2</sub></td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr role="row">
+					<td title="All things were made by him; and without him was not any thing made that was made.">
+						1:3</td>
+					<td>
+						HE ~ all things</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						Gen1:2</td>
+					<td>
+						made</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						A<sub>3</sub></td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						1</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr role="row">
+					<td title="In him was life; and the life was the light of men.">
+						1:4</td>
+					<td>
+						HE ~ life ~ light</td>
+					<td>
+						5:26<br />
+						8:12<br />
+						I&#39;m1,2,6</td>
+					<td>
+						Gen2:7<br />
+						Gen1:3</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						The Life<br />
+						The Light</td>
+					<td>
+						A</td>
+					<td>
+						A</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr role="row">
+					<td title="And the light shineth in darkness; and the darkness comprehended it not.">
+						1:5</td>
+					<td>
+						light ~ darkness</td>
+					<td>
+						3:19<br />
+						12:35</td>
+					<td>
+						Gen1:4</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						A</td>
+					<td>
+						A</td>
+					<td>
+						n</td>
+					<td>
+						2</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr role="row">
+					<td title="There was a man sent from God, whose name was John.">
+						1:6</td>
+					<td>
+						John B ~ God</td>
+					<td>
+						John B-a</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						came</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						B</td>
+					<td>
+						B</td>
+					<td>
+						w2</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr role="row">
+					<td title="The same came for a witness, to bear witness of the Light, that all men through him might believe.">
+						1:7</td>
+					<td>
+						John B ~ light</td>
+					<td>
+						John B-a</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						B</td>
+					<td>
+						B</td>
+					<td>
+						w2</td>
+					<td>
+						3</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr role="row">
+					<td title="HE was not that Light, but was sent to bear witness of that Light.">
+						1:8</td>
+					<td>
+						John B ~ witness</td>
+					<td>
+						John B-a</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						B</td>
+					<td>
+						B</td>
+					<td>
+						w2</td>
+					<td>
+						4</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr role="row">
+					<td title="That was the true Light, which lighteth every man that cometh into the world.">
+						1:9</td>
+					<td>
+						light ~ world</td>
+					<td>
+						3:19<br />
+						12:46<br />
+						Mirac6</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						C</td>
+					<td>
+						C</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						5</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr role="row">
+					<td title="HE was in the world, and the world was made by him, and the world knew him not.">
+						1:10</td>
+					<td>
+						HE ~ world</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						Gen3:7</td>
+					<td>
+						made</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						C</td>
+					<td>
+						C</td>
+					<td>
+						n</td>
+					<td>
+						6</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr role="row">
+					<td title="HE came unto his own, and his own received him not.">
+						1:11</td>
+					<td>
+						HE ~ man</td>
+					<td>
+						4:44</td>
+					<td>
+						Gen3:8</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						C</td>
+					<td>
+						C</td>
+					<td>
+						n</td>
+					<td>
+						7</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr role="row">
+					<td title="But as many as received him, to them gave he power to become the sons of God, even to them that believe on his name:">
+						1:12</td>
+					<td>
+						HE ~ Chilren of God</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						Gen3:24</td>
+					<td>
+						to become</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						D</td>
+					<td>
+						C</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						8</td>
+					<td>
+						1</td>
+				</tr>
+				<tr role="row">
+					<td title="Which were born, not of blood, nor of the will of the flesh, nor of the will of man, but of God.">
+						1:13</td>
+					<td class="hilitd">
+						Children of God ~<br />
+						&sigma;ά&rho;&xi;, blood, man</td>
+					<td class="hilitd">
+						3:6;<br />
+						8:41-42<br />
+						Marv2</td>
+					<td class="hilitd">
+						Dan2:34</td>
+					<td class="hilitd">
+						&nbsp;</td>
+					<td class="hilitd">
+						&nbsp;</td>
+					<td class="hilitd">
+						D</td>
+					<td class="hilitd">
+						C</td>
+					<td class="hilitd">
+						&nbsp;</td>
+					<td class="hilitd">
+						9</td>
+					<td class="hilitd">
+						2</td>
+				</tr>
+				<tr role="row">
+					<td title="And the Word was made flesh, and dwelt among us, (and we beheld his glory, the glory as of the only begotten of the Father,) full of grace and truth.">
+						1:14</td>
+					<td class="hilitd">
+						Logos ~ &sigma;ά&rho;&xi;<br />
+						HE ~ truth ~ grace ~ glory<br />
+						the Only Son of Father</td>
+					<td class="hilitd">
+						3:16<br />
+						12:41<br />
+						I&#39;m6<br />
+						Mirac1</td>
+					<td class="hilitd">
+						<br />
+						VirginM<br />
+						Mat<br />
+						Luk</td>
+					<td class="hilitd">
+						<br />
+						become<br />
+						(2:9)</td>
+					<td class="hilitd">
+						The One and&nbsp;Only<br />
+						The Truth</td>
+					<td class="hilitd">
+						C&#39;</td>
+					<td class="hilitd">
+						A&#39;</td>
+					<td class="hilitd">
+						w1</td>
+					<td class="hilitd">
+						&nbsp;</td>
+					<td class="hilitd">
+						3</td>
+				</tr>
+				<tr role="row">
+					<td title="John bare witness of him, and cried, saying, This was he of whom I spake, HE that cometh after me is preferred before me: for he was before me.">
+						1:15</td>
+					<td class="hilitd">
+						John ~ HE</td>
+					<td class="hilitd">
+						1:30<br />
+						Marv6</td>
+					<td class="hilitd">
+						&nbsp;</td>
+					<td class="hilitd">
+						was</td>
+					<td class="hilitd">
+						&nbsp;</td>
+					<td class="hilitd">
+						B&#39;</td>
+					<td class="hilitd">
+						B&#39;</td>
+					<td class="hilitd">
+						w2</td>
+					<td class="hilitd">
+						&nbsp;</td>
+					<td class="hilitd">
+						&nbsp;</td>
+				</tr>
+				<tr role="row">
+					<td title="And of his fulness have all we received, and grace for grace.">
+						1:16</td>
+					<td>
+						HE ~ grace</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						A<sub>3</sub>&#39;</td>
+					<td>
+						C&#39;</td>
+					<td>
+						w1</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						4</td>
+				</tr>
+				<tr role="row">
+					<td title="For the law was given by Moses, but grace and truth came by Jesus Christ.">
+						1:17</td>
+					<td>
+						grace ~&nbsp;<a class="the Jesus">Jesus</a> <a class="the Christ">Christ</a>.</td>
+					<td>
+						14:6</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						come thru</td>
+					<td>
+						<a class="the Jesus">Jesus</a>&nbsp;<a class="the Christ">Christ</a></td>
+					<td>
+						A<sub>2</sub>&#39;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						ot</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr role="row">
+					<td title="No man hath seen God at any time; the only begotten Son, which is in the bosom of the Father, he hath declared him.">
+						1:18</td>
+					<td>
+						HE ~ the Only Son of Father</td>
+					<td>
+						3:16<br />
+						6:46</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						A<sub>1</sub>&#39;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						G</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td title="No man hath seen God at any time; the only begotten Son, which is in the bosom of the Father, he hath declared him.">
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						1:29 Lamb of God</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td title="No man hath seen God at any time; the only begotten Son, which is in the bosom of the Father, he hath declared him.">
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						1:49 King of Isreal</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td title="No man hath seen God at any time; the only begotten Son, which is in the bosom of the Father, he hath declared him.">
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						3-omni</td>
+					<td>
+						1:51 Son of Man</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						:</td>
+				</tr>
+			</tbody>
+		</table>
+		<div style="page-break-after: always;">
+			<span style="display: none;">&nbsp;</span></div>
+		<pre>
+S1: Chiasm (&gt;):
+
+   A 道与神同源                （1-5）     - 道的本质
+     B 施洗约翰为道作见证的使命  （6-8）     - 道的准备
+       C 道来到人间            （9-11）    - 道的抵挡
+         ★ 接受道的人成为神的儿女（12-13）   - 道的恩典
+       C' 道进入世界           （14）      - 道的同在
+     B' 施洗约翰为道作见证的呼喊  (15）      - 道的呼召
+   A' 道将神彰显                (16-18）   - 道的表明
+
+   A1  Logos Obscure                 (1)   道的晦涩难懂
+       A2  Logos Pronoun             (2)   道的代詞 
+           A3  Logos and All Things  (3)   道的萬物  
+               * LogosTestimony      (4-15)道的奇妙見證
+           A3' Logos and All Graces  (16)  道的恩典 
+       A2' Logos Name                (17)  道的名字  
+   A1' Explicit                      (18)  道的清楚明白 
+</pre>
+<pre>
+
+S2: Bi-Paritite: types of witness.
+
+   1. (4-5)  See        (14)
+   2. (6-8)  Hear       (15)
+   3. (9-12) Experience (16)
+</pre>
+<div>
+			W: Witness types:
+			<ol>
+				<li>
+					n: negative witness. 6:66 retreat, 7:12 doubt, 7:52 deny; 7:32 seize,,,,;</li>
+				<li>
+					w1: first hand witness;</li>
+				<li>
+					w2: second hand witness;</li>
+				<li>
+					ot: OT witness;</li>
+				<li>
+					G: witness fr God;</li>
+			</ol>
+</div>
+<span align="inline-block">
+		<table align="left">
+			<caption>
+				John&#39;s Dualism 二元论<br />
+				(What do you want? 1:38)</caption>
+			<thead>
+				<tr>
+					<td>
+						#</td>
+					<td>
+						vs</td>
+					<td>
+						A</td>
+					<td>
+						B</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						1</td>
+					<td>
+						1:3</td>
+					<td>
+						He</td>
+					<td>
+						all things</td>
+				</tr>
+				<tr>
+					<td>
+						2</td>
+					<td>
+						1:5</td>
+					<td>
+						light</td>
+					<td>
+						darkness</td>
+				</tr>
+				<tr>
+					<td>
+						3</td>
+					<td>
+						1:7</td>
+					<td>
+						Believe HIM</td>
+					<td>
+						Disbelieve HIM</td>
+				</tr>
+				<tr>
+					<td>
+						4</td>
+					<td>
+						1:8</td>
+					<td>
+						light</td>
+					<td>
+						not light</td>
+				</tr>
+				<tr>
+					<td>
+						5</td>
+					<td>
+						1:9</td>
+					<td>
+						true light</td>
+					<td>
+						false light</td>
+				</tr>
+				<tr>
+					<td>
+						6</td>
+					<td>
+						1:10</td>
+					<td>
+						recognize HIM</td>
+					<td>
+						not recognize HIM</td>
+				</tr>
+				<tr>
+					<td>
+						7</td>
+					<td>
+						1:11</td>
+					<td>
+						receive HIM</td>
+					<td>
+						not receive HIM</td>
+				</tr>
+				<tr>
+					<td>
+						8</td>
+					<td>
+						1:12</td>
+					<td>
+						children of God</td>
+					<td>
+						children of world</td>
+				</tr>
+				<tr>
+					<td>
+						9</td>
+					<td>
+						1:13</td>
+					<td>
+						born from God</td>
+					<td>
+						born from world</td>
+				</tr>
+			</tbody>
+		</table>
+		<table style="margin-left:'100px'; align:''"><caption>Paradox
+			<br>(悖论)</caption>
+			<thead>
+				<tr><td>#</td><td>vs</td><td>A</td><td>B</td><td title="Question/Answer">q/a</td></tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td></td><td>1:1</td><td>Logos was God<td>Logos with God</td><td>Q</td>
+				</tr>
+				<tr>
+					<td></td><td>1:10</td><td>world was made thru HIM</td><td>world did not recognize Him.</td><td>A</td>
+				</tr>
+				<tr>
+					<td></td><td>1:11</td><td>HE came to HIS own</td><td>HIS own did not receive HIM.</td><td>A</td>
+				</tr>
+				<tr>
+					<td></td><td>1:14</td><td>Logos(Divine)</td><td>flesh(world)</td><td>Q</td>
+				</tr>
+				<tr>
+					<td></td><td>1:15</td><td>HE before me</td><td>HE after me</td><td>Q</td>
+				</tr>
+				
+			
+			</tbody>
+		</table>
+		<p>
+			Q: question, A: answer.
+		</p><br>
+ 
+</span>
+		<table align="">
+			<caption>
+				Writing Purpose 寫作目的</caption>
+			<thead>
+				<tr>
+					<td>
+						#</td>
+				
+					<td>
+						Salvation Description</td>
+						<td>Brief</td>
+						<td>Sum</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						1</td>
+				
+					<td>
+						作从　神生的,　神的儿女(12-13), 满有恩典,真理.而且恩上加恩(14,16)</td>
+						<td>Grace</td>
+						<td rowspan="2">Love</td>
+				</tr>
+				<tr>
+					<td>
+						2</td>
+					<td>
+						一切奧秘都在基督裏(Jesus is the mystery of mysteries)
+						</td>
+						<td>Amaze</td> 
+				</tr>
+			</tbody>
+		</table>
+		<div style="page-break-after: always;">
+			<span style="display: none;">&nbsp;</span></div>
+		<p>
+			Related Verses in Prologue:</p>
+		<pre>
+John17:5 父阿，現在求你使我同你享榮耀，就是未有世界以先，我同你所有的榮耀。
+
+John5:26 因為父怎樣在自己有生命，就賜給他兒子也照樣在自己有生命，
+
+John8:12 耶穌又對眾人說：我是世界的光。跟從我的，就不在黑暗裡走，必要得著生命的光。
+
+John3:19 光來到世間，世人因自己的行為是惡的，不愛光，倒愛黑暗，定他們的罪就是在此。
+
+John12:35 耶穌對他們說：光在你們中間還有不多的時候，應當趁著有光行走，免得黑暗臨到你們；
+那在黑暗裡行走的，不知道往何處去。
+
+John12:46 我到世上來，乃是光，叫凡信我的，不住在黑暗裡。
+
+John4:44 因為耶穌自己作過見證說：「先知在本地是沒有人尊敬的。」
+3:6 從肉身生的就是肉身；從靈生的就是靈。
+John8:41你們是行你們父所行的事。他們說：我們不是從淫亂生的；我們只有一位父，就是神。
+42耶穌說：倘若神是你們的父，你們就必愛我；因為我本是出於神，也是從神而來，並不是由著自己來，
+乃是他差我來。
+
+John12:41 以賽亞因為看見他的榮耀，就指著他說這話。
+
+John1:30 這就是我曾說：『有一位在我以後來、反成了在我以前的，因他本來在我以前。』
+
+John14:6 耶穌說我就是道路、真理、生命；若不藉著我，沒有人能到父那裡去。
+
+John3:16「神愛世人，甚至將他的獨生子賜給他們，叫一切信他的，不至滅亡，反得永生。
+
+John6:46 這不是說有人看見過父；惟獨從神來的，他看見過父。
+
+創世記1:1-4
+1起初，神創造天地。
+2地是空虛混沌，淵面黑暗；神的靈運行在水面上。
+3神說：要有光，就有了光。
+4神看光是好的，就把光暗分開了。
+2:7
+7耶和華神用地上的塵土造人，將生氣吹在他鼻孔裡，他就成了有靈的活人，名叫亞當。
+
+創世記3:7-8
+7他們二人的眼睛就明亮了，才知道自己是赤身露體，便拿無花果樹的葉子為自己編作裙子。
+8天起了涼風，耶和華神在園中行走。那人和他妻子聽見神的聲音，就藏在園裡的樹木中，躲避耶和華神的面。
+
+創世記3:24
+24於是把他趕出去了；又在伊甸園的東邊安設基路伯和四面轉動發火燄的劍，要把守生命樹的道路。
+</pre>
+		<p>
+			&nbsp;</p>
+		<div style="page-break-after: always;">
+			<span style="display: none;">&nbsp;</span></div>
+		<p>
+			Gen 1:1-4; 2:7; 3:7-8,24;</p>
+		<p>
+			John 17:5; 5:26; 8:12; 3:19 ; 12:35; 12:46; 4:44; 8:41-42; 12:41; 1:30;14:6;3:16;6:46</p>
+		<hr />
+		<p>
+			end</p>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

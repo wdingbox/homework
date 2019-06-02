@@ -1,0 +1,17 @@
+http://in.ncu.edu.tw/phi/confucian/docs/resource/02_5/2.htm
+http://in.ncu.edu.tw/phi/confucian/
+
+                size     distinct  density(%)    
+公孫龍子  		3000.    339       11.3 
+SunZi   		6100.    771       12.6
+LunYu  			16100.   1362      8.5
+MoZi   			60931.   2461      4.0
+YiWenZi 		9107.    1043      11.5
+DengXiZi 		3150.    720       22.8
+
+LieZi         	30860.   2295	   7.4
+HuangDiSiJing 	11146.   2472      8.0
+GuanYiZi 		10871.   1073      9.8
+
+
+LaoZi           5283     800      15.1

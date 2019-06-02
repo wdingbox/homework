@@ -1,0 +1,197 @@
+<html>
+	<head>
+		<title onclick="alert();">ctxt</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!------->
+		<base target="_blank" />
+		<script src="../../../../tablesorter_master/js/jquery.tablesorter.js"></script><script src="../../../../Hebrew2/nodjs/noduti/js/table_Indexer.js"></script><script src="../../myjs/goto_editor.js"></script>
+		<style type="text/css">
+body {font-family: 'Times New Roman';
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+    }		
+#_MenuPanel{
+position: fixed;
+left: 10px;
+top: 0px;
+}
+
+.fixedcol{
+	position: absolute;
+	background-color: #999999;
+}
+.fixedcol2, thead{
+	background-color: #999999;
+}
+.fixedcol2{
+	background-color: #eeeeee;
+}
+.catlog{
+	background-color: #cccccc;
+}
+.strongs{
+	background-color: #ffffff;
+}
+.Top_Horz{
+	color: blue;
+}
+.All_Top_Horz{
+	background-color: red;
+}
+.leftbox{
+  background-color: #ff0000;
+}
+.tablefloatheb {float: right; margin: 2px;border-collapse: false;background-color: #eeeeee }
+.hebrew
+{
+    FONT-SIZE: 23px;
+    COLOR: #001320;
+    LINE-HEIGHT: 33px;
+    font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+    TEXT-DECORATION: none;
+}		</style>
+	</head>
+	<script>
+$(function(){
+    $(".narration").toggle();
+    $(".TheTitle").click(function(){
+        $(".narration").toggle();
+    } );
+    $("#strongsCodes").click(function(){
+    	$(".strongs, .translit").slideToggle();
+    });
+
+    $("body").click(function(){
+    	$("#_edit").slideToggle();
+    });
+
+    $("#relativeFrqRate").click(function(){
+    	cal_relativeFrqRate();
+    });
+
+
+    $(".fixedcol2").click(function(){
+    	alert();
+    });
+
+});/////////
+
+$(document).ready(function(){ 
+	goto_editor("_edit_url");
+	sort_table();
+});//
+function sort_table(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+
+
+</script>
+	<body>
+		<p id="_MenuPanel">
+			<br />
+			<a id="_edit_url">...</a><br />
+			<a id="indxer">indxer</a></p>
+		<div>
+			<p>
+				Kingdom of God:</p>
+			<p>
+				&nbsp;</p>
+			<ul>
+				<li>
+					Kingdom of God or Kingdom of Heaven interchangable.Kingdom of God 68 times in NT. 32 times in Mat.</li>
+				<li>
+					The rule of an eternal sovereign of God over all the universe.</li>
+				<li>
+					The spirityal rule over hearts lives of those who willingly submit God&#39;s authority</li>
+				<li>
+					Historically, the Church Fathers presented three separate interpretations of the Kingdom of God: the first (by Origen in the 3rd century) was that Jesus himself represents the Kingdom.[17][18] The second interpretation (also by Origen) is that the Kingdom represents the hearts and minds of the faithful captured by the love of God and the pursuit of Christian teachings.[17][19] The third interpretation (influenced by Origen but brought forth by Eusebius in the 4th century) is that the Kingdom represents the Christian Church composed of the faithful.[17][19]</li>
+				<li>
+					Kingdom of God vs kingdoms in the world.
+					<ol>
+						<li>
+							nationality and our life.</li>
+						<li>
+							layalty vs treaty</li>
+						<li>
+							asymatrics of two kdingdoms</li>
+					</ol>
+				</li>
+				<li>
+					The Kingdom of God should hold a central place in our lives (Matthew 6:25-33).<br style="padding: 0px; margin: 0px;" />
+					<br style="padding: 0px; margin: 0px;" />
+					<span style="padding: 0px; margin: 0px; font-family: Verdana, sans-serif; font-size: 10px;">Read more:&nbsp;<a href="https://www.whatchristianswanttoknow.com/what-is-the-kingdom-of-god-or-kingdom-of-heaven-a-bible-study/#ixzz5M7KcAeks" style="padding: 0px; margin: 0px; text-decoration-line: none; color: rgb(0, 51, 153);">https://www.whatchristianswanttoknow.com/what-is-the-kingdom-of-god-or-kingdom-of-heaven-a-bible-study/#ixzz5M7KcAeks</a></span></li>
+				<li>
+					The&nbsp;<em style="color: rgb(51, 51, 51); font-family: lato, Helvetica, sans-serif;">content</em><span style="color: rgb(51, 51, 51); font-family: lato, Helvetica, sans-serif;">&nbsp;of the good news is the&nbsp;</span><em style="color: rgb(51, 51, 51); font-family: lato, Helvetica, sans-serif;">kingdom of God</em></li>
+			</ul>
+		</div>
+		<table border="1" cellpadding="1" cellspacing="1" style="width: 500px">
+			<tbody>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;calvinist: tulip&nbsp;郁金香</td>
+					<td>
+						arminianism&nbsp;ROSES 玫瑰</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						Total depravity:[82] Humanity possesses &quot;free will&quot;,[83] but it is in bondage to sin,[84] until it is &quot;transformed&quot;.[85]</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						Unconditional election. &nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						Limited Atonement - The effects of the Atonement, by which God forgave sinful humanity, are limited only to those whom He has chosen. Justification by faith alone. Various views regarding the extent of the atonement.[92] &nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						Irresistible Grace - The grace that God extends to human beings to effect their election cannot be refused, since it has been decreed by God. Monergistic,[99] through the means of grace, irresistible. (Monergism states that the regeneration of an individual is the work of God through the Holy Spirit alone, as opposed to Synergism, which, in its simplest form, argues that the human will cooperates with God&#39;s grace in order to be regenerated. )</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						Perseverance of the Saints - Since God has decreed the elect, and they cannot resist grace, they are unconditionally and eternally secure in that election. Perseverance of the saints: the eternally elect in Christ will certainly persevere in faith.[104]</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+			</tbody>
+		</table>
+		<pre>
+
+</pre>
+	</body>
+</html>

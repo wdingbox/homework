@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+    <TITLE>sta</TITLE>
+	<script>	
+	var gStartDate = new Date();
+	console.log(  gStartDate.toString() +" ------ start load");//
+	</script>	
+    <META http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+    <link rel="stylesheet" type="text/css" href="./css/Default_pad.css">
+
+    <script language="javascript" src="./jq/jquery.js"></script>
+    
+    <script language="javascript" src="./jq/MyCookies.js"></script>
+	
+
+    
+    <script language="javascript" src="./jsdk/bible/_inc_bibleChinese.js" onload="CUVs.Set('./jsdb/bible/bbc/','');"> 
+    </script>
+	<script>	
+
+	inc_bibleChinese_write('./jsdb/bible/bbc/');
+	//alert("1cuv end");
+</script>
+    
+
+
+    
+    <script   language="javascript" src="./jsdk/bible/_inc_bibleNiv.js" onload="NIV.Set('./jsdb/bible/niv/js/','');"></script> <script>//inc_bibleNiv_write('./jsdb/bible/niv/js/');
+	//alert("2 inc_bibleNiv_write end");
+	//inc_bibleNiv_print_file_cv_ranges('./jsdb/bible/niv/js/');
+    </script>
+
+    <script   language="javascript" src="./jsdk/bible/_inc_bibleKjv.js" onload="KJV.Set('./jsdb/bible/kjv/','');"></script> <script> //inc_bibleKjv_write('./jsdb/bible/kjv/');
+	//alert("3. inc_bibleKjv_write end");
+	//inc_biblekjv_print_file_cv_ranges('./jsdb/bible/kjv/');
+    </script>
+
+
+    <script  language="javascript" src="./jsdk/bible/_inc_bibleBasicEnglish.js" onload="BBE.Set('./jsdb/bible/bbe/','');">
+    </script>
+	<script>
+	//inc_bibleBasicEnglish_write("./jsdb/bible/bbe/");
+	
+	//inc_bibleBasicEnglish_print_file_cv_ranges("./jsdb/bible/bbe/");
+	//alert("4. inc_bibleBasicEnglish_write end");
+	</script>
+
+
+    <script  language="javascript" src="./jsdk/bible/_inc_biblePinyin_improved.js" onload="CUVpy.Set('./jsdb/bible/pinyin/CUV_chars/splitter/2015/','');"> </script>
+	<script>
+	//inc_biblePinyin_write("./jsdb/bible/pinyin/CUV_chars/splitter/2015/");
+	//inc_biblePinyin_write("./jsdb/bible/pinyin/CUV_chars/splitter/2015/");
+	//alert("5. inc_biblePinyin_write end");
+	</script>
+
+
+
+    <script  language="javascript" src="./jsdb/bible/bbcSayings/SayingsIdArr.js" >
+    </script>
+    
+    <script  language="javascript" src="./jsdk/bible/_inc_bible_NamesOfPersons.js">
+    </script>
+    
+    <script  language="javascript" src="./jsdk/bible/_inc_bible_NamesOfPlaces.js">
+    </script>
+
+	
+	
+		
+    <script language="javascript" src="./jsdb/cc/z2g/jianfan/Traditional2Simplified.js">
+    </script>
+
+
+    <script language="javascript" src="./jsdk/cc/z2g/_inc_z2g.js" _onload="Z2G.Set('./jsdb/', 'async')">
+    </script>
+	<script>inc_z2g_write('./jsdb/');
+	//alert("6. last end inc_z2g_write.")
+	</script>
+
+
+
+    
+    
+	<script language="javascript" src="BookChapterVerseMax.js"  type="text/javascript"></script>
+    <script language="javascript" src="BiblePad-2015-any.js"  type="text/javascript"></script>
+    <script language="javascript" src="BiblePadUtils-2015.js"  type="text/javascript">
+    </script>
+	
+	<script>	
+	console.log(  (new Date()).toString() );//
+	</script>
+<style>
+body {
+    background-color: black;
+    color: white;
+    width:100%;
+}
+
+</style>    
+    <script>
+
+</script>
+
+
+    <script language="javascript">
+    if (navigator.cookieEnabled){
+       console.log("document.cookie:"+document.cookie);
+    }else{
+       alert("cookieEnabled OFF");
+    }
+$(document).ready(function(){
+//body_onload();
+
+
+$("#test").click(function(){
+	alert("test"+ typeof BookChapterVerseMax );
+	var arr = BookChapterVerseMax['_Gen'];
+	alert("test"+ typeof arr );
+	alert(arr.length);
+});
+
+
+});
+function test(){
+	
+	var ChapterVersesMax={};
+	var t=$("#Statistics_ChapterVerses tr:eq(3) td:eq(2)").text();
+	console.log(t);
+	
+	var rowMax=$("#Statistics_ChapterVerses tr").length;
+	console.log("rowMax="+rowMax);
+	var ss='';
+	var jsns='';
+	var arr=[];
+	for(var i=0;i<rowMax;i++){
+		var idx = get_idx_from_tab(i);
+		var chp = get_chapter_from_tab(i);
+		var frq = get_freq_from_tab(i);
+		
+		var bookid=chp.substr(0,4);
+		var chpNum=chp.substr(4);
+		if('undefined' === typeof ChapterVersesMax[bookid] ){
+			ChapterVersesMax[bookid]= [];
+		}
+		ChapterVersesMax[bookid].push(frq);
+		
+		var s = idx+": "+bookid+","+chpNum+","+frq+"<br/>";
+		ss+=s;
+		console.log(s);
+	}
+	var jsns=JSON.stringify(ChapterVersesMax);
+	ss=jsns+"<hr/>"+ss;
+	console.log( jsns );
+	var jsn= JSON.parse(jsns);
+	console.log( jsn );
+	$("#out").html(ss);
+};
+
+
+function get_idx_from_tab(row){
+var idx = $("#Statistics_ChapterVerses tr:eq("+row+") td:eq(0)").text();
+return idx;
+}
+function get_chapter_from_tab(row){
+var idx = $("#Statistics_ChapterVerses tr:eq("+row+") td:eq(1)").text();
+return idx;
+}
+function get_freq_from_tab(row){
+var idx = $("#Statistics_ChapterVerses tr:eq("+row+") td:eq(2)").text();
+return idx;
+}
+function get_freq_by_tkey(tkey){
+	if( 'undefined' === tkey ) {
+		return "err";
+	};
+	var t=$("#Statistics_ChapterVerses td:contains('"+tkey+"')").prev().text();
+	return $.trim(t);
+}
+
+
+function teststring(){
+	var tt = typeof BookChapterVerseMax["_Gen"];
+	var len = 0;
+	
+	var ss=''+tt+"<br/>";
+	$.each(BookChapterVerseMax,function(key,arr){
+		console.log(key+","+arr.length);
+		var s=key+":"+arr.length+",len0="+arr[0]+",<br/>";
+		ss+=s;
+	});
+	//len = arr.length;
+	console.log( len );
+	//var jso = JSON.parse( BookChapterVerseMax );
+	
+	var obj = '{"name":"John Johnson","street":"Oslo West 16","phone":"555 1234567"}';
+	var out
+	ss +="<hr/>";
+	obj['name'] + "<br>" +
+	obj['street'] + "aaa<br>" +
+	obj.phone;	
+	
+	ss+="<hr/>";
+	var obj2 = {name:"Johnnnnnnnnnnnnnnnnnnnnn,Johnson",street:"Oslo West 16",phone:"555 222"};
+	ss += "<hr/>";
+	obj2['name'] + "<br>" +
+	obj2['street'] + "aaaaa<br>" +
+	obj2.phone;	
+	
+
+	
+
+	
+	$("#out").html(ss);
+
+
+
+}
+    </script>
+
+</HEAD>
+    <BODY xxxonload="body_onload();">
+
+<p>copp result from gMyFunctionsNames.add("Statistics_ChapterVerses",function()</p>
+
+<a>tims(ms):1432                    </a><br/>
+<a>                                 </a><br/>
+<a>Isaiah Verses                    </a><br/>
+<a>                                 </a><br/>
+<a>                                 </a><br/>
+<a>[+]                              </a><br/>
+<a>undefined,                       </a><br/>
+<a>Tot Words=31101                  </a><br/>
+<a>Tot verses=31101                 </a><br/>
+<button id='test'>test</button><hr/>
+<a id='out'></a>
+
+
+
+
+
+
+
+<table  id='Statistics_ChapterVerses' border='1' >
+<tbody><tr><td>0</td><td>_Gen1</td><td>31</td></tr><tr><td>1</td><td>_Gen2</td><td>25</td></tr><tr><td>2</td><td>_Gen3</td><td>24</td></tr><tr><td>3</td><td>_Gen4</td><td>26</td></tr><tr><td>4</td><td>_Gen5</td><td>32</td></tr><tr><td>5</td><td>_Gen6</td><td>22</td></tr><tr><td>6</td><td>_Gen7</td><td>24</td></tr><tr><td>7</td><td>_Gen8</td><td>22</td></tr><tr><td>8</td><td>_Gen9</td><td>29</td></tr><tr><td>9</td><td>_Gen10</td><td>32</td></tr><tr><td>10</td><td>_Gen11</td><td>32</td></tr><tr><td>11</td><td>_Gen12</td><td>20</td></tr><tr><td>12</td><td>_Gen13</td><td>18</td></tr><tr><td>13</td><td>_Gen14</td><td>24</td></tr><tr><td>14</td><td>_Gen15</td><td>21</td></tr><tr><td>15</td><td>_Gen16</td><td>16</td></tr><tr><td>16</td><td>_Gen17</td><td>27</td></tr><tr><td>17</td><td>_Gen18</td><td>33</td></tr><tr><td>18</td><td>_Gen19</td><td>38</td></tr><tr><td>19</td><td>_Gen20</td><td>18</td></tr><tr><td>20</td><td>_Gen21</td><td>34</td></tr><tr><td>21</td><td>_Gen22</td><td>24</td></tr><tr><td>22</td><td>_Gen23</td><td>20</td></tr><tr><td>23</td><td>_Gen24</td><td>67</td></tr><tr><td>24</td><td>_Gen25</td><td>34</td></tr><tr><td>25</td><td>_Gen26</td><td>35</td></tr><tr><td>26</td><td>_Gen27</td><td>46</td></tr><tr><td>27</td><td>_Gen28</td><td>22</td></tr><tr><td>28</td><td>_Gen29</td><td>35</td></tr><tr><td>29</td><td>_Gen30</td><td>43</td></tr><tr><td>30</td><td>_Gen31</td><td>55</td></tr><tr><td>31</td><td>_Gen32</td><td>32</td></tr><tr><td>32</td><td>_Gen33</td><td>20</td></tr><tr><td>33</td><td>_Gen34</td><td>31</td></tr><tr><td>34</td><td>_Gen35</td><td>29</td></tr><tr><td>35</td><td>_Gen36</td><td>43</td></tr><tr><td>36</td><td>_Gen37</td><td>36</td></tr><tr><td>37</td><td>_Gen38</td><td>30</td></tr><tr><td>38</td><td>_Gen39</td><td>23</td></tr><tr><td>39</td><td>_Gen40</td><td>23</td></tr><tr><td>40</td><td>_Gen41</td><td>57</td></tr><tr><td>41</td><td>_Gen42</td><td>38</td></tr><tr><td>42</td><td>_Gen43</td><td>34</td></tr><tr><td>43</td><td>_Gen44</td><td>34</td></tr><tr><td>44</td><td>_Gen45</td><td>28</td></tr><tr><td>45</td><td>_Gen46</td><td>34</td></tr><tr><td>46</td><td>_Gen47</td><td>31</td></tr><tr><td>47</td><td>_Gen48</td><td>22</td></tr><tr><td>48</td><td>_Gen49</td><td>33</td></tr><tr><td>49</td><td>_Gen50</td><td>26</td></tr><tr><td>50</td><td>_Exo1</td><td>22</td></tr><tr><td>51</td><td>_Exo2</td><td>25</td></tr><tr><td>52</td><td>_Exo3</td><td>22</td></tr><tr><td>53</td><td>_Exo4</td><td>31</td></tr><tr><td>54</td><td>_Exo5</td><td>23</td></tr><tr><td>55</td><td>_Exo6</td><td>30</td></tr><tr><td>56</td><td>_Exo7</td><td>25</td></tr><tr><td>57</td><td>_Exo8</td><td>32</td></tr><tr><td>58</td><td>_Exo9</td><td>35</td></tr><tr><td>59</td><td>_Exo10</td><td>29</td></tr><tr><td>60</td><td>_Exo11</td><td>10</td></tr><tr><td>61</td><td>_Exo12</td><td>51</td></tr><tr><td>62</td><td>_Exo13</td><td>22</td></tr><tr><td>63</td><td>_Exo14</td><td>31</td></tr><tr><td>64</td><td>_Exo15</td><td>27</td></tr><tr><td>65</td><td>_Exo16</td><td>36</td></tr><tr><td>66</td><td>_Exo17</td><td>16</td></tr><tr><td>67</td><td>_Exo18</td><td>27</td></tr><tr><td>68</td><td>_Exo19</td><td>25</td></tr><tr><td>69</td><td>_Exo20</td><td>26</td></tr><tr><td>70</td><td>_Exo21</td><td>36</td></tr><tr><td>71</td><td>_Exo22</td><td>31</td></tr><tr><td>72</td><td>_Exo23</td><td>33</td></tr><tr><td>73</td><td>_Exo24</td><td>18</td></tr><tr><td>74</td><td>_Exo25</td><td>40</td></tr><tr><td>75</td><td>_Exo26</td><td>37</td></tr><tr><td>76</td><td>_Exo27</td><td>21</td></tr><tr><td>77</td><td>_Exo28</td><td>43</td></tr><tr><td>78</td><td>_Exo29</td><td>46</td></tr><tr><td>79</td><td>_Exo30</td><td>38</td></tr><tr><td>80</td><td>_Exo31</td><td>18</td></tr><tr><td>81</td><td>_Exo32</td><td>35</td></tr><tr><td>82</td><td>_Exo33</td><td>23</td></tr><tr><td>83</td><td>_Exo34</td><td>35</td></tr><tr><td>84</td><td>_Exo35</td><td>35</td></tr><tr><td>85</td><td>_Exo36</td><td>38</td></tr><tr><td>86</td><td>_Exo37</td><td>29</td></tr><tr><td>87</td><td>_Exo38</td><td>31</td></tr><tr><td>88</td><td>_Exo39</td><td>43</td></tr><tr><td>89</td><td>_Exo40</td><td>38</td></tr><tr><td>90</td><td>_Lev1</td><td>17</td></tr><tr><td>91</td><td>_Lev2</td><td>16</td></tr><tr><td>92</td><td>_Lev3</td><td>17</td></tr><tr><td>93</td><td>_Lev4</td><td>35</td></tr><tr><td>94</td><td>_Lev5</td><td>19</td></tr><tr><td>95</td><td>_Lev6</td><td>30</td></tr><tr><td>96</td><td>_Lev7</td><td>38</td></tr><tr><td>97</td><td>_Lev8</td><td>36</td></tr><tr><td>98</td><td>_Lev9</td><td>24</td></tr><tr><td>99</td><td>_Lev10</td><td>20</td></tr><tr><td>100</td><td>_Lev11</td><td>47</td></tr><tr><td>101</td><td>_Lev12</td><td>8</td></tr><tr><td>102</td><td>_Lev13</td><td>59</td></tr><tr><td>103</td><td>_Lev14</td><td>57</td></tr><tr><td>104</td><td>_Lev15</td><td>33</td></tr><tr><td>105</td><td>_Lev16</td><td>34</td></tr><tr><td>106</td><td>_Lev17</td><td>16</td></tr><tr><td>107</td><td>_Lev18</td><td>30</td></tr><tr><td>108</td><td>_Lev19</td><td>37</td></tr><tr><td>109</td><td>_Lev20</td><td>27</td></tr><tr><td>110</td><td>_Lev21</td><td>24</td></tr><tr><td>111</td><td>_Lev22</td><td>33</td></tr><tr><td>112</td><td>_Lev23</td><td>44</td></tr><tr><td>113</td><td>_Lev24</td><td>23</td></tr><tr><td>114</td><td>_Lev25</td><td>55</td></tr><tr><td>115</td><td>_Lev26</td><td>46</td></tr><tr><td>116</td><td>_Lev27</td><td>34</td></tr><tr><td>117</td><td>_Num1</td><td>54</td></tr><tr><td>118</td><td>_Num2</td><td>34</td></tr><tr><td>119</td><td>_Num3</td><td>51</td></tr><tr><td>120</td><td>_Num4</td><td>49</td></tr><tr><td>121</td><td>_Num5</td><td>31</td></tr><tr><td>122</td><td>_Num6</td><td>27</td></tr><tr><td>123</td><td>_Num7</td><td>89</td></tr><tr><td>124</td><td>_Num8</td><td>26</td></tr><tr><td>125</td><td>_Num9</td><td>23</td></tr><tr><td>126</td><td>_Num10</td><td>36</td></tr><tr><td>127</td><td>_Num11</td><td>35</td></tr><tr><td>128</td><td>_Num12</td><td>16</td></tr><tr><td>129</td><td>_Num13</td><td>33</td></tr><tr><td>130</td><td>_Num14</td><td>45</td></tr><tr><td>131</td><td>_Num15</td><td>41</td></tr><tr><td>132</td><td>_Num16</td><td>50</td></tr><tr><td>133</td><td>_Num17</td><td>13</td></tr><tr><td>134</td><td>_Num18</td><td>32</td></tr><tr><td>135</td><td>_Num19</td><td>22</td></tr><tr><td>136</td><td>_Num20</td><td>29</td></tr><tr><td>137</td><td>_Num21</td><td>35</td></tr><tr><td>138</td><td>_Num22</td><td>41</td></tr><tr><td>139</td><td>_Num23</td><td>30</td></tr><tr><td>140</td><td>_Num24</td><td>25</td></tr><tr><td>141</td><td>_Num25</td><td>18</td></tr><tr><td>142</td><td>_Num26</td><td>65</td></tr><tr><td>143</td><td>_Num27</td><td>23</td></tr><tr><td>144</td><td>_Num28</td><td>31</td></tr><tr><td>145</td><td>_Num29</td><td>40</td></tr><tr><td>146</td><td>_Num30</td><td>16</td></tr><tr><td>147</td><td>_Num31</td><td>54</td></tr><tr><td>148</td><td>_Num32</td><td>42</td></tr><tr><td>149</td><td>_Num33</td><td>56</td></tr><tr><td>150</td><td>_Num34</td><td>29</td></tr><tr><td>151</td><td>_Num35</td><td>34</td></tr><tr><td>152</td><td>_Num36</td><td>13</td></tr><tr><td>153</td><td>_Deu1</td><td>46</td></tr><tr><td>154</td><td>_Deu2</td><td>37</td></tr><tr><td>155</td><td>_Deu3</td><td>29</td></tr><tr><td>156</td><td>_Deu4</td><td>49</td></tr><tr><td>157</td><td>_Deu5</td><td>33</td></tr><tr><td>158</td><td>_Deu6</td><td>25</td></tr><tr><td>159</td><td>_Deu7</td><td>26</td></tr><tr><td>160</td><td>_Deu8</td><td>20</td></tr><tr><td>161</td><td>_Deu9</td><td>29</td></tr><tr><td>162</td><td>_Deu10</td><td>22</td></tr><tr><td>163</td><td>_Deu11</td><td>32</td></tr><tr><td>164</td><td>_Deu12</td><td>32</td></tr><tr><td>165</td><td>_Deu13</td><td>18</td></tr><tr><td>166</td><td>_Deu14</td><td>29</td></tr><tr><td>167</td><td>_Deu15</td><td>23</td></tr><tr><td>168</td><td>_Deu16</td><td>22</td></tr><tr><td>169</td><td>_Deu17</td><td>20</td></tr><tr><td>170</td><td>_Deu18</td><td>22</td></tr><tr><td>171</td><td>_Deu19</td><td>21</td></tr><tr><td>172</td><td>_Deu20</td><td>20</td></tr><tr><td>173</td><td>_Deu21</td><td>23</td></tr><tr><td>174</td><td>_Deu22</td><td>30</td></tr><tr><td>175</td><td>_Deu23</td><td>25</td></tr><tr><td>176</td><td>_Deu24</td><td>22</td></tr><tr><td>177</td><td>_Deu25</td><td>19</td></tr><tr><td>178</td><td>_Deu26</td><td>19</td></tr><tr><td>179</td><td>_Deu27</td><td>26</td></tr><tr><td>180</td><td>_Deu28</td><td>68</td></tr><tr><td>181</td><td>_Deu29</td><td>29</td></tr><tr><td>182</td><td>_Deu30</td><td>20</td></tr><tr><td>183</td><td>_Deu31</td><td>30</td></tr><tr><td>184</td><td>_Deu32</td><td>52</td></tr><tr><td>185</td><td>_Deu33</td><td>29</td></tr><tr><td>186</td><td>_Deu34</td><td>12</td></tr><tr><td>187</td><td>_Jos1</td><td>18</td></tr><tr><td>188</td><td>_Jos2</td><td>24</td></tr><tr><td>189</td><td>_Jos3</td><td>17</td></tr><tr><td>190</td><td>_Jos4</td><td>24</td></tr><tr><td>191</td><td>_Jos5</td><td>15</td></tr><tr><td>192</td><td>_Jos6</td><td>27</td></tr><tr><td>193</td><td>_Jos7</td><td>26</td></tr><tr><td>194</td><td>_Jos8</td><td>35</td></tr><tr><td>195</td><td>_Jos9</td><td>27</td></tr><tr><td>196</td><td>_Jos10</td><td>43</td></tr><tr><td>197</td><td>_Jos11</td><td>23</td></tr><tr><td>198</td><td>_Jos12</td><td>24</td></tr><tr><td>199</td><td>_Jos13</td><td>33</td></tr><tr><td>200</td><td>_Jos14</td><td>15</td></tr><tr><td>201</td><td>_Jos15</td><td>63</td></tr><tr><td>202</td><td>_Jos16</td><td>10</td></tr><tr><td>203</td><td>_Jos17</td><td>18</td></tr><tr><td>204</td><td>_Jos18</td><td>28</td></tr><tr><td>205</td><td>_Jos19</td><td>51</td></tr><tr><td>206</td><td>_Jos20</td><td>9</td></tr><tr><td>207</td><td>_Jos21</td><td>45</td></tr><tr><td>208</td><td>_Jos22</td><td>34</td></tr><tr><td>209</td><td>_Jos23</td><td>16</td></tr><tr><td>210</td><td>_Jos24</td><td>33</td></tr><tr><td>211</td><td>_Jug1</td><td>36</td></tr><tr><td>212</td><td>_Jug2</td><td>23</td></tr><tr><td>213</td><td>_Jug3</td><td>31</td></tr><tr><td>214</td><td>_Jug4</td><td>24</td></tr><tr><td>215</td><td>_Jug5</td><td>31</td></tr><tr><td>216</td><td>_Jug6</td><td>40</td></tr><tr><td>217</td><td>_Jug7</td><td>25</td></tr><tr><td>218</td><td>_Jug8</td><td>35</td></tr><tr><td>219</td><td>_Jug9</td><td>57</td></tr><tr><td>220</td><td>_Jug10</td><td>18</td></tr><tr><td>221</td><td>_Jug11</td><td>40</td></tr><tr><td>222</td><td>_Jug12</td><td>15</td></tr><tr><td>223</td><td>_Jug13</td><td>25</td></tr><tr><td>224</td><td>_Jug14</td><td>20</td></tr><tr><td>225</td><td>_Jug15</td><td>20</td></tr><tr><td>226</td><td>_Jug16</td><td>31</td></tr><tr><td>227</td><td>_Jug17</td><td>13</td></tr><tr><td>228</td><td>_Jug18</td><td>31</td></tr><tr><td>229</td><td>_Jug19</td><td>30</td></tr><tr><td>230</td><td>_Jug20</td><td>48</td></tr><tr><td>231</td><td>_Jug21</td><td>25</td></tr><tr><td>232</td><td>_Rut1</td><td>22</td></tr><tr><td>233</td><td>_Rut2</td><td>23</td></tr><tr><td>234</td><td>_Rut3</td><td>18</td></tr><tr><td>235</td><td>_Rut4</td><td>22</td></tr><tr><td>236</td><td>_1Sa1</td><td>28</td></tr><tr><td>237</td><td>_1Sa2</td><td>36</td></tr><tr><td>238</td><td>_1Sa3</td><td>21</td></tr><tr><td>239</td><td>_1Sa4</td><td>22</td></tr><tr><td>240</td><td>_1Sa5</td><td>12</td></tr><tr><td>241</td><td>_1Sa6</td><td>21</td></tr><tr><td>242</td><td>_1Sa7</td><td>17</td></tr><tr><td>243</td><td>_1Sa8</td><td>22</td></tr><tr><td>244</td><td>_1Sa9</td><td>27</td></tr><tr><td>245</td><td>_1Sa10</td><td>27</td></tr><tr><td>246</td><td>_1Sa11</td><td>15</td></tr><tr><td>247</td><td>_1Sa12</td><td>25</td></tr><tr><td>248</td><td>_1Sa13</td><td>23</td></tr><tr><td>249</td><td>_1Sa14</td><td>52</td></tr><tr><td>250</td><td>_1Sa15</td><td>35</td></tr><tr><td>251</td><td>_1Sa16</td><td>23</td></tr><tr><td>252</td><td>_1Sa17</td><td>58</td></tr><tr><td>253</td><td>_1Sa18</td><td>30</td></tr><tr><td>254</td><td>_1Sa19</td><td>24</td></tr><tr><td>255</td><td>_1Sa20</td><td>42</td></tr><tr><td>256</td><td>_1Sa21</td><td>15</td></tr><tr><td>257</td><td>_1Sa22</td><td>23</td></tr><tr><td>258</td><td>_1Sa23</td><td>29</td></tr><tr><td>259</td><td>_1Sa24</td><td>22</td></tr><tr><td>260</td><td>_1Sa25</td><td>44</td></tr><tr><td>261</td><td>_1Sa26</td><td>25</td></tr><tr><td>262</td><td>_1Sa27</td><td>12</td></tr><tr><td>263</td><td>_1Sa28</td><td>25</td></tr><tr><td>264</td><td>_1Sa29</td><td>11</td></tr><tr><td>265</td><td>_1Sa30</td><td>31</td></tr><tr><td>266</td><td>_1Sa31</td><td>13</td></tr><tr><td>267</td><td>_2Sa1</td><td>27</td></tr><tr><td>268</td><td>_2Sa2</td><td>32</td></tr><tr><td>269</td><td>_2Sa3</td><td>39</td></tr><tr><td>270</td><td>_2Sa4</td><td>12</td></tr><tr><td>271</td><td>_2Sa5</td><td>25</td></tr><tr><td>272</td><td>_2Sa6</td><td>23</td></tr><tr><td>273</td><td>_2Sa7</td><td>29</td></tr><tr><td>274</td><td>_2Sa8</td><td>18</td></tr><tr><td>275</td><td>_2Sa9</td><td>13</td></tr><tr><td>276</td><td>_2Sa10</td><td>19</td></tr><tr><td>277</td><td>_2Sa11</td><td>27</td></tr><tr><td>278</td><td>_2Sa12</td><td>31</td></tr><tr><td>279</td><td>_2Sa13</td><td>39</td></tr><tr><td>280</td><td>_2Sa14</td><td>33</td></tr><tr><td>281</td><td>_2Sa15</td><td>37</td></tr><tr><td>282</td><td>_2Sa16</td><td>23</td></tr><tr><td>283</td><td>_2Sa17</td><td>29</td></tr><tr><td>284</td><td>_2Sa18</td><td>33</td></tr><tr><td>285</td><td>_2Sa19</td><td>43</td></tr><tr><td>286</td><td>_2Sa20</td><td>26</td></tr><tr><td>287</td><td>_2Sa21</td><td>22</td></tr><tr><td>288</td><td>_2Sa22</td><td>51</td></tr><tr><td>289</td><td>_2Sa23</td><td>39</td></tr><tr><td>290</td><td>_2Sa24</td><td>25</td></tr><tr><td>291</td><td>_1Ki1</td><td>53</td></tr><tr><td>292</td><td>_1Ki2</td><td>46</td></tr><tr><td>293</td><td>_1Ki3</td><td>28</td></tr><tr><td>294</td><td>_1Ki4</td><td>34</td></tr><tr><td>295</td><td>_1Ki5</td><td>18</td></tr><tr><td>296</td><td>_1Ki6</td><td>38</td></tr><tr><td>297</td><td>_1Ki7</td><td>51</td></tr><tr><td>298</td><td>_1Ki8</td><td>66</td></tr><tr><td>299</td><td>_1Ki9</td><td>28</td></tr><tr><td>300</td><td>_1Ki10</td><td>29</td></tr><tr><td>301</td><td>_1Ki11</td><td>43</td></tr><tr><td>302</td><td>_1Ki12</td><td>33</td></tr><tr><td>303</td><td>_1Ki13</td><td>34</td></tr><tr><td>304</td><td>_1Ki14</td><td>31</td></tr><tr><td>305</td><td>_1Ki15</td><td>34</td></tr><tr><td>306</td><td>_1Ki16</td><td>34</td></tr><tr><td>307</td><td>_1Ki17</td><td>24</td></tr><tr><td>308</td><td>_1Ki18</td><td>46</td></tr><tr><td>309</td><td>_1Ki19</td><td>21</td></tr><tr><td>310</td><td>_1Ki20</td><td>43</td></tr><tr><td>311</td><td>_1Ki21</td><td>29</td></tr><tr><td>312</td><td>_1Ki22</td><td>53</td></tr><tr><td>313</td><td>_2Ki1</td><td>18</td></tr><tr><td>314</td><td>_2Ki2</td><td>25</td></tr><tr><td>315</td><td>_2Ki3</td><td>27</td></tr><tr><td>316</td><td>_2Ki4</td><td>44</td></tr><tr><td>317</td><td>_2Ki5</td><td>27</td></tr><tr><td>318</td><td>_2Ki6</td><td>33</td></tr><tr><td>319</td><td>_2Ki7</td><td>20</td></tr><tr><td>320</td><td>_2Ki8</td><td>29</td></tr><tr><td>321</td><td>_2Ki9</td><td>37</td></tr><tr><td>322</td><td>_2Ki10</td><td>36</td></tr><tr><td>323</td><td>_2Ki11</td><td>21</td></tr><tr><td>324</td><td>_2Ki12</td><td>21</td></tr><tr><td>325</td><td>_2Ki13</td><td>25</td></tr><tr><td>326</td><td>_2Ki14</td><td>29</td></tr><tr><td>327</td><td>_2Ki15</td><td>38</td></tr><tr><td>328</td><td>_2Ki16</td><td>20</td></tr><tr><td>329</td><td>_2Ki17</td><td>41</td></tr><tr><td>330</td><td>_2Ki18</td><td>37</td></tr><tr><td>331</td><td>_2Ki19</td><td>37</td></tr><tr><td>332</td><td>_2Ki20</td><td>21</td></tr><tr><td>333</td><td>_2Ki21</td><td>26</td></tr><tr><td>334</td><td>_2Ki22</td><td>20</td></tr><tr><td>335</td><td>_2Ki23</td><td>37</td></tr><tr><td>336</td><td>_2Ki24</td><td>20</td></tr><tr><td>337</td><td>_2Ki25</td><td>30</td></tr><tr><td>338</td><td>_1Ch1</td><td>54</td></tr><tr><td>339</td><td>_1Ch2</td><td>55</td></tr><tr><td>340</td><td>_1Ch3</td><td>24</td></tr><tr><td>341</td><td>_1Ch4</td><td>43</td></tr><tr><td>342</td><td>_1Ch5</td><td>26</td></tr><tr><td>343</td><td>_1Ch6</td><td>81</td></tr><tr><td>344</td><td>_1Ch7</td><td>40</td></tr><tr><td>345</td><td>_1Ch8</td><td>40</td></tr><tr><td>346</td><td>_1Ch9</td><td>44</td></tr><tr><td>347</td><td>_1Ch10</td><td>14</td></tr><tr><td>348</td><td>_1Ch11</td><td>47</td></tr><tr><td>349</td><td>_1Ch12</td><td>40</td></tr><tr><td>350</td><td>_1Ch13</td><td>14</td></tr><tr><td>351</td><td>_1Ch14</td><td>17</td></tr><tr><td>352</td><td>_1Ch15</td><td>29</td></tr><tr><td>353</td><td>_1Ch16</td><td>43</td></tr><tr><td>354</td><td>_1Ch17</td><td>27</td></tr><tr><td>355</td><td>_1Ch18</td><td>17</td></tr><tr><td>356</td><td>_1Ch19</td><td>19</td></tr><tr><td>357</td><td>_1Ch20</td><td>8</td></tr><tr><td>358</td><td>_1Ch21</td><td>31</td></tr><tr><td>359</td><td>_1Ch22</td><td>18</td></tr><tr><td>360</td><td>_1Ch23</td><td>32</td></tr><tr><td>361</td><td>_1Ch24</td><td>31</td></tr><tr><td>362</td><td>_1Ch25</td><td>31</td></tr><tr><td>363</td><td>_1Ch26</td><td>32</td></tr><tr><td>364</td><td>_1Ch27</td><td>34</td></tr><tr><td>365</td><td>_1Ch28</td><td>21</td></tr><tr><td>366</td><td>_1Ch29</td><td>30</td></tr><tr><td>367</td><td>_2Ch1</td><td>17</td></tr><tr><td>368</td><td>_2Ch2</td><td>18</td></tr><tr><td>369</td><td>_2Ch3</td><td>17</td></tr><tr><td>370</td><td>_2Ch4</td><td>22</td></tr><tr><td>371</td><td>_2Ch5</td><td>14</td></tr><tr><td>372</td><td>_2Ch6</td><td>42</td></tr><tr><td>373</td><td>_2Ch7</td><td>22</td></tr><tr><td>374</td><td>_2Ch8</td><td>18</td></tr><tr><td>375</td><td>_2Ch9</td><td>31</td></tr><tr><td>376</td><td>_2Ch10</td><td>19</td></tr><tr><td>377</td><td>_2Ch11</td><td>23</td></tr><tr><td>378</td><td>_2Ch12</td><td>16</td></tr><tr><td>379</td><td>_2Ch13</td><td>22</td></tr><tr><td>380</td><td>_2Ch14</td><td>15</td></tr><tr><td>381</td><td>_2Ch15</td><td>19</td></tr><tr><td>382</td><td>_2Ch16</td><td>14</td></tr><tr><td>383</td><td>_2Ch17</td><td>19</td></tr><tr><td>384</td><td>_2Ch18</td><td>34</td></tr><tr><td>385</td><td>_2Ch19</td><td>11</td></tr><tr><td>386</td><td>_2Ch20</td><td>37</td></tr><tr><td>387</td><td>_2Ch21</td><td>20</td></tr><tr><td>388</td><td>_2Ch22</td><td>12</td></tr><tr><td>389</td><td>_2Ch23</td><td>21</td></tr><tr><td>390</td><td>_2Ch24</td><td>27</td></tr><tr><td>391</td><td>_2Ch25</td><td>28</td></tr><tr><td>392</td><td>_2Ch26</td><td>23</td></tr><tr><td>393</td><td>_2Ch27</td><td>9</td></tr><tr><td>394</td><td>_2Ch28</td><td>27</td></tr><tr><td>395</td><td>_2Ch29</td><td>36</td></tr><tr><td>396</td><td>_2Ch30</td><td>27</td></tr><tr><td>397</td><td>_2Ch31</td><td>21</td></tr><tr><td>398</td><td>_2Ch32</td><td>33</td></tr><tr><td>399</td><td>_2Ch33</td><td>25</td></tr><tr><td>400</td><td>_2Ch34</td><td>33</td></tr><tr><td>401</td><td>_2Ch35</td><td>27</td></tr><tr><td>402</td><td>_2Ch36</td><td>23</td></tr><tr><td>403</td><td>_Ezr1</td><td>11</td></tr><tr><td>404</td><td>_Ezr2</td><td>70</td></tr><tr><td>405</td><td>_Ezr3</td><td>13</td></tr><tr><td>406</td><td>_Ezr4</td><td>24</td></tr><tr><td>407</td><td>_Ezr5</td><td>17</td></tr><tr><td>408</td><td>_Ezr6</td><td>22</td></tr><tr><td>409</td><td>_Ezr7</td><td>28</td></tr><tr><td>410</td><td>_Ezr8</td><td>36</td></tr><tr><td>411</td><td>_Ezr9</td><td>15</td></tr><tr><td>412</td><td>_Ezr10</td><td>44</td></tr><tr><td>413</td><td>_Neh1</td><td>11</td></tr><tr><td>414</td><td>_Neh2</td><td>20</td></tr><tr><td>415</td><td>_Neh3</td><td>32</td></tr><tr><td>416</td><td>_Neh4</td><td>23</td></tr><tr><td>417</td><td>_Neh5</td><td>19</td></tr><tr><td>418</td><td>_Neh6</td><td>19</td></tr><tr><td>419</td><td>_Neh7</td><td>73</td></tr><tr><td>420</td><td>_Neh8</td><td>18</td></tr><tr><td>421</td><td>_Neh9</td><td>38</td></tr><tr><td>422</td><td>_Neh10</td><td>39</td></tr><tr><td>423</td><td>_Neh11</td><td>36</td></tr><tr><td>424</td><td>_Neh12</td><td>47</td></tr><tr><td>425</td><td>_Neh13</td><td>31</td></tr><tr><td>426</td><td>_Est1</td><td>22</td></tr><tr><td>427</td><td>_Est2</td><td>23</td></tr><tr><td>428</td><td>_Est3</td><td>15</td></tr><tr><td>429</td><td>_Est4</td><td>17</td></tr><tr><td>430</td><td>_Est5</td><td>14</td></tr><tr><td>431</td><td>_Est6</td><td>14</td></tr><tr><td>432</td><td>_Est7</td><td>10</td></tr><tr><td>433</td><td>_Est8</td><td>17</td></tr><tr><td>434</td><td>_Est9</td><td>32</td></tr><tr><td>435</td><td>_Est10</td><td>3</td></tr><tr><td>436</td><td>_Job1</td><td>22</td></tr><tr><td>437</td><td>_Job2</td><td>13</td></tr><tr><td>438</td><td>_Job3</td><td>26</td></tr><tr><td>439</td><td>_Job4</td><td>21</td></tr><tr><td>440</td><td>_Job5</td><td>27</td></tr><tr><td>441</td><td>_Job6</td><td>30</td></tr><tr><td>442</td><td>_Job7</td><td>21</td></tr><tr><td>443</td><td>_Job8</td><td>22</td></tr><tr><td>444</td><td>_Job9</td><td>35</td></tr><tr><td>445</td><td>_Job10</td><td>22</td></tr><tr><td>446</td><td>_Job11</td><td>20</td></tr><tr><td>447</td><td>_Job12</td><td>25</td></tr><tr><td>448</td><td>_Job13</td><td>28</td></tr><tr><td>449</td><td>_Job14</td><td>22</td></tr><tr><td>450</td><td>_Job15</td><td>35</td></tr><tr><td>451</td><td>_Job16</td><td>22</td></tr><tr><td>452</td><td>_Job17</td><td>16</td></tr><tr><td>453</td><td>_Job18</td><td>21</td></tr><tr><td>454</td><td>_Job19</td><td>29</td></tr><tr><td>455</td><td>_Job20</td><td>29</td></tr><tr><td>456</td><td>_Job21</td><td>34</td></tr><tr><td>457</td><td>_Job22</td><td>30</td></tr><tr><td>458</td><td>_Job23</td><td>17</td></tr><tr><td>459</td><td>_Job24</td><td>25</td></tr><tr><td>460</td><td>_Job25</td><td>6</td></tr><tr><td>461</td><td>_Job26</td><td>14</td></tr><tr><td>462</td><td>_Job27</td><td>23</td></tr><tr><td>463</td><td>_Job28</td><td>28</td></tr><tr><td>464</td><td>_Job29</td><td>25</td></tr><tr><td>465</td><td>_Job30</td><td>31</td></tr><tr><td>466</td><td>_Job31</td><td>40</td></tr><tr><td>467</td><td>_Job32</td><td>22</td></tr><tr><td>468</td><td>_Job33</td><td>33</td></tr><tr><td>469</td><td>_Job34</td><td>37</td></tr><tr><td>470</td><td>_Job35</td><td>16</td></tr><tr><td>471</td><td>_Job36</td><td>33</td></tr><tr><td>472</td><td>_Job37</td><td>24</td></tr><tr><td>473</td><td>_Job38</td><td>41</td></tr><tr><td>474</td><td>_Job39</td><td>30</td></tr><tr><td>475</td><td>_Job40</td><td>24</td></tr><tr><td>476</td><td>_Job41</td><td>34</td></tr><tr><td>477</td><td>_Job42</td><td>17</td></tr><tr><td>478</td><td>_Psm1</td><td>6</td></tr><tr><td>479</td><td>_Psm2</td><td>12</td></tr><tr><td>480</td><td>_Psm3</td><td>8</td></tr><tr><td>481</td><td>_Psm4</td><td>8</td></tr><tr><td>482</td><td>_Psm5</td><td>12</td></tr><tr><td>483</td><td>_Psm6</td><td>10</td></tr><tr><td>484</td><td>_Psm7</td><td>17</td></tr><tr><td>485</td><td>_Psm8</td><td>9</td></tr><tr><td>486</td><td>_Psm9</td><td>20</td></tr><tr><td>487</td><td>_Psm10</td><td>18</td></tr><tr><td>488</td><td>_Psm11</td><td>7</td></tr><tr><td>489</td><td>_Psm12</td><td>8</td></tr><tr><td>490</td><td>_Psm13</td><td>6</td></tr><tr><td>491</td><td>_Psm14</td><td>7</td></tr><tr><td>492</td><td>_Psm15</td><td>5</td></tr><tr><td>493</td><td>_Psm16</td><td>11</td></tr><tr><td>494</td><td>_Psm17</td><td>15</td></tr><tr><td>495</td><td>_Psm18</td><td>50</td></tr><tr><td>496</td><td>_Psm19</td><td>14</td></tr><tr><td>497</td><td>_Psm20</td><td>9</td></tr><tr><td>498</td><td>_Psm21</td><td>13</td></tr><tr><td>499</td><td>_Psm22</td><td>31</td></tr><tr><td>500</td><td>_Psm23</td><td>6</td></tr><tr><td>501</td><td>_Psm24</td><td>10</td></tr><tr><td>502</td><td>_Psm25</td><td>22</td></tr><tr><td>503</td><td>_Psm26</td><td>12</td></tr><tr><td>504</td><td>_Psm27</td><td>14</td></tr><tr><td>505</td><td>_Psm28</td><td>9</td></tr><tr><td>506</td><td>_Psm29</td><td>11</td></tr><tr><td>507</td><td>_Psm30</td><td>12</td></tr><tr><td>508</td><td>_Psm31</td><td>24</td></tr><tr><td>509</td><td>_Psm32</td><td>11</td></tr><tr><td>510</td><td>_Psm33</td><td>22</td></tr><tr><td>511</td><td>_Psm34</td><td>22</td></tr><tr><td>512</td><td>_Psm35</td><td>28</td></tr><tr><td>513</td><td>_Psm36</td><td>12</td></tr><tr><td>514</td><td>_Psm37</td><td>40</td></tr><tr><td>515</td><td>_Psm38</td><td>22</td></tr><tr><td>516</td><td>_Psm39</td><td>13</td></tr><tr><td>517</td><td>_Psm40</td><td>17</td></tr><tr><td>518</td><td>_Psm41</td><td>13</td></tr><tr><td>519</td><td>_Psm42</td><td>11</td></tr><tr><td>520</td><td>_Psm43</td><td>5</td></tr><tr><td>521</td><td>_Psm44</td><td>26</td></tr><tr><td>522</td><td>_Psm45</td><td>17</td></tr><tr><td>523</td><td>_Psm46</td><td>11</td></tr><tr><td>524</td><td>_Psm47</td><td>9</td></tr><tr><td>525</td><td>_Psm48</td><td>14</td></tr><tr><td>526</td><td>_Psm49</td><td>20</td></tr><tr><td>527</td><td>_Psm50</td><td>23</td></tr><tr><td>528</td><td>_Psm51</td><td>19</td></tr><tr><td>529</td><td>_Psm52</td><td>9</td></tr><tr><td>530</td><td>_Psm53</td><td>6</td></tr><tr><td>531</td><td>_Psm54</td><td>7</td></tr><tr><td>532</td><td>_Psm55</td><td>23</td></tr><tr><td>533</td><td>_Psm56</td><td>13</td></tr><tr><td>534</td><td>_Psm57</td><td>11</td></tr><tr><td>535</td><td>_Psm58</td><td>11</td></tr><tr><td>536</td><td>_Psm59</td><td>17</td></tr><tr><td>537</td><td>_Psm60</td><td>12</td></tr><tr><td>538</td><td>_Psm61</td><td>8</td></tr><tr><td>539</td><td>_Psm62</td><td>12</td></tr><tr><td>540</td><td>_Psm63</td><td>11</td></tr><tr><td>541</td><td>_Psm64</td><td>10</td></tr><tr><td>542</td><td>_Psm65</td><td>13</td></tr><tr><td>543</td><td>_Psm66</td><td>20</td></tr><tr><td>544</td><td>_Psm67</td><td>7</td></tr><tr><td>545</td><td>_Psm68</td><td>35</td></tr><tr><td>546</td><td>_Psm69</td><td>36</td></tr><tr><td>547</td><td>_Psm70</td><td>5</td></tr><tr><td>548</td><td>_Psm71</td><td>24</td></tr><tr><td>549</td><td>_Psm72</td><td>20</td></tr><tr><td>550</td><td>_Psm73</td><td>28</td></tr><tr><td>551</td><td>_Psm74</td><td>23</td></tr><tr><td>552</td><td>_Psm75</td><td>10</td></tr><tr><td>553</td><td>_Psm76</td><td>12</td></tr><tr><td>554</td><td>_Psm77</td><td>20</td></tr><tr><td>555</td><td>_Psm78</td><td>72</td></tr><tr><td>556</td><td>_Psm79</td><td>13</td></tr><tr><td>557</td><td>_Psm80</td><td>19</td></tr><tr><td>558</td><td>_Psm81</td><td>16</td></tr><tr><td>559</td><td>_Psm82</td><td>8</td></tr><tr><td>560</td><td>_Psm83</td><td>18</td></tr><tr><td>561</td><td>_Psm84</td><td>12</td></tr><tr><td>562</td><td>_Psm85</td><td>13</td></tr><tr><td>563</td><td>_Psm86</td><td>17</td></tr><tr><td>564</td><td>_Psm87</td><td>7</td></tr><tr><td>565</td><td>_Psm88</td><td>18</td></tr><tr><td>566</td><td>_Psm89</td><td>52</td></tr><tr><td>567</td><td>_Psm90</td><td>17</td></tr><tr><td>568</td><td>_Psm91</td><td>16</td></tr><tr><td>569</td><td>_Psm92</td><td>15</td></tr><tr><td>570</td><td>_Psm93</td><td>5</td></tr><tr><td>571</td><td>_Psm94</td><td>23</td></tr><tr><td>572</td><td>_Psm95</td><td>11</td></tr><tr><td>573</td><td>_Psm96</td><td>13</td></tr><tr><td>574</td><td>_Psm97</td><td>12</td></tr><tr><td>575</td><td>_Psm98</td><td>9</td></tr><tr><td>576</td><td>_Psm99</td><td>9</td></tr><tr><td>577</td><td>_Psm100</td><td>5</td></tr><tr><td>578</td><td>_Psm101</td><td>8</td></tr><tr><td>579</td><td>_Psm102</td><td>28</td></tr><tr><td>580</td><td>_Psm103</td><td>22</td></tr><tr><td>581</td><td>_Psm104</td><td>35</td></tr><tr><td>582</td><td>_Psm105</td><td>45</td></tr><tr><td>583</td><td>_Psm106</td><td>48</td></tr><tr><td>584</td><td>_Psm107</td><td>43</td></tr><tr><td>585</td><td>_Psm108</td><td>13</td></tr><tr><td>586</td><td>_Psm109</td><td>31</td></tr><tr><td>587</td><td>_Psm110</td><td>7</td></tr><tr><td>588</td><td>_Psm111</td><td>10</td></tr><tr><td>589</td><td>_Psm112</td><td>10</td></tr><tr><td>590</td><td>_Psm113</td><td>9</td></tr><tr><td>591</td><td>_Psm114</td><td>8</td></tr><tr><td>592</td><td>_Psm115</td><td>18</td></tr><tr><td>593</td><td>_Psm116</td><td>19</td></tr><tr><td>594</td><td>_Psm117</td><td>2</td></tr><tr><td>595</td><td>_Psm118</td><td>29</td></tr><tr><td>596</td><td>_Psm119</td><td>176</td></tr><tr><td>597</td><td>_Psm120</td><td>7</td></tr><tr><td>598</td><td>_Psm121</td><td>8</td></tr><tr><td>599</td><td>_Psm122</td><td>9</td></tr><tr><td>600</td><td>_Psm123</td><td>4</td></tr><tr><td>601</td><td>_Psm124</td><td>8</td></tr><tr><td>602</td><td>_Psm125</td><td>5</td></tr><tr><td>603</td><td>_Psm126</td><td>6</td></tr><tr><td>604</td><td>_Psm127</td><td>5</td></tr><tr><td>605</td><td>_Psm128</td><td>6</td></tr><tr><td>606</td><td>_Psm129</td><td>8</td></tr><tr><td>607</td><td>_Psm130</td><td>8</td></tr><tr><td>608</td><td>_Psm131</td><td>3</td></tr><tr><td>609</td><td>_Psm132</td><td>18</td></tr><tr><td>610</td><td>_Psm133</td><td>3</td></tr><tr><td>611</td><td>_Psm134</td><td>3</td></tr><tr><td>612</td><td>_Psm135</td><td>21</td></tr><tr><td>613</td><td>_Psm136</td><td>26</td></tr><tr><td>614</td><td>_Psm137</td><td>9</td></tr><tr><td>615</td><td>_Psm138</td><td>8</td></tr><tr><td>616</td><td>_Psm139</td><td>24</td></tr><tr><td>617</td><td>_Psm140</td><td>13</td></tr><tr><td>618</td><td>_Psm141</td><td>10</td></tr><tr><td>619</td><td>_Psm142</td><td>7</td></tr><tr><td>620</td><td>_Psm143</td><td>12</td></tr><tr><td>621</td><td>_Psm144</td><td>15</td></tr><tr><td>622</td><td>_Psm145</td><td>21</td></tr><tr><td>623</td><td>_Psm146</td><td>10</td></tr><tr><td>624</td><td>_Psm147</td><td>20</td></tr><tr><td>625</td><td>_Psm148</td><td>14</td></tr><tr><td>626</td><td>_Psm149</td><td>9</td></tr><tr><td>627</td><td>_Psm150</td><td>6</td></tr><tr><td>628</td><td>_Pro1</td><td>33</td></tr><tr><td>629</td><td>_Pro2</td><td>22</td></tr><tr><td>630</td><td>_Pro3</td><td>35</td></tr><tr><td>631</td><td>_Pro4</td><td>27</td></tr><tr><td>632</td><td>_Pro5</td><td>23</td></tr><tr><td>633</td><td>_Pro6</td><td>35</td></tr><tr><td>634</td><td>_Pro7</td><td>27</td></tr><tr><td>635</td><td>_Pro8</td><td>36</td></tr><tr><td>636</td><td>_Pro9</td><td>18</td></tr><tr><td>637</td><td>_Pro10</td><td>32</td></tr><tr><td>638</td><td>_Pro11</td><td>31</td></tr><tr><td>639</td><td>_Pro12</td><td>28</td></tr><tr><td>640</td><td>_Pro13</td><td>25</td></tr><tr><td>641</td><td>_Pro14</td><td>35</td></tr><tr><td>642</td><td>_Pro15</td><td>33</td></tr><tr><td>643</td><td>_Pro16</td><td>33</td></tr><tr><td>644</td><td>_Pro17</td><td>28</td></tr><tr><td>645</td><td>_Pro18</td><td>24</td></tr><tr><td>646</td><td>_Pro19</td><td>29</td></tr><tr><td>647</td><td>_Pro20</td><td>30</td></tr><tr><td>648</td><td>_Pro21</td><td>31</td></tr><tr><td>649</td><td>_Pro22</td><td>29</td></tr><tr><td>650</td><td>_Pro23</td><td>35</td></tr><tr><td>651</td><td>_Pro24</td><td>34</td></tr><tr><td>652</td><td>_Pro25</td><td>28</td></tr><tr><td>653</td><td>_Pro26</td><td>28</td></tr><tr><td>654</td><td>_Pro27</td><td>27</td></tr><tr><td>655</td><td>_Pro28</td><td>28</td></tr><tr><td>656</td><td>_Pro29</td><td>27</td></tr><tr><td>657</td><td>_Pro30</td><td>33</td></tr><tr><td>658</td><td>_Pro31</td><td>31</td></tr><tr><td>659</td><td>_Ecc1</td><td>18</td></tr><tr><td>660</td><td>_Ecc2</td><td>26</td></tr><tr><td>661</td><td>_Ecc3</td><td>22</td></tr><tr><td>662</td><td>_Ecc4</td><td>16</td></tr><tr><td>663</td><td>_Ecc5</td><td>20</td></tr><tr><td>664</td><td>_Ecc6</td><td>12</td></tr><tr><td>665</td><td>_Ecc7</td><td>29</td></tr><tr><td>666</td><td>_Ecc8</td><td>17</td></tr><tr><td>667</td><td>_Ecc9</td><td>18</td></tr><tr><td>668</td><td>_Ecc10</td><td>20</td></tr><tr><td>669</td><td>_Ecc11</td><td>10</td></tr><tr><td>670</td><td>_Ecc12</td><td>14</td></tr><tr><td>671</td><td>_Son1</td><td>17</td></tr><tr><td>672</td><td>_Son2</td><td>17</td></tr><tr><td>673</td><td>_Son3</td><td>11</td></tr><tr><td>674</td><td>_Son4</td><td>16</td></tr><tr><td>675</td><td>_Son5</td><td>16</td></tr><tr><td>676</td><td>_Son6</td><td>13</td></tr><tr><td>677</td><td>_Son7</td><td>13</td></tr><tr><td>678</td><td>_Son8</td><td>14</td></tr><tr><td>679</td><td>_Isa1</td><td>31</td></tr><tr><td>680</td><td>_Isa2</td><td>22</td></tr><tr><td>681</td><td>_Isa3</td><td>26</td></tr><tr><td>682</td><td>_Isa4</td><td>6</td></tr><tr><td>683</td><td>_Isa5</td><td>30</td></tr><tr><td>684</td><td>_Isa6</td><td>13</td></tr><tr><td>685</td><td>_Isa7</td><td>25</td></tr><tr><td>686</td><td>_Isa8</td><td>22</td></tr><tr><td>687</td><td>_Isa9</td><td>21</td></tr><tr><td>688</td><td>_Isa10</td><td>34</td></tr><tr><td>689</td><td>_Isa11</td><td>16</td></tr><tr><td>690</td><td>_Isa12</td><td>6</td></tr><tr><td>691</td><td>_Isa13</td><td>22</td></tr><tr><td>692</td><td>_Isa14</td><td>32</td></tr><tr><td>693</td><td>_Isa15</td><td>9</td></tr><tr><td>694</td><td>_Isa16</td><td>14</td></tr><tr><td>695</td><td>_Isa17</td><td>14</td></tr><tr><td>696</td><td>_Isa18</td><td>7</td></tr><tr><td>697</td><td>_Isa19</td><td>25</td></tr><tr><td>698</td><td>_Isa20</td><td>6</td></tr><tr><td>699</td><td>_Isa21</td><td>17</td></tr><tr><td>700</td><td>_Isa22</td><td>25</td></tr><tr><td>701</td><td>_Isa23</td><td>18</td></tr><tr><td>702</td><td>_Isa24</td><td>23</td></tr><tr><td>703</td><td>_Isa25</td><td>12</td></tr><tr><td>704</td><td>_Isa26</td><td>21</td></tr><tr><td>705</td><td>_Isa27</td><td>13</td></tr><tr><td>706</td><td>_Isa28</td><td>29</td></tr><tr><td>707</td><td>_Isa29</td><td>24</td></tr><tr><td>708</td><td>_Isa30</td><td>33</td></tr><tr><td>709</td><td>_Isa31</td><td>9</td></tr><tr><td>710</td><td>_Isa32</td><td>20</td></tr><tr><td>711</td><td>_Isa33</td><td>24</td></tr><tr><td>712</td><td>_Isa34</td><td>17</td></tr><tr><td>713</td><td>_Isa35</td><td>10</td></tr><tr><td>714</td><td>_Isa36</td><td>22</td></tr><tr><td>715</td><td>_Isa37</td><td>38</td></tr><tr><td>716</td><td>_Isa38</td><td>22</td></tr><tr><td>717</td><td>_Isa39</td><td>8</td></tr><tr><td>718</td><td>_Isa40</td><td>31</td></tr><tr><td>719</td><td>_Isa41</td><td>29</td></tr><tr><td>720</td><td>_Isa42</td><td>25</td></tr><tr><td>721</td><td>_Isa43</td><td>28</td></tr><tr><td>722</td><td>_Isa44</td><td>28</td></tr><tr><td>723</td><td>_Isa45</td><td>25</td></tr><tr><td>724</td><td>_Isa46</td><td>13</td></tr><tr><td>725</td><td>_Isa47</td><td>15</td></tr><tr><td>726</td><td>_Isa48</td><td>22</td></tr><tr><td>727</td><td>_Isa49</td><td>26</td></tr><tr><td>728</td><td>_Isa50</td><td>11</td></tr><tr><td>729</td><td>_Isa51</td><td>23</td></tr><tr><td>730</td><td>_Isa52</td><td>15</td></tr><tr><td>731</td><td>_Isa53</td><td>12</td></tr><tr><td>732</td><td>_Isa54</td><td>17</td></tr><tr><td>733</td><td>_Isa55</td><td>13</td></tr><tr><td>734</td><td>_Isa56</td><td>12</td></tr><tr><td>735</td><td>_Isa57</td><td>21</td></tr><tr><td>736</td><td>_Isa58</td><td>14</td></tr><tr><td>737</td><td>_Isa59</td><td>21</td></tr><tr><td>738</td><td>_Isa60</td><td>22</td></tr><tr><td>739</td><td>_Isa61</td><td>11</td></tr><tr><td>740</td><td>_Isa62</td><td>12</td></tr><tr><td>741</td><td>_Isa63</td><td>19</td></tr><tr><td>742</td><td>_Isa64</td><td>12</td></tr><tr><td>743</td><td>_Isa65</td><td>25</td></tr><tr><td>744</td><td>_Isa66</td><td>24</td></tr><tr><td>745</td><td>_Jer1</td><td>19</td></tr><tr><td>746</td><td>_Jer2</td><td>37</td></tr><tr><td>747</td><td>_Jer3</td><td>25</td></tr><tr><td>748</td><td>_Jer4</td><td>31</td></tr><tr><td>749</td><td>_Jer5</td><td>31</td></tr><tr><td>750</td><td>_Jer6</td><td>30</td></tr><tr><td>751</td><td>_Jer7</td><td>34</td></tr><tr><td>752</td><td>_Jer8</td><td>22</td></tr><tr><td>753</td><td>_Jer9</td><td>26</td></tr><tr><td>754</td><td>_Jer10</td><td>25</td></tr><tr><td>755</td><td>_Jer11</td><td>23</td></tr><tr><td>756</td><td>_Jer12</td><td>17</td></tr><tr><td>757</td><td>_Jer13</td><td>27</td></tr><tr><td>758</td><td>_Jer14</td><td>22</td></tr><tr><td>759</td><td>_Jer15</td><td>21</td></tr><tr><td>760</td><td>_Jer16</td><td>21</td></tr><tr><td>761</td><td>_Jer17</td><td>27</td></tr><tr><td>762</td><td>_Jer18</td><td>23</td></tr><tr><td>763</td><td>_Jer19</td><td>15</td></tr><tr><td>764</td><td>_Jer20</td><td>18</td></tr><tr><td>765</td><td>_Jer21</td><td>14</td></tr><tr><td>766</td><td>_Jer22</td><td>30</td></tr><tr><td>767</td><td>_Jer23</td><td>40</td></tr><tr><td>768</td><td>_Jer24</td><td>10</td></tr><tr><td>769</td><td>_Jer25</td><td>38</td></tr><tr><td>770</td><td>_Jer26</td><td>24</td></tr><tr><td>771</td><td>_Jer27</td><td>22</td></tr><tr><td>772</td><td>_Jer28</td><td>17</td></tr><tr><td>773</td><td>_Jer29</td><td>32</td></tr><tr><td>774</td><td>_Jer30</td><td>24</td></tr><tr><td>775</td><td>_Jer31</td><td>40</td></tr><tr><td>776</td><td>_Jer32</td><td>44</td></tr><tr><td>777</td><td>_Jer33</td><td>26</td></tr><tr><td>778</td><td>_Jer34</td><td>22</td></tr><tr><td>779</td><td>_Jer35</td><td>19</td></tr><tr><td>780</td><td>_Jer36</td><td>32</td></tr><tr><td>781</td><td>_Jer37</td><td>21</td></tr><tr><td>782</td><td>_Jer38</td><td>28</td></tr><tr><td>783</td><td>_Jer39</td><td>18</td></tr><tr><td>784</td><td>_Jer40</td><td>16</td></tr><tr><td>785</td><td>_Jer41</td><td>18</td></tr><tr><td>786</td><td>_Jer42</td><td>22</td></tr><tr><td>787</td><td>_Jer43</td><td>13</td></tr><tr><td>788</td><td>_Jer44</td><td>30</td></tr><tr><td>789</td><td>_Jer45</td><td>5</td></tr><tr><td>790</td><td>_Jer46</td><td>28</td></tr><tr><td>791</td><td>_Jer47</td><td>7</td></tr><tr><td>792</td><td>_Jer48</td><td>47</td></tr><tr><td>793</td><td>_Jer49</td><td>39</td></tr><tr><td>794</td><td>_Jer50</td><td>46</td></tr><tr><td>795</td><td>_Jer51</td><td>64</td></tr><tr><td>796</td><td>_Jer52</td><td>34</td></tr><tr><td>797</td><td>_Lam1</td><td>22</td></tr><tr><td>798</td><td>_Lam2</td><td>22</td></tr><tr><td>799</td><td>_Lam3</td><td>66</td></tr><tr><td>800</td><td>_Lam4</td><td>22</td></tr><tr><td>801</td><td>_Lam5</td><td>22</td></tr><tr><td>802</td><td>_Eze1</td><td>28</td></tr><tr><td>803</td><td>_Eze2</td><td>10</td></tr><tr><td>804</td><td>_Eze3</td><td>27</td></tr><tr><td>805</td><td>_Eze4</td><td>17</td></tr><tr><td>806</td><td>_Eze5</td><td>17</td></tr><tr><td>807</td><td>_Eze6</td><td>14</td></tr><tr><td>808</td><td>_Eze7</td><td>27</td></tr><tr><td>809</td><td>_Eze8</td><td>18</td></tr><tr><td>810</td><td>_Eze9</td><td>11</td></tr><tr><td>811</td><td>_Eze10</td><td>22</td></tr><tr><td>812</td><td>_Eze11</td><td>25</td></tr><tr><td>813</td><td>_Eze12</td><td>28</td></tr><tr><td>814</td><td>_Eze13</td><td>23</td></tr><tr><td>815</td><td>_Eze14</td><td>23</td></tr><tr><td>816</td><td>_Eze15</td><td>8</td></tr><tr><td>817</td><td>_Eze16</td><td>63</td></tr><tr><td>818</td><td>_Eze17</td><td>24</td></tr><tr><td>819</td><td>_Eze18</td><td>32</td></tr><tr><td>820</td><td>_Eze19</td><td>14</td></tr><tr><td>821</td><td>_Eze20</td><td>49</td></tr><tr><td>822</td><td>_Eze21</td><td>32</td></tr><tr><td>823</td><td>_Eze22</td><td>31</td></tr><tr><td>824</td><td>_Eze23</td><td>49</td></tr><tr><td>825</td><td>_Eze24</td><td>27</td></tr><tr><td>826</td><td>_Eze25</td><td>17</td></tr><tr><td>827</td><td>_Eze26</td><td>21</td></tr><tr><td>828</td><td>_Eze27</td><td>36</td></tr><tr><td>829</td><td>_Eze28</td><td>25</td></tr><tr><td>830</td><td>_Eze29</td><td>21</td></tr><tr><td>831</td><td>_Eze30</td><td>26</td></tr><tr><td>832</td><td>_Eze31</td><td>18</td></tr><tr><td>833</td><td>_Eze32</td><td>32</td></tr><tr><td>834</td><td>_Eze33</td><td>33</td></tr><tr><td>835</td><td>_Eze34</td><td>31</td></tr><tr><td>836</td><td>_Eze35</td><td>15</td></tr><tr><td>837</td><td>_Eze36</td><td>38</td></tr><tr><td>838</td><td>_Eze37</td><td>28</td></tr><tr><td>839</td><td>_Eze38</td><td>23</td></tr><tr><td>840</td><td>_Eze39</td><td>29</td></tr><tr><td>841</td><td>_Eze40</td><td>49</td></tr><tr><td>842</td><td>_Eze41</td><td>26</td></tr><tr><td>843</td><td>_Eze42</td><td>20</td></tr><tr><td>844</td><td>_Eze43</td><td>27</td></tr><tr><td>845</td><td>_Eze44</td><td>31</td></tr><tr><td>846</td><td>_Eze45</td><td>25</td></tr><tr><td>847</td><td>_Eze46</td><td>24</td></tr><tr><td>848</td><td>_Eze47</td><td>23</td></tr><tr><td>849</td><td>_Eze48</td><td>35</td></tr><tr><td>850</td><td>_Dan1</td><td>21</td></tr><tr><td>851</td><td>_Dan2</td><td>49</td></tr><tr><td>852</td><td>_Dan3</td><td>30</td></tr><tr><td>853</td><td>_Dan4</td><td>37</td></tr><tr><td>854</td><td>_Dan5</td><td>31</td></tr><tr><td>855</td><td>_Dan6</td><td>28</td></tr><tr><td>856</td><td>_Dan7</td><td>28</td></tr><tr><td>857</td><td>_Dan8</td><td>27</td></tr><tr><td>858</td><td>_Dan9</td><td>27</td></tr><tr><td>859</td><td>_Dan10</td><td>21</td></tr><tr><td>860</td><td>_Dan11</td><td>45</td></tr><tr><td>861</td><td>_Dan12</td><td>13</td></tr><tr><td>862</td><td>_Hos1</td><td>11</td></tr><tr><td>863</td><td>_Hos2</td><td>23</td></tr><tr><td>864</td><td>_Hos3</td><td>5</td></tr><tr><td>865</td><td>_Hos4</td><td>19</td></tr><tr><td>866</td><td>_Hos5</td><td>15</td></tr><tr><td>867</td><td>_Hos6</td><td>11</td></tr><tr><td>868</td><td>_Hos7</td><td>16</td></tr><tr><td>869</td><td>_Hos8</td><td>14</td></tr><tr><td>870</td><td>_Hos9</td><td>17</td></tr><tr><td>871</td><td>_Hos10</td><td>15</td></tr><tr><td>872</td><td>_Hos11</td><td>12</td></tr><tr><td>873</td><td>_Hos12</td><td>14</td></tr><tr><td>874</td><td>_Hos13</td><td>16</td></tr><tr><td>875</td><td>_Hos14</td><td>9</td></tr><tr><td>876</td><td>_Joe1</td><td>20</td></tr><tr><td>877</td><td>_Joe2</td><td>32</td></tr><tr><td>878</td><td>_Joe3</td><td>21</td></tr><tr><td>879</td><td>_Amo1</td><td>15</td></tr><tr><td>880</td><td>_Amo2</td><td>16</td></tr><tr><td>881</td><td>_Amo3</td><td>15</td></tr><tr><td>882</td><td>_Amo4</td><td>13</td></tr><tr><td>883</td><td>_Amo5</td><td>27</td></tr><tr><td>884</td><td>_Amo6</td><td>14</td></tr><tr><td>885</td><td>_Amo7</td><td>17</td></tr><tr><td>886</td><td>_Amo8</td><td>14</td></tr><tr><td>887</td><td>_Amo9</td><td>15</td></tr><tr><td>888</td><td>_Oba1</td><td>21</td></tr><tr><td>889</td><td>_Jon1</td><td>17</td></tr><tr><td>890</td><td>_Jon2</td><td>10</td></tr><tr><td>891</td><td>_Jon3</td><td>10</td></tr><tr><td>892</td><td>_Jon4</td><td>11</td></tr><tr><td>893</td><td>_Mic1</td><td>16</td></tr><tr><td>894</td><td>_Mic2</td><td>13</td></tr><tr><td>895</td><td>_Mic3</td><td>12</td></tr><tr><td>896</td><td>_Mic4</td><td>13</td></tr><tr><td>897</td><td>_Mic5</td><td>15</td></tr><tr><td>898</td><td>_Mic6</td><td>16</td></tr><tr><td>899</td><td>_Mic7</td><td>20</td></tr><tr><td>900</td><td>_Nah1</td><td>15</td></tr><tr><td>901</td><td>_Nah2</td><td>13</td></tr><tr><td>902</td><td>_Nah3</td><td>19</td></tr><tr><td>903</td><td>_Hab1</td><td>17</td></tr><tr><td>904</td><td>_Hab2</td><td>20</td></tr><tr><td>905</td><td>_Hab3</td><td>19</td></tr><tr><td>906</td><td>_Zep1</td><td>18</td></tr><tr><td>907</td><td>_Zep2</td><td>15</td></tr><tr><td>908</td><td>_Zep3</td><td>20</td></tr><tr><td>909</td><td>_Hag1</td><td>15</td></tr><tr><td>910</td><td>_Hag2</td><td>23</td></tr><tr><td>911</td><td>_Zec1</td><td>21</td></tr><tr><td>912</td><td>_Zec2</td><td>13</td></tr><tr><td>913</td><td>_Zec3</td><td>10</td></tr><tr><td>914</td><td>_Zec4</td><td>14</td></tr><tr><td>915</td><td>_Zec5</td><td>11</td></tr><tr><td>916</td><td>_Zec6</td><td>15</td></tr><tr><td>917</td><td>_Zec7</td><td>14</td></tr><tr><td>918</td><td>_Zec8</td><td>23</td></tr><tr><td>919</td><td>_Zec9</td><td>17</td></tr><tr><td>920</td><td>_Zec10</td><td>12</td></tr><tr><td>921</td><td>_Zec11</td><td>17</td></tr><tr><td>922</td><td>_Zec12</td><td>14</td></tr><tr><td>923</td><td>_Zec13</td><td>9</td></tr><tr><td>924</td><td>_Zec14</td><td>21</td></tr><tr><td>925</td><td>_Mal1</td><td>14</td></tr><tr><td>926</td><td>_Mal2</td><td>17</td></tr><tr><td>927</td><td>_Mal3</td><td>18</td></tr><tr><td>928</td><td>_Mal4</td><td>6</td></tr><tr><td>929</td><td>_Mat1</td><td>25</td></tr><tr><td>930</td><td>_Mat2</td><td>23</td></tr><tr><td>931</td><td>_Mat3</td><td>17</td></tr><tr><td>932</td><td>_Mat4</td><td>25</td></tr><tr><td>933</td><td>_Mat5</td><td>48</td></tr><tr><td>934</td><td>_Mat6</td><td>34</td></tr><tr><td>935</td><td>_Mat7</td><td>29</td></tr><tr><td>936</td><td>_Mat8</td><td>34</td></tr><tr><td>937</td><td>_Mat9</td><td>38</td></tr><tr><td>938</td><td>_Mat10</td><td>42</td></tr><tr><td>939</td><td>_Mat11</td><td>30</td></tr><tr><td>940</td><td>_Mat12</td><td>50</td></tr><tr><td>941</td><td>_Mat13</td><td>58</td></tr><tr><td>942</td><td>_Mat14</td><td>36</td></tr><tr><td>943</td><td>_Mat15</td><td>39</td></tr><tr><td>944</td><td>_Mat16</td><td>28</td></tr><tr><td>945</td><td>_Mat17</td><td>27</td></tr><tr><td>946</td><td>_Mat18</td><td>35</td></tr><tr><td>947</td><td>_Mat19</td><td>30</td></tr><tr><td>948</td><td>_Mat20</td><td>34</td></tr><tr><td>949</td><td>_Mat21</td><td>46</td></tr><tr><td>950</td><td>_Mat22</td><td>46</td></tr><tr><td>951</td><td>_Mat23</td><td>39</td></tr><tr><td>952</td><td>_Mat24</td><td>51</td></tr><tr><td>953</td><td>_Mat25</td><td>46</td></tr><tr><td>954</td><td>_Mat26</td><td>75</td></tr><tr><td>955</td><td>_Mat27</td><td>66</td></tr><tr><td>956</td><td>_Mat28</td><td>20</td></tr><tr><td>957</td><td>_Mak1</td><td>45</td></tr><tr><td>958</td><td>_Mak2</td><td>28</td></tr><tr><td>959</td><td>_Mak3</td><td>35</td></tr><tr><td>960</td><td>_Mak4</td><td>41</td></tr><tr><td>961</td><td>_Mak5</td><td>43</td></tr><tr><td>962</td><td>_Mak6</td><td>56</td></tr><tr><td>963</td><td>_Mak7</td><td>37</td></tr><tr><td>964</td><td>_Mak8</td><td>38</td></tr><tr><td>965</td><td>_Mak9</td><td>50</td></tr><tr><td>966</td><td>_Mak10</td><td>52</td></tr><tr><td>967</td><td>_Mak11</td><td>33</td></tr><tr><td>968</td><td>_Mak12</td><td>44</td></tr><tr><td>969</td><td>_Mak13</td><td>37</td></tr><tr><td>970</td><td>_Mak14</td><td>72</td></tr><tr><td>971</td><td>_Mak15</td><td>47</td></tr><tr><td>972</td><td>_Mak16</td><td>20</td></tr><tr><td>973</td><td>_Luk1</td><td>80</td></tr><tr><td>974</td><td>_Luk2</td><td>52</td></tr><tr><td>975</td><td>_Luk3</td><td>38</td></tr><tr><td>976</td><td>_Luk4</td><td>44</td></tr><tr><td>977</td><td>_Luk5</td><td>39</td></tr><tr><td>978</td><td>_Luk6</td><td>49</td></tr><tr><td>979</td><td>_Luk7</td><td>50</td></tr><tr><td>980</td><td>_Luk8</td><td>56</td></tr><tr><td>981</td><td>_Luk9</td><td>62</td></tr><tr><td>982</td><td>_Luk10</td><td>42</td></tr><tr><td>983</td><td>_Luk11</td><td>54</td></tr><tr><td>984</td><td>_Luk12</td><td>59</td></tr><tr><td>985</td><td>_Luk13</td><td>35</td></tr><tr><td>986</td><td>_Luk14</td><td>35</td></tr><tr><td>987</td><td>_Luk15</td><td>32</td></tr><tr><td>988</td><td>_Luk16</td><td>31</td></tr><tr><td>989</td><td>_Luk17</td><td>37</td></tr><tr><td>990</td><td>_Luk18</td><td>43</td></tr><tr><td>991</td><td>_Luk19</td><td>48</td></tr><tr><td>992</td><td>_Luk20</td><td>47</td></tr><tr><td>993</td><td>_Luk21</td><td>38</td></tr><tr><td>994</td><td>_Luk22</td><td>71</td></tr><tr><td>995</td><td>_Luk23</td><td>56</td></tr><tr><td>996</td><td>_Luk24</td><td>53</td></tr><tr><td>997</td><td>_Jhn1</td><td>51</td></tr><tr><td>998</td><td>_Jhn2</td><td>25</td></tr><tr><td>999</td><td>_Jhn3</td><td>36</td></tr><tr><td>1000</td><td>_Jhn4</td><td>54</td></tr><tr><td>1001</td><td>_Jhn5</td><td>47</td></tr><tr><td>1002</td><td>_Jhn6</td><td>71</td></tr><tr><td>1003</td><td>_Jhn7</td><td>52</td></tr><tr><td>1004</td><td>_Jhn8</td><td>59</td></tr><tr><td>1005</td><td>_Jhn9</td><td>41</td></tr><tr><td>1006</td><td>_Jhn10</td><td>42</td></tr><tr><td>1007</td><td>_Jhn11</td><td>57</td></tr><tr><td>1008</td><td>_Jhn12</td><td>50</td></tr><tr><td>1009</td><td>_Jhn13</td><td>38</td></tr><tr><td>1010</td><td>_Jhn14</td><td>31</td></tr><tr><td>1011</td><td>_Jhn15</td><td>27</td></tr><tr><td>1012</td><td>_Jhn16</td><td>33</td></tr><tr><td>1013</td><td>_Jhn17</td><td>26</td></tr><tr><td>1014</td><td>_Jhn18</td><td>40</td></tr><tr><td>1015</td><td>_Jhn19</td><td>42</td></tr><tr><td>1016</td><td>_Jhn20</td><td>31</td></tr><tr><td>1017</td><td>_Jhn21</td><td>25</td></tr><tr><td>1018</td><td>_Act1</td><td>26</td></tr><tr><td>1019</td><td>_Act2</td><td>47</td></tr><tr><td>1020</td><td>_Act3</td><td>26</td></tr><tr><td>1021</td><td>_Act4</td><td>37</td></tr><tr><td>1022</td><td>_Act5</td><td>42</td></tr><tr><td>1023</td><td>_Act6</td><td>15</td></tr><tr><td>1024</td><td>_Act7</td><td>60</td></tr><tr><td>1025</td><td>_Act8</td><td>40</td></tr><tr><td>1026</td><td>_Act9</td><td>43</td></tr><tr><td>1027</td><td>_Act10</td><td>48</td></tr><tr><td>1028</td><td>_Act11</td><td>30</td></tr><tr><td>1029</td><td>_Act12</td><td>25</td></tr><tr><td>1030</td><td>_Act13</td><td>52</td></tr><tr><td>1031</td><td>_Act14</td><td>28</td></tr><tr><td>1032</td><td>_Act15</td><td>41</td></tr><tr><td>1033</td><td>_Act16</td><td>40</td></tr><tr><td>1034</td><td>_Act17</td><td>34</td></tr><tr><td>1035</td><td>_Act18</td><td>28</td></tr><tr><td>1036</td><td>_Act19</td><td>41</td></tr><tr><td>1037</td><td>_Act20</td><td>38</td></tr><tr><td>1038</td><td>_Act21</td><td>40</td></tr><tr><td>1039</td><td>_Act22</td><td>30</td></tr><tr><td>1040</td><td>_Act23</td><td>35</td></tr><tr><td>1041</td><td>_Act24</td><td>27</td></tr><tr><td>1042</td><td>_Act25</td><td>27</td></tr><tr><td>1043</td><td>_Act26</td><td>32</td></tr><tr><td>1044</td><td>_Act27</td><td>44</td></tr><tr><td>1045</td><td>_Act28</td><td>31</td></tr><tr><td>1046</td><td>_Rom1</td><td>32</td></tr><tr><td>1047</td><td>_Rom2</td><td>29</td></tr><tr><td>1048</td><td>_Rom3</td><td>31</td></tr><tr><td>1049</td><td>_Rom4</td><td>25</td></tr><tr><td>1050</td><td>_Rom5</td><td>21</td></tr><tr><td>1051</td><td>_Rom6</td><td>23</td></tr><tr><td>1052</td><td>_Rom7</td><td>25</td></tr><tr><td>1053</td><td>_Rom8</td><td>39</td></tr><tr><td>1054</td><td>_Rom9</td><td>33</td></tr><tr><td>1055</td><td>_Rom10</td><td>21</td></tr><tr><td>1056</td><td>_Rom11</td><td>36</td></tr><tr><td>1057</td><td>_Rom12</td><td>21</td></tr><tr><td>1058</td><td>_Rom13</td><td>14</td></tr><tr><td>1059</td><td>_Rom14</td><td>23</td></tr><tr><td>1060</td><td>_Rom15</td><td>33</td></tr><tr><td>1061</td><td>_Rom16</td><td>27</td></tr><tr><td>1062</td><td>_1Co1</td><td>31</td></tr><tr><td>1063</td><td>_1Co2</td><td>16</td></tr><tr><td>1064</td><td>_1Co3</td><td>23</td></tr><tr><td>1065</td><td>_1Co4</td><td>21</td></tr><tr><td>1066</td><td>_1Co5</td><td>13</td></tr><tr><td>1067</td><td>_1Co6</td><td>20</td></tr><tr><td>1068</td><td>_1Co7</td><td>40</td></tr><tr><td>1069</td><td>_1Co8</td><td>13</td></tr><tr><td>1070</td><td>_1Co9</td><td>27</td></tr><tr><td>1071</td><td>_1Co10</td><td>33</td></tr><tr><td>1072</td><td>_1Co11</td><td>34</td></tr><tr><td>1073</td><td>_1Co12</td><td>31</td></tr><tr><td>1074</td><td>_1Co13</td><td>13</td></tr><tr><td>1075</td><td>_1Co14</td><td>40</td></tr><tr><td>1076</td><td>_1Co15</td><td>58</td></tr><tr><td>1077</td><td>_1Co16</td><td>24</td></tr><tr><td>1078</td><td>_2Co1</td><td>24</td></tr><tr><td>1079</td><td>_2Co2</td><td>17</td></tr><tr><td>1080</td><td>_2Co3</td><td>18</td></tr><tr><td>1081</td><td>_2Co4</td><td>18</td></tr><tr><td>1082</td><td>_2Co5</td><td>21</td></tr><tr><td>1083</td><td>_2Co6</td><td>18</td></tr><tr><td>1084</td><td>_2Co7</td><td>16</td></tr><tr><td>1085</td><td>_2Co8</td><td>24</td></tr><tr><td>1086</td><td>_2Co9</td><td>15</td></tr><tr><td>1087</td><td>_2Co10</td><td>18</td></tr><tr><td>1088</td><td>_2Co11</td><td>33</td></tr><tr><td>1089</td><td>_2Co12</td><td>21</td></tr><tr><td>1090</td><td>_2Co13</td><td>14</td></tr><tr><td>1091</td><td>_Gal1</td><td>24</td></tr><tr><td>1092</td><td>_Gal2</td><td>21</td></tr><tr><td>1093</td><td>_Gal3</td><td>29</td></tr><tr><td>1094</td><td>_Gal4</td><td>31</td></tr><tr><td>1095</td><td>_Gal5</td><td>26</td></tr><tr><td>1096</td><td>_Gal6</td><td>18</td></tr><tr><td>1097</td><td>_Eph1</td><td>23</td></tr><tr><td>1098</td><td>_Eph2</td><td>22</td></tr><tr><td>1099</td><td>_Eph3</td><td>21</td></tr><tr><td>1100</td><td>_Eph4</td><td>32</td></tr><tr><td>1101</td><td>_Eph5</td><td>33</td></tr><tr><td>1102</td><td>_Eph6</td><td>24</td></tr><tr><td>1103</td><td>_Phl1</td><td>30</td></tr><tr><td>1104</td><td>_Phl2</td><td>30</td></tr><tr><td>1105</td><td>_Phl3</td><td>21</td></tr><tr><td>1106</td><td>_Phl4</td><td>23</td></tr><tr><td>1107</td><td>_Col1</td><td>29</td></tr><tr><td>1108</td><td>_Col2</td><td>23</td></tr><tr><td>1109</td><td>_Col3</td><td>25</td></tr><tr><td>1110</td><td>_Col4</td><td>18</td></tr><tr><td>1111</td><td>_1Ts1</td><td>10</td></tr><tr><td>1112</td><td>_1Ts2</td><td>20</td></tr><tr><td>1113</td><td>_1Ts3</td><td>13</td></tr><tr><td>1114</td><td>_1Ts4</td><td>18</td></tr><tr><td>1115</td><td>_1Ts5</td><td>28</td></tr><tr><td>1116</td><td>_2Ts1</td><td>12</td></tr><tr><td>1117</td><td>_2Ts2</td><td>17</td></tr><tr><td>1118</td><td>_2Ts3</td><td>18</td></tr><tr><td>1119</td><td>_1Ti1</td><td>20</td></tr><tr><td>1120</td><td>_1Ti2</td><td>15</td></tr><tr><td>1121</td><td>_1Ti3</td><td>16</td></tr><tr><td>1122</td><td>_1Ti4</td><td>16</td></tr><tr><td>1123</td><td>_1Ti5</td><td>25</td></tr><tr><td>1124</td><td>_1Ti6</td><td>21</td></tr><tr><td>1125</td><td>_2Ti1</td><td>18</td></tr><tr><td>1126</td><td>_2Ti2</td><td>26</td></tr><tr><td>1127</td><td>_2Ti3</td><td>17</td></tr><tr><td>1128</td><td>_2Ti4</td><td>22</td></tr><tr><td>1129</td><td>_Tit1</td><td>16</td></tr><tr><td>1130</td><td>_Tit2</td><td>15</td></tr><tr><td>1131</td><td>_Tit3</td><td>15</td></tr><tr><td>1132</td><td>_Phm1</td><td>25</td></tr><tr><td>1133</td><td>_Heb1</td><td>14</td></tr><tr><td>1134</td><td>_Heb2</td><td>18</td></tr><tr><td>1135</td><td>_Heb3</td><td>19</td></tr><tr><td>1136</td><td>_Heb4</td><td>16</td></tr><tr><td>1137</td><td>_Heb5</td><td>14</td></tr><tr><td>1138</td><td>_Heb6</td><td>20</td></tr><tr><td>1139</td><td>_Heb7</td><td>28</td></tr><tr><td>1140</td><td>_Heb8</td><td>13</td></tr><tr><td>1141</td><td>_Heb9</td><td>28</td></tr><tr><td>1142</td><td>_Heb10</td><td>39</td></tr><tr><td>1143</td><td>_Heb11</td><td>40</td></tr><tr><td>1144</td><td>_Heb12</td><td>29</td></tr><tr><td>1145</td><td>_Heb13</td><td>25</td></tr><tr><td>1146</td><td>_Jas1</td><td>27</td></tr><tr><td>1147</td><td>_Jas2</td><td>26</td></tr><tr><td>1148</td><td>_Jas3</td><td>18</td></tr><tr><td>1149</td><td>_Jas4</td><td>17</td></tr><tr><td>1150</td><td>_Jas5</td><td>20</td></tr><tr><td>1151</td><td>_1Pe1</td><td>25</td></tr><tr><td>1152</td><td>_1Pe2</td><td>25</td></tr><tr><td>1153</td><td>_1Pe3</td><td>22</td></tr><tr><td>1154</td><td>_1Pe4</td><td>19</td></tr><tr><td>1155</td><td>_1Pe5</td><td>14</td></tr><tr><td>1156</td><td>_2Pe1</td><td>21</td></tr><tr><td>1157</td><td>_2Pe2</td><td>22</td></tr><tr><td>1158</td><td>_2Pe3</td><td>18</td></tr><tr><td>1159</td><td>_1Jn1</td><td>10</td></tr><tr><td>1160</td><td>_1Jn2</td><td>29</td></tr><tr><td>1161</td><td>_1Jn3</td><td>24</td></tr><tr><td>1162</td><td>_1Jn4</td><td>21</td></tr><tr><td>1163</td><td>_1Jn5</td><td>21</td></tr><tr><td>1164</td><td>_2Jn1</td><td>13</td></tr><tr><td>1165</td><td>_3Jn1</td><td>15</td></tr><tr><td>1166</td><td>_Jud1</td><td>25</td></tr><tr><td>1167</td><td>_Rev1</td><td>20</td></tr><tr><td>1168</td><td>_Rev2</td><td>29</td></tr><tr><td>1169</td><td>_Rev3</td><td>22</td></tr><tr><td>1170</td><td>_Rev4</td><td>11</td></tr><tr><td>1171</td><td>_Rev5</td><td>14</td></tr><tr><td>1172</td><td>_Rev6</td><td>17</td></tr><tr><td>1173</td><td>_Rev7</td><td>17</td></tr><tr><td>1174</td><td>_Rev8</td><td>13</td></tr><tr><td>1175</td><td>_Rev9</td><td>21</td></tr><tr><td>1176</td><td>_Rev10</td><td>11</td></tr><tr><td>1177</td><td>_Rev11</td><td>19</td></tr><tr><td>1178</td><td>_Rev12</td><td>17</td></tr><tr><td>1179</td><td>_Rev13</td><td>18</td></tr><tr><td>1180</td><td>_Rev14</td><td>20</td></tr><tr><td>1181</td><td>_Rev15</td><td>8</td></tr><tr><td>1182</td><td>_Rev16</td><td>21</td></tr><tr><td>1183</td><td>_Rev17</td><td>18</td></tr><tr><td>1184</td><td>_Rev18</td><td>24</td></tr><tr><td>1185</td><td>_Rev19</td><td>21</td></tr><tr><td>1186</td><td>_Rev20</td><td>15</td></tr><tr><td>1187</td><td>_Rev21</td><td>27</td></tr><tr><td>1188</td><td>_Rev22</td><td>21</td></tr></tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+<hr/>
+<table id='Statistics_ChapterVerses22' border='1'>
+<tr><th>#	  </th><th>freq         	</th><th>Chapters        </th></tr>
+<tr><td>0	  </td><td>0000000176		</td><td>Psm119          </td></tr>
+<tr><td>1	  </td><td>0000000089		</td><td>Num7            </td></tr>
+<tr><td>2	  </td><td>0000000081		</td><td>1Ch6            </td></tr>
+<tr><td>3	  </td><td>0000000080		</td><td>Luk1            </td></tr>
+<tr><td>4	  </td><td>0000000075		</td><td>Mat26           </td></tr>
+<tr><td>5	  </td><td>0000000073		</td><td>Neh7            </td></tr>
+<tr><td>6	  </td><td>0000000072		</td><td>Psm78           </td></tr>
+<tr><td>7	  </td><td>0000000072		</td><td>Mak14           </td></tr>
+<tr><td>8	  </td><td>0000000071		</td><td>Luk22           </td></tr>
+<tr><td>9	  </td><td>0000000071		</td><td>Jhn6            </td></tr>
+<tr><td>10	  </td><td>0000000070		</td><td>Ezr2            </td></tr>
+<tr><td>11	  </td><td>0000000068		</td><td>Deu28           </td></tr>
+<tr><td>12	  </td><td>0000000067		</td><td>Gen24           </td></tr>
+<tr><td>13	  </td><td>0000000066		</td><td>Mat27           </td></tr>
+<tr><td>14	  </td><td>0000000066		</td><td>Lam3            </td></tr>
+<tr><td>15	  </td><td>0000000066		</td><td>1Ki8            </td></tr>
+<tr><td>16	  </td><td>0000000065		</td><td>Num26           </td></tr>
+<tr><td>17	  </td><td>0000000064		</td><td>Jer51           </td></tr>
+<tr><td>18	  </td><td>0000000063		</td><td>Jos15           </td></tr>
+<tr><td>19	  </td><td>0000000063		</td><td>Eze16           </td></tr>
+<tr><td>20	  </td><td>0000000062		</td><td>Luk9            </td></tr>
+<tr><td>21	  </td><td>0000000060		</td><td>Act7            </td></tr>
+<tr><td>22	  </td><td>0000000059		</td><td>Luk12           </td></tr>
+<tr><td>23	  </td><td>0000000059		</td><td>Lev13           </td></tr>
+<tr><td>24	  </td><td>0000000059		</td><td>Jhn8            </td></tr>
+<tr><td>25	  </td><td>0000000058		</td><td>Mat13           </td></tr>
+<tr><td>26	  </td><td>0000000058		</td><td>1Sa17           </td></tr>
+<tr><td>27	  </td><td>0000000058		</td><td>1Co15           </td></tr>
+<tr><td>28	  </td><td>0000000057		</td><td>Lev14           </td></tr>
+<tr><td>29	  </td><td>0000000057		</td><td>Jug9            </td></tr>
+<tr><td>30	  </td><td>0000000057		</td><td>Jhn11           </td></tr>
+<tr><td>31	  </td><td>0000000057		</td><td>Gen41           </td></tr>
+<tr><td>32	  </td><td>0000000056		</td><td>Num33           </td></tr>
+<tr><td>33	  </td><td>0000000056		</td><td>Mak6            </td></tr>
+<tr><td>34	  </td><td>0000000056		</td><td>Luk8            </td></tr>
+<tr><td>35	  </td><td>0000000056		</td><td>Luk23           </td></tr>
+<tr><td>36	  </td><td>0000000055		</td><td>Lev25           </td></tr>
+<tr><td>37	  </td><td>0000000055		</td><td>Gen31           </td></tr>
+<tr><td>38	  </td><td>0000000055		</td><td>1Ch2            </td></tr>
+<tr><td>39	  </td><td>0000000054		</td><td>Num31           </td></tr>
+<tr><td>40	  </td><td>0000000054		</td><td>Num1            </td></tr>
+<tr><td>41	  </td><td>0000000054		</td><td>Luk11           </td></tr>
+<tr><td>42	  </td><td>0000000054		</td><td>Jhn4            </td></tr>
+<tr><td>43	  </td><td>0000000054		</td><td>1Ch1            </td></tr>
+<tr><td>44	  </td><td>0000000053		</td><td>Luk24           </td></tr>
+<tr><td>45	  </td><td>0000000053		</td><td>1Ki22           </td></tr>
+<tr><td>46	  </td><td>0000000053		</td><td>1Ki1            </td></tr>
+<tr><td>47	  </td><td>0000000052		</td><td>Psm89           </td></tr>
+<tr><td>48	  </td><td>0000000052		</td><td>Mak10           </td></tr>
+<tr><td>49	  </td><td>0000000052		</td><td>Luk2            </td></tr>
+<tr><td>50	  </td><td>0000000052		</td><td>Jhn7            </td></tr>
+<tr><td>51	  </td><td>0000000052		</td><td>Deu32           </td></tr>
+<tr><td>52	  </td><td>0000000052		</td><td>Act13           </td></tr>
+<tr><td>53	  </td><td>0000000052		</td><td>1Sa14           </td></tr>
+<tr><td>54	  </td><td>0000000051		</td><td>Num3            </td></tr>
+<tr><td>55	  </td><td>0000000051		</td><td>Mat24           </td></tr>
+<tr><td>56	  </td><td>0000000051		</td><td>Jos19           </td></tr>
+<tr><td>57	  </td><td>0000000051		</td><td>Jhn1            </td></tr>
+<tr><td>58	  </td><td>0000000051		</td><td>Exo12           </td></tr>
+<tr><td>59	  </td><td>0000000051		</td><td>2Sa22           </td></tr>
+<tr><td>60	  </td><td>0000000051		</td><td>1Ki7            </td></tr>
+<tr><td>61	  </td><td>0000000050		</td><td>Psm18           </td></tr>
+<tr><td>62	  </td><td>0000000050		</td><td>Num16           </td></tr>
+<tr><td>63	  </td><td>0000000050		</td><td>Mat12           </td></tr>
+<tr><td>64	  </td><td>0000000050		</td><td>Mak9            </td></tr>
+<tr><td>65	  </td><td>0000000050		</td><td>Luk7            </td></tr>
+<tr><td>66	  </td><td>0000000050		</td><td>Jhn12           </td></tr>
+<tr><td>67	  </td><td>0000000049		</td><td>Num4            </td></tr>
+<tr><td>68	  </td><td>0000000049		</td><td>Luk6            </td></tr>
+<tr><td>69	  </td><td>0000000049		</td><td>Eze40           </td></tr>
+<tr><td>70	  </td><td>0000000049		</td><td>Eze23           </td></tr>
+<tr><td>71	  </td><td>0000000049		</td><td>Eze20           </td></tr>
+<tr><td>72	  </td><td>0000000049		</td><td>Deu4            </td></tr>
+<tr><td>73	  </td><td>0000000049		</td><td>Dan2            </td></tr>
+<tr><td>74	  </td><td>0000000048		</td><td>Psm106          </td></tr>
+<tr><td>75	  </td><td>0000000048		</td><td>Mat5            </td></tr>
+<tr><td>76	  </td><td>0000000048		</td><td>Luk19           </td></tr>
+<tr><td>77	  </td><td>0000000048		</td><td>Jug20           </td></tr>
+<tr><td>78	  </td><td>0000000048		</td><td>Act10           </td></tr>
+<tr><td>79	  </td><td>0000000047		</td><td>Neh12           </td></tr>
+<tr><td>80	  </td><td>0000000047		</td><td>Mak15           </td></tr>
+<tr><td>81	  </td><td>0000000047		</td><td>Luk20           </td></tr>
+<tr><td>82	  </td><td>0000000047		</td><td>Lev11           </td></tr>
+<tr><td>83	  </td><td>0000000047		</td><td>Jhn5            </td></tr>
+<tr><td>84	  </td><td>0000000047		</td><td>Jer48           </td></tr>
+<tr><td>85	  </td><td>0000000047		</td><td>Act2            </td></tr>
+<tr><td>86	  </td><td>0000000047		</td><td>1Ch11           </td></tr>
+<tr><td>87	  </td><td>0000000046		</td><td>Mat25           </td></tr>
+<tr><td>88	  </td><td>0000000046		</td><td>Mat22           </td></tr>
+<tr><td>89	  </td><td>0000000046		</td><td>Mat21           </td></tr>
+<tr><td>90	  </td><td>0000000046		</td><td>Lev26           </td></tr>
+<tr><td>91	  </td><td>0000000046		</td><td>Jer50           </td></tr>
+<tr><td>92	  </td><td>0000000046		</td><td>Gen27           </td></tr>
+<tr><td>93	  </td><td>0000000046		</td><td>Exo29           </td></tr>
+<tr><td>94	  </td><td>0000000046		</td><td>Deu1            </td></tr>
+<tr><td>95	  </td><td>0000000046		</td><td>1Ki2            </td></tr>
+<tr><td>96	  </td><td>0000000046		</td><td>1Ki18           </td></tr>
+<tr><td>97	  </td><td>0000000045		</td><td>Psm105          </td></tr>
+<tr><td>98	  </td><td>0000000045		</td><td>Num14           </td></tr>
+<tr><td>99	  </td><td>0000000045		</td><td>Mak1            </td></tr>
+<tr><td>100	  </td><td>0000000045		</td><td>Jos21           </td></tr>
+<tr><td>101	  </td><td>0000000045		</td><td>Dan11           </td></tr>
+<tr><td>102	  </td><td>0000000044		</td><td>Mak12           </td></tr>
+<tr><td>103	  </td><td>0000000044		</td><td>Luk4            </td></tr>
+<tr><td>104	  </td><td>0000000044		</td><td>Lev23           </td></tr>
+<tr><td>105	  </td><td>0000000044		</td><td>Jer32           </td></tr>
+<tr><td>106	  </td><td>0000000044		</td><td>Ezr10           </td></tr>
+<tr><td>107	  </td><td>0000000044		</td><td>Act27           </td></tr>
+<tr><td>108	  </td><td>0000000044		</td><td>2Ki4            </td></tr>
+<tr><td>109	  </td><td>0000000044		</td><td>1Sa25           </td></tr>
+<tr><td>110	  </td><td>0000000044		</td><td>1Ch9            </td></tr>
+<tr><td>111	  </td><td>0000000043		</td><td>Psm107          </td></tr>
+<tr><td>112	  </td><td>0000000043		</td><td>Mak5            </td></tr>
+<tr><td>113	  </td><td>0000000043		</td><td>Luk18           </td></tr>
+<tr><td>114	  </td><td>0000000043		</td><td>Jos10           </td></tr>
+<tr><td>115	  </td><td>0000000043		</td><td>Gen36           </td></tr>
+<tr><td>116	  </td><td>0000000043		</td><td>Gen30           </td></tr>
+<tr><td>117	  </td><td>0000000043		</td><td>Exo39           </td></tr>
+<tr><td>118	  </td><td>0000000043		</td><td>Exo28           </td></tr>
+<tr><td>119	  </td><td>0000000043		</td><td>Act9            </td></tr>
+<tr><td>120	  </td><td>0000000043		</td><td>2Sa19           </td></tr>
+<tr><td>121	  </td><td>0000000043		</td><td>1Ki20           </td></tr>
+<tr><td>122	  </td><td>0000000043		</td><td>1Ki11           </td></tr>
+<tr><td>123	  </td><td>0000000043		</td><td>1Ch4            </td></tr>
+<tr><td>124	  </td><td>0000000043		</td><td>1Ch16           </td></tr>
+<tr><td>125	  </td><td>0000000042		</td><td>Num32           </td></tr>
+<tr><td>126	  </td><td>0000000042		</td><td>Mat10           </td></tr>
+<tr><td>127	  </td><td>0000000042		</td><td>Luk10           </td></tr>
+<tr><td>128	  </td><td>0000000042		</td><td>Jhn19           </td></tr>
+<tr><td>129	  </td><td>0000000042		</td><td>Jhn10           </td></tr>
+<tr><td>130	  </td><td>0000000042		</td><td>Act5            </td></tr>
+<tr><td>131	  </td><td>0000000042		</td><td>2Ch6            </td></tr>
+<tr><td>132	  </td><td>0000000042		</td><td>1Sa20           </td></tr>
+<tr><td>133	  </td><td>0000000041		</td><td>Num22           </td></tr>
+<tr><td>134	  </td><td>0000000041		</td><td>Num15           </td></tr>
+<tr><td>135	  </td><td>0000000041		</td><td>Mak4            </td></tr>
+<tr><td>136	  </td><td>0000000041		</td><td>Job38           </td></tr>
+<tr><td>137	  </td><td>0000000041		</td><td>Jhn9            </td></tr>
+<tr><td>138	  </td><td>0000000041		</td><td>Act19           </td></tr>
+<tr><td>139	  </td><td>0000000041		</td><td>Act15           </td></tr>
+<tr><td>140	  </td><td>0000000041		</td><td>2Ki17           </td></tr>
+<tr><td>141	  </td><td>0000000040		</td><td>Psm37           </td></tr>
+<tr><td>142	  </td><td>0000000040		</td><td>Num29           </td></tr>
+<tr><td>143	  </td><td>0000000040		</td><td>Jug6            </td></tr>
+<tr><td>144	  </td><td>0000000040		</td><td>Jug11           </td></tr>
+<tr><td>145	  </td><td>0000000040		</td><td>Job31           </td></tr>
+<tr><td>146	  </td><td>0000000040		</td><td>Jhn18           </td></tr>
+<tr><td>147	  </td><td>0000000040		</td><td>Jer31           </td></tr>
+<tr><td>148	  </td><td>0000000040		</td><td>Jer23           </td></tr>
+<tr><td>149	  </td><td>0000000040		</td><td>Heb11           </td></tr>
+<tr><td>150	  </td><td>0000000040		</td><td>Exo25           </td></tr>
+<tr><td>151	  </td><td>0000000040		</td><td>Act8            </td></tr>
+<tr><td>152	  </td><td>0000000040		</td><td>Act21           </td></tr>
+<tr><td>153	  </td><td>0000000040		</td><td>Act16           </td></tr>
+<tr><td>154	  </td><td>0000000040		</td><td>1Co7            </td></tr>
+<tr><td>155	  </td><td>0000000040		</td><td>1Co14           </td></tr>
+<tr><td>156	  </td><td>0000000040		</td><td>1Ch8            </td></tr>
+<tr><td>157	  </td><td>0000000040		</td><td>1Ch7            </td></tr>
+<tr><td>158	  </td><td>0000000040		</td><td>1Ch12           </td></tr>
+<tr><td>159	  </td><td>0000000039		</td><td>Rom8            </td></tr>
+<tr><td>160	  </td><td>0000000039		</td><td>Neh10           </td></tr>
+<tr><td>161	  </td><td>0000000039		</td><td>Mat23           </td></tr>
+<tr><td>162	  </td><td>0000000039		</td><td>Mat15           </td></tr>
+<tr><td>163	  </td><td>0000000039		</td><td>Luk5            </td></tr>
+<tr><td>164	  </td><td>0000000039		</td><td>Jer49           </td></tr>
+<tr><td>165	  </td><td>0000000039		</td><td>Heb10           </td></tr>
+<tr><td>166	  </td><td>0000000039		</td><td>2Sa3            </td></tr>
+<tr><td>167	  </td><td>0000000039		</td><td>2Sa23           </td></tr>
+<tr><td>168	  </td><td>0000000039		</td><td>2Sa13           </td></tr>
+<tr><td>169	  </td><td>0000000038		</td><td>Neh9            </td></tr>
+<tr><td>170	  </td><td>0000000038		</td><td>Mat9            </td></tr>
+<tr><td>171	  </td><td>0000000038		</td><td>Mak8            </td></tr>
+<tr><td>172	  </td><td>0000000038		</td><td>Luk3            </td></tr>
+<tr><td>173	  </td><td>0000000038		</td><td>Luk21           </td></tr>
+<tr><td>174	  </td><td>0000000038		</td><td>Lev7            </td></tr>
+<tr><td>175	  </td><td>0000000038		</td><td>Jhn13           </td></tr>
+<tr><td>176	  </td><td>0000000038		</td><td>Jer25           </td></tr>
+<tr><td>177	  </td><td>0000000038		</td><td>Isa37           </td></tr>
+<tr><td>178	  </td><td>0000000038		</td><td>Gen42           </td></tr>
+<tr><td>179	  </td><td>0000000038		</td><td>Gen19           </td></tr>
+<tr><td>180	  </td><td>0000000038		</td><td>Eze36           </td></tr>
+<tr><td>181	  </td><td>0000000038		</td><td>Exo40           </td></tr>
+<tr><td>182	  </td><td>0000000038		</td><td>Exo36           </td></tr>
+<tr><td>183	  </td><td>0000000038		</td><td>Exo30           </td></tr>
+<tr><td>184	  </td><td>0000000038		</td><td>Act20           </td></tr>
+<tr><td>185	  </td><td>0000000038		</td><td>2Ki15           </td></tr>
+<tr><td>186	  </td><td>0000000038		</td><td>1Ki6            </td></tr>
+<tr><td>187	  </td><td>0000000037		</td><td>Mak7            </td></tr>
+<tr><td>188	  </td><td>0000000037		</td><td>Mak13           </td></tr>
+<tr><td>189	  </td><td>0000000037		</td><td>Luk17           </td></tr>
+<tr><td>190	  </td><td>0000000037		</td><td>Lev19           </td></tr>
+<tr><td>191	  </td><td>0000000037		</td><td>Job34           </td></tr>
+<tr><td>192	  </td><td>0000000037		</td><td>Jer2            </td></tr>
+<tr><td>193	  </td><td>0000000037		</td><td>Exo26           </td></tr>
+<tr><td>194	  </td><td>0000000037		</td><td>Deu2            </td></tr>
+<tr><td>195	  </td><td>0000000037		</td><td>Dan4            </td></tr>
+<tr><td>196	  </td><td>0000000037		</td><td>Act4            </td></tr>
+<tr><td>197	  </td><td>0000000037		</td><td>2Sa15           </td></tr>
+<tr><td>198	  </td><td>0000000037		</td><td>2Ki9            </td></tr>
+<tr><td>199	  </td><td>0000000037		</td><td>2Ki23           </td></tr>
+<tr><td>200	  </td><td>0000000037		</td><td>2Ki19           </td></tr>
+<tr><td>201	  </td><td>0000000037		</td><td>2Ki18           </td></tr>
+<tr><td>202	  </td><td>0000000037		</td><td>2Ch20           </td></tr>
+<tr><td>203	  </td><td>0000000036		</td><td>Rom11           </td></tr>
+<tr><td>204	  </td><td>0000000036		</td><td>Psm69           </td></tr>
+<tr><td>205	  </td><td>0000000036		</td><td>Pro8            </td></tr>
+<tr><td>206	  </td><td>0000000036		</td><td>Num10           </td></tr>
+<tr><td>207	  </td><td>0000000036		</td><td>Neh11           </td></tr>
+<tr><td>208	  </td><td>0000000036		</td><td>Mat14           </td></tr>
+<tr><td>209	  </td><td>0000000036		</td><td>Lev8            </td></tr>
+<tr><td>210	  </td><td>0000000036		</td><td>Jug1            </td></tr>
+<tr><td>211	  </td><td>0000000036		</td><td>Jhn3            </td></tr>
+<tr><td>212	  </td><td>0000000036		</td><td>Gen37           </td></tr>
+<tr><td>213	  </td><td>0000000036		</td><td>Ezr8            </td></tr>
+<tr><td>214	  </td><td>0000000036		</td><td>Eze27           </td></tr>
+<tr><td>215	  </td><td>0000000036		</td><td>Exo21           </td></tr>
+<tr><td>216	  </td><td>0000000036		</td><td>Exo16           </td></tr>
+<tr><td>217	  </td><td>0000000036		</td><td>2Ki10           </td></tr>
+<tr><td>218	  </td><td>0000000036		</td><td>2Ch29           </td></tr>
+<tr><td>219	  </td><td>0000000036		</td><td>1Sa2            </td></tr>
+<tr><td>220	  </td><td>0000000035		</td><td>Psm68           </td></tr>
+<tr><td>221	  </td><td>0000000035		</td><td>Psm104          </td></tr>
+<tr><td>222	  </td><td>0000000035		</td><td>Pro6            </td></tr>
+<tr><td>223	  </td><td>0000000035		</td><td>Pro3            </td></tr>
+<tr><td>224	  </td><td>0000000035		</td><td>Pro23           </td></tr>
+<tr><td>225	  </td><td>0000000035		</td><td>Pro14           </td></tr>
+<tr><td>226	  </td><td>0000000035		</td><td>Num21           </td></tr>
+<tr><td>227	  </td><td>0000000035		</td><td>Num11           </td></tr>
+<tr><td>228	  </td><td>0000000035		</td><td>Mat18           </td></tr>
+<tr><td>229	  </td><td>0000000035		</td><td>Mak3            </td></tr>
+<tr><td>230	  </td><td>0000000035		</td><td>Luk14           </td></tr>
+<tr><td>231	  </td><td>0000000035		</td><td>Luk13           </td></tr>
+<tr><td>232	  </td><td>0000000035		</td><td>Lev4            </td></tr>
+<tr><td>233	  </td><td>0000000035		</td><td>Jug8            </td></tr>
+<tr><td>234	  </td><td>0000000035		</td><td>Jos8            </td></tr>
+<tr><td>235	  </td><td>0000000035		</td><td>Job9            </td></tr>
+<tr><td>236	  </td><td>0000000035		</td><td>Job15           </td></tr>
+<tr><td>237	  </td><td>0000000035		</td><td>Gen29           </td></tr>
+<tr><td>238	  </td><td>0000000035		</td><td>Gen26           </td></tr>
+<tr><td>239	  </td><td>0000000035		</td><td>Eze48           </td></tr>
+<tr><td>240	  </td><td>0000000035		</td><td>Exo9            </td></tr>
+<tr><td>241	  </td><td>0000000035		</td><td>Exo35           </td></tr>
+<tr><td>242	  </td><td>0000000035		</td><td>Exo34           </td></tr>
+<tr><td>243	  </td><td>0000000035		</td><td>Exo32           </td></tr>
+<tr><td>244	  </td><td>0000000035		</td><td>Act23           </td></tr>
+<tr><td>245	  </td><td>0000000035		</td><td>1Sa15           </td></tr>
+<tr><td>246	  </td><td>0000000034		</td><td>Pro24           </td></tr>
+<tr><td>247	  </td><td>0000000034		</td><td>Num35           </td></tr>
+<tr><td>248	  </td><td>0000000034		</td><td>Num2            </td></tr>
+<tr><td>249	  </td><td>0000000034		</td><td>Mat8            </td></tr>
+<tr><td>250	  </td><td>0000000034		</td><td>Mat6            </td></tr>
+<tr><td>251	  </td><td>0000000034		</td><td>Mat20           </td></tr>
+<tr><td>252	  </td><td>0000000034		</td><td>Lev27           </td></tr>
+<tr><td>253	  </td><td>0000000034		</td><td>Lev16           </td></tr>
+<tr><td>254	  </td><td>0000000034		</td><td>Jos22           </td></tr>
+<tr><td>255	  </td><td>0000000034		</td><td>Job41           </td></tr>
+<tr><td>256	  </td><td>0000000034		</td><td>Job21           </td></tr>
+<tr><td>257	  </td><td>0000000034		</td><td>Jer7            </td></tr>
+<tr><td>258	  </td><td>0000000034		</td><td>Jer52           </td></tr>
+<tr><td>259	  </td><td>0000000034		</td><td>Isa10           </td></tr>
+<tr><td>260	  </td><td>0000000034		</td><td>Gen46           </td></tr>
+<tr><td>261	  </td><td>0000000034		</td><td>Gen44           </td></tr>
+<tr><td>262	  </td><td>0000000034		</td><td>Gen43           </td></tr>
+<tr><td>263	  </td><td>0000000034		</td><td>Gen25           </td></tr>
+<tr><td>264	  </td><td>0000000034		</td><td>Gen21           </td></tr>
+<tr><td>265	  </td><td>0000000034		</td><td>Act17           </td></tr>
+<tr><td>266	  </td><td>0000000034		</td><td>2Ch18           </td></tr>
+<tr><td>267	  </td><td>0000000034		</td><td>1Ki4            </td></tr>
+<tr><td>268	  </td><td>0000000034		</td><td>1Ki16           </td></tr>
+<tr><td>269	  </td><td>0000000034		</td><td>1Ki15           </td></tr>
+<tr><td>270	  </td><td>0000000034		</td><td>1Ki13           </td></tr>
+<tr><td>271	  </td><td>0000000034		</td><td>1Co11           </td></tr>
+<tr><td>272	  </td><td>0000000034		</td><td>1Ch27           </td></tr>
+<tr><td>273	  </td><td>0000000033		</td><td>Rom9            </td></tr>
+<tr><td>274	  </td><td>0000000033		</td><td>Rom15           </td></tr>
+<tr><td>275	  </td><td>0000000033		</td><td>Pro30           </td></tr>
+<tr><td>276	  </td><td>0000000033		</td><td>Pro16           </td></tr>
+<tr><td>277	  </td><td>0000000033		</td><td>Pro15           </td></tr>
+<tr><td>278	  </td><td>0000000033		</td><td>Pro1            </td></tr>
+<tr><td>279	  </td><td>0000000033		</td><td>Num13           </td></tr>
+<tr><td>280	  </td><td>0000000033		</td><td>Mak11           </td></tr>
+<tr><td>281	  </td><td>0000000033		</td><td>Lev22           </td></tr>
+<tr><td>282	  </td><td>0000000033		</td><td>Lev15           </td></tr>
+<tr><td>283	  </td><td>0000000033		</td><td>Jos24           </td></tr>
+<tr><td>284	  </td><td>0000000033		</td><td>Jos13           </td></tr>
+<tr><td>285	  </td><td>0000000033		</td><td>Job36           </td></tr>
+<tr><td>286	  </td><td>0000000033		</td><td>Job33           </td></tr>
+<tr><td>287	  </td><td>0000000033		</td><td>Jhn16           </td></tr>
+<tr><td>288	  </td><td>0000000033		</td><td>Isa30           </td></tr>
+<tr><td>289	  </td><td>0000000033		</td><td>Gen49           </td></tr>
+<tr><td>290	  </td><td>0000000033		</td><td>Gen18           </td></tr>
+<tr><td>291	  </td><td>0000000033		</td><td>Eze33           </td></tr>
+<tr><td>292	  </td><td>0000000033		</td><td>Exo23           </td></tr>
+<tr><td>293	  </td><td>0000000033		</td><td>Eph5            </td></tr>
+<tr><td>294	  </td><td>0000000033		</td><td>Deu5            </td></tr>
+<tr><td>295	  </td><td>0000000033		</td><td>2Sa18           </td></tr>
+<tr><td>296	  </td><td>0000000033		</td><td>2Sa14           </td></tr>
+<tr><td>297	  </td><td>0000000033		</td><td>2Ki6            </td></tr>
+<tr><td>298	  </td><td>0000000033		</td><td>2Co11           </td></tr>
+<tr><td>299	  </td><td>0000000033		</td><td>2Ch34           </td></tr>
+<tr><td>300	  </td><td>0000000033		</td><td>2Ch32           </td></tr>
+<tr><td>301	  </td><td>0000000033		</td><td>1Ki12           </td></tr>
+<tr><td>302	  </td><td>0000000033		</td><td>1Co10           </td></tr>
+<tr><td>303	  </td><td>0000000032		</td><td>Rom1            </td></tr>
+<tr><td>304	  </td><td>0000000032		</td><td>Pro10           </td></tr>
+<tr><td>305	  </td><td>0000000032		</td><td>Num18           </td></tr>
+<tr><td>306	  </td><td>0000000032		</td><td>Neh3            </td></tr>
+<tr><td>307	  </td><td>0000000032		</td><td>Luk15           </td></tr>
+<tr><td>308	  </td><td>0000000032		</td><td>Joe2            </td></tr>
+<tr><td>309	  </td><td>0000000032		</td><td>Jer36           </td></tr>
+<tr><td>310	  </td><td>0000000032		</td><td>Jer29           </td></tr>
+<tr><td>311	  </td><td>0000000032		</td><td>Isa14           </td></tr>
+<tr><td>312	  </td><td>0000000032		</td><td>Gen5            </td></tr>
+<tr><td>313	  </td><td>0000000032		</td><td>Gen32           </td></tr>
+<tr><td>314	  </td><td>0000000032		</td><td>Gen11           </td></tr>
+<tr><td>315	  </td><td>0000000032		</td><td>Gen10           </td></tr>
+<tr><td>316	  </td><td>0000000032		</td><td>Eze32           </td></tr>
+<tr><td>317	  </td><td>0000000032		</td><td>Eze21           </td></tr>
+<tr><td>318	  </td><td>0000000032		</td><td>Eze18           </td></tr>
+<tr><td>319	  </td><td>0000000032		</td><td>Exo8            </td></tr>
+<tr><td>320	  </td><td>0000000032		</td><td>Est9            </td></tr>
+<tr><td>321	  </td><td>0000000032		</td><td>Eph4            </td></tr>
+<tr><td>322	  </td><td>0000000032		</td><td>Deu12           </td></tr>
+<tr><td>323	  </td><td>0000000032		</td><td>Deu11           </td></tr>
+<tr><td>324	  </td><td>0000000032		</td><td>Act26           </td></tr>
+<tr><td>325	  </td><td>0000000032		</td><td>2Sa2            </td></tr>
+<tr><td>326	  </td><td>0000000032		</td><td>1Ch26           </td></tr>
+<tr><td>327	  </td><td>0000000032		</td><td>1Ch23           </td></tr>
+<tr><td>328	  </td><td>0000000031		</td><td>Rom3            </td></tr>
+<tr><td>329	  </td><td>0000000031		</td><td>Psm22           </td></tr>
+<tr><td>330	  </td><td>0000000031		</td><td>Psm109          </td></tr>
+<tr><td>331	  </td><td>0000000031		</td><td>Pro31           </td></tr>
+<tr><td>332	  </td><td>0000000031		</td><td>Pro21           </td></tr>
+<tr><td>333	  </td><td>0000000031		</td><td>Pro11           </td></tr>
+<tr><td>334	  </td><td>0000000031		</td><td>Num5            </td></tr>
+<tr><td>335	  </td><td>0000000031		</td><td>Num28           </td></tr>
+<tr><td>336	  </td><td>0000000031		</td><td>Neh13           </td></tr>
+<tr><td>337	  </td><td>0000000031		</td><td>Luk16           </td></tr>
+<tr><td>338	  </td><td>0000000031		</td><td>Jug5            </td></tr>
+<tr><td>339	  </td><td>0000000031		</td><td>Jug3            </td></tr>
+<tr><td>340	  </td><td>0000000031		</td><td>Jug18           </td></tr>
+<tr><td>341	  </td><td>0000000031		</td><td>Jug16           </td></tr>
+<tr><td>342	  </td><td>0000000031		</td><td>Job30           </td></tr>
+<tr><td>343	  </td><td>0000000031		</td><td>Jhn20           </td></tr>
+<tr><td>344	  </td><td>0000000031		</td><td>Jhn14           </td></tr>
+<tr><td>345	  </td><td>0000000031		</td><td>Jer5            </td></tr>
+<tr><td>346	  </td><td>0000000031		</td><td>Jer4            </td></tr>
+<tr><td>347	  </td><td>0000000031		</td><td>Isa40           </td></tr>
+<tr><td>348	  </td><td>0000000031		</td><td>Isa1            </td></tr>
+<tr><td>349	  </td><td>0000000031		</td><td>Gen47           </td></tr>
+<tr><td>350	  </td><td>0000000031		</td><td>Gen34           </td></tr>
+<tr><td>351	  </td><td>0000000031		</td><td>Gen1            </td></tr>
+<tr><td>352	  </td><td>0000000031		</td><td>Gal4            </td></tr>
+<tr><td>353	  </td><td>0000000031		</td><td>Eze44           </td></tr>
+<tr><td>354	  </td><td>0000000031		</td><td>Eze34           </td></tr>
+<tr><td>355	  </td><td>0000000031		</td><td>Eze22           </td></tr>
+<tr><td>356	  </td><td>0000000031		</td><td>Exo4            </td></tr>
+<tr><td>357	  </td><td>0000000031		</td><td>Exo38           </td></tr>
+<tr><td>358	  </td><td>0000000031		</td><td>Exo22           </td></tr>
+<tr><td>359	  </td><td>0000000031		</td><td>Exo14           </td></tr>
+<tr><td>360	  </td><td>0000000031		</td><td>Dan5            </td></tr>
+<tr><td>361	  </td><td>0000000031		</td><td>Act28           </td></tr>
+<tr><td>362	  </td><td>0000000031		</td><td>2Sa12           </td></tr>
+<tr><td>363	  </td><td>0000000031		</td><td>2Ch9            </td></tr>
+<tr><td>364	  </td><td>0000000031		</td><td>1Sa30           </td></tr>
+<tr><td>365	  </td><td>0000000031		</td><td>1Ki14           </td></tr>
+<tr><td>366	  </td><td>0000000031		</td><td>1Co12           </td></tr>
+<tr><td>367	  </td><td>0000000031		</td><td>1Co1            </td></tr>
+<tr><td>368	  </td><td>0000000031		</td><td>1Ch25           </td></tr>
+<tr><td>369	  </td><td>0000000031		</td><td>1Ch24           </td></tr>
+<tr><td>370	  </td><td>0000000031		</td><td>1Ch21           </td></tr>
+<tr><td>371	  </td><td>0000000030		</td><td>Pro20           </td></tr>
+<tr><td>372	  </td><td>0000000030		</td><td>Phl2            </td></tr>
+<tr><td>373	  </td><td>0000000030		</td><td>Phl1            </td></tr>
+<tr><td>374	  </td><td>0000000030		</td><td>Num23           </td></tr>
+<tr><td>375	  </td><td>0000000030		</td><td>Mat19           </td></tr>
+<tr><td>376	  </td><td>0000000030		</td><td>Mat11           </td></tr>
+<tr><td>377	  </td><td>0000000030		</td><td>Lev6            </td></tr>
+<tr><td>378	  </td><td>0000000030		</td><td>Lev18           </td></tr>
+<tr><td>379	  </td><td>0000000030		</td><td>Jug19           </td></tr>
+<tr><td>380	  </td><td>0000000030		</td><td>Job6            </td></tr>
+<tr><td>381	  </td><td>0000000030		</td><td>Job39           </td></tr>
+<tr><td>382	  </td><td>0000000030		</td><td>Job22           </td></tr>
+<tr><td>383	  </td><td>0000000030		</td><td>Jer6            </td></tr>
+<tr><td>384	  </td><td>0000000030		</td><td>Jer44           </td></tr>
+<tr><td>385	  </td><td>0000000030		</td><td>Jer22           </td></tr>
+<tr><td>386	  </td><td>0000000030		</td><td>Isa5            </td></tr>
+<tr><td>387	  </td><td>0000000030		</td><td>Gen38           </td></tr>
+<tr><td>388	  </td><td>0000000030		</td><td>Exo6            </td></tr>
+<tr><td>389	  </td><td>0000000030		</td><td>Deu31           </td></tr>
+<tr><td>390	  </td><td>0000000030		</td><td>Deu22           </td></tr>
+<tr><td>391	  </td><td>0000000030		</td><td>Dan3            </td></tr>
+<tr><td>392	  </td><td>0000000030		</td><td>Act22           </td></tr>
+<tr><td>393	  </td><td>0000000030		</td><td>Act11           </td></tr>
+<tr><td>394	  </td><td>0000000030		</td><td>2Ki25           </td></tr>
+<tr><td>395	  </td><td>0000000030		</td><td>1Sa18           </td></tr>
+<tr><td>396	  </td><td>0000000030		</td><td>1Ch29           </td></tr>
+<tr><td>397	  </td><td>0000000029		</td><td>Rom2            </td></tr>
+<tr><td>398	  </td><td>0000000029		</td><td>Rev2            </td></tr>
+<tr><td>399	  </td><td>0000000029		</td><td>Psm118          </td></tr>
+<tr><td>400	  </td><td>0000000029		</td><td>Pro22           </td></tr>
+<tr><td>401	  </td><td>0000000029		</td><td>Pro19           </td></tr>
+<tr><td>402	  </td><td>0000000029		</td><td>Num34           </td></tr>
+<tr><td>403	  </td><td>0000000029		</td><td>Num20           </td></tr>
+<tr><td>404	  </td><td>0000000029		</td><td>Mat7            </td></tr>
+<tr><td>405	  </td><td>0000000029		</td><td>Job20           </td></tr>
+<tr><td>406	  </td><td>0000000029		</td><td>Job19           </td></tr>
+<tr><td>407	  </td><td>0000000029		</td><td>Isa41           </td></tr>
+<tr><td>408	  </td><td>0000000029		</td><td>Isa28           </td></tr>
+<tr><td>409	  </td><td>0000000029		</td><td>Heb12           </td></tr>
+<tr><td>410	  </td><td>0000000029		</td><td>Gen9            </td></tr>
+<tr><td>411	  </td><td>0000000029		</td><td>Gen35           </td></tr>
+<tr><td>412	  </td><td>0000000029		</td><td>Gal3            </td></tr>
+<tr><td>413	  </td><td>0000000029		</td><td>Eze39           </td></tr>
+<tr><td>414	  </td><td>0000000029		</td><td>Exo37           </td></tr>
+<tr><td>415	  </td><td>0000000029		</td><td>Exo10           </td></tr>
+<tr><td>416	  </td><td>0000000029		</td><td>Ecc7            </td></tr>
+<tr><td>417	  </td><td>0000000029		</td><td>Deu9            </td></tr>
+<tr><td>418	  </td><td>0000000029		</td><td>Deu33           </td></tr>
+<tr><td>419	  </td><td>0000000029		</td><td>Deu3            </td></tr>
+<tr><td>420	  </td><td>0000000029		</td><td>Deu29           </td></tr>
+<tr><td>421	  </td><td>0000000029		</td><td>Deu14           </td></tr>
+<tr><td>422	  </td><td>0000000029		</td><td>Col1            </td></tr>
+<tr><td>423	  </td><td>0000000029		</td><td>2Sa7            </td></tr>
+<tr><td>424	  </td><td>0000000029		</td><td>2Sa17           </td></tr>
+<tr><td>425	  </td><td>0000000029		</td><td>2Ki8            </td></tr>
+<tr><td>426	  </td><td>0000000029		</td><td>2Ki14           </td></tr>
+<tr><td>427	  </td><td>0000000029		</td><td>1Sa23           </td></tr>
+<tr><td>428	  </td><td>0000000029		</td><td>1Ki21           </td></tr>
+<tr><td>429	  </td><td>0000000029		</td><td>1Ki10           </td></tr>
+<tr><td>430	  </td><td>0000000029		</td><td>1Jn2            </td></tr>
+<tr><td>431	  </td><td>0000000029		</td><td>1Ch15           </td></tr>
+<tr><td>432	  </td><td>0000000028		</td><td>Psm73           </td></tr>
+<tr><td>433	  </td><td>0000000028		</td><td>Psm35           </td></tr>
+<tr><td>434	  </td><td>0000000028		</td><td>Psm102          </td></tr>
+<tr><td>435	  </td><td>0000000028		</td><td>Pro28           </td></tr>
+<tr><td>436	  </td><td>0000000028		</td><td>Pro26           </td></tr>
+<tr><td>437	  </td><td>0000000028		</td><td>Pro25           </td></tr>
+<tr><td>438	  </td><td>0000000028		</td><td>Pro17           </td></tr>
+<tr><td>439	  </td><td>0000000028		</td><td>Pro12           </td></tr>
+<tr><td>440	  </td><td>0000000028		</td><td>Mat16           </td></tr>
+<tr><td>441	  </td><td>0000000028		</td><td>Mak2            </td></tr>
+<tr><td>442	  </td><td>0000000028		</td><td>Jos18           </td></tr>
+<tr><td>443	  </td><td>0000000028		</td><td>Job28           </td></tr>
+<tr><td>444	  </td><td>0000000028		</td><td>Job13           </td></tr>
+<tr><td>445	  </td><td>0000000028		</td><td>Jer46           </td></tr>
+<tr><td>446	  </td><td>0000000028		</td><td>Jer38           </td></tr>
+<tr><td>447	  </td><td>0000000028		</td><td>Isa44           </td></tr>
+<tr><td>448	  </td><td>0000000028		</td><td>Isa43           </td></tr>
+<tr><td>449	  </td><td>0000000028		</td><td>Heb9            </td></tr>
+<tr><td>450	  </td><td>0000000028		</td><td>Heb7            </td></tr>
+<tr><td>451	  </td><td>0000000028		</td><td>Gen45           </td></tr>
+<tr><td>452	  </td><td>0000000028		</td><td>Ezr7            </td></tr>
+<tr><td>453	  </td><td>0000000028		</td><td>Eze37           </td></tr>
+<tr><td>454	  </td><td>0000000028		</td><td>Eze12           </td></tr>
+<tr><td>455	  </td><td>0000000028		</td><td>Eze1            </td></tr>
+<tr><td>456	  </td><td>0000000028		</td><td>Dan7            </td></tr>
+<tr><td>457	  </td><td>0000000028		</td><td>Dan6            </td></tr>
+<tr><td>458	  </td><td>0000000028		</td><td>Act18           </td></tr>
+<tr><td>459	  </td><td>0000000028		</td><td>Act14           </td></tr>
+<tr><td>460	  </td><td>0000000028		</td><td>2Ch25           </td></tr>
+<tr><td>461	  </td><td>0000000028		</td><td>1Ts5            </td></tr>
+<tr><td>462	  </td><td>0000000028		</td><td>1Sa1            </td></tr>
+<tr><td>463	  </td><td>0000000028		</td><td>1Ki9            </td></tr>
+<tr><td>464	  </td><td>0000000028		</td><td>1Ki3            </td></tr>
+<tr><td>465	  </td><td>0000000027		</td><td>Rom16           </td></tr>
+<tr><td>466	  </td><td>0000000027		</td><td>Rev21           </td></tr>
+<tr><td>467	  </td><td>0000000027		</td><td>Pro7            </td></tr>
+<tr><td>468	  </td><td>0000000027		</td><td>Pro4            </td></tr>
+<tr><td>469	  </td><td>0000000027		</td><td>Pro29           </td></tr>
+<tr><td>470	  </td><td>0000000027		</td><td>Pro27           </td></tr>
+<tr><td>471	  </td><td>0000000027		</td><td>Num6            </td></tr>
+<tr><td>472	  </td><td>0000000027		</td><td>Mat17           </td></tr>
+<tr><td>473	  </td><td>0000000027		</td><td>Lev20           </td></tr>
+<tr><td>474	  </td><td>0000000027		</td><td>Jos9            </td></tr>
+<tr><td>475	  </td><td>0000000027		</td><td>Jos6            </td></tr>
+<tr><td>476	  </td><td>0000000027		</td><td>Job5            </td></tr>
+<tr><td>477	  </td><td>0000000027		</td><td>Jhn15           </td></tr>
+<tr><td>478	  </td><td>0000000027		</td><td>Jer17           </td></tr>
+<tr><td>479	  </td><td>0000000027		</td><td>Jer13           </td></tr>
+<tr><td>480	  </td><td>0000000027		</td><td>Jas1            </td></tr>
+<tr><td>481	  </td><td>0000000027		</td><td>Gen17           </td></tr>
+<tr><td>482	  </td><td>0000000027		</td><td>Eze7            </td></tr>
+<tr><td>483	  </td><td>0000000027		</td><td>Eze43           </td></tr>
+<tr><td>484	  </td><td>0000000027		</td><td>Eze3            </td></tr>
+<tr><td>485	  </td><td>0000000027		</td><td>Eze24           </td></tr>
+<tr><td>486	  </td><td>0000000027		</td><td>Exo18           </td></tr>
+<tr><td>487	  </td><td>0000000027		</td><td>Exo15           </td></tr>
+<tr><td>488	  </td><td>0000000027		</td><td>Dan9            </td></tr>
+<tr><td>489	  </td><td>0000000027		</td><td>Dan8            </td></tr>
+<tr><td>490	  </td><td>0000000027		</td><td>Amo5            </td></tr>
+<tr><td>491	  </td><td>0000000027		</td><td>Act25           </td></tr>
+<tr><td>492	  </td><td>0000000027		</td><td>Act24           </td></tr>
+<tr><td>493	  </td><td>0000000027		</td><td>2Sa11           </td></tr>
+<tr><td>494	  </td><td>0000000027		</td><td>2Sa1            </td></tr>
+<tr><td>495	  </td><td>0000000027		</td><td>2Ki5            </td></tr>
+<tr><td>496	  </td><td>0000000027		</td><td>2Ki3            </td></tr>
+<tr><td>497	  </td><td>0000000027		</td><td>2Ch35           </td></tr>
+<tr><td>498	  </td><td>0000000027		</td><td>2Ch30           </td></tr>
+<tr><td>499	  </td><td>0000000027		</td><td>2Ch28           </td></tr>
+<tr><td>500	  </td><td>0000000027		</td><td>2Ch24           </td></tr>
+<tr><td>501	  </td><td>0000000027		</td><td>1Sa9            </td></tr>
+<tr><td>502	  </td><td>0000000027		</td><td>1Sa10           </td></tr>
+<tr><td>503	  </td><td>0000000027		</td><td>1Co9            </td></tr>
+<tr><td>504	  </td><td>0000000027		</td><td>1Ch17           </td></tr>
+<tr><td>505	  </td><td>0000000026		</td><td>Psm44           </td></tr>
+<tr><td>506	  </td><td>0000000026		</td><td>Psm136          </td></tr>
+<tr><td>507	  </td><td>0000000026		</td><td>Num8            </td></tr>
+<tr><td>508	  </td><td>0000000026		</td><td>Jos7            </td></tr>
+<tr><td>509	  </td><td>0000000026		</td><td>Job3            </td></tr>
+<tr><td>510	  </td><td>0000000026		</td><td>Jhn17           </td></tr>
+<tr><td>511	  </td><td>0000000026		</td><td>Jer9            </td></tr>
+<tr><td>512	  </td><td>0000000026		</td><td>Jer33           </td></tr>
+<tr><td>513	  </td><td>0000000026		</td><td>Jas2            </td></tr>
+<tr><td>514	  </td><td>0000000026		</td><td>Isa49           </td></tr>
+<tr><td>515	  </td><td>0000000026		</td><td>Isa3            </td></tr>
+<tr><td>516	  </td><td>0000000026		</td><td>Gen50           </td></tr>
+<tr><td>517	  </td><td>0000000026		</td><td>Gen4            </td></tr>
+<tr><td>518	  </td><td>0000000026		</td><td>Gal5            </td></tr>
+<tr><td>519	  </td><td>0000000026		</td><td>Eze41           </td></tr>
+<tr><td>520	  </td><td>0000000026		</td><td>Eze30           </td></tr>
+<tr><td>521	  </td><td>0000000026		</td><td>Exo20           </td></tr>
+<tr><td>522	  </td><td>0000000026		</td><td>Ecc2            </td></tr>
+<tr><td>523	  </td><td>0000000026		</td><td>Deu7            </td></tr>
+<tr><td>524	  </td><td>0000000026		</td><td>Deu27           </td></tr>
+<tr><td>525	  </td><td>0000000026		</td><td>Act3            </td></tr>
+<tr><td>526	  </td><td>0000000026		</td><td>Act1            </td></tr>
+<tr><td>527	  </td><td>0000000026		</td><td>2Ti2            </td></tr>
+<tr><td>528	  </td><td>0000000026		</td><td>2Sa20           </td></tr>
+<tr><td>529	  </td><td>0000000026		</td><td>2Ki21           </td></tr>
+<tr><td>530	  </td><td>0000000026		</td><td>1Ch5            </td></tr>
+<tr><td>531	  </td><td>0000000025		</td><td>Rom7            </td></tr>
+<tr><td>532	  </td><td>0000000025		</td><td>Rom4            </td></tr>
+<tr><td>533	  </td><td>0000000025		</td><td>Pro13           </td></tr>
+<tr><td>534	  </td><td>0000000025		</td><td>Phm1            </td></tr>
+<tr><td>535	  </td><td>0000000025		</td><td>Num24           </td></tr>
+<tr><td>536	  </td><td>0000000025		</td><td>Mat4            </td></tr>
+<tr><td>537	  </td><td>0000000025		</td><td>Mat1            </td></tr>
+<tr><td>538	  </td><td>0000000025		</td><td>Jug7            </td></tr>
+<tr><td>539	  </td><td>0000000025		</td><td>Jug21           </td></tr>
+<tr><td>540	  </td><td>0000000025		</td><td>Jug13           </td></tr>
+<tr><td>541	  </td><td>0000000025		</td><td>Jud1            </td></tr>
+<tr><td>542	  </td><td>0000000025		</td><td>Job29           </td></tr>
+<tr><td>543	  </td><td>0000000025		</td><td>Job24           </td></tr>
+<tr><td>544	  </td><td>0000000025		</td><td>Job12           </td></tr>
+<tr><td>545	  </td><td>0000000025		</td><td>Jhn21           </td></tr>
+<tr><td>546	  </td><td>0000000025		</td><td>Jhn2            </td></tr>
+<tr><td>547	  </td><td>0000000025		</td><td>Jer3            </td></tr>
+<tr><td>548	  </td><td>0000000025		</td><td>Jer10           </td></tr>
+<tr><td>549	  </td><td>0000000025		</td><td>Isa7            </td></tr>
+<tr><td>550	  </td><td>0000000025		</td><td>Isa65           </td></tr>
+<tr><td>551	  </td><td>0000000025		</td><td>Isa45           </td></tr>
+<tr><td>552	  </td><td>0000000025		</td><td>Isa42           </td></tr>
+<tr><td>553	  </td><td>0000000025		</td><td>Isa22           </td></tr>
+<tr><td>554	  </td><td>0000000025		</td><td>Isa19           </td></tr>
+<tr><td>555	  </td><td>0000000025		</td><td>Heb13           </td></tr>
+<tr><td>556	  </td><td>0000000025		</td><td>Gen2            </td></tr>
+<tr><td>557	  </td><td>0000000025		</td><td>Eze45           </td></tr>
+<tr><td>558	  </td><td>0000000025		</td><td>Eze28           </td></tr>
+<tr><td>559	  </td><td>0000000025		</td><td>Eze11           </td></tr>
+<tr><td>560	  </td><td>0000000025		</td><td>Exo7            </td></tr>
+<tr><td>561	  </td><td>0000000025		</td><td>Exo2            </td></tr>
+<tr><td>562	  </td><td>0000000025		</td><td>Exo19           </td></tr>
+<tr><td>563	  </td><td>0000000025		</td><td>Deu6            </td></tr>
+<tr><td>564	  </td><td>0000000025		</td><td>Deu23           </td></tr>
+<tr><td>565	  </td><td>0000000025		</td><td>Col3            </td></tr>
+<tr><td>566	  </td><td>0000000025		</td><td>Act12           </td></tr>
+<tr><td>567	  </td><td>0000000025		</td><td>2Sa5            </td></tr>
+<tr><td>568	  </td><td>0000000025		</td><td>2Sa24           </td></tr>
+<tr><td>569	  </td><td>0000000025		</td><td>2Ki2            </td></tr>
+<tr><td>570	  </td><td>0000000025		</td><td>2Ki13           </td></tr>
+<tr><td>571	  </td><td>0000000025		</td><td>2Ch33           </td></tr>
+<tr><td>572	  </td><td>0000000025		</td><td>1Ti5            </td></tr>
+<tr><td>573	  </td><td>0000000025		</td><td>1Sa28           </td></tr>
+<tr><td>574	  </td><td>0000000025		</td><td>1Sa26           </td></tr>
+<tr><td>575	  </td><td>0000000025		</td><td>1Sa12           </td></tr>
+<tr><td>576	  </td><td>0000000025		</td><td>1Pe2            </td></tr>
+<tr><td>577	  </td><td>0000000025		</td><td>1Pe1            </td></tr>
+<tr><td>578	  </td><td>0000000024		</td><td>Rev18           </td></tr>
+<tr><td>579	  </td><td>0000000024		</td><td>Psm71           </td></tr>
+<tr><td>580	  </td><td>0000000024		</td><td>Psm31           </td></tr>
+<tr><td>581	  </td><td>0000000024		</td><td>Psm139          </td></tr>
+<tr><td>582	  </td><td>0000000024		</td><td>Pro18           </td></tr>
+<tr><td>583	  </td><td>0000000024		</td><td>Lev9            </td></tr>
+<tr><td>584	  </td><td>0000000024		</td><td>Lev21           </td></tr>
+<tr><td>585	  </td><td>0000000024		</td><td>Jug4            </td></tr>
+<tr><td>586	  </td><td>0000000024		</td><td>Jos4            </td></tr>
+<tr><td>587	  </td><td>0000000024		</td><td>Jos2            </td></tr>
+<tr><td>588	  </td><td>0000000024		</td><td>Jos12           </td></tr>
+<tr><td>589	  </td><td>0000000024		</td><td>Job40           </td></tr>
+<tr><td>590	  </td><td>0000000024		</td><td>Job37           </td></tr>
+<tr><td>591	  </td><td>0000000024		</td><td>Jer30           </td></tr>
+<tr><td>592	  </td><td>0000000024		</td><td>Jer26           </td></tr>
+<tr><td>593	  </td><td>0000000024		</td><td>Isa66           </td></tr>
+<tr><td>594	  </td><td>0000000024		</td><td>Isa33           </td></tr>
+<tr><td>595	  </td><td>0000000024		</td><td>Isa29           </td></tr>
+<tr><td>596	  </td><td>0000000024		</td><td>Gen7            </td></tr>
+<tr><td>597	  </td><td>0000000024		</td><td>Gen3            </td></tr>
+<tr><td>598	  </td><td>0000000024		</td><td>Gen22           </td></tr>
+<tr><td>599	  </td><td>0000000024		</td><td>Gen14           </td></tr>
+<tr><td>600	  </td><td>0000000024		</td><td>Gal1            </td></tr>
+<tr><td>601	  </td><td>0000000024		</td><td>Ezr4            </td></tr>
+<tr><td>602	  </td><td>0000000024		</td><td>Eze46           </td></tr>
+<tr><td>603	  </td><td>0000000024		</td><td>Eze17           </td></tr>
+<tr><td>604	  </td><td>0000000024		</td><td>Eph6            </td></tr>
+<tr><td>605	  </td><td>0000000024		</td><td>2Co8            </td></tr>
+<tr><td>606	  </td><td>0000000024		</td><td>2Co1            </td></tr>
+<tr><td>607	  </td><td>0000000024		</td><td>1Sa19           </td></tr>
+<tr><td>608	  </td><td>0000000024		</td><td>1Ki17           </td></tr>
+<tr><td>609	  </td><td>0000000024		</td><td>1Jn3            </td></tr>
+<tr><td>610	  </td><td>0000000024		</td><td>1Co16           </td></tr>
+<tr><td>611	  </td><td>0000000024		</td><td>1Ch3            </td></tr>
+<tr><td>612	  </td><td>0000000023		</td><td>Zec8            </td></tr>
+<tr><td>613	  </td><td>0000000023		</td><td>Rut2            </td></tr>
+<tr><td>614	  </td><td>0000000023		</td><td>Rom6            </td></tr>
+<tr><td>615	  </td><td>0000000023		</td><td>Rom14           </td></tr>
+<tr><td>616	  </td><td>0000000023		</td><td>Psm94           </td></tr>
+<tr><td>617	  </td><td>0000000023		</td><td>Psm74           </td></tr>
+<tr><td>618	  </td><td>0000000023		</td><td>Psm55           </td></tr>
+<tr><td>619	  </td><td>0000000023		</td><td>Psm50           </td></tr>
+<tr><td>620	  </td><td>0000000023		</td><td>Pro5            </td></tr>
+<tr><td>621	  </td><td>0000000023		</td><td>Phl4            </td></tr>
+<tr><td>622	  </td><td>0000000023		</td><td>Num9            </td></tr>
+<tr><td>623	  </td><td>0000000023		</td><td>Num27           </td></tr>
+<tr><td>624	  </td><td>0000000023		</td><td>Neh4            </td></tr>
+<tr><td>625	  </td><td>0000000023		</td><td>Mat2            </td></tr>
+<tr><td>626	  </td><td>0000000023		</td><td>Lev24           </td></tr>
+<tr><td>627	  </td><td>0000000023		</td><td>Jug2            </td></tr>
+<tr><td>628	  </td><td>0000000023		</td><td>Jos11           </td></tr>
+<tr><td>629	  </td><td>0000000023		</td><td>Job27           </td></tr>
+<tr><td>630	  </td><td>0000000023		</td><td>Jer18           </td></tr>
+<tr><td>631	  </td><td>0000000023		</td><td>Jer11           </td></tr>
+<tr><td>632	  </td><td>0000000023		</td><td>Isa51           </td></tr>
+<tr><td>633	  </td><td>0000000023		</td><td>Isa24           </td></tr>
+<tr><td>634	  </td><td>0000000023		</td><td>Hos2            </td></tr>
+<tr><td>635	  </td><td>0000000023		</td><td>Hag2            </td></tr>
+<tr><td>636	  </td><td>0000000023		</td><td>Gen40           </td></tr>
+<tr><td>637	  </td><td>0000000023		</td><td>Gen39           </td></tr>
+<tr><td>638	  </td><td>0000000023		</td><td>Eze47           </td></tr>
+<tr><td>639	  </td><td>0000000023		</td><td>Eze38           </td></tr>
+<tr><td>640	  </td><td>0000000023		</td><td>Eze14           </td></tr>
+<tr><td>641	  </td><td>0000000023		</td><td>Eze13           </td></tr>
+<tr><td>642	  </td><td>0000000023		</td><td>Exo5            </td></tr>
+<tr><td>643	  </td><td>0000000023		</td><td>Exo33           </td></tr>
+<tr><td>644	  </td><td>0000000023		</td><td>Est2            </td></tr>
+<tr><td>645	  </td><td>0000000023		</td><td>Eph1            </td></tr>
+<tr><td>646	  </td><td>0000000023		</td><td>Deu21           </td></tr>
+<tr><td>647	  </td><td>0000000023		</td><td>Deu15           </td></tr>
+<tr><td>648	  </td><td>0000000023		</td><td>Col2            </td></tr>
+<tr><td>649	  </td><td>0000000023		</td><td>2Sa6            </td></tr>
+<tr><td>650	  </td><td>0000000023		</td><td>2Sa16           </td></tr>
+<tr><td>651	  </td><td>0000000023		</td><td>2Ch36           </td></tr>
+<tr><td>652	  </td><td>0000000023		</td><td>2Ch26           </td></tr>
+<tr><td>653	  </td><td>0000000023		</td><td>2Ch11           </td></tr>
+<tr><td>654	  </td><td>0000000023		</td><td>1Sa22           </td></tr>
+<tr><td>655	  </td><td>0000000023		</td><td>1Sa16           </td></tr>
+<tr><td>656	  </td><td>0000000023		</td><td>1Sa13           </td></tr>
+<tr><td>657	  </td><td>0000000023		</td><td>1Co3            </td></tr>
+<tr><td>658	  </td><td>0000000022		</td><td>Rut4            </td></tr>
+<tr><td>659	  </td><td>0000000022		</td><td>Rut1            </td></tr>
+<tr><td>660	  </td><td>0000000022		</td><td>Rev3            </td></tr>
+<tr><td>661	  </td><td>0000000022		</td><td>Psm38           </td></tr>
+<tr><td>662	  </td><td>0000000022		</td><td>Psm34           </td></tr>
+<tr><td>663	  </td><td>0000000022		</td><td>Psm33           </td></tr>
+<tr><td>664	  </td><td>0000000022		</td><td>Psm25           </td></tr>
+<tr><td>665	  </td><td>0000000022		</td><td>Psm103          </td></tr>
+<tr><td>666	  </td><td>0000000022		</td><td>Pro2            </td></tr>
+<tr><td>667	  </td><td>0000000022		</td><td>Num19           </td></tr>
+<tr><td>668	  </td><td>0000000022		</td><td>Lam5            </td></tr>
+<tr><td>669	  </td><td>0000000022		</td><td>Lam4            </td></tr>
+<tr><td>670	  </td><td>0000000022		</td><td>Lam2            </td></tr>
+<tr><td>671	  </td><td>0000000022		</td><td>Lam1            </td></tr>
+<tr><td>672	  </td><td>0000000022		</td><td>Job8            </td></tr>
+<tr><td>673	  </td><td>0000000022		</td><td>Job32           </td></tr>
+<tr><td>674	  </td><td>0000000022		</td><td>Job16           </td></tr>
+<tr><td>675	  </td><td>0000000022		</td><td>Job14           </td></tr>
+<tr><td>676	  </td><td>0000000022		</td><td>Job10           </td></tr>
+<tr><td>677	  </td><td>0000000022		</td><td>Job1            </td></tr>
+<tr><td>678	  </td><td>0000000022		</td><td>Jer8            </td></tr>
+<tr><td>679	  </td><td>0000000022		</td><td>Jer42           </td></tr>
+<tr><td>680	  </td><td>0000000022		</td><td>Jer34           </td></tr>
+<tr><td>681	  </td><td>0000000022		</td><td>Jer27           </td></tr>
+<tr><td>682	  </td><td>0000000022		</td><td>Jer14           </td></tr>
+<tr><td>683	  </td><td>0000000022		</td><td>Isa8            </td></tr>
+<tr><td>684	  </td><td>0000000022		</td><td>Isa60           </td></tr>
+<tr><td>685	  </td><td>0000000022		</td><td>Isa48           </td></tr>
+<tr><td>686	  </td><td>0000000022		</td><td>Isa38           </td></tr>
+<tr><td>687	  </td><td>0000000022		</td><td>Isa36           </td></tr>
+<tr><td>688	  </td><td>0000000022		</td><td>Isa2            </td></tr>
+<tr><td>689	  </td><td>0000000022		</td><td>Isa13           </td></tr>
+<tr><td>690	  </td><td>0000000022		</td><td>Gen8            </td></tr>
+<tr><td>691	  </td><td>0000000022		</td><td>Gen6            </td></tr>
+<tr><td>692	  </td><td>0000000022		</td><td>Gen48           </td></tr>
+<tr><td>693	  </td><td>0000000022		</td><td>Gen28           </td></tr>
+<tr><td>694	  </td><td>0000000022		</td><td>Ezr6            </td></tr>
+<tr><td>695	  </td><td>0000000022		</td><td>Eze10           </td></tr>
+<tr><td>696	  </td><td>0000000022		</td><td>Exo3            </td></tr>
+<tr><td>697	  </td><td>0000000022		</td><td>Exo13           </td></tr>
+<tr><td>698	  </td><td>0000000022		</td><td>Exo1            </td></tr>
+<tr><td>699	  </td><td>0000000022		</td><td>Est1            </td></tr>
+<tr><td>700	  </td><td>0000000022		</td><td>Eph2            </td></tr>
+<tr><td>701	  </td><td>0000000022		</td><td>Ecc3            </td></tr>
+<tr><td>702	  </td><td>0000000022		</td><td>Deu24           </td></tr>
+<tr><td>703	  </td><td>0000000022		</td><td>Deu18           </td></tr>
+<tr><td>704	  </td><td>0000000022		</td><td>Deu16           </td></tr>
+<tr><td>705	  </td><td>0000000022		</td><td>Deu10           </td></tr>
+<tr><td>706	  </td><td>0000000022		</td><td>2Ti4            </td></tr>
+<tr><td>707	  </td><td>0000000022		</td><td>2Sa21           </td></tr>
+<tr><td>708	  </td><td>0000000022		</td><td>2Pe2            </td></tr>
+<tr><td>709	  </td><td>0000000022		</td><td>2Ch7            </td></tr>
+<tr><td>710	  </td><td>0000000022		</td><td>2Ch4            </td></tr>
+<tr><td>711	  </td><td>0000000022		</td><td>2Ch13           </td></tr>
+<tr><td>712	  </td><td>0000000022		</td><td>1Sa8            </td></tr>
+<tr><td>713	  </td><td>0000000022		</td><td>1Sa4            </td></tr>
+<tr><td>714	  </td><td>0000000022		</td><td>1Sa24           </td></tr>
+<tr><td>715	  </td><td>0000000022		</td><td>1Pe3            </td></tr>
+<tr><td>716	  </td><td>0000000021		</td><td>Zec14           </td></tr>
+<tr><td>717	  </td><td>0000000021		</td><td>Zec1            </td></tr>
+<tr><td>718	  </td><td>0000000021		</td><td>Rom5            </td></tr>
+<tr><td>719	  </td><td>0000000021		</td><td>Rom12           </td></tr>
+<tr><td>720	  </td><td>0000000021		</td><td>Rom10           </td></tr>
+<tr><td>721	  </td><td>0000000021		</td><td>Rev9            </td></tr>
+<tr><td>722	  </td><td>0000000021		</td><td>Rev22           </td></tr>
+<tr><td>723	  </td><td>0000000021		</td><td>Rev19           </td></tr>
+<tr><td>724	  </td><td>0000000021		</td><td>Rev16           </td></tr>
+<tr><td>725	  </td><td>0000000021		</td><td>Psm145          </td></tr>
+<tr><td>726	  </td><td>0000000021		</td><td>Psm135          </td></tr>
+<tr><td>727	  </td><td>0000000021		</td><td>Phl3            </td></tr>
+<tr><td>728	  </td><td>0000000021		</td><td>Oba1            </td></tr>
+<tr><td>729	  </td><td>0000000021		</td><td>Joe3            </td></tr>
+<tr><td>730	  </td><td>0000000021		</td><td>Job7            </td></tr>
+<tr><td>731	  </td><td>0000000021		</td><td>Job4            </td></tr>
+<tr><td>732	  </td><td>0000000021		</td><td>Job18           </td></tr>
+<tr><td>733	  </td><td>0000000021		</td><td>Jer37           </td></tr>
+<tr><td>734	  </td><td>0000000021		</td><td>Jer16           </td></tr>
+<tr><td>735	  </td><td>0000000021		</td><td>Jer15           </td></tr>
+<tr><td>736	  </td><td>0000000021		</td><td>Isa9            </td></tr>
+<tr><td>737	  </td><td>0000000021		</td><td>Isa59           </td></tr>
+<tr><td>738	  </td><td>0000000021		</td><td>Isa57           </td></tr>
+<tr><td>739	  </td><td>0000000021		</td><td>Isa26           </td></tr>
+<tr><td>740	  </td><td>0000000021		</td><td>Gen15           </td></tr>
+<tr><td>741	  </td><td>0000000021		</td><td>Gal2            </td></tr>
+<tr><td>742	  </td><td>0000000021		</td><td>Eze29           </td></tr>
+<tr><td>743	  </td><td>0000000021		</td><td>Eze26           </td></tr>
+<tr><td>744	  </td><td>0000000021		</td><td>Exo27           </td></tr>
+<tr><td>745	  </td><td>0000000021		</td><td>Eph3            </td></tr>
+<tr><td>746	  </td><td>0000000021		</td><td>Deu19           </td></tr>
+<tr><td>747	  </td><td>0000000021		</td><td>Dan10           </td></tr>
+<tr><td>748	  </td><td>0000000021		</td><td>Dan1            </td></tr>
+<tr><td>749	  </td><td>0000000021		</td><td>2Pe1            </td></tr>
+<tr><td>750	  </td><td>0000000021		</td><td>2Ki20           </td></tr>
+<tr><td>751	  </td><td>0000000021		</td><td>2Ki12           </td></tr>
+<tr><td>752	  </td><td>0000000021		</td><td>2Ki11           </td></tr>
+<tr><td>753	  </td><td>0000000021		</td><td>2Co5            </td></tr>
+<tr><td>754	  </td><td>0000000021		</td><td>2Co12           </td></tr>
+<tr><td>755	  </td><td>0000000021		</td><td>2Ch31           </td></tr>
+<tr><td>756	  </td><td>0000000021		</td><td>2Ch23           </td></tr>
+<tr><td>757	  </td><td>0000000021		</td><td>1Ti6            </td></tr>
+<tr><td>758	  </td><td>0000000021		</td><td>1Sa6            </td></tr>
+<tr><td>759	  </td><td>0000000021		</td><td>1Sa3            </td></tr>
+<tr><td>760	  </td><td>0000000021		</td><td>1Ki19           </td></tr>
+<tr><td>761	  </td><td>0000000021		</td><td>1Jn5            </td></tr>
+<tr><td>762	  </td><td>0000000021		</td><td>1Jn4            </td></tr>
+<tr><td>763	  </td><td>0000000021		</td><td>1Co4            </td></tr>
+<tr><td>764	  </td><td>0000000021		</td><td>1Ch28           </td></tr>
+<tr><td>765	  </td><td>0000000020		</td><td>Zep3            </td></tr>
+<tr><td>766	  </td><td>0000000020		</td><td>Rev14           </td></tr>
+<tr><td>767	  </td><td>0000000020		</td><td>Rev1            </td></tr>
+<tr><td>768	  </td><td>0000000020		</td><td>Psm9            </td></tr>
+<tr><td>769	  </td><td>0000000020		</td><td>Psm77           </td></tr>
+<tr><td>770	  </td><td>0000000020		</td><td>Psm72           </td></tr>
+<tr><td>771	  </td><td>0000000020		</td><td>Psm66           </td></tr>
+<tr><td>772	  </td><td>0000000020		</td><td>Psm49           </td></tr>
+<tr><td>773	  </td><td>0000000020		</td><td>Psm147          </td></tr>
+<tr><td>774	  </td><td>0000000020		</td><td>Neh2            </td></tr>
+<tr><td>775	  </td><td>0000000020		</td><td>Mic7            </td></tr>
+<tr><td>776	  </td><td>0000000020		</td><td>Mat28           </td></tr>
+<tr><td>777	  </td><td>0000000020		</td><td>Mak16           </td></tr>
+<tr><td>778	  </td><td>0000000020		</td><td>Lev10           </td></tr>
+<tr><td>779	  </td><td>0000000020		</td><td>Jug15           </td></tr>
+<tr><td>780	  </td><td>0000000020		</td><td>Jug14           </td></tr>
+<tr><td>781	  </td><td>0000000020		</td><td>Joe1            </td></tr>
+<tr><td>782	  </td><td>0000000020		</td><td>Job11           </td></tr>
+<tr><td>783	  </td><td>0000000020		</td><td>Jas5            </td></tr>
+<tr><td>784	  </td><td>0000000020		</td><td>Isa32           </td></tr>
+<tr><td>785	  </td><td>0000000020		</td><td>Heb6            </td></tr>
+<tr><td>786	  </td><td>0000000020		</td><td>Hab2            </td></tr>
+<tr><td>787	  </td><td>0000000020		</td><td>Gen33           </td></tr>
+<tr><td>788	  </td><td>0000000020		</td><td>Gen23           </td></tr>
+<tr><td>789	  </td><td>0000000020		</td><td>Gen12           </td></tr>
+<tr><td>790	  </td><td>0000000020		</td><td>Eze42           </td></tr>
+<tr><td>791	  </td><td>0000000020		</td><td>Ecc5            </td></tr>
+<tr><td>792	  </td><td>0000000020		</td><td>Ecc10           </td></tr>
+<tr><td>793	  </td><td>0000000020		</td><td>Deu8            </td></tr>
+<tr><td>794	  </td><td>0000000020		</td><td>Deu30           </td></tr>
+<tr><td>795	  </td><td>0000000020		</td><td>Deu20           </td></tr>
+<tr><td>796	  </td><td>0000000020		</td><td>Deu17           </td></tr>
+<tr><td>797	  </td><td>0000000020		</td><td>2Ki7            </td></tr>
+<tr><td>798	  </td><td>0000000020		</td><td>2Ki24           </td></tr>
+<tr><td>799	  </td><td>0000000020		</td><td>2Ki22           </td></tr>
+<tr><td>800	  </td><td>0000000020		</td><td>2Ki16           </td></tr>
+<tr><td>801	  </td><td>0000000020		</td><td>2Ch21           </td></tr>
+<tr><td>802	  </td><td>0000000020		</td><td>1Ts2            </td></tr>
+<tr><td>803	  </td><td>0000000020		</td><td>1Ti1            </td></tr>
+<tr><td>804	  </td><td>0000000020		</td><td>1Co6            </td></tr>
+<tr><td>805	  </td><td>0000000019		</td><td>Rev11           </td></tr>
+<tr><td>806	  </td><td>0000000019		</td><td>Psm80           </td></tr>
+<tr><td>807	  </td><td>0000000019		</td><td>Psm51           </td></tr>
+<tr><td>808	  </td><td>0000000019		</td><td>Psm116          </td></tr>
+<tr><td>809	  </td><td>0000000019		</td><td>Neh6            </td></tr>
+<tr><td>810	  </td><td>0000000019		</td><td>Neh5            </td></tr>
+<tr><td>811	  </td><td>0000000019		</td><td>Nah3            </td></tr>
+<tr><td>812	  </td><td>0000000019		</td><td>Lev5            </td></tr>
+<tr><td>813	  </td><td>0000000019		</td><td>Jer35           </td></tr>
+<tr><td>814	  </td><td>0000000019		</td><td>Jer1            </td></tr>
+<tr><td>815	  </td><td>0000000019		</td><td>Isa63           </td></tr>
+<tr><td>816	  </td><td>0000000019		</td><td>Hos4            </td></tr>
+<tr><td>817	  </td><td>0000000019		</td><td>Heb3            </td></tr>
+<tr><td>818	  </td><td>0000000019		</td><td>Hab3            </td></tr>
+<tr><td>819	  </td><td>0000000019		</td><td>Deu26           </td></tr>
+<tr><td>820	  </td><td>0000000019		</td><td>Deu25           </td></tr>
+<tr><td>821	  </td><td>0000000019		</td><td>2Sa10           </td></tr>
+<tr><td>822	  </td><td>0000000019		</td><td>2Ch17           </td></tr>
+<tr><td>823	  </td><td>0000000019		</td><td>2Ch15           </td></tr>
+<tr><td>824	  </td><td>0000000019		</td><td>2Ch10           </td></tr>
+<tr><td>825	  </td><td>0000000019		</td><td>1Pe4            </td></tr>
+<tr><td>826	  </td><td>0000000019		</td><td>1Ch19           </td></tr>
+<tr><td>827	  </td><td>0000000018		</td><td>Zep1            </td></tr>
+<tr><td>828	  </td><td>0000000018		</td><td>Rut3            </td></tr>
+<tr><td>829	  </td><td>0000000018		</td><td>Rev17           </td></tr>
+<tr><td>830	  </td><td>0000000018		</td><td>Rev13           </td></tr>
+<tr><td>831	  </td><td>0000000018		</td><td>Psm88           </td></tr>
+<tr><td>832	  </td><td>0000000018		</td><td>Psm83           </td></tr>
+<tr><td>833	  </td><td>0000000018		</td><td>Psm132          </td></tr>
+<tr><td>834	  </td><td>0000000018		</td><td>Psm115          </td></tr>
+<tr><td>835	  </td><td>0000000018		</td><td>Psm10           </td></tr>
+<tr><td>836	  </td><td>0000000018		</td><td>Pro9            </td></tr>
+<tr><td>837	  </td><td>0000000018		</td><td>Num25           </td></tr>
+<tr><td>838	  </td><td>0000000018		</td><td>Neh8            </td></tr>
+<tr><td>839	  </td><td>0000000018		</td><td>Mal3            </td></tr>
+<tr><td>840	  </td><td>0000000018		</td><td>Jug10           </td></tr>
+<tr><td>841	  </td><td>0000000018		</td><td>Jos17           </td></tr>
+<tr><td>842	  </td><td>0000000018		</td><td>Jos1            </td></tr>
+<tr><td>843	  </td><td>0000000018		</td><td>Jer41           </td></tr>
+<tr><td>844	  </td><td>0000000018		</td><td>Jer39           </td></tr>
+<tr><td>845	  </td><td>0000000018		</td><td>Jer20           </td></tr>
+<tr><td>846	  </td><td>0000000018		</td><td>Jas3            </td></tr>
+<tr><td>847	  </td><td>0000000018		</td><td>Isa23           </td></tr>
+<tr><td>848	  </td><td>0000000018		</td><td>Heb2            </td></tr>
+<tr><td>849	  </td><td>0000000018		</td><td>Gen20           </td></tr>
+<tr><td>850	  </td><td>0000000018		</td><td>Gen13           </td></tr>
+<tr><td>851	  </td><td>0000000018		</td><td>Gal6            </td></tr>
+<tr><td>852	  </td><td>0000000018		</td><td>Eze8            </td></tr>
+<tr><td>853	  </td><td>0000000018		</td><td>Eze31           </td></tr>
+<tr><td>854	  </td><td>0000000018		</td><td>Exo31           </td></tr>
+<tr><td>855	  </td><td>0000000018		</td><td>Exo24           </td></tr>
+<tr><td>856	  </td><td>0000000018		</td><td>Ecc9            </td></tr>
+<tr><td>857	  </td><td>0000000018		</td><td>Ecc1            </td></tr>
+<tr><td>858	  </td><td>0000000018		</td><td>Deu13           </td></tr>
+<tr><td>859	  </td><td>0000000018		</td><td>Col4            </td></tr>
+<tr><td>860	  </td><td>0000000018		</td><td>2Ts3            </td></tr>
+<tr><td>861	  </td><td>0000000018		</td><td>2Ti1            </td></tr>
+<tr><td>862	  </td><td>0000000018		</td><td>2Sa8            </td></tr>
+<tr><td>863	  </td><td>0000000018		</td><td>2Pe3            </td></tr>
+<tr><td>864	  </td><td>0000000018		</td><td>2Ki1            </td></tr>
+<tr><td>865	  </td><td>0000000018		</td><td>2Co6            </td></tr>
+<tr><td>866	  </td><td>0000000018		</td><td>2Co4            </td></tr>
+<tr><td>867	  </td><td>0000000018		</td><td>2Co3            </td></tr>
+<tr><td>868	  </td><td>0000000018		</td><td>2Co10           </td></tr>
+<tr><td>869	  </td><td>0000000018		</td><td>2Ch8            </td></tr>
+<tr><td>870	  </td><td>0000000018		</td><td>2Ch2            </td></tr>
+<tr><td>871	  </td><td>0000000018		</td><td>1Ts4            </td></tr>
+<tr><td>872	  </td><td>0000000018		</td><td>1Ki5            </td></tr>
+<tr><td>873	  </td><td>0000000018		</td><td>1Ch22           </td></tr>
+<tr><td>874	  </td><td>0000000017		</td><td>Zec9            </td></tr>
+<tr><td>875	  </td><td>0000000017		</td><td>Zec11           </td></tr>
+<tr><td>876	  </td><td>0000000017		</td><td>Son2            </td></tr>
+<tr><td>877	  </td><td>0000000017		</td><td>Son1            </td></tr>
+<tr><td>878	  </td><td>0000000017		</td><td>Rev7            </td></tr>
+<tr><td>879	  </td><td>0000000017		</td><td>Rev6            </td></tr>
+<tr><td>880	  </td><td>0000000017		</td><td>Rev12           </td></tr>
+<tr><td>881	  </td><td>0000000017		</td><td>Psm90           </td></tr>
+<tr><td>882	  </td><td>0000000017		</td><td>Psm86           </td></tr>
+<tr><td>883	  </td><td>0000000017		</td><td>Psm7            </td></tr>
+<tr><td>884	  </td><td>0000000017		</td><td>Psm59           </td></tr>
+<tr><td>885	  </td><td>0000000017		</td><td>Psm45           </td></tr>
+<tr><td>886	  </td><td>0000000017		</td><td>Psm40           </td></tr>
+<tr><td>887	  </td><td>0000000017		</td><td>Mat3            </td></tr>
+<tr><td>888	  </td><td>0000000017		</td><td>Mal2            </td></tr>
+<tr><td>889	  </td><td>0000000017		</td><td>Lev3            </td></tr>
+<tr><td>890	  </td><td>0000000017		</td><td>Lev1            </td></tr>
+<tr><td>891	  </td><td>0000000017		</td><td>Jos3            </td></tr>
+<tr><td>892	  </td><td>0000000017		</td><td>Jon1            </td></tr>
+<tr><td>893	  </td><td>0000000017		</td><td>Job42           </td></tr>
+<tr><td>894	  </td><td>0000000017		</td><td>Job23           </td></tr>
+<tr><td>895	  </td><td>0000000017		</td><td>Jer28           </td></tr>
+<tr><td>896	  </td><td>0000000017		</td><td>Jer12           </td></tr>
+<tr><td>897	  </td><td>0000000017		</td><td>Jas4            </td></tr>
+<tr><td>898	  </td><td>0000000017		</td><td>Isa54           </td></tr>
+<tr><td>899	  </td><td>0000000017		</td><td>Isa34           </td></tr>
+<tr><td>900	  </td><td>0000000017		</td><td>Isa21           </td></tr>
+<tr><td>901	  </td><td>0000000017		</td><td>Hos9            </td></tr>
+<tr><td>902	  </td><td>0000000017		</td><td>Hab1            </td></tr>
+<tr><td>903	  </td><td>0000000017		</td><td>Ezr5            </td></tr>
+<tr><td>904	  </td><td>0000000017		</td><td>Eze5            </td></tr>
+<tr><td>905	  </td><td>0000000017		</td><td>Eze4            </td></tr>
+<tr><td>906	  </td><td>0000000017		</td><td>Eze25           </td></tr>
+<tr><td>907	  </td><td>0000000017		</td><td>Est8            </td></tr>
+<tr><td>908	  </td><td>0000000017		</td><td>Est4            </td></tr>
+<tr><td>909	  </td><td>0000000017		</td><td>Ecc8            </td></tr>
+<tr><td>910	  </td><td>0000000017		</td><td>Amo7            </td></tr>
+<tr><td>911	  </td><td>0000000017		</td><td>2Ts2            </td></tr>
+<tr><td>912	  </td><td>0000000017		</td><td>2Ti3            </td></tr>
+<tr><td>913	  </td><td>0000000017		</td><td>2Co2            </td></tr>
+<tr><td>914	  </td><td>0000000017		</td><td>2Ch3            </td></tr>
+<tr><td>915	  </td><td>0000000017		</td><td>2Ch1            </td></tr>
+<tr><td>916	  </td><td>0000000017		</td><td>1Sa7            </td></tr>
+<tr><td>917	  </td><td>0000000017		</td><td>1Ch18           </td></tr>
+<tr><td>918	  </td><td>0000000017		</td><td>1Ch14           </td></tr>
+<tr><td>919	  </td><td>0000000016		</td><td>Tit1            </td></tr>
+<tr><td>920	  </td><td>0000000016		</td><td>Son5            </td></tr>
+<tr><td>921	  </td><td>0000000016		</td><td>Son4            </td></tr>
+<tr><td>922	  </td><td>0000000016		</td><td>Psm91           </td></tr>
+<tr><td>923	  </td><td>0000000016		</td><td>Psm81           </td></tr>
+<tr><td>924	  </td><td>0000000016		</td><td>Num30           </td></tr>
+<tr><td>925	  </td><td>0000000016		</td><td>Num12           </td></tr>
+<tr><td>926	  </td><td>0000000016		</td><td>Mic6            </td></tr>
+<tr><td>927	  </td><td>0000000016		</td><td>Mic1            </td></tr>
+<tr><td>928	  </td><td>0000000016		</td><td>Lev2            </td></tr>
+<tr><td>929	  </td><td>0000000016		</td><td>Lev17           </td></tr>
+<tr><td>930	  </td><td>0000000016		</td><td>Jos23           </td></tr>
+<tr><td>931	  </td><td>0000000016		</td><td>Job35           </td></tr>
+<tr><td>932	  </td><td>0000000016		</td><td>Job17           </td></tr>
+<tr><td>933	  </td><td>0000000016		</td><td>Jer40           </td></tr>
+<tr><td>934	  </td><td>0000000016		</td><td>Isa11           </td></tr>
+<tr><td>935	  </td><td>0000000016		</td><td>Hos7            </td></tr>
+<tr><td>936	  </td><td>0000000016		</td><td>Hos13           </td></tr>
+<tr><td>937	  </td><td>0000000016		</td><td>Heb4            </td></tr>
+<tr><td>938	  </td><td>0000000016		</td><td>Gen16           </td></tr>
+<tr><td>939	  </td><td>0000000016		</td><td>Exo17           </td></tr>
+<tr><td>940	  </td><td>0000000016		</td><td>Ecc4            </td></tr>
+<tr><td>941	  </td><td>0000000016		</td><td>Amo2            </td></tr>
+<tr><td>942	  </td><td>0000000016		</td><td>2Co7            </td></tr>
+<tr><td>943	  </td><td>0000000016		</td><td>2Ch12           </td></tr>
+<tr><td>944	  </td><td>0000000016		</td><td>1Ti4            </td></tr>
+<tr><td>945	  </td><td>0000000016		</td><td>1Ti3            </td></tr>
+<tr><td>946	  </td><td>0000000016		</td><td>1Co2            </td></tr>
+<tr><td>947	  </td><td>0000000015		</td><td>Zep2            </td></tr>
+<tr><td>948	  </td><td>0000000015		</td><td>Zec6            </td></tr>
+<tr><td>949	  </td><td>0000000015		</td><td>Tit3            </td></tr>
+<tr><td>950	  </td><td>0000000015		</td><td>Tit2            </td></tr>
+<tr><td>951	  </td><td>0000000015		</td><td>Rev20           </td></tr>
+<tr><td>952	  </td><td>0000000015		</td><td>Psm92           </td></tr>
+<tr><td>953	  </td><td>0000000015		</td><td>Psm17           </td></tr>
+<tr><td>954	  </td><td>0000000015		</td><td>Psm144          </td></tr>
+<tr><td>955	  </td><td>0000000015		</td><td>Nah1            </td></tr>
+<tr><td>956	  </td><td>0000000015		</td><td>Mic5            </td></tr>
+<tr><td>957	  </td><td>0000000015		</td><td>Jug12           </td></tr>
+<tr><td>958	  </td><td>0000000015		</td><td>Jos5            </td></tr>
+<tr><td>959	  </td><td>0000000015		</td><td>Jos14           </td></tr>
+<tr><td>960	  </td><td>0000000015		</td><td>Jer19           </td></tr>
+<tr><td>961	  </td><td>0000000015		</td><td>Isa52           </td></tr>
+<tr><td>962	  </td><td>0000000015		</td><td>Isa47           </td></tr>
+<tr><td>963	  </td><td>0000000015		</td><td>Hos5            </td></tr>
+<tr><td>964	  </td><td>0000000015		</td><td>Hos10           </td></tr>
+<tr><td>965	  </td><td>0000000015		</td><td>Hag1            </td></tr>
+<tr><td>966	  </td><td>0000000015		</td><td>Ezr9            </td></tr>
+<tr><td>967	  </td><td>0000000015		</td><td>Eze35           </td></tr>
+<tr><td>968	  </td><td>0000000015		</td><td>Est3            </td></tr>
+<tr><td>969	  </td><td>0000000015		</td><td>Amo9            </td></tr>
+<tr><td>970	  </td><td>0000000015		</td><td>Amo3            </td></tr>
+<tr><td>971	  </td><td>0000000015		</td><td>Amo1            </td></tr>
+<tr><td>972	  </td><td>0000000015		</td><td>Act6            </td></tr>
+<tr><td>973	  </td><td>0000000015		</td><td>3Jn1            </td></tr>
+<tr><td>974	  </td><td>0000000015		</td><td>2Co9            </td></tr>
+<tr><td>975	  </td><td>0000000015		</td><td>2Ch14           </td></tr>
+<tr><td>976	  </td><td>0000000015		</td><td>1Ti2            </td></tr>
+<tr><td>977	  </td><td>0000000015		</td><td>1Sa21           </td></tr>
+<tr><td>978	  </td><td>0000000015		</td><td>1Sa11           </td></tr>
+<tr><td>979	  </td><td>0000000014		</td><td>Zec7            </td></tr>
+<tr><td>980	  </td><td>0000000014		</td><td>Zec4            </td></tr>
+<tr><td>981	  </td><td>0000000014		</td><td>Zec12           </td></tr>
+<tr><td>982	  </td><td>0000000014		</td><td>Son8            </td></tr>
+<tr><td>983	  </td><td>0000000014		</td><td>Rom13           </td></tr>
+<tr><td>984	  </td><td>0000000014		</td><td>Rev5            </td></tr>
+<tr><td>985	  </td><td>0000000014		</td><td>Psm48           </td></tr>
+<tr><td>986	  </td><td>0000000014		</td><td>Psm27           </td></tr>
+<tr><td>987	  </td><td>0000000014		</td><td>Psm19           </td></tr>
+<tr><td>988	  </td><td>0000000014		</td><td>Psm148          </td></tr>
+<tr><td>989	  </td><td>0000000014		</td><td>Mal1            </td></tr>
+<tr><td>990	  </td><td>0000000014		</td><td>Job26           </td></tr>
+<tr><td>991	  </td><td>0000000014		</td><td>Jer21           </td></tr>
+<tr><td>992	  </td><td>0000000014		</td><td>Isa58           </td></tr>
+<tr><td>993	  </td><td>0000000014		</td><td>Isa17           </td></tr>
+<tr><td>994	  </td><td>0000000014		</td><td>Isa16           </td></tr>
+<tr><td>995	  </td><td>0000000014		</td><td>Hos8            </td></tr>
+<tr><td>996	  </td><td>0000000014		</td><td>Hos12           </td></tr>
+<tr><td>997	  </td><td>0000000014		</td><td>Heb5            </td></tr>
+<tr><td>998	  </td><td>0000000014		</td><td>Heb1            </td></tr>
+<tr><td>999	  </td><td>0000000014		</td><td>Eze6            </td></tr>
+<tr><td>1000  </td><td>	0000000014		</td><td>Eze19           </td></tr>
+<tr><td>1001  </td><td>	0000000014		</td><td>Est6            </td></tr>
+<tr><td>1002  </td><td>	0000000014		</td><td>Est5            </td></tr>
+<tr><td>1003  </td><td>	0000000014		</td><td>Ecc12           </td></tr>
+<tr><td>1004  </td><td>	0000000014		</td><td>Amo8            </td></tr>
+<tr><td>1005  </td><td>	0000000014		</td><td>Amo6            </td></tr>
+<tr><td>1006  </td><td>	0000000014		</td><td>2Co13           </td></tr>
+<tr><td>1007  </td><td>	0000000014		</td><td>2Ch5            </td></tr>
+<tr><td>1008  </td><td>	0000000014		</td><td>2Ch16           </td></tr>
+<tr><td>1009  </td><td>	0000000014		</td><td>1Pe5            </td></tr>
+<tr><td>1010  </td><td>	0000000014		</td><td>1Ch13           </td></tr>
+<tr><td>1011  </td><td>	0000000014		</td><td>1Ch10           </td></tr>
+<tr><td>1012  </td><td>	0000000013		</td><td>Zec2            </td></tr>
+<tr><td>1013  </td><td>	0000000013		</td><td>Son7            </td></tr>
+<tr><td>1014  </td><td>	0000000013		</td><td>Son6            </td></tr>
+<tr><td>1015  </td><td>	0000000013		</td><td>Rev8            </td></tr>
+<tr><td>1016  </td><td>	0000000013		</td><td>Psm96           </td></tr>
+<tr><td>1017  </td><td>	0000000013		</td><td>Psm85           </td></tr>
+<tr><td>1018  </td><td>	0000000013		</td><td>Psm79           </td></tr>
+<tr><td>1019  </td><td>	0000000013		</td><td>Psm65           </td></tr>
+<tr><td>1020  </td><td>	0000000013		</td><td>Psm56           </td></tr>
+<tr><td>1021  </td><td>	0000000013		</td><td>Psm41           </td></tr>
+<tr><td>1022  </td><td>	0000000013		</td><td>Psm39           </td></tr>
+<tr><td>1023  </td><td>	0000000013		</td><td>Psm21           </td></tr>
+<tr><td>1024  </td><td>	0000000013		</td><td>Psm140          </td></tr>
+<tr><td>1025  </td><td>	0000000013		</td><td>Psm108          </td></tr>
+<tr><td>1026  </td><td>	0000000013		</td><td>Num36           </td></tr>
+<tr><td>1027  </td><td>	0000000013		</td><td>Num17           </td></tr>
+<tr><td>1028  </td><td>	0000000013		</td><td>Nah2            </td></tr>
+<tr><td>1029  </td><td>	0000000013		</td><td>Mic4            </td></tr>
+<tr><td>1030  </td><td>	0000000013		</td><td>Mic2            </td></tr>
+<tr><td>1031  </td><td>	0000000013		</td><td>Jug17           </td></tr>
+<tr><td>1032  </td><td>	0000000013		</td><td>Job2            </td></tr>
+<tr><td>1033  </td><td>	0000000013		</td><td>Jer43           </td></tr>
+<tr><td>1034  </td><td>	0000000013		</td><td>Isa6            </td></tr>
+<tr><td>1035  </td><td>	0000000013		</td><td>Isa55           </td></tr>
+<tr><td>1036  </td><td>	0000000013		</td><td>Isa46           </td></tr>
+<tr><td>1037  </td><td>	0000000013		</td><td>Isa27           </td></tr>
+<tr><td>1038  </td><td>	0000000013		</td><td>Heb8            </td></tr>
+<tr><td>1039  </td><td>	0000000013		</td><td>Ezr3            </td></tr>
+<tr><td>1040  </td><td>	0000000013		</td><td>Dan12           </td></tr>
+<tr><td>1041  </td><td>	0000000013		</td><td>Amo4            </td></tr>
+<tr><td>1042  </td><td>	0000000013		</td><td>2Sa9            </td></tr>
+<tr><td>1043  </td><td>	0000000013		</td><td>2Jn1            </td></tr>
+<tr><td>1044  </td><td>	0000000013		</td><td>1Ts3            </td></tr>
+<tr><td>1045  </td><td>	0000000013		</td><td>1Sa31           </td></tr>
+<tr><td>1046  </td><td>	0000000013		</td><td>1Co8            </td></tr>
+<tr><td>1047  </td><td>	0000000013		</td><td>1Co5            </td></tr>
+<tr><td>1048  </td><td>	0000000013		</td><td>1Co13           </td></tr>
+<tr><td>1049  </td><td>	0000000012		</td><td>Zec10           </td></tr>
+<tr><td>1050  </td><td>	0000000012		</td><td>Psm97           </td></tr>
+<tr><td>1051  </td><td>	0000000012		</td><td>Psm84           </td></tr>
+<tr><td>1052  </td><td>	0000000012		</td><td>Psm76           </td></tr>
+<tr><td>1053  </td><td>	0000000012		</td><td>Psm62           </td></tr>
+<tr><td>1054  </td><td>	0000000012		</td><td>Psm60           </td></tr>
+<tr><td>1055  </td><td>	0000000012		</td><td>Psm5            </td></tr>
+<tr><td>1056  </td><td>	0000000012		</td><td>Psm36           </td></tr>
+<tr><td>1057  </td><td>	0000000012		</td><td>Psm30           </td></tr>
+<tr><td>1058  </td><td>	0000000012		</td><td>Psm26           </td></tr>
+<tr><td>1059  </td><td>	0000000012		</td><td>Psm2            </td></tr>
+<tr><td>1060  </td><td>	0000000012		</td><td>Psm143          </td></tr>
+<tr><td>1061  </td><td>	0000000012		</td><td>Mic3            </td></tr>
+<tr><td>1062  </td><td>	0000000012		</td><td>Isa64           </td></tr>
+<tr><td>1063  </td><td>	0000000012		</td><td>Isa62           </td></tr>
+<tr><td>1064  </td><td>	0000000012		</td><td>Isa56           </td></tr>
+<tr><td>1065  </td><td>	0000000012		</td><td>Isa53           </td></tr>
+<tr><td>1066  </td><td>	0000000012		</td><td>Isa25           </td></tr>
+<tr><td>1067  </td><td>	0000000012		</td><td>Hos11           </td></tr>
+<tr><td>1068  </td><td>	0000000012		</td><td>Ecc6            </td></tr>
+<tr><td>1069  </td><td>	0000000012		</td><td>Deu34           </td></tr>
+<tr><td>1070  </td><td>	0000000012		</td><td>2Ts1            </td></tr>
+<tr><td>1071  </td><td>	0000000012		</td><td>2Sa4            </td></tr>
+<tr><td>1072  </td><td>	0000000012		</td><td>2Ch22           </td></tr>
+<tr><td>1073  </td><td>	0000000012		</td><td>1Sa5            </td></tr>
+<tr><td>1074  </td><td>	0000000012		</td><td>1Sa27           </td></tr>
+<tr><td>1075  </td><td>	0000000011		</td><td>Zec5            </td></tr>
+<tr><td>1076  </td><td>	0000000011		</td><td>Son3            </td></tr>
+<tr><td>1077  </td><td>	0000000011		</td><td>Rev4            </td></tr>
+<tr><td>1078  </td><td>	0000000011		</td><td>Rev10           </td></tr>
+<tr><td>1079  </td><td>	0000000011		</td><td>Psm95           </td></tr>
+<tr><td>1080  </td><td>	0000000011		</td><td>Psm63           </td></tr>
+<tr><td>1081  </td><td>	0000000011		</td><td>Psm58           </td></tr>
+<tr><td>1082  </td><td>	0000000011		</td><td>Psm57           </td></tr>
+<tr><td>1083  </td><td>	0000000011		</td><td>Psm46           </td></tr>
+<tr><td>1084  </td><td>	0000000011		</td><td>Psm42           </td></tr>
+<tr><td>1085  </td><td>	0000000011		</td><td>Psm32           </td></tr>
+<tr><td>1086  </td><td>	0000000011		</td><td>Psm29           </td></tr>
+<tr><td>1087  </td><td>	0000000011		</td><td>Psm16           </td></tr>
+<tr><td>1088  </td><td>	0000000011		</td><td>Neh1            </td></tr>
+<tr><td>1089  </td><td>	0000000011		</td><td>Jon4            </td></tr>
+<tr><td>1090  </td><td>	0000000011		</td><td>Isa61           </td></tr>
+<tr><td>1091  </td><td>	0000000011		</td><td>Isa50           </td></tr>
+<tr><td>1092  </td><td>	0000000011		</td><td>Hos6            </td></tr>
+<tr><td>1093  </td><td>	0000000011		</td><td>Hos1            </td></tr>
+<tr><td>1094  </td><td>	0000000011		</td><td>Ezr1            </td></tr>
+<tr><td>1095  </td><td>	0000000011		</td><td>Eze9            </td></tr>
+<tr><td>1096  </td><td>	0000000011		</td><td>2Ch19           </td></tr>
+<tr><td>1097  </td><td>	0000000011		</td><td>1Sa29           </td></tr>
+<tr><td>1098  </td><td>	0000000010		</td><td>Zec3            </td></tr>
+<tr><td>1099  </td><td>	0000000010		</td><td>Psm75           </td></tr>
+<tr><td>1100  </td><td>	0000000010		</td><td>Psm64           </td></tr>
+<tr><td>1101  </td><td>	0000000010		</td><td>Psm6            </td></tr>
+<tr><td>1102  </td><td>	0000000010		</td><td>Psm24           </td></tr>
+<tr><td>1103  </td><td>	0000000010		</td><td>Psm146          </td></tr>
+<tr><td>1104  </td><td>	0000000010		</td><td>Psm141          </td></tr>
+<tr><td>1105  </td><td>	0000000010		</td><td>Psm112          </td></tr>
+<tr><td>1106  </td><td>	0000000010		</td><td>Psm111          </td></tr>
+<tr><td>1107  </td><td>	0000000010		</td><td>Jos16           </td></tr>
+<tr><td>1108  </td><td>	0000000010		</td><td>Jon3            </td></tr>
+<tr><td>1109  </td><td>	0000000010		</td><td>Jon2            </td></tr>
+<tr><td>1110  </td><td>	0000000010		</td><td>Jer24           </td></tr>
+<tr><td>1111  </td><td>	0000000010		</td><td>Isa35           </td></tr>
+<tr><td>1112  </td><td>	0000000010		</td><td>Eze2            </td></tr>
+<tr><td>1113  </td><td>	0000000010		</td><td>Exo11           </td></tr>
+<tr><td>1114  </td><td>	0000000010		</td><td>Est7            </td></tr>
+<tr><td>1115  </td><td>	0000000010		</td><td>Ecc11           </td></tr>
+<tr><td>1116  </td><td>	0000000010		</td><td>1Ts1            </td></tr>
+<tr><td>1117  </td><td>	0000000010		</td><td>1Jn1            </td></tr>
+<tr><td>1118  </td><td>	0000000009		</td><td>Zec13           </td></tr>
+<tr><td>1119  </td><td>	0000000009		</td><td>Psm99           </td></tr>
+<tr><td>1120  </td><td>	0000000009		</td><td>Psm98           </td></tr>
+<tr><td>1121  </td><td>	0000000009		</td><td>Psm8            </td></tr>
+<tr><td>1122  </td><td>	0000000009		</td><td>Psm52           </td></tr>
+<tr><td>1123  </td><td>	0000000009		</td><td>Psm47           </td></tr>
+<tr><td>1124  </td><td>	0000000009		</td><td>Psm28           </td></tr>
+<tr><td>1125  </td><td>	0000000009		</td><td>Psm20           </td></tr>
+<tr><td>1126  </td><td>	0000000009		</td><td>Psm149          </td></tr>
+<tr><td>1127  </td><td>	0000000009		</td><td>Psm137          </td></tr>
+<tr><td>1128  </td><td>	0000000009		</td><td>Psm122          </td></tr>
+<tr><td>1129  </td><td>	0000000009		</td><td>Psm113          </td></tr>
+<tr><td>1130  </td><td>	0000000009		</td><td>Jos20           </td></tr>
+<tr><td>1131  </td><td>	0000000009		</td><td>Isa31           </td></tr>
+<tr><td>1132  </td><td>	0000000009		</td><td>Isa15           </td></tr>
+<tr><td>1133  </td><td>	0000000009		</td><td>Hos14           </td></tr>
+<tr><td>1134  </td><td>	0000000009		</td><td>2Ch27           </td></tr>
+<tr><td>1135  </td><td>	0000000008		</td><td>Rev15           </td></tr>
+<tr><td>1136  </td><td>	0000000008		</td><td>Psm82           </td></tr>
+<tr><td>1137  </td><td>	0000000008		</td><td>Psm61           </td></tr>
+<tr><td>1138  </td><td>	0000000008		</td><td>Psm4            </td></tr>
+<tr><td>1139  </td><td>	0000000008		</td><td>Psm3            </td></tr>
+<tr><td>1140  </td><td>	0000000008		</td><td>Psm138          </td></tr>
+<tr><td>1141  </td><td>	0000000008		</td><td>Psm130          </td></tr>
+<tr><td>1142  </td><td>	0000000008		</td><td>Psm129          </td></tr>
+<tr><td>1143  </td><td>	0000000008		</td><td>Psm124          </td></tr>
+<tr><td>1144  </td><td>	0000000008		</td><td>Psm121          </td></tr>
+<tr><td>1145  </td><td>	0000000008		</td><td>Psm12           </td></tr>
+<tr><td>1146  </td><td>	0000000008		</td><td>Psm114          </td></tr>
+<tr><td>1147  </td><td>	0000000008		</td><td>Psm101          </td></tr>
+<tr><td>1148  </td><td>	0000000008		</td><td>Lev12           </td></tr>
+<tr><td>1149  </td><td>	0000000008		</td><td>Isa39           </td></tr>
+<tr><td>1150  </td><td>	0000000008		</td><td>Eze15           </td></tr>
+<tr><td>1151  </td><td>	0000000008		</td><td>1Ch20           </td></tr>
+<tr><td>1152  </td><td>	0000000007		</td><td>Psm87           </td></tr>
+<tr><td>1153  </td><td>	0000000007		</td><td>Psm67           </td></tr>
+<tr><td>1154  </td><td>	0000000007		</td><td>Psm54           </td></tr>
+<tr><td>1155  </td><td>	0000000007		</td><td>Psm142          </td></tr>
+<tr><td>1156  </td><td>	0000000007		</td><td>Psm14           </td></tr>
+<tr><td>1157  </td><td>	0000000007		</td><td>Psm120          </td></tr>
+<tr><td>1158  </td><td>	0000000007		</td><td>Psm110          </td></tr>
+<tr><td>1159  </td><td>	0000000007		</td><td>Psm11           </td></tr>
+<tr><td>1160  </td><td>	0000000007		</td><td>Jer47           </td></tr>
+<tr><td>1161  </td><td>	0000000007		</td><td>Isa18           </td></tr>
+<tr><td>1162  </td><td>	0000000006		</td><td>Psm53           </td></tr>
+<tr><td>1163  </td><td>	0000000006		</td><td>Psm23           </td></tr>
+<tr><td>1164  </td><td>	0000000006		</td><td>Psm150          </td></tr>
+<tr><td>1165  </td><td>	0000000006		</td><td>Psm13           </td></tr>
+<tr><td>1166  </td><td>	0000000006		</td><td>Psm128          </td></tr>
+<tr><td>1167  </td><td>	0000000006		</td><td>Psm126          </td></tr>
+<tr><td>1168  </td><td>	0000000006		</td><td>Psm1            </td></tr>
+<tr><td>1169  </td><td>	0000000006		</td><td>Mal4            </td></tr>
+<tr><td>1170  </td><td>	0000000006		</td><td>Job25           </td></tr>
+<tr><td>1171  </td><td>	0000000006		</td><td>Isa4            </td></tr>
+<tr><td>1172  </td><td>	0000000006		</td><td>Isa20           </td></tr>
+<tr><td>1173  </td><td>	0000000006		</td><td>Isa12           </td></tr>
+<tr><td>1174  </td><td>	0000000005		</td><td>Psm93           </td></tr>
+<tr><td>1175  </td><td>	0000000005		</td><td>Psm70           </td></tr>
+<tr><td>1176  </td><td>	0000000005		</td><td>Psm43           </td></tr>
+<tr><td>1177  </td><td>	0000000005		</td><td>Psm15           </td></tr>
+<tr><td>1178  </td><td>	0000000005		</td><td>Psm127          </td></tr>
+<tr><td>1179  </td><td>	0000000005		</td><td>Psm125          </td></tr>
+<tr><td>1180  </td><td>	0000000005		</td><td>Psm100          </td></tr>
+<tr><td>1181  </td><td>	0000000005		</td><td>Jer45           </td></tr>
+<tr><td>1182  </td><td>	0000000005		</td><td>Hos3            </td></tr>
+<tr><td>1183  </td><td>	0000000004		</td><td>Psm123          </td></tr>
+<tr><td>1184  </td><td>	0000000003		</td><td>Psm134          </td></tr>
+<tr><td>1185  </td><td>	0000000003		</td><td>Psm133          </td></tr>
+<tr><td>1186  </td><td>	0000000003		</td><td>Psm131          </td></tr>
+<tr><td>1187  </td><td>	0000000003		</td><td>Est10           </td></tr>
+<tr><td>1188  </td><td>	0000000002		</td><td>Psm117          </td></tr>
+                                                         
+</table>
+
+<a>TotWords=31101      </a><br/>
+<a>NumOfCalc=31101     </a><br/>
+<a>                    </a><br/>
+<a>                    </a><br/>
+<a>Bible Pad           </a><br/>
+<a>                    </a><br/>
+<a>copyright©2015      </a><br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

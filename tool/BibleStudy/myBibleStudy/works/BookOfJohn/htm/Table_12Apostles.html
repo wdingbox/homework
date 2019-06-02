@@ -1,0 +1,604 @@
+<html>
+	<head>
+		<title></title>
+		<base target="_blank" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!-------><script src="../../../../../tablesorter_master/js/jquery.tablesorter.js"></script><script src="../../../myjs/table_Indexer.js"></script><script src="../../../myjs/goto_editor.js"></script>
+		<style type="text/css">
+@media print {
+    tr {
+        background-color: #ffffff !important;
+        -webkit-print-color-adjust: exact; 
+    }
+}
+@media print {
+     td th {
+        
+    }
+}		</style>
+		<style type="text/css">
+body {font-family: 'Times New Roman';
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 90%;
+
+        border: 1px solid #eeeeff;
+    }
+table{
+	font-size: 90%;
+}	
+#_MenuPanel{
+position: fixed;
+left: 10px;
+top: 0px;
+}
+
+.fixedcol{
+	position: absolute;
+	background-color: #999999;
+}
+.fixedcol2, thead{
+	background-color: #999999;
+}
+.fixedcol2{
+	background-color: #eeeeee;
+}
+.synoptic{
+	background-color: #dddddd;
+}
+.strongs{
+	background-color: #ffffff;
+}
+.Top_Horz{
+	color: blue;
+	font-size:7px;
+}
+.All_Top_Horz{
+	background-color: red;
+}
+.leftbox{
+  background-color: #ff0000;
+}
+.Jerusalem {
+	border: 4px solid blue;
+}
+.iam{
+	color:red;
+	font-weight: bold;
+}
+.predict{
+	color:#ff00ff;
+	font-weight: bold;
+}
+.feast{
+	border: 1px solid gray;
+	background-color: #fff0f0;
+}
+.verse{
+	border: 1px solid gray;
+}
+supx{
+	float: right;
+	right: 1px; 
+	border: 1px solid black;
+}
+.hebrew
+{
+    FONT-SIZE: 23px;
+    COLOR: #001320;
+    LINE-HEIGHT: 33px;
+    font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+    TEXT-DECORATION: none;
+}		</style>
+		<script>
+$(function(){
+    $(".narration").toggle();
+    $(".TheTitle").click(function(){
+        $(".narration").toggle();
+    } );
+    $("#strongsCodes").click(function(){
+    	$(".strongs, .translit").slideToggle();
+    });
+
+    $("body").click(function(){
+    	$("#_edit").slideToggle();
+    });
+
+    $("#relativeFrqRate").click(function(){
+    	cal_relativeFrqRate();
+    });
+
+
+    $(".fixedcol2").click(function(){
+    	alert();
+    });
+
+    $("#struct tbody tr").each(function(){
+    	$(this).find("td:eq(1)").addClass("Top_Horz");
+    })
+
+    $("td").each(function(){
+    	var tit=$(this).attr("title");
+    	if(tit && tit.length>0){
+    		$(this).prepend("<a class='verse'>"+tit+"</a> ");
+    	}
+    });
+
+
+
+});/////////
+
+$(document).ready(function(){ 
+	goto_editor("_edit_url");
+	sort_table();
+});//
+function sort_table(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+
+
+</script>
+	</head>
+	<body>
+		<p id="_MenuPanel">
+			<br />
+			<a id="_edit_url">...</a><br />
+			<a id="indxer">indxer</a></p>
+		<!-------------------------->
+		<p>
+			<!--------------------------><!--------------------------></p>
+		<table border="1" cellpadding="1" cellspacing="1" id="psersonNames" style="width: 100%">
+			<caption>
+				12 Apostles_NT</caption>
+			<thead>
+				<tr>
+					<th>
+						#</th>
+					<th>
+						Names</th>
+					<th style="text-align: center;">
+						<span style="font-size:9px;" title="Mat">Mt</span></th>
+					<th style="text-align: center;">
+						<span style="font-size:9px;" title="Mak">Mk</span></th>
+					<th style="text-align: center;">
+						<span style="font-size:9px;" title="Luk">Lk</span></th>
+					<th style="text-align: center;">
+						<span style="font-size:9px;" title="Jhn">Jh</span></th>
+					<th style="text-align: center;">
+						<span style="font-size:9px;" title="Died at AD">Died</span></th>
+					<th style="text-align: center;">
+						Charaters</th>
+					<th style="text-align: center;">
+						______Family______</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						Peter<br />
+						彼得<br />
+						or&nbsp;<br />
+						Simon</td>
+					<td>
+						2<br />
+						28</td>
+					<td>
+						1<br />
+						23</td>
+					<td>
+						1<br />
+						21</td>
+					<td>
+						3<br />
+						34</td>
+					<td>
+						64</td>
+					<td>
+						-Auth. Peter 1,2<br />
+						-Inner Circle<br />
+						-mentioned first in list.<br />
+						-Simon in greek is rock.<br />
+						-married</td>
+					<td colspan="1" rowspan="2">
+						<div class="fathername">
+							F:Jonas约翰, Simon</div>
+						<div class="placename">
+							L:Bethsaida, Capernaum</div>
+						<div class="careername">
+							C:fisherman</div>
+						<div class="careername">
+							R:John Baptizer</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						Andrew<br />
+						安德烈</td>
+					<td>
+						0<br />
+						2</td>
+					<td>
+						0<br />
+						4</td>
+					<td>
+						0<br />
+						1</td>
+					<td>
+						0<br />
+						2</td>
+					<td titlex="died AD">
+						60</td>
+					<td>
+						bring brother to Jesus.</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						James<br />
+						the Great<br />
+						(大)雅各</td>
+					<td>
+						0<br />
+						3</td>
+					<td>
+						0<br />
+						9</td>
+					<td>
+						0<br />
+						3</td>
+					<td>
+						-</td>
+					<td titlex="death">
+						44</td>
+					<td>
+						-Inner Circle<br>
+						-<a title="Acts 12:1-2]">1st martyr.<a>
+					</td>
+					<td colspan="1" rowspan="2">
+						<p>
+							<a class="fathername">F:</a> Zebedee西庇太,<br />
+							<a class="mothername">M:</a>&nbsp;Salome<br />
+							L: Bethsaida, Capernaum, Jerusalem.<br />
+							<a class="aliasname">A:</a>&nbsp;Boanerges<span style="font-size: 12.96px;">半尼其</span><br>
+
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<p>
+							<br />
+							John<br />
+							约翰</p>
+					</td>
+					<td>
+						0<br />
+						3</td>
+					<td>
+						0<br />
+						6</td>
+					<td>
+						0<br />
+						4</td>
+					<td>
+						1<br />
+						5</td>
+					<td>
+						100</td>
+					<td>
+						-Auth. Gospel, John 1,2,3, Rev<br />
+						-the Beloved Disciple, youngest<br />
+						-Inner Circle<br />
+						-close to Peter<br />
+						-Boanerges=Thunder雷子&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						Philip<br />
+						腓力</td>
+					<td>
+						0<br />
+						1</td>
+					<td>
+						0<br />
+						1</td>
+					<td>
+						0<br />
+						2</td>
+					<td>
+						2<br />
+						12</td>
+					<td>
+						80</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						L:Bethsaida 伯賽大</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						Bartholomew<br />
+						巴多罗买<br />
+						or<br />
+						Nathaniel<br />
+						拿但業</td>
+					<td>
+						0<br />
+						1</td>
+					<td>
+						0<br />
+						1</td>
+					<td>
+						0<br />
+						1</td>
+					<td>
+						(1)<br />
+						1</td>
+					<td>
+						?55</td>
+					<td>
+						-the only royal blood</td>
+					<td>
+						<a class="fathername">F:</a>&nbsp;Talmai<br />
+						<a class="placename">L:</a>&nbsp;Cana of Galilee</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						Thomas<br />
+						多马</td>
+					<td>
+						0<br />
+						1</td>
+					<td>
+						0<br />
+						1</td>
+					<td>
+						0<br />
+						1</td>
+					<td>
+						1<br />
+						8</td>
+					<td>
+						72</td>
+					<td>
+						-Didymus(Greek: double/doubt)</td>
+					<td>
+						<a class="placename">L:</a> Galilee<br />
+						A: Didymus&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						Simon the Zealot<br />
+						奋锐党的西门</td>
+					<td>
+						0<br />
+						1</td>
+					<td>
+						0<br />
+						1</td>
+					<td>
+						0<br />
+						1</td>
+					<td>
+						-</td>
+					<td>
+						?</td>
+					<td>
+						-Canaanite Simon
+						 迦南人西門</td>
+					<td>
+						<a class="placename">L:</a> Galilee<br />
+						A: Canaanite</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						Matthew<br />
+						Levi<br />
+						马太</td>
+					<td>
+						0<br />
+						2</td>
+					<td>
+						0<br />
+						3</td>
+					<td>
+						0<br />
+						1</td>
+					<td>
+						-</td>
+					<td>
+						?</td>
+					<td>
+						-Auth. Gospel<br />
+						-mean &quot;a gift of God.&quot;&nbsp;&nbsp;</td>
+					<td>
+						<a class="fathername">F:</a> Alpheus<br />
+						<a class="placename">L:</a> Capernaum</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						Jame the Lesser (Younger)<br />
+						小雅各</td>
+					<td>
+						0<br />
+						1</td>
+					<td>
+						0<br />
+						2</td>
+					<td>
+						0<br />
+						1</td>
+					<td>
+						-</td>
+					<td>
+						62</td>
+					<td>
+						-Auth. Epistle James<br />
+						-1st biship martyrdom第一位耶路撒冷主教&nbsp;</td>
+					<td colspan="1" rowspan="2">
+						<a class="fathername">F:</a>Alpheus亚勒腓 , Cleophas<br />
+						<a class="mothername">M:</a> Mary.<br />
+						<a class="placename">L:</a>&nbsp;Galilee</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						Judas,<br />
+						Thaddaeus,<br />
+						Lebbeus,&nbsp;<br />
+						猶大 
+						达太</td>
+					<td>
+						0<br />
+						1</td>
+					<td>
+						0<br />
+						1</td>
+					<td>
+						0<br />
+						1</td>
+					<td>
+						-</td>
+					<td>
+						70</td>
+					<td>
+						-called Judas the Zealot.<br />
+						-called Jude of James,<br />
+						-called Jude Thaddaeus,<br />
+						~?as Jude,&nbsp;brother of Jesus.<br />
+						~?brother of Matthew</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						Judas<br />
+						Iscariot<br />
+						加略人
+						猶大</td>
+					<td>
+						1<br />
+						7</td>
+					<td>
+						1<br />
+						4</td>
+					<td>
+						1<br />
+						2</td>
+					<td>
+						2<br />
+						10</td>
+					<td>
+						30</td>
+					<td>
+						-the betrator.<br />
+						-from Judah near Jericho.<br />
+						-only&nbsp;Judean&nbsp;&nbsp;noGalileans.</td>
+					<td>
+						<a class="fathername">F:</a> Simon西门<br />
+						<a class="mothername">M:</a> ?<br />
+						<a class="placename">L:</a> Kerioth of Judah</td>
+				</tr>
+			</tbody>
+		</table>
+		<div>
+			<a>  Up#:Mentioned by Jesus, Lo#:tot in book, F:father,M:mother,L:live,A:alias,C:career.R:religion,</a>
+		</div>
+			
+		<p>
+			<!------------------></p>
+		<p>
+			<!------------------><!------------------></p>
+		<p>
+			&nbsp;</p>
+		<div style="page-break-after: always;">
+			<span style="display: none;">&nbsp;</span></div>
+		<p>
+			&nbsp;</p>
+		<ol>
+			<li>
+				<strong>Andrew</strong> = Crucified on an X-shaped cross, 11/30,60AD</li>
+			<li>
+				<strong>Bartholomew</strong> or Nathanael = Flayed alive with knives, India, 8/24 >55</li>
+			<li>
+				<strong>James the elder</strong> = First apostle martyred, 44 AD.</li>
+			<li>
+				<strong>James the lesser</strong> = Sawn in pieces, died 62.</li>
+			<li>
+				<strong>John</strong> = Last died of natural causes on the isle of Patmos, 98AD</li>
+			<li>
+				<strong>Judas Iscariot</strong> = Hung himself, 30 AD</li>
+			<li>
+				<strong>Jude</strong> or Thaddeus = Killed with arrows, 10/28, 70 AD</li>
+			<li>
+				<strong>Matthew</strong> or Levi = Martyred in Ethiopia, died ?</li>
+			<li>
+				<strong>Peter</strong> = Crucified upside-down on a cross, 10/13, 64.</li>
+			<li>
+				<strong>Philip</strong> = Died by hanging, 80 AD</li>
+			<li>
+				<strong>Simon the Zealot</strong> = Died a martyrs death, ?</li>
+			<li>
+				<strong>Thomas</strong> = Killed with a spear. 72 </li>
+		</ol>
+		<p>
+			&nbsp;</p>
+			<ol>
+				<li>only the Judas Iscariot, betrator, is the Judean, all others are Galileans. Many disiples are close relatives of Jesus. Jesus, who was called the Nazarich, a Calilean too.</li>
+				
+				<li>The youngest apostle is John, son of Zebedee. He also died last. carer of Mary who is mother of Jesus. </li>
+				
+				<li>The name of discples are complicated either multiple names for one person, or duplicated names with others. It seems that the accurate person identification could not verified. 
+					<p>
+						The name for Judas Thaddaeus are most complicated. He has more than a dozen of possiblities. 
+					</p>
+				
+
+
+				As contrast, the name for Jesus are much more than all names of his disciples. However, name of Jesus is alway crystal clear. Behold on name of Jesus rather than anything else. The more we know disciples, the more we can know Jesus. Likewise, in order to know Jesus more, we need to know more about his disciples.</li>
+				<li>Peter is the only name Jesus gave to his disciple.</li>
+				<li>John is the only belove disciple. He wrote most books among disciples.</li>
+				<li>Before ascesion of Jesus, none of his disciples is the real one who is willing to die for HIM. But all disciples martyred except John who has specil mission. The Christians today are more like disciples before Ascension.</li>
+				<li>Synoptic mentioned 12 disciples. But John only mentioned 7. Five of disciples did not mention at all. </li>
+			</ol>
+		<p>
+			&nbsp;</p>
+		<p>
+			&nbsp;</p>
+		<p><a href="https://www.bibleinfo.com/en/questions/who-were-twelve-disciples">12 apostles martyr map.</a>
+			&nbsp;</p>
+		<p>
+			Andrew<br />
+			Andrew was the brother of Peter, and a son of Jonas. He lived in Bethsaida and Capernaum and was a fisherman before Jesus called him. Originally he was a disciple of John the Baptist (Mark 1:16-18). Andrew brought his brother, Peter, to Jesus (John 1:40). He is the first to have the title of Home and Foreign Missionary. He is claimed by three countries as their Patron Saint-Russia, Scotland and Greece. Many scholars say that he preached in Scythia, Greece and Asia Minor. Andrew introduced others to Jesus. Although circumstances placed him in a position where it would have been easy for him to become jealous and resentful, he was optimistic and well content in second place. His main purpose in life was to bring others to the master. According to tradition, it was in Achaia, Greece, in the town of Patra that Andrew died a martyr. When Governor Aepeas&#39; wife was healed and converted to the Christian faith, and shortly after that the Governor&#39;s brother became a Christian. Aepeas was enraged. He arrested Andrew and condemned him to die on the cross. Andrew, feeling unworthy to be crucified on the same-shaped cross as his Master, begged that his be different. So, he was crucified on an X-shaped cross, which is still called Saint Andrew&#39;s cross and which is one of his apostolic symbols. A symbol of two crossed fish has also been applied to Andrew, because he was formerly a fisherman.</p>
+	</body>
+</html>

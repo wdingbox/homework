@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Work</title>
+		<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+		<link href="sample.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="../adapters/jquery.js">    </script><script type="text/javascript" src="index.js">    </script><script type="text/javascript">	
+	$(document).ready(function(){	
+	
+	$("#btn1").click(function(){
+		var surl=$("#inp").val();
+		alert(surl);
+		$("#iFrameName1").attr("src",surl);
+		var t = $("#iFrameName1").contents().find("html").html();
+		alert(t);	
+	});/////$("#file").click(function(){})	
+	$("#btn2").click(function(){
+		var t = $("#iFrameName2").contents().find("html").html();
+		alert(t);	
+	});/////$("#file").click(function(){})
+	
+	});///////////////////////////////$(document).ready(function(){})    
+	</script><script type="text/javascript">
+function getContentFromIframe(iFrameName)
+{
+	
+	var myIFrame = document.getElementById(iFrameName);
+	
+	var content = $("#"+iFrameName).contents().find("html").html();
+	
+	//var content = myIFrame.contentWindow.document.body.innerHTML;
+	
+	alert('content: ' + content); 
+	
+	content = 'The inside of my frame has now changed';
+	myIFrame.contentWindow.document.body.innerHTML = content;
+	
+}
+	
+</script>
+	</head>
+	<body>
+		<p>
+			<input id="inp" size="89" style="width: 663px; height: 31px;" type="text" value="yahoo.com" /><br />
+			<button id="btn1">test1</button><button id="btn2">test2</button><br />
+			<iframe height="86px" id="iFrameName1" width="876px">&lt;p&gt;Your browser does not support iframes.&lt;/p&gt;</iframe><br />
+			<iframe height="84px" id="iFrameName2" src="http://plastron777.99k.org" width="875px">&lt;p&gt;Your browser does not support iframes.&lt;/p&gt;</iframe></p>
+	</body>
+</html>

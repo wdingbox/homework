@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta content="text/html; charset=gb2312" http-equiv="Content-Type" />
+		<meta content="width=device-witdh, initial-scale=1, maximum-scale=1, user-scale=0" name="viewport" />
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+           
+        <script language="javascript" src="js/RemoteCell.js"></script>
+        <script language="javascript" src="js/TableColRowMgr.js"></script>
+        <script language="javascript" src="js/WeekDateMgr.js"></script>
+
+<script>
+
+
+var remoteCell=new RemoteCell({dataDir:"../data/Rome_Study_Plan01/",svrDir:"../svr/"});
+var wdm = new WeekDateMgr(2015,0);
+
+$(document).ready(function(){
+TableColRowMgr.InsertColAfter($("table")[0],0);
+TableColRowMgr.InsertColAfter($("table")[0],0);
+var tdArr=[{irow:0,icol:1,txt:"Date",bgc:"#AABE3A"},{irow:0,icol:2,txt:"Name",bgc:"#AABE3A"},];
+TableColRowMgr.SetTD("table:eq(0)", tdArr);
+
+    Init_WeekDates(wdm);
+    Init_contenteditable(remoteCell);
+    //setInterval(Refresh_contenteditable, 3000);
+
+    RemoteCellEditSystem.init({EditUndoBtnId:"Edit_Undo",remoteCell:remoteCell});
+});
+
+
+function Init_WeekDates(wdm){
+
+ 
+    var SunArr = wdm.getArr_YYYY_MM_DD();
+    
+    $("table td").each(function(i){
+        var t=$(this).text();
+        if(t.length>0){
+            var ii=parseInt(t);
+            if(ii==t){
+                //$(this).addClass("orig");//css("background-color",'#eeefff');
+                var idx=38+ii;//start week of year
+                var dat=SunArr[idx];
+                $(this).next().text(dat);
+            }
+        }
+    });
+    
+    var cmg = wdm.FindComingWeekDate();
+    $("table td").each(function(i){
+        var txt=$(this).text();
+        txt=$.trim(txt);
+        if(txt==cmg.date){
+            var clr='yellow';
+            if(cmg.status=='now'){
+                clr='red';
+            }
+            $(this).css("background-color",clr);
+            
+            $(this)[0].scrollIntoView();
+        }
+    });        
+}
+function Init_contenteditable(remoteCell){
+    $("table tr").each(function(i){
+        if(i>0){
+            $(this).find("td:nth-child(3)").each(function(){
+                    var idx=$(this).prev().prev().text();
+                    idx=$.trim(idx);
+                    if(idx.length>0){
+                        var str=remoteCell.get(idx);
+                        str=$.trim(str);
+                        var id=$(this).attr("id");
+                        if(!id || id.length===0){
+                            var sipt="<div id='"+idx+"' value='"+str+"' contenteditable='true'></div>";
+                            $(this).html(sipt);
+                            $("#"+idx).text(str);
+                            //$(this).attr("contenteditable","true").css("background-color","#ddeeff").attr("id",idx).text(str);
+                            //console.log(sipt);
+                        }
+                    }
+ 
+            });
+        }
+    });
+}
+function Refresh_contenteditable(){
+    $("td[contenteditable='true']").each(function(i){
+        if($(this).is(':focus')==false){
+            var id=$(this).attr("id");
+            var str=remoteCell.get(id);
+            var old=$(this).text();
+            if( str ===old ){
+                //console.log("++++++++++++");
+                //$(this).css("background-color","#eeeeff");
+            }
+            else{
+                $(this).css("background-color","#ff0000");
+            }
+        }
+    });
+}
+
+
+
+
+</script>
+
+<style>
+
+button:disabled{
+ color:#cccccc;
+}
+#menu{
+    position: fixed;
+    top:10px;
+    right:10px;
+}
+div[contenteditable]{
+    background-color:#ffeedd;
+}
+div.dirt{
+    background-color:#ddffdd;
+}
+div.conflict{
+ background-color:#ff0000;
+}
+</style>
+
+	</head>
+	<body>
+    <div id='menu'>
+    <button id='Edit_Undo' EditID='' disabled='true'>Undo</button>
+    </div>
+    
+		<p>
+			&nbsp;</p>
+		<h1 class="entry-title">认识耶稣（12课）</h1>
+
+	    <div class="entry-content">
+		    <h6 align="center"></h6>
+<table border="1" cellpadding="2" cellspacing="2" width="95%">
+<tbody>
+<tr>
+<td align="center" bgcolor="#AABE3A" width="10%">进度</td>
+<td align="center" bgcolor="#AABE3A" width="75%">内<span style="font-family: 'Times New Roman'; font-size: medium;">&nbsp; </span>容<span style="font-family: 'Times New Roman'; font-size: medium;">&nbsp; </span>概<span style="font-family: 'Times New Roman'; font-size: medium;">&nbsp; </span>要</td>
+<td align="center" bgcolor="#AABE3A" width="15%">辅导资料</td>
+</tr>
+<tr>
+<td align="center"><b>1</b></td>
+<td>人生是什么? (诗 90:1-17 ；雅 4:13-17 )</td>
+<td align="center"><a href="http://www.lwechurch.org/files/GospelTopics/Series01_knowing_Jesus/EBS_1.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></td>
+</tr>
+<tr>
+<td align="center"><b>2</b></td>
+<td>罪的本質及后果 (罗 1:18-32)<span style="font-family: 'Times New Roman'; font-size: medium;">&nbsp;</span></td>
+<td align="center"><a href="http://www.lwechurch.org/files/GospelTopics/Series01_knowing_Jesus/EBS_2.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></td>
+</tr>
+<tr>
+<td align="center"><b>3</b></td>
+<td>耶稣─赦罪的主 (约 8:1-11)<span style="font-family: 'Times New Roman'; font-size: medium;">&nbsp;</span></td>
+<td align="center"><a href="http://www.lwechurch.org/files/GospelTopics/Series01_knowing_Jesus/EBS_3.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></td>
+</tr>
+<tr>
+<td align="center"><b>4</b></td>
+<td>耶稣─满有怜悯的主 (路 5:12-13 )<span style="font-family: 'Times New Roman'; font-size: medium;">&nbsp;</span></td>
+<td align="center"><a href="http://www.lwechurch.org/files/GospelTopics/Series01_knowing_Jesus/EBS_4.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></td>
+</tr>
+<tr>
+<td align="center"><b>5</b></td>
+<td>耶稣看人的价值 (可 5:1-20)<span style="font-family: 'Times New Roman'; font-size: medium;">&nbsp;</span></td>
+<td align="center"><a href="http://www.lwechurch.org/files/GospelTopics/Series01_knowing_Jesus/EBS_5.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></td>
+</tr>
+<tr>
+<td align="center"><b>6</b></td>
+<td>一位革命性的人物 (路 5:1-11)<span style="font-family: 'Times New Roman'; font-size: medium;">&nbsp;</span></td>
+<td align="center"><a href="http://www.lwechurch.org/files/GospelTopics/Series01_knowing_Jesus/EBS_6.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></td>
+</tr>
+<tr>
+<td align="center"><b>7</b></td>
+<td>耶稣─大自然的主宰 (可 4:35- 41)</td>
+<td align="center"><a href="http://www.lwechurch.org/files/GospelTopics/Series01_knowing_Jesus/EBS_7.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></td>
+</tr>
+<tr>
+<td align="center"><b>8</b></td>
+<td>耶稣─一位最伟大的医生 (可 5:21-34)</td>
+<td align="center"><a href="http://www.lwechurch.org/files/GospelTopics/Series01_knowing_Jesus/EBS_8.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></td>
+</tr>
+<tr>
+<td align="center"><b>9</b></td>
+<td>耶稣─胜过死亡的主 (约 11:1-44)</td>
+<td align="center"><a href="http://www.lwechurch.org/files/GospelTopics/Series01_knowing_Jesus/EBS_9.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></td>
+</tr>
+<tr>
+<td align="center"><b>10</b></td>
+<td>耶稣─为我们的过犯受死 (路 23:33-49)</td>
+<td align="center"><a href="http://www.lwechurch.org/files/GospelTopics/Series01_knowing_Jesus/EBS_10.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></td>
+</tr>
+<tr>
+<td align="center"><b>11</b></td>
+<td>耶稣─从死里复活的主 (路 24:1-12, 36-53 ；约 20:1-9)</td>
+<td align="center"><a href="http://www.lwechurch.org/files/GospelTopics/Series01_knowing_Jesus/EBS_11.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></td>
+</tr>
+<tr>
+<td align="center"><b>12</b></td>
+<td>主必再来 (帖前 4:13-4:18 ；太 24:30, 36-39 )</td>
+<td align="center"><a href="http://www.lwechurch.org/files/GospelTopics/Series01_knowing_Jesus/EBS_12.pdf"><img src="http://www.lwechurch.org/images/pdficon.jpg" alt="" height="20" border="0" width="20"></a></td>
+</tr>
+</tbody>
+</table>
+<p>用鼠标左键单击上表中的链接即可以在网上浏览讨论题和辅导资料，或用右键点击后下载。以上资料转引自“活水福音教会”网站，原地址：http://www.lwechurch.org/fellowship/SpecialTopics_Gospel.aspx</p>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

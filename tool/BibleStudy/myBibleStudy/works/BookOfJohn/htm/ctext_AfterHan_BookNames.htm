@@ -1,0 +1,285 @@
+<html>
+	<head>
+		<title onclick="alert();">ctxt</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!------->
+		<base target="_blank" />
+		<script src="../../../../../tablesorter_master/js/jquery.tablesorter.js"></script><script src="../../../../myjs/table_Indexer.js"></script><script src="../../../myjs/goto_editor.js"></script>
+		<style type="text/css">
+body {font-family: 'Times New Roman';
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+    }		
+#_MenuPanel{
+position: fixed;
+left: 10px;
+top: 0px;
+}
+
+.fixedcol{
+	position: absolute;
+	background-color: #999999;
+}
+.fixedcol2, thead{
+	background-color: #999999;
+}
+.fixedcol2{
+	background-color: #eeeeee;
+}
+.catlog{
+	background-color: #cccccc;
+}
+.strongs{
+	background-color: #ffffff;
+}
+.Top_Horz{
+	color: blue;
+}
+.All_Top_Horz{
+	background-color: red;
+}
+.leftbox{
+  background-color: #ff0000;
+}
+.tablefloatheb {float: right; margin: 2px;border-collapse: false;background-color: #eeeeee }
+.hebrew
+{
+    FONT-SIZE: 23px;
+    COLOR: #001320;
+    LINE-HEIGHT: 33px;
+    font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+    TEXT-DECORATION: none;
+}		</style>
+		<script>
+$(function(){
+   $(".narration").toggle();
+    $(".TheTitle").click(function(){
+        $(".narration").toggle();
+    } );
+    $("#strongsCodes").click(function(){
+    	$(".strongs, .translit").slideToggle();
+    });
+
+    $("body").click(function(){
+    	$("#_MenuPanel").slideToggle();
+    });
+
+    $("#relativeFrqRate").click(function(){
+    	cal_relativeFrqRate();
+    });
+
+
+    $(".fixedcol2").click(function(){
+    	alert();
+    });
+
+
+
+});/////////
+function exDate(dat){
+	var exg="前([0-9]{1,4})年";
+	var rgx=new RegExp(exg,"");
+	var ret = dat.match(rgx);
+	if(ret && ret.length>0){
+		return "-"+ret[1]+"";
+	}
+
+	exg="([0-9]{1,4})年";
+	rgx=new RegExp(exg,"");
+	ret = dat.match(rgx);
+	if(ret && ret.length>0){
+		return ""+ret[1]+"";
+	}
+	return ret;
+}
+
+
+$(function(){
+	var trs="",booknames="";
+    $(".etext").each(function(){
+    	var dtv='',dt=$(this).text();
+    	dtv=exDate(dt);
+    	var bk=$(this).prev().text();
+    	booknames += bk;
+    	var ref=$(this).prev().attr("href");
+    	if(ref && ref.length>0){
+    		var arr=ref.split("/");
+    		var hrf="<a href='http://www.ctext.org/"+ref+"'>"+ref+"</a>";
+    		trs+="<tr><td></td><td>"+bk+"</td><td>"+dtv+"</td><td>"+dt+"</td><td>"+hrf+"</td><td>"+arr[0]+"</td></tr>";    		
+    	}
+
+    });
+    $("#outx").val(booknames);
+    $("#ctb").append(trs);
+});/////////
+function exDate(dat){
+	var exg="前([0-9]{1,4})年";
+	var rgx=new RegExp(exg,"");
+	var ret = dat.match(rgx);
+	if(ret && ret.length>0){
+		return "-"+ret[1]+"";
+	}
+
+	exg="([0-9]{1,4})年";
+	rgx=new RegExp(exg,"");
+	ret = dat.match(rgx);
+	if(ret && ret.length>0){
+		return ""+ret[1]+"";
+	}
+	return ret;
+}
+
+
+
+$(document).ready(function(){ 
+	goto_editor("_edit_url");
+	sort_table();
+});//
+function sort_table(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+
+
+
+
+</script>
+	</head>
+	<body>
+		<p id="_MenuPanel">
+			<br />
+			<a id="_edit_url">...</a><br />
+			<a id="indxer">indxer</a><br />
+			<textarea id="outx"></textarea></p>
+		<!--------------------------><!-------------------------->
+		<table border="1">
+			<thead>
+				<tr>
+					<td>
+						#</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+					<td>
+						&nbsp;</td>
+				</tr>
+			</thead>
+			<tbody id="ctb">
+			</tbody>
+		</table>
+		<!-------------------------->
+		<p>
+			&nbsp;</p>
+		<div id="content3">
+							<h2>
+								漢代之後</h2>
+	
+			<div id="comm89488">
+				&nbsp;</div>
+			<div id="rhsbar">
+				<div class="optrhsbox">
+					<span style="float: right;">]</span></div>
+			</div>
+			　<a href="wei-jin-and-north-south/zh">魏晉南北朝</a><br />
+			　　<a href="dao-de-zhen-jing-zhu/zh">道德真經註</a> <span class="etext opt"><b> [三國 (220年 - 265年)] 王弼著</b></span><br />
+			　　<a href="shi-shuo-xin-yu/zh">世說新語</a> <span class="etext opt"><b> [南北朝 (420年 - 581年)] 劉義慶著</b></span><br />
+			　　<a href="yan-shi-jia-xun/zh">顏氏家訓</a> <span class="etext opt"><b> [南北朝 (420年 - 581年)] 顏之推著</b></span><br />
+			　　<a href="wenxin-diaolong/zh">文心雕龍</a> <span class="etext opt"><b> [南北朝] 485年-540年</b></span><br />
+			　　<a href="baopuzi/zh">抱朴子</a> <span class="etext opt"><b> [晉] 300年-343年</b></span><br />
+			　　<a href="renwuzhi/zh">人物志</a> <span class="etext opt"><b> [東漢 - 三國] 190年-249年</b></span><br />
+			　　<a href="jinlouzi/zh">金樓子</a> <span class="etext opt"><b> [南北朝] 554年</b></span><br />
+			　　<a href="shui-jing-zhu/zh">水經注</a><br />
+			　　<a href="shen-xian-zhuan/zh">神仙傳</a><br />
+			　　<a href="sanguozhi/zh">三國志</a> <span class="etext opt"><b> [西晉] 265年-300年</b></span><br />
+			　　<a href="gaoshizhuan/zh">高士傳</a><br />
+			　　<a href="shenyijing/zh">神異經</a><br />
+			　　<a href="dongmingji/zh">洞冥記</a><br />
+			<br />
+			　<a href="sui-tang/zh">隋唐</a><br />
+			　　<a href="qunshu-zhiyao/zh">群書治要</a> <span class="etext opt"><b> [唐] 631年</b></span><br />
+			　　<a href="yiwen-leiju/zh">藝文類聚</a> <span class="etext opt"><b> [唐] 624年</b></span><br />
+			　　<a href="tongdian/zh">通典</a> <span class="etext opt"><b> [唐] 801年 杜佑著</b></span><br />
+			　　<a href="yilin/zh">意林</a> <span class="etext opt"><b> [唐] 770年-800年</b></span><br />
+			　　<a href="yinfujing/zh">黃帝陰符經</a> <span class="etext opt"><b> [唐] 700年-750年</b></span><br />
+			<br />
+			　<a href="song-ming/zh">宋明</a><br />
+			　　<a href="si-shu-zhang-ju-ji-zhu/zh">四書章句集注</a> <span class="etext opt"><b> [南宋] 1150年-1200年 朱熹著</b></span><br />
+			　　<a href="three-character-classic/zh">三字經</a>
+			<div style="display: inline-block; zoom: 1; *display: inline;'">
+				<a class="sprite-discuss" href="discuss.pl?if=gb&amp;bookid=90563" title="相關討論">相關討論</a>
+				<div style="display: inline;">
+					&nbsp;</div>
+			</div>
+			<br />
+			　　<a href="lunyu-zhushu/zh">論語注疏</a> <span class="etext opt"><b> [北宋 (960年 - 1127年)]</b></span><br />
+			　　<a href="xiyouji/zh">西遊記</a> <span class="etext opt"><b> [明] 1520年-1580年</b></span><br />
+			　　<a href="sanguo-yanyi/zh">三國演義</a> <span class="etext opt"><b> [明] 1350年-1400年</b></span><br />
+			　　<a href="jinpingmei/zh">金瓶梅</a>
+			<div style="display: inline-block; zoom: 1; *display: inline;'">
+				<a class="sprite-discuss" href="discuss.pl?if=gb&amp;bookid=100830" title="相關討論">相關討論</a>
+				<div style="display: inline;">
+					&nbsp;</div>
+			</div>
+			<span class="etext opt"><b>[明] 1590年-1610年</b></span><br />
+			　　<a href="fengshen-yanyi/zh">封神演義</a> <span class="etext opt"><b> [明] 1520年-1560年</b></span><br />
+			　　<a href="guangyun/zh">廣韻</a> <span class="etext opt"><b> [北宋] 1007年-1008年</b></span><br />
+			　　<a href="xiaojing-zhushu/zh">孝經注疏</a> <span class="etext opt"><b> [北宋 (960年 - 1127年)]</b></span><br />
+			　　<a href="taiping-yulan/zh">太平御覽</a> <span class="etext opt"><b> [北宋] 977年-984年</b></span><br />
+			　　<a href="taiping-guangji/zh">太平廣記</a>
+			<div style="display: inline-block; zoom: 1; *display: inline;'">
+				<a class="sprite-discuss" href="discuss.pl?if=gb&amp;bookid=570777" title="相關討論">相關討論</a>
+				<div style="display: inline;">
+					&nbsp;</div>
+			</div>
+			<span class="etext opt"><b>[北宋] 977年-984年</b></span><br />
+			　　<a href="zhuzi-yulei/zh">朱子語類</a> <span class="etext opt"><b> [金] 1270年</b></span><br />
+			　　<a href="yingwengong/zh">宋景文公筆記</a> <span class="etext opt"><b> [北宋] 1061年</b></span><br />
+			　　<a href="qijing/zh">棋經</a> <span class="etext opt"><b> [北宋] 1010年-1063年</b></span><br />
+			　　<a href="yulizi/zh">郁離子</a> <span class="etext opt"><b> [明] 1375年</b></span><br />
+			<br />
+			　<a href="qing/zh">清代</a><br />
+			　　<a href="mozi-jiangu/zh">墨子閒詁</a>
+			<div style="display: inline-block; zoom: 1; *display: inline;'">
+				<a class="sprite-discuss" href="discuss.pl?if=gb&amp;bookid=10473" title="相關討論">相關討論</a>
+				<div style="display: inline;">
+					&nbsp;</div>
+			</div>
+			<span class="etext opt"><b>[清] 1893年 孫詒讓著</b></span><br />
+			　　<a href="hongloumeng/zh">紅樓夢</a> <span class="etext opt"><b> [清] 1780年-1792年</b></span><br />
+			　　<a href="quantangshi/zh">全唐詩</a>
+			<div style="display: inline-block; zoom: 1; *display: inline;'">
+				<a class="sprite-discuss" href="discuss.pl?if=gb&amp;bookid=108540" title="相關討論">相關討論</a>
+				<div style="display: inline;">
+					&nbsp;</div>
+			</div>
+			<span class="etext opt"><b>[清] 1705年</b></span><br />
+			　　<a href="kangxi-zidian/zh">康熙字典</a> <span class="etext opt"><b> [清] 1710年-1716年</b></span><br />
+			　　<a href="rulin-waishi/zh">儒林外史</a> <span class="etext opt"><b> [清] 1750年</b></span><br />
+			<br />
+			　<a href="republican-era/zh">民國</a><br />
+			　　<a href="mo-jing-jiao-shi/zh">墨經校釋</a> <span class="etext opt"><b> [民國] 1936年 梁啟超著</b></span><br />
+			<br />
+			
+		</div>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>
