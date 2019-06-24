@@ -1,0 +1,270 @@
+<html>
+	<head>
+		<title onclick="alert();">ctxt</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!------->
+		<base target="_blank" />
+		<script src="../../../../../tablesorter_master/js/jquery.tablesorter.js"></script><script src="../../../myjs/table_Indexer.js"></script><script src="../../../myjs/goto_editor.js"></script>
+		<style type="text/css">
+body {font-family: 'Times New Roman';
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+    }		
+#_MenuPanel{
+position: fixed;
+left: 10px;
+top: 0px;
+}
+
+.fixedcol{
+	position: absolute;
+	background-color: #999999;
+}
+.fixedcol2, thead{
+	background-color: #999999;
+}
+.fixedcol2{
+	background-color: #eeeeee;
+}
+.catlog{
+	background-color: #cccccc;
+}
+.strongs{
+	background-color: #ffffff;
+}
+.Top_Horz{
+	color: blue;
+}
+.All_Top_Horz{
+	background-color: red;
+}
+.leftbox{
+  background-color: #ff0000;
+}
+.tablefloatheb {float: right; margin: 2px;border-collapse: false;background-color: #eeeeee }
+.hebrew
+{
+    FONT-SIZE: 23px;
+    COLOR: #001320;
+    LINE-HEIGHT: 33px;
+    font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+    TEXT-DECORATION: none;
+}		</style>
+		<script>
+
+$(function(){
+	var trs="",booknames="", bookrefsArr=[];
+    $(".etext").each(function(){
+    	var dtv='',dt=$(this).text();
+    	dtv=exDate(dt);
+    	var bk=$(this).prev().text();
+    	booknames+=bk;
+    	var ref=$(this).prev().attr("href");
+    	var arr=ref.split("/");
+    	var url='http://www.ctext.org/"+ref+"';
+    	bookrefsArr.push(ref);
+
+    	var hrf="<a href='http://www.ctext.org/"+ref+"'>"+ref+"</a>";
+    	trs+="<tr><td></td><td>"+bk+"</td><td>"+dtv+"</td><td>"+dt+"</td><td>"+hrf+"</td><td>"+arr[0]+"</td></tr>";
+    });
+    $("#outx").val(booknames + "\n"+ JSON.stringify(bookrefsArr,null,4));
+    $("#ctb").append(trs);
+});/////////
+function exDate(dat){
+	var exg="前([0-9]{1,4})年";
+	var rgx=new RegExp(exg,"");
+	var ret = dat.match(rgx);
+	if(ret && ret.length>0){
+		return "-"+ret[1]+"";
+	}
+
+	exg="([0-9]{1,4})年";
+	rgx=new RegExp(exg,"");
+	ret = dat.match(rgx);
+	if(ret && ret.length>0){
+		return ""+ret[1]+"";
+	}
+	return ret;
+}
+$(document).ready(function(){ 
+	goto_editor("_edit_url");
+	sort_table();
+});//
+function sort_table(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+
+
+</script>
+	</head>
+	<body>
+		<p id="_MenuPanel">
+			<br />
+			<a id="_edit_url">...</a><br />
+			<a id="indxer">indxer</a><br>
+			<textarea id="outx"></textarea>
+		</p>
+		<!--------------------------><!-------------------------->
+		<table border="1">
+			<thead><tr>
+				<td>#</td><td></td><td></td><td></td><td></td><td></td>
+			</tr></thead>
+			<tbody id="ctb"></tbody>
+		</table>
+		<!-------------------------->
+		<p>
+			《先秦兩漢》</p>
+		<div id="content3">
+			<div id="comm3925">
+				&nbsp;</div>
+			　<a href="confucianism/zh">儒家</a><br />
+			　　<a href="analects/zh">論語</a> <span class="etext opt"><b> [春秋 - 戰國] 公元前480年-公元前350年</b></span><br />
+			　　<a href="mengzi/zh">孟子</a> <span class="etext opt"><b> [戰國] 公元前340年-公元前250年</b></span><br />
+			　　<a href="liji/zh">禮記</a> <span class="etext opt"><b> [戰國 (公元前475年 - 公元前221年)]</b></span><br />
+			　　<a href="xunzi/zh">荀子</a> <span class="etext opt"><b>[戰國 (公元前475年 - 公元前221年)]</b></span><br />
+			　　<a href="xiao-jing/zh">孝經</a> <span class="etext opt"><b> [戰國 (公元前475年 - 公元前221年)]</b></span><br />
+			　　<a href="shuo-yuan/zh">說苑</a> <span class="etext opt"><b> [西漢 (公元前206年 - 9年)] 劉向著</b></span><br />
+			　　<a href="chun-qiu-fan-lu/zh">春秋繁露</a> <span class="etext opt"><b>[西漢 (公元前206年 - 9年)] 董仲舒著</b></span><br />
+			　　<a href="han-shi-wai-zhuan/zh">韓詩外傳</a> <span class="etext opt"><b> [西漢] 公元前180年-公元前120年</b></span><br />
+			　　<a href="da-dai-li-ji/zh">大戴禮記</a> <span class="etext opt"><b> [東漢] 100年-200年</b></span><br />
+			　　<a href="bai-hu-tong/zh">白虎通德論</a> <span class="etext opt"><b> [東漢] 79年-92年 班固著</b></span><br />
+			　　<a href="xin-shu/zh">新書</a> <span class="etext opt"><b> [西漢 (公元前206年 - 9年)] 賈誼著</b></span><br />
+			　　<a href="xin-xu/zh">新序</a> <span class="etext opt"><b> [西漢 (公元前206年 - 9年)] 劉向著</b></span><br />
+			　　<a href="yangzi-fayan/zh">揚子法言</a> <span class="etext opt"><b> [西漢 - 新] 公元前33年-18年 揚雄著</b></span><br />
+			　　<a href="zhong-lun/zh">中論</a> <span class="etext opt"><b> [東漢 (25年 - 220年)] 徐幹著</b></span><br />
+			　　<a href="kongzi-jiayu/zh">孔子家語</a> <span class="etext opt"><b>[漢 (公元前206年 - 220年)]</b></span><br />
+			　　<a href="qian-fu-lun/zh">潛夫論</a> <span class="etext opt"><b> [東漢] 102年-167年 王符著</b></span><br />
+			　　<a href="lunheng/zh">論衡</a> <span class="etext opt"><b>[東漢] 80年 王充著</b></span><br />
+			　　<a href="taixuanjing/zh">太玄經</a> <span class="etext opt"><b>[東漢] 公元前33年-18年 揚雄著</b></span><br />
+			　　<a href="fengsutongyi/zh">風俗通義</a> <span class="etext opt"><b> [東漢] 190年-200年</b></span><br />
+			　　<a href="kongcongzi/zh">孔叢子</a> <span class="etext opt"><b> [東漢 - 三國 (25年 - 265年)]</b></span><br />
+			　　<a href="shenjian/zh">申鑒</a> <span class="etext opt"><b> [東漢] 196年-220年</b></span><br />
+			　　<a href="zhong-jing/zh">忠經</a><span class="etext opt"><b> [unknown]</b></span><br />
+			　　<a href="su-shu/zh">素書</a><span class="etext opt"><b> [unknown]</b></span><br />
+			　　<a href="xinyu/zh">新語</a> <span class="etext opt"><b>[西漢] 公元前196年</b></span><br />
+			　　<a href="duduan/zh">獨斷</a> <span class="etext opt"><b> [東漢 - 三國] 167年-258年</b></span><br />
+			　　<a href="caizhong-langji/zh">蔡中郎集</a> <span class="etext opt"><b> [東漢] 152年-192年</b></span><br />
+			<br />
+			　<a href="mohism/zh">墨家</a><br />
+			　　<a href="mozi/zh">墨子</a> <span class="etext opt"><b> [春秋 - 戰國] 公元前490年-公元前221年</b></span><br />
+			　　<a href="mo-bian-zhu-xu/zh">魯勝墨辯注敘</a> <span class="etext opt"><b> [西晉 (265年 - 317年)] 魯勝著</b></span><br />
+			<br />
+			　<a href="daoism/zh">道家</a><br />
+			　　<a href="zhuangzi/zh">莊子</a> <span class="etext opt"><b> [戰國] 公元前350年-公元前250年</b></span><br />
+			　　<a href="dao-de-jing/zh">道德經</a> <span class="etext opt"><b>[戰國 (公元前475年 - 公元前221年)]</b></span><br />
+			　　<a href="liezi/zh">列子</a> <span class="etext opt"><b> [戰國 (公元前475年 - 公元前221年)]</b></span><br />
+			　　<a href="he-guan-zi/zh">鶡冠子</a> <span class="etext opt"><b> [戰國 (公元前475年 - 公元前221年)]</b></span><br />
+			　　<a href="wenzi/zh">文子</a><span class="etext opt"><b>[東漢 - 晉] 212年-231年</b></span><br />
+			　　<a href="wenshi-zhenjing/zh">文始真經</a><span class="etext opt"><b> [unknown]</b></span><br />
+			<br />
+			　　<a href="lie-xian-zhuan/zh">列仙傳</a> <span class="etext opt"><b> [西漢] 公元前50年-8年</b></span><br />
+			　　<a href="yuzi/zh">鬻子</a><span class="etext opt"><b> [unknown]</b></span><br />
+			　　<a href="heshanggong/zh">老子河上公章句</a><span class="etext opt"><b> [unknown]</b></span><br />
+			<br />
+			　<a href="legalism/zh">法家</a><br />
+			　　<a href="hanfeizi/zh">韓非子</a> <span class="etext opt"><b> [戰國 (公元前475年 - 公元前221年)]</b></span><br />
+			　　<a href="shang-jun-shu/zh">商君書</a> <span class="etext opt"><b> [戰國 (公元前475年 - 公元前221年)]</b></span><br />
+			　　<a href="shen-bu-hai/zh">申不害</a><span class="etext opt"><b> [unknown]</b></span><br />
+			　　<a href="shenzi/zh">慎子</a> <span class="etext opt"><b> [戰國 (公元前475年 - 公元前221年)] 慎到著</b></span><br />
+			　　<a href="jian-zhu-ke-shu/zh">諫逐客書</a> <span class="etext opt"><b> [戰國] 公元前237年 李斯著</b></span><br />
+			　　<a href="guanzi/zh">管子</a> <span class="etext opt"><b>[戰國 - 漢 (公元前475年 - 220年)]</b></span><br />
+			<br />
+			　<a href="school-of-names/zh">名家</a><br />
+			　　<a href="gongsunlongzi/zh">公孫龍子</a> <span class="etext opt"><b> [戰國 (公元前475年 - 公元前221年)]</b></span><br />
+			<br />
+			　<a href="school-of-the-military/zh">兵家</a><br />
+			　　<a href="art-of-war/zh">孫子兵法</a> <span class="etext opt"><b> [春秋] 公元前515年-公元前512年 孫武著</b></span><br />
+			　　<a href="wu-zi/zh">吳子</a> <span class="etext opt"><b> [戰國 (公元前475年 - 公元前221年)] 吳起著</b></span><br />
+			　　<a href="liu-tao/zh">六韜</a> <span class="etext opt"><b> [戰國 (公元前475年 - 公元前221年)]</b></span><br />
+			　　<a href="si-ma-fa/zh">司馬法</a> <span class="etext opt"><b> [春秋 - 戰國 (公元前772年 - 公元前221年)]</b></span><br />
+			　　<a href="wei-liao-zi/zh">尉繚子</a> <span class="etext opt"><b> [戰國 (公元前475年 - 公元前221年)]</b></span><br />
+			　　<a href="three-strategies/zh">三略</a> <span class="etext opt"><b> [西漢] 公元前100年-9年</b></span><br />
+			<br />
+			　<a href="mathematics/zh">算書</a><br />
+			　　<a href="hai-dao-suan-jing/zh">海島算經</a> <span class="etext opt"><b> [三國] 263年</b></span><br />
+			　　<a href="nine-chapters/zh">九章算術</a> <span class="etext opt"><b> [西漢 - 新] 公元前120年-20年</b></span><br />
+			　　<a href="sunzi-suan-jing/zh">孫子算經</a> <span class="etext opt"><b> [南北朝 (420年 - 581年)]</b></span><br />
+			　　<a href="zhou-bi-suan-jing/zh">周髀算經</a> <span class="etext opt"><b> [漢] 公元前50年-100年</b></span><br />
+			<br />
+			　<a href="miscellaneous-schools/zh">雜家</a><br />
+			　　<a href="huainanzi/zh">淮南子</a> <span class="etext opt"><b> [西漢 (公元前206年 - 9年)]</b></span><br />
+			　　<a href="lv-shi-chun-qiu/zh">呂氏春秋</a> <span class="etext opt"><b>[戰國] 公元前247年-公元前239年 呂不韋著</b></span><br />
+			　　<a href="gui-gu-zi/zh">鬼谷子</a> <span class="etext opt"><b> [戰國 (公元前475年 - 公元前221年)]</b></span><br />
+			　　<a href="yin-wen-zi/zh">尹文子</a><span class="etext opt"><b> [unknown]</b></span><br />
+			　　<a href="deng-xi-zi/zh">鄧析子</a><span class="etext opt"><b> [unknown]</b></span><br />
+			<br />
+			　<a href="histories/zh">史書</a><br />
+			　　<a href="shiji/zh">史記</a> <span class="etext opt"><b> [西漢] 公元前109年-公元前91年 司馬遷著</b></span><br />
+			　　<a href="chun-qiu-zuo-zhuan/zh">春秋左傳</a> <span class="etext opt"><b> [戰國] 公元前468年-公元前300年</b></span><br />
+			　　<a href="lost-book-of-zhou/zh">逸周書</a> <span class="etext opt"><b>[戰國 (公元前475年 - 公元前221年)]</b></span><br />
+			　　<a href="guo-yu/zh">國語</a> <span class="etext opt"><b>[戰國 (公元前475年 - 公元前221年)]</b></span><br />
+			　　<a href="yanzi-chun-qiu/zh">晏子春秋</a> <span class="etext opt"><b> [戰國 (公元前475年 - 公元前221年)]</b></span><br />
+			　　<a href="wu-yue-chun-qiu/zh">吳越春秋</a> <span class="etext opt"><b> [東漢] 50年-100年</b></span><br />
+			　　<a href="yue-jue-shu/zh">越絕書</a> <span class="etext opt"><b> [東漢] 50年-70年</b></span><br />
+			　　<a href="zhan-guo-ce/zh">戰國策</a> <span class="etext opt"><b> [戰國 - 西漢] 公元前350年-公元前6年</b></span><br />
+			　　<a href="yan-tie-lun/zh">鹽鐵論</a> <span class="etext opt"><b>[西漢] 公元前81年-9年 桓寬著</b></span><br />
+			　　<a href="lie-nv-zhuan/zh">列女傳</a> <span class="etext opt"><b> [西漢 (公元前206年 - 9年)] 劉向著</b></span><br />
+			　　<a href="guliang-zhuan/zh">春秋穀梁傳</a> <span class="etext opt"><b>[西漢 (公元前206年 - 9年)]</b></span><br />
+			　　<a href="gongyang-zhuan/zh">春秋公羊傳</a> <span class="etext opt"><b> [西漢 (公元前206年 - 9年)]</b></span><br />
+			　　<a href="han-shu/zh">漢書</a> <span class="etext opt"><b> [新 - 東漢] 36年-111年</b></span><br />
+			　　<a href="qian-han-ji/zh">前漢紀</a> <span class="etext opt"><b> [東漢] 198年-200年</b></span><br />
+			　　<a href="dong-guan-han-ji/zh">東觀漢記</a> <span class="etext opt"><b> [東漢] 60年-160年</b></span><br />
+			　　<a href="hou-han-shu/zh">後漢書</a> <span class="etext opt"><b> [南北朝] 420年-445年</b></span><br />
+			　　<a href="zhushu-jinian/zh">竹書紀年</a> <span class="etext opt"><b> [戰國 (公元前475年 - 公元前221年)]</b></span><br />
+			　　<a href="mutianzi-zhuan/zh">穆天子傳</a> <span class="etext opt"><b> [戰國] 公元前370年-公元前330年</b></span><br />
+			　　<a href="gu-san-fen/zh">古三墳</a><span class="etext opt"><b>[漢 (公元前206年 - 220年)]</b></span><br />
+			　　<a href="yandanzi/zh">燕丹子</a> <span class="etext opt"><b>[unknown]</b></span><br />
+			　　<a href="xijing-zaji/zh">西京雜記</a><span class="etext opt"><b>[unknown]</b></span><br />
+			<br />
+			　<a href="ancient-classics/zh">經典文獻</a><br />
+			　　<a href="book-of-poetry/zh">詩經</a> <span class="etext opt"><b>[西周 (公元前1046年 - 公元前771年)]</b></span><br />
+			　　<a href="shang-shu/zh">尚書</a> <span class="etext opt"><b> [春秋 (公元前772年 - 公元前476年)]</b></span><br />
+			　　<a href="book-of-changes/zh">周易</a> <span class="etext opt"><b>[西周 (公元前1046年 - 公元前771年)]</b></span><br />
+			　　<a href="rites-of-zhou/zh">周禮</a> <span class="etext opt"><b>[戰國] 公元前300年-公元前100年</b></span><br />
+			　　<a href="chu-ci/zh">楚辭</a> <span class="etext opt"><b>[戰國 (公元前475年 - 公元前221年)]</b></span><br />
+			　　<a href="yili/zh">儀禮</a> <span class="etext opt"><b> [戰國 (公元前475年 - 公元前221年)]</b></span><br />
+			　　<a href="shan-hai-jing/zh">山海經</a> <span class="etext opt"><b>[戰國 - 漢 (公元前475年 - 220年)]</b></span><br />
+			　　<a href="jiaoshi-yilin/zh">焦氏易林</a> <span class="etext opt"><b> [漢 (公元前206年 - 220年)] 焦延壽著</b></span><br />
+			　　<a href="jingshi-yizhuan/zh">京氏易傳</a> <span class="etext opt"><b> [西漢] 公元前57年-公元前37年 京房著</b></span><br />
+			　　<a href="shishuo/zh">詩說</a> <span class="etext opt"><b> [unknown]</b></span><br />
+			<br />
+			　<a href="etymology/zh">字書</a><br />
+			　　<a href="shuo-wen-jie-zi/zh">說文解字</a> <span class="etext opt"><b>[東漢] 100年-121年 許慎著</b></span><br />
+			　　<a href="er-ya/zh">爾雅</a> <span class="etext opt"><b> [秦 - 西漢 (公元前221年 - 9年)]</b></span><br />
+			　　<a href="shi-ming/zh">釋名</a> <span class="etext opt"><b> [東漢] 190年-210年</b></span><br />
+			　　<a href="fang-yan/zh">方言</a> <span class="etext opt"><b> [西漢 (公元前206年 - 9年)] 楊雄著</b></span><br />
+			　　<a href="jijiupian/zh">急就篇</a> <span class="etext opt"><b> [西漢] 公元前48年-公元前33年</b></span><br />
+			<br />
+			　<a href="chinese-medicine/zh">醫學</a><br />
+			　　<a href="huangdi-neijing/zh">黃帝內經</a> <span class="etext opt"><b> [戰國 - 西漢 (公元前475年 - 9年)]</b></span><br />
+			　　<a href="nan-jing/zh">難經</a> <span class="etext opt"><b> [漢 (公元前206年 - 220年)]</b></span><br />
+			　　<a href="shang-han-lun/zh">傷寒論</a> <span class="etext opt"><b> [東漢 (25年 - 220年)]</b></span><br />
+			　　<a href="jinkui-yaolue/zh">金匱要略</a> <span class="etext opt"><b>[東漢] 170年-219年</b></span><br />
+			<br />
+			　<a href="excavated-texts/zh">出土文獻</a><br />
+			　　<a href="guodian/zh">郭店</a> <span class="etext opt"><b> [unknown]</b></span><br />
+			　　<a href="mawangdui/zh">馬王堆</a> <span class="etext opt"><b> [unknown]</b></span><br />
+			<br />
+			<div style="margin-right: 10px;">
+				&nbsp;</div>
+			<div style="width: 100%; clear: both;">
+				&nbsp;</div>
+		</div>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

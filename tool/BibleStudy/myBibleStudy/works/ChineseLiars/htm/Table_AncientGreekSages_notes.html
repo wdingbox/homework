@@ -1,0 +1,425 @@
+<html>
+	<head>
+		<title onclick="alert();">ctxt</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!------->
+		<base target="_blank" />
+		<script src="../../../../../tablesorter_master/js/jquery.tablesorter.js"></script>
+		<script src="../../../myjs/table_Indexer.js"></script>
+		<script src="../../../myjs/goto_editor.js"></script>
+		<style type="text/css">
+body {font-family: 'Times New Roman';
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+    }		
+#_MenuPanel{
+position: fixed;
+left: 10px;
+top: 0px;
+}
+
+.fixedcol{
+	position: absolute;
+	background-color: #999999;
+}
+.fixedcol2, thead{
+	background-color: #999999;
+}
+.fixedcol2{
+	background-color: #eeeeee;
+}
+.catlog, .hili{
+	background-color: #cccccc;
+}
+.logos{
+	background-color: #ff0000;
+}
+.logosv{
+	background-color: #eeaa66;
+}
+.logosw{
+	background-color: #aaaaee;
+}
+.logoswv{
+	background-color: #77aaaa;
+}
+.display_none{
+	display: none;
+}
+.logosvc{
+	background-color: #aa77aa;
+}
+.logov{
+	background-color: #aa77aa;
+}
+.dao{
+	color: #0000ff;
+}
+.All_Top_Horz{
+	background-color: red;
+}
+.leftbox{
+  background-color: #ff0000;
+}
+.tablefloatheb {float: right; margin: 2px;border-collapse: false;background-color: #eeeeee }
+.hebrew
+{
+    FONT-SIZE: 23px;
+    COLOR: #001320;
+    LINE-HEIGHT: 33px;
+    font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+    TEXT-DECORATION: none;
+}		</style>
+	</head>
+	<script>
+$(function(){
+    $(".narration").toggle();
+    $(".TheTitle").click(function(){
+        $(".narration").toggle();
+    } );
+    $("#strongsCodes").click(function(){
+    	$(".strongs, .translit").slideToggle();
+    });
+
+    $("body").click(function(){
+    	$(".disprint").slideToggle();
+    });
+
+    $("#relativeFrqRate").click(function(){
+    	cal_relativeFrqRate();
+    });
+
+
+    $(".fixedcol2").click(function(){
+    	alert();
+    });
+
+    $("td").click(function(){
+    	var out=$("#out").val();
+    	out+=$(this).text().trim()+";";
+    	$("#out").val(out);
+    	$(this).toggleClass("hili");
+    });
+
+});/////////
+
+$(document).ready(function(){ 
+	goto_editor("_edit_url");
+	sort_table();
+});//
+function sort_table(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+
+
+</script>
+	<body>
+		<p id="_MenuPanel">
+			<br />
+			<a id="_edit_url">...</a><br />
+			<a id="indxer">indxer</a><br />
+			<textarea id="out" style="margin: 0px; width: 220px; height: 161px;"></textarea></p>
+		<!-------------------------->
+		<div>
+			&nbsp;</div>
+		<!-------------------------->
+		<div>
+			&nbsp;</div>
+		<!-------------------------->
+		<center>
+			<font size="3"><b>History Notes</b></font></center>
+		<!-------------------------->
+		<p>
+			<b>Palestine</b></p>
+		<p>
+			Timeline of the history of the region of Palestine Palestine cognate from Hebrew Philistine which means migrate/invade. David defeat Golia who is Philistine. Palestine was first used by Heroditus (-423 BC), the father of the history for graco-Persian war. Gaza (means strong) is a city in Palestine.</p>
+		<p>
+			<b>722 BC and 586 BC</b></p>
+		<p>
+			
+		</p>
+		<p>
+			These two years not only are the significant remarks for the down of Israelites but also had significant impact on every corner of the world.</p>
+		<p>
+			God called Abraham among nations in order to prepare Jesus. To call Abraham in order to save all people of the world. Since God call Abraham out of Ur, God took care of Israelites all the times until after 586 BC.
+		</p>
+
+		<table border="1">
+			<thead>
+				<tr>
+					<td>
+						#</td>
+					<td>
+						For Israelites, it was the day of</td>
+					<td>
+						Pagans</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						1</td>
+					<td>
+						lamentations (悲傷)</td>
+					<td>
+						拍掌,嗤笑,搖頭(Lam 2:15)</td>
+				</tr>
+				<tr>
+					<td>
+						2</td>
+					<td>
+						wrath of God.(主憤怒的日子)</td>
+					<td>
+						Revenge: 大張口,嗤笑,切齒,吞滅(2:16)</td>
+				</tr>
+				<tr>
+					<td>
+						3</td>
+					<td>
+						retribution of sin (罪孽的刑罰)</td>
+					<td>
+						誇耀,敵人的角被高舉(2:17)</td>
+				</tr>
+				<tr>
+					<td>
+						5</td>
+					<td>
+						repent (悔改)</td>
+					<td>
+						experience was good</td>
+				</tr>				
+				<tr>
+					<td>
+						6</td>
+					<td>
+						hope (盼望) started</td>
+					<td>
+						hope has come (2:16)</td>
+				</tr>
+
+				
+				<tr>
+					<td>
+						4</td>
+					<td>
+						prayer God for mercy (憐憫)</td>
+					<td>
+						no more pray but rely own wisdom.</td>
+				</tr>
+
+				<tr>
+					<td>
+						7</td>
+					<td>
+						self-introspection (內省)</td>
+					<td>
+						no more worship but use intelligence.</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			While Israelites became captivity and were exiled in his darkest history, it was after that time when the pagan sages suddenly thrived over the world right after 586 BC. Such sharp contrast is not coincident at all.
+		</p>
+		<p>
+			On the one hand, the great destruction of Jerusalem and great exiles made it well known all over the world. It was through the well-known that the Israelites would be grestestly insulted due to his sins. At the same times, the attention of people all over the world could be paid for the coming event. The fall of Israeltes is far beyond a nation's up and down. The whole world was brought into the darkest in history.  
+		</p>
+		<p>
+			1:12 你 們 一 切 過 路 的 人 哪 ， 這 事 你 們 不 介 意 麼 ？ 你 們 要 觀 看 ： 有 像 這 臨 到 我 的 痛 苦 沒 有 ─ 就 是 耶 和 華 在 他 發 烈 怒 的 日 子 使 我 所 受 的 苦 ？
+		</p>		
+		<p>
+			3:14a 我 成 了 眾 民 的 笑 話 ；
+			2:15 凡 過 路 的 都 向 你 拍 掌 。 他 們 向 耶 路 撒 冷 城 嗤 笑 ， 搖 頭 ， 說 ： 難 道 人 所 稱 為 全 美 的 ， 稱 為 全 地 所 喜 悅 的 ， 就 是 這 城 嗎 ？ 
+		</p>
+		<p>
+			3:8 我 哀 號 求 救 ； 他 使 我 的 禱 告 不 得 上 達 。
+		</p>		
+		<p>
+			On the other hand, while people all over the world laughed at Israelites, they could not help thinking: does god what they worshipped exist? Israelites were selected and mostly beloved by God. If they had such fate, then how about others? The miserable fate of Israelites more or less led them to give up thier gods to liberate themselves from the legend ritualism and broke out a new era world-widely. Many people stood out to become the famous sages. For examples, Heraclitus (赫拉克利特) of Ephesus (535-475 BC), Socrate(470-399 BC),Plato (428/427-348/347 BC) and Aristotle(384-322 BC), LaoZi (600?-500 BC), KongZi(551-479 B.C), Siddhartha Gautama Buddha(563/480 &ndash; 483/400 BC), etc. They became the masters superior over Israelites, and affecting until today.
+		</p>
+		<p>
+			1:5a 她 的 敵 人 為 首 ； 她 的 仇 敵 亨 通 ；
+			3:46 我 們 的 仇 敵 都 向 我 們 大 大 張 口 。
+			2:16 你 的 仇 敵 都 向 你 大 大 張 口 ； 他 們 嗤 笑 ， 又 切 齒 說 ： 我 們 吞 滅 她 。 這 真 是 我 們 所 盼 望 的 日 子 臨 到 了 ！ 我 們 親 眼 看 見 了 ！
+
+
+			1:17b 他 傾 覆 了 ， 並 不 顧 惜 ， 使 你 的 仇 敵 向 你 誇 耀 ； 使 你 敵 人 的 角 也 被 高 舉 。
+
+			4:19 追 趕 我 們 的 比 空 中 的 鷹 更 快 ； 他 們 在 山 上 追 逼 我 們 ， 在 曠 野 埋 伏 ， 等 候 我 們 。
+		</p>
+		<p>
+			The suddenly emerge of a lot of world first class of sages in Greek, India and China was not coinicident but the effect of the fall of Israelites. The human beings as a race in unit from beginning are spiritually connected all the time. The geographical territory, political system, linguistic and cultural differences cannot fully cut their spiritual relationship among them. Internally they all were loved and cared by one God all the time. 
+		</p>
+		<p>
+			Although there many sages with different schools and thougts, they are common in that they do not worship any god, even they still affected by their divine thoughts. They are the followers but the commentators for the god. they are above the god. 
+		</p>
+		<p>
+			The etymological root for the word atheism originated before the 5th century BCE from the ancient Greek ἄθεος (atheos), meaning "without god(s)".
+		</p>
+		<p>
+			Diagoras of Melos (5th century BC): Ancient Greek poet and sophist known as the Atheist of Milos, who declared that there were no Gods. Denis Diderot (1713–84): editor-in-chief of the Encyclopédie. Theodore Drange (1934–): Philosopher of religion and Professor Emeritus at West Virginia University.
+
+		</p>
+		<p>
+			The time when Israelites, as the axise of the human civilization since Abraham, were perplexed 困惑, is also the time when whole human race lost their hope. Before Jesus came, the period of within about four hundreds years was the darkest period for human race in history--no prophets,no priests, no kings--no word from God. It was around this deadly silent period human beings began to turn all kinds of religious ritualism into science. 
+		</p>
+		<p>
+			Although their thougts were creative and attractive, and affected until today and no one can surpass them, the crisp ideaolgies that ancient sages proposed are not the ultimate answers but the crying and screaming flushed out from internal spiritual heart in the dark. All they did is nothing in essense but seeking and expecting--the inate human reflection to struggle to survive in the deadly silent world. Their reflecton in darkest period still affect all who was still in the dark for today--they keep struggling for the endless hunger regardless the fact that the darkness is already over. The new rainbow is already in heaven, the light is shineing in the world.</p>
+		<p>
+			&nbsp;</p>
+		<p>
+			Jesus is the light of the world. He is the only gate to exit the dark. Those who found HIM is to find the way. To find HIM is to find the truth, to get HIM is to get the eternal life. Those who accepted HIM no longer to struggle in whirlpoot, and they had restored the lost relationship with God.</p>
+		<p>
+			Gospel of John is not only the proclaimation of salvation for the whole human race in whole history but also specific for this darkest period. After Jesus came, people either accept HIM to get life or refuse HIM to keep seeking and expecting in the dark. No more new greater philosphists or thoughts ever appeared in history. &quot;No one is like HIM.&quot;, &quot;No one can compare with HIM&quot; He is the only son of God.</p>
+		<p>
+			<b>Heraclitus (赫拉克利特) of Ephesus (535-475 BC)</b></p>
+		<p>
+			生于以弗所一个贵族家庭，相传他生性忧郁，被称为「哭的哲学人」（Weeping Philosopher）。</p>
+		<p>
+			他本来应该继承王位，但是他将王位让给了他的兄弟，自己跑到女神阿尔忒弥斯庙附近隐居起来。据说，波斯国王大流士曾经写信邀请他去波斯宫廷教导希腊文化。赫拉克利特傲慢地拒绝了。他说：&ldquo;因为我有一种对显赫的恐惧，我不能到波斯去，我满足于我的心灵既有的渺小的东西。&rdquo;</p>
+		<p>
+			一则轶事说，他整天和小孩玩骰子。他对围观的人说：&ldquo;你们这般无赖，有什么值得大惊小怪的！难道这不比你们参加的政治活动更好吗？&rdquo;</p>
+		<p>
+			有人问他为什么保持沉默，他回答说：&ldquo;为什么？好让你们去唠叨！&rdquo;这些轶事虽然不完全可信，但是它们表明希腊哲学家已经开始脱离公共事务。</p>
+		<p>
+			作为藐视人者，他几乎没有朋友。他在晚年又隐居起来，只靠野菜和水维持生命，不和任何人往来。</p>
+		<p>
+			女人: 赫拉克利特平日避免和女人接触，在他的作品中也只是提到，女人始终处于和男人的斗争之中。这是很多斗争中的一个。世界就是在这样一些斗争中产生的。</p>
+		<p>
+			著述:<br />
+			他的文章只留下片段，富有隐喻,爱用悖论，晦涩难懂. (Dao)致使后世的解释纷纭，被后人称做「晦涩者」（The Obscure）。 赫拉克利特写过一部总称为《论自然》的书，内容有&ldquo;论万物&rdquo;、&ldquo;论政治&rdquo;和&ldquo;论神灵&rdquo;三部分。可惜这部书没有保存下来，我们现在看到的只是130多个残篇，它们是从不同时期的著作中摘录出来的。残篇的语言多形象比喻，内容是深奥的辩证法，读起来十分困难，赫拉克利特因此得到&ldquo;晦涩哲人&rdquo;的称号。<a href="https://en.wikisource.org/wiki/Fragments_of_Heraclitus">Fragments of Heraclitus</a></p>
+		<p>
+			在古希腊哲学中，人们常常争论的一个命题就是&ldquo;世界的本原&rdquo;。 赫拉克利特继承了 米利都学派(泰勒斯 Thales) 的传统，将其归诸为,火是万物的本原。万物由火而产生，又复归于火，而这种活动是有一定&ldquo;分寸&rdquo;，也即是遵循一定规律的(Logos). 28. There is exchange of all things for fire and of fire for all things, as there is of wares for gold and of gold for wares. 29. This universe, which is the same for all, has not been made by any god or man, but it always has been is, and will be an ever-living fire, kindling itself by regular measures and going out by regular measures. 他认为世界既非神也非人创造，它是一团永恒的火. 他所说的&ldquo;火&rdquo;是指燃烧着的火焰 (life) 。由于火的变化，产生了世界万物。这是个不断&ldquo;燃烧，熄灭，再燃烧，再熄灭&rdquo;的永恒流逝转化的过程。整个宇宙就处于不断流逝、不断运动的过程中，总有着新的世界在产生，旧的世界在灭亡。赫拉克利特这一思想，不用超自然的神，而以自然界本身的物质去寻求世界万物的本原，用一种形态的物质来说明千变万化、五彩缤纷的世界，也体现了他试图从多样性中寻求统一性的思想，这是人类认识史上的一大飞跃. 列宁评价这个思想&ldquo;是对辩证唯物主义原则的绝妙的说明&rdquo;。What he said is amazing. But what it can help me about the eternal life?</p>
+		<p>
+			赫拉克利特还提出了&quot;万物皆流，无物常住&quot;的变动观，强调了事物发展变化的绝对性和永恒性。他对辩证法的最大贡献是提出矛盾的双方相互依赖、相互斗争和相互转化的思想，即对立统一思想。他强调矛盾的斗争性，认为斗争是普遍的、绝对的。赫拉克利特还提出一切都遵循着逻各斯的思想，即一切都遵循着规律。他认为逻各斯是人人所共有的，它不仅是客观世界的规律，也支配着人的主观世界。因此智慧在于驾驭逻各斯，即认识把握事物的规律。赫拉克利特的思想在哲学史上产生极其深远的影响。是后世所有辩证法思想的源泉。</p>
+		<p>
+			断言&ldquo;人不能两次踏进同一条河流,流向你的永远是不同的水。&rdquo;，&ldquo;我们存在而又不存在&rdquo;。认为事物的运动变化是按一定的规律进行的，并把这种规律称为&ldquo;逻各斯&rdquo; Logos。提出对立面统一和斗争的思想，认为任何事物都包含着两个对立面。指出对立面是相互依存、相互转化的；重视对立面的斗争，把它看成是万物生成变化的根源，认为&ldquo;一切都是通过斗争和必然性而产生的&rdquo;。但他的辩证法是朴素的、自发的，并带有循环论的色彩。</p>
+		<p>
+			赫拉克利特曾说过：&ldquo;我研究了我自己。&rdquo;这就是说，他的认知并不是一个自然科学家的的事业（尽管他的书称为《论自然》），而是一个把目光对准自己内心的人的事业。由于他成功地排除了其他人的外部干扰，把自己封闭起来，他才有可能潜入到灵魂的深处。那里的个性的区别已不存在，人与人越来越相似。那是一种人的本性真正存在的地方。因而，我们在赫拉克利特那里可以感觉到&mdash;&mdash; 尽管他很阴暗和晦涩&mdash;&mdash; 一种深刻的灵魂亲近感。他的&ldquo;一切皆流&rdquo;，我们只能赞同，并不是因为它引导我们去进行什么思考(it is not the way truth or life but the same feeling about the perplex of life. 而是因为这句话对我们是如此的亲切。 It is only a tempory comfort by sharing the one with same feeling.</p>
+		<p>
+			<b>米利都 Miletus 学派</b></p>
+		<p>
+			米利都学派是前苏格拉底哲学的一个学派，被誉为是西方哲学的开创者，由古希腊学者泰勒斯创建。 米利都学派开创了理性思维，试图用观测到的事实而不是用古代的希腊神话来解释世界。 米利都学派的学者大多出身于古希腊伊奥尼亚地区的海港城市米利都 Miletus, south of Ephesus，著名的哲学家有泰勒斯(Thales、泰勒斯的学生阿那克西曼德、阿那克西美尼等。</p>
+		<p>
+			米利都学派的研究范围主要集中在万物的本源。泰勒斯(Thales)的观点是万物本源于水，而阿那克西曼德(<a href="/wiki/Anaximander" style="font-size: medium;" title="Anaximander">Anaximander</a>&nbsp;<a href="/wiki/Anaximenes_of_Miletus" style="font-size: medium;" title="Anaximenes of Miletus">of Miletus</a>)认为是无限者(希腊语:ἀ&pi;&epsilon;ί&rho;&omega;&nu;) 。阿那克西美尼(<a href="/wiki/Anaximenes_of_Miletus" style="font-size: medium;" title="Anaximenes of Miletus">Anaximenes of Miletus</a>)认为世界的本源是氣體，不同形式的物质是通过气体聚和散的过程产生的。</p>
+		<p>
+			<b><a href="">Thales (624-546 BC)</a></b></p>
+		<p>
+			<b>Anaximander of Miletus </b> (c. 610 - 546 B.C.) was an early Pre-Socratic philosopher from the Greek city of Miletus in Ionia (modern-day Turkey). He was a key figure in the Milesian School, as a student of Thales and teacher of Anaximenes and Pythagoras.</p>
+		<p>
+			<b>Anaximenes of Miletus</b> (/ˌ&aelig;n&aelig;kˈsɪməˌniːz/; Greek: Ἀ&nu;&alpha;&xi;&iota;&mu;έ&nu;&eta;&sigmaf; ὁ &Mu;&iota;&lambda;ή&sigma;&iota;&omicron;&sigmaf;; c.&thinsp;586 &ndash; c.&thinsp;526 BC) was an Ancient Greek Pre-Socraticphilosopher active in the latter half of the 6th century BC.[1][2]</p>
+		<p>
+			&nbsp;</p>
+		<p>
+			&nbsp;</p>
+		<p>
+			<b>Philo of Alexandria</b> Ancient Greek,20 BC -50 AD. also called Philo Judaeus Hellenistic Jewish,philosopher,Alexandria,Roman province of Egypt. Philo&#39;s view of God:</p>
+		<p>
+			Philo used philosophical allegory to harmonize Jewish scripture, mainly the Torah, with Greek philosophy. His method followed the practices of both Jewish exegesis and Stoic philosophy. His allegorical exegesis was important for some Christian Church Fathers, but he had very little reception history within the Rabbinic Judaism.[1] He adopted allegorical instead of literal interpretations of the Hebrew Bible.</p>
+		<p>
+			Some scholars hold that his concept of the Logos as God&#39;s creative principle influenced early Christology. Other scholars deny direct influence but say that Philo and Early Christianity borrow from a common source.[2]</p>
+		<p>
+			The only event in Philo&#39;s life that can be decisively dated is his participation in the embassy to Rome in 40 CE. He represented the Alexandrian Jews in a delegation to the Roman Emperor Gaius (Caligula) following civil strife between the Alexandrian Jewish and Greek communities. The story of this event, and a few other biographical details, are found in Josephus[3] and in Philo&#39;s own works, especially in Legatio ad Gaium (Embassy to Gaius) of which only two of the original five volumes survive.[4].</p>
+		<p>
+			Philo&#39;s View of God</p>
+		<p>
+			In brief: Philo affirms a transcendent God without physical features or emotional qualities resembling those of human beings. In Philo, God exists beyond time and space and does not make special interventions into the world because He already encompasses the entire cosmos.</p>
+		<p>
+			Philo&#39;s notion is even more abstract than that of the Monad of Pythagoras or the Good of Plato. Only God&rsquo;s existence is certain, no appropriate predicates can be conceived. Following Plato, Philo equates matter to nothingness and sees its effect in fallacy, discord, damage, and decay of things. This view enables Philo to combine the Jewish belief in creation with the Greek conviction about the formation of all things from the permanent matter.</p>
+		<p>
+			Philo&#39;s view of Logos</p>
+		<p>
+			Philo wrote that God created and governed the world through mediators. Logos is the chief among them, the next to God, demiurge of the world. Logos is immaterial, an adequate image of God, his shadow, his firstborn son.[26] Being the mind of the Eternal, Logos is imperishable.[27] He is neither uncreated as God is, nor created as men are, but occupies a middle position. He has no autonomous power, only an entrusted one.[28]</p>
+		<p>
+			Philo probably was the first philosopher who identified Plato&rsquo;s Ideas with Creator&rsquo;s thoughts. These thoughts make the contents of Logos; they were the seals for making sensual things during world creation.[29] Logos resembles a book with creature paradigms.[30] Architect&rsquo;s design before the construction of a city serves to Philo as another simile of Logos.[31] Since creation, Logos binds things together.[32] As the receptacle and holder of ideas, Logos is distinct from the material world. At the same time, Logos pervades the world, supporting it.[33]</p>
+		<p>
+			Logos has the function of an advocate on behalf of humanity and also that of a God&rsquo;s envoy to the world.[34] He puts human minds in order.[35] The right reason is an infallible law, the source of any other laws.[36] The angel closing Balaam&rsquo;s way (Numbers XXII, 31) is interpreted by Philo as manifestation of Logos, which acts as man&rsquo;s conscience.[37]</p>
+		<p>
+			<b>Stoicism</b></p>
+		<p>
+			founder is Zeno of Citium in Athens (334-262 BC) in the early 3rd century BC. Stoicism laid great emphasis on goodness and peace of mind gained from living a life of Virtue in accordance with Nature.</p>
+		<p>
+			Zeno is described as a haggard, dark-skinned person,[7] living a spare, ascetic life[8] despite his wealth.</p>
+		<p>
+			<b>Greek poet Homer </b></p>
+		<p>
+			was born sometime between the 12th and 8th centuries BC, possibly somewhere on the coast of Asia Minor. He is famous for the epic poems The Iliad and The Odyssey, which have had an enormous effect on Western culture, but very little is known about their alleged author.</p>
+		<p>
+			Author Says a Whole Culture&mdash;Not a Single &#39;Homer&#39;&mdash;Wrote &#39;Iliad,&#39; &#39;Odyssey&#39; Dating to about 750 B.C., this bust is said to be of the Greek poet Homer, author of The Iliad and The Odyssey&mdash;epic poems passed down orally by bards long before they were written down.</p>
+		<p>
+			&nbsp;</p>
+		<ol>
+			It sounds attracting and ineresting. But
+			<li>
+				It is from the will of man. it is baseless.</li>
+			<li>
+				It is useless for our eternal life.</li>
+			<li>
+				Human brain is used to know/serve/love God. It mislead people to know what should not know. It is evil. Just like porn for children.</li>
+			<li>
+				Heraclitus affect Socrate, who was the teacher of Plato, who was the teacher of Aristitle, who is the teacher of the Alexsandra Great, the King, who was the practioner of the Greek Phylosogy. Alexsandria&#39;s sudden death at 32 years old remarks the failure of the Greek thoughts.</li>
+			<li>
+				Heraclitus judge god and spirit. Being above God, He denied the creation of God.</li>
+			<li>
+				Logos was considered as super to replace legend concept of god. Logos is understandable through observation. He misled people to explore the nature by eyes and expeiriences.</li>
+			<li>
+				To level up logos is to glory Heraclitus indirectly.&nbsp;</li>
+			<li>
+				His thoughts was the result of fall of Israelites 722 BC and 586 BC. 耶利米哀歌 Lamentations&nbsp; 2:15 凡過路的都向你拍掌。他們向耶路撒冷城嗤笑，搖頭，說：難道人所稱為全美的，稱為全地所喜悅的，就是這城嗎？<br />
+				All who pass your way<br style="box-sizing: border-box; font-family: &quot;Helvetica Neue&quot;, Verdana, Helvetica, Arial, sans-serif;" />
+				<span class="indent-1" style="box-sizing: border-box; -webkit-font-smoothing: antialiased; font-family: &quot;Helvetica Neue&quot;, Verdana, Helvetica, Arial, sans-serif;"><span class="indent-1-breaks" style="box-sizing: border-box; -webkit-font-smoothing: antialiased; font-family: monospace; font-size: 0.42em; line-height: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text Lam-2-15" style="box-sizing: border-box; -webkit-font-smoothing: antialiased; position: relative;">clap their hands at you;</span></span><br style="box-sizing: border-box; font-family: &quot;Helvetica Neue&quot;, Verdana, Helvetica, Arial, sans-serif;" />
+				<span class="text Lam-2-15" style="box-sizing: border-box; -webkit-font-smoothing: antialiased; position: relative; font-family: &quot;Helvetica Neue&quot;, Verdana, Helvetica, Arial, sans-serif;">they scoff&nbsp;and shake their heads</span><br style="box-sizing: border-box; font-family: &quot;Helvetica Neue&quot;, Verdana, Helvetica, Arial, sans-serif;" />
+				<span class="indent-1" style="box-sizing: border-box; -webkit-font-smoothing: antialiased; font-family: &quot;Helvetica Neue&quot;, Verdana, Helvetica, Arial, sans-serif;"><span class="indent-1-breaks" style="box-sizing: border-box; -webkit-font-smoothing: antialiased; font-family: monospace; font-size: 0.42em; line-height: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text Lam-2-15" style="box-sizing: border-box; -webkit-font-smoothing: antialiased; position: relative;">at Daughter Jerusalem:</span></span><br style="box-sizing: border-box; font-family: &quot;Helvetica Neue&quot;, Verdana, Helvetica, Arial, sans-serif;" />
+				<span class="text Lam-2-15" style="box-sizing: border-box; -webkit-font-smoothing: antialiased; position: relative; font-family: &quot;Helvetica Neue&quot;, Verdana, Helvetica, Arial, sans-serif;">&ldquo;Is this the city that was called</span><br style="box-sizing: border-box; font-family: &quot;Helvetica Neue&quot;, Verdana, Helvetica, Arial, sans-serif;" />
+				<span class="indent-1" style="box-sizing: border-box; -webkit-font-smoothing: antialiased; font-family: &quot;Helvetica Neue&quot;, Verdana, Helvetica, Arial, sans-serif;"><span class="indent-1-breaks" style="box-sizing: border-box; -webkit-font-smoothing: antialiased; font-family: monospace; font-size: 0.42em; line-height: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text Lam-2-15" style="box-sizing: border-box; -webkit-font-smoothing: antialiased; position: relative;">the perfection of beauty,</span></span><br style="box-sizing: border-box; font-family: &quot;Helvetica Neue&quot;, Verdana, Helvetica, Arial, sans-serif;" />
+				<span class="indent-1" style="box-sizing: border-box; -webkit-font-smoothing: antialiased; font-family: &quot;Helvetica Neue&quot;, Verdana, Helvetica, Arial, sans-serif;"><span class="indent-1-breaks" style="box-sizing: border-box; -webkit-font-smoothing: antialiased; font-family: monospace; font-size: 0.42em; line-height: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text Lam-2-15" style="box-sizing: border-box; -webkit-font-smoothing: antialiased; position: relative;">the joy of the whole earth?&rdquo;</span></span></li>
+			<li>
+				John did not criticized the concept of Logos, but draw it back to God through Jesus Christ. To open eyes to behold Jesus rather than the nature which is effect of serpant.&nbsp;&nbsp;</li>
+			<li>
+				The concept of Logos in Greek sages is same as Dao in China.</li>
+		</ol>
+		<p>
+			&nbsp;</p>
+		<p>
+			<a href="http://users.humboldt.edu/jwpowell/heraclitusTransBillHarris.pdf">On Nature</a></p>
+		<ol>
+			<li>
+				Logos: 1-19</li>
+			<li>
+				Continuum: 20-27</li>
+			<li>
+				Nature: 28-41</li>
+			<li>
+				Spirit: 42-60</li>
+			<li>
+				Divine: 61-78</li>
+			<li>
+				Consel: 80-97</li>
+			<li>
+				Paradoxical Universe: 98-125</li>
+		</ol>
+		<p>
+			&nbsp;</p>
+		<p>
+			<a href="http://www.lifeissues.net/writers/gro/gro_042heraclitus.html">The Heraclitus-Jesus Connection</a></p>
+		<div style="page-break-after: always;">
+			<span style="display: none;">&nbsp;</span></div>
+		<p>
+			&nbsp;</p>
+		<p>
+			end</p>
+	</body>
+</html>

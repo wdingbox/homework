@@ -1,0 +1,403 @@
+<html>
+	<head>
+		<title onclick="alert();">ctxt</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!------->
+		<base target="_blank" />
+		<script src="../../../../../tablesorter_master/js/jquery.tablesorter.js"></script>
+		<script src="../../../myjs/table_Indexer.js"></script>
+		<script src="../../../myjs/goto_editor.js"></script>
+		<script src="Table_Logos_Rhema_Dao_dat.js"></script>
+		<style type="text/css">
+body {font-family: 'Times New Roman';
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+    }		
+#_MenuPanel{
+position: fixed;
+left: 10px;
+top: 0px;
+}
+
+.fixedcol{
+	position: absolute;
+	background-color: #999999;
+}
+.fixedcol2, thead{
+	background-color: #999999;
+}
+.fixedcol2{
+	background-color: #eeeeee;
+}
+.catlog, .hili{
+	background-color: #cccccc;
+}
+.logos{
+	background-color: #ff0000;
+}
+.logosv{
+	background-color: #eeaa66;
+}
+.logosw{
+	background-color: #aaaaee;
+}
+.logoswv{
+	background-color: #77aaaa;
+}
+.logosvc{
+	background-color: #aa77aa;
+}
+.logov{
+	background-color: #aa77aa;
+}
+.dao{
+	color: #0000ff;
+}
+.All_Top_Horz{
+	background-color: red;
+}
+.leftbox{
+  background-color: #ff0000;
+}
+.tablefloatheb {float: right; margin: 2px;border-collapse: false;background-color: #eeeeee }
+.rhema{
+	
+	border: 1px solid red;
+}
+.hebrew
+{
+    FONT-SIZE: 23px;
+    COLOR: #001320;
+    LINE-HEIGHT: 33px;
+    font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+    TEXT-DECORATION: none;
+}		</style>
+	</head>
+	<script>
+$(function(){
+    $(".narration").toggle();
+    $(".TheTitle").click(function(){
+        $(".narration").toggle();
+    } );
+    $("#strongsCodes").click(function(){
+    	$(".strongs, .translit").slideToggle();
+    });
+
+
+
+    $("#relativeFrqRate").click(function(){
+    	cal_relativeFrqRate();
+    });
+
+
+    $(".fixedcol2").click(function(){
+    	alert();
+    });
+
+    $("td").click(function(){
+    	var out=$("#out").val();
+    	out+=$(this).text().trim()+";";
+    	$("#out").val(out);
+    	$(this).toggleClass("hili");
+    });
+
+    $("#view").append(tbdy_trs());
+
+});/////////
+
+$(document).ready(function(){ 
+	goto_editor("_edit_url");
+	sort_table();
+});//
+function sort_table(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+
+$(function(){
+	var sja=[ {},{},{} ];
+	$("#table_view tbody").find("tr").each(function(){
+		var vse=$(this).find("td:eq(1)").text().trim();
+		$(this).find("td:eq(4)").find("p").each(function(i){
+			sja[i][vse]=($(this).html().trim());
+		})
+	});
+
+	$("#out").val("sj="+JSON.stringify(sja,null,4));
+
+})
+</script>
+	<body>
+		<p id="_MenuPanelx">
+			<br />
+			<a id="_edit_url">...</a><br />
+			<a id="indxer">indxer</a><br />
+			<textarea id="out"></textarea></p>
+		<!-------------------------->
+		<div>
+			&nbsp;</div>
+		<!-------------------------->
+		<div>
+			&nbsp;</div>
+		<!-------------------------->
+		<p style="text-align: center;">
+			<font size="3"><b>The Word</b></font><br />
+			&nbsp;</p>
+		<!-------------------------->
+		<div>
+			&nbsp;</div>
+		<table border="1" class="style3" id="table_view">
+			<caption>
+				Logos Comparison Between NIV and CUV</caption>
+			<thead id="thead_view_18640383">
+				<tr>
+					<th class="centerCell unboldCell tableCell firstCell ">
+						#</th>
+					<th class="centerCell unboldCell tableCell firstCell ">
+						<div>
+							Jhn</div>
+					</th>
+					<th class="centerCell boldCell tableCell  ">
+						Gre</th>
+					<th class="centerCell boldCell tableCell  ">
+						Chn</th>
+					<th class="centerCell boldCell tableCell  ">
+						NIV</th>
+				</tr>
+			</thead>
+			<tbody id="view">
+			</tbody>
+		</table>
+	
+
+		<p>
+			--</p>
+		<div style="page-break-after: always;">
+			<span style="display: none;">&nbsp;</span></div>
+		<div style="page-break-after: always;">
+			&nbsp;</div>
+		<table border="1">
+			<caption>
+				The Seven Capital &quot;the Word&quot; in NIV</caption>
+			<thead>
+				<tr>
+					<td>
+						#</td>
+					<td>
+						Sayings</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						1</td>
+					<td>
+						Jhn 1:1 In the beginning was<span style="color:#ff0000;"> the Word</span>, and <span style="color:#ff0000;">the Word</span> was with God, and<span style="color:#ff0000;"> the Word</span> was God.<br />
+						John 1:1 太 初 有 <span style="color:#ff0000;"><a class='dao'>道</a></span> ， <span style="color:#ff0000;"><a class='dao'>道</a></span> 與 神 同 在 ， <span style="color:#ff0000;"><a class='dao'>道</a></span> 就 是 神 。</td>
+				</tr>
+				<tr>
+					<td>
+						2</td>
+					<td>
+						Jhn 1:14 <span style="color:#ff0000;">The Word</span> became flesh and made his dwelling among us. We have seen his glory, the glory of the One and Only, who came from the Father, full of grace and truth.<br />
+						John 1:14 <span style="color:#ff0000;"><a class='dao'>道</a></span> 成 了 肉 身 ， 住 在 我 們 中 間 ， 充 充 滿 滿 的 有 恩 典 有 真 理 。 我 們 也 見 過 他 的 榮 光 ， 正 是 父 獨 生 子 的 榮 光 。</td>
+				</tr>
+				<tr>
+					<td>
+						3</td>
+					<td>
+						2Ti 4:2 Preach <span style="color:#ff0000;">the Word</span>; be prepared in season and out of season; correct, rebuke and encourage -- with great patience and careful instruction.<br />
+						務 要 傳 <span style="color:#ff0000;"><a class='dao'>道</a></span> ， 無 論 得 時 不 得 時 ， 總 要 專 心 ； 並 用 百 般 的 忍 耐 ， 各 樣 的 教 訓 ， 責 備 人 、 警 戒 人 、 勸 勉 人 。</td>
+				</tr>
+				<tr>
+					<td>
+						4</td>
+					<td>
+						1Jn 1:1 That which was from the beginning, which we have heard, which we have seen with our eyes, which we have looked at and our hands have touched-- this we proclaim concerning <span style="color:#ff0000;">the Word</span> of life.<br />
+						1John 1:1 論 到 從 起 初 原 有 的 生 命 之 <span style="color:#ff0000;"><a class='dao'>道</a></span> ， 就 是 我 們 所 聽 見 、 所 看 見 、 親 眼 看 過 、 親 手 摸 過 的 。</td>
+				</tr>
+				<tr>
+					<td>
+						5</td>
+					<td>
+						Rev 19:13 He is dressed in a robe dipped in blood, and his name is <span style="color:#ff0000;">the Word</span> of God.<br />
+						Rev 19:13他 穿 著 濺 了 血 的 衣 服 ； 他 的 名 稱 為 神 之 <span style="color:#ff0000;"><a class='dao'>道</a></span></td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			-</p>
+		<div style="page-break-after: always;">
+			<span style="display: none;">&nbsp;</span></div>
+
+	<table class="rtNavSearchResults" id="ovTable">
+		<caption>G3056 λόγος Logos</caption>
+
+
+		<tbody><tr><td><a href="?Strongs=G3056&amp;t=KJV&amp;bn=40#lexResults" id="yui-gen70">Mat (30)</a></td><td id="yui-gen84"><a href="?Strongs=G3056&amp;t=KJV&amp;bn=41#lexResults" id="yui-gen83">Mar (23)</a></td><td id="yui-gen82"><a href="?Strongs=G3056&amp;t=KJV&amp;bn=42#lexResults" id="yui-gen81">Luk (33)</a></td><td id="yui-gen80"><a href="?Strongs=G3056&amp;t=KJV&amp;bn=43#lexResults" id="yui-gen79">Jhn (36)</a></td></tr><tr><td id="yui-gen71"><a href="?Strongs=G3056&amp;t=KJV&amp;bn=44#lexResults" id="yui-gen72">Act (64)</a></td><td id="yui-gen73"><a href="?Strongs=G3056&amp;t=KJV&amp;bn=45#lexResults" id="yui-gen74">Rom (7)</a></td><td id="yui-gen75"><a href="?Strongs=G3056&amp;t=KJV&amp;bn=46#lexResults" id="yui-gen76">1Co (14)</a></td><td id="yui-gen77"><a href="?Strongs=G3056&amp;t=KJV&amp;bn=47#lexResults" id="yui-gen78">2Co (9)</a></td></tr><tr><td><a href="?Strongs=G3056&amp;t=KJV&amp;bn=48#lexResults">Gal (2)</a></td><td><a href="?Strongs=G3056&amp;t=KJV&amp;bn=49#lexResults">Eph (4)</a></td><td><a href="?Strongs=G3056&amp;t=KJV&amp;bn=50#lexResults">Phl (4)</a></td><td id="yui-gen100"><a href="?Strongs=G3056&amp;t=KJV&amp;bn=51#lexResults" id="yui-gen99">Col (7)</a></td></tr><tr><td><a href="?Strongs=G3056&amp;t=KJV&amp;bn=52#lexResults" id="yui-gen50">1Th (7)</a></td><td><a href="?Strongs=G3056&amp;t=KJV&amp;bn=53#lexResults">2Th (5)</a></td><td><a href="?Strongs=G3056&amp;t=KJV&amp;bn=54#lexResults">1Ti (8)</a></td><td id="yui-gen98"><a href="?Strongs=G3056&amp;t=KJV&amp;bn=55#lexResults" id="yui-gen97">2Ti (7)</a></td></tr><tr><td><a href="?Strongs=G3056&amp;t=KJV&amp;bn=56#lexResults" id="yui-gen49">Tit (5)</a></td><td id="yui-gen47"><a href="?Strongs=G3056&amp;t=KJV&amp;bn=58#lexResults" id="yui-gen46">Heb (12)</a></td><td id="yui-gen45"><a href="?Strongs=G3056&amp;t=KJV&amp;bn=59#lexResults" id="yui-gen44">Jas (5)</a></td><td id="yui-gen96"><a href="?Strongs=G3056&amp;t=KJV&amp;bn=60#lexResults">1Pe (5)</a></td></tr><tr><td><a href="?Strongs=G3056&amp;t=KJV&amp;bn=61#lexResults">2Pe (4)</a></td><td id="yui-gen48"><a href="?Strongs=G3056&amp;t=KJV&amp;bn=62#lexResults" id="yui-gen40">1Jo (7)</a></td><td id="yui-gen41"><a href="?Strongs=G3056&amp;t=KJV&amp;bn=64#lexResults" id="yui-gen39">3Jo (1)</a></td><td id="yui-gen42"><a href="?Strongs=G3056&amp;t=KJV&amp;bn=66#lexResults" id="yui-gen43">Rev (17)</a></td></tr></tbody></table>
+
+<table>
+	
+
+	<caption>G4487 ῥῆμα Rhema</caption>
+	<tbody><tr><td><a href="?Strongs=G4487&amp;t=KJV&amp;bn=40#lexResults" id="yui-gen41">Mat (6)</a></td><td><a href="?Strongs=G4487&amp;t=KJV&amp;bn=41#lexResults">Mar (2)</a></td><td><a href="?Strongs=G4487&amp;t=KJV&amp;bn=42#lexResults">Luk (18)</a></td><td><a href="?Strongs=G4487&amp;t=KJV&amp;bn=43#lexResults">Jhn (12)</a></td></tr><tr><td><a href="?Strongs=G4487&amp;t=KJV&amp;bn=44#lexResults">Act (14)</a></td><td><a href="?Strongs=G4487&amp;t=KJV&amp;bn=45#lexResults">Rom (3)</a></td><td><a href="?Strongs=G4487&amp;t=KJV&amp;bn=47#lexResults">2Co (2)</a></td><td><a href="?Strongs=G4487&amp;t=KJV&amp;bn=49#lexResults">Eph (2)</a></td></tr><tr><td><a href="?Strongs=G4487&amp;t=KJV&amp;bn=58#lexResults">Heb (4)</a></td><td><a href="?Strongs=G4487&amp;t=KJV&amp;bn=60#lexResults">1Pe (1)</a></td><td><a href="?Strongs=G4487&amp;t=KJV&amp;bn=61#lexResults">2Pe (1)</a></td><td><a href="?Strongs=G4487&amp;t=KJV&amp;bn=65#lexResults">Jde (1)</a></td></tr><tr><td><a href="?Strongs=G4487&amp;t=KJV&amp;bn=66#lexResults">Rev (1)</a></td></tr></tbody>
+	</table>
+
+<table>
+	<caption>G2036 Eipon εἶπον:to speak, to say</caption>
+<tbody><tr><td><a href="?Strongs=G2036&amp;t=KJV&amp;bn=40#lexResults">Mat (172)</a></td><td><a href="?Strongs=G2036&amp;t=KJV&amp;bn=41#lexResults">Mar (90)</a></td><td><a href="?Strongs=G2036&amp;t=KJV&amp;bn=42#lexResults">Luk (280)</a></td><td><a href="?Strongs=G2036&amp;t=KJV&amp;bn=43#lexResults">Jhn (200)</a></td></tr><tr><td><a href="?Strongs=G2036&amp;t=KJV&amp;bn=44#lexResults">Act (124)</a></td><td><a href="?Strongs=G2036&amp;t=KJV&amp;bn=45#lexResults">Rom (1)</a></td><td><a href="?Strongs=G2036&amp;t=KJV&amp;bn=46#lexResults">1Co (9)</a></td><td><a href="?Strongs=G2036&amp;t=KJV&amp;bn=47#lexResults">2Co (2)</a></td></tr><tr><td id="yui-gen59"><a href="?Strongs=G2036&amp;t=KJV&amp;bn=48#lexResults">Gal (1)</a></td><td><a href="?Strongs=G2036&amp;t=KJV&amp;bn=51#lexResults">Col (1)</a></td><td><a href="?Strongs=G2036&amp;t=KJV&amp;bn=56#lexResults">Tit (1)</a></td><td><a href="?Strongs=G2036&amp;t=KJV&amp;bn=58#lexResults">Heb (6)</a></td></tr><tr><td><a href="?Strongs=G2036&amp;t=KJV&amp;bn=59#lexResults">Jas (3)</a></td><td><a href="?Strongs=G2036&amp;t=KJV&amp;bn=62#lexResults">1Jo (4)</a></td><td><a href="?Strongs=G2036&amp;t=KJV&amp;bn=65#lexResults">Jde (1)</a></td><td><a href="?Strongs=G2036&amp;t=KJV&amp;bn=66#lexResults">Rev (6)</a></td></tr></tbody></table>
+
+
+<table class="rtNavSearchResults" id="ovTable">
+<caption>G5346. φημί (phémi) -- to declare, say </caption>
+
+<tbody><tr><td><a href="?Strongs=G5346&amp;t=KJV&amp;bn=40#lexResults">Mat (15)</a></td><td><a href="?Strongs=G5346&amp;t=KJV&amp;bn=41#lexResults">Mar (1)</a></td><td><a href="?Strongs=G5346&amp;t=KJV&amp;bn=42#lexResults">Luk (5)</a></td><td class="ticked"><a href="?Strongs=G5346&amp;t=KJV&amp;bn=43#lexResults">Jhn (2)</a></td></tr><tr><td><a href="?Strongs=G5346&amp;t=KJV&amp;bn=44#lexResults">Act (26)</a></td><td><a href="?Strongs=G5346&amp;t=KJV&amp;bn=45#lexResults">Rom (1)</a></td><td><a href="?Strongs=G5346&amp;t=KJV&amp;bn=46#lexResults">1Co (5)</a></td><td><a href="?Strongs=G5346&amp;t=KJV&amp;bn=47#lexResults">2Co (1)</a></td></tr><tr><td><a href="?Strongs=G5346&amp;t=KJV&amp;bn=58#lexResults">Heb (1)</a></td></tr></tbody></table>
+
+	<p>
+<div><b>Rhema</b> 
+<ol id="yui-gen33">
+    <li>
+        <p id="yui-gen31">
+            that which is or has been uttered by the living voice, thing spoken, word
+        </p>
+        <ol id="yui-gen41">
+            <li>
+                <p id="yui-gen32">
+                    any sound produced by the voice and having definite meaning
+                </p>
+            </li>
+            <li id="yui-gen43">
+                <p id="yui-gen44">
+                    speech, discourse
+                </p>
+                <ol>
+                    <li>
+                        <p id="yui-gen42">
+                            what one has said
+                        </p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p id="yui-gen40">
+                    a series of words joined together into a sentence (a declaration of one's mind made in words)
+                </p>
+                <ol>
+                    <li>
+                        <p>
+                            an utterance
+                        </p>
+                    </li>
+                    <li>
+                        <p id="yui-gen39">
+                            a saying of any sort as a message, a narrative
+                        </p>
+                        <ol>
+                            <li>
+                                <p id="yui-gen38">
+                                    concerning some occurrence
+                                </p>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </li>
+    <li>
+        <p id="yui-gen37">
+            subject matter of speech, thing spoken of
+        </p>
+        <ol id="yui-gen35">
+            <li>
+                <p id="yui-gen36">
+                    so far forth as it is a matter of narration
+                </p>
+            </li>
+            <li>
+                <p id="yui-gen34">
+                    so far as it is a matter of command
+                </p>
+            </li>
+            <li>
+                <p>
+                    a matter of dispute, case at law
+                </p>
+            </li>
+        </ol>
+    </li>
+</ol>
+</div></div>	
+	</p>
+
+<script type="text/javascript">
+var Verses_John_Rhema=["3:34", "5:47","6:63","6:68","8:20","8:47","10:21","12:47","12:48","14:10","15:7","17:8"];	
+
+var John_Rhema_Greek={
+"3:34":"ὃν γὰρ ἀπέστειλεν ὁ θεὸς τὰ <a class='rhema'>ῥήματα</a> τοῦ θεοῦ λαλεῖ οὐ γὰρ ἐκ μέτρου δίδωσιν ὁ Θεὸς τὸ πνεῦμα",
+"5:47":"εἰ δὲ τοῖς ἐκείνου γράμμασιν οὐ πιστεύετε πῶς τοῖς ἐμοῖς <a class='rhema'>ῥήμασιν</a> πιστεύσετε",
+"6:63":"τὸ πνεῦμά ἐστιν τὸ ζῳοποιοῦν ἡ σὰρξ οὐκ ὠφελεῖ οὐδέν τὰ ῥήματα ἃ ἐγὼ λαλῶ ὑμῖν πνεῦμά ἐστιν καὶ ζωή ἐστιν",
+"6:68":"ἀπεκρίθη οὖν αὐτῷ Σίμων Πέτρος Κύριε πρὸς τίνα ἀπελευσόμεθα ῥήματα ζωῆς αἰωνίου ἔχεις",
+"8:20":"Ταῦτα τὰ ῥήματα ἐλάλησεν ὁ Ἰησοῦς ἐν τῷ γαζοφυλακίῳ διδάσκων ἐν τῷ ἱερῷ καὶ οὐδεὶς ἐπίασεν αὐτόν ὅτι οὔπω ἐληλύθει ἡ ὥρα αὐτοῦ",
+"8:47":"ὁ ὢν ἐκ τοῦ θεοῦ τὰ ῥήματα τοῦ θεοῦ ἀκούει διὰ τοῦτο ὑμεῖς οὐκ ἀκούετε ὅτι ἐκ τοῦ θεοῦ οὐκ ἐστέ",
+"10:21":"ἄλλοι ἔλεγον Ταῦτα τὰ ῥήματα οὐκ ἔστιν δαιμονιζομένου μὴ δαιμόνιον δύναται τυφλῶν ὀφθαλμοὺς ἀνοίγειν",
+"12:47":"καὶ ἐάν τίς μου ἀκούσῃ τῶν ῥημάτων καὶ μὴ πιστεύσῃ ἐγὼ οὐ κρίνω αὐτόν οὐ γὰρ ἦλθον ἵνα κρίνω τὸν κόσμον ἀλλ᾽ ἵνα σώσω τὸν κόσμον",
+"12:48":"ὁ ἀθετῶν ἐμὲ καὶ μὴ λαμβάνων τὰ ῥήματά μου ἔχει τὸν κρίνοντα αὐτόν ὁ λόγος ὃν ἐλάλησα ἐκεῖνος κρινεῖ αὐτὸν ἐν τῇ ἐσχάτῃ ἡμέρᾳ",
+"14:10":"οὐ πιστεύεις ὅτι ἐγὼ ἐν τῷ πατρὶ καὶ ὁ πατὴρ ἐν ἐμοί ἐστιν τὰ ῥήματα ἃ ἐγὼ λαλῶ ὑμῖν ἀπ᾽ ἐμαυτοῦ οὐ λαλῶ ὁ δὲ πατὴρ ὁ ἐν ἐμοὶ μένων αὐτὸς ποιεῖ τὰ ἔργα",
+"15:7" :"ἐὰν μείνητε ἐν ἐμοὶ καὶ τὰ ῥήματά μου ἐν ὑμῖν μείνῃ ὃ ἐὰν θέλητε αἰτήσεσθε καὶ γενήσεται ὑμῖν",
+"17:8" :"ὅτι τὰ ῥήματα ἃ δέδωκάς μοι δέδωκα αὐτοῖς καὶ αὐτοὶ ἔλαβον καὶ ἔγνωσαν ἀληθῶς ὅτι παρὰ σοῦ ἐξῆλθον καὶ ἐπίστευσαν ὅτι σύ με ἀπέστειλας",
+};
+
+
+
+
+var John_Rhema_CUV={
+"3:34":"神所差來的就說神的話，因為神賜聖靈給他是沒有限量的。",
+"5:47":"你們若不信他的書，怎能信我的話呢？",
+"6:63":"叫人活著的乃是靈，肉體是無益的。我對你們所說的話就是靈，就是生命。",
+"6:68":"西門彼得回答說：主阿，你有永生之道，我們還歸從誰呢？",
+"8:20":"這些話是耶穌在殿裡的庫房、教訓人時所說的，也沒有人拿他，因為他的時候還沒有到。",
+"8:47":"出於神的，必聽神的話；你們不聽，因為你們不是出於神。",
+"10:21":"又有人說：這不是鬼附之人所說的話。鬼豈能叫瞎子的眼睛開了呢？",
+"12:47":"若有人聽見我的話不遵守，我不審判他。我來本不是要審判世界，乃是要拯救世界。",
+"12:48":"棄絕我、不領受我話的人，有審判他的─就是我所講的道在末日要審判他。",
+"14:10":"我在父裡面，父在我裡面，你不信麼？我對你們所說的話，不是憑著自己說的，乃是住在我裡面的父做他自己的事。",
+"15:7":"你們若常在我裡面，我的話也常在你們裡面，凡你們所願意的，祈求，就給你們成就。",
+"17:8":"因為你所賜給我的道，我已經賜給他們，他們也領受了，又確實知道，我是從你出來的，並且信你差了我來。",
+}
+var John_Rhema_NIV={
+"3:34":"For the one whom God has sent speaks the words of God, for God[a] gives the Spirit without limit.",
+"5:47":"But since you do not believe what he wrote, how are you going to believe what I say?",
+"6:63":"The Spirit gives life; the flesh counts for nothing. The words I have spoken to you—they are full of the Spirit[a] and life.",
+"6:68":"Simon Peter answered him, “Lord, to whom shall we go? You have the words of eternal life.",
+"8:20":"He spoke these words while teaching in the temple courts near the place where the offerings were put. Yet no one seized him, because his hour had not yet come.",
+"8:47":"Whoever belongs to God hears what God says. The reason you do not hear is that you do not belong to God.",
+"10:21":"But others said, “These are not the sayings of a man possessed by a demon. Can a demon open the eyes of the blind?",
+"12:47":"“If anyone hears my words but does not keep them, I do not judge that person. For I did not come to judge the world, but to save the world.",
+"12:48":"There is a judge for the one who rejects me and does not accept my words; the very words I have spoken will condemn them at the last day.",
+"14:10":"Don’t you believe that I am in the Father, and that the Father is in me? The words I say to you I do not speak on my own authority. Rather, it is the Father, living in me, who is doing his work.",
+"15:7":"If you remain in me and my words remain in you, ask whatever you wish, and it will be done for you.",
+"17:8":"For I gave them the words you gave me and they accepted them. They knew with certainty that I came from you, and they believed that you sent me.",
+}
+
+
+
+
+
+
+</script>
+	</body>
+</html>

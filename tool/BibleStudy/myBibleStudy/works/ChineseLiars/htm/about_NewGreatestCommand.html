@@ -1,0 +1,192 @@
+<html>
+	<head>
+		<title></title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<base target="_blank" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!-------><script src="../../../../../tablesorter_master/js/jquery.tablesorter.js"></script><script src="../../../../myjs/table_Indexer.js"></script><script src="../../../myjs/goto_editor.js"></script>
+		<style type="text/css">
+body {font-family: 'Times New Roman';
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+    }		
+#_MenuPanel{
+position: fixed;
+left: 10px;
+top: 0px;
+}
+
+.fixedcol{
+	position: absolute;
+	background-color: #999999;
+}
+.fixedcol2, thead{
+	background-color: #999999;
+}
+.fixedcol2{
+	background-color: #eeeeee;
+}
+.synoptic{
+	background-color: #dddddd;
+}
+.strongs{
+	background-color: #ffffff;
+}
+.Top_Horz{
+	color: blue;
+	font-size:7px;
+}
+.All_Top_Horz{
+	background-color: red;
+}
+.leftbox{
+  background-color: #ff0000;
+}
+.Jerusalem {
+	border: 4px solid blue;
+}
+.iam{
+	color:red;
+}
+.verse{
+	border: 1px solid gray;
+}
+sup{
+	alig: 
+}
+.hebrew
+{
+    FONT-SIZE: 23px;
+    COLOR: #001320;
+    LINE-HEIGHT: 33px;
+    font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+    TEXT-DECORATION: none;
+}		</style>
+		<script>
+$(function(){
+    $(".narration").toggle();
+    $(".TheTitle").click(function(){
+        $(".narration").toggle();
+    } );
+    $("#strongsCodes").click(function(){
+    	$(".strongs, .translit").slideToggle();
+    });
+
+    $("body").click(function(){
+    	$("#_edit").slideToggle();
+    });
+
+    $("#relativeFrqRate").click(function(){
+    	cal_relativeFrqRate();
+    });
+
+
+    $(".fixedcol2").click(function(){
+    	alert();
+    });
+
+    $("#struct tbody tr").each(function(){
+    	$(this).find("td:eq(1)").addClass("Top_Horz");
+    })
+
+    $("td").each(function(){
+    	var tit=$(this).attr("title");
+    	if(tit && tit.length>0){
+    		$(this).prepend("<a class='verse'>"+tit+"</a> ");
+    	}
+    })
+
+});/////////
+
+$(document).ready(function(){ 
+	goto_editor("_edit_url");
+	sort_table();
+});//
+function sort_table(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+
+
+</script>
+	</head>
+	<body>
+		<p id="_MenuPanel">
+			<br />
+			<a id="_edit_url">...</a><br />
+			<a id="indxer">indxer</a></p>
+		<!--------------------------><!--------------------------><!-------------------------->
+<b>New Command vs Greatest Commandments</b>
+
+<p>
+Mat 22:37-39   
+
+37 耶 穌 對 他 說 ： 你 要 盡 心 、 盡 性 、 盡 意 愛 主 ─ 你 的 神 。
+
+38 這 是 誡 命 中 的 第 一 ， 且 是 最 大 的 。
+
+39 其 次 也 相 倣 ， 就 是 要 愛 人 如 己 。
+
+37 Jesus replied: “‘Love the Lord your God with all your heart and with all your soul and with all your mind.’[a] 38 This is the first and greatest commandment. 39 And the second is like it: ‘Love your neighbor as yourself.’[b]	
+
+</p>
+<p>
+John 13:34 
+34 我 賜 給 你 們 一 條 新 命 令 ， 乃 是 叫 你 們 彼 此 相 愛 ； 我 怎 樣 愛 你 們 ， 你 們 也 要 怎 樣 相 愛 。
+
+34 “A new command I give you: Love one another. As I have loved you, so you must love one another.
+</p>
+
+
+<b>Great Commission</b>
+
+<p>
+	Mat 28:18-20 
+	18 耶 穌 進 前 來 ， 對 他 們 說 ： 天 上 地 下 所 有 的 權 柄 都 賜 給 我 了 。
+
+19 所 以 ， 你 們 要 去 ， 使 萬 民 作 我 的 門 徒 ， 奉 父 、 子 、 聖 靈 的 名 給 他 們 施 洗 （ 或 作 ： 給 他 們 施 洗 ， 歸 於 父 、 子 、 聖 靈 的 名 ） 。
+
+20 凡 我 所 吩 咐 你 們 的 ， 都 教 訓 他 們 遵 守 ， 我 就 常 與 你 們 同 在 ， 直 到 世 界 的 末 了 。18 Then Jesus came to them and said, “All authority in heaven and on earth has been given to me. 19 Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, 20 and teaching them to obey everything I have commanded you. And surely I am with you always, to the very end of the age.”
+</p>
+<p>
+	John 21:16  你 餵 養 我 的 小 羊 。
+	John 21:16 Jesus said, “Take care of my sheep.”
+</p>
+<b>Comparison</b>
+<p>
+	Common: 
+	<ol>
+		<li>to love God and one another.
+		</li>
+		<li>to serve</li>
+		<li>before and after ascesion.</li>
+
+	</ol>
+</p>
+<p>
+	Difference: 
+	<ol>
+		<li>
+			Mat: to public both disciples and people
+			John: to true disciples only.
+		</li>
+		<li>
+			Mat: to all disciples.
+			John:to individual disciple.
+		</li>
+	</ol>
+</p>
+	</body>
+</html>

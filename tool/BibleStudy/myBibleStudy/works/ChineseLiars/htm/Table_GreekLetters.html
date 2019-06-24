@@ -1,0 +1,541 @@
+<html>
+	<head>
+		<title onclick="alert();">ctxt</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script><!------->
+		<base target="_blank" />
+		<script src="../../../../../tablesorter_master/js/jquery.tablesorter.js">
+    </script><script src="../../../myjs/table_Indexer.js">
+    </script><script src="../../../myjs/goto_editor.js">
+    </script>
+		<style type="text/css">
+body {
+        font-family: 'Times New Roman';
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 100%;
+        border: 1px solid #eeeeff;
+      }
+      #_MenuPanel{
+        position: fixed;
+        left: 10px;
+        top: 0px;
+      }
+      .fixedcol{
+        position: absolute;
+        background-color: #999999;
+      }
+      .fixedcol2, thead{
+        background-color: #999999;
+      }
+      .fixedcol2{
+        background-color: #eeeeee;
+      }
+      .catlog{
+        background-color: #cccccc;
+      }
+      .strongs{
+        background-color: #ffffff;
+      }
+      .Top_Horz{
+        color: blue;
+      }
+      .All_Top_Horz{
+        background-color: red;
+      }
+      .leftbox{
+        background-color: #ff0000;
+      }
+      .tablefloatheb {
+        float: right;
+        margin: 2px;
+        border-collapse: false;
+        background-color: #eeeeee }
+    .wikitable{
+        border-collapse: collapse;
+        border-width:1px;
+    }
+    .el, span[langx=el]{
+        font-size: 150%;
+        border-width: 1px;
+    }
+    a {
+  text-decoration: none;
+}
+
+      .hebrew
+      {
+        FONT-SIZE: 23px;
+        COLOR: #001320;
+        LINE-HEIGHT: 33px;
+        font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+        TEXT-DECORATION: none;
+      }		</style>
+	</head>
+	<script>
+    $(function(){
+
+      $("#relativeFrqRate").click(function(){
+        cal_relativeFrqRate();
+      }
+                                 );
+      $(".fixedcol2").click(function(){
+        alert();
+      }
+                           );
+    }
+     );
+    /////////
+    $(document).ready(function(){
+      goto_editor("_edit_url");
+      sort_table();
+    }
+                     );
+    //
+    function sort_table(){
+      $("table").tablesorter({
+        //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+      }
+                            );
+    }
+  </script>
+	<body>
+		<p id="_MenuPanel">
+			<br />
+			<a id="_edit_url">... </a><br />
+			<a id="indxer">indxer </a></p>
+		<!-----------------------------------><!----------------------------------->
+		<table class="wikitable">
+			<caption>
+				Greek Letters</caption>
+			<thead>
+				<tr>
+					<th width="40px">
+						#</th>
+					<th rowspan="1">
+						Upper</th>
+					<th rowspan="1">
+						Lower</th>
+					<th rowspan="1">
+						English</th>
+					<th rowspan="1">
+						Name</th>
+					<th rowspan="1">
+						Greek</th>
+					<th rowspan="1">
+						Notes</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Alpha;&nbsp;</span></td>
+					<td class="el">
+						&alpha;</td>
+					<td>
+						A a</td>
+					<td>
+						<a href="/wiki/Alpha" title="Alpha">alpha</a></td>
+					<td>
+						<a class="extiw" href="https://en.wiktionary.org/wiki/%CE%AC%CE%BB%CF%86%CE%B1#Greek" title="wikt:άλφα">ά&lambda;&phi;&alpha;</a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Beta;&nbsp;</span></td>
+					<td class="el">
+						&beta;</td>
+					<td>
+						B b</td>
+					<td>
+						<a href="/wiki/Beta" title="Beta">beta</a></td>
+					<td>
+						<a class="extiw" href="https://en.wiktionary.org/wiki/%CE%B2%CE%AE%CF%84%CE%B1#Greek" title="wikt:βήτα">&beta;ή&tau;&alpha;</a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Gamma;&nbsp;</span></td>
+					<td class="el">
+						&gamma;</td>
+					<td>
+						G g</td>
+					<td>
+						<a href="/wiki/Gamma" title="Gamma">gamma</a></td>
+					<td>
+						<a class="extiw" href="https://en.wiktionary.org/wiki/%CE%B3%CE%AC%CE%BC%CE%BC%CE%B1#Greek" title="wikt:γάμμα">&gamma;ά&mu;&mu;&alpha;</a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Delta;&nbsp;</span></td>
+					<td class="el">
+						&delta;</td>
+					<td>
+						D d</td>
+					<td>
+						<a href="/wiki/Delta_(letter)" title="Delta (letter)">delta</a></td>
+					<td>
+						<a class="extiw" href="https://en.wiktionary.org/wiki/%CE%B4%CE%AD%CE%BB%CF%84%CE%B1#Greek" title="wikt:δέλτα">&delta;έ&lambda;&tau;&alpha;</a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Epsilon;&nbsp;</span></td>
+					<td class="el">
+						&epsilon;</td>
+					<td>
+						E e</td>
+					<td>
+						<a href="/wiki/Epsilon" title="Epsilon">epsilon</a></td>
+					<td>
+						<a class="extiw" href="https://en.wiktionary.org/wiki/%CE%AD%CF%88%CE%B9%CE%BB%CE%BF%CE%BD#Greek" title="wikt:έψιλον">έ&psi;&iota;&lambda;&omicron;&nu;</a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Zeta;&nbsp;</span></td>
+					<td class="el">
+						&zeta;</td>
+					<td>
+						Z z</td>
+					<td>
+						<a href="/wiki/Zeta" title="Zeta">zeta</a></td>
+					<td>
+						<a class="extiw" href="https://en.wiktionary.org/wiki/%CE%B6%CE%AE%CF%84%CE%B1#Greek" title="wikt:ζήτα">&zeta;ή&tau;&alpha;</a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Eta;</span></td>
+					<td class="el">
+						&eta;</td>
+					<td>
+						E e</td>
+					<td>
+						<a href="/wiki/Eta" title="Eta">eta</a></td>
+					<td>
+						<a class="extiw" href="https://en.wiktionary.org/wiki/%CE%AE%CF%84%CE%B1#Greek" title="wikt:ήτα">ή&tau;&alpha;</a></td>
+					<td>
+						Eigh</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Theta;&nbsp;</span></td>
+					<td class="el">
+						&theta;</td>
+					<td>
+						Th</td>
+					<td>
+						<a href="/wiki/Theta" title="Theta">theta</a></td>
+					<td>
+						<a class="extiw" href="https://en.wiktionary.org/wiki/%CE%B8%CE%AE%CF%84%CE%B1#Greek" title="wikt:θήτα">&theta;ή&tau;&alpha;</a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Iota;&nbsp;</span></td>
+					<td class="el">
+						&iota;</td>
+					<td>
+						I i</td>
+					<td>
+						<a href="/wiki/Iota" title="Iota">iota</a></td>
+					<td>
+						<a class="extiw" href="https://en.wiktionary.org/wiki/%CE%B9%CF%8E%CF%84%CE%B1#Greek" title="wikt:ιώτα">&iota;ώ&tau;&alpha;</a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Kappa;&nbsp;</span></td>
+					<td class="el">
+						&kappa;</td>
+					<td>
+						K k</td>
+					<td>
+						<a href="/wiki/Kappa" title="Kappa">kappa&nbsp;</a></td>
+					<td>
+						<a class="extiw" href="https://en.wiktionary.org/wiki/%CE%BA%CE%AC%CF%80%CF%80%CE%B1#Greek" title="wikt:κάππα">&kappa;ά&pi;&pi;&alpha;</a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Lambda;&nbsp;</span></td>
+					<td class="el">
+						&lambda;</td>
+					<td>
+						L l</td>
+					<td>
+						<a href="/wiki/Lambda" title="Lambda">la(m)bda&nbsp;</a></td>
+					<td>
+						<a class="extiw" href="https://en.wiktionary.org/wiki/%CE%BB%CE%AC%CE%BC%CE%B2%CE%B4%CE%B1#Greek" title="wikt:λάμβδα">&lambda;ά(&mu;)&beta;&delta;&alpha;&nbsp;</a><sup class="reference" id="cite_ref-lambdaorlabda_26-0">&nbsp;</sup></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Mu;&nbsp;&nbsp;</span></td>
+					<td class="el">
+						&mu;</td>
+					<td>
+						M m</td>
+					<td>
+						<a href="/wiki/Mu_(letter)" title="Mu (letter)">mu</a></td>
+					<td>
+						<a class="extiw" href="https://en.wiktionary.org/wiki/%CE%BC%CF%85#Greek" title="wikt:μυ">&mu;&upsilon;</a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Nu;&nbsp;</span></td>
+					<td class="el">
+						&nu;</td>
+					<td>
+						N n</td>
+					<td>
+						<a href="/wiki/Nu_(letter)" title="Nu (letter)">nu&nbsp;</a></td>
+					<td>
+						<a class="extiw" href="https://en.wiktionary.org/wiki/%CE%BD%CF%85#Greek" title="wikt:νυ">&nu;&upsilon;</a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Xi;&nbsp;</span></td>
+					<td class="el">
+						&xi;</td>
+					<td>
+						Xi</td>
+					<td>
+						<a href="/wiki/Xi_(letter)" title="Xi (letter)">xi&nbsp;</a></td>
+					<td>
+						<a class="extiw" href="https://en.wiktionary.org/wiki/%CE%BE%CE%B9#Greek" title="wikt:ξι">&xi;&iota;</a></td>
+					<td>
+						Taxi</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Omicron;&nbsp;</span></td>
+					<td class="el">
+						&omicron;</td>
+					<td>
+						O o</td>
+					<td>
+						<a href="/wiki/Omicron" title="Omicron">omicron </a><span lang="el">&nbsp;</span></td>
+					<td>
+						<a class="extiw" href="https://en.wiktionary.org/wiki/%CF%8C%CE%BC%CE%B9%CE%BA%CF%81%CE%BF%CE%BD#Greek" title="wikt:όμικρον">ό&mu;&iota;&kappa;&rho;&omicron;&nu;&nbsp;</a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Pi;&nbsp;</span></td>
+					<td class="el">
+						&pi;</td>
+					<td>
+						P p</td>
+					<td>
+						<a href="/wiki/Pi_(letter)" title="Pi (letter)">pi&nbsp;</a></td>
+					<td>
+						<a class="extiw" href="https://en.wiktionary.org/wiki/%CF%80%CE%B9#Greek" title="wikt:πι">&pi;&iota;</a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Rho;&nbsp;</span></td>
+					<td class="el">
+						&rho;</td>
+					<td>
+						R r</td>
+					<td>
+						<a href="/wiki/Rho" title="Rho">rho&nbsp;</a></td>
+					<td>
+						<a class="extiw" href="https://en.wiktionary.org/wiki/%CF%81%CF%8E#Greek" title="wikt:ρώ">&rho;ώ</a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Sigma; </span><span lang="el" title="Greek language text">Ϲ&nbsp;&nbsp;</span></td>
+					<td class="el">
+						&sigma;&nbsp;/&sigmaf;,&nbsp;ϲ</td>
+					<td>
+						S s</td>
+					<td>
+						<a href="/wiki/Sigma" title="Sigma">sigma&nbsp;</a></td>
+					<td>
+						<a class="extiw" href="https://en.wiktionary.org/wiki/%CF%83%CE%AF%CE%B3%CE%BC%CE%B1#Greek" title="wikt:σίγμα">&sigma;ί&gamma;&mu;&alpha;</a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Tau;&nbsp;</span></td>
+					<td class="el">
+						&tau;</td>
+					<td>
+						T t</td>
+					<td>
+						<a href="/wiki/Tau" title="Tau">tau&nbsp;</a></td>
+					<td>
+						<a class="extiw" href="https://en.wiktionary.org/wiki/%CF%84%CE%B1%CF%85#Greek" title="wikt:ταυ">&tau;&alpha;&upsilon;</a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Upsilon;&nbsp;</span></td>
+					<td class="el">
+						&upsilon;</td>
+					<td>
+						U u</td>
+					<td>
+						<a href="/wiki/Upsilon" title="Upsilon">upsilon </a><span lang="el">&nbsp;</span></td>
+					<td>
+						<a class="extiw" href="https://en.wiktionary.org/wiki/%CF%8D%CF%88%CE%B9%CE%BB%CE%BF%CE%BD#Greek" title="wikt:ύψιλον">ύ&psi;&iota;&lambda;&omicron;&nu;&nbsp;</a></td>
+					<td>
+						You</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Phi;&nbsp;&nbsp;</span></td>
+					<td class="el">
+						&phi;</td>
+					<td>
+						Phi</td>
+					<td>
+						<a href="/wiki/Phi" title="Phi">phi&nbsp;</a></td>
+					<td>
+						<a class="extiw" href="https://en.wiktionary.org/wiki/%CF%86%CE%B9#Greek" title="wikt:φι">&phi;&iota;</a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Chi;&nbsp;</span></td>
+					<td class="el">
+						&chi;</td>
+					<td>
+						Chi</td>
+					<td>
+						<a href="/wiki/Chi_(letter)" title="Chi (letter)">chi&nbsp;</a></td>
+					<td>
+						&nbsp;<span lang="el"><a class="extiw" href="https://en.wiktionary.org/wiki/%CF%87%CE%B9#Greek" title="wikt:χι">&chi;&iota;</a></span></td>
+					<td>
+						Christ</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Psi;&nbsp;&nbsp;</span></td>
+					<td class="el">
+						&psi;</td>
+					<td>
+						Psi</td>
+					<td>
+						<a href="/wiki/Psi_(letter)" title="Psi (letter)">psi&nbsp;</a></td>
+					<td>
+						<a class="extiw" href="https://en.wiktionary.org/wiki/%CF%88%CE%B9#Greek" title="wikt:ψι">&psi;&iota;</a></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;</td>
+					<td>
+						<span class="el" title="Greek language text">&Omega;</span></td>
+					<td class="el">
+						&omega;</td>
+					<td>
+						O o</td>
+					<td>
+						<a href="/wiki/Omega" title="Omega">omega</a></td>
+					<td>
+						<span lang="el"><a class="extiw" href="https://en.wiktionary.org/wiki/%CF%89%CE%BC%CE%AD%CE%B3%CE%B1#Greek" title="wikt:ωμέγα">&omega;&mu;έ&gamma;&alpha;</a></span></td>
+					<td>
+						&nbsp;</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			&nbsp;</p>
+		<ol>Similarities in Greek Letters:
+			<li>Similar form: ( μ, ν, υ )===( m, n, u )
+				&nbsp;</li>
+            <li>Similar Pronounciation:
+                ( Ο  ο,   Ω   ω ) === ( O o )
+            </li>
+            <li>
+            	Similar Pronounciation: (Ε ε, Η η)  === E e like echo.
+            </li>
+            <li>
+            	vows: [a,e,i,o,u]=[ Α α, (Ε ε, Η η), Ι ι, ( Ο  ο,   Ω   ω ), Υ υ ]
+            </li>
+		</ol>
+	</body>
+</html>

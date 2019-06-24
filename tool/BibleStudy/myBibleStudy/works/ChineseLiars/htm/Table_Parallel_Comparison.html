@@ -1,0 +1,848 @@
+<html>
+	<head>
+		<title onclick="alert();">ctxt</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!------->
+		<base target="_blank" />
+		<script src="../../../../../tablesorter_master/js/jquery.tablesorter.js"></script><script src="../../../myjs/table_Indexer.js"></script>
+		<script src="../../../myjs/goto_editor.js"></script>
+		<style type="text/css">
+body {font-family: 'Times New Roman';
+        height: 100%;
+        width: 795px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+    }		
+#_MenuPanel{
+position: fixed;
+left: 10px;
+top: 0px;
+}
+table{
+	border-collapse: collapse;
+	font-size: 100%;
+}
+
+.fixedcol{
+	position: absolute;
+	background-color: #999999;
+}
+.fixedcol2, thead{
+	background-color: #999999;
+}
+.fixedcol2{
+	background-color: #eeeeee;
+}
+.catlog{
+	background-color: #cccccc;
+}
+.strongs{
+	background-color: #ffffff;
+}
+.Top_Horz{
+	color: blue;
+}
+.All_Top_Horz{
+	background-color: red;
+}
+.leftbox{
+  background-color: #ff0000;
+}
+.tablefloatheb {float: right; margin: 2px;border-collapse: false;background-color: #eeeeee }
+.hebrew
+{
+    FONT-SIZE: 23px;
+    COLOR: #001320;
+    LINE-HEIGHT: 33px;
+    font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+    TEXT-DECORATION: none;
+}		</style>
+	</head>
+	<script>
+$(function(){
+    $(".narration").toggle();
+    $(".TheTitle").click(function(){
+        $(".narration").toggle();
+    } );
+    $("#strongsCodes").click(function(){
+    	$(".strongs, .translit").slideToggle();
+    });
+
+    $("body").click(function(){
+    	$("#_MenuPanel").slideToggle();
+    });
+
+    $("#relativeFrqRate").click(function(){
+    	cal_relativeFrqRate();
+    });
+
+
+    $(".fixedcol2").click(function(){
+    	alert();
+    });
+
+});/////////
+
+$(document).ready(function(){ 
+	goto_editor("_edit_url");
+	sort_table();
+});//
+function sort_table(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+
+
+</script>
+	<body>
+		<p id="_MenuPanel">
+			<br />
+			<a id="_edit_url">...</a><br />
+			<a id="indxer">indxer</a></p>
+		<!--------------------------><!--------------------------><!-------------------------->
+
+			<table border="1" class="style3" id="table_view">
+				<caption>
+					Gospels Parallel Comparison</caption>
+				<thead id="">
+					<tr>
+						<th class=" firstCell ">
+							#</th>
+						<th class=" firstCell ">
+							<div>
+								&nbsp;</div>
+						</th>
+						<th class="centerCell boldCell tableCell  ">
+							Matthew</th>
+						<th class="centerCell boldCell tableCell  ">
+							<div>
+								Mark</div>
+						</th>
+						<th class="centerCell boldCell tableCell  ">
+							<div>
+								Luke</div>
+						</th>
+						<th class="centerCell boldCell tableCell  ">
+							<div>
+								John</div>
+						</th>
+					</tr>
+				</thead>
+				<tbody id="">
+					<tr class="evenRow">
+						<td class=" ">
+							1</td>
+						<td class=" ">
+							<div>
+								Date Written</div>
+						</td>
+						<td class="  ">
+							75-80 CE</td>
+						<td class="  ">
+							<div>
+								65-70 CE</div>
+						</td>
+						<td class="  ">
+							<div>
+								80-85 CE</div>
+						</td>
+						<td class="  ">
+							<div>
+								90-98&nbsp;CE</div>
+						</td>
+					</tr>
+					<tr class="evenRow">
+						<td class=" ">
+							1</td>
+						<td class=" ">
+							<div>
+								Earliest Fragment</div>
+						</td>
+						<td class="  ">
+							<a href="https://www.josh.org/8-manuscripts-validate-new-testament/?mwm_id=241874010218&mot=J79GNF&gclid=Cj0KCQiAw5_fBRCSARIsAGodhk_kCTFJnYKRtbxr8MAwEYITHrd5hpVL7HoS9lkF_p2Y_VJcd8LXobcaAkkDEALw_wcB">P45 (200AD)</a>,<a href="http://evangelicaltextualcriticism.blogspot.com/2015/01/what-is-oldest-manuscript-of-new.html">P104 (125 AD)</td>
+						<td class="  ">
+							P45 (200 AD), </a> 
+						</td>
+						<td class="  ">
+							P45,AD 200,
+								P75, 120-225 ce.
+						</td>
+						<td class="  ">
+							<div>
+								P52(130AD) <a href="https://www.youtube.com/watch?v=F3WoLTScnCw" title="18 lines/page,30-35 letters/line">[]</a> <a href="https://www.youtube.com/watch?v=KRaNK2didrs" title="In 1920, John Rylands Library in England acruired at Egyptian market. 1934 C.H.Roberts translate it into Eng and then found...">[]</a>;
+
+							P66(200AD, most of John’s gospel)</div>
+						</td>
+					</tr>
+					<tr class="evenRow">
+						<td class=" ">
+							2</td>
+						<td class=" ">
+							<div>
+								Place written</div>
+						</td>
+						<td class="  ">
+							Most likely Antioch of Syria</td>
+						<td class="  ">
+							<div>
+								Rome</div>
+						</td>
+						<td class="  ">
+							<div>
+								Possibly Rome or Caesarea</div>
+						</td>
+						<td class="  ">
+							<div>
+								Probably in Ephesus</div>
+						</td>
+					</tr>
+					<tr class="oddRow">
+						<td class=" ">
+							3</td>
+						<td class=" ">
+							<div>
+								Writer</div>
+						</td>
+						<td class="  ">
+							An unknown Jewish Christian, traditionally the Apostle Matthew</td>
+						<td class="  ">
+							<div>
+								A second generation Christian, possibly a follower of Peter</div>
+						</td>
+						<td class="  ">
+							<div>
+								A Gentile Christian, traditionally Luke the physician and Paul&#39;s traveling companion</div>
+						</td>
+						<td class="  ">
+							<div>
+								The &quot;beloved disciple&quot; the Apostle John</div>
+						</td>
+					</tr>
+
+					
+					<tr class="oddRow">
+						<td class=" ">
+							4</td>
+						<td class=" ">
+							<div>
+								Hisotrical Situation</div>
+						</td>
+						<td class="  ">
+							Written after Romans had destroyed all of Jerusalem</td>
+						<td class="  ">
+							<div>
+								The Romans subdue armed Jewish rebellions. Christians experiencing persecution in Rome</div>
+						</td>
+						<td class="  ">
+							<div>
+								Written when the persecution of Jews and Christians was intensifying</div>
+						</td>
+						<td class="  ">
+							<div>
+								Jewish leaders banned Christians from the synagogues</div>
+						</td>
+					</tr>
+					<tr class="evenRow">
+						<td class=" ">
+							5</td>
+						<td class=" ">
+							<div>
+								The Author&#39;s Community</div>
+						</td>
+						<td class="  ">
+							A Jewish Christian community</td>
+						<td class="  ">
+							<div>
+								A Gentile Christian community in Rome undergoing persecution</div>
+						</td>
+						<td class="  ">
+							<div>
+								Written to &quot;Theophilus&quot;</div>
+						</td>
+						<td class="  ">
+							<div>
+								Jews, Gentiles, and Samaritans</div>
+						</td>
+					</tr>
+					<tr class="oddRow">
+						<td class=" ">
+							6</td>
+						<td class=" ">
+							<div>
+								Who is Jesus?</div>
+						</td>
+						<td class="  ">
+							Promised Messiah of Jews, greatest prophet, teacher of the &quot;new law&quot; calling people to be faithful of the Old Testament covenant with God</td>
+						<td class="  ">
+							<div>
+								Healer, Miracle Worker, Teacher, Misunderstood by those closest to Him</div>
+						</td>
+						<td class="  ">
+							<div>
+								Merciful, Compassionate, Prayerful teacher with special concern for women, the poor, and non-Jews (Gentiles)</div>
+						</td>
+						<td class="  ">
+							<div>
+								Noble, Powerful divine--fully in control of His destiny</div>
+						</td>
+					</tr>
+					<tr class="oddRow">
+						<td class=" ">
+							6</td>
+						<td class=" ">
+							<div>
+								Isa9:6</div>
+						</td>
+						<td class="  ">
+								Everlasting Father</td>
+						<td class="  ">
+							<div>
+								Wonderful Conselor</div>
+						</td>
+						<td class="  ">
+							<div>
+								Prince of Peace</div>
+						</td>
+						<td class="  ">
+							<div>
+								Mighty God</div>
+						</td>
+					</tr>
+					<tr>
+						<td class=" ">
+							7</td>
+						<td class=" ">
+							perspectives</td>
+						<td class="  ">
+							salvation historical fulfillment&mdash;the climax of prophetic hope</td>
+						<td class="  ">
+							<p>
+								functional Christology&mdash;obedient to the mission of the Father</p>
+						</td>
+						<td class="  ">
+							historical&mdash;the Man among men</td>
+						<td class="  ">
+							ontological Christology&mdash;the incarnate Son of God</td>
+					</tr>
+					<tr>
+						<td class=" ">
+							&nbsp;</td>
+						<td class=" " title="J: JesusSayingVerses; B: BookTotVerses x 100 ==%" >
+							J/B (%)</td>
+						<td class="  ">
+							645/1071=60%</td>
+						<td class="  ">
+							283/678=41%</td>
+						<td class="  ">
+							584/1150=50%</td>
+						<td class="  ">
+							418/879=47%</td>
+					</tr>
+					<tr>
+						<td class=" ">
+							&nbsp;</td>
+						<td title="number of quotes from OT ">
+							<a href="http://catholic-resources.org/Bible/Quotations-NT-OT.htm">Quot fr OT&nbsp;</a></td>
+						<td class="  ">
+							<a href="http://catholic-resources.org/Bible/Matthew-OTQuotations.htm">66</a></td>
+						<td class="  ">
+							31</td>
+						<td class="  ">
+							27</td>
+						<td class="  ">
+							16</td>
+					</tr>
+					<tr>
+						<td class=" ">
+							&nbsp;</td>
+						<td class=" ">
+							witness + testify + testimony</td>
+						<td class="  ">
+							4+8+7=19</td>
+						<td class="  ">
+							2+7+6=15</td>
+						<td class="  ">
+							4+5+4=13</td>
+						<td class="  ">
+							4+30+15=49</td>
+					</tr>
+					<tr>
+						<td class=" ">
+							&nbsp;</td>
+						<td class=" ">
+							<a href="http://catholic-resources.org/John/Themes-Believe.htm">Believe</a></td>
+						<td class="  ">
+							11</td>
+						<td class="  ">
+							14</td>
+						<td class="  ">
+							9</td>
+						<td class="  ">
+							98</td>
+					</tr>
+					<tr>
+						<td class=" ">
+							&nbsp;</td>
+						<td class=" ">
+							<a>Love</a> <div>niv/cuv
+							</div></td>
+						<td class="  ">
+							17<br>17</td>
+						<td class="  ">
+							7<br>9</td>
+						<td class="  ">
+							14<br>17</td>
+						<td class="  ">
+							39<br>39</td>
+					</tr>
+					<tr>
+						<td class=" ">
+							&nbsp;</td>
+						<td class=" ">
+							world (niv/cuv)</td>
+						<td class="  ">
+							10<br>9</td>
+						<td class="  ">
+							5<br>1</td>
+						<td class="  ">
+							9<br>4</td>
+						<td class="  ">
+							57<br>19</td>
+					</tr>
+					<tr>
+						<td class=" ">
+							&nbsp;</td>
+						<td class=" ">
+							kingdom (niv/cuv)</td>
+						<td class="  ">
+							53<br>41</td>
+						<td class="  ">
+							18<br>15</td>
+						<td class="  ">
+							42<br>31</td>
+						<td class="  ">
+							3<br>3</td>
+					</tr>
+					<tr>
+						<td class=" ">
+							&nbsp;</td>
+						<td class=" ">
+							repent悔改 (niv/cuv)</td>
+						<td class="  ">
+							8<br>7</td>
+						<td class="  ">
+							3<br>3</td>
+						<td class="  ">
+							13<br>11</td>
+						<td class="  ">
+							0<br>0</td>
+					</tr>	
+					<tr>
+						<td class=" ">
+							&nbsp;</td>
+						<td class=" ">
+							born again (niv/cuv)</td>
+						<td class="  ">
+							0<br>0</td>
+						<td class="  ">
+							0<br>0</td>
+						<td class="  ">
+							0<br>0</td>
+						<td class="  ">
+							3<br>3</td>
+					</tr>				
+					<tr>
+						<td class=" ">
+							&nbsp;</td>
+						<td class=" ">
+							<a>life (niv/cuv)</a> </td>
+						<td class="  ">
+							18<br>4</td>
+						<td class="  ">
+							8<br>3</td>
+						<td class="  ">
+							21<br>6</td>
+						<td class="  ">
+							42<br>15</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td title="J:Jesus, B:book">Death死 J/B</td>
+						<td>14/34</td>
+						<td>12/25</td>
+						<td>11/40</td>
+						<td>16/42</td>						
+					</tr>
+					<tr>
+						<td></td>
+						<td>Son</td>
+						<td>100</td>
+						<td>45</td>
+						<td>96</td>
+						<td>70</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Only Son</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>4</td>						
+					</tr>					
+					<tr>
+						<td></td>
+						<td>Son of God/Father <br/>vs Man</td>
+						<td>15<br/>30 </td>
+						<td>5 <br/>14 </td>
+						<td>11<br/>25 </td>
+						<td>25<br/>12 </td>						
+					</tr>
+
+
+
+					<tr>
+						<td></td>
+						<td>Virgin Birth</td>
+						<td>y</td>
+						<td>no</td>
+						<td>y</td>
+						<td>no</td>						
+					</tr>
+					<tr>
+						<td></td>
+						<td>Baptist</td>
+						<td>y</td>
+						<td>y</td>
+						<td>y</td>
+						<td>no</td>						
+					</tr>
+					<tr>
+						<td></td>
+						<td>Temptation</td>
+						<td>y</td>
+						<td>y</td>
+						<td>y</td>
+						<td>no</td>						
+					</tr>
+					<tr>
+						<td></td>
+						<td>Transfiguration</td>
+						<td>y</td>
+						<td>no</td>
+						<td>y</td>
+						<td>no</td>						
+					</tr>
+					<tr>
+						<td></td>
+						<td>Last Supper</td>
+						<td>Eat/Drink</td>
+						<td>Eat/Drink</td>
+						<td>Eat/Drink</td>
+						<td>Wash</td>						
+					</tr>
+					<tr>
+						<td></td>
+						<td>Last Pray</td>
+						<td>26:38 Agony</td>
+						<td>14:34 Agony</td>
+						<td>22:44 Agony</td>
+						<td>17:5 Glory</td>						
+					</tr>
+					<tr>
+						<td></td>
+						<td>Great Commission</td>
+						<td>28:38 Go</td>
+						<td>16:15 Go</td>
+						<td title="indirectly">24:47 (go)</td>
+						<td>21:5 Love</td>						
+					</tr>
+					<tr>
+						<td></td>
+						<td>Ascesion</td>
+						<td title="indirectly">(y)</td>
+						<td>y</td>
+						<td>y</td>
+						<td>no</td>						
+					</tr>
+				
+
+				</tbody>
+			</table>
+			<a>
+				--page break--</a><br>
+				<div style="page-break-after: always;">
+				<span style="display: none;">&nbsp;</span></div><br>
+
+
+
+				<style type="text/css">
+					.p52, .parallel{
+						display: inline-block;
+						border: 1px solid #000000;
+						text-align: center;
+					}
+					ul{
+						text-align: left;
+					}
+				</style>
+			<div class="p52">
+			<img alt="Smiley face" height="420" src="../img/P52_recto.jpg" width="320" /><br>P52 recto (Gospel of John 18:31-33) </div>
+			<div class="p52">
+			<img alt="Smiley face" height="420" src="../img/P52_verso.jpg" width="320" /><br>P52 verso (Gospel of John 18:37-38)
+		</div>
+			
+			<br><br><br>
+
+
+		<div class="parallel">
+<img src="../img/Relationship_between_synoptic_gospels-en.svg.png" width="500px" /><p>
+			John and Synoptic Gospels Paralel Statistics</p>
+<ul >
+<li>21% (=6/21) of John is in synoptic gospels. (based on story in chapters)</li>
+<li>25% (=2/8)  of John is in synoptic gospels. (based on signs)</li>
+<li>22% (=8/35) of all signs in the Gospels in John (QiDao p975)  </li>
+</ul>
+		</div>
+			
+
+
+
+			<a>
+				--page break--</a><br>
+				<div style="page-break-after: always;">
+				<span style="display: none;">&nbsp;</span></div><br>
+
+
+<ol>About Gospel of John
+	<li>
+
+		<a>Authorship</a>
+			<ol>
+				<li>
+					Copyright<br />
+					"It is near-unanimous consensus in the ancient church that the synoptic gospel writers drew upon personal memory and first hand reports, did not see each other&#39;s work before writing lasted until the mid-eighteenth century." (Harmony, p261) The similarities among Gospels are the testimonies of the authentication.<br>
+					
+					 </li>
+				<li>
+					Anonymity(匿名).<br />
+					Why Are the Gospels Anonymous?(Bart Ehrman) <br />
+					1) 2Tim 3:16. God is the ultimate author. <br />
+					2) Earliest Christians was not concerned about the authorship. (Harmany p260)<br>
+					3) John Baptist: &quot;He must become greater; I must become less&quot;(John3:30)<br />
+					3) collective work under one lead. </li>
+				<li>
+					Author<br />
+					1) Not important at Jesus times, but important at heresy/criticism times.  Whom you hear is more important than what he says. For example, Islam about god, Chinese Buddhism about love.<br>
+					2) Ancient church historians, theologian, an Alexandrian Christian scholar, Origen, 218 A.D believed that John is the main author.<br />
+					3) Modern scholars began to challenge tradition from mid eighteenth century. <br />
+					4) Inside evidence for the author: (John 21:20-24)<br />
+					5) The capricious events inhuman sequence testify the author is the Holy Spirit.<br />
+
+					6) Gospel according to John:  John is major; but with mulitple writers. Greek style changes is auditable for this.<br>
+
+					7) Real writer is God, Holy Spirit. God use different personality to write one union personality of God. Sum:it is the comination of the Holy Spirit and John and his coworkers. </li>
+				<li>
+					About name of John (means God is gracious from Hebrew rather than restroom). <br />
+					1) disciple that Jesus love, the son of Zebedee, brother of Jame. <br />
+					2) John Baptist.<br />
+					3) John the father of disciple Peter, and Andrew. (John 21:15)</li>
+				<li>
+					About main writer of John<br />
+					1) Family: fishman, own a boat (Mat 4:21); brother James; father Zebedee; mother Marry Salome(1 of 3 Mary,by cross, Mak 15:40, talk w Jesus, Mak10:40)<br />
+					2) Date: born 6 AD at Bethsaida, Galilee, Roman Empire, died 100 ADD, aged 94, at ukn, traditionally assumed in Ephesus. The youngest &amp; longest  among apostles, witness of whole generation of Jesus.<br />
+					3) Personality. son of thunder (Mak 3:17), fire from heaven(Luke 9:54)<br />
+					4) Relationship: closet circile of Jesus, &quot;the disciple whom Jesus loved&quot; (John 13:23), close to Peter and Andrew (Mak 1:29), (Mak 5:37) transfiguration (Mat17:1;Mak9:2;Luk9:28), (Mak 5:37), Mary&#39;s carer (John 19:26)<br />
+					5) Works: writer of five books in NT.<br />
+					6) Titles:<br />
+					Sum:<br />
+					1)a fishman, son of thunder, disciple, apostle, high christology writer. =&gt;Grace<br />
+					2)family: inexplicit due to wkn, focus on Jesus. today once leading to Jesus, they are unimportant soon. Jesus said &quot;Who is my mother and brother? Those who believe in God and follow is my mother and brothers.&quot; Gospels have two parts one is explicit and inexplicit about people. The purpose is to contemplate Jesus rather than writer or any figures on earth. Order of explicity. Jesus, John batptism, disciples (Peter, John, Juda, Thomas, Phillip, Nathanial), pagans, politians, women,</li>
+			</ol>
+	</li>
+	<li>
+		Synpotics look at outside--what He say and did. John look inside-who He was. (Be-Do Pattern)
+		<p>
+			three close Peter, James and John. among 3 has 1 favorite, last surving. 
+			   that&#39;s why Jesus ask John to care his mother. 
+			   Peter jelous to John. 
+		</p>
+	</li>
+	<li>
+		<p>changes in Greek style; no parables; not mention Kingdom of Heaven; repetitions in discourse material
+		</p>
+			
+	</li>
+	<li>
+		John wrote in Ephesus in Turkey the mixture of Greek and Hebrew.
+			   western is Greek style: vertical time. between key words: heaven and world. up and down. Up/down
+			   Hebrew horizontal in time. past present future. 
+	</li>
+	<li>
+		<div id="outlineBiblical">The World κόσμος  kosmos G2889  <div> 
+<ol id="yui-gen48">
+    <li>
+        <p id="yui-gen54">
+            an apt and harmonious arrangement or constitution, order, government
+        </p>
+    </li>
+    <li>
+        <p id="yui-gen39">
+            ornament, decoration, adornment, i.e. the arrangement of the stars, 'the heavenly hosts', as the ornament of the heavens. <scriptref parsed="|1Pe|3|3|3|3" id="si_1">1 Pet. 3:3</scriptref>
+        </p>
+    </li>
+    <li>
+        <p id="yui-gen52">
+            the world, the universe
+        </p>
+    </li>
+    <li>
+        <p id="yui-gen51">
+            the circle of the earth, the earth
+        </p>
+    </li>
+    <li>
+        <p id="yui-gen50">
+            the inhabitants of the earth, men, the human family
+        </p>
+    </li>
+    <li>
+        <p id="yui-gen49">
+            the ungodly multitude; the whole mass of men alienated from God, and therefore hostile to the cause of Christ
+        </p>
+    </li>
+    <li id="yui-gen46">
+        <p id="yui-gen47">
+            world affairs, the aggregate of things earthly
+        </p>
+        <ol>
+            <li>
+                <p id="yui-gen45">
+                    the whole circle of earthly goods, endowments riches, advantages, pleasures, etc, which although hollow and frail and fleeting, stir desire, seduce from God and are obstacles to the cause of Christ
+                </p>
+            </li>
+        </ol>
+    </li>
+    <li id="yui-gen43">
+        <p id="yui-gen44">
+            any aggregate or general collection of particulars of any sort
+        </p>
+        <ol>
+            <li>
+                <p id="yui-gen42">
+                    the Gentiles as contrasted to the Jews (<scriptref parsed="|Rom|11|12|11|12" id="si_2">Rom. 11:12</scriptref> etc)
+                </p>
+            </li>
+        </ol>
+    </li>
+</ol>
+</div></div>
+	</li>
+
+</ol>
+
+
+
+
+
+
+
+			<div style="page-break-after: always;">
+				<span style="display: none;">&nbsp;</span></div>
+		
+		
+	</body>
+</html>
+
+
+
+
+
+
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	cuv JOHN
+ 4 独生子.  1:14,18,3:16,18,
+11 神的儿子 1:34,49,3:17,5:25,9:35,36,10:36,11:4,27,19:7,20:31
+19 天父 子,     3:35,36(2),5:19(3),20,21,22,23(3),5:26,6:40,8:36,14:13,17:1(2)
+18 人子.      1:51,3:13,14,5:27,6:27(2), 6:53(3),62,8:28,12:23,34(2),13:31(2),32,
+ 1 儿子.      8:35,
+ 1 光明之子. 12:36,
+54 
+
+
+SonOfPerdition 17:12
+
+mat/mar/luk
+
+
+====.      Mat.   
+          (220)
+ 4 独生子.  0
+11 神的儿子 10
+19 天父 子,  5
+18 人子.    30
+ 1 儿子.    
+ 1 光明之子. 
+
+
+
+The expression "the Son of man" occurs 81 times in the Greek text of the four Canonical gospels, and is used only in the sayings of Jesus.[3] The singular Hebrew expression "son of man" (בן–אדם i.e. ben-'adam) also appears in the Hebrew Bible over a hundred times.
+The use of the definite article in "the Son of man" in the Koine Greek of the Christian gospels is original, and before its use there, no records of its use in any of the surviving Greek documents of antiquity exist.[3] Geza Vermes has stated that the use of "the Son of man" in the Christian gospels is unrelated to Hebrew Bible usages.[5]
+
+The expression "the Son of man" appears 81 times in the Koine Greek of the four Gospels: 30 times in Matthew, 14 times in Mark, 25 times in Luke and 12 times in John.[3][8] However, the use of the definite article in "the Son of man" is novel, and before its use in the Canonical gospels, there are no records of its use in any of the surviving Greek documents of antiquity.[3]
+
+The interpretation of the use of "the Son of man" in the New Testament has proven to be challenging, and James D. G. Dunn and separately Delbert Burkett state that it is a prime example of the limits of New Testament interpretation because after 150 years of debate no consensus on its meaning has emerged.[1][2]
+
+Sixty-nine times in the Synoptic Gospels Jesus calls himself (the) "Son of man", a Greek expression which in its Aramaic (and Hebrew) background could be an oblique way for indicating the speaker's own self (e.g., Matt 8:20), or else simply mean "someone" or "a human being" (as in Ps 8:4, where it is a poetic variant for "man"). In Daniel 7:13-14 the "Son of man" seems to symbolize the angels (perhaps the archangel Michael) and/or the righteous and persecuted Jews who will be vindicated and given authority by God (Dan 7:18,21-22,27; 10:13,21; 12:1) rather than function as one individual, heavenly figure who represents the people.[18] What is clear from the evidence is that "Son of man" did not function in pre-Christian messianic expectations as a title for a deliverer expected to come in the last times. It was not even a sharply defined concept, with a specific content and reference. It could simply denote a member of the human race (Ps. 8:4) or be a way of pointing to a prophet's insignificance and finite dependence in the face of God's glory and infinite power. Therefore, God addresses Ezekiel ninety-three times as "son of man".[19]
+
+
+
+====================
+in world, the only hope for eternal life is his children. 
+Children is the transission of life. 
+the most lovely son is actually the eternal life. 
+
+The son of God represents his perfection. 
+the son of men represents our eternal life.
+
+
+
+
+
+
+
+</pre>

@@ -1,0 +1,178 @@
+<html>
+	<head>
+		<title onclick="alert();">ctxt</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!------->
+		<base target="_blank" />
+		<script src="../../../../../tablesorter_master/js/jquery.tablesorter.js"></script><script src="../../../../../Hebrew2/nodjs/noduti/js/table_Indexer.js"></script><script src="../../../myjs/goto_editor.js"></script>
+		<style type="text/css">
+body {font-family: 'Times New Roman';
+        height: 100%;
+        width: 595px;
+        background-color:#ffffff;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-size: 100%;
+
+        border: 1px solid #eeeeff;
+    }		
+#_MenuPanel{
+position: fixed;
+left: 10px;
+top: 0px;
+}
+
+.fixedcol{
+	position: absolute;
+	background-color: #999999;
+}
+.fixedcol2, thead{
+	background-color: #999999;
+}
+.fixedcol2{
+	background-color: #eeeeee;
+}
+.catlog{
+	background-color: #cccccc;
+}
+.strongs{
+	background-color: #ffffff;
+}
+.Top_Horz{
+	color: blue;
+}
+.All_Top_Horz{
+	background-color: red;
+}
+.leftbox{
+  background-color: #ff0000;
+}
+.tablefloatheb {float: right; margin: 2px;border-collapse: false;background-color: #eeeeee }
+.hebrew
+{
+    FONT-SIZE: 23px;
+    COLOR: #001320;
+    LINE-HEIGHT: 33px;
+    font-family: Ezra SIL, SBL Hebrew, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, Cardo, Arial, Helvetica, Sans-serif;
+    TEXT-DECORATION: none;
+}		</style>
+		<script>
+$(function(){
+    $(".narration").toggle();
+    $(".TheTitle").click(function(){
+        $(".narration").toggle();
+    } );
+    $("#strongsCodes").click(function(){
+    	$(".strongs, .translit").slideToggle();
+    });
+
+    $("body").click(function(){
+    	$("#_edit").slideToggle();
+    });
+
+    $("#relativeFrqRate").click(function(){
+    	cal_relativeFrqRate();
+    });
+
+
+    $(".fixedcol2").click(function(){
+    	alert();
+    });
+
+});/////////
+
+$(document).ready(function(){ 
+	goto_editor("_edit_url");
+	sort_table();
+});//
+function sort_table(){
+	$("table").tablesorter({
+    //  theme: 'blue',
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true,  
+        widgets: ['columns','output', ],//'zebra', 'editable'
+    });	
+}
+
+
+</script>
+	</head>
+	<body>
+		<p id="_MenuPanel">
+			<br />
+			<a id="_edit_url">...</a><br />
+			<a id="indxer">indxer</a></p>
+		<!--------------------------><!--------------------------><!-------------------------->
+		<p style="text-align: center;">
+			Chinese lying</p>
+		<p>
+			&nbsp;</p>
+		<p>
+				龙的传人
+				《周易》有&ldquo;飞龙在天&rdquo;
+				龙是至高无上的权利的象征，皇帝自认为是&ldquo;真龙天子&rdquo;。他的身体称为&ldquo;龙体&rdquo;，他穿的衣服是&ldquo;龙袍&rdquo;，他坐的椅子是&ldquo;龙椅&rdquo;&hellip;&hellip;故宫里单是太和殿，便装饰有一万三千多条龙。
+				
+				但龙的形象并非帝王所专有，在老百姓的心目中，龙又象征着自由欢腾和完美。所谓&ldquo;金龙献瑞&rdquo;、&ldquo;龙凤呈祥&rdquo;、&ldquo;龙飞凤舞&rdquo;、&ldquo;龙腾虎跃&rdquo;，说的就是这种祥和幸福、欢腾自由的景象。
+				
+				
+		</p>
+		<p>
+				炎黄子孙   
+			
+				《史记》《五帝本纪》	
+				轩辕之时，神农氏世衰。诸侯相侵伐，暴虐百姓，而神农氏弗能征。于是轩辕乃习用干戈，以征不享，诸侯咸来宾从。而蚩尤最为暴，莫能伐。炎帝欲侵陵诸侯，诸侯咸归轩辕。轩辕乃修德振兵，治五气，艺五种，抚万民，度四方，教熊罴貔貅貙虎，以与炎帝战于阪泉之野。三战然后得其志。蚩尤作乱，不用帝命。于是黄帝乃徵师诸侯，与蚩尤战于涿鹿之野，遂禽杀蚩尤。而诸侯咸尊轩辕为天子，代神农氏，是为黄帝。天下有不顺者，黄帝从而征之，平者去之，披山通道，未尝宁居。
+				
+				
+
+		</p>
+		<p>
+				天下兴亡，匹夫有责
+		</p>
+
+		<p>
+				爱国主义: 集中表现为民族自尊心和民族自信心，为保卫祖国和争取祖国的独立富强而献身的奋斗精神。对祖国的成就和文化感到自豪；强烈希望保留祖国的特色和文化基础；对祖国其他同胞的认同感。&ldquo;爱国主义&rdquo;与&ldquo;民族主义&rdquo;有着紧密的联系
+		
+		</p>
+
+
+
+
+
+		<p>
+
+				两信条
+				中国的土地可以征服不可以断送！
+				中国的人民可以杀戮不可以低头！
+				国亡了，同胞起来呀
+				<a href="http://news.ifeng.com/history/special/wusiyundong/mingyun/200905/0502_6265_1136660.shtml">1</a>
+				
+				<a href="https://baike.baidu.com/item/%E7%BD%97%E5%AE%B6%E4%BC%A6/2364975">2</a>
+					
+					
+
+		</p>
+
+
+
+
+			
+			
+		
+
+			
+
+			
+			
+			
+			
+			
+			
+
+
+
+	
+	</body>
+</html>
