@@ -1,6 +1,6 @@
 <html>
 
-<head>  
+<head>
   <title>SGift</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <META name="viewport" content="width=device-witdh, initial-scale=1, maximum-scale=1, user-scale=0">
@@ -13,25 +13,29 @@
 
 
   <style>
-    .choiceBtn, .btn {
+    .choiceBtn,
+    .btn {
       background-color: #f0f0f0;
     }
 
     .hili {
       background-color: chartreuse;
     }
-    .sel{
-      background-color: chartreuse;
+
+    .mark {
+      background-color: yellowgreen;
     }
 
     .denote {
       font-size: 11px;
     }
-    #result{
-      height:600px;
+
+    #result {
+      height: 600px;
     }
-    table{
-      background-color:mintcream;
+
+    table {
+      background-color: mintcream;
     }
   </style>
   <script>
@@ -49,7 +53,7 @@
       var str = ""
       spiritualGiftAccessment_Desc.forEach(function (val, i) {
         console.log(val);
-        str += `<tr><td>${1 + i}</td><td>${val}<br>${radios}</td></tr>`;
+        str += `<tr><td class='num'>${1 + i}</td><td>${val}<br>${radios}</td></tr>`;
       });
 
 
@@ -63,14 +67,21 @@
         </tbody>
         </table>`;
 
-      $("#holder").append(stb).find(".choiceBtn").bind("click", function () {
+      var tab = $("#holder").append(stb);
+      $(tab).find(".choiceBtn").bind("click", function () {
         $(this).parent().find(".hili").removeClass("hili");
         $(this).addClass("hili");
         var tit = $(this).attr("title");
         $(this).parent().find(".denote").text(tit);
 
+        $(this).parentsUntil("table").find(".mark").removeClass("mark");
+        $(this).parent().prev().addClass("mark");
       });
-    };
+      $(tab).find(".num").bind("click", function () {
+        $(this).toggleClass("mark");
+      });
+    };///////////////
+
 
     function evaluateAccessment() {
       var arr = [];
@@ -121,8 +132,8 @@
         </tbody>
         </table>`;
 
-      $("#result").html(stb).find("tr").bind("click",function(){
-        $(this).toggleClass("sel");
+      $("#result").html(stb).find("tr").bind("click", function () {
+        $(this).toggleClass("mark");
       });
     }
   </script>
