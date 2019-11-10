@@ -128,19 +128,20 @@
       var keys = Object.keys(spiritualGiftAccessment_Key);
       arr.forEach(function (val, i) {
         console.log(val);
-        var maxMark = "";
-        if (max == val) {
+        var maxMark = "", notes="";
+        if (max == val && val > 0) {
           maxMark = "class='max' title='strong gift'";
+          notes="Top Spiritual Gift";
         }
 
-        str += `<tr ${maxMark}><td>${1 + i}</td><td>${keys[i]}</td><td>${spiritualGiftAccessment_Key[keys[i]]}</td><td>${val}</td></tr>`;
+        str += `<tr ><td>${1 + i}</td><td>${keys[i]}</td><td>${spiritualGiftAccessment_Key[keys[i]]}</td><td ${maxMark}>${val}</td><td>${notes}</td></tr>`;
       });
 
 
       var stb = `
       <table border='1' id="calcScore">
         <caption> Spiritual Gifts Accessment Key</caption>
-        <thead><tr><th>#</th><th>Key</th><th>Desc</th><th>Score</th></tr></thead>
+        <thead><tr><th>#</th><th>Key</th><th>Desc</th><th>Score</th><th>Notes</th></tr></thead>
         <tbody>
           ${str}
         </tbody>
