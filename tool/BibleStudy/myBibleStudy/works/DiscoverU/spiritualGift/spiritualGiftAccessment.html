@@ -20,6 +20,9 @@
     .hili {
       background-color: chartreuse;
     }
+    .sel{
+      background-color: chartreuse;
+    }
 
     .denote {
       font-size: 11px;
@@ -110,7 +113,7 @@
 
 
       var stb = `
-      <table border='1'>
+      <table border='1' id="calcScore">
         <caption> Spiritual Gifts Accessment Key</caption>
         <thead><tr><th>#</th><th>Key</th><th>Desc</th><th>Score</th></tr></thead>
         <tbody>
@@ -118,7 +121,9 @@
         </tbody>
         </table>`;
 
-      $("#result").html(stb);
+      $("#result").html(stb).find("tr").bind("click",function(){
+        $(this).toggleClass("sel");
+      });
     }
   </script>
 </head>
