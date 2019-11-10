@@ -1,0 +1,135 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>
+    SGift
+  </title>
+  <link rel="stylesheet" xhref="images/common.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <script src="./spiritualGiftAccessment_Desc.json.js"></script>
+  <script src="./spiritualGiftAccessment_Key.json.js"></script>
+
+
+  <style>
+    .choiceBtn, .btn {
+      background-color: #f0f0f0;
+    }
+
+    .hili {
+      background-color: chartreuse;
+    }
+
+    .denote {
+      font-size: 11px;
+    }
+    #result{
+      height:600px;
+    }
+    table{
+      background-color:mintcream;
+    }
+  </style>
+  <script>
+    $(function () {
+      gen_tab();
+    });
+
+    function gen_tab() {
+      var radios = `
+          <button class='choiceBtn' title='Always, definiely true.'>3</<button>
+          <button class='choiceBtn' title='Most of the time, usually true.'>2</<button>
+          <button class='choiceBtn' title='Some of the time, once in a while.'>1</<button>
+          <button class='choiceBtn hili' title='Not at all, never.'>0</button>
+            <a class='denote'></a>`;
+      var str = ""
+      spiritualGiftAccessment_Desc.forEach(function (val, i) {
+        console.log(val);
+        str += `<tr><td>${1 + i}</td><td>${val}<br>${radios}</td></tr>`;
+      });
+
+
+      var stb = `
+      <table border='1'>
+        <caption> Spiritual Gifts Accessment </caption>
+        <thead><tr><th>#</th><th>
+          Self-Accessement</th></tr></thead>
+        <tbody>
+          ${str}
+        </tbody>
+        </table>`;
+
+      $("#holder").append(stb).find(".choiceBtn").bind("click", function () {
+        $(this).parent().find(".hili").removeClass("hili");
+        $(this).addClass("hili");
+        var tit = $(this).attr("title");
+        $(this).parent().find(".denote").text(tit);
+
+      });
+    };
+
+    function evaluateAccessment() {
+      var arr = [];
+      $(".hili").each(function (i) {
+        var selv = $(this).text().trim();
+        console.log(i, selv);
+        arr.push(parseInt(selv));
+      });
+
+      var EvalArr = [];
+      for (var j = 0; j < arr.length; j++) {
+        var sum = 0;
+        for (var k = 0; k < arr.length; k += 19) {
+          if (k >= arr.length) conitune;
+          var m = j + k;
+          if (m >= arr.length) {
+            console.log("-------", m)
+            j = arr.length + 1;
+            break;
+          }
+          console.log(m)
+          sum += arr[m];
+        };
+        if (j >= arr.length) break;
+        console.log("sum ===", sum);
+        EvalArr.push(sum);
+      }
+      gen_result(EvalArr);
+    };
+
+
+    function gen_result(arr) {
+      var str = "";
+      var keys = Object.keys(spiritualGiftAccessment_Key);
+      arr.forEach(function (val, i) {
+        console.log(val);
+
+        str += `<tr><td>${1 + i}</td><td>${keys[i]}</td><td>${spiritualGiftAccessment_Key[keys[i]]}</td><td>${val}</td></tr>`;
+      });
+
+
+      var stb = `
+      <table border='1'>
+        <caption> Spiritual Gifts Accessment Key</caption>
+        <thead><tr><th>#</th><th>Key</th><th>Desc</th><th>Score</th></tr></thead>
+        <tbody>
+          ${str}
+        </tbody>
+        </table>`;
+
+      $("#result").html(stb);
+    }
+  </script>
+</head>
+
+<body>
+  <div id="holder"></div>
+  <div id="ctr">
+    <button onclick="evaluateAccessment();" class="btn">Evaluate the Accessment</button>
+  </div>
+  <div id="result"></div>
+
+</body>
+
+</html>
