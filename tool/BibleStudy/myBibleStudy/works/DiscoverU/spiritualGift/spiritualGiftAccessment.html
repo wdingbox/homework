@@ -74,7 +74,7 @@
         var tit = $(this).attr("title");
         $(this).parent().find(".denote").text(tit);
 
-        $(this).parentsUntil("table").find(".mark").removeClass("mark");
+        //$(this).parentsUntil("table").find(".mark").removeClass("mark");
         $(this).parent().prev().addClass("mark");
       });
       $(tab).find(".num").bind("click", function () {
@@ -112,14 +112,25 @@
       gen_result(EvalArr);
     };
 
+    function get_max(arr) {
+      var max = -1;
+      arr.forEach(function (val) {
+        if (val > max) max = val;
+      });
+      return max;
+    }
 
     function gen_result(arr) {
-      var str = "";
+      var str = "", max = get_max(arr);
       var keys = Object.keys(spiritualGiftAccessment_Key);
       arr.forEach(function (val, i) {
         console.log(val);
+        var maxMark = "";
+        if (max == val) {
+          maxMark = "class='mark' title='strong gift'";
+        }
 
-        str += `<tr><td>${1 + i}</td><td>${keys[i]}</td><td>${spiritualGiftAccessment_Key[keys[i]]}</td><td>${val}</td></tr>`;
+        str += `<tr ${maxMark}><td>${1 + i}</td><td>${keys[i]}</td><td>${spiritualGiftAccessment_Key[keys[i]]}</td><td>${val}</td></tr>`;
       });
 
 
