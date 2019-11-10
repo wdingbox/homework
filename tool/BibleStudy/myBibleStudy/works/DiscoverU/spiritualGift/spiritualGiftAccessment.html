@@ -23,6 +23,9 @@
     }
 
     .mark {
+      background-color:lightslategrey;
+    }
+    .max {
       background-color: yellowgreen;
     }
 
@@ -127,7 +130,7 @@
         console.log(val);
         var maxMark = "";
         if (max == val) {
-          maxMark = "class='mark' title='strong gift'";
+          maxMark = "class='max' title='strong gift'";
         }
 
         str += `<tr ${maxMark}><td>${1 + i}</td><td>${keys[i]}</td><td>${spiritualGiftAccessment_Key[keys[i]]}</td><td>${val}</td></tr>`;
@@ -144,7 +147,7 @@
         </table>`;
 
       $("#result").html(stb).find("tr").bind("click", function () {
-        $(this).toggleClass("mark");
+        $(this).toggleClass("max");
       });
     }
   </script>
