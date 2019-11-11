@@ -78,7 +78,12 @@
         $(this).parent().find(".hili").removeClass("hili");
         $(this).addClass("hili");
         var tit = $(this).attr("title");
+        
+        $(this).parent().find(".denote").slideUp(1);
         $(this).parent().find(".denote").text(tit);
+        $(this).parent().find(".denote").slideDown(1000);
+        
+        //$(this).parent().find(".denote").slideUp(3000);
 
         //$(this).parentsUntil("table").find(".mark").removeClass("mark");
         $(this).parent().prev().addClass("mark");
