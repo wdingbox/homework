@@ -1,4 +1,4 @@
-var spiritualGiftAccessment_Desc =
+var spiritualGiftAssessment_Desc =
 [
     "I like to organize people, tasks, and events.",
 

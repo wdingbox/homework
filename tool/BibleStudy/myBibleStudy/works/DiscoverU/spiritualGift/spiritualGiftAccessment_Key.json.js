@@ -1,4 +1,4 @@
-var spiritualGiftAccessment_Key =
+var spiritualGiftAssessment_Key =
 {
 "A":"Administration", 
 "B":"Apostleship (i.e. Missions)",
