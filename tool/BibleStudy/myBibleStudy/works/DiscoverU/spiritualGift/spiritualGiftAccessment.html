@@ -227,6 +227,9 @@
       $("#result").html("");
     }
     function exportFunction() {
+      if(false == confirm("Are you sure to save current choice data?")){
+        return;
+      }
       $("#CopyTextToClipboard").val("");
       var arr = get_choice_arr();
       var str = JSON.stringify(arr);
