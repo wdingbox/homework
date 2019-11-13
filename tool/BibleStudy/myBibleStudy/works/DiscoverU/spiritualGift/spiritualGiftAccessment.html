@@ -204,6 +204,9 @@
     }
 
     function importFunction() {
+      if(false == confirm("To load data will erase your current data!\nAre you sure to continue?")){
+        return;
+      }
       var val = localStorage.lastname;
       if(!val){
         val = prompt("Paste your choice data", "");
@@ -214,12 +217,14 @@
       if (arr.length <= 100) {
         return;
       }
+ 
       $(".hili").removeClass("hili");
       $("table tbody").find("tr").each(function (i) {
         var val = parseInt(arr[i]);
         var idx = 3 - val;
         $(this).find(`.choiceBtn:eq(${idx})`).addClass("hili");
       });
+      $("#result").html("");
     }
     function exportFunction() {
       $("#CopyTextToClipboard").val("");
