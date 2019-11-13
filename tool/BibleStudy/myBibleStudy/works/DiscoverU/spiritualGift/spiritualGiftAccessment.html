@@ -92,7 +92,7 @@
             <a class='denote'></a>`;
       var str = ""
       spiritualGiftAssessment_Desc.forEach(function (val, i) {
-        console.log(val);
+        //console.log(val);
         str += `<tr><td class='num'>${1 + i}</td><td>${val}<br>${radios}</td></tr>`;
       });
 
@@ -145,15 +145,15 @@
           if (k >= arr.length) conitune;
           var m = j + k;
           if (m >= arr.length) {
-            console.log("-------", m)
+            //console.log("-------", m)
             j = arr.length + 1;
             break;
           }
-          console.log(m)
+          //console.log(m)
           sum += arr[m];
         };
         if (j >= arr.length) break;
-        console.log("sum ===", sum);
+        //console.log("sum ===", sum);
         EvalArr.push(sum);
       }
       return EvalArr;
@@ -176,7 +176,7 @@
       var str = "", max = get_max(Evarr);
       var keys = Object.keys(spiritualGiftAssessment_Key);
       Evarr.forEach(function (val, i) {
-        console.log(val);
+        //console.log(val);
         var maxMark = "", notes = "";
         if (max == val && val > 0) {
           maxMark = "class='max' title='strong gift'";
