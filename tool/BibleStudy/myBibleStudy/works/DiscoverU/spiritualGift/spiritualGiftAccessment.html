@@ -13,21 +13,49 @@
 
 
   <style>
+    @media print {
+      footer {
+        page-break-after: always;
+      }
+    }
+
+    #menu {
+      position: fixed;
+      top: 0px;
+      right: 10px;
+      width: 100%;
+      background-color: lightgrey;
+    }
+
+    .portalBtn {
+      float: right;
+    }
+
+    #CopyTextToClipboard {
+      visibility: visible;
+      position: fixed;
+      left: -130px;
+    }
+
     .choiceBtn,
     .btn {
       background-color: #f0f0f0;
     }
-    #ctr .btn{
-      font-size:22px;
+
+    #ctr .btn {
+      font-size: 22px;
     }
 
     .hili {
       background-color: chartreuse;
+      border-radius: 50%;
+      border: 1px solid black;
     }
 
     .mark {
-      background-color:lightslategrey;
+      background-color: lavender;
     }
+
     .max {
       background-color: yellowgreen;
     }
@@ -43,6 +71,11 @@
     table {
       background-color: mintcream;
       border-collapse: collapse;
+
+    }
+
+    table.assessmentTable {
+      margin-top: 100px;
     }
   </style>
   <script>
@@ -65,8 +98,8 @@
 
 
       var stb = `
-      <table border='1'>
-        <caption> Spiritual Gifts Assessment </caption>
+      <table class='assessmentTable' border='1'>
+        <caption>Discover U – S.H.A.P.E. Spiritual Gifts Assessment.</caption>
         <thead><tr><th>#</th><th>
           Self-Assessment</th></tr></thead>
         <tbody>
@@ -79,11 +112,11 @@
         $(this).parent().find(".hili").removeClass("hili");
         $(this).addClass("hili");
         var tit = $(this).attr("title");
-        
+
         $(this).parent().find(".denote").slideUp(1);
         $(this).parent().find(".denote").text(tit);
         $(this).parent().find(".denote").slideDown(1000);
-        
+
         //$(this).parent().find(".denote").slideUp(3000);
 
         //$(this).parentsUntil("table").find(".mark").removeClass("mark");
@@ -95,14 +128,16 @@
     };///////////////
 
 
-    function evaluateAssessment() {
+    function get_choice_arr() {
       var arr = [];
       $(".hili").each(function (i) {
         var selv = $(this).text().trim();
-        console.log(i, selv);
+        //console.log(i, selv);
         arr.push(parseInt(selv));
       });
-
+      return arr;
+    }
+    function calc_choice_arr(arr) {
       var EvalArr = [];
       for (var j = 0; j < arr.length; j++) {
         var sum = 0;
@@ -121,7 +156,12 @@
         console.log("sum ===", sum);
         EvalArr.push(sum);
       }
-      gen_result(EvalArr);
+      return EvalArr;
+    }
+    function evaluateAssessment() {
+      var arr = get_choice_arr();
+      var evr = calc_choice_arr(arr);
+      gen_result(arr, evr);
     };
 
     function get_max(arr) {
@@ -132,15 +172,15 @@
       return max;
     }
 
-    function gen_result(arr) {
-      var str = "", max = get_max(arr);
+    function gen_result(Charr, Evarr) {
+      var str = "", max = get_max(Evarr);
       var keys = Object.keys(spiritualGiftAssessment_Key);
-      arr.forEach(function (val, i) {
+      Evarr.forEach(function (val, i) {
         console.log(val);
-        var maxMark = "", notes="";
+        var maxMark = "", notes = "";
         if (max == val && val > 0) {
           maxMark = "class='max' title='strong gift'";
-          notes="Top Spiritual Gift";
+          notes = "Top Spiritual Gift";
         }
 
         str += `<tr ><td>${1 + i}</td><td>${keys[i]}</td><td>${spiritualGiftAssessment_Key[keys[i]]}</td><td ${maxMark}>${val}</td><td>${notes}</td></tr>`;
@@ -156,20 +196,55 @@
         </tbody>
         </table>`;
 
+      //stb += `Copy your Choice Data:<br><textarea readonly>${JSON.stringify(Charr)}</textarea>`;
+
       $("#result").html(stb).find("tr").bind("click", function () {
         $(this).toggleClass("max");
       });
+    }
+
+    function importFunction() {
+      var val = prompt("Paste your choice data.", "");
+      if (!val) return;
+      var arr = JSON.parse(val);
+      console.log(arr);
+      if (arr.length <= 100) {
+        return;
+      }
+      $(".hili").removeClass("hili");
+      $("table tbody").find("tr").each(function (i) {
+        var val = parseInt(arr[i]);
+        var idx = 3 - val;
+        $(this).find(`.choiceBtn:eq(${idx})`).addClass("hili");
+      });
+    }
+    function exportFunction() {
+      $("#CopyTextToClipboard").val("");
+      var arr = get_choice_arr();
+      var str = JSON.stringify(arr);
+      var ret = prompt("Copy your choice data to save anywhere for reuse.", str);
+      console.log(ret);
+      if (!ret) return;
+      $("#CopyTextToClipboard").val(str);
+      $("#CopyTextToClipboard").select();
+      document.execCommand("copy");
     }
   </script>
 </head>
 
 <body>
-  <div id="holder"></div>
-  <hr/>
-  <div id="ctr">
-    <button onclick="evaluateAssessment();" class="btn">Calculate the Assessment Scores</button>
+  <div id="menu">
+    <input id="CopyTextToClipboard"></input>
+    <button class="portalBtn" onclick="importFunction()">Import your Choice Data</button>
+    <button class="portalBtn" onclick="exportFunction()">Export your Choice Data</button>
   </div>
-  <hr/>
+
+  <div id="holder"></div>
+  <hr />
+  <div id="ctr">
+    <button onclick="evaluateAssessment();" class="btn">Calculate the Assessment Scores</button><br>
+  </div>
+  <hr  style="page-break-before: always" />
   <div id="result"></div>
 
 </body>
