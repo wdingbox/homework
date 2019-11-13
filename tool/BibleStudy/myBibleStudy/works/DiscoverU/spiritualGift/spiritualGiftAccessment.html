@@ -204,7 +204,10 @@
     }
 
     function importFunction() {
-      var val = prompt("Paste your choice data.", "");
+      var val = localStorage.lastname;
+      if(!val){
+        val = prompt("Paste your choice data", "");
+      }
       if (!val) return;
       var arr = JSON.parse(val);
       console.log(arr);
@@ -222,6 +225,10 @@
       $("#CopyTextToClipboard").val("");
       var arr = get_choice_arr();
       var str = JSON.stringify(arr);
+      localStorage.lastname = str;
+      if(localStorage.lastname && localStorage.lastname.length>100){
+        return;
+      }
       var ret = prompt("Copy your choice data to save anywhere for reuse.", str);
       console.log(ret);
       if (!ret) return;
@@ -235,8 +242,8 @@
 <body>
   <div id="menu">
     <input id="CopyTextToClipboard"></input>
-    <button class="portalBtn" onclick="importFunction()">Import your Choice Data</button>
-    <button class="portalBtn" onclick="exportFunction()">Export your Choice Data</button>
+    <button class="portalBtn" onclick="importFunction()" title="Load your last saved data.">Load</button>
+    <button class="portalBtn" onclick="exportFunction()" title="Save your choice data.">Save</button>
   </div>
 
   <div id="holder"></div>
