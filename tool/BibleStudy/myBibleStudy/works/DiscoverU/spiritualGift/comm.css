@@ -1,0 +1,66 @@
+
+    @media print {
+      footer {
+        page-break-after: always;
+      }
+    }
+
+    #menu {
+      position: fixed;
+      top: 0px;
+      right: 10px;
+      width: 100%;
+      background-color: lightgrey;
+    }
+
+    .portalBtn {
+      float: right;
+    }
+
+    #CopyTextToClipboard {
+      visibility: visible;
+      position: fixed;
+      left: -130px;
+    }
+
+    .choiceBtn,
+    .btn {
+      background-color: #f0f0f0;
+    }
+
+    #ctr .btn {
+      font-size: 22px;
+    }
+
+    .hili {
+      background-color: chartreuse;
+      border-radius: 50%;
+      border: 1px solid black;
+    }
+
+    .mark {
+      background-color: lavender;
+    }
+
+    .max {
+      background-color: yellowgreen;
+    }
+
+    .denote {
+      font-size: 11px;
+    }
+
+    #result {
+      height: 900px;
+    }
+
+    table {
+      background-color: mintcream;
+      border-collapse: collapse;
+
+    }
+
+    table.assessmentTable {
+      margin-top: 100px;
+    }
+ 
