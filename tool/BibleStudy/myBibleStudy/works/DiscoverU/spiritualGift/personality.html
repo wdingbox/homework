@@ -1,0 +1,535 @@
+<html>
+
+<head>
+    <title>SGift</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META name="viewport" content="width=device-witdh, initial-scale=1, maximum-scale=1, user-scale=0">
+
+    <link rel="stylesheet" xhref="images/common.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script src="spiritualGiftAccessment_Key.json.js?x=1"></script>
+    <script src="spiritualGiftAccessment_Desc.json.js?x=1"></script>
+
+
+    <style>
+        @media print {
+            footer {
+                page-break-after: always;
+            }
+        }
+
+        body {}
+
+        #menu {
+            position: fixed;
+            top: 0px;
+            right: 10px;
+            width: 100%;
+            background-color: lightgrey;
+        }
+
+        .portalBtn {
+            float: right;
+        }
+
+        #CopyTextToClipboard {
+            visibility: visible;
+            position: fixed;
+            left: -130px;
+        }
+
+        .choiceBtn,
+        .btn {
+            background-color: #f0f0f0;
+        }
+
+        #ctr .btn {
+            font-size: 22px;
+        }
+
+        .hili {
+            background-color: chartreuse;
+            border-radius: 50%;
+            border: 1px solid black;
+        }
+
+        .mark {
+            background-color: lavender;
+        }
+
+        .max {
+            background-color: yellowgreen;
+        }
+
+        .denote {
+            font-size: 11px;
+        }
+
+        #result {
+            height: 900px;
+        }
+
+        table {
+            background-color: mintcream;
+            border-collapse: collapse;
+
+        }
+
+        table.assessmentTable {
+            margin-top: 100px;
+
+        }
+
+        .choiceBtns {
+            width: 150px;
+        }
+
+        .assessment {
+            width: 595px;
+            font-size: 20;
+        }
+
+        .leftside {
+            text-align: right;
+        }
+
+        .choiceBtns,
+        .score {
+            text-align: center;
+        }
+    </style>
+    <script>
+        $(function () {
+            init();
+        });
+        function calc(_this, ptype) {
+            const SCORES = {
+                "Energized": ["TASK-ORIENTED", "PEOPLE-ORIENTED"],
+                "Organized": ["UNSTRUCTURED", "STRUCTURED"]
+            }
+            var arr = [];
+            $(_this).parentsUntil("table").find("td.choiceBtns").each(function (i) {
+                var val = $(this).find(".hili").text();
+                if (val.length == 0) val = 0;
+                arr.push(parseInt(val));
+            });
+            var tot = 0, bFinished = true;
+            arr.forEach(function (iv) {
+                tot += parseInt(iv);
+                if (iv == 0) bFinished = false;
+            });
+            if (bFinished) {
+                var ss = "";
+                if (tot >= 7 && tot <= 17) {
+                    ss += SCORES[ptype][0]; //"<br>TASK-ORIENTED";
+                }
+                else if (tot >= 18 && tot <= 28) {
+                    ss += SCORES[ptype][1]; //"<br>PEOPLE-ORIENTED";
+                }
+                var ss = `Total Score = <a>${tot}</a><br/><a class=''>${ss}</a><br/>`;
+                $(_this).parentsUntil("table").find("td.score").html(ss);
+            }
+        };
+        function init() {
+            $(".choiceBtns").each(function () {
+                var btns = `<button>1</button><button>2</button><button>3</button><button>4</button>`;
+                $(this).html(btns).find("button").bind("click", function () {
+                    $(this).parent().find(".hili").removeClass("hili");
+                    $(this).addClass("hili");
+                    var val = $(this).text();
+                    var iva = parseInt(val);
+                    var ptype = $(this).parentsUntil("table").parent().find("caption").attr("ptype");
+                    calc(this,ptype);
+                });
+            });
+        };
+    </script>
+</head>
+
+<body>
+
+
+
+
+    <table class="Energized" border="1" cellspacing="0" cellpadding="0" style="">
+        <caption ptype="Energized">P e r s o n a l i t y</caption>
+        <thead>
+            <tr>
+                <th width="25" align="top">
+                    #
+                </th>
+                <th colspan="3" align="center">
+                    How are you Energized?
+                </th>
+            </tr>
+        </thead>
+        <tbody ptype="Energized">
+            <tr>
+                <td width="25" rowspan="2" align="top" style="">
+                    1
+                </td>
+                <td class="assessment" colspan="3" align="top">
+                    I'm more comfortable:
+                </td>
+            </tr>
+            <tr>
+                <td class="leftside">
+                    doing things for people
+                </td>
+                <td class="choiceBtns">
+                    <button>1</button> <button>2</button> <button>3</button> <button>4</button>
+
+                </td>
+                <td width="228" align="top">
+                    being with people
+                </td>
+            </tr>
+            <tr>
+                <td width="25" rowspan="2" align="top">
+                    2
+                </td>
+                <td class="assessment" colspan="3" align="top">
+                    When doing a task, I tend to:
+                </td>
+            </tr>
+            <tr>
+                <td class="leftside">
+                    focus on the goal
+                </td>
+                <td class="choiceBtns">
+
+
+
+                </td>
+                <td width="228" align="top">
+                    focus on the relationship
+                </td>
+            </tr>
+            <tr>
+                <td width="25" rowspan="2" align="top">
+                    3
+                </td>
+                <td class="assessment" colspan="3" align="top">
+                    I get more excited about:
+                </td>
+            </tr>
+            <tr>
+                <td class="leftside">
+                    advancing a cause
+                </td>
+                <td class="choiceBtns">
+
+
+
+                </td>
+                <td width="228" align="top">
+                    creating a community<b>
+
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td width="25" rowspan="2" align="top">
+                    4
+                </td>
+                <td class="assessment" colspan="3" align="top">
+                    I feel I’ve accomplished something when I’ve:
+                </td>
+            </tr>
+            <tr>
+                <td class="leftside">
+                    gotten a job done
+                </td>
+                <td class="choiceBtns">
+
+
+
+                </td>
+                <td width="228" align="top">
+                    built a relationship
+                </td>
+            </tr>
+            <tr>
+                <td width="25" rowspan="2" align="top">
+                    5
+                </td>
+                <td class="assessment" colspan="3" align="top">
+                    It is more important to start a meeting:
+                </td>
+            </tr>
+            <tr>
+                <td class="leftside">
+                    on time
+                </td>
+                <td class="choiceBtns">
+
+
+
+                </td>
+                <td width="228" align="top">
+                    when everyone gets there
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25" rowspan="2" align="top">
+                    6
+                </td>
+                <td class="assessment" colspan="3" align="top">
+                    I’m more concerned with:
+                </td>
+            </tr>
+            <tr>
+                <td class="leftside">
+                    meeting a deadline
+                </td>
+                <td class="choiceBtns">
+
+
+
+                </td>
+                <td width="228" align="top">
+                    maintaining the team
+                </td>
+            </tr>
+            <tr>
+                <td width="25" rowspan="2" align="top">
+                    7
+                </td>
+                <td class="assessment" colspan="3" align="top">
+                    I place higher value on:
+
+
+                </td>
+            </tr>
+            <tr>
+                <td class="leftside">
+                    action
+
+                </td>
+                <td class="choiceBtns">
+
+
+
+                </td>
+                <td width="228" align="top">
+                    communication
+                </td>
+            </tr>
+
+
+            <tr>
+                <td width="" align="top">
+
+
+                </td>
+                <td class="leftside">
+
+
+                </td>
+                <td class="score" align="top">
+
+
+                    --
+
+                </td>
+                <td width="228" align="top">
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <p />
+
+    <table class="Organized" border="1" cellspacing="0" cellpadding="0" style="">
+        <caption ptype="Organized"> </caption>
+        <thead>
+            <tr>
+                <th width="25" align="top">
+                    #
+                </th>
+                <th colspan="3" align="center">
+                    How are you Organized?
+                </th>
+            </tr>
+        </thead>
+        <tbody ptype="Organized">
+            <tr>
+                <td width="25" rowspan="2" align="top" style="">
+                    1
+                </td>
+                <td class="assessment" colspan="3" align="top">
+                    While on vacation, I prefer to:
+                </td>
+            </tr>
+            <tr>
+                <td class="leftside">
+                    be spontaneous
+                </td>
+                <td class="choiceBtns">
+                    <button>1</button> <button>2</button> <button>3</button> <button>4</button>
+
+                </td>
+                <td width="228" align="top">
+                    follow a set plan
+                </td>
+            </tr>
+            <tr>
+                <td width="25" rowspan="2" align="top">
+                    2
+                </td>
+                <td class="assessment" colspan="3" align="top">
+                    I prefer to set guidelines that are:
+                </td>
+            </tr>
+            <tr>
+                <td class="leftside">
+                    general
+                </td>
+                <td class="choiceBtns">
+
+
+
+                </td>
+                <td width="228" align="top">
+                    specific
+                </td>
+            </tr>
+            <tr>
+                <td width="25" rowspan="2" align="top">
+                    3
+                </td>
+                <td class="assessment" colspan="3" align="top">
+                    I prefer to:
+                </td>
+            </tr>
+            <tr>
+                <td class="leftside">
+                    leave my options open
+                </td>
+                <td class="choiceBtns">
+
+
+
+                </td>
+                <td width="228" align="top">
+                    settle things now
+                </td>
+            </tr>
+            <tr>
+                <td width="25" rowspan="2" align="top">
+                    4
+                </td>
+                <td class="assessment" colspan="3" align="top">
+                    I prefer projects that have:
+                </td>
+            </tr>
+            <tr>
+                <td class="leftside">
+                    variety
+                </td>
+                <td class="choiceBtns">
+
+
+
+                </td>
+                <td width="228" align="top">
+                    routine
+                </td>
+            </tr>
+            <tr>
+                <td width="25" rowspan="2" align="top">
+                    5
+                </td>
+                <td class="assessment" colspan="3" align="top">
+                    I like to:
+                </td>
+            </tr>
+            <tr>
+                <td class="leftside">
+                    play it by ear
+                </td>
+                <td class="choiceBtns">
+
+
+
+                </td>
+                <td width="228" align="top">
+                    stick to a plan
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25" rowspan="2" align="top">
+                    6
+                </td>
+                <td class="assessment" colspan="3" align="top">
+                    I find routine:
+                </td>
+            </tr>
+            <tr>
+                <td class="leftside">
+                    boring
+                </td>
+                <td class="choiceBtns">
+
+
+
+                </td>
+                <td width="228" align="top">
+                    restful
+                </td>
+            </tr>
+            <tr>
+                <td width="25" rowspan="2" align="top">
+                    7
+                </td>
+                <td class="assessment" colspan="3" align="top">
+                    I accomplish tasks best:
+
+
+                </td>
+            </tr>
+            <tr>
+                <td class="leftside">
+                    by working it out as I go
+
+                </td>
+                <td class="choiceBtns">
+
+
+
+                </td>
+                <td width="228" align="top">
+                    by following a plan
+                </td>
+            </tr>
+
+
+            <tr>
+                <td width="" align="top">
+
+
+                </td>
+                <td class="leftside">
+
+
+                </td>
+                <td class="score" align="top">
+
+
+                    --
+
+                </td>
+                <td width="228" align="top">
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
