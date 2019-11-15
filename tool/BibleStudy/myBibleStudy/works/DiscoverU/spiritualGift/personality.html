@@ -105,18 +105,21 @@
         });
         function get_arr(_this){
             var arr = [];
-            $(_this).parentsUntil("table").find("td.choiceBtns").each(function (i) {
+            $("body").find("td.choiceBtns").each(function (i) {
                 var val = $(this).find(".hili").text();
                 if (val.length == 0) val = 0;
                 arr.push(parseInt(val));
             });
             return arr;
         }
-        function calc(arr, ptype) {
+        function calc(tarr, istart) {
             const SCORES = {
                 "Energized": ["TASK-ORIENTED", "PEOPLE-ORIENTED"],
-                "Organized": ["UNSTRUCTURED", "STRUCTURED"]
+                "Organized": ["UNSTRUCTURED", "STRUCTURED"],
+                0: ["TASK-ORIENTED", "PEOPLE-ORIENTED"],
+                1: ["UNSTRUCTURED", "STRUCTURED"]
             }
+            var arr = tarr.slice(7*istart,7+7*istart);
             
             var tot = 0, bFinished = true;
             arr.forEach(function (iv) {
@@ -126,13 +129,12 @@
             if (bFinished) {
                 var ss = "";
                 if (tot >= 7 && tot <= 17) {
-                    ss += SCORES[ptype][0]; //"<br>TASK-ORIENTED";
+                    ss += SCORES[istart][0]; //"<br>TASK-ORIENTED";
                 }
                 else if (tot >= 18 && tot <= 28) {
-                    ss += SCORES[ptype][1]; //"<br>PEOPLE-ORIENTED";
+                    ss += SCORES[istart][1]; //"<br>PEOPLE-ORIENTED";
                 }
                 var ss = `Total Score = <a>${tot}</a><br/><a class=''>${ss}</a><br/>`;
-                //$(_this).parentsUntil("table").find("td.score").html(ss);
             }
             return ss;
         };
@@ -142,10 +144,8 @@
                 $(this).html(btns).find("button").bind("click", function () {
                     $(this).parent().find(".hili").removeClass("hili");
                     $(this).addClass("hili");
-                    var val = $(this).text();
-                    var iva = parseInt(val);
-                    var ptype = $(this).parentsUntil("table").parent().find("caption").attr("ptype");
-                    var arr = get_arr(this);
+                    var ptype = $(this).parentsUntil("table").parent().index();
+                    var arr = get_arr();
                     var ss = calc(arr, ptype);
                     $(this).parentsUntil("table").find("td.score").html(ss);
                 });
@@ -348,8 +348,6 @@
         </tbody>
     </table>
 
-
-    <p />
 
     <table class="Organized" border="1" cellspacing="0" cellpadding="0" style="">
         <caption ptype="Organized"> </caption>
