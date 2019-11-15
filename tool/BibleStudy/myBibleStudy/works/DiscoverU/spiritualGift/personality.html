@@ -73,7 +73,8 @@
         table {
             background-color: mintcream;
             border-collapse: collapse;
-            margin-top: 20px;;
+            margin-top: 20px;
+            ;
 
         }
 
@@ -99,12 +100,15 @@
         .score {
             text-align: center;
         }
+        .score {
+            height: 40px;
+        }
     </style>
     <script>
         $(function () {
             init();
         });
-        function get_arr(_this){
+        function get_arr(_this) {
             var arr = [];
             $("body").find("td.choiceBtns").each(function (i) {
                 var val = $(this).find(".hili").text();
@@ -120,8 +124,8 @@
                 0: ["TASK-ORIENTED", "PEOPLE-ORIENTED"],
                 1: ["UNSTRUCTURED", "STRUCTURED"]
             }
-            var arr = tarr.slice(7*istart,7+7*istart);
-            
+            var arr = tarr.slice(7 * istart, 7 + 7 * istart);
+
             var tot = 0, bFinished = true;
             arr.forEach(function (iv) {
                 tot += parseInt(iv);
@@ -135,9 +139,9 @@
                 else if (tot >= 18 && tot <= 28) {
                     ss += SCORES[istart][1]; //"<br>PEOPLE-ORIENTED";
                 }
-                var ss = `Total Score = <a>${tot}</a><br/><a class=''>${ss}</a><br/>`;
+                var str2 = `Total Score = <a>${tot}</a><br/><a class=''>${ss}</a><br/>`;
             }
-            return ss;
+            return { str2: str2, tot: tot, ss: ss };
         };
         function init() {
             $(".choiceBtns").each(function () {
@@ -145,10 +149,11 @@
                 $(this).html(btns).find("button").bind("click", function () {
                     $(this).parent().find(".hili").removeClass("hili");
                     $(this).addClass("hili");
-                    var ptype = $(this).parentsUntil("table").parent().index();
+                    var itype = $(this).parentsUntil("table").parent().index();
                     var arr = get_arr();
-                    var ss = calc(arr, ptype);
-                    $(this).parentsUntil("table").find("td.score").html(ss);
+                    var ret = calc(arr, itype);
+                    $(this).parentsUntil("table").find("td.score").html(ret.str2);
+                    $(`.overall:eq(${itype})`).html(ret.ss);
                 });
             });
         };
@@ -339,7 +344,7 @@
                 <td class="score" align="top">
 
 
-                    --
+                    -<br>-
 
                 </td>
                 <td width="228" align="top">
@@ -527,7 +532,7 @@
                 <td class="score" align="top">
 
 
-                    --
+                    --<br>--
 
                 </td>
                 <td width="228" align="top">
@@ -536,6 +541,8 @@
             </tr>
         </tbody>
     </table>
+
+    <p>Overall Results: <a class="overall">-</a> / <a class="overall">-</a></p>
 </body>
 
 </html>
