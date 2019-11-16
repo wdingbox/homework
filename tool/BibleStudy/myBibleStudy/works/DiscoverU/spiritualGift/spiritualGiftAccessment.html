@@ -204,7 +204,7 @@
     }
 
     function importFunction() {
-      if(false == confirm("To load data will erase your current data!\nAre you sure to continue?")){
+      if(false == confirm("Load?")){
         return;
       }
       var val = localStorage.lastSpirit;
@@ -227,7 +227,7 @@
       $("#result").html("");
     }
     function exportFunction() {
-      if(false == confirm("Are you sure to save current choice data?")){
+      if(false == confirm("Save?")){
         return;
       }
       $("#CopyTextToClipboard").val("");
