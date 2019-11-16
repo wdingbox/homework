@@ -92,6 +92,7 @@
             sol+=`<h3>${skey}</h3><ol>`;
             var arr=obj[skey];
             arr.forEach(function(str){
+                str = str.replace("___________","<input class='inpstr'></input>")
                 sol+=`<li><input type='checkbox'><a>${str}</a></li>`;
             });
             sol+="</ol>";
@@ -110,28 +111,36 @@
         val = prompt("Paste your choice data", "");
       }
       if (!val) return;
-      var arr = JSON.parse(val);
-      console.log(arr);
-      if (arr.length <= 1) {
-        return;
-      }
+      var obj = JSON.parse(val);
+      console.log(obj);
 
+      var arr=obj.chkarr;
       $("input[type=checkbox]").each(function (i) {
         var val = (arr[i]);
         var b=!!val;
         $(this).attr('checked', b);
-        
+      });
+
+      var inparr=obj.inparr;
+      $(".inpstr").each(function (i) {
+        var val = (inparr[i]);
+        $(this).val(val);
       });
     }
     function get_all_arr(){
-        var arr=[]
+        var chkarr=[]
         $("input[type=checkbox]").each(function(){
             var chk = $(this).prop('checked');
             var val = 0;
             if(chk) val=1;
-            arr.push(val);
+            chkarr.push(val);
         });
-        return arr;
+        var inparr=[];
+        $(".inpstr").each(function(){
+            var val = $(this).val();
+            inparr.push(val);
+        });
+        return {chkarr:chkarr,inparr:inparr};
     }
     function exportFunction() {
       if(false == confirm("Save?")){

@@ -92,9 +92,9 @@ var identifyingHolyDiscontent =
             "Sanctity of Life",
             "Sexuality        ",
             "Spiritual Apathy",
-            "Other: __________",
-            "Other: __________",
-            "Other: __________"
+            "Other: ___________",
+            "Other: ___________",
+            "Other: ___________"
         ]
 
 }
