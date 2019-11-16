@@ -74,7 +74,9 @@
             background-color: mintcream;
             border-collapse: collapse;
             margin-top: 20px;
-            width: 100%;
+
+            width:600px;
+        
 
         }
 
@@ -84,9 +86,11 @@
         }
 
 
-        .assessment {
-            width: 595px;
+        td.assessment {
+            /*width: 595px;*/
+            vertical-align:bottom;
             font-size: 20;
+            height: 30px;
         }
 
         .leftside {
@@ -101,14 +105,21 @@
 
         .choiceBtns {
             text-align: center;
-            width: 20px;
+            width: 132px;
             /*display:inline;*/
             xwidth: 40%;
+        }
+        .choiceBtns tr td button {
+            width: 30px;
         }
 
         .score {
             height: 40px;
             text-align: center;
+        }
+        .trBtns{
+            border: white;
+            width:500px;
         }
     </style>
     <script>
@@ -146,13 +157,13 @@
                 else if (tot >= 18 && tot <= 28) {
                     ss += SCORES[istart][1]; //"<br>PEOPLE-ORIENTED";
                 }
-                var str2 = `Total Score = <a>${tot}</a><br/><a class=''>${ss}</a><br/>`;
+                var str2 = `Total Score = <a>${tot}</a><br/><a>${ss}</a>`;
             }
             return { str2: str2, tot: tot, ss: ss };
         };
         function init() {
             $(".choiceBtns").each(function () {
-                var btns = `<tr align='center'><td><button>1</button></td><td><button>2</button></td><td><button>3</button></td><td><button>4</button></td></tr>`;
+                var btns = `<tr class='trBtns' align='center'><td><button>1</button></td><td><button>2</button></td><td><button>3</button></td><td><button>4</button></td></tr>`;
                 $(this).html(btns).find("button").bind("click", function () {
                     $(this).parent().find(".hili").removeClass("hili");
                     $(this).addClass("hili");
