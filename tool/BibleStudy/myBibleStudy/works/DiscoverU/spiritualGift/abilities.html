@@ -106,7 +106,7 @@
       if(false == confirm("Load?")){
         return;
       }
-      var val = localStorage.lastname;
+      var val = localStorage.lastAbility;
       if(!val){
         val = prompt("Paste your choice data", "");
       }
@@ -149,8 +149,8 @@
       
       var arr = get_all_arr();
       var str = JSON.stringify(arr);
-      localStorage.lastname = str;
-      if(localStorage.lastname && localStorage.lastname.length>100){
+      localStorage.lastAbility = str;
+      if(localStorage.lastAbility && localStorage.lastAbility.length>100){
         return;
       }
       var ret = prompt("Copy your choice data to save anywhere for reuse.", str);

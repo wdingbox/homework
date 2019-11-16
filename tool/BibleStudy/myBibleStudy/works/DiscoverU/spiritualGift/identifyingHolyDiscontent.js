@@ -1,5 +1,39 @@
 var identifyingHolyDiscontent =
 {
+
+    "1.	What drives, motivates, and/or excites you?":
+        [
+            "What would you do if you knew you could not fail?",
+            "What do you love to do (i.e. fishing, sewing, soccer, playing music, brewing, etc.)?",
+            "What pushes you to action?"
+        ],
+
+    "2.	Who are the people you most want to help?":
+        [
+            "Who do you care about (i.e. at risk youth, students, single parents, teachers, terminally ill, etc.)?",
+            "Who do you naturally connect with (i.e. neighbors, business associates, sports team parents, etc.)?",
+            "Who do you feel like you can be yourself with (i.e. elementary aged kids, college students, senior adults, etc.)?",
+        ],
+    "3.	What are the needs you feel most drawn to?":
+        [
+            "What are the top two needs you love to meet for people?",
+            "Why do you love meeting those needs?",
+        ],
+
+    "4.	What “cause” are you most passionate about?":
+        [
+            "What cause or issue fires you up / makes your heart race?",
+            "What breaks your heart (i.e. child exploitation, homelessness, etc.)?",
+            "What is your “holy discontent” (see next page)?  What can’t you stand?  ",
+            "What wrecks you?  "
+        ],
+
+
+
+
+
+
+
     "Identifying your \“Holy Discontent\”": [
         "Abortion – protecting unborn children",
         "Abortion – caring for and providing guidance to pregnant mothers such that they would choose life",

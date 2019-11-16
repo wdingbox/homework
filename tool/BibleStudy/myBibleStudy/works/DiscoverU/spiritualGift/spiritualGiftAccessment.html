@@ -207,7 +207,7 @@
       if(false == confirm("To load data will erase your current data!\nAre you sure to continue?")){
         return;
       }
-      var val = localStorage.lastname;
+      var val = localStorage.lastSpirit;
       if(!val){
         val = prompt("Paste your choice data", "");
       }
@@ -233,8 +233,8 @@
       $("#CopyTextToClipboard").val("");
       var arr = get_choice_arr();
       var str = JSON.stringify(arr);
-      localStorage.lastname = str;
-      if(localStorage.lastname && localStorage.lastname.length>100){
+      localStorage.lastSpirit = str;
+      if(localStorage.lastSpirit && localStorage.lastSpirit.length>100){
         return;
       }
       var ret = prompt("Copy your choice data to save anywhere for reuse.", str);

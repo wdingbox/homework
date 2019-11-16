@@ -9,7 +9,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 
-  <script src="./identifyingHolyDiscontent.js"></script>
+  <script src="./experiences.js"></script>
 
 
   <style>
@@ -84,7 +84,7 @@
   </style>
   <script>
     $(function () {
-      gen_tab(identifyingHolyDiscontent);
+      gen_tab(experiences);
     });
 
     function gen_tab(obj) {
@@ -112,7 +112,7 @@
       if (false == confirm("Load?")) {
         return;
       }
-      var val = localStorage.lastHeart;
+      var val = localStorage.lastExp;
       if (!val) {
         val = prompt("Paste your choice data", "");
       }
@@ -165,8 +165,8 @@
 
       var arr = get_all_arr();
       var str = JSON.stringify(arr);
-      localStorage.lastHeart = str;
-      if (localStorage.lastHeart && localStorage.lastHeart.length > 100) {
+      localStorage.lastExp = str;
+      if (localStorage.lastExp && localStorage.lastExp.length > 100) {
         return;
       }
       var ret = prompt("Copy your choice data to save anywhere for reuse.", str);

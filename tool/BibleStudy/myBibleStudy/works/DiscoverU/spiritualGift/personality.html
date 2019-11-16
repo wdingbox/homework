@@ -206,11 +206,11 @@
             if (!confirm("Save?")) return;
             var arr = get_arr();
             var sar = JSON.stringify(arr);
-            localStorage.lastDat = sar;
+            localStorage.lastPersonality = sar;
         }
         function importFunction() {
             if (!confirm("Load?")) return;
-            var sar = localStorage.lastDat;
+            var sar = localStorage.lastPersonality;
             var arr = JSON.parse(sar);
             $(".hili").removeClass("hili");
             $(".choiceBtns").each(function(i){
