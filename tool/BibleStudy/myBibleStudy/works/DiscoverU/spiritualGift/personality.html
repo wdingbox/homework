@@ -106,7 +106,7 @@
 
         .choiceBtns {
             text-align: center;
-            width: 132px;
+            width: 152px;
             /*display:inline;*/
             xwidth: 40%;
         }
@@ -120,7 +120,12 @@
         }
         .trBtns{
             border: white;
-            width:500px;
+            width:100%;
+            margin-right: 10px;
+        }
+        .trBtns button{
+            width:30px;
+            margin-right: 2px;
         }
     </style>
     <script>
@@ -158,15 +163,16 @@
                 else if (tot >= 18 && tot <= 28) {
                     ss += SCORES[istart][1]; //"<br>PEOPLE-ORIENTED";
                 }
-                var str2 = `Total Score = <a>${tot}</a><br/><a>${ss}</a>`;
+                //ss="PEOPLE-ORIENTE"
+                var str2 = `Total Score = ${tot}<br/>${ss}`;
             }
             return { str2: str2, tot: tot, ss: ss };
         };
         function init() {
             $(".choiceBtns").each(function () {
-                var btns = `<tr class='trBtns' align='center'><td><button>1</button></td><td><button>2</button></td><td><button>3</button></td><td><button>4</button></td></tr>`;
+                var btns = `<span class='trBtns' lign='center'><button>1</button><button>2</button><button>3</button><button>4</button></span>`;
                 $(this).html(btns).find("button").bind("click", function () {
-                    $(this).parent().find(".hili").removeClass("hili");
+                    $(this).parentsUntil("td.choiceBtns").find(".hili").removeClass("hili");
                     $(this).addClass("hili");
                     var itype = $(this).parentsUntil("table").parent().index();
                     var arr = get_arr();
