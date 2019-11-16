@@ -87,7 +87,10 @@
                 ss += `<li><a href='${href}'>${txt}<br/></a><br/></li>`;
             });
             ss + "</ol>";
-            $("#olist").html(ss);
+            $("#olist").html(ss).find("a").bind("click",function(){
+                $(".mark").removeClass("mark");
+                $(this).addClass("mark");
+            });
         });
 
     </script>
