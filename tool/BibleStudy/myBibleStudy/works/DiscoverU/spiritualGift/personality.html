@@ -76,9 +76,22 @@
         table {
             background-color: mintcream;
             border-collapse: collapse;
-            margin-top: 20px;
+            margin-top: 30px;
 
             /*width:600px;*/
+        }
+        tbody tr:nth-of-type(4n+1),
+        tbody tr:nth-of-type(4n+2)
+        {
+            background-color:rgb(238, 236, 237);
+        }
+        tbody tr:nth-of-type(4n+1)
+        {
+            border-bottom-color: rgb(238, 236, 237);
+        }
+        tbody tr:nth-of-type(4n+3)
+        {
+            border-bottom-color: mintcream;
         }
 
         table.assessmentTable {
@@ -127,19 +140,7 @@
             width:30px;
             margin-right: 2px;
         }
-        tbody tr:nth-of-type(4n+1),
-        tbody tr:nth-of-type(4n+2)
-        {
-            background-color:rgb(238, 236, 237);
-        }
-        tbody tr:nth-of-type(4n+1)
-        {
-            border-bottom-color: rgb(238, 236, 237);
-        }
-        tbody tr:nth-of-type(4n+3)
-        {
-            border-bottom-color: mintcream;
-        }
+        
        
     </style>
     <script>
