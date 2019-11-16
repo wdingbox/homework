@@ -1,0 +1,171 @@
+<html>
+
+<head>
+  <title>SGift</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <META name="viewport" content="width=device-witdh, initial-scale=1, maximum-scale=1, user-scale=0">
+
+  <link rel="stylesheet" xhref="images/common.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+  <script src="./identifyingHolyDiscontent.js"></script>
+
+
+  <style>
+    @media print {
+      footer {
+        page-break-after: always;
+      }
+    }
+
+    #menu {
+      position: fixed;
+      top: 0px;
+      right: 10px;
+      width: 100%;
+      background-color: lightgrey;
+    }
+
+    .portalBtn {
+      float: right;
+    }
+
+    #CopyTextToClipboard {
+      visibility: visible;
+      position: fixed;
+      left: -130px;
+    }
+
+    .choiceBtn,
+    .btn {
+      background-color: #f0f0f0;
+    }
+
+    #ctr .btn {
+      font-size: 22px;
+    }
+
+    .hili {
+      background-color: chartreuse;
+      border-radius: 50%;
+      border: 1px solid black;
+    }
+
+    .mark {
+      background-color: lavender;
+    }
+
+    .max {
+      background-color: yellowgreen;
+    }
+
+    .denote {
+      font-size: 11px;
+    }
+
+    #result {
+      height: 900px;
+    }
+
+    table {
+      background-color: mintcream;
+      border-collapse: collapse;
+
+    }
+
+    table.assessmentTable {
+      margin-top: 100px;
+    }
+    #holder{
+        margin-top:50px;
+    }
+  </style>
+  <script>
+    $(function () {
+      gen_tab(identifyingHolyDiscontent);
+    });
+
+    function gen_tab(obj) {
+        var sol="";
+        Object.keys(obj).forEach(function(skey){
+            sol+=`<h3>${skey}</h3><ol>`;
+            var arr=obj[skey];
+            arr.forEach(function(str){
+                sol+=`<li><input type='checkbox'><a>${str}</a></li>`;
+            });
+            sol+="</ol>";
+        });
+        $("#holder").html(sol);
+    };///////////////
+
+    
+
+    function importFunction() {
+      if(false == confirm("Load?")){
+        return;
+      }
+      var val = localStorage.lastname;
+      if(!val){
+        val = prompt("Paste your choice data", "");
+      }
+      if (!val) return;
+      var arr = JSON.parse(val);
+      console.log(arr);
+      if (arr.length <= 1) {
+        return;
+      }
+
+      $("input[type=checkbox]").each(function (i) {
+        var val = (arr[i]);
+        var b=!!val;
+        $(this).attr('checked', b);
+        
+      });
+    }
+    function get_all_arr(){
+        var arr=[]
+        $("input[type=checkbox]").each(function(){
+            var chk = $(this).prop('checked');
+            var val = 0;
+            if(chk) val=1;
+            arr.push(val);
+        });
+        return arr;
+    }
+    function exportFunction() {
+      if(false == confirm("Save?")){
+        return;
+      }
+      
+      var arr = get_all_arr();
+      var str = JSON.stringify(arr);
+      localStorage.lastname = str;
+      if(localStorage.lastname && localStorage.lastname.length>100){
+        return;
+      }
+      var ret = prompt("Copy your choice data to save anywhere for reuse.", str);
+      console.log(ret);
+      if (!ret) return;
+      $("#CopyTextToClipboard").val(str);
+      $("#CopyTextToClipboard").select();
+      document.execCommand("copy");
+    }
+  </script>
+</head>
+
+<body>
+  <div id="menu">
+    <input id="CopyTextToClipboard"></input>
+    <button class="portalBtn" onclick="importFunction()" title="Load your last saved data.">Load</button>
+    <button class="portalBtn" onclick="exportFunction()" title="Save your choice data.">Save</button>
+  </div>
+
+  <div id="holder"></div>
+  <hr />
+  
+  <div id="result"></div>
+
+</body>
+
+</html>
