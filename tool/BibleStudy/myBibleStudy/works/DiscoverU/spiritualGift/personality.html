@@ -115,7 +115,7 @@
         $(function () {
             init();
         });
-        function get_arr(_this) {
+        function get_arr() {
             var arr = [];
             $("body").find("td.choiceBtns").each(function (i) {
                 var val = $(this).find(".hili").text();
@@ -164,389 +164,415 @@
                 });
             });
         };
+
+
+        function exportFunction() {
+            if (!confirm("Save?")) return;
+            var arr = get_arr();
+            var sar = JSON.stringify(arr);
+            localStorage.lastDat = sar;
+        }
+        function importFunction() {
+            if (!confirm("Load?")) return;
+            var sar = localStorage.lastDat;
+            var arr = JSON.parse(sar);
+            $(".hili").removeClass("hili");
+            $(".choiceBtns").each(function(i){
+                var val = arr[i];
+                $(this).find(`button:contains(${val})`).addClass("hili");
+            });
+            for (var i = 0; i < 2; i++) {
+                var ret = calc(arr, i);
+                $(`table:eq(${i})`).find("td.score").html(ret.str2);
+                $(`.overall:eq(${i})`).html(ret.ss);
+            };
+        }
     </script>
 </head>
 
 <body>
-
-
-
-
-    <table class="Energized" border="1" cellspacing="0" cellpadding="0">
-        <caption ptype="Energized">P e r s o n a l i t y</caption>
-        <thead>
-            <tr>
-                <th width="25">
-                    #
-                </th>
-                <th colspan="3" align="center">
-                    How are you Energized?
-                </th>
-            </tr>
-        </thead>
-        <tbody ptype="Energized">
-            <tr>
-                <td class="idx" rowspan="2">
-                    1
-                </td>
-                <td class="assessment" colspan="3">
-                    I'm more comfortable:
-                </td>
-            </tr>
-            <tr>
-                <td class="leftside">
-                    doing things for people
-                </td>
-                <td class="choiceBtns">
-                    <button>1</button> <button>2</button> <button>3</button> <button>4</button>
-
-                </td>
-                <td class="riteSide">
-                    being with people
-                </td>
-            </tr>
-            <tr>
-                <td class="idx" rowspan="2">
-                    2
-                </td>
-                <td class="assessment" colspan="3">
-                    When doing a task, I tend to:
-                </td>
-            </tr>
-            <tr>
-                <td class="leftside">
-                    focus on the goal
-                </td>
-                <td class="choiceBtns">
-
-
-
-                </td>
-                <td class="riteSide">
-                    focus on the relationship
-                </td>
-            </tr>
-            <tr>
-                <td class="idx" rowspan="2">
-                    3
-                </td>
-                <td class="assessment" colspan="3">
-                    I get more excited about:
-                </td>
-            </tr>
-            <tr>
-                <td class="leftside">
-                    advancing a cause
-                </td>
-                <td class="choiceBtns">
-
-
-
-                </td>
-                <td class="riteSide">
-                    creating a community<b>
-
-                    </b>
-                </td>
-            </tr>
-            <tr>
-                <td class="idx" rowspan="2">
-                    4
-                </td>
-                <td class="assessment" colspan="3">
-                    I feel I’ve accomplished something when I’ve:
-                </td>
-            </tr>
-            <tr>
-                <td class="leftside">
-                    gotten a job done
-                </td>
-                <td class="choiceBtns">
-
-
-
-                </td>
-                <td class="riteSide">
-                    built a relationship
-                </td>
-            </tr>
-            <tr>
-                <td class="idx" rowspan="2">
-                    5
-                </td>
-                <td class="assessment" colspan="3">
-                    It is more important to start a meeting:
-                </td>
-            </tr>
-            <tr>
-                <td class="leftside">
-                    on time
-                </td>
-                <td class="choiceBtns">
-
-                </td>
-                <td class="riteSide">
-                    when everyone gets there
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td class="idx" rowspan="2">
-                    6
-                </td>
-                <td class="assessment" colspan="3">
-                    I’m more concerned with:
-                </td>
-            </tr>
-            <tr>
-                <td class="leftside">
-                    meeting a deadline
-                </td>
-                <td class="choiceBtns">
-
-
-
-                </td>
-                <td class="riteSide">
-                    maintaining the team
-                </td>
-            </tr>
-            <tr>
-                <td class="idx" rowspan="2">
-                    7
-                </td>
-                <td class="assessment" colspan="3">
-                    I place higher value on:
-
-
-                </td>
-            </tr>
-            <tr>
-                <td class="leftside">
-                    action
-
-                </td>
-                <td class="choiceBtns">
-
-
-
-                </td>
-                <td class="riteSide">
-                    communication
-                </td>
-            </tr>
-
-
-            <tr>
-                <td width="">
-
-
-                </td>
-                <td class="leftside">
-
-
-                </td>
-                <td class="score">
-
-
-                    -<br>-
-
-                </td>
-                <td class="riteSide">
-
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
-
-    <table class="Organized" border="1" cellspacing="0" cellpadding="0">
-        <caption ptype="Organized"> </caption>
-        <thead>
-            <tr>
-                <th width="25">
-                    #
-                </th>
-                <th colspan="3" align="center">
-                    How are you Organized?
-                </th>
-            </tr>
-        </thead>
-        <tbody ptype="Organized">
-            <tr>
-                <td class="idx" rowspan="2">
-                    1
-                </td>
-                <td class="assessment" colspan="3">
-                    While on vacation, I prefer to:
-                </td>
-            </tr>
-            <tr>
-                <td class="leftside">
-                    be spontaneous
-                </td>
-                <td class="choiceBtns">
-                    <button>1</button> <button>2</button> <button>3</button> <button>4</button>
-
-                </td>
-                <td class="riteSide">
-                    follow a set plan
-                </td>
-            </tr>
-            <tr>
-                <td class="idx" rowspan="2">
-                    2
-                </td>
-                <td class="assessment" colspan="3">
-                    I prefer to set guidelines that are:
-                </td>
-            </tr>
-            <tr>
-                <td class="leftside">
-                    general
-                </td>
-                <td class="choiceBtns">
-
-
-
-                </td>
-                <td class="riteSide">
-                    specific
-                </td>
-            </tr>
-            <tr>
-                <td class="idx" rowspan="2">
-                    3
-                </td>
-                <td class="assessment" colspan="3">
-                    I prefer to:
-                </td>
-            </tr>
-            <tr>
-                <td class="leftside">
-                    leave my options open
-                </td>
-                <td class="choiceBtns">
-
-
-
-                </td>
-                <td class="riteSide">
-                    settle things now
-                </td>
-            </tr>
-            <tr>
-                <td class="idx" rowspan="2">
-                    4
-                </td>
-                <td class="assessment" colspan="3">
-                    I prefer projects that have:
-                </td>
-            </tr>
-            <tr>
-                <td class="leftside">
-                    variety
-                </td>
-                <td class="choiceBtns">
-
-
-
-                </td>
-                <td class="riteSide">
-                    routine
-                </td>
-            </tr>
-            <tr>
-                <td class="idx" rowspan="2">
-                    5
-                </td>
-                <td class="assessment" colspan="3">
-                    I like to:
-                </td>
-            </tr>
-            <tr>
-                <td class="leftside">
-                    play it by ear
-                </td>
-                <td class="choiceBtns">
-
-
-
-                </td>
-                <td class="riteSide">
-                    stick to a plan
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td class="idx" rowspan="2">
-                    6
-                </td>
-                <td class="assessment" colspan="3">
-                    I find routine:
-                </td>
-            </tr>
-            <tr>
-                <td class="leftside">
-                    boring
-                </td>
-                <td class="choiceBtns">
-
-
-
-                </td>
-                <td class="riteSide">
-                    restful
-                </td>
-            </tr>
-            <tr>
-                <td class="idx" rowspan="2">
-                    7
-                </td>
-                <td class="assessment" colspan="3">
-                    I accomplish tasks best:
-
-
-                </td>
-            </tr>
-            <tr>
-                <td class="leftside">
-                    by working it out as I go
-
-                </td>
-                <td class="choiceBtns">
-
-
-
-                </td>
-                <td class="riteSide">
-                    by following a plan
-                </td>
-            </tr>
-
-
-            <tr>
-                <td width="">
-
-
-                </td>
-                <td class="leftside">
-
-
-                </td>
-                <td class="score">
-
-
-                    --<br>--
-
-                </td>
-                <td class="riteSide">
-
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
+    <div id="menu">
+        <button class="portalBtn" onclick="importFunction()" title="Load your last saved data.">Load</button>
+        <button class="portalBtn" onclick="exportFunction()" title="Save your choice data.">Save</button>
+    </div>
+    <div>
+
+
+        <table class="Energized" border="1" cellspacing="0" cellpadding="0">
+            <caption ptype="Energized">P e r s o n a l i t y</caption>
+            <thead>
+                <tr>
+                    <th width="25">
+                        #
+                    </th>
+                    <th colspan="3" align="center">
+                        How are you Energized?
+                    </th>
+                </tr>
+            </thead>
+            <tbody ptype="Energized">
+                <tr>
+                    <td class="idx" rowspan="2">
+                        1
+                    </td>
+                    <td class="assessment" colspan="3">
+                        I'm more comfortable:
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftside">
+                        doing things for people
+                    </td>
+                    <td class="choiceBtns">
+                        <button>1</button> <button>2</button> <button>3</button> <button>4</button>
+
+                    </td>
+                    <td class="riteSide">
+                        being with people
+                    </td>
+                </tr>
+                <tr>
+                    <td class="idx" rowspan="2">
+                        2
+                    </td>
+                    <td class="assessment" colspan="3">
+                        When doing a task, I tend to:
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftside">
+                        focus on the goal
+                    </td>
+                    <td class="choiceBtns">
+
+
+
+                    </td>
+                    <td class="riteSide">
+                        focus on the relationship
+                    </td>
+                </tr>
+                <tr>
+                    <td class="idx" rowspan="2">
+                        3
+                    </td>
+                    <td class="assessment" colspan="3">
+                        I get more excited about:
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftside">
+                        advancing a cause
+                    </td>
+                    <td class="choiceBtns">
+
+
+
+                    </td>
+                    <td class="riteSide">
+                        creating a community<b>
+
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="idx" rowspan="2">
+                        4
+                    </td>
+                    <td class="assessment" colspan="3">
+                        I feel I’ve accomplished something when I’ve:
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftside">
+                        gotten a job done
+                    </td>
+                    <td class="choiceBtns">
+
+
+
+                    </td>
+                    <td class="riteSide">
+                        built a relationship
+                    </td>
+                </tr>
+                <tr>
+                    <td class="idx" rowspan="2">
+                        5
+                    </td>
+                    <td class="assessment" colspan="3">
+                        It is more important to start a meeting:
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftside">
+                        on time
+                    </td>
+                    <td class="choiceBtns">
+
+                    </td>
+                    <td class="riteSide">
+                        when everyone gets there
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="idx" rowspan="2">
+                        6
+                    </td>
+                    <td class="assessment" colspan="3">
+                        I’m more concerned with:
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftside">
+                        meeting a deadline
+                    </td>
+                    <td class="choiceBtns">
+
+
+
+                    </td>
+                    <td class="riteSide">
+                        maintaining the team
+                    </td>
+                </tr>
+                <tr>
+                    <td class="idx" rowspan="2">
+                        7
+                    </td>
+                    <td class="assessment" colspan="3">
+                        I place higher value on:
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftside">
+                        action
+
+                    </td>
+                    <td class="choiceBtns">
+
+
+
+                    </td>
+                    <td class="riteSide">
+                        communication
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td width="">
+
+
+                    </td>
+                    <td class="leftside">
+
+
+                    </td>
+                    <td class="score">
+
+
+                        -<br>-
+
+                    </td>
+                    <td class="riteSide">
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <table class="Organized" border="1" cellspacing="0" cellpadding="0">
+            <caption ptype="Organized"> </caption>
+            <thead>
+                <tr>
+                    <th width="25">
+                        #
+                    </th>
+                    <th colspan="3" align="center">
+                        How are you Organized?
+                    </th>
+                </tr>
+            </thead>
+            <tbody ptype="Organized">
+                <tr>
+                    <td class="idx" rowspan="2">
+                        1
+                    </td>
+                    <td class="assessment" colspan="3">
+                        While on vacation, I prefer to:
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftside">
+                        be spontaneous
+                    </td>
+                    <td class="choiceBtns">
+                        <button>1</button> <button>2</button> <button>3</button> <button>4</button>
+
+                    </td>
+                    <td class="riteSide">
+                        follow a set plan
+                    </td>
+                </tr>
+                <tr>
+                    <td class="idx" rowspan="2">
+                        2
+                    </td>
+                    <td class="assessment" colspan="3">
+                        I prefer to set guidelines that are:
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftside">
+                        general
+                    </td>
+                    <td class="choiceBtns">
+
+
+
+                    </td>
+                    <td class="riteSide">
+                        specific
+                    </td>
+                </tr>
+                <tr>
+                    <td class="idx" rowspan="2">
+                        3
+                    </td>
+                    <td class="assessment" colspan="3">
+                        I prefer to:
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftside">
+                        leave my options open
+                    </td>
+                    <td class="choiceBtns">
+
+
+
+                    </td>
+                    <td class="riteSide">
+                        settle things now
+                    </td>
+                </tr>
+                <tr>
+                    <td class="idx" rowspan="2">
+                        4
+                    </td>
+                    <td class="assessment" colspan="3">
+                        I prefer projects that have:
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftside">
+                        variety
+                    </td>
+                    <td class="choiceBtns">
+
+
+
+                    </td>
+                    <td class="riteSide">
+                        routine
+                    </td>
+                </tr>
+                <tr>
+                    <td class="idx" rowspan="2">
+                        5
+                    </td>
+                    <td class="assessment" colspan="3">
+                        I like to:
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftside">
+                        play it by ear
+                    </td>
+                    <td class="choiceBtns">
+
+
+
+                    </td>
+                    <td class="riteSide">
+                        stick to a plan
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="idx" rowspan="2">
+                        6
+                    </td>
+                    <td class="assessment" colspan="3">
+                        I find routine:
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftside">
+                        boring
+                    </td>
+                    <td class="choiceBtns">
+
+
+
+                    </td>
+                    <td class="riteSide">
+                        restful
+                    </td>
+                </tr>
+                <tr>
+                    <td class="idx" rowspan="2">
+                        7
+                    </td>
+                    <td class="assessment" colspan="3">
+                        I accomplish tasks best:
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftside">
+                        by working it out as I go
+
+                    </td>
+                    <td class="choiceBtns">
+
+
+
+                    </td>
+                    <td class="riteSide">
+                        by following a plan
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td width="">
+
+
+                    </td>
+                    <td class="leftside">
+
+
+                    </td>
+                    <td class="score">
+
+
+                        --<br>--
+
+                    </td>
+                    <td class="riteSide">
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <p>Overall Results: <a class="overall">-</a> / <a class="overall">-</a></p>
 </body>
 
