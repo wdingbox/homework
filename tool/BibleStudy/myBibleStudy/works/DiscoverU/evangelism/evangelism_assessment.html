@@ -99,7 +99,7 @@
 
       var stb = `
       <table class='assessmentTable' border='1'>
-        <caption>Discover U – S.H.A.P.E. Spiritual Gifts Assessment.</caption>
+        <caption>Discover U – Evangelism Style Assessment.</caption>
         <thead><tr><th>#</th><th>
           Self-Assessment</th></tr></thead>
         <tbody>
@@ -180,8 +180,8 @@
         //console.log(val);
         var maxMark = "", notes = "";
         if (max == val && val > 0) {
-          maxMark = "class='max' title='strong gift'";
-          notes = "Top Spiritual Gift";
+          maxMark = "class='max' title='strong style'";
+          notes = "Top Evangelism Style";
         }
 
         str += `<tr ><td>${1 + i}</td><td>${keys[i]}</td><td>${stdarr[keys[i]]}</td><td ${maxMark}>${val}</td><td>${notes}</td></tr>`;
@@ -190,7 +190,7 @@
 
       var stb = `
       <table border='1' id="calcScore">
-        <caption> Spiritual Gifts Assessment Key</caption>
+        <caption> Evangelism Style Assessment Key</caption>
         <thead><tr><th>#</th><th>Key</th><th>Desc</th><th>Score</th><th>Notes</th></tr></thead>
         <tbody>
           ${str}
