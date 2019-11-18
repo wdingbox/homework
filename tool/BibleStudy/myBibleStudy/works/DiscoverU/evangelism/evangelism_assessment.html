@@ -208,14 +208,14 @@
       if(false == confirm("Load?")){
         return;
       }
-      var val = localStorage.lastSpirit;
+      var val = localStorage.lastEvangelism;
       if(!val){
         val = prompt("Paste your choice data", "");
       }
       if (!val) return;
       var arr = JSON.parse(val);
       console.log(arr);
-      if (arr.length <= 100) {
+      if (arr.length <= 10) {
         return;
       }
  
@@ -234,8 +234,8 @@
       $("#CopyTextToClipboard").val("");
       var arr = get_choice_arr();
       var str = JSON.stringify(arr);
-      localStorage.lastSpirit = str;
-      if(localStorage.lastSpirit && localStorage.lastSpirit.length>100){
+      localStorage.lastEvangelism= str;
+      if(localStorage.lastEvangelism&& localStorage.lastEvangelism.length>100){
         return;
       }
       var ret = prompt("Copy your choice data to save anywhere for reuse.", str);
