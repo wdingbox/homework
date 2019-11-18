@@ -208,6 +208,10 @@
         return;
       }
       var val = localStorage.lastSpirit;
+      var val2 = localStorage.lastname;
+      if(!val){
+        val = val2;
+      }
       if(!val){
         val = prompt("Paste your choice data", "");
       }
