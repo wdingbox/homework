@@ -117,16 +117,16 @@
         $(this).parent().find(".denote").text(tit);
         $(this).parent().find(".denote").slideDown(1000);
 
-        //$(this).parent().find(".denote").slideUp(3000);
-
-        //$(this).parentsUntil("table").find(".mark").removeClass("mark");
         $(this).parent().prev().addClass("mark");
+
+        localStorage_save();
       });
       $(tab).find(".num").bind("click", function () {
         $(this).toggleClass("mark");
       });
-    };///////////////
 
+      localStorage_load();
+    };///////////////
 
     function get_choice_arr() {
       var arr = [];
@@ -204,15 +204,16 @@
       });
     }
 
-    function importFunction() {
-      if(false == confirm("Load?")){
-        return;
-      }
+    function localStorage_save(){
+      var arr = get_choice_arr();
+      var str = JSON.stringify(arr);
+      localStorage.lastEvangelism= str;
+    }
+    function localStorage_load(){
       var val = localStorage.lastEvangelism;
       if(!val){
-        val = prompt("Paste your choice data", "");
+        return;
       }
-      if (!val) return;
       var arr = JSON.parse(val);
       console.log(arr);
       if (arr.length <= 10) {
@@ -225,20 +226,48 @@
         var idx = 3 - val;
         $(this).find(`.choiceBtn:eq(${idx})`).addClass("hili");
       });
+    }
+    function Reset(){
+      if(!confirm("Reset current choices in this page?")){
+        return;
+      }
+      $(".hili").removeClass("hili");
+      $("table tbody").find("tr").each(function (i) {
+        var idx = 3;
+        $(this).find(`.choiceBtn:eq(${idx})`).addClass("hili");
+      });
+      $("#result").html("");
+    }
+    function importFunction() {
+      var val = prompt("Paste your choice data to import:\n(It has to be the exported data,like [3,1,,,])", "");
+      if (!val || val.length<10) {
+        return;// alert("Nothing is imported:\n"+val);
+      }
+      var arr = JSON.parse(val);
+      console.log(arr);
+      if (!arr || arr.length <= 10) {
+        return alert("Invalid data:\n"+val);
+      }
+      for(var i=0;i<arr.length;i++){
+        var val = parseInt(arr[i]);
+        if( val >3 || val<0) {
+          return alert("Invalid data:\n"+val);
+        }
+      }
+ 
+      $(".hili").removeClass("hili");
+      $("table tbody").find("tr").each(function (i) {
+        var val = parseInt(arr[i]);
+        var idx = 3 - val;
+        $(this).find(`.choiceBtn:eq(${idx})`).addClass("hili");
+      });
       $("#result").html("");
     }
     function exportFunction() {
-      if(false == confirm("Save?")){
-        return;
-      }
       $("#CopyTextToClipboard").val("");
       var arr = get_choice_arr();
       var str = JSON.stringify(arr);
-      localStorage.lastEvangelism= str;
-      if(localStorage.lastEvangelism&& localStorage.lastEvangelism.length>100){
-        return;
-      }
-      var ret = prompt("Copy your choice data to save anywhere for reuse.", str);
+      var ret = prompt("Your current choices are exported as following:\n(Copy it for import usage.)", str);
       console.log(ret);
       if (!ret) return;
       $("#CopyTextToClipboard").val(str);
@@ -251,8 +280,9 @@
 <body>
   <div id="menu">
     <input id="CopyTextToClipboard"></input>
-    <button class="portalBtn" onclick="importFunction()" title="Load your last saved data.">Load</button>
-    <button class="portalBtn" onclick="exportFunction()" title="Save your choice data.">Save</button>
+    <button class="portalBtn" onclick="importFunction()" title="Import your choice data.">Import</button>
+    <button class="portalBtn" onclick="exportFunction()" title="Export your choice data.">Export</button>
+    <button class="portalBtn" onclick="Reset()" title="Reset/Clear your choice data.">Reset</button>
   </div>
 
   <div id="holder"></div>
