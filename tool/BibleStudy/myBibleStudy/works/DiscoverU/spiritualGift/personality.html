@@ -149,6 +149,7 @@
     <script>
         $(function () {
             init();
+            localStorage_load();
         });
         function get_arr() {
             var arr = [];
@@ -197,20 +198,51 @@
                     var ret = calc(arr, itype);
                     $(this).parentsUntil("table").find("td.score").html(ret.str2);
                     $(`.overall:eq(${itype})`).html(ret.ss);
+                    localStorage_save();
                 });
             });
         };
 
 
-        function exportFunction() {
-            if (!confirm("Save?")) return;
+        function localStorage_save(){
             var arr = get_arr();
             var sar = JSON.stringify(arr);
             localStorage.lastPersonality = sar;
         }
-        function importFunction() {
-            if (!confirm("Load?")) return;
+        function localStorage_load(){
             var sar = localStorage.lastPersonality;
+            if(!sar) return;
+            var arr = JSON.parse(sar);
+            $(".hili").removeClass("hili");
+            $(".choiceBtns").each(function(i){
+                var val = arr[i];
+                $(this).find(`button:contains(${val})`).addClass("hili");
+            });
+            for (var i = 0; i < 2; i++) {
+                var ret = calc(arr, i);
+                $(`table:eq(${i})`).find("td.score").html(ret.str2);
+                $(`.overall:eq(${i})`).html(ret.ss);
+            };     
+        }
+        function Reset(){
+            $("td.choiceBtns").find(".hili").removeClass("hili");
+
+            var arr = new Array(14);
+            arr.fill(0);
+            for (var i = 0; i < 2; i++) {
+                var ret = calc(arr, i);
+                $(`table:eq(${i})`).find("td.score").html("");
+                $(`.overall:eq(${i})`).html("");
+            };  
+        }
+        function exportFunction() {
+            var arr = get_arr();
+            var sar = JSON.stringify(arr);
+            localStorage.lastPersonality = sar;
+            prompt("Export as following data",sar);
+        }
+        function importFunction() {
+            var sar = prompt("Export as following data","");
             var arr = JSON.parse(sar);
             $(".hili").removeClass("hili");
             $(".choiceBtns").each(function(i){
@@ -228,8 +260,9 @@
 
 <body>
     <div id="menu">
-        <button class="portalBtn" onclick="importFunction()" title="Load your last saved data.">Load</button>
-        <button class="portalBtn" onclick="exportFunction()" title="Save your choice data.">Save</button>
+        <button class="portalBtn" onclick="importFunction()" title="Import your last saved data.">Import</button>
+        <button class="portalBtn" onclick="exportFunction()" title="Export your choice data.">Export</button>
+        <button class="portalBtn" onclick="Reset()" title="Reset/clear your choice data.">Reset</button>
     </div>
     <div class="tableHolder">
 
