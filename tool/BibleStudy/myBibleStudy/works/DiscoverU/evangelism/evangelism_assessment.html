@@ -216,10 +216,12 @@
       }
       var arr = JSON.parse(val);
       console.log(arr);
-      if (arr.length <= 10) {
+      if (arr.length != 36) {
         return;
       } 
-
+      load_choice_arr(arr);
+    }
+    function load_choice_arr(arr){
       $(".hili").removeClass("hili");
       $("table tbody").find("tr").each(function (i) {
         var val = parseInt(arr[i]);
@@ -228,15 +230,12 @@
       });
     }
     function Reset() {
-      if (!confirm("Reset current choices in this page?")) {
+      if (!confirm("To cleanup and reset all Choices?")) {
         return;
       }
-      $(".hili").removeClass("hili");
-      $("table tbody").find("tr").each(function (i) {
-        var idx = 3;
-        $(this).find(`.choiceBtn:eq(${idx})`).addClass("hili");
-      });
-      $("#result").html("");
+      var arr = new Array(36);
+      arr.fill(0);
+      load_choice_arr(arr);
     }
     function importFunction() {
       var val = prompt("Paste your choice data to import:\n(It has to be the exported data,like [3,1,,,])", "");
@@ -254,13 +253,7 @@
           return alert("Invalid data:\n" + dat);
         }
       }
-
-      $(".hili").removeClass("hili");
-      $("table tbody").find("tr").each(function (i) {
-        var val = parseInt(arr[i]);
-        var idx = 3 - val;
-        $(this).find(`.choiceBtn:eq(${idx})`).addClass("hili");
-      });
+      load_choice_arr(arr);
       $("#result").html("");
     }
     function exportFunction() {
