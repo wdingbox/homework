@@ -90,12 +90,12 @@
           <button class='choiceBtn' title='Some of the time, once in a while.'>1</<button>
           <button class='choiceBtn hili' title='Not at all, never.'>0</button>
             <a class='denote'></a>`;
-      var trs = ""
+
+      var trs = "";
       questionaiArr.forEach(function (val, i) {
         //console.log(val);
         trs += `<tr><td class='num'>${1 + i}</td><td>${val}<br>${radios}</td></tr>`;
       });
-
 
       var stb = `
       <table class='assessmentTable' border='1'>
@@ -106,7 +106,6 @@
           ${trs}
         </tbody>
         </table>`;
-
       var tab = $("#holder").html(stb);
 
       $(tab).find(".choiceBtn").bind("click", function () {
@@ -242,14 +241,21 @@
       });
       $("#result").html("");
     }
-
     function importFunction() {
-      var val = prompt("Paste your choice data", "");
-      if (!val) return;
+      var val = prompt("Paste your choice data to import:\n(It has to be the exported data,like [3,1,,,])", "");
+      if (!val || val.length < 10) {
+        return;// alert("Nothing is imported:\n"+val);
+      }
       var arr = JSON.parse(val);
       console.log(arr);
       if (!arr || arr.length != 133) {
-        return;
+        return alert("Invalid data:\n" + val);
+      }
+      for (var i = 0; i < arr.length; i++) {
+        var dat = parseInt(arr[i]);
+        if (dat > 3 || dat < 0) {
+          return alert("Invalid data:\n" + dat);
+        }
       }
  
       $(".hili").removeClass("hili");
@@ -264,7 +270,7 @@
       $("#CopyTextToClipboard").val("");
       var arr = get_choice_arr();
       var str = JSON.stringify(arr);
-      var ret = prompt("Copy your choice data to save anywhere for reuse.", str);
+      var ret = prompt("Your current choices are exported as following:\n(Copy it for import usage.)", str);
       console.log(ret);
       if (!ret) return;
       $("#CopyTextToClipboard").val(str);
