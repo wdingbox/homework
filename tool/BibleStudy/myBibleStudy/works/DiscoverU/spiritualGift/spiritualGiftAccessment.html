@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title>SGift</title>
+  <title>SpiritualGiftAssessment</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <META name="viewport" content="width=device-witdh, initial-scale=1, maximum-scale=1, user-scale=0">
 
@@ -80,20 +80,20 @@
   </style>
   <script>
     $(function () {
-      gen_tab();
+      gen_tab(spiritualGiftAssessment_Desc);
     });
 
-    function gen_tab() {
+    function gen_tab(questionaiArr) {
       var radios = `
           <button class='choiceBtn' title='Always, definiely true.'>3</<button>
           <button class='choiceBtn' title='Most of the time, usually true.'>2</<button>
           <button class='choiceBtn' title='Some of the time, once in a while.'>1</<button>
           <button class='choiceBtn hili' title='Not at all, never.'>0</button>
             <a class='denote'></a>`;
-      var str = ""
-      spiritualGiftAssessment_Desc.forEach(function (val, i) {
+      var trs = ""
+      questionaiArr.forEach(function (val, i) {
         //console.log(val);
-        str += `<tr><td class='num'>${1 + i}</td><td>${val}<br>${radios}</td></tr>`;
+        trs += `<tr><td class='num'>${1 + i}</td><td>${val}<br>${radios}</td></tr>`;
       });
 
 
@@ -103,11 +103,12 @@
         <thead><tr><th>#</th><th>
           Self-Assessment</th></tr></thead>
         <tbody>
-          ${str}
+          ${trs}
         </tbody>
         </table>`;
 
-      var tab = $("#holder").append(stb);
+      var tab = $("#holder").html(stb);
+
       $(tab).find(".choiceBtn").bind("click", function () {
         $(this).parent().find(".hili").removeClass("hili");
         $(this).addClass("hili");
@@ -117,16 +118,16 @@
         $(this).parent().find(".denote").text(tit);
         $(this).parent().find(".denote").slideDown(1000);
 
-        //$(this).parent().find(".denote").slideUp(3000);
+       $(this).parent().prev().addClass("mark");
 
-        //$(this).parentsUntil("table").find(".mark").removeClass("mark");
-        $(this).parent().prev().addClass("mark");
+       localStorage_save();
       });
       $(tab).find(".num").bind("click", function () {
         $(this).toggleClass("mark");
       });
-    };///////////////
 
+      localStorage_load();
+    };///////////////
 
     function get_choice_arr() {
       var arr = [];
@@ -138,10 +139,11 @@
       return arr;
     }
     function calc_choice_arr(arr) {
+      const Offset = 19;
       var EvalArr = [];
       for (var j = 0; j < arr.length; j++) {
         var sum = 0;
-        for (var k = 0; k < arr.length; k += 19) {
+        for (var k = 0; k < arr.length; k += Offset) {
           if (k >= arr.length) conitune;
           var m = j + k;
           if (m >= arr.length) {
@@ -161,7 +163,7 @@
     function evaluateAssessment() {
       var arr = get_choice_arr();
       var evr = calc_choice_arr(arr);
-      gen_result(arr, evr);
+      gen_result(spiritualGiftAssessment_Key, evr);
     };
 
     function get_max(arr) {
@@ -172,9 +174,9 @@
       return max;
     }
 
-    function gen_result(Charr, Evarr) {
+    function gen_result(stdarr, Evarr) {
       var str = "", max = get_max(Evarr);
-      var keys = Object.keys(spiritualGiftAssessment_Key);
+      var keys = Object.keys(stdarr);
       Evarr.forEach(function (val, i) {
         //console.log(val);
         var maxMark = "", notes = "";
@@ -183,7 +185,7 @@
           notes = "Top Spiritual Gift";
         }
 
-        str += `<tr ><td>${1 + i}</td><td>${keys[i]}</td><td>${spiritualGiftAssessment_Key[keys[i]]}</td><td ${maxMark}>${val}</td><td>${notes}</td></tr>`;
+        str += `<tr ><td>${1 + i}</td><td>${keys[i]}</td><td>${stdarr[keys[i]]}</td><td ${maxMark}>${val}</td><td>${notes}</td></tr>`;
       });
 
 
@@ -203,22 +205,50 @@
       });
     }
 
-    function importFunction() {
-      if(false == confirm("Load?")){
+    function localStorage_save() {
+      var arr = get_choice_arr();
+      var str = JSON.stringify(arr);
+      localStorage.lastSpirit = str;
+    }
+    function localStorage_load() {
+      var val = localStorage.lastSpirit;
+      if (!val) {
+        val = localStorage.lastname;//old version
+      }
+      if (!val) {
         return;
       }
-      var val = localStorage.lastSpirit;
-      var val2 = localStorage.lastname;
-      if(!val){
-        val = val2;
+      var arr = JSON.parse(val);
+      console.log(arr);
+      if (arr.length <= 10) {
+        return;
+      } 
+
+      $(".hili").removeClass("hili");
+      $("table tbody").find("tr").each(function (i) {
+        var val = parseInt(arr[i]);
+        var idx = 3 - val;
+        $(this).find(`.choiceBtn:eq(${idx})`).addClass("hili");
+      });
+    }
+    function Reset() {
+      if (!confirm("Reset current choices in this page?")) {
+        return;
       }
-      if(!val){
-        val = prompt("Paste your choice data", "");
-      }
+      $(".hili").removeClass("hili");
+      $("table tbody").find("tr").each(function (i) {
+        var idx = 3;
+        $(this).find(`.choiceBtn:eq(${idx})`).addClass("hili");
+      });
+      $("#result").html("");
+    }
+
+    function importFunction() {
+      var val = prompt("Paste your choice data", "");
       if (!val) return;
       var arr = JSON.parse(val);
       console.log(arr);
-      if (arr.length <= 100) {
+      if (!arr || arr.length != 133) {
         return;
       }
  
@@ -231,16 +261,9 @@
       $("#result").html("");
     }
     function exportFunction() {
-      if(false == confirm("Save?")){
-        return;
-      }
       $("#CopyTextToClipboard").val("");
       var arr = get_choice_arr();
       var str = JSON.stringify(arr);
-      localStorage.lastSpirit = str;
-      if(localStorage.lastSpirit && localStorage.lastSpirit.length>100){
-        return;
-      }
       var ret = prompt("Copy your choice data to save anywhere for reuse.", str);
       console.log(ret);
       if (!ret) return;
@@ -254,8 +277,9 @@
 <body>
   <div id="menu">
     <input id="CopyTextToClipboard"></input>
-    <button class="portalBtn" onclick="importFunction()" title="Load your last saved data.">Load</button>
-    <button class="portalBtn" onclick="exportFunction()" title="Save your choice data.">Save</button>
+    <button class="portalBtn" onclick="importFunction()" title="Import your choice data.">Import</button>
+    <button class="portalBtn" onclick="exportFunction()" title="Export your choice data.">Export</button>
+    <button class="portalBtn" onclick="Reset()" title="Reset/Clear your choice data.">Reset</button>
   </div>
 
   <div id="holder"></div>
