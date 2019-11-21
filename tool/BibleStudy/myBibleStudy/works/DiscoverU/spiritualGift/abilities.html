@@ -97,28 +97,40 @@
             });
             sol+="</ol>";
         });
-        $("#holder").html(sol);
+        $("#holder").html(sol).find("input").bind("click",function(){
+          localStorage_save();
+        });
+        localStorage_load();
     };///////////////
 
-    
-
-    function importFunction() {
-      if(false == confirm("Load?")){
-        return;
-      }
+    function Reset(){
+      $("input[type=checkbox]").prop('checked', null);
+    }
+    function localStorage_save(){
+      var arr = get_all_arr();
+      var str = JSON.stringify(arr);
+      localStorage.lastAbility = str;
+    }
+    function localStorage_load(){
       var val = localStorage.lastAbility;
       if(!val){
-        val = prompt("Paste your choice data", "");
+        return;
       }
-      if (!val) return;
       var obj = JSON.parse(val);
       console.log(obj);
-
+      load_data(obj);
+    }
+    function load_data(obj){
       var arr=obj.chkarr;
       $("input[type=checkbox]").each(function (i) {
-        var val = (arr[i]);
+        var val = parseInt(arr[i]);
         var b=!!val;
-        $(this).attr('checked', b);
+        if(b) {
+          $(this).prop('checked', b);
+        }
+        else {
+          $(this).prop('checked', null);
+        }
       });
 
       var inparr=obj.inparr;
@@ -126,6 +138,17 @@
         var val = (inparr[i]);
         $(this).val(val);
       });
+    }
+    
+
+    function importFunction() {
+      var val = prompt("Paste your choice data", "");
+      if (!val) return;
+      var obj = JSON.parse(val);
+      if(!obj) return;
+      console.log(obj);
+      //Reset();
+      load_data(obj);
     }
     function get_all_arr(){
         var chkarr=[]
@@ -143,16 +166,8 @@
         return {chkarr:chkarr,inparr:inparr};
     }
     function exportFunction() {
-      if(false == confirm("Save?")){
-        return;
-      }
-      
       var arr = get_all_arr();
       var str = JSON.stringify(arr);
-      localStorage.lastAbility = str;
-      if(localStorage.lastAbility && localStorage.lastAbility.length>100){
-        return;
-      }
       var ret = prompt("Copy your choice data to save anywhere for reuse.", str);
       console.log(ret);
       if (!ret) return;
@@ -166,8 +181,9 @@
 <body>
   <div id="menu">
     <input id="CopyTextToClipboard"></input>
-    <button class="portalBtn" onclick="importFunction()" title="Load your last saved data.">Load</button>
-    <button class="portalBtn" onclick="exportFunction()" title="Save your choice data.">Save</button>
+    <button class="portalBtn" onclick="importFunction()" title="Import your last saved data.">Import</button>
+    <button class="portalBtn" onclick="exportFunction()" title="Export your choice data.">Export</button>
+    <button class="portalBtn" onclick="Reset()" title="Reset/clear your choice data.">Reset</button>
   </div>
 
   <div id="holder"></div>
