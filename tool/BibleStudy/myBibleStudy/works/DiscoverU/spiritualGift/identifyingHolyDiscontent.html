@@ -103,28 +103,39 @@
         });
         sol += "</ol>";
       });
-      $("#holder").html(sol);
+      $("#holder").html(sol).find("input").bind("click",function(){
+        localStorage_save();
+      });
+      localStorage_load();
     };///////////////
 
 
+    function localStorage_save(){
+      var obj = get_all_arr();
+      var sob = JSON.stringify(obj);
+      localStorage.lastHeart = sob;
+    }
 
-    function importFunction() {
-      if (false == confirm("Load?")) {
-        return;
-      }
+    function localStorage_load(){
       var val = localStorage.lastHeart;
-      if (!val) {
-        val = prompt("Paste your choice data", "");
-      }
       if (!val) return;
       var obj = JSON.parse(val);
       console.log(obj);
-
+      load_data(obj);
+    }
+    function importFunction() {
+      var val = prompt("Paste your choice data", "");
+      if (!val) return;
+      var obj = JSON.parse(val);
+      console.log(obj);
+      load_data(obj);
+    }
+    function load_data(obj){
       var arr = obj.chkarr;
       $("input[type=checkbox]").each(function (i) {
         var val = (arr[i]);
         var b = !!val;
-        $(this).attr('checked', b);
+        $(this).prop('checked', b);
       });
 
       var inparr = obj.inparr;
@@ -159,16 +170,9 @@
       return { chkarr: chkarr, inparr: inparr, wharr: wharr };
     }
     function exportFunction() {
-      if (false == confirm("Save?")) {
-        return;
-      }
-
       var arr = get_all_arr();
       var str = JSON.stringify(arr);
-      localStorage.lastHeart = str;
-      if (localStorage.lastHeart && localStorage.lastHeart.length > 100) {
-        return;
-      }
+      
       var ret = prompt("Copy your choice data to save anywhere for reuse.", str);
       console.log(ret);
       if (!ret) return;
@@ -176,14 +180,19 @@
       $("#CopyTextToClipboard").select();
       document.execCommand("copy");
     }
+    function Reset(){
+      $("input[type=checkbox").prop("checked",null);
+      $("textarea").val("");
+    }
   </script>
 </head>
 
 <body>
   <div id="menu">
     <input id="CopyTextToClipboard"></input>
-    <button class="portalBtn" onclick="importFunction()" title="Load your last saved data.">Load</button>
-    <button class="portalBtn" onclick="exportFunction()" title="Save your choice data.">Save</button>
+    <button class="portalBtn" onclick="importFunction()" title="Import your last saved data.">Import</button>
+    <button class="portalBtn" onclick="exportFunction()" title="Export your choice data.">Export</button>
+    <button class="portalBtn" onclick="Reset()" title="Reset your choice data.">Reset</button>
   </div>
 
   <div id="holder"></div>
