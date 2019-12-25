@@ -85,7 +85,7 @@ index_hgs_Htm="""<HTML>
 <HEAD><TITLE>HGB</TITLE>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
 <META name="viewport" content="width=device-witdh, initial-scale=1, maximum-scale=1, user-scale=0"></META>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://wdingbox.github.io/ham12/jq/jquery-2_1_3.min.js"></script>
 <LINK HREF="./_/index_hgs.css" REL=stylesheet TYPE=text/css>
 <SCRIPT LANGUAGE="JavaScript" SRC="./_/index_hgs.js"></SCRIPT>
 </HEAD>
