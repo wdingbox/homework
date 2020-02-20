@@ -67,8 +67,24 @@
     #result {
       height: 190px;
     }
-    .desc{
+
+    .desc_A{
+      background-color:hotpink;
+    }
+    .desc_B{
+      background-color:bisque;
+    }
+    .desc_C{
       background-color: paleturquoise;
+    }
+    .desc_D{
+      background-color:burlywood;
+    }
+    .desc_E{
+      background-color:coral;
+    }
+    .desc_F{
+      background-color:gold;
     }
 
     table {
@@ -210,7 +226,7 @@
         var txt=$(this).attr("title");
         $(".max").removeClass("max");
         $(this).addClass("max");
-        $("#desc").addClass("desc").load(`resrc/${txt}.htm`);
+        $("#desc").attr("class","").addClass("desc_"+txt).load(`resrc/${txt}.htm`);
       });
     }
 
