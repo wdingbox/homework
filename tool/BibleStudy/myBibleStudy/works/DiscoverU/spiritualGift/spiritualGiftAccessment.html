@@ -73,6 +73,9 @@
       border-collapse: collapse;
 
     }
+    th{
+      background-color: lightgray;
+    }
 
     table.assessmentTable {
       margin-top: 100px;
@@ -195,12 +198,13 @@
         <tbody>
           ${str}
         </tbody>
-        </table>`;
+        </table><div id='desc'>.</div>`;
 
       //stb += `Copy your Choice Data:<br><textarea readonly>${JSON.stringify(Charr)}</textarea>`;
 
-      $("#result").html(stb).find("tr").bind("click", function () {
-        $(this).toggleClass("max");
+      $("#result").html(stb).find("tbody tr").bind("click", function () {
+        $(".max").removeClass("max");
+        $(this).addClass("max");
       });
     }
 
