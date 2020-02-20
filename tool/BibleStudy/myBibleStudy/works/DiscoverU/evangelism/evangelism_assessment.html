@@ -24,7 +24,7 @@
       top: 0px;
       right: 10px;
       width: 100%;
-      background-color: lightgrey;
+      xxbackground-color: lightgrey;
     }
 
     .portalBtn {
@@ -227,6 +227,7 @@
         $(".max").removeClass("max");
         $(this).addClass("max");
         $("#desc").attr("class","").addClass("desc_"+txt).load(`resrc/${txt}.htm`);
+        $("#result")[0].scrollIntoView(true);
       });
     }
 
