@@ -6,7 +6,8 @@
   <META name="viewport" content="width=device-witdh, initial-scale=1, maximum-scale=1, user-scale=0">
 
   <link rel="stylesheet?x=2019-12-20" xhref="images/common.css" type="text/css">
-  <script  src="../../../../../myjs/jquery-2_1_3.min.js" xsrc="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="../../../../../myjs/jquery-2_1_3.min.js"
+    xsrc="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
   <script src="spiritualGiftAccessment_Key.json.js?x=2019-12-20"></script>
   <script src="spiritualGiftAccessment_Desc.json.js?x=2019-12-20"></script>
@@ -73,12 +74,21 @@
       border-collapse: collapse;
 
     }
-    th{
+
+    th {
       background-color: lightgray;
     }
 
     table.assessmentTable {
       margin-top: 100px;
+    }
+
+    .desc1 {
+      background-color: springgreen;
+    }
+
+    .desc2 {
+      background-color: linen;
     }
   </style>
   <script>
@@ -120,9 +130,9 @@
         $(this).parent().find(".denote").text(tit);
         $(this).parent().find(".denote").slideDown(1000);
 
-       $(this).parent().prev().addClass("mark");
+        $(this).parent().prev().addClass("mark");
 
-       localStorage_save();
+        localStorage_save();
       });
       $(tab).find(".num").bind("click", function () {
         $(this).toggleClass("mark");
@@ -178,7 +188,7 @@
 
     function gen_result(stdarr, Evarr) {
       var str = "", max = get_max(Evarr);
-      var keys = Object.keys(stdarr);
+      var Caps = Object.keys(stdarr);
       Evarr.forEach(function (val, i) {
         //console.log(val);
         var maxMark = "", notes = "";
@@ -187,7 +197,7 @@
           notes = "Top Spiritual Gift";
         }
 
-        str += `<tr ><td>${1 + i}</td><td>${keys[i]}</td><td>${stdarr[keys[i]]}</td><td ${maxMark}>${val}</td><td>${notes}</td></tr>`;
+        str += `<tr title='${Caps[i]}'><td>${1 + i}</td><td>${Caps[i]}</td><td>${stdarr[Caps[i]]}</td><td ${maxMark}>${val}</td><td>${notes}</td></tr>`;
       });
 
 
@@ -205,6 +215,11 @@
       $("#result").html(stb).find("tbody tr").bind("click", function () {
         $(".max").removeClass("max");
         $(this).addClass("max");
+        var Cap = $(this).attr("title");
+        var Rsc = `./giftAccessment_resrc/${Cap}.htm`;
+        $("#desc").load(Rsc);
+        $("#desc").toggleClass("desc2");
+        $("#result")[0].scrollIntoView(true);
       });
     }
 
@@ -225,7 +240,7 @@
       console.log(arr);
       if (arr.length <= 10) {
         return;
-      } 
+      }
 
       $(".hili").removeClass("hili");
       $("table tbody").find("tr").each(function (i) {
@@ -261,7 +276,7 @@
           return alert("Invalid data:\n" + dat);
         }
       }
- 
+
       $(".hili").removeClass("hili");
       $("table tbody").find("tr").each(function (i) {
         var val = parseInt(arr[i]);
@@ -297,7 +312,7 @@
   <div id="ctr">
     <button onclick="evaluateAssessment();" class="btn">Calculate the Assessment Scores</button><br>
   </div>
-  <hr  style="page-break-before: always" />
+  <hr style="page-break-before: always" />
   <div id="result"></div>
 
 </body>
