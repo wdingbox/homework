@@ -67,6 +67,9 @@
     #result, #desc {
       height: 160px;
     }
+    #desc{
+      overflow: scroll;
+    }
 
     table {
       background-color: rgb(190, 215, 228);
@@ -184,7 +187,8 @@
           notes = "Top Evangelism Style";
         }
 
-        str += `<tr ><td>${1 + i}</td><td>${keys[i]}</td><td>${stdarr[keys[i]]}</td><td ${maxMark}>${val}</td><td>${notes}</td></tr>`;
+        var letter = String.fromCharCode(65+i) ;
+        str += `<tr title='${letter}'><td>${1 + i}</td><td>${keys[i]}</td><td>${stdarr[keys[i]]}</td><td ${maxMark}>${val}</td><td>${notes}</td></tr>`;
       });
 
 
@@ -200,9 +204,10 @@
       //stb += `Copy your Choice Data:<br><textarea readonly>${JSON.stringify(Charr)}</textarea>`;
 
       $("#result").html(stb).find("tr").bind("click", function () {
+        var txt=$(this).attr("title");
         $(".max").removeClass("max");
         $(this).addClass("max");
-        $("#desc").load("resrc/6.htm");
+        $("#desc").load(`resrc/${txt}.htm`);
       });
     }
 
