@@ -67,9 +67,7 @@
     #result {
       height: 190px;
     }
-    #desc{
-      overflow: scroll;
-      height: 2960px;
+    .desc{
       background-color: paleturquoise;
     }
 
@@ -212,7 +210,7 @@
         var txt=$(this).attr("title");
         $(".max").removeClass("max");
         $(this).addClass("max");
-        $("#desc").load(`resrc/${txt}.htm`);
+        $("#desc").addClass("desc").load(`resrc/${txt}.htm`);
       });
     }
 
