@@ -90,6 +90,9 @@
     .desc2 {
       background-color: linen;
     }
+    .sel_row{
+      background-color:rgb(128, 165, 55);
+    }
   </style>
   <script>
     $(function () {
@@ -187,7 +190,7 @@
     }
 
     function gen_result(stdarr, Evarr) {
-      var str = "", max = get_max(Evarr);
+      var str = "", max = get_max(Evarr), ilastMax=0;
       var Caps = Object.keys(stdarr);
       Evarr.forEach(function (val, i) {
         //console.log(val);
@@ -195,6 +198,7 @@
         if (max == val && val > 0) {
           maxMark = "class='max' title='strong gift'";
           notes = "Top Spiritual Gift";
+          ilastMax=i;
         }
 
         str += `<tr title='${Caps[i]}'><td>${1 + i}</td><td>${Caps[i]}</td><td>${stdarr[Caps[i]]}</td><td ${maxMark}>${val}</td><td>${notes}</td></tr>`;
@@ -213,14 +217,16 @@
       //stb += `Copy your Choice Data:<br><textarea readonly>${JSON.stringify(Charr)}</textarea>`;
 
       $("#result").html(stb).find("tbody tr").bind("click", function () {
-        $(".max").removeClass("max");
-        $(this).addClass("max");
+        $(".sel_row").removeClass("sel_row");
+        $(this).addClass("sel_row");
         var Cap = $(this).attr("title");
         var Rsc = `./giftAccessment_resrc/${Cap}.htm`;
         $("#desc").load(Rsc);
         $("#desc").toggleClass("desc2");
         $("#result")[0].scrollIntoView(true);
       });
+
+      $(`#result table tbody tr:eq(${ilastMax})`).addClass("sel_row").trigger("click");
     }
 
     function localStorage_save() {
