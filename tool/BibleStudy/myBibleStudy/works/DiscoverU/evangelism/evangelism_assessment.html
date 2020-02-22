@@ -6,7 +6,8 @@
   <META name="viewport" content="width=device-witdh, initial-scale=1, maximum-scale=1, user-scale=0">
 
   <link rel="stylesheet?x=2019-12-20" xhref="images/common.css" type="text/css">
-  <script src="../../../../../myjs/jquery-2_1_3.min.js" xsrc="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="../../../../../myjs/jquery-2_1_3.min.js"
+    xsrc="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
   <script src="./evangelism_assessment_key.js?x=2019-12-20"></script>
   <script src="./evangelism_assessment_questionaire.js?x=2019-12-20"></script>
@@ -68,23 +69,32 @@
       height: 500px;
     }
 
-    .desc_A{
-      background-color:lightgoldenrodyellow;
+    .desc_A {
+      background-color: lightgoldenrodyellow;
     }
-    .desc_B{
-      background-color:bisque;
+
+    .desc_B {
+      background-color: bisque;
     }
-    .desc_C{
+
+    .desc_C {
       background-color: paleturquoise;
     }
-    .desc_D{
-      background-color:burlywood;
+
+    .desc_D {
+      background-color: burlywood;
     }
-    .desc_E{
-      background-color:coral;
+
+    .desc_E {
+      background-color: coral;
     }
-    .desc_F{
-      background-color:gold;
+
+    .desc_F {
+      background-color: gold;
+    }
+
+    .ScoreDes {
+      color: blue;
     }
 
     table {
@@ -92,15 +102,17 @@
       border-collapse: collapse;
 
     }
-    th{
+
+    th {
       background-color: gray;
     }
 
     table.assessmentTable {
       margin-top: 100px;
     }
-    .sel_row{
-      background-color:rgb(128, 165, 55);
+
+    .sel_row {
+      background-color: rgb(128, 165, 55);
     }
   </style>
   <script>
@@ -199,7 +211,7 @@
     }
 
     function gen_result(stdarr, Evarr) {
-      var str = "", max = get_max(Evarr), ilastMax=0;
+      var str = "", max = get_max(Evarr), ilastMax = 0;
       var keys = Object.keys(stdarr);
       Evarr.forEach(function (val, i) {
         //console.log(val);
@@ -210,8 +222,8 @@
           ilastMax = i;
         }
 
-        var letter = String.fromCharCode(65+i) ;
-        str += `<tr title='${letter}'><td>${1 + i}</td><td>${keys[i]}</td><td>${stdarr[keys[i]]}</td><td ${maxMark}>${val}</td><td>${notes}</td></tr>`;
+        var letter = String.fromCharCode(65 + i);
+        str += `<tr title='${letter}'><td>${1 + i}</td><td>${keys[i]}</td><td class='ScoreDes'>${stdarr[keys[i]]}</td><td ${maxMark}>${val}</td><td>${notes}</td></tr>`;
       });
 
 
@@ -227,10 +239,10 @@
       //stb += `Copy your Choice Data:<br><textarea readonly>${JSON.stringify(Charr)}</textarea>`;
 
       $("#result").html(stb).find("tbody tr").bind("click", function () {
-        var txt=$(this).attr("title");
+        var txt = $(this).attr("title");
         $(".sel_row").removeClass("sel_row");
         $(this).addClass("sel_row");
-        $("#desc").attr("class","").addClass("desc_"+txt).load(`resrc/${txt}.htm`);
+        $("#desc").attr("class", "").addClass("desc_" + txt).load(`resrc/${txt}.htm`);
         $("#result")[0].scrollIntoView(true);
       });
 
@@ -251,10 +263,10 @@
       console.log(arr);
       if (arr.length != 36) {
         return;
-      } 
+      }
       load_choice_arr(arr);
     }
-    function load_choice_arr(arr){
+    function load_choice_arr(arr) {
       $(".hili").removeClass("hili");
       $("table tbody").find("tr").each(function (i) {
         var val = parseInt(arr[i]);
@@ -318,7 +330,7 @@
   </div>
   <hr style="page-break-before: always" />
   <div id="result"></div>
- 
+
 
 </body>
 

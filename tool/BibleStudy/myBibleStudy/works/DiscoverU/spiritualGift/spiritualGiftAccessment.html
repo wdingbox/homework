@@ -93,6 +93,9 @@
     .sel_row{
       background-color:rgb(128, 165, 55);
     }
+    .ScoreDesc{
+      color: blue;
+    }
   </style>
   <script>
     $(function () {
@@ -201,7 +204,7 @@
           ilastMax=i;
         }
 
-        str += `<tr title='${Caps[i]}'><td>${1 + i}</td><td>${Caps[i]}</td><td>${stdarr[Caps[i]]}</td><td ${maxMark}>${val}</td><td>${notes}</td></tr>`;
+        str += `<tr title='${Caps[i]}'><td>${1 + i}</td><td>${Caps[i]}</td><td  class='ScoreDesc'>${stdarr[Caps[i]]}</td><td ${maxMark}>${val}</td><td>${notes}</td></tr>`;
       });
 
 
