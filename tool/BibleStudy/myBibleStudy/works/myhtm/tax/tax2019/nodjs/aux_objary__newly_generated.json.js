@@ -11,6 +11,26 @@ var aux_objary=
         "Note2": ""
     },
     {
+        "dat": "Aug 14, 2019 ",
+        "std": "2019-08-14",
+        "des": "",
+        "cat": "Weichert",
+        "val": "0.0",
+        "act": "../120/weichert//Aug 14, 2019 to Sep 13, 2019.pdf",
+        "Note1": "",
+        "Note2": ""
+    },
+    {
+        "dat": "Dec 05, 2018 ",
+        "std": "2018-12-05",
+        "des": "",
+        "cat": "Weichert",
+        "val": "0.0",
+        "act": "../120/weichert//Dec 05, 2018 to Jan 12, 2019.pdf",
+        "Note1": "",
+        "Note2": ""
+    },
+    {
         "dat": "Feb 01, 2019 ",
         "std": "2019-02-01",
         "des": "",
@@ -27,6 +47,16 @@ var aux_objary=
         "cat": "Weichert",
         "val": "0.0",
         "act": "../120/weichert//Jan 01, 2019 to Feb 15, 2019.pdf",
+        "Note1": "",
+        "Note2": ""
+    },
+    {
+        "dat": "Jan 01, 2020 ",
+        "std": "2020-01-01",
+        "des": "",
+        "cat": "Weichert",
+        "val": "0.0",
+        "act": "../120/weichert//Jan 01, 2020 to Feb 10, 2020.pdf",
         "Note1": "",
         "Note2": ""
     },
@@ -71,12 +101,32 @@ var aux_objary=
         "Note2": ""
     },
     {
+        "dat": "Nov 13, 2019 ",
+        "std": "2019-11-13",
+        "des": "",
+        "cat": "Weichert",
+        "val": "0.0",
+        "act": "../120/weichert//Nov 13, 2019 to Dec 16, 2019.pdf",
+        "Note1": "",
+        "Note2": ""
+    },
+    {
         "dat": "Oct 01, 2019 ",
         "std": "2019-10-01",
         "des": "",
         "cat": "Weichert",
         "val": "0.0",
         "act": "../120/weichert//Oct 01, 2019 to Oct 15, 2019.pdf",
+        "Note1": "",
+        "Note2": ""
+    },
+    {
+        "dat": "Oct 16, 2019 ",
+        "std": "2019-10-16",
+        "des": "",
+        "cat": "Weichert",
+        "val": "0.0",
+        "act": "../120/weichert//Oct 16, 2019 to Nov 12, 2019.pdf",
         "Note1": "",
         "Note2": ""
     },
