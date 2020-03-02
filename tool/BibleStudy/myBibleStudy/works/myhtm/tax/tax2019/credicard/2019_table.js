@@ -6,21 +6,21 @@ function date2std(dat) {
     return sda;
 }
 function init_dat_fr_raw_tab() {
-    var ary=[];
+    var ary = [];
     $("#tab2019 tbody tr").each(function () {
-        var obj={};
-        obj.dat = $(this).find("td:eq(0)").text().trim().replace(/(\s+)/g," ");
+        var obj = {};
+        obj.dat = $(this).find("td:eq(0)").text().trim().replace(/(\s+)/g, " ");
         obj.std = date2std(obj.dat);
-        obj.des = $(this).find("td:eq(1)").text().trim().split("\n")[0].replace(/(\s+)/g," ").trim();
-        obj.cat = $(this).find("td:eq(2)").text().trim().replace(/(\s+)/g," ");
-        obj.val = $(this).find("td:eq(3)").text().trim().replace(/(\s+)/g," ");
-        obj.act = $(this).find("td:eq(4)").text().trim().replace(/(\s+)/g," ");
-        obj.Note1="";
-        obj.Note2="";
+        obj.des = $(this).find("td:eq(1)").text().trim().split("\n")[0].replace(/(\s+)/g, " ").trim();
+        obj.cat = $(this).find("td:eq(2)").text().trim().replace(/(\s+)/g, " ");
+        obj.val = $(this).find("td:eq(3)").text().trim().replace(/(\s+)/g, " ");
+        obj.act = $(this).find("td:eq(4)").text().trim().replace(/(\s+)/g, " ");
+        obj.Note1 = "";
+        obj.Note2 = "";
         ary.push(obj);
         console.log(obj.std);
     });
-    $("#out").val("var datary=\n"+JSON.stringify(ary,null,4));
+    $("#out").val("var datary=\n" + JSON.stringify(ary, null, 4));
 }
 function gen_tab(ar) {
     function get_tr(obj) {
@@ -33,7 +33,7 @@ function gen_tab(ar) {
                 ths += "<th>#</th>"
             }
             var san = val;
-            if(san.match(/[\.][a-zA-Z]{2,}$/)){
+            if (san.match(/[\.][a-zA-Z]{2,}$/)) {
                 san = `<a href="${val}">${val}</a>`
             }
             trs += `<td key='${key}'>${san}</td>`;
@@ -50,26 +50,38 @@ function gen_tab(ar) {
     }
     var stb = `<table border='1'><caption>tb</caption><thead>${get_tr(ar[0]).ths}</thead>`;
     stb += `<tbody>${trs}</tbody><tfoot>${get_tr(ar[0]).ths}</tfoot></body>`;
-    $("body").append(stb);
+    $("body").append(stb).find("tfoot tr").find("th").bind("click", function () {
+        var idx = $(this).index();
+        var tot = 0;
+        $(this).parentsUntil("table").prev().find("tr").each(function () {
+            $(this).find(`td:eq(${idx})`).addClass("hili");
+            var val = $(this).find(`td:eq(${idx})`).text();//.replace("$", "");
+            if (!val) val = 0;
+            var fva = parseFloat(val);
+            tot += fva;
+        });
+        $(this).text(tot.toFixed(2));
+    });
     table_sort();
-    $("td").bind("click",function(){
+
+    $("td").bind("click", function () {
         $(this).toggleClass("hili");
-        if($(this).find("a[href]").length===0){
-            $(this).attr("contenteditable",true);
+        if ($(this).find("a[href]").length === 0) {
+            $(this).attr("contenteditable", true);
         }
     });
-    $("table caption").bind("click",function(){
-        var ojary=[]
-        $(this).parent().find("tbody").find("tr").each(function(){
-            var obj={}
-            $(this).find("td[key]").each(function(i){
+    $("table caption").bind("click", function () {
+        var ojary = []
+        $(this).parent().find("tbody").find("tr").each(function () {
+            var obj = {}
+            $(this).find("td[key]").each(function (i) {
                 var key = $(this).attr("key");
                 var val = $(this).text();
-                obj[key]=val;
+                obj[key] = val;
             });
             ojary.push(obj);
         });
-        $("#out").val("var a=\n"+JSON.stringify(ojary,null,4));
+        $("#out").val("var a=\n" + JSON.stringify(ojary, null, 4));
     });
 }
 function tab2datary() {
