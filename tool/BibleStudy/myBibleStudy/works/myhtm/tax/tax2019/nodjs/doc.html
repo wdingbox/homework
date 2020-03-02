@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<HTML manifest___xxx="BiblePad-2015.appcache">
+
+<HEAD>
+    <TITLE>Bii</TITLE>
+    <base target="_blank" />
+    <META http-equiv="Content-Type" content="text/html;" charset="UTF-8">
+    <META name="viewport" content="width=device-witdh, initial-scale=1, maximum-scale=1, user-scale=0">
+
+
+    <link rel="stylesheet" xxxhref="./BibleInputMethod.css">
+    </link>
+
+    <script xxxxxxxxsrc="https://wdingbox.github.io/ham12/jq/jquery-2_1_3.min.js"></script>
+    <script language="javascript" src="https://wdingbox.github.io/ham12/jq/jquery.js"></script>
+    <script language="javascript" src="https://wdingbox.github.io/ham12/jq/table_Indexer.js"></script>
+    <script language="javascript" src="https://wdingbox.github.io/ham12/jq/jquery.tablesorter.js"></script>
+
+    <script src="../credicard/2019_table.datary.js"></script>
+    <script src="../nodjs/aux_objary.json.js"></script>
+    <script src="../credicard/2019_aux.datary.js"></script>
+    <script src="../credicard/2019_table.js"></script>
+    <style>
+        body{
+            margin-top: 200px;
+            margin-bottom: 200px;
+        }
+        #menu {
+            position: fixed;
+            top:0px;
+            right:20px;
+        }
+
+        .hili {
+            background-color: gray;
+        }
+    </style>
+    <script>
+        $(function () {
+            //$("body").load("2019_table.htm");
+            gen_tab(datary);
+            gen_tab(aux_objary);
+
+            $("body").keyup(function () {
+                console.log(event.keyCode);
+                if (event.keyCode === 18) {//ALT
+                    //console.log("contenteditable");
+                    
+                    //$("td").attr("contenteditable", "true");
+                }
+            })
+
+        })
+    </script>
+</HEAD>
+
+<body>
+    <div id="menu">
+
+        <textarea id="out"></textarea>
+        <button id="indxer">indxer</button>
+        <button onclick="tab2datary();">tab2datary</button>
+    </div>
+
+
+</body>
+
+</HTML>
