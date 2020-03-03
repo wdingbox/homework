@@ -5,10 +5,10 @@ var aux_objary=
         "std": "2018-12-05",
         "des": "",
         "cat": "Weichert",
-        "val": "0.0",
+        "val": "2.17",
         "act": "../120/weichert//Dec 05, 2018 to Jan 12, 2019.pdf",
-        "Note1": "2.17",
-        "Note2": ""
+        "Note1": "",
+        "Note2": "repair"
     },
     {
         "dat": "Jan 01, 2019 ",
@@ -115,9 +115,9 @@ var aux_objary=
         "std": "2019-05-15",
         "des": "",
         "cat": "Weichert",
-        "val": "0.0",
+        "val": "140.00",
         "act": "../120/weichert//May 15, 2019 to Jun 19, 2019.pdf",
-        "Note1": "140.00",
+        "Note1": "",
         "Note2": ""
     },
     {
@@ -127,7 +127,7 @@ var aux_objary=
         "cat": "Weichert",
         "val": "128.50",
         "act": "../120/weichert//Jun 20, 2019 to Jul 10, 2019.pdf",
-        "Note1": "205.00",
+        "Note1": "",
         "Note2": ""
     },
     {
@@ -135,10 +135,10 @@ var aux_objary=
         "std": "2019-06-20",
         "des": "",
         "cat": "Weichert",
-        "val": "0.0",
+        "val": "205.00",
         "act": "../120/weichert//Jun 20, 2019 to Jul 10, 2019.pdf",
         "Note1": "",
-        "Note2": ""
+        "Note2": "repair"
     },
     {
         "dat": "Jul 11, 2019 ",
@@ -155,10 +155,20 @@ var aux_objary=
         "std": "2019-07-11",
         "des": "",
         "cat": "Weichert",
-        "val": "0.0",
+        "val": "4.88",
         "act": "../120/weichert//Jul 11, 2019 to Aug 13, 2019.pdf",
-        "Note1": "23.42",
+        "Note1": "repair",
         "Note2": ""
+    },
+    {
+        "dat": "Jul 11, 2019 ",
+        "std": "2019-07-11",
+        "des": "",
+        "cat": "Weichert",
+        "val": "23.42",
+        "act": "../120/weichert//Jul 11, 2019 to Aug 13, 2019.pdf",
+        "Note1": "",
+        "Note2": "repair"
     },
     {
         "dat": "Aug 14, 2019 ",
@@ -167,8 +177,18 @@ var aux_objary=
         "cat": "Weichert",
         "val": "127.50",
         "act": "../120/weichert//Aug 14, 2019 to Sep 13, 2019.pdf",
-        "Note1": "75.00",
+        "Note1": " ",
         "Note2": ""
+    },
+    {
+        "dat": "Aug 14, 2019 ",
+        "std": "2019-08-14",
+        "des": "",
+        "cat": "Weichert",
+        "val": "75.00",
+        "act": "../120/weichert//Aug 14, 2019 to Sep 13, 2019.pdf",
+        "Note1": "7 ",
+        "Note2": "repair"
     },
     {
         "dat": "Oct 01, 2019 ",
@@ -207,7 +227,17 @@ var aux_objary=
         "cat": "Weichert",
         "val": "127.50",
         "act": "../120/weichert//Nov 13, 2019 to Dec 16, 2019.pdf",
-        "Note1": "69.00",
+        "Note1": "",
+        "Note2": " "
+    },
+    {
+        "dat": "Nov 13, 2019 ",
+        "std": "2019-11-13",
+        "des": "",
+        "cat": "Weichert",
+        "val": "69.00",
+        "act": "../120/weichert//Nov 13, 2019 to Dec 16, 2019.pdf",
+        "Note1": " ",
         "Note2": "Repair"
     },
     {
@@ -217,7 +247,7 @@ var aux_objary=
         "cat": "Weichert",
         "val": "69.00",
         "act": "../120/weichert//Nov 13, 2019 to Dec 16, 2019.pdf",
-        "Note1": "69.00",
+        "Note1": " ",
         "Note2": "Repair"
     },
     {
