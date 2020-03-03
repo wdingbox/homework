@@ -147,7 +147,7 @@ var aux_objary=
         "cat": "Weichert",
         "val": "128.50",
         "act": "../120/weichert//Jul 11, 2019 to Aug 13, 2019.pdf",
-        "Note1": "4.88",
+        "Note1": "",
         "Note2": ""
     },
     {
@@ -187,7 +187,7 @@ var aux_objary=
         "cat": "Weichert",
         "val": "75.00",
         "act": "../120/weichert//Aug 14, 2019 to Sep 13, 2019.pdf",
-        "Note1": "7 ",
+        "Note1": "",
         "Note2": "repair"
     },
     {
