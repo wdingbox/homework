@@ -1,5 +1,4 @@
 var aux_objary=
-
 [
     {
         "dat": "Dec 05, 2018 ",
@@ -8,7 +7,7 @@ var aux_objary=
         "cat": "Weichert",
         "val": "0.0",
         "act": "../120/weichert//Dec 05, 2018 to Jan 12, 2019.pdf",
-        "Note1": "",
+        "Note1": "2.17",
         "Note2": ""
     },
     {
@@ -78,7 +77,7 @@ var aux_objary=
         "cat": "Weichert",
         "val": "128.50",
         "act": "../120/weichert//May 01, 2019 to May 14, 2019.pdf",
-        "Note1": "500.00",
+        "Note1": "",
         "Note2": "agentCommisionb"
     },
     {
@@ -88,7 +87,7 @@ var aux_objary=
         "cat": "Weichert",
         "val": "500.00",
         "act": "../120/weichert//May 01, 2019 to May 14, 2019.pdf",
-        "Note1": "500.00",
+        "Note1": "",
         "Note2": "agentCommisionb"
     },
     {
@@ -118,7 +117,7 @@ var aux_objary=
         "cat": "Weichert",
         "val": "0.0",
         "act": "../120/weichert//May 15, 2019 to Jun 19, 2019.pdf",
-        "Note1": "",
+        "Note1": "140.00",
         "Note2": ""
     },
     {
@@ -128,7 +127,7 @@ var aux_objary=
         "cat": "Weichert",
         "val": "128.50",
         "act": "../120/weichert//Jun 20, 2019 to Jul 10, 2019.pdf",
-        "Note1": "",
+        "Note1": "205.00",
         "Note2": ""
     },
     {
@@ -148,7 +147,7 @@ var aux_objary=
         "cat": "Weichert",
         "val": "128.50",
         "act": "../120/weichert//Jul 11, 2019 to Aug 13, 2019.pdf",
-        "Note1": "",
+        "Note1": "4.88",
         "Note2": ""
     },
     {
@@ -158,7 +157,7 @@ var aux_objary=
         "cat": "Weichert",
         "val": "0.0",
         "act": "../120/weichert//Jul 11, 2019 to Aug 13, 2019.pdf",
-        "Note1": "",
+        "Note1": "23.42",
         "Note2": ""
     },
     {
@@ -168,7 +167,7 @@ var aux_objary=
         "cat": "Weichert",
         "val": "127.50",
         "act": "../120/weichert//Aug 14, 2019 to Sep 13, 2019.pdf",
-        "Note1": "",
+        "Note1": "75.00",
         "Note2": ""
     },
     {
@@ -276,7 +275,7 @@ var aux_objary=
         "std": "",
         "des": "",
         "cat": "Weichert",
-        "val": "0.0",
+        "val": "150",
         "act": "../120/hoa//HOA_2019_Madison.JPG",
         "Note1": "",
         "Note2": ""
@@ -286,7 +285,7 @@ var aux_objary=
         "std": "",
         "des": "",
         "cat": "Weichert",
-        "val": "0.0",
+        "val": "0",
         "act": "../120/prop_tax//Screen Shot 2020-02-16 at 23.13.36.png",
         "Note1": "",
         "Note2": ""
