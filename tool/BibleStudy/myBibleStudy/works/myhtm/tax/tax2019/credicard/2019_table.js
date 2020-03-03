@@ -69,6 +69,9 @@ function gen_tab(ar) {
         if ($(this).find("a[href]").length === 0) {
             $(this).attr("contenteditable", true);
         }
+        if($(this).index()===0){
+            $(this).parentsUntil("tbody").clone(true).insertAfter($(this).parent());
+        }
     });
     $("table caption").bind("click", function () {
         var ojary = []
