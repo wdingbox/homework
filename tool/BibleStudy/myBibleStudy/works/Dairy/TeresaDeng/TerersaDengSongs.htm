@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<HTML manifest___xxx="BiblePad-2015.appcache">
+
+<HEAD>
+    <TITLE>Bii</TITLE>
+    <base target="_blank" />
+    <META http-equiv="Content-Type" content="text/html;" charset="UTF-8">
+    <META name="viewport" content="width=device-witdh, initial-scale=1, maximum-scale=1, user-scale=0">
+
+
+    <link rel="stylesheet" href="">
+    </link>
+
+
+    <script>
+        var gStartDate = new Date();
+        console.log(gStartDate.toString() + " ------ start load");//
+    </script>
+
+
+
+    <script language="javascript" src="https://wdingbox.github.io/ham12/jq/jquery-2_1_3.min.js"></script>
+    <script language="javascript" src="https://wdingbox.github.io/ham12/jq/jquery.js"></script>
+    <script language="javascript" src="https://wdingbox.github.io/ham12/jq/table_Indexer.js"></script>
+    <script language="javascript" src="https://wdingbox.github.io/ham12/jq/jquery.tablesorter.js"></script>
+    <!--------->
+    <!---------->
+    <script language="javascript" src="./TerersaDengSongs.json.js"></script>
+    <!---------->
+
+
+
+
+    <script>
+        function gen() {
+            var s="<ol>"
+
+
+            Object.keys(TerersaDengSongs).forEach(function (key) {
+                var obj = TerersaDengSongs[key];
+                console.log(key, obj.s);
+                s+=`<li>${key}<br><pre>${obj.s}</pre>`;
+            });
+            s+="</ol>";
+
+            $("body").append(s);
+        }
+
+    </script>
+    <style>
+    </style>
+    <script language="javascript">
+        $(function(){
+            gen();
+        });
+
+    </script>
+
+</HEAD>
+
+<BODY onbeforeunload="return 'leave?';">
+
+</BODY>
+</HTML>
