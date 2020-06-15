@@ -66,7 +66,7 @@ $(document).ready(function(){
 
 </head>
 
-<body onbeforeunload="return 'leave?';>
+<body onbeforeunload="return 'leave?';">
 
 	<?php //print_r($_POST); ?> 
 
